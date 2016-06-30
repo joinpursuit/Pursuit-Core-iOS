@@ -1,2 +1,5 @@
-# ac32
-Access Code 3.2: Mobile Development with iOS
+# Access Code 3.3: Mobile Development with iOS
+
+Welcome to Access Code!
+
+- [Lesson Schedule](schedule.md)
