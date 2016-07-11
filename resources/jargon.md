@@ -1,4 +1,4 @@
-Here are some terms, jargon, and abbreviations that are used in the technology world, which you might not be familiar with, or which may mean something differnet in tech than in ordinary Enligsh.
+Here are some terms, jargon, and abbreviations that are used in the technology world, which you might not be familiar with, or which may mean something different in tech than in ordinary Enligsh.
 
 # Contribution
 
