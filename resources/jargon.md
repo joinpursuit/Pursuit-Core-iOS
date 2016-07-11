@@ -2,7 +2,7 @@ Here are some terms, jargon, and abbreviations that are used in the technology w
 
 # Contribution
 
-Instructors, TAs, staff, volunteer, and students: if you come across a term you don't know, please look it up and submit a PR adding it to this list!  
+Instructors, TAs, staff, volunteers, and students: if you come across a term you don't know, please look it up and submit a PR adding it to this list!  
 
 Please keep the list in alphabetical order.
 
