@@ -5,7 +5,7 @@
 | 1|1| 2016-08-17|  [Conditionals, Advanced conditionals](/lessons/conditionals) |
 | 1|1| 2016-08-18|  [Numbers, integer operations, switch statements](/lessons/numbers-integerops-switch)|
 | 1|1| 2016-08-19| [For loops, while loops](/lessons/loops)|
-| 1|2| 2016-08-22| [Strings, Unicode](/lessons/string)|
+| 1|2| 2016-08-22| [Strings, Unicode](/lessons/strings)|
 | 1|2|2016-08-23|   [Optionals](/lessons/optionals)|
 | 1|2|2016-08-24|   [Arrays](/lessons/arrays)|
 | 1|2|2016-08-25|   [Dictionaries](/lessons/dictionaries)|
