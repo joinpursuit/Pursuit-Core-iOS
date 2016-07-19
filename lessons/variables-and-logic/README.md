@@ -1,5 +1,5 @@
 #Standards:
-Understand and use fundemental data types
+Understand and use fundamental data types
 
 #Objectives
 Students will be able to:
