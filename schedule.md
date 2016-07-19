@@ -9,7 +9,7 @@
 | 1|2|2016-08-23|   [Optionals](/lessons/optionals)|
 | 1|2|2016-08-24|   [Arrays](/lessons/arrays)|
 | 1|2|2016-08-25|   [Dictionaries](/lessons/dictionaries)|
-| 1|2|2016-08-26|   [Review + Assessment](/lessons/ReviewAndAssessment-collections)|
+| 1|2|2016-08-26|   [Review + Assessment](/lessons/review-and-assessment-collections)|
 | 1|3|2016-08-29|   [FunctionsOne](/lessons/functions-one)|
 | 1|3|2016-08-30|   [FunctionsTwo](/lessons/functions-two)|
 | 1|3|2016-08-31|   [ClosuresOne](/lessons/closures-one)|
