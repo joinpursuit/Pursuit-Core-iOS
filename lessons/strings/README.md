@@ -1,7 +1,7 @@
-#Standards:
-Understand and use fundemental data types
+# Standards
+Understand and use fundamental data types
 
-#Objectives
+# Objectives
 Students will be able to:
 * Concatenate strings
 * Print the characters from a string
