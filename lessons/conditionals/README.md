@@ -1,4 +1,4 @@
-#Standards:
+#Standards
 Master conditionals in all their forms and their relationship to boolean logic
 
 #Objectives
