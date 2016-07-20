@@ -1,5 +1,5 @@
-# Standards:
-PASTE ALL HERE
+# Standards
+* Use collections to organize information and solve problems
 
 # Objectives
 Students will be able to:
