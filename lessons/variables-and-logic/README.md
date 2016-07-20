@@ -1,4 +1,4 @@
-#Standards:
+#Standards
 Understand and use fundamental data types
 
 #Objectives
