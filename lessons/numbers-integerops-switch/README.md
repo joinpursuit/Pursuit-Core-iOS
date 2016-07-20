@@ -1,5 +1,5 @@
 # Standards
-* Master conditionals in all their forms and their relationship to boolean logic.
+* Master conditionals in all their forms and their relationship to boolean logic
 * Master foundational mathematical concepts
 
 # Objectives
