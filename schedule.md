@@ -19,7 +19,7 @@
 | 1|4|2016-09-05| [Structs & Classes](/lessons/structs-and-classes)
 | 1|4|2016-09-05| [Classes - Properties, Methods, & Initialization](/lessons/classes-one)
 | 1|4|2016-09-05| [Classes - Inheritance](/lessons/classes-two)
-| 1|4|2016-09-05| [Review & Assessment](/lessons/review-and-assessment-enums-structs-and-classes)
+| 1|4|2016-09-05| [Enums, Structs, and Classes Review & Assessment](/lessons/review-and-assessment-enums-structs-and-classes)
 
 
 
