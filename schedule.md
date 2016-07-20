@@ -16,9 +16,9 @@
 | 1|3|2016-09-01| [Closures, continued](/lessons/closures-two)|
 | 1|3|2016-09-02| [Functions and Closures Review & Assessment](/lessons/review-and-assessment-functions-and-closures)
 | 1|4|2016-09-05| [Enums](/lessons/enums)
-| 1|4|2016-09-05| [Structs](/lessons/structs)
-| 1|4|2016-09-05| [Classes](/lessons/classes-one)
-| 1|4|2016-09-05| [Classes, continued](/lessons/classes-two)
+| 1|4|2016-09-05| [Structs & Classes](/lessons/structs-and-classes)
+| 1|4|2016-09-05| [Classes - Properties, Methods, & Initialization](/lessons/classes-one)
+| 1|4|2016-09-05| [Classes - Inheritance](/lessons/classes-two)
 | 1|4|2016-09-05| [Review & Assessment](/lessons/review-and-assessment-enums-structs-and-classes)
 
 
