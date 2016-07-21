@@ -84,7 +84,28 @@ var singleFare = 2.75 // Double (double is an unfortunate legacy)
 * Declare some variables
 
 ```swift
-TODO: Dump a bunch of var declarations here
+//Integers
+var customersServed = 34
+var statesNum = 50
+var currentYear = 2016
+//Doubles
+var length = 60.4
+var percentCompleted = .87
+var gigawatts = 1.21
+//Characters
+var grade = "A"
+var punctuationSelected = "!"
+var personInChinese = "&#20154;"
+//Strings
+var welcomeMessage = "Hi user!  Thanks for downloading!"
+var outOfBagels = "Error: no more bagels"
+var exitMessage = "Thanks so much for playing!  Remember to rate our app!"
+//Booleans
+var popeCatholic = true
+var isLessthan = 4 < 10
+var isEqual = 5 == 5
+var reverseIt = !false
+var comboIt = !(9 > 2)
 ```
 
 ### Type Annotations
