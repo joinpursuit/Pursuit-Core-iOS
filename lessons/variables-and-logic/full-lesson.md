@@ -54,7 +54,16 @@ You might have visualized a variable as a box that can hold something. The box i
 
 This is true in some form or another in all (reasonable) programming languages. Swift has a couple distinguishing features about its approach to variables that are important to know. First, variables are strongly typed. Second there are constants that work just like variables but can only be set once.
 
-## Types
+##Variable types
+|Variable type | Explanation | Examples |
+|---|---|---|
+|Int|An integer.  Can be positive, negative or zero.| 3, 0 -9|
+|Double|A number with a decimal component| 3.2934, -39.99, 3.00|
+|Character|A single Unicode character| "d", "!", "&#2400;"|
+|String|Zero or more characters chained together|"Hello Access Code!", "", "Enter your username: "|
+|Boolean|A binary value that can either be true or false|true, false|
+
+## Declaring variables
 Swift is a language with strong types and type inference during variable declaration.
 
 ```swift
