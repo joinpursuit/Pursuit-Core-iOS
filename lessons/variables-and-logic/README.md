@@ -1,9 +1,9 @@
 # Standards 
-Understand and use fundemental data types
+Understand and use fundamental data types
 
 # Objectives
 Students will be able to:
-* Differentiate different types of data
-* Define constants and variable
-* Print variables to the console using interpolation
+* Differentiate among types of data
+* Define constants and variables
+* Print variables to the console using string interpolation
 * Solve basic logic questions
