@@ -4,5 +4,5 @@
 
 # Objectives
 Students will be able to:
-* Review functions and closures
-* Succeed on the assessment
+* Compare and contrast functions and closures
+* Improve their understanding of functions and closures
