@@ -15,10 +15,23 @@ Apple's [Swift Language Reference, The Basics](https://developer.apple.com/libra
 # Assessment Materials
 ## Midday Check-in and solutions
 TODO: RECAST as multiple choice.
-* What types should we use for the following variables:
-	* xxxxx - finish me 
+###What type of variable is numberOfItemsInCart?: var numberOfItemsInCart = 15
+* String
+* Boolean
+* Int
+* Double
 
-* Declare a variable String, Int, Double, Bool
+###Which of the following variable declartions is incorrect?
+* let isClosed: Boolean = False
+* let version: Double = 3.0
+* let emotion: String = ":)"
+* let grade: Char = "a"
+
+###What data type would be the best to use for recording how munch money is in a bank account?
+* Int
+* Double
+* String
+* Boolean
 
 TODO: MOVE to end of day review
 ```swift
@@ -29,7 +42,8 @@ var currentTemperature = 88.5
 * Declare a constant String, Int, Double
 ```swift
 let numBoros = 5
-TODO: finish
+let alertMessage = "Warning!"
+let conversionRate = 2.54
 ```
 - Exercises and solutions (add links)
 - Homework and solutions (add links)
