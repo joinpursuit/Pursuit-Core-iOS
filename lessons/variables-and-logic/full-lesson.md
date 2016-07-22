@@ -195,6 +195,7 @@ We've seen the symbol '>' as a comparison operator that means 'Greater than'.  H
 | <= | Less than or equal to | 8 <= 8 | 10*2 <= 10 |
 | >= | Greater than or equal to | -10 >= -10 | 3*0 >= 1 |
 | == | Is equal to | 4.32 == 4.32 | - 12 == 12|
+| != | Not equal to| 30 != 31 | 5 != 5|
 
 We can also use logical operators like AND, NOT, and OR to make more complex statements.
 |Symbol| Meaning| True examples | False example|
@@ -227,6 +228,7 @@ let isLessthan = 4 < 10
 let isEqual = 5 == 5
 let reverseIt = !false
 let comboIt = !(9 > 2)
+let isntEqual = 3 != 3
 ```
 
 # Review and Wrapup
