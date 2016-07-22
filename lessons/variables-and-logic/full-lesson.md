@@ -17,12 +17,12 @@ Apple's [Swift Language Reference, The Basics](https://developer.apple.com/libra
 TODO: RECAST as multiple choice.
 ###What type of variable is numberOfItemsInCart?: var numberOfItemsInCart = 15
 * String
-* Boolean
+* Bool
 * Int
 * Double
 
 ###Which of the following variable declartions is incorrect?
-* let isClosed: Boolean = False
+* let isClosed: Bool = False
 * let version: Double = 3.0
 * let emotion: String = ":)"
 * let grade: Char = "a"
@@ -31,7 +31,7 @@ TODO: RECAST as multiple choice.
 * Int
 * Double
 * String
-* Boolean
+* Bool
 
 TODO: MOVE to end of day review
 ```swift
@@ -61,7 +61,7 @@ This is true in some form or another in all (reasonable) programming languages. 
 |Double|A number with a decimal component| 3.2934, -39.99, 3.00|
 |Character|A single Unicode character| "d", "!", "&#2400;"|
 |String|Zero or more characters chained together|"Hello Access Code!", "", "Enter your username: "|
-|Boolean|A binary value that can either be true or false|true, false|
+|Bool|A binary value that can either be true or false|true, false|
 
 ## Declaring variables
 Swift is a language with strong types and type inference during variable declaration.
@@ -84,28 +84,25 @@ var singleFare = 2.75 // Double (double is an unfortunate legacy)
 * Declare some variables
 
 ```swift
-//Integers
+//Int
 var customersServed = 34
 var statesNum = 50
 var currentYear = 2016
-//Doubles
+//Double
 var length = 60.4
 var percentCompleted = .87
 var gigawatts = 1.21
-//Characters
+//Character
 var grade = "A"
 var punctuationSelected = "!"
 var personInChinese = "&#20154;"
-//Strings
+//String
 var welcomeMessage = "Hi user!  Thanks for downloading!"
 var outOfBagels = "Error: no more bagels"
 var exitMessage = "Thanks so much for playing!  Remember to rate our app!"
-//Booleans
-var popeCatholic = true
-var isLessthan = 4 < 10
-var isEqual = 5 == 5
-var reverseIt = !false
-var comboIt = !(9 > 2)
+//Bool
+var isValidPassword = false
+var isLoggedIn = true
 ```
 
 ### Type Annotations
@@ -152,9 +149,85 @@ But in a program there are cases where you want something, once set, to not be r
 #### Exercise
 * Declare some constants
 ```swift
-TODO: Dump a bunch of let declarations here
+//Int
+let degreesInCircle = 360
+let moonsOfMars = 2
+let anglesInTriange = 3
+//Double
+let acceleration = 9.8
+let kgInPounds = 2.2
+let nessieMoney = 3.50
+//Character
+let firstLetter: Character = "A"
+let lastLetter: Character = "Z"
+let questionMark: Characger = "?"
+//String
+let testmsg = "This is the default testing message"
+let fourScore = "Four score and seven years ago"
+let goldenRecord = "We cast this message into the cosmos ... Of the 200 billion stars in the Milky Way galaxy, some – perhaps many – may have inhabited planets and space faring civilizations. If one such civilization intercepts Voyager and can understand these recorded contents, here is our message: This is a present from a small distant world, a token of our sounds, our science, our images, our music, our thoughts, and our feelings. We are attempting to survive our time so we may live into yours. We hope some day, having solved the problems we face, to join a community of galactic civilizations. This record represents our hope and our determination and our goodwill in a vast and awesome universe."
+//Bool
+let popeCatholic = true
+let oceanPink = false
+let codingFun = true
 ```
 * Think of examples of where to use constants instead of variables.
+
+
+##Logic
+We have seen that a Bool can either be true or false.  Sometimes we might want to check if an expression is true.  Let's say that we are hosting an event.  We have people attending this event, and chairs for them to sit at given by the following declarations.
+```swift
+let numberOfPeople = 40
+let numberOfChairs = 38
+```
+We know want to know if we have enough chairs for everyone.  To be extra safe, we want to make sure we have more chairs than people.  To do this, we can set a Bool:
+```swift
+let enoughChairsForEveryone = numberOfChairs > numberOfPeople
+//enoughChairsForEveryone = 38 > 40
+//enoughChairsForEveryone = false
+```
+If we had a different number of people or chairs, the Bool enoughChairsForEveryone would still accurately reflect if we had more chairs than people.
+
+We've seen the symbol '>' as a comparison operator that means 'Greater than'.  Here's a list of other comparison operators that you'll use when writing code:
+|Symbol| Meaning| True examples | False example|
+|---|---|---|---|
+| < | Less than | 3 < 9 | 13 < -28 |
+| > | Greater than| 120 > 34 | 4 > 3 * 2 |
+| <= | Less than or equal to | 8 <= 8 | 10*2 <= 10 |
+| >= | Greater than or equal to | -10 >= -10 | 3*0 >= 1 |
+| == | Is equal to | 4.32 == 4.32 | - 12 == 12|
+
+We can also use logical operators like AND, NOT, and OR to make more complex statements.
+|Symbol| Meaning| True examples | False example|
+|---|---|---|---|
+| ! | Not | !false | !true |
+| && | And | true && true | true && false |
+| || | Or | true || false | false || false
+
+The truth tables below give more detail.  (P means the first expression and Q means the second expression)
+
+|---|---|---|
+| p | q | p && q|
+| true | true | true| 
+| true | false | false|
+| false | true | false|
+| false | false | false|
+
+|---|---|---|
+| p | q | p || q|
+| true | true | true | 
+| true | false | true |
+| false | true | true |
+| false | false | false |
+
+#### Exercises
+For each Bool below: evaluate if it is true or false:
+
+```swift
+let isLessthan = 4 < 10
+let isEqual = 5 == 5
+let reverseIt = !false
+let comboIt = !(9 > 2)
+```
 
 # Review and Wrapup
 
