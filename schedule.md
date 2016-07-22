@@ -1,25 +1,25 @@
 | Unit|Week|Date|Lesson|
 |--- |---| ---|---|
-| 1|1| 2016-08-15 | [Environment, Tools & Resources, Pair programming](lessons/env-and-tools) |
-| 1|1| 2016-08-16 | [Variables/constants, interpolation, logic](/lessons/VariablesAndLogic) |
-| 1|1| 2016-08-17|  [Conditionals, Advanced conditionals](/lessons/Conditionals) |
-| 1|1| 2016-08-18|  [Numbers, integer operations, switch statements](/lessons/NumbersAndSwitchStatements)|
-| 1|1| 2016-08-19| [For loops, while loops](/lessons/Loops)|
-| 1|2| 2016-08-22| [Strings, Unicode](/lessons/String)|
-| 1|2|2016-08-23|   [Optionals](/lessons/Optionals)|
-| 1|2|2016-08-24|   [Arrays](/lessons/Arrays)|
-| 1|2|2016-08-25|   [Dictionaries](/lessons/Dictionaries)|
-| 1|2|2016-08-26|   [Review + Assessment](/lessons/ReviewAndAssessment-Collections)|
-| 1|3|2016-08-29|   [FunctionsOne](/lessons/FunctionsOne)|
-| 1|3|2016-08-30|   [FunctionsTwo](/lessons/FunctionsTwo)|
-| 1|3|2016-08-31|   [ClosuresOne](/lessons/ClosuresOne)|
-| 1|3|2016-09-01|   [ClosuresTwo](/lessons/ClosuresOne)|
-| 1|3|2016-09-02|   [FunctionsAndClosuresReview + Assessment](/lessons/ReviewAndAssessment-FunctionsAndClosures)
-| 1|4|2016-09-05|   [Enums](/lessons/Enums)
-| 1|4|2016-09-05|   [Structs](/lessons/Structs)
-| 1|4|2016-09-05|   [ClassesOne](/lessons/ClassesOne)
-| 1|4|2016-09-05|   [ClassesTwo](/lessons/ClassesTwo)
-| 1|4|2016-09-05|   [Review + Assessment](/lessons/ReviewAndAssessment-EnunsStructsAndClasses)
+| 1|1|2016-08-15| [Environment, Tools & Resources, Pair programming](lessons/env-and-tools) |
+| 1|1|2016-08-16| [Variables/constants, interpolation, logic](/lessons/variables-and-logic) |
+| 1|1|2016-08-17| [Conditionals, Advanced conditionals](/lessons/conditionals) |
+| 1|1|2016-08-18| [Numbers, integer operations, switch statements](/lessons/numbers-integerops-switch)|
+| 1|1|2016-08-19| [For loops, while loops](/lessons/loops)|
+| 1|2|2016-08-22| [Strings, Unicode](/lessons/strings)|
+| 1|2|2016-08-23| [Optionals](/lessons/optionals)|
+| 1|2|2016-08-24| [Arrays](/lessons/arrays)|
+| 1|2|2016-08-25| [Dictionaries](/lessons/dictionaries)|
+| 1|2|2016-08-26| [Collections Review & Assessment](/lessons/review-and-assessment-collections)|
+| 1|3|2016-08-29| [Functions](/lessons/functions-one)|
+| 1|3|2016-08-30| [Functions, continued](/lessons/functions-two)|
+| 1|3|2016-08-31| [Closures](/lessons/closures-one)|
+| 1|3|2016-09-01| [Closures, continued](/lessons/closures-two)|
+| 1|3|2016-09-02| [Functions and Closures Review & Assessment](/lessons/review-and-assessment-functions-and-closures)
+| 1|4|2016-09-05| [Enums](/lessons/enums)
+| 1|4|2016-09-05| [Structs & Classes](/lessons/structs-and-classes)
+| 1|4|2016-09-05| [Classes - Properties, Methods, & Initialization](/lessons/classes-one)
+| 1|4|2016-09-05| [Classes - Inheritance](/lessons/classes-two)
+| 1|4|2016-09-05| [Enums, Structs, and Classes Review & Assessment](/lessons/review-and-assessment-enums-structs-and-classes)
 
 
 
