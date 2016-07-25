@@ -200,6 +200,7 @@ let enoughChairsForEveryone = numberOfChairs > numberOfPeople
 If we had a different number of people or chairs, the Bool enoughChairsForEveryone would still accurately reflect if we had more chairs than people.
 
 We've seen the symbol '>' as a comparison operator that means 'Greater than'.  Here's a list of other comparison operators that you'll use when writing code:
+
 |Symbol| Meaning| True examples | False example|
 |---|---|---|---|
 | < | Less than | 3 < 9 | 13 < -28 |
@@ -210,6 +211,7 @@ We've seen the symbol '>' as a comparison operator that means 'Greater than'.  H
 | != | Not equal to| 30 != 31 | 5 != 5|
 
 We can also use logical operators like AND, NOT, and OR to make more complex statements.
+
 |Symbol| Meaning| True examples | False example|
 |---|---|---|---|
 | ! | Not | !false | !true |
@@ -224,6 +226,7 @@ The truth tables below give more detail.  (P means the first expression and Q me
 | true | false | false|
 | false | true | false|
 | false | false | false|
+
 
 |---|---|---|
 | p | q | p || q|
@@ -246,6 +249,7 @@ let isntEqual = 3 != 3
 
 ####Integer Operators
 We can also use arithmatic on integers.  We will go into more detail on integer operations on Thursday.
+
 |---|---|---|
 |Operator Symbol| Explanation |True Example|
 | + | Addition | 4 + 3 == 7 |
