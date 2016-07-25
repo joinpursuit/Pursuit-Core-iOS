@@ -220,6 +220,8 @@ We can also use logical operators like AND, NOT, and OR to make more complex sta
 
 The truth tables below give more detail.  (P means the first expression and Q means the second expression)
 
+For AND:
+
 |---|---|---|
 | p | q | p && q|
 | true | true | true| 
@@ -227,6 +229,8 @@ The truth tables below give more detail.  (P means the first expression and Q me
 | false | true | false|
 | false | false | false|
 
+
+For OR:
 
 |---|---|---|
 | p | q | p &#124;&#124; q|
