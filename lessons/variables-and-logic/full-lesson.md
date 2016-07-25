@@ -229,7 +229,7 @@ The truth tables below give more detail.  (P means the first expression and Q me
 
 
 |---|---|---|
-| p | q | p || q|
+| p | q | p &#124;&#124; q|
 | true | true | true | 
 | true | false | true |
 | false | true | true |
