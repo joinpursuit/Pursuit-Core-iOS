@@ -216,7 +216,7 @@ We can also use logical operators like AND, NOT, and OR to make more complex sta
 |---|---|---|---|
 | ! | Not | !false | !true |
 | && | And | true && true | true && false |
-| || | Or | true || false | false || false
+| &#124;&#124; | Or | true &#124;&#124; false | false &#124;&#124; false
 
 The truth tables below give more detail.  (P means the first expression and Q means the second expression)
 
