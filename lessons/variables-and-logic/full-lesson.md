@@ -249,8 +249,8 @@ let isntEqual = 3 != 3
 ####Integer Operators
 We can also use arithmatic on integers.  We will go into more detail on integer operations on Thursday.
 
-|---|---|---|
 |Operator Symbol| Explanation |True Example|
+|---|---|---|
 | + | Addition | 4 + 3 == 7 |
 | - | Subtraction | 3 - 9 == -6 |
 | * | Multiplication | 4.1 * 2.2 == 9.02 |
