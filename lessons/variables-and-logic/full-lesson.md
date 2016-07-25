@@ -120,9 +120,21 @@ var numberOfLegos: Int
 * Declare some variables using type annotations and set their value on the next line.
 
 ```swift
-TODO: Dump a bunch of var declarations here of the form
 var salutation: String
 salutation = "Dr. and Mrs. Foobar"
+
+var isInArray: Bool
+isInArray = false
+
+var userID: Int
+userID = 382
+
+var hoursWorked: Double
+hoursWorked = 15.5
+
+var qMark: Character
+qMark = "?"
+
 ```
 
 ## Constants
@@ -220,6 +232,7 @@ The truth tables below give more detail.  (P means the first expression and Q me
 | false | true | true |
 | false | false | false |
 
+
 #### Exercises
 For each Bool below: evaluate if it is true or false:
 
@@ -230,6 +243,17 @@ let reverseIt = !false
 let comboIt = !(9 > 2)
 let isntEqual = 3 != 3
 ```
+
+####Integer Operators
+We can also use arithmatic on integers.  We will go into more detail on integer operations on Thursday.
+|---|---|---|
+|Operator Symbol| Explanation |True Example|
+| + | Addition | 4 + 3 == 7 |
+| - | Subtraction | 3 - 9 == -6 |
+| * | Multiplication | 4.1 * 2.2 == 9.02 |
+| / | Division | 8 / 2 == 4 |
+| % | Modolo (Remainder Operation) | 11 % 3 == 2 |
+
 
 # Review and Wrapup
 
