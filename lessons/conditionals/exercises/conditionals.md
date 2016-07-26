@@ -32,7 +32,7 @@ if 3 < 2 || !true {
 ```swift
 if {
    print("You win!")
-else {
+} else {
    print("You lose!")
 }
 ```
