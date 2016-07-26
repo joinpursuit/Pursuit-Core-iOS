@@ -1,7 +1,7 @@
-#Standards:
-Master conditionals in all their forms and their relationship to boolean logic.
+# Standards
+Master conditionals in all their forms and their relationship to boolean logic
 
-#Objectives
+# Objectives
 Students will be able to:
 * Understand and use if / then / else constructs
 * Apply boolean logic to conditionals
