@@ -1,18 +1,19 @@
 # Conditionals
 
 ### Question 1.
-What is the advantage of a __switch__ over an __if__ statement?
-- a. There is no advantage.
-- b. A switch statement is very versatile because it lets you use ranges and sequences in a single case statement.
+What is one reason to use a __switch__ over an __if__ statement?
+- a. They are exactly the same.
+- b. A switch statement is more versatile because it lets you use ranges and sequences in a single case statement.
+- c. Switch statements are easier to read. 
 
 ### Question 2.
 What's missing from the switch statement below?
-- a. Missing case statements from the other month
+- a. The case statement needs to say month == 1
 - b. The code is valid and not missing anything
-- c. The above code will not compile because switch statements need case statements for all expected values or a default statement.
+- c. The below code will not compile because switch statements need case statements for all expected values or a default statement.
 
 ```
- let months = 1...12
+let months = 1...12
 
 for month in months {
     switch month {
