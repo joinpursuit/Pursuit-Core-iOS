@@ -95,7 +95,7 @@ var gigawatts = 1.21
 //Character
 var grade = "A"
 var punctuationSelected = "!"
-var personInChinese = "&#20154;"
+var unicodePersonInChinese = "\u{4EBA}"
 //String
 var welcomeMessage = "Hi user!  Thanks for downloading!"
 var outOfBagels = "Error: no more bagels"
