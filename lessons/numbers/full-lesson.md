@@ -20,7 +20,25 @@ Apple's [Swift Language Reference, The Basics](https://developer.apple.com/libra
 - Homework and solutions (add links)
 
 ## Warm up
-TODO: Some math warmups
+Math exercises:
+[Order of operations](https://www.mathsisfun.com/operation-order-pemdas.html)
+
+Simplify the following expressions:
+
+1) 4 + 3 * 5
+
+2) 3 / 3 * 2 + 5
+
+3) 2 ^ 6 - 5
+
+4) 5 + 4 / 2
+
+5) 9 - 3 * 4 - 2
+
+6) 4 * (-4) - 2
+
+7) 4 + 5 ^ 3 * 6 / 3
+
 
 ## Integers
 Integer is a term borrowed (taken) from mathematics to describe a number that's not a fraction 
@@ -39,6 +57,9 @@ let maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8
 * Take the code block above and test different mins and maxes. Use Int, Int8, Int16, Int32, and Int64
 
 ### Signedness
+
+A "signed" integer can be positive, negative or zero
+An "unsigned" integer can only represent positive number or zero
 
 Swift offers unsigned versions of all the interger types. The main advantage of unsigned integers is that it doubles the size of the positive range of the type. This used to be more of an issue when memory was limited and squeezing every bit was a valuable optimization. Now, there are only some use cases that call for it. Similar to the specific Int sizes, controlling the signedness of integers has applications in networking where systems need to agree on the exact format of the data they're communicating.
 
