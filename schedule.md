@@ -3,7 +3,7 @@
 | 1|1|2016-08-15| [Environment, Tools & Resources, Pair programming](lessons/env-and-tools) |
 | 1|1|2016-08-16| [Variables/constants, interpolation, logic](/lessons/variables-and-logic) |
 | 1|1|2016-08-17| [Conditionals, Advanced conditionals](/lessons/conditionals) |
-| 1|1|2016-08-18| [Numbers, integer operations, switch statements](/lessons/numbers-integerops-switch)|
+| 1|1|2016-08-18| [Numbers & operations](/lessons/numbers)|
 | 1|1|2016-08-19| [For loops, while loops](/lessons/loops)|
 | 1|2|2016-08-22| [Strings, Unicode](/lessons/strings)|
 | 1|2|2016-08-23| [Optionals](/lessons/optionals)|
