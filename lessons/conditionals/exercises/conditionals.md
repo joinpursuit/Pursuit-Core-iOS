@@ -7,7 +7,8 @@ let numberOne = 5
 let numberTwo = 3
 if numberOne > numberTwo {
    print("numberOne is bigger")
-}else if numberTwo > numberOne {
+}
+else if numberTwo > numberOne {
    print("numberTwo is bigger")
 }
 print("All done!")
@@ -21,9 +22,11 @@ print("All done!")
 let happyTimes: Int
 if 3 < 2 || !true {
    happyTimes = 1
-} else if 5 + 3 * 2 == 11 {
+} 
+else if 5 + 3 * 2 == 11 {
    happyTimes = 2
-} else {
+} 
+else {
    happyTimes = 3
 }
 ```
@@ -32,7 +35,8 @@ if 3 < 2 || !true {
 ```swift
 if {
    print("You win!")
-} else {
+} 
+else {
    print("You lose!")
 }
 ```
@@ -43,7 +47,8 @@ let votingAge = 18
 let userAge = 13
 if { //Put the condition here
    print("You can enter!")
-} else {
+} 
+else {
    //What could we print here?
 }
 ```
