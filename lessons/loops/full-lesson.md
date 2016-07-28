@@ -85,9 +85,19 @@ while i < 10 { // condition
 But it's main application is where we don't know how many times the loop will repeat before 
 we enter it. 
 
-while  {
-	
+```swift
+var number = 10
+while number > 1 {
+    number /= 2
+    print(number)
 }
+```
+
+Graph this in playgrounds. We can see by changing the initial value of number there's 
+not a simple way of knowing how many iterations there will be before we enter the loop. So we
+enter the loop knowing the condition for exiting without knowing how many iterations will
+be needed before that condition is met. 
+
 
 **Question**: What do you think the following will do?
 
@@ -101,8 +111,38 @@ while true { // condition
 It will loop endlessly. 
 ```
 
+**Question**: How about this one?
+
+```swift
+var number = 10
+while number > 1 {
+    number /= 2
+    print(number)
+}
+```
 Programmers put a lot of effort into avoiding endless loops because 
 they generally make your program freeze and can even crash the computer it's running on. 
 But you should know there are important uses for the endless loop. Apps, in fact, are running in an
 endless loop as they wait for input from the user.
+
+
+### ```while``` Challenge
+
+```swift
+// Zeno's paradox?
+var doubleNumber = 20.0
+while doubleNumber > 0.01 {
+    doubleNumber /= 2.0
+    
+    print(doubleNumber)
+}
+```
+
+**Question**: Using 0.01 as the threshold results in 11 iterations. 0 doesn't loop endlessly as it 
+should according to math. Why not?
+
+```
+The Double datatype doesn't have infinite precision. Halving it over and over will eventually
+drive its value down to zero.
+```
 
