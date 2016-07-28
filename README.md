@@ -2,4 +2,5 @@
 
 Welcome to Access Code!
 
+- Handbook
 - [Lesson Schedule](schedule.md)

@@ -120,9 +120,21 @@ var numberOfLegos: Int
 * Declare some variables using type annotations and set their value on the next line.
 
 ```swift
-TODO: Dump a bunch of var declarations here of the form
 var salutation: String
 salutation = "Dr. and Mrs. Foobar"
+
+var isInArray: Bool
+isInArray = false
+
+var userID: Int
+userID = 382
+
+var hoursWorked: Double
+hoursWorked = 15.5
+
+var qMark: Character
+qMark = "?"
+
 ```
 
 ## Constants
@@ -188,6 +200,7 @@ let enoughChairsForEveryone = numberOfChairs > numberOfPeople
 If we had a different number of people or chairs, the Bool enoughChairsForEveryone would still accurately reflect if we had more chairs than people.
 
 We've seen the symbol '>' as a comparison operator that means 'Greater than'.  Here's a list of other comparison operators that you'll use when writing code:
+
 |Symbol| Meaning| True examples | False example|
 |---|---|---|---|
 | < | Less than | 3 < 9 | 13 < -28 |
@@ -195,29 +208,32 @@ We've seen the symbol '>' as a comparison operator that means 'Greater than'.  H
 | <= | Less than or equal to | 8 <= 8 | 10*2 <= 10 |
 | >= | Greater than or equal to | -10 >= -10 | 3*0 >= 1 |
 | == | Is equal to | 4.32 == 4.32 | - 12 == 12|
+| != | Not equal to| 30 != 31 | 5 != 5|
 
 We can also use logical operators like AND, NOT, and OR to make more complex statements.
+
 |Symbol| Meaning| True examples | False example|
 |---|---|---|---|
 | ! | Not | !false | !true |
 | && | And | true && true | true && false |
-| || | Or | true || false | false || false
+| &#124;&#124; | Or | true &#124;&#124; false | false &#124;&#124; false
 
 The truth tables below give more detail.  (P means the first expression and Q means the second expression)
 
-|---|---|---|
 | p | q | p && q|
+|---|---|---|
 | true | true | true| 
 | true | false | false|
 | false | true | false|
 | false | false | false|
 
+| p | q | p &#124;&#124; q|
 |---|---|---|
-| p | q | p || q|
 | true | true | true | 
 | true | false | true |
 | false | true | true |
 | false | false | false |
+
 
 #### Exercises
 For each Bool below: evaluate if it is true or false:
@@ -227,7 +243,20 @@ let isLessthan = 4 < 10
 let isEqual = 5 == 5
 let reverseIt = !false
 let comboIt = !(9 > 2)
+let isntEqual = 3 != 3
 ```
+
+####Integer Operators
+We can also use arithmatic on integers.  We will go into more detail on integer operations later this week.
+
+|Operator Symbol| Explanation |True Example|
+|---|---|---|
+| + | Addition | 4 + 3 == 7 |
+| - | Subtraction | 3 - 9 == -6 |
+| * | Multiplication | 4.1 * 2.2 == 9.02 |
+| / | Division | 8 / 2 == 4 |
+| % | Modolo (Remainder Operation) | 11 % 3 == 2 |
+
 
 # Review and Wrapup
 
