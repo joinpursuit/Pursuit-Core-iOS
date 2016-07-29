@@ -12,6 +12,9 @@ Please keep the list in alphabetical order.
 
 - **command line interface**: A text based interface to the operating system. Programs or commands are invoked by typing them. There is a long and rich history of using these simple programs and even using them in combination. A rough synonym for console. 
 
+- **canonical**: adj. conforming to a general rule or acceptable procedure. This term has many uses within
+and outside computer science. Often its sense extends the definition here to mean a definitive choice among equivalent options. For example, a canonical URL for google.com is https://www.google.com. This is enforced by their server and the equivalent URLs are all redirected to the canonical form.
+
 - **console**: A text based interface to the operating system. A rough synonym for command line. 
 
 - **dictionary**: A synonym for an [associative data structure](https://en.wikipedia.org/wiki/Associative_array), which maps keys to values.
