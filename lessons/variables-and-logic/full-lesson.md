@@ -27,7 +27,7 @@ TODO: RECAST as multiple choice.
 * let emotion: String = ":)"
 * let grade: Char = "a"
 
-###What data type would be the best to use for recording how munch money is in a bank account?
+###What data type would be the best to use for recording how many hours an employee worked?  Assume that employees get paid for each half-hour increment of work.
 * Int
 * Double
 * String
