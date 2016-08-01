@@ -1,7 +1,6 @@
-#Standards
-Understand and use fundamental data types
+# Standards 
 
-#Objectives
+# Objectives
 Students will be able to:
 * Differentiate different types of data
 * Define constants and variable
