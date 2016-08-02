@@ -9,3 +9,4 @@ Students will be able to:
 * Unwrap optionals
 * Bind optionals
 * Chain optionals
+* Write idiomatic Swift

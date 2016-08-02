@@ -32,6 +32,9 @@ Please keep the list in alphabetical order.
 
 - **parameter**: An input to a function, specifically in its definition, related to argument. A function can define zero, one or many parameters. Most languages also provide a way to pass a variable number of arguments. 
 
+- **set**: v. To assign a value to a variable.
+	adv. The state in which a variable has a value. For example, the variable numberOfHamburgers is currently set (it is equal to 10). This is in contrast to unset/nil/null.
+
 # TODO
 
 initialize, nil/null, idiomatic, nested, diagnostic, lifecycle, operating system
