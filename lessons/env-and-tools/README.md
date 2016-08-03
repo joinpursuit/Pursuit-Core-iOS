@@ -1,4 +1,4 @@
-# How To Download Xcode
+# Install Xcode
 
 1. From your Macbook, open the App Store.
 2. Search for *Xcode*.
@@ -10,3 +10,30 @@
 5. The first time you open *Xcode* it’ll ask to install some additional components, allow it.
 6. Once complete, you should see a “Welcome to Xcode” screen. 
 7. Congratulations! You have successfully downloaded Xcode. Now you’re able to do the pre-work assignment in directory: /lessons/prework 
+
+# Install Slack
+1. Download and install desktop client from http://slack.com
+2. Optionally install the mobile client.
+
+# Setup github
+## Create a github account
+
+[Create a github account](http://github.com) if you don't already have one.
+
+
+## Creating Pull Requests
+
+1) Fork the repo
+
+2) Select a destination
+
+3) You should now be on your own profile viewing the forked repo
+
+4) Make some changes to the project 
+
+5) Commit and Push
+
+6) Create a pull request
+
+7) Make sure the left side is the original and the right side is your version
+
