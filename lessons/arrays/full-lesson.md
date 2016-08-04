@@ -7,7 +7,7 @@ Students will be able to:
 * Iterate through arrays
 * Use common array methods
 
-### Vocabulary: array, mutable, immutable, 
+### Vocabulary: array, collection, mutable, immutable, 
 
 # Resources
 Swift Programming: The Big Nerd Ranch Guide, Chapter 9
@@ -21,11 +21,45 @@ Apple's [Swift Language Reference, Collections](https://developer.apple.com/libr
 
 # Creating an Array
 
+Note: p.75 of the Big Nerd Ranch book shows an old syntax for creating and initializing an
+Array. Ignore it. Use this syntax at all times.
+
+```swift
+var bucketList: [String]
+```
+
+This illustrates a core challenge for all software development that's particularly noticeable 
+in iOS at this time: the need to improve the technology, sometimes at the expense of previous versions.
+
 ## Initializing an Array
+
+```swift
+var planets: [String] = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+var dwarfPlanets: [String] = ["Pluto"]
+```
+
+But with the help of type inference we don't need the annotation.
+
+```swift
+var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+var dwarfPlanets = ["Pluto"]
+```
 
 # Accessing and Modifying Arrays
 
 ## append
+```swift
+var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+
+// what the heck
+planets.append["Pluto"]
+```
+
+The signature of the append method on Array is ```append(_:)```.  What is that thing that
+looks like a broken smiley? We'll look at it closer when we cover functions. For now it's 
+good to just think of ```_``` as a placeholder, similar to how it was a wildcard/placeholder
+in ```case``` of a ```switch``` statement. Here it means that append takes an argument, 
+and that argument must be of the type stored in the array.
 
 ## removeAtIndex
 
