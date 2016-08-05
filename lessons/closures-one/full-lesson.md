@@ -6,7 +6,7 @@ Use functions to solve problems
 * Use closure expression syntax
 * Solve problems by using functions that take functions as an argument
 
-### Vocabulary: closure, block, lambda function, maintenance, higher-order
+### Vocabulary: closure, block,  algorithm, sort, lambda function, maintenance, higher-order
 
 # Resources
 Swift Programming: The Big Nerd Ranch Guide, Chapter 13 Closures
@@ -28,14 +28,6 @@ a sorting function as an argument.
 ### Using ```sort``` as an example
 
 ### Re-implement a sort
-
-## Functions as Return Types
-
-## Closures Capture Values
-
-## Closures are Reference Types
-
-# Review and Wrapup
 
 * What are higher order functions?
 * Why pass functions?
