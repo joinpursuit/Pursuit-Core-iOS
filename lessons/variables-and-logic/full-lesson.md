@@ -13,27 +13,9 @@ Swift Programming: The Big Nerd Ranch Guide, Chapter 2
 Apple's [Swift Language Reference, The Basics](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309
 
 # Assessment Materials
+## [Prework HW](https://docs.google.com/forms/d/e/1FAIpQLSf6Ocyz-H8mu4KpCzhCdIDaoKY9ZzypOh3a7tF9YmBUySnBuQ/viewform)
 ## [Midday Check-in and solutions](https://goo.gl/forms/exuAHSxaHwTFWApD3)
-TODO: RECAST as multiple choice.
-###What type of variable is numberOfItemsInCart?: var numberOfItemsInCart = 15
-* String
-* Bool
-* Int
-* Double
 
-###Which of the following variable declartions is incorrect?
-* let isClosed: Bool = False
-* let version: Double = 3.0
-* let emotion: String = ":)"
-* let grade: Char = "a"
-
-###What data type would be the best to use for recording how many hours an employee worked?  Assume that employees get paid for each half-hour increment of work.
-* Int
-* Double
-* String
-* Bool
-
-TODO: MOVE to end of day review
 ```swift
 var healthyFood = "Broccoli"
 var daysInCurrentMonth = 31
