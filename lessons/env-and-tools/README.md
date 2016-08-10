@@ -35,10 +35,10 @@ The dollar sign just indicates that it's a terminal command.  Don't type the "$"
 | ls | lists all files in the directory | ls |
 | mkdir | Makes an empty folder in the current directory | mkdir SurveyInformation |
 | cat | Displays the text of a file in terminal | cat README.md |
-| git clone (URL) | makes a local copy of a git repo in the current directory |
-| git add -A | Adds the changes you've made |
-| git commit -m "commit message | Commits your changes |
-| git pull | Updates your local copy to match what it's cloned from |
+| git clone (URL) | makes a local copy of a git repo in the current directory | git clone https://github.com/C4Q/AC3.2.git |
+| git add -A | Adds the changes you've made | git add -A |
+| git commit -m "commit message" | Commits your changes | git commit -m "updated the examples in the table"
+| git pull | Updates your local copy to match what it's cloned from | git pull origin master |
 
 
 ## Creating Pull Requests
