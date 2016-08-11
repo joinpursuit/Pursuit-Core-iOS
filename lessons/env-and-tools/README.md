@@ -20,20 +20,54 @@
 
 [Create a github account](http://github.com) if you don't already have one.
 
+#Terminal commands
+Note: Commands will look like 
+
+```shell
+$ git add -A
+```
+The dollar sign just indicates that it's a terminal command.  Don't type the "$" character.
+
+##Helpful terminal commands
+|Command|Description|Example|
+|---|---|---|
+| cd | Moves to a directory | cd Desktop |
+| ls | lists all files in the directory | ls |
+| mkdir | Makes an empty folder in the current directory | mkdir SurveyInformation |
+| cat | Displays the text of a file in terminal | cat README.md |
+| git clone (URL) | makes a local copy of a git repo in the current directory | git clone https://github.com/C4Q/AC3.2.git |
+| git add -A | Adds the changes you've made | git add -A |
+| git commit -m "commit message" | Commits your changes | git commit -m "updated the examples in the table"
+| git pull | Updates your local copy to match what it's cloned from | git pull origin master |
+
 
 ## Creating Pull Requests
 
 1) Fork the repo
+![Fork Image]
+(/resources/ForkButton)
 
-2) Select a destination
+2) A popup will come up asking what repo you want to fork it to. Select your profile.
 
 3) You should now be on your own profile viewing the forked repo
 
-4) Make some changes to the project 
+4) Make some changes to the project:
+* Click on the README.md file.  
+![README image]
+(/resources/ReadmeButton)
 
-5) Commit and Push
+* Then click on the edit button.
+![edit image]
+(/resources/EditButton)
 
-6) Create a pull request
+*Add a line with your name and a custom message.
+
+5) Commit your changes in terminal
+
+6) Create a pull request in Github
+![Pull Request Image]
+(/resources/PullRequestImage)
 
 7) Make sure the left side is the original and the right side is your version
-
+![Pull Request Comparison Check Image]
+(/resources/CompareCheck)
