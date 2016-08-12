@@ -54,7 +54,7 @@ The dollar sign just indicates that it's a terminal command.  Don't type the "$"
 
 1) Fork the repo
 ![Fork Image]
-(/resources/ForkButton)
+(resources/ForkButton.png)
 
 2) A popup will come up asking what repo you want to fork it to. Select your profile.
 
@@ -63,11 +63,11 @@ The dollar sign just indicates that it's a terminal command.  Don't type the "$"
 4) Make some changes to the project:
 * Click on the README.md file.  
 ![README image]
-(/resources/ReadmeButton)
+(resources/ReadmeButton.png)
 
 * Then click on the edit button.
 ![edit image]
-(/resources/EditButton)
+(resources/EditButton.png)
 
 *Add a line with your name and a custom message.
 
@@ -75,8 +75,8 @@ The dollar sign just indicates that it's a terminal command.  Don't type the "$"
 
 6) Create a pull request in Github
 ![Pull Request Image]
-(/resources/PullRequestImage)
+(resources/PullRequestImage.png)
 
 7) Make sure the left side is the original and the right side is your version
 ![Pull Request Comparison Check Image]
-(/resources/CompareCheck)
+(resources/CompareCheck.png)
