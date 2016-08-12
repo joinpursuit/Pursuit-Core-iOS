@@ -29,17 +29,26 @@ $ git add -A
 The dollar sign just indicates that it's a terminal command.  Don't type the "$" character.
 
 ##Helpful terminal commands
-|Command|Description|Example|
-|---|---|---|
-| cd | Moves to a directory | cd Desktop |
-| ls | lists all files in the directory | ls |
-| mkdir | Makes an empty folder in the current directory | mkdir SurveyInformation |
-| cat | Displays the text of a file in terminal | cat README.md |
-| git clone (URL) | makes a local copy of a git repo in the current directory | git clone https://github.com/C4Q/AC3.2.git |
-| git add -A | Adds the changes you've made | git add -A |
-| git commit -m "commit message" | Commits your changes | git commit -m "updated the examples in the table"
-| git pull | Updates your local copy to match what it's cloned from | git pull origin master |
 
+|Command |Description|Example|
+|--------|-----------|-------|
+| pwd    | "print working directory", it tells you your directory/folder | pwd -> /Users/lara |
+| cd     | "change directory", this moves to a directory | cd Desktop |
+| ls     | lists all files in the directory | ls |
+| rm     | "remove", this deletes a file (careful! NO UNDO) | rm README.md |
+| mkdir  | Makes an empty folder in the current directory | mkdir SurveyInformation |
+| cat    | Displays the text of a file in terminal | cat README.md |
+| more   | Displays the text of a file in terminal, with paging | more README.md |
+| open _file_     | Opens a file using the associated program | open README.md |
+| git clone (URL) | makes a local copy of a git repo in the current directory | git clone https://github.com/C4Q/AC3.2.git |
+| git add -A | Adds the changes you've made to the "index"| git add -A |
+| git commit -m "commit message" | Commits your changes | git commit -m "updated the examples in the table"
+| git pull   | Updates your local copy to match what it's cloned from | git pull origin master |
+| git status | Shows you the current state of your "working tree" | git status |
+| git diff   | Shows all the differences between your working tree and the previous version | git diff |
+
+* Google for "unix commands"
+* Google for "git cheatsheet"
 
 ## Creating Pull Requests
 
