@@ -9,8 +9,9 @@ Students will be able to:
 ### Vocabulary: function, argument, parameter, input, output, scope
 
 # Resources
-Swift Programming: The Big Nerd Ranch Guide, Chapter 12
-Apple's [Swift Language Reference, Collections](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ ???)
+Swift Programming: The Big Nerd Ranch Guide, Chapter 12, Functions
+
+Apple's [Swift Language Reference, Functions](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158)
 
 # Assessment Materials
 ## Midday Check-in and solutions
