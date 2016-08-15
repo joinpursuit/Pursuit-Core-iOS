@@ -71,7 +71,7 @@ The dollar sign just indicates that it's a terminal command.  Don't type the "$"
 
 *Add a line with your name and a custom message.
 
-5) Commit your changes in terminal
+5) Commit your changes.
 
 6) Create a pull request in Github
 ![Pull Request Image]
