@@ -1,3 +1,7 @@
+# Slides
+
+The [slides from today](https://docs.google.com/presentation/d/1S6h_P-BGW3njtCvbZaej6wt0SzOdlp1bslxiQh3MLPo/edit?usp=sharing) are available.
+
 # Install Xcode
 
 1. From your Macbook, open the App Store.
