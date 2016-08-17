@@ -2,9 +2,6 @@
 
 ### Question 1.
 What is one reason to use a __switch__ over an __if__ statement?
-- a. They are exactly the same.
-- b. A switch statement is more versatile because it lets you use ranges and sequences in a single case statement.
-- c. Switch statements are easier to read. 
 
 ### Question 2.
 What's missing from the switch statement below?
@@ -158,6 +155,14 @@ Write a switch statement that prints out the type of what it's switching on
 ###Question 15
 Write a conditional statement that prints out whether a number is a whole number
 
-
-
-
+### Question 16
+ You're walking in Manhattan. Write a switch statement that switches
+ on a variable names "direction" having one of the values "North", "East",
+ "West", or "South" and tells you if you're on a street or avenue
+ 
+### Question 17
+ You're in the Battery and you're heading for C4Q AND you can walk on water.
+ Write a switch using fallthrough to tell you you're getting warmer or colder
+ based on "direction" again. It should also report if you're going
+ "uptown" or "downtown" (but shouldn't report about east or west).
+ 
