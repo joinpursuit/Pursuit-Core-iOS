@@ -65,7 +65,7 @@ The dollar sign just indicates that it's a terminal command.  Don't type the "$"
 3) You should now be on your own profile viewing the forked repo
 
 4) Make some changes to the project:
-* Click on the README.md file.  
+* Click on the README.md file.
 ![README image]
 (resources/ReadmeButton.png)
 
