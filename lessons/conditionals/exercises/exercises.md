@@ -1,7 +1,7 @@
 # Conditionals
 
 ### Question 1.
-What is one reason to use a __switch__ over an __if__ statement?
+What are some reasons to use a __switch__ instead of an __if__?
 
 ### Question 2.
 What's missing from the switch statement below?
@@ -157,7 +157,7 @@ Write a conditional statement that prints out whether a number is a whole number
 
 ### Question 16
  You're walking in Manhattan. Write a switch statement that switches
- on a variable names "direction" having one of the values "North", "East",
+ on a variable named "direction" having one of the values "North", "East",
  "West", or "South" and tells you if you're on a street or avenue
  
 ### Question 17
