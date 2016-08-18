@@ -1,13 +1,13 @@
 # Access Code 3.2: Mobile Development with iOS
 
-Happy Wednesday.
+Happy Thursday.
 
-Today's lesson is [Conditionals](/lessons/conditionals)
+Today's lesson is [Numbers and Operations](/lessons/numbers)
 
-I might have been too quick to dispense with git/github that I forgot to remind you about the reading for tomorrow.
-Though, it's always the Resources section of the next day on the schedule.
+This afternoon will be a little different. Liz will lead the first in her series of Professional Development
+sections. 
 
-[Reading for Thursday](/lessons/numbers)
+[Reading for Friday](/lessons/loops)
 
 ## Schedule
 
