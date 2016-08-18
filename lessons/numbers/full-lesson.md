@@ -16,9 +16,6 @@ Apple's [Swift Language Reference, The Basics](https://developer.apple.com/libra
 # Assessment Materials
 ## Midday Check-in and solutions
 
-- Exercises and solutions (add links)
-- Homework and solutions (add links)
-
 ## Warm up
 Math exercises:
 [Order of operations](https://www.mathsisfun.com/operation-order-pemdas.html)
@@ -63,6 +60,7 @@ An "unsigned" integer can only represent positive number or zero
 
 Swift offers unsigned versions of all the interger types. The main advantage of unsigned integers is that it doubles the size of the positive range of the type. This used to be more of an issue when memory was limited and squeezing every bit was a valuable optimization. Now, there are only some use cases that call for it. Similar to the specific Int sizes, controlling the signedness of integers has applications in networking where systems need to agree on the exact format of the data they're communicating.
 
+
 **Question**: Think of applications that require using a very large number.
 ```
 ids on a popular service like Facebook and Twitter.
@@ -73,10 +71,6 @@ Scientific and mathematical applications that require exact precision.
 * Take the code block above and test different mins and maxes. Use UInt, UInt8, UInt16, UInt32, and UInt64
 * Compare them to their corresponding signed type, e.g. UInt8 to Int8.
 
-### Integer Storage
-
-Let's take a moment to look at the storage of numbers.
-TODO: Image for bit placement like in the BNR book
 
 ## Creating instances of ```Int``` 
 
@@ -164,6 +158,14 @@ wrap around and our program won't crash but most likely the value we get is tota
 
 ### Conversion between integer types
 
+### Storage of Integers
+
+https://www.mathsisfun.com/binary-number-system.html
+
+### Signed Integer Storage
+
+https://en.wikipedia.org/wiki/Two%27s_complement
+
 ## Floating-point numbers
 Floating-point numbers are used to represent the set of mathematical "real" numbers. 
 Floating-point refers to the fact that the decimal point can be placed anywhere whithin the 
@@ -183,6 +185,10 @@ let heightInMeters = 1.89 // Swift defaults to Double
 let weightInKilos: Double = 111.34
 let speedInKMP: Float = 66.7
 ```
+
+### Storage of Floating Point numbers 
+
+http://programmers.stackexchange.com/questions/215065/can-anyone-explain-representation-of-float-in-memory
 
 ### Beware of comparisons
 
