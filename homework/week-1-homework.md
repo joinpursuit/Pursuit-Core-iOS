@@ -91,4 +91,8 @@ for i in (1...5).reverse() {
 * For all multiples of 3 and 5, print out "FizzBuzz" instead of the number.
 
 #### Question 10.
-Write code that will print out the first 10 [Fibonacci](http://www.codeforwin.in/2015/06/fibonacci-series-in-c-program.html) numbers.
+Write code that will print out the first 10 [Fibonacci](http://www.codeforwin.in/2015/06/fibonacci-series-in-c-program.html) numbers:
+
+```
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+```
