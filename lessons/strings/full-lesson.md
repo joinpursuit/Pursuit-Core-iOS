@@ -15,13 +15,6 @@ Apple's [Swift Language Reference, Strings and Characters](https://developer.app
 
 http://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16
 
-# Assessment Materials
-## Midday Check-in and solutions
-
-- Exercises and solutions (add links)
-- Homework and solutions (add links)
-
-## Pre-work
 * Read: [Joel on Software
 The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)
 by Joel Spolsky](http://www.joelonsoftware.com/articles/Unicode.html)
