@@ -1,8 +1,9 @@
 # Access Code 3.2: Mobile Development with iOS
 
-Happy Friday -- truly something to be happy about.
+Have a good weekend!
 
-Today's lesson is on [Loops](/lessons/loops)
+Weekend [homework](/homework/week-1-homework.md)
+Monday's lesson is on [Strings](/lessons/strings). Note there is a little more reading than usual. 
 
 ## Schedule
 
