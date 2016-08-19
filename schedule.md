@@ -5,7 +5,7 @@
 | 1|1|2016-08-17| Complete all readings under ["Resources"](/lessons/conditionals) | [Conditionals, Advanced conditionals](/lessons/conditionals) | [Link](https://goo.gl/forms/FpLzjG4bXeC5YRs42) | [Link](https://goo.gl/forms/HTDtdnsPw8gyWrFm2) | [Link](https://goo.gl/forms/PYaQ6hKojodyCa332) |
 | 1|1|2016-08-18| Complete all readings under ["Resources"](/lessons/numbers) |[Numbers & operations](/lessons/numbers)| [Link](https://goo.gl/forms/JI9LE17GPHH7yZkk1) | [Link](https://goo.gl/forms/v3FTfHRzPhj7OjpI3) | [Link](https://goo.gl/forms/AXJOO8LV5FZiVqod2) |
 | 1|1|2016-08-19| Complete all readings under ["Resources"](/lessons/loops) |[For loops, while loops](/lessons/loops)| [Link](https://goo.gl/forms/92ccKar0rJOtSr8g2) | [Link](https://goo.gl/forms/Wx64ayEsSldtUouj2) | [Link](https://goo.gl/forms/Lr9iKHf0yRIZSQ5I2) |
-| 1|2|2016-08-22| Prework Link |[Strings, Unicode](/lessons/strings)| [Link](/link) | [Link](/link) | [Link](/link) |
+| 1|2|2016-08-22| Complete all readings under ["Resources"](/lessons/strings) |[Strings, Unicode](/lessons/strings)| [Link](/link) | [Link](/link) | [Link](/link) |
 | 1|2|2016-08-23| Prework Link |[Optionals](/lessons/optionals)| [Link](/link) | [Link](/link) | [Link](/link) |
 | 1|2|2016-08-24| Prework Link |[Arrays](/lessons/arrays)| [Link](/link) | [Link](/link) | [Link](/link) |
 | 1|2|2016-08-25| Prework Link |[Dictionaries](/lessons/dictionaries)| [Link](/link) | [Link](/link) | [Link](/link) |
