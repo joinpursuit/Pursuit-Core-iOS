@@ -25,7 +25,6 @@ by Joel Spolsky](http://www.joelonsoftware.com/articles/Unicode.html)
 - Introduce Unicode 
 
 **Question**: What is a standard?
-Encoding
 
 **Question**: Computers store letters as numbers?
 
@@ -42,6 +41,15 @@ var emptyString = ""               // empty string literal
 var anotherEmptyString = String()  // initializer syntax
 // these two strings are both empty, and are equivalent to each other
 ```
+
+### NYT 
+Type the following exactly,
+
+```swift
+var frost = String(
+```
+
+And look for autocomplete options. Let's look at and discuss the other initializers and play with them.
 
 ### String Mutability
 
