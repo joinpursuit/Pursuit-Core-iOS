@@ -53,7 +53,7 @@ Refer to this [Unicode Table](http://unicode-table.com/en/).
 * Using only Unicode, print out your name.
 
 #### U4
-* (Bonus) Using only Unicode, print "Hello World" in another language.
+* Using only Unicode, print "Hello World" in another language.
 
 #### U5.
 Print the below flower box using the following information.
@@ -75,3 +75,6 @@ Print the below flower box using the following information.
 - - - - - - - - - - -
 
 ```
+#### U6.
+Write a program that builds a chess board using Unicode.
+* [Chess in Unicode](https://en.wikipedia.org/wiki/Chess_symbols_in_Unicode)
