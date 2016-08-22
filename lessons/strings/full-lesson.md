@@ -21,12 +21,11 @@ by Joel Spolsky](http://www.joelonsoftware.com/articles/Unicode.html)
 * Look at: https://en.wikipedia.org/wiki/Plane_%28Unicode%29#Basic_Multilingual_Plane
 
 ## Warm up
-- review base 2, base 8, base 16
-- Introduce Unicode 
+Hexadecimal is back. 
+
+https://en.wikipedia.org/wiki/Hexadecimal
 
 **Question**: What is a standard?
-
-**Question**: Computers store letters as numbers?
 
 ## Strings
 
@@ -46,7 +45,7 @@ var anotherEmptyString = String()  // initializer syntax
 Type the following exactly:
 
 ```swift
-var frost = String(
+var walden = String(
 ```
 
 And look for autocomplete options. Take a look at the other initializers, play with them and be 
