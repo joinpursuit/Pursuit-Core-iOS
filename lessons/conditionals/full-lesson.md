@@ -10,6 +10,7 @@ Students will be able to:
 
 # Resources
 Swift Programming: The Big Nerd Ranch Guide, Chapter 3, Conditionals
+
 Swift Programming: The Big Nerd Ranch Guide, Chapter 5, Switch (pp. 35-39)
 
 Apple's [Swift Language Reference, Control Flow](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ControlFlow.html#//apple_ref/doc/uid/TP40014097-CH9-ID120) Seek to **Conditional Statements**
@@ -17,11 +18,30 @@ Apple's [Swift Language Reference, Control Flow](https://developer.apple.com/lib
 # Assessment Materials
 ## Midday Check-in and solutions
 
-- Exercises and solutions (add links)
-- Homework and solutions (add links)
-
 ## Warm up
-TODO: Some logic warmups like the end of the previous lesson
+
+```swift
+// 1. 
+let primate = "Ape"
+let equid = "Zebra"
+
+// what does this evaluate to?
+primate > equid
+
+// 2a-b.
+let cold = 32
+let ideal = 75
+let hot = 90
+let currentTemp = 65
+
+// 2a.
+// what does this evaluate to?
+currentTemp < hot && currentTemp > cold
+
+// 2b.
+// write an expression that evaluates to true 
+// if currentTemp is within 5 degrees of ideal
+```
 
 # Lecture
 ## Intro
@@ -63,6 +83,31 @@ if temperatureInFahrenheit <= 32 {
     print("It's not that cold. Wear a t-shirt.")
 }
 // Prints "It's really warm. Don't forget to wear sunscreen."
+```
+
+**Exercise**
+
+Using the constants from the warm up write conditionals that 
+output helpful messages about the temperature. See if you can work in 
+some string interpolation.
+
+```swift
+let cold = 32
+let ideal = 75
+let hot = 90
+let currentTemp = 65
+
+// 1.
+// print a meaningful message for this condition
+currentTemp < hot && currentTemp > cold
+
+// 2.
+// and for this one
+currentTemp > hot || currentTemp < cold
+
+// 3.
+// print a meaningful message for this condition
+// if currentTemp is within 5 degrees of ideal
 ```
 
 ## ```switch```
@@ -118,8 +163,20 @@ default:
 
 ### ```fallthrough```
 
-TODO: finish
-Not as common.
+```fallthrough``` is used to have consecutive cases match. It's not as common.
+
+```swift
+let integerToDescribe = 5
+var description = "The number \(integerToDescribe) is"
+switch integerToDescribe {
+case 2, 3, 5, 7, 11, 13, 17, 19:
+    description += " a prime number, and also"
+    fallthrough
+default:
+    description += " an integer."
+}
+print(description)
+```
 
 ### Ranges
 
@@ -127,7 +184,7 @@ Not as common.
 
 **Question:** Why do you think it might be the more common form?
 
-```swift```
+```swift
 let r = 0..<5
 print(String(r.dynamicType))
 

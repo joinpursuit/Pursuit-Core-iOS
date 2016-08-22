@@ -10,30 +10,13 @@ Students will be able to:
 
 # Resources
 Swift Programming: The Big Nerd Ranch Guide, Chapter 2
+
 Apple's [Swift Language Reference, The Basics](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309
 
 # Assessment Materials
-## Midday Check-in and solutions
-TODO: RECAST as multiple choice.
-###What type of variable is numberOfItemsInCart?: var numberOfItemsInCart = 15
-* String
-* Bool
-* Int
-* Double
+## [Prework HW](https://docs.google.com/forms/d/e/1FAIpQLSf6Ocyz-H8mu4KpCzhCdIDaoKY9ZzypOh3a7tF9YmBUySnBuQ/viewform)
+## [Midday Check-in and solutions](https://goo.gl/forms/exuAHSxaHwTFWApD3)
 
-###Which of the following variable declartions is incorrect?
-* let isClosed: Bool = False
-* let version: Double = 3.0
-* let emotion: String = ":)"
-* let grade: Char = "a"
-
-###What data type would be the best to use for recording how munch money is in a bank account?
-* Int
-* Double
-* String
-* Bool
-
-TODO: MOVE to end of day review
 ```swift
 var healthyFood = "Broccoli"
 var daysInCurrentMonth = 31

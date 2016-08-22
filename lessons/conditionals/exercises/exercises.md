@@ -1,10 +1,7 @@
 # Conditionals
 
 ### Question 1.
-What is one reason to use a __switch__ over an __if__ statement?
-- a. They are exactly the same.
-- b. A switch statement is more versatile because it lets you use ranges and sequences in a single case statement.
-- c. Switch statements are easier to read. 
+What are some reasons to use a __switch__ instead of an __if__?
 
 ### Question 2.
 What's missing from the switch statement below?
@@ -12,21 +9,18 @@ What's missing from the switch statement below?
 - b. The code is valid and not missing anything
 - c. The below code will not compile because switch statements need case statements for all expected values or a default statement.
 
-```
-let months = 1...12
-
-for month in months {
-    switch month {
-        case 1:
-            print("January")
-    }
+```swift
+let monthNum = 3
+switch monthNum {
+case 1:
+    print("January")
 }
 ```
 
 ### Question 3.
 Convert the if/else statement below into a switch statement.
 
-```
+```swift
 temperatureInFahrenheit = 72
 
 if temperatureInFahrenheit <= 40 {
@@ -40,19 +34,16 @@ if temperatureInFahrenheit <= 40 {
 
 ### Question 4.
 Change the below if/else statement into a switch statement.
-```
-let cards = 1...13
-
-for card in cards {
-    if card == 11 {
-        print("Jack")
-    } else if card == 12 {
-        print("Queen")
-    } else if card == 13 {
-        print("King")
-    } else {
-        print(card)
-    }
+```swift
+let cardNum = 12
+if cardNum == 11 {
+    print("Jack")
+} else if cardNum == 12 {
+    print("Queen")
+} else if cardNum == 13 {
+    print("King")
+} else {
+    print(cardNum)
 }
 ```
 
@@ -67,7 +58,7 @@ Create a switch statement that will convert a number grade into a letter grade a
 
 ### Question 6.
 Consider the below switch statement. What should your system currently print? What happens when you change _number_ to 365? 1024? 65? What happens when you remove the __default__ clause?
-```
+```swift
 let number = 42
 
 switch number {
@@ -90,7 +81,7 @@ Consider the variable below called _population_ and the if-condition.
 2.  Add an else-condition where the message changes to say it's a mid-size town.
 3. Convert your final if-else statement to a switch statement.
 
-```
+```swift
 var population: Int = 10000
 var message = String()
 
@@ -100,35 +91,23 @@ if population > 10000 {
 ```
 
 ### Question 8.
-The below code is compiling with an error. What's missing?
+Complete the code below so that it prints out and tells the user if the sum of the two numbers in the tuple is at least 15.
+a) Using a conditional
+b) Using a switch statement
 
-```
-let names  = ["Paul","Stevie","Michael","John","Bono","George","Ringo","Mick"]
-for name in names {
-  switch {
-  case "Paul","George","John","Ringo":
-    print("\(name) is a Beatle")
-  default:
-    print("\(name) is not a Beatle")
-  }
-}
+```swift
+let myTuple: (Int, Int) = (5, 10)
 ```
 
 ### Question 9.
-Complete the switch statement below to print the correct output.
+Complete the switch statement below.  We want it to output a personalized greeting to the student based on their name and class.
 
-```
-let sentence = "You're the best around, nothing's going to ever keep you down!"
-var sentenceWithNoVowels = ""
-
-for character in sentence.characters {
-    switch character {
-        //put code here
-    }
+```swift
+let studentNameAndClass = ("Ben", 3.2)
+switch myTupleTwo{
+   
 }
-print(sentenceWithNoVowels)
 
-//Prints "Y'rthbstrnd,nthng'sgngtvrkpydwn!"
 ```
 
 ### Question 10.
@@ -136,7 +115,7 @@ Consider the below switch with a tuple.
 * Add a case for when _y_ is __double__ the value of _x_
 * Add a case for when _y_ is __triple__ the value of _x_
 
-```
+```swift
 switch (x,y) {
 case let (x,y) where x==y :
     print("x is equal to y")
@@ -144,3 +123,46 @@ case let (x,y):
     print("Nothing is special about this tuple")
 }
 ```
+
+###Question 11
+Write an if statement that checks to see what quadrant a point is in, then prints that quadrant.
+Then write it as a switch statement
+```swift
+let myPoint: (Double, Double)
+```
+
+###Question 12
+Write an if statement that prints out what decade of life someone is in (e.g "You are in your twenties).
+Then write it as a switch statement
+```swift
+let nameAndBirthDate: (String, Int)
+```
+
+###Question 13
+Write a switch statement that switches on a tuple with two Bools and prints what logical operators (&&, ||) could be applied to make a true expression.
+```swift
+let pAndQ: (Bool, Bool)
+```
+
+Next, write a switch statement that switches on a tuple with 3 Bools and prints what logical operators (&&, ||) could connect all Bools with to make a true expression.
+```swift
+let pAndQAndR: (Bool, Bool, Bool)
+```
+
+###Question 14
+Write a switch statement that prints out the type of what it's switching on
+
+###Question 15
+Write a conditional statement that prints out whether a number is a whole number
+
+### Question 16
+ You're walking in Manhattan. Write a switch statement that switches
+ on a variable named "direction" having one of the values "North", "East",
+ "West", or "South" and tells you if you're on a street or avenue
+ 
+### Question 17
+ You're in the Battery and you're heading for C4Q AND you can walk on water.
+ Write a switch using fallthrough to tell you you're getting warmer or colder
+ based on "direction" again. It should also report if you're going
+ "uptown" or "downtown" (but shouldn't report about east or west).
+ 

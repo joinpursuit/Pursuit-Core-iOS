@@ -1,28 +1,35 @@
-# Welcome to AC3.2
-
-Here's some homework to finish **before** class begins meeting. Expect it to be interesting, 
-inspiring and hopefully fun.
-
-### Read/watch the following
-
-1. [What is programming?](https://www.khanacademy.org/computing/computer-programming/programming/intro-to-programming/v/programming-intro) from Khan Academy
+###Read/watch the following:
+1. [What is programming?-Khan Academy](https://www.khanacademy.org/computing/computer-programming/programming/intro-to-programming/v/programming-intro)
 2. [Reddit learn programming FAQ](https://www.reddit.com/r/learnprogramming/wiki/faq)
 3. [Introduction to Making iPhone Apps](http://codewithchris.com/how-to-make-iphone-apps-with-no-programming-experience/)
    * Read the brief article
 4. [Introduction to tools and materials of iOS](http://codewithchris.com/1-introduction-to-the-tools-and-materials/)
 5. [Playgrounds and getting your feet wet](http://codewithchris.com/2-playgrounds-and-getting-your-feet-wet/)
 
+###Complete as many challenges as you can in each of the following games:
+Try to do at least the first 4-5 levels in each game
 
-### Exercise
+1. [Puzzle](https://blockly-games.appspot.com/puzzle?lang=en)
+2. [Maze](https://blockly-games.appspot.com/maze?lang=en)
+3. [Bird](https://blockly-games.appspot.com/bird?lang=en)
+4. [Turtle](https://blockly-games.appspot.com/turtle?lang=en)
+5. [Movie](https://blockly-games.appspot.com/movie?)
+6. [Pond-Tutor](https://blockly-games.appspot.com/pond-tutor?lang=en)
+7. [Pond (Experiment and have fun!)](https://blockly-games.appspot.com/pond-duck?lang=en)
 
-Copy and paste the code below into a Playground in XCode (instructions above), then solve each problem.
+###Intro to Swift!
+1.  Read the following sections in the [Swift Documentation](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309)
+    * "The Basics Introduction"
+    * "Constants and Variables"
+    * "Type Annotations"
+    * "Naming Constants and Variables"
+    * "Printing Constants and Variables"
+    * "Comments"
 
-  *If Playgrounds aren't working for you, complete the exercises in [repl.it](https://repl.it/languages/swift) 
-and save your answers in a separate file.
+2. Copy and paste the code below into [repl.it](https://repl.it/languages/swift), then solve each problem.
 
 ```swift
-
-// Example Problem: Declare a constant called "c4qHQ" that holds the string "Long Island City". 
+// Example Problem: Declare a constant called "c4qHQ" that holds the string "Long Island City".
 // Then print it.
 
 let c4qHQ = "Long Island City"
@@ -45,27 +52,26 @@ print(c4qHQ)
 
 let aboutMe = "My name is \() and I'm \() years old."
 
-// Problem 8. Using the code below, Create variables called "myBestFriendsName" 
-// and "myBestFriendsAge" and give them both appropriate values. 
+// Problem 8. Using the code below, Create variables called "myBestFriendsName"
+// and "myBestFriendsAge" and give them both appropriate values.
 // Insert the correct variables inside the (). Print "bestFriend".
 
 let bestFriend = "My best friend is \() years old and her name is \()."
 
 // Problem 9. Create a Bool variable called "aliensAreReal", give it a value and print it.
 
-// Problem 10. Describe your hometown. 
-// a. Create a string called "townName" which holds your town's name. 
+// Problem 10. Describe your hometown.
+// a. Create a string called "townName" which holds your town's name.
 
-// b. Create an integer variable called "population" and give it a value. 
+// b. Create an integer variable called "population" and give it a value.
 
-// c. (Why should "population" be a variable instead of a constant?) 
+// c. (Why should "population" be a variable instead of a constant?)
 // Answer (not code):
 
-// d. Create a constant called "numberOfSchools" and give it a value. 
+// d. Create a constant called "numberOfSchools" and give it a value.
 
-// e. Using the code below, create a variable called "townDescription" below and 
+// e. Using the code below, create a variable called "townDescription" below and
 //    insert the correct constant or variable, then print.
 
 let townDescription = "My hometown is \() and has a population of \(). There are \() schools in town."
-
 ```
