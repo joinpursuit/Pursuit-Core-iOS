@@ -3,8 +3,12 @@
 ### I. Variables
 
 #### Question 1.
+<<<<<<< HEAD
+With your understanding of proper naming conventions, provide the following constants/variable names with the most proper value ```type```.
+=======
 Provide the following constants/variable names with the most appropriate type annotations.
 
+>>>>>>> upstream/master
 1. let _firstName_: (type?)
 2. let _middleInitial_:
 3. var _age_:
@@ -15,11 +19,29 @@ Provide the following constants/variable names with the most appropriate type an
 8. let _π_:
 
 #### Question 2.
+<<<<<<< HEAD
+Convert the following to Binary:
+=======
 Convert the following decimal numbers to Binary:
+>>>>>>> upstream/master
 * 55
 * 122
 * -1
 * 15
+<<<<<<< HEAD
+* -51
+
+#### Question 3.
+Using nested loops that prints the numbers from 0 to 100, then back to 0.
+
+#### Question 4.
+While ```i``` is greater than 1, print only all positive even numbers and break the loop only when you've reached 220.
+
+#### Question 5.
+* Using any loop, print the sum of all numbers between 0 to 50.
+* Using a while loop, print all the odd numbers from 0 to 100.
+* Using a loop and a ```where``` condition, print all the multiples of 10 from 0 to 500.
+=======
 
 #### Question 3.
 Using nested loops, print the numbers from 0 to 100, then back to 0.
@@ -32,6 +54,7 @@ out of the loop when you've reached 220.
 * Using any kind of loop, print the sum of all numbers between 0 to 50.
 * Using a while loop, print all the odd numbers from 0 to 100.
 * Using a ```for case``` loop, print all the multiples of 10 from 50 to 500.
+>>>>>>> upstream/master
 
 #### Question 6.
 Consider the code below. Loop through the ```professionals``` array and using a switch statement:
@@ -41,7 +64,11 @@ Consider the code below. Loop through the ```professionals``` array and using a 
 * Print out the professionals in their 20s.
 * Print out the professionals in their 30s.
 
+<<<<<<< HEAD
+```
+=======
 ```swift
+>>>>>>> upstream/master
 let sarah = (firstName: "Sarah", lastName: "Palardo", job: "teacher", age: 32)
 let beth = (firstName: "Beth", lastName: "Newell", job: "developer", age: 29)
 let jana = (firstName: "Jana", lastName: "Smith", job: "developer", age: 33)
@@ -53,6 +80,14 @@ let navindra = (firstName: "Navindra", lastName: "Chowdhurry", job: "actuary", a
 
 let professionals = [sarah, beth, jana, lauren, charles, steve, jamal, navindra]
 ```
+<<<<<<< HEAD
+* Hint: Use the below framework for your code
+```
+for person in professionals {
+      switch person {
+
+      }
+=======
 
 * Hint: Use the framework below for your code
 
@@ -61,23 +96,34 @@ for person in professionals {
 	switch person {
  
 	}
+>>>>>>> upstream/master
 }
 ```
 
 #### Question 7.
 Given the arrays below, use nested loops to print out every possible card in the deck.
+<<<<<<< HEAD
+```
+let denominations = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+let suits = ["♠️", "♣️", "♥️", "♦️"]
+=======
 
 ```swift
 let denominations = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
 let suits = ["♠️", "♣️", "♥️", "♦️"]
 ```
+>>>>>>> upstream/master
 
 #### Question 8.
 Print out the lyrics to the song ["99 Bottles of Beer"](http://www.99-bottles-of-beer.net/lyrics.html)
 * Hint 1: Use a for-loop and a switch statement
 * Hint 2: Below is an example of reversing a range in Swift
+<<<<<<< HEAD
+```
+=======
 
 ```swift
+>>>>>>> upstream/master
 for i in (1...5).reverse() {
     print(i)
 }
@@ -91,8 +137,12 @@ for i in (1...5).reverse() {
 * For all multiples of 3 and 5, print out "FizzBuzz" instead of the number.
 
 #### Question 10.
+<<<<<<< HEAD
+Write code that will print out the first 10 [Fibonacci](http://www.codeforwin.in/2015/06/fibonacci-series-in-c-program.html) numbers.
+=======
 Write code that will print out the first 10 [Fibonacci](http://www.codeforwin.in/2015/06/fibonacci-series-in-c-program.html) numbers:
 
 ```
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
 ```
+>>>>>>> upstream/master

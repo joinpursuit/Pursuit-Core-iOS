@@ -73,6 +73,71 @@ b. 100
 c. 65
 d. 255
 ```
+<<<<<<< HEAD
+### Question 9.
+Convert the if/else statement below into a switch statement.
+
+```
+if temperatureInFahrenheit <= 40 {
+  print("It's cold out.")
+} else if temperatureInFahrenheit >= 85 {
+  print("It's really warm.")
+} else {
+  print("Weather is moderate.")
+}
+```
+
+### Question 10.
+Consider the variable below called _population_ and the if-condition.
+* Add an else-if-condition that states if _population_ is less than 10000 but greater than 5000, the message changes to say it's "a medium size town".
+* Add an else-condition where the message changes to say it's a small size town.
+* Convert your final if-else statement to a switch statement.
+
+```
+var population: Int = 10000
+var message = String()
+
+if population > 10000 {
+  message = "\(population) is a large town"
+}
+```
+
+### Question 11.
+Consider the below switch with a tuple.
+* Add a case for when _y_ is __double__ the value of _x_
+* Add a case for when _y_ is __triple__ the value of _x_
+
+```
+switch (x,y) {
+case let (x,y) where x==y :
+  print("x is equal to y")
+case let (x,y):
+  print("Nothing is special about this tuple")
+}
+```
+### Question 12.
+Consider the below switch statement.
+* What should your system currently print?
+* What happens when you change _number_ to a. 365? b. 1024? c. 65?
+* What happens when you remove the __default__ clause?
+
+```
+let number = 42
+
+switch number {
+case 365:
+  print("Days in year")
+case 1024:
+  print("Bytes in a Kilobyte")
+case 0:
+  print("Where arrays start")
+case 42:
+  print("The answer to life, the universe and everything")
+default:
+  print("Some uninteresting number")
+}
+```
+=======
 
 #### Question 8.
 Which of the following numbers can't be assigned to an Int8, and why?:
@@ -109,3 +174,4 @@ let totalWidth = width + extraWidth
 #### Question 13.
 
 Alter the code in Question 12 to do what we want it to.
+>>>>>>> upstream/master
