@@ -1,10 +1,9 @@
 # Access Code 3.2: Mobile Development with iOS
 
-Have a good weekend!
+Welcome back.
 
-Weekend [homework](/homework/week-1-homework.md)
-
-Monday's lesson is on [Strings](/lessons/strings). Note there is a little more reading than usual. 
+Today's lesson is on [Strings](/lessons/strings). 
+Tomorrow's lesson is on [Optionals](/lessons/optionals). 
 
 ## Schedule
 
