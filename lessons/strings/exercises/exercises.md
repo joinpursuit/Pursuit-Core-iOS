@@ -39,4 +39,5 @@ to initialize it.
 
 //Unicode exercises
 
-//U1)
+//U1) Build five pairs of canonically equivalent strings, the first of each being a pre-composed character and
+the second being one that uses combinable unicode scalars. Show that they are equivalent.
