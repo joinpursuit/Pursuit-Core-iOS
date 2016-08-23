@@ -281,17 +281,35 @@ Build a pyramid of doom (three nested optionals) and a multiply bound version.
 TODO: ANSWER
 ```
 
-### Implicit unwrapping
-TODO: Finish
+### Implicitly Unwrapped Optionals
 
+Implicitly unwrapped optionals don't need to be unwrapped when used. This seems odd, and at this point
+before we've dealt with writing our own classes it is odd. For now, don't declare implicitly unwrapped 
+optionals, but let's be ready to use them when we see them.
+
+```swift
+var firstName: String!
+firstName = "Caspar"
+print(firstName)
+```
 
 ### Modifying an optional in place
-TODO: Finish
 
+```swift
+lastName?.appendContentsOf(", Esq.")
+lastName?.removeAll()
+```
+
+#### NYT
+
+Explore the String documentation and find other methods that modify the string like 
+```appendContentsOf(_:)``` does
 
 ### The nil coalescing operator
-TODO: Finish
 
+```swift
+let mn = middleName ?? "X."
+```
 Good to ask yourself whether a feature is for new functionality, clarity, brevity. Many of these have tradeoffs.
 
 ## Optional chaining
