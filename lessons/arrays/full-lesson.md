@@ -48,31 +48,65 @@ var dwarfPlanets = ["Pluto"]
 
 # Accessing and Modifying Arrays
 
+## Arrays copy on assignment
+```swift
+var planetas = planets
+```
+
+**Question**: How can we go about proving this?
+
 ## append
 ```swift
 var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 
 // what the heck
-planets.append["Pluto"]
+planets.append("Pluto")
 ```
 
 The signature of the append method on Array is ```append(_:)```.  What is that thing that
 looks like a broken smiley? We'll look at it closer when we cover functions. For now it's 
 good to just think of ```_``` as a placeholder, similar to how it was a wildcard/placeholder
-in ```case``` of a ```switch``` statement. Here it means that append takes an argument, 
-and that argument must be of the type stored in the array.
+in ```case``` of a ```switch``` statement. Here it means that append takes one argument
+and that we haven't explicitly renamed it.
 
 ## removeAtIndex
 
+```swift
+planets.removeAtIndex(8)
+```
+
+**Question** What's a more general solution for removing the last element of an array?
+
+**Question** What might be a performance consideration with ```removeAtIndex(_:)```?
+
 ## count
+
+```swift
+planets.count
+```
 
 ## Subscript access
 
+```swift
+// single
+let earth = planets[2]
+let gasGiants = planets[4...6] // what type is gasGiants?
+```
+
 ### read
+```swift
+print(planets[2])
+```
 
 ### append
+```swift
+planets[2] += " (home)"
+```
 
 ### replace
+```swift
+planets[6] = "Urectum" // https://theinfosphere.org/Urectum
+```
 
 ## Array Equality
 
