@@ -160,4 +160,4 @@ Write a loop to print out the matrix.
 
 ### Strings as Arrays
 1. Copy the characters of a string into an array.
-2. Find a character in that array.
+2. Find a character in that array. d
