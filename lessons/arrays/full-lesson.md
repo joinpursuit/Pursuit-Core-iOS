@@ -35,6 +35,7 @@ in iOS at this time: the need to improve the technology, sometimes at the expens
 ## Initializing an Array
 
 ```swift
+// initialize with Array literals
 var planets: [String] = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 var dwarfPlanets: [String] = ["Pluto"]
 ```
@@ -46,13 +47,20 @@ var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus
 var dwarfPlanets = ["Pluto"]
 ```
 
+Other initializers.
+
+
+```swift
+var threeDoubles = [Double](count: 3, repeatedValue: 0.0)
+threeDoubles = [] // empty the array
+threeDoubles.isEmpty
+```
 # Accessing and Modifying Arrays
 
 ## Arrays copy on assignment
 ```swift
 var planetas = planets
 ```
-
 **Question**: How can we go about proving this?
 
 ## append
@@ -68,6 +76,14 @@ looks like a broken smiley? We'll look at it closer when we cover functions. For
 good to just think of ```_``` as a placeholder, similar to how it was a wildcard/placeholder
 in ```case``` of a ```switch``` statement. Here it means that append takes one argument
 and that we haven't explicitly renamed it.
+
+### Append an entire array
+
+```swift
+let moonsOfJupiter = ["Io", "Europa", "Callisto", "Ganymede"]
+var someHeavenlyBodies = planets + ["Sun", "Moon", "Halley's Comet"]
+someHeavenlyBodies += moonsOfJupiter
+```
 
 ## removeAtIndex
 
@@ -112,10 +128,30 @@ planets[6] = "Urectum" // https://theinfosphere.org/Urectum
 
 Arrays support the ```==``` operator.
 
+```swift
+let galileanMoons = ["Io", "Europa", "Callisto", "Ganymede"]
+galileanMoons == moonsOfJupiter
+```
+
 ## Immutable Arrays
 
-Immutable and constant are somewhat exchangeable. 
+Try to declare arrays with ```let``` if you know you will not change them.
+This allows the Swift compiler to make optimizations.
 
-Uses let. 
 
+## Arrays can be multidimensional
+
+```swift
+let theMatrix = [[1, 2, 3],
+                 [4, 5, 6],
+                 [7, 8, 9]]
+
+print(theMatrix[2][0])
+```
+## NYT
+Write a loop to print out the matrix.
+
+## Applications of Arrays
+
+### Strings as Arrays
 
