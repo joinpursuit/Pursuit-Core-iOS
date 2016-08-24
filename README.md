@@ -1,9 +1,11 @@
 # Access Code 3.2: Mobile Development with iOS
 
-Welcome to C4Q Headquarters!
+Whooops, sorry I didn't update this on time today (Wednesday).
 
-Today's lesson is on [Optionals](/lessons/optionals). 
-Tomorrow's lesson is on [Arrays](/lessons/arrays). 
+Thursday's lesson is on [Dictionaries](/lessons/dictionaries). Remember to do the 
+reading.
+
+Friday we'll review and have an assessment and a short day (!)
 
 ## Schedule
 
