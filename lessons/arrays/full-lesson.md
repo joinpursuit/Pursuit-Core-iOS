@@ -152,6 +152,11 @@ print(theMatrix[2][0])
 Write a loop to print out the matrix.
 
 ## Applications of Arrays
+1. Find an element of an array.
+2. Find a missing number in 0...100
+3. Find the largest number.
+4. Find the second smallest number.
 
 ### Strings as Arrays
-
+1. Copy the characters of a string into an array.
+2. Find a character in that array. d
