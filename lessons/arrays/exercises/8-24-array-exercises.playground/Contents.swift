@@ -104,7 +104,6 @@ var noDupeList: [Int] = []
 
 //13)
 //Find the second smallest Int in ages
-//Then find the third largest Int
 var ages = [53, 31, 88, 65, 25, 44, 77, 18, 24, 84, 46, 42, 50, 28, 78, 67, 83, 70, 38, 69, 66, 71, 68, 61, 86, 85, 41, 15, 81, 40]
 
 
