@@ -157,7 +157,6 @@ Write a loop to print out the matrix.
 3. Find the largest number.
 4. Find the second smallest number.
 
-
 ### Strings as Arrays
 1. Copy the characters of a string into an array.
 2. Find a character in that array. d
