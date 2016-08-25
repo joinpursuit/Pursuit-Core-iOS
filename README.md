@@ -1,11 +1,13 @@
 # Access Code 3.2: Mobile Development with iOS
 
-Whooops, sorry I didn't update this on time today (Wednesday).
+Today's lesson is on [Dictionaries](/lessons/dictionaries). 
 
-Thursday's lesson is on [Dictionaries](/lessons/dictionaries). Remember to do the 
-reading.
+This afternoon Liz will lead you in Industry Readiness stuff.
 
-Friday we'll review and have an assessment and a short day (!)
+This evening is your Meetup.
+
+And tomorrow (Friday), we'll review and have an assessment and a short day (!). We're
+aware of the tightness of this schedule and are preparing the assessment with it in mind.
 
 ## Schedule
 
