@@ -38,57 +38,41 @@ e. !false && (!true || true)
 ```
 
 ## Numbers & operations
-**QN1.** Match these operator symbols with the description of the operation. Then, write
+**QN1.** Identify the following operator symbols using the word bank on the answer sheet. Then, write
 in the number of operands.
 
 E.g. 
 ```
-+  k. 2 operands
++  addition 2 operands
 ```
 
 ```
-=                a. not
--                b. multiplication
-!=               c. subtraction
-*                d. test for equality
->=               e. assignment
-+                f. addition
-%                g. greater than or equal to
-<                h. division
-==               i. modulo
-/                j. equality
-!                k. less than
+= 
+- 
+!=
+* 
+>=
++ 
+% 
+< 
+==
+/ 
+! 
 ```
 
 ## Loops
 
-**QL1.**  Write a ```for``` loop that prints the numbers 1 through 10.
-
-**QL2.**  Write a ```while``` loop that prints the numbers 1 through 10. There's more than
+**QL1.**  Write a ```while``` loop that prints the numbers 1 through 10. There's more than
 one way to do this. Any working solution is fine.
 
-**QL3.**  Write a loop that calculates the sum of all numbers 1 through 10 and prints it.
+**QL2.**  Write a ```for```` loop that calculates the sum of all numbers 1 through 10 and prints it.
 
-
-**QL4.** What will the following nested loop output:
+**QL3.** What will the following nested loop output:
 
 ```swift
 for i in 1...5 {
     for j in 1...5 {
         print(i * j, terminator: "  ")
-    }
-    print("")
-}
-```
-
-**QL-Bonus** _Skip and come back to this later_ What will *this* nested loop output:
-```swift
-for i in 1...5 {
-    for j in 1...5 {
-        print(i * j, terminator: "  ")
-        if j == i {
-            break
-        }
     }
     print("")
 }
@@ -97,7 +81,7 @@ for i in 1...5 {
 ## Strings, Unicode
 
 **QS1.** Given the string ```aSentence```, below, write code that prints the number of vowels in 
-the string. Vowels include 'a', 'e', 'i', 'o', and 'u', but not 'y').
+the string. Vowels include 'a', 'e', 'i', 'o', and 'u', but not 'y'.
 
 ```swift
 let aSentence = "Whatever you are, be a good one." // should print 13
@@ -230,7 +214,7 @@ var subwayColors = [1:"red", 2:"red", 4:"green", 5:"green", 7:"purple"]
 for example, the 1, 2, 3 and N, Q, and R trains. 
 
 
-**QD2.** Remove the outdated 9 train from ```seventhAvenueTrainsInThe90s```, again, in a subsequent operation and
+**QD3.** Remove the outdated 9 train from ```seventhAvenueTrainsInThe90s```, again, in a subsequent operation and
 not by simply altering the initialization.
 
 ```swift
