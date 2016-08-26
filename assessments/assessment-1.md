@@ -5,116 +5,109 @@ StackOverflow, or any other resources other than your brain!
 
 Please answer all questions.
 
-## Environment, Tools & Resources, Pair programming
+## Environment, Tools & Resources
 
-**QE1.** What does ```commit``` do?
-
-**QE2.** Given that you've made changes you now want to include in a pull request, 
+**QE1.** Given that you've made changes you now want to include in a pull request, 
 what is the correct order of these three git commands:
 ```commit```, ```push```, and ```add```?
 
-## Variables/constants, interpolation, logic, types, constants
+## Variables, Constants and Logic
 
-**QT1.** Name four types
+**QV1.** Name six types in the Swift language.
 
-**QT2.** What type is ```height``` in the code below:
+**QV2.** What is the type of each variable in the code below:
 
 ```swift
-var height = 76.7
+a. var height = 76.7
+b. var age = 19
+c. var found = true
+d. var zipCodes: [Int]
+e. var containsColor = ["red":true, "blue":false, "green":true]
 ```
 
-### Numbers & operations
-**QN1.** Match these operator symbols with the description of the operation. Write
-in the number of operands
+**QV3.** True or False: Constants are mutable.
+
+**QV4.** What do each of the following Boolean expressions evaluate to?
+
+```swift
+a. true && true
+b. false || true
+c. true && false
+d. true && !false
+e. !false && (!true || true)
+```
+
+## Numbers & operations
+**QN1.** Match these operator symbols with the description of the operation. Then, write
+in the number of operands.
 
 E.g. 
 ```
-+  addition  2 operands
++  k. 2 operands
 ```
 
 ```
-=                not
--                multiplication
-!=               subtraction
-*                test for equality
->=               assignment
-%                greater than or equal to
-<                division
-==               modulo
-/                equality
-!                less than
+=                a. not
+-                b. multiplication
+!=               c. subtraction
+*                d. test for equality
+>=               e. assignment
++                f. addition
+%                g. greater than or equal to
+<                h. division
+==               i. modulo
+/                j. equality
+!                k. less than
 ```
 
-### For loops, while loops
+## Loops
 
-**QL1.**  Write a loop that prints the numbers 1 through 10.
+**QL1.**  Write a ```for``` loop that prints the numbers 1 through 10.
 
-**QL2.**  Write a loop that that prints the numbers 1 through n.
+**QL2.**  Write a ```while``` loop that prints the numbers 1 through 10. There's more than
+one way to do this. Any working solution is fine.
 
-**QL3.**  Write a loop that prints the even numbers 2 through n.
-
-**QL4.**  Write a loop that prints the sum of all numbers 1 through 10.
-
-**QL5.**  Create a loop from 0 to 20. Using a _switch_ statement, if the N is odd, 
-print "Odd" and if even, print "Even."
-
-**QL6.** Create a loop from 0 to 20. Create a bool variable __multipleOf3__ 
-Using a _switch_ statement, if N is a multiple of 3, set your bool to _true_, 
-if not set it to _false_.
-
-**QL7.** Create a loop from 0 to 30. If N is odd and a multiple of 5,
- print "Odd and Multiple of 3", otherwise print "Neither."
+**QL3.**  Write a loop that calculates the sum of all numbers 1 through 10 and prints it.
 
 
-**QL8.**  Given a string __xAndO__ and bool __isEqual__ write a loop that checks to see if the string has the same amount of "X" and "O", if so __isEqual__ is set to _true_, else _false_. Your check should be case sensitive.
+**QL4.** What will the following nested loop output:
 
+```swift
+for i in 1...5 {
+    for j in 1...5 {
+        print(i * j, terminator: "  ")
+    }
+    print("")
+}
 ```
-example:
-let xAndO = "xXxXoOoO" // isEqual should be true
-let xAndO = "xOxoX" // isEqual should be false
+
+**QL-Bonus** _Skip and come back to this later_ What will *this* nested loop output:
+```swift
+for i in 1...5 {
+    for j in 1...5 {
+        print(i * j, terminator: "  ")
+        if j == i {
+            break
+        }
+    }
+    print("")
+}
 ```
-ve "Illinois" and "Kansas" from the array below.
-
-var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
-
-
-//Write all your code below:
-
-//3)
-//Iterate through the array below.  For each each state, print out whether or not it is in the continental United States.
-
-let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]
-
-//Write all your code below:
 
 # Strings, Unicode
 
-Consider this block of Swift for the following two questions.
+**QS1.** Given the string ```aSentence```, below, write code that prints the number of vowels in 
+the string. Vowels include 'a', 'e', 'i', 'o', and 'u', but not 'y').
 
 ```swift
-        let name = "Andrea"
-        let age = 23
-        print("My name is \(name + " and my age is\(age)")")
+let aSentence = "Whatever you are, be a good one." // should print 13
 ```
-**QS1.** Would you say the interpolated strings are
-      
-a) incorrect and will result in error
- 
-b) nested
 
-c) of type Double
-
-d) Optionals
-
-**QS2.** Rework the interpolation in the previous question using simpler, better style.
-
-**QS3.** Given a string ```word```, if ```word``` has an even number of letters 
-capitalize the entire string, or if ```word``` is an odd number of letters 
-lowercase the entire string.
+**QS2.** Given the information: COMBINING TILDE (U+0303), alter the initialization of the constant 
+```tomorrow```, below, to make it correct Spanish. Hint, the first n gets the tilde.
 
 ```swift
-var word = "planet" //should turn to "PLANET"
-var word = "Jupiter" //should turn to "jupiter"
+let tomorrow = "manana"
 ```
 
 # Conditionals
@@ -145,17 +138,15 @@ print(vegetable!)
 
 **QO2.** Bind the ```color``` variable, 
 
-
 ```swift
 var color: String = "Crimson"
 ```
 
-to a constant and print it to the  console using string interpolation so the final output is:
+to a constant and use it to print to the console using string interpolation so the final output is:
 
 ```
 In The Court of the Crimson King
 ```
-
 
 For _**QO3. - Q06.**_ Consider this code block:
 
@@ -198,15 +189,6 @@ bookTitle = "War and Peace"
 
 **QO6.** Provide values for the same three variables that would result in the third message (marked with // 3) to be printed.
 
-# Strings
-
-**QS4.** Given a string ```aSentence```, write code that prints the number of vowels in 
-the string. Vowels include 'a', 'e', 'i', 'o', and 'u', but not 'y').
-
-```swift
-let aSentence = "Whatever you are, be a good one." // should print 13
-```
-
 ### Arrays
 
 **QA1.** Given the array ```animals``` below, write code that finds and prints the longest word in the array.
@@ -227,11 +209,30 @@ let array3 = ["let's", "code", "!"]
 **QA3.** Using the ```allArrays``` variable you just defined in the previous question, write
 a for loop that will print it as a single sentence with natural spacing.
 
-**QA4.** See __array4__ below. What happens when you add __array4__ to __allArrays__?
-```
+**QA4.** Continuing with the ```allArrays``` variable used in the prior two questions, 
+what happens when you add ```array4``` to it, as in:
+
+```swift
 let array4 = [1,2,3]
+let anotherArray = allArrays + array4
 ```
 
 ### Dictionaries
 
+**QD1.** Given the Dictionary ```subwayColors``` below, add elements to it for the 3 train
+and the 6 train. (Don't add by re-writing the initialization.)
 
+```swift
+var subwayColors = [1:"red", 2:"red", 4:"green", 5:"green", 7:"purple"]
+```
+
+**QD2.** Redefine ```subwayColors``` so that it would be able to hold all NYC Subway trains including,
+for example, the 1, 2, 3 and N, Q, and R trains. 
+
+
+**QD2.** Remove the outdated 9 train from ```seventhAvenueTrainsInThe90s```, again, in a subsequent operation and
+not by simply altering the initialization. Don
+
+```swift
+var seventhAvenueTrainsInThe90s = [1:"red", 2:"red", 3:"red", 9:"red"]
+```
