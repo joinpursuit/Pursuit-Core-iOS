@@ -1,4 +1,4 @@
-# AC3.3 Week 2 Assessment
+# AC3.2 Week 2 Assessment
 
 This is a closed-book assessment.  Do not use computers, phones, Google,
 StackOverflow, or any other resources other than your brain!
