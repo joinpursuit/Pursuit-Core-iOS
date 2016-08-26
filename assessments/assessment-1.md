@@ -94,7 +94,7 @@ for i in 1...5 {
 }
 ```
 
-# Strings, Unicode
+## Strings, Unicode
 
 **QS1.** Given the string ```aSentence```, below, write code that prints the number of vowels in 
 the string. Vowels include 'a', 'e', 'i', 'o', and 'u', but not 'y').
@@ -110,7 +110,7 @@ let aSentence = "Whatever you are, be a good one." // should print 13
 let tomorrow = "manana"
 ```
 
-# Conditionals
+## Conditionals
 
 **QC1.** Build a ```switch``` that translates a student's numerical score into a letter grade 
 according to the following criteria:
@@ -124,7 +124,7 @@ according to the following criteria:
 - score >=  0 -> "Fail"
 ```
 
-# Optionals
+## Optionals
 
 **QO1.** What will the following block of code print to the console?
 
@@ -189,7 +189,7 @@ bookTitle = "War and Peace"
 
 **QO6.** Provide values for the same three variables that would result in the third message (marked with // 3) to be printed.
 
-### Arrays
+## Arrays
 
 **QA1.** Given the array ```animals``` below, write code that finds and prints the longest word in the array.
 
@@ -217,7 +217,7 @@ let array4 = [1,2,3]
 let anotherArray = allArrays + array4
 ```
 
-### Dictionaries
+## Dictionaries
 
 **QD1.** Given the Dictionary ```subwayColors``` below, add elements to it for the 3 train
 and the 6 train. (Don't add by re-writing the initialization.)
