@@ -231,7 +231,7 @@ for example, the 1, 2, 3 and N, Q, and R trains.
 
 
 **QD2.** Remove the outdated 9 train from ```seventhAvenueTrainsInThe90s```, again, in a subsequent operation and
-not by simply altering the initialization. Don
+not by simply altering the initialization.
 
 ```swift
 var seventhAvenueTrainsInThe90s = [1:"red", 2:"red", 3:"red", 9:"red"]
