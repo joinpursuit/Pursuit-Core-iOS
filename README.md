@@ -1,13 +1,13 @@
 # Access Code 3.2: Mobile Development with iOS
 
-Today's lesson is on [Dictionaries](/lessons/dictionaries). 
+Great work everybody on the assessment!
 
-This afternoon Liz will lead you in Industry Readiness stuff.
+Have a great weekend. To cut into that a bit 
+I've prepared this [homework](/homework/week-2-playground). I do hope
+it's at least a little fun. 
 
-This evening is your Meetup.
-
-And tomorrow (Friday), we'll review and have an assessment and a short day (!). We're
-aware of the tightness of this schedule and are preparing the assessment with it in mind.
+Also don't forget to read up on [functions](/lessons/functions-one), the
+subject of Monday's lesson.
 
 ## Schedule
 
