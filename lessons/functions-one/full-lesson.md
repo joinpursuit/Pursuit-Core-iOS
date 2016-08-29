@@ -40,9 +40,9 @@ func helloName(name: String, withMessage message: String) {
 
 // internal and external parameter names
 func sayHello(numTimes count: Int, message: String) {
-	for i in 1...numTimes {
-		print(message)
-	}
+    for _ in 1...count {
+        print(message)
+    }
 }
 
 func sayHello(toMyLittleFriend friend: String) {
