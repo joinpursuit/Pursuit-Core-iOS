@@ -75,8 +75,20 @@ var str = String(count: 5, repeatedValue: Character("d"))
 func helloName(name: String, withMessage: String = "Hi there!") {
 	print("Hello world")
 }
-
+```
 ## Returning from a Function
+
+```swift
+func percent(num: Double) -> Double {
+// write body
+}
+
+```
+### NYT
+
+Write a function that returns a string representation of the percentage, e.g. "45.3%
+
+# Can return an Optional
 
 # Review and Wrapup
 
