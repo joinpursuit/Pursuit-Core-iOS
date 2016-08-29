@@ -13,19 +13,67 @@ Swift Programming: The Big Nerd Ranch Guide, Chapter 12, Functions
 
 Apple's [Swift Language Reference, Functions](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158)
 
-# Assessment Materials
-## Midday Check-in and solutions
-
 # Lecture
 ## Warm up
 
 ## Basic Function Syntax
 
+```swift
+func helloWorld() {
+	print("Hello world")
+}
+```
+
 ## Parameters
+```swift
+func helloName(name: String) {
+	print("Hello \(name)")
+}
+```
 
 ### Parameter names
+```swift
+func helloName(name: String, withMessage message: String) {
+	print("\(name) message")
+}
+
+// internal and external parameter names
+func sayHello(toCount count: Int, people name: String, message: String) {
+	print("Hello world")
+}
+
+func sayHello(toMyLittleFriend friend: String) {
+    print("Hello \(friend)")
+}
+
+sayHello(toMyLittleFriend: "Al")
+func helloName(name: String, message: String) {
+	print("Hello world")
+}
+```
+
+### NYT
+
+How would you use an external name to make this function more legible?
+
+```swift
+func randomInt(min: Int, max: Int) -> Int {
+    if max < min { return min }
+    return Int(arc4random_uniform(UInt32((max - min) + 1))) + min
+}
+```
+
+Remember ```String.init(count:repeatedValue:)```?
+
+```swift
+var str = String(count: 5, repeatedValue: Character("d"))
+```
 
 ## Default parameter values
+```swift
+func helloName(name: String, withMessage: String = "Hi there!") {
+	print("Hello world")
+}
 
 ## Returning from a Function
 
