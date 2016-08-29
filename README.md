@@ -1,13 +1,11 @@
 # Access Code 3.2: Mobile Development with iOS
 
-Great work everybody on the assessment!
+Welcome back, and welcome to Hunters Point Plaza at 
+47-40 21st St, Long Island City, NY 11101, top floor.
 
-Have a great weekend. To cut into that a bit 
-I've prepared this [homework](/homework/week-2-playground). I do hope
-it's at least a little fun. 
-
-Also don't forget to read up on [functions](/lessons/functions-one), the
-subject of Monday's lesson.
+The reading is basically the same for tomorrow [functions](/lessons/functions-two) in terms
+of what to read but we'll cover more of it and it'll probably mean more to you another
+time around. 
 
 ## Schedule
 
