@@ -111,6 +111,22 @@ if let name = aMovie["name"] as? String, year = aMovie["year"] as? Int, cast = a
     }
 }
 
+for movie in movies {
+    if let name = aMovie["name"] as? String, year = aMovie["year"] as? Int, cast = aMovie["cast"] as? [String] {
+        print("\(year): \(name)")
+        var castString = ""
+        for (i, actor) in cast.enumerate() {
+            if i == cast.count - 1 {
+                castString += "and \(actor)"
+            }
+            else {
+                castString += "\(actor), "
+            }
+        }
+        print(castString)
+    }
+}
+
 // WARM UPS
 // 1. Print the name of the first movie.
 
