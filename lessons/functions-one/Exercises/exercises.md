@@ -22,15 +22,8 @@ Function calls should look something like "total cost of the item after tax"
 
 
 
+
 ### Question 3.
-Make a function that takes in any name and prints out a greeting with the name
-
-
-
-
-
-
-### Question 4.
 Convert the the following if/else statement below into function with a String return type.
 
 ```swift
@@ -46,7 +39,7 @@ if todaysTemperature <= 40 {
 ```
 
 
-### Question 5.
+### Question 4.
 Write a function that takes in any two positive integers and return the sum.
 
 
@@ -56,7 +49,7 @@ Write a function that takes in any two positive integers and return the sum.
 
 
 
-### Question 6.
+### Question 5.
 Write a function takes in any number grade and returns a letter grade
 
 * 100 -> A+
