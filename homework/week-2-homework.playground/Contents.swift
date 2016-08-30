@@ -57,7 +57,7 @@ var movies: [[String:Any]] = [
     ],
     [
         "name": "The Hunger Games",
-        //"year": 2012,
+        "year": 2012,
         "genre": "drama",
         "cast": ["Jennifer Lawrence", "Josh Hutcherson", "Liam Hemsworth"],
         "description": "Katniss Everdeen voluntarily takes her younger sister\"s place in the Hunger Games, a televised competition in which two teenagers from each of the twelve Districts of Panem are chosen at random to fight to the death."
@@ -92,68 +92,6 @@ var presidentsByYear = [1997 : "Bill Clinton",
                         2016 : "Barack Obama"
 ]
 
-func atoi2(s: String) -> Int? {
-    let i = Int.init(s)
-    return i
-}
-
-//if let i = atoi2("zzz2015") {
-//    print(i)
-//}
-//else {
-//    print("can't convert")
-//}
-
-
-
-// ONE NOTE before you start consider this one movie element
-//
-//let aMovie: [String:Any] = [
-//    "name": "Minions",
-//    "year": 2015,
-//    "genre": "animation",
-//    "cast": ["Sandra Bullock", "Jon Hamm", "Michael Keaton"],
-//    "description": "Evolving from single-celled yellow organisms at the dawn of time, Minions live to serve, but find themselves working for a continual series of unsuccessful masters, from T. Rex to Napoleon. Without a master to grovel for, the Minions fall into a deep depression. But one minion, Kevin, has a plan."
-//]
-//
-//if let name = aMovie["name"] as? String, year = aMovie["year"] as? Int, cast = aMovie["cast"] as? [String] {
-//    print("\(year): \(name)")
-//    
-//    for actor in cast {
-//        print(actor)
-//    }
-//}
-
-// global Scope
-let i = 2
-func iScopeMadness () {
-    // function scope
-    let i = 3
-    do {
-        // arbitrary block scope
-        let i = 5
-        if true {
-            // if block scope
-            let i = 7
-            // for scope (generate odds in range)
-            for i in 11...13 where i % 2 == 1 {
-                print(i)
-            }
-            print(i)
-        }
-        print(i)
-    }
-    print(i)
-}
-print(i)
-iScopeMadness()
-
-//if let report = generateMovieReport(movies) {
-//    print(report)
-//}
-//else {
-//    print("Nothing to report")
-//}
 
 // WARM UPS
 // 1. Print the name of the first movie.
