@@ -57,7 +57,7 @@ var movies: [[String:Any]] = [
     ],
     [
         "name": "The Hunger Games",
-        "year": 2012,
+        //"year": 2012,
         "genre": "drama",
         "cast": ["Jennifer Lawrence", "Josh Hutcherson", "Liam Hemsworth"],
         "description": "Katniss Everdeen voluntarily takes her younger sister\"s place in the Hunger Games, a televised competition in which two teenagers from each of the twelve Districts of Panem are chosen at random to fight to the death."
@@ -92,6 +92,19 @@ var presidentsByYear = [1997 : "Bill Clinton",
                         2016 : "Barack Obama"
 ]
 
+func atoi2(s: String) -> Int? {
+    let i = Int.init(s)
+    return i
+}
+
+//if let i = atoi2("zzz2015") {
+//    print(i)
+//}
+//else {
+//    print("can't convert")
+//}
+
+
 
 // ONE NOTE before you start consider this one movie element
 //
@@ -111,7 +124,36 @@ var presidentsByYear = [1997 : "Bill Clinton",
 //    }
 //}
 
+// global Scope
+let i = 2
+func iScopeMadness () {
+    // function scope
+    let i = 3
+    do {
+        // arbitrary block scope
+        let i = 5
+        if true {
+            // if block scope
+            let i = 7
+            // for scope (generate odds in range)
+            for i in 11...13 where i % 2 == 1 {
+                print(i)
+            }
+            print(i)
+        }
+        print(i)
+    }
+    print(i)
+}
+print(i)
+iScopeMadness()
 
+//if let report = generateMovieReport(movies) {
+//    print(report)
+//}
+//else {
+//    print("Nothing to report")
+//}
 
 // WARM UPS
 // 1. Print the name of the first movie.
