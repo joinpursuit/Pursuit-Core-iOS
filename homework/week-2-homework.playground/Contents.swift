@@ -94,38 +94,24 @@ var presidentsByYear = [1997 : "Bill Clinton",
 
 
 // ONE NOTE before you start consider this one movie element
+//
+//let aMovie: [String:Any] = [
+//    "name": "Minions",
+//    "year": 2015,
+//    "genre": "animation",
+//    "cast": ["Sandra Bullock", "Jon Hamm", "Michael Keaton"],
+//    "description": "Evolving from single-celled yellow organisms at the dawn of time, Minions live to serve, but find themselves working for a continual series of unsuccessful masters, from T. Rex to Napoleon. Without a master to grovel for, the Minions fall into a deep depression. But one minion, Kevin, has a plan."
+//]
+//
+//if let name = aMovie["name"] as? String, year = aMovie["year"] as? Int, cast = aMovie["cast"] as? [String] {
+//    print("\(year): \(name)")
+//    
+//    for actor in cast {
+//        print(actor)
+//    }
+//}
 
-let aMovie: [String:Any] = [
-    "name": "Minions",
-    "year": 2015,
-    "genre": "animation",
-    "cast": ["Sandra Bullock", "Jon Hamm", "Michael Keaton"],
-    "description": "Evolving from single-celled yellow organisms at the dawn of time, Minions live to serve, but find themselves working for a continual series of unsuccessful masters, from T. Rex to Napoleon. Without a master to grovel for, the Minions fall into a deep depression. But one minion, Kevin, has a plan."
-]
 
-if let name = aMovie["name"] as? String, year = aMovie["year"] as? Int, cast = aMovie["cast"] as? [String] {
-    print("\(year): \(name)")
-    
-    for actor in cast {
-        print(actor)
-    }
-}
-
-for movie in movies {
-    if let name = aMovie["name"] as? String, year = aMovie["year"] as? Int, cast = aMovie["cast"] as? [String] {
-        print("\(year): \(name)")
-        var castString = ""
-        for (i, actor) in cast.enumerate() {
-            if i == cast.count - 1 {
-                castString += "and \(actor)"
-            }
-            else {
-                castString += "\(actor), "
-            }
-        }
-        print(castString)
-    }
-}
 
 // WARM UPS
 // 1. Print the name of the first movie.

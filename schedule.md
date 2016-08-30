@@ -14,7 +14,7 @@
 | 1|3|2016-08-30| Prework Link |[Functions, continued](/lessons/functions-two)| [Link](/link) | [Link](/link) | [Link](/link) |
 | 1|3|2016-08-31| Prework Link |[Closures](/lessons/closures-one)| [Link](/link) | [Link](/link) | [Link](/link) |
 | 1|3|2016-09-01| Prework Link |[Closures, continued](/lessons/closures-two)| [Link](/link) | [Link](/link) | [Link](/link) |
-| 1|3|2016-09-02| Prework Link |[Functions and Closures Review & Assessment](/lessons/review-and-assessment-functions-and-closures) | [Link](/link) | [Link](/link) | [Link](/link) |
+| 1|3|2016-09-02| Prework Link |Functions and Closures Review| [Link](/link) | [Link](/link) | [Link](/link) |
 | 1|4|2016-09-05| Prework Link |[Enums](/lessons/enums) | [Link](/link) | [Link](/link) | [Link](/link) |
 | 1|4|2016-09-05| Prework Link |[Structs & Classes](/lessons/structs-and-classes) | [Link](/link) | [Link](/link) | [Link](/link) |
 | 1|4|2016-09-05| Prework Link |[Classes - Properties, Methods, & Initialization](/lessons/classes-one) | [Link](/link) | [Link](/link) | [Link](/link) |
