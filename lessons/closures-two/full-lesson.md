@@ -107,10 +107,11 @@ func mathStuffFactory(opString: String) -> (Double, Double) -> Double {
     }
 }
 ```
-**Exercise** Add a squaring operator.
+**Exercises** 
 
-1. Parse input from the user into operator, and two operands. Reject non-conforming ops.
-2. Make question mark return a random operator. HW: use enums for operators.
+1. Add a squaring operator.
+2. Add a power operator.
+3. Add an integer division operator.
 
 ## Map and Filter
 
