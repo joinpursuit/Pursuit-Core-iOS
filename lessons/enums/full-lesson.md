@@ -18,7 +18,11 @@ Apple's [Swift Language Reference, Enumerations](https://developer.apple.com/lib
 - Homework and solutions (add links)
 
 ## Warm up
-TODO: Some logic warmups like the end of the previous lesson
+
+* enumeration "cases"
+* Types and naming:
+Each enumeration definition defines a brand new type. Like other types in Swift, their names (such as CompassPoint and Planet) should start with a capital letter. Give enumeration types singular rather than plural names, so that they read as self-evident:
+* switches are exhaustive!
 
 # Lecture
 
@@ -27,6 +31,10 @@ TODO: Some logic warmups like the end of the previous lesson
 ### Basic Enumerations
 
 ### Raw Value Enumerations
+* not the same as associated values
+* must be unique in the enumeration
+* need to be the same type
+* initialize from raw value
 
 ####Implicitly Assigned Raw Values
 
@@ -40,9 +48,16 @@ enum Planet: Int {
 
 ### Associated Values
 
+```swift
+enum Barcode {
+    case UPCA(Int, Int, Int, Int)
+    case QRCode(String)
+}
+```
+
 ### Recursive Enumerations 
 
-Not sure if we'll cover this.
+This is interesting. Don't use it.
 
 ## Exercises
 
