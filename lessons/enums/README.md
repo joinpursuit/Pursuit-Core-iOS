@@ -3,8 +3,7 @@ Solve problems with Enumerations, Structures and Classes
 
 # Objectives
 * Create an enumeration and understand when it is helpful
-* Use methods in enumerations
-* Create enumerations with different types of associated values
+* Create enumerations with different types of raw and associated values
 
 # Resources
 Swift Programming: The Big Nerd Ranch Guide, Chapter 14, Enumerations

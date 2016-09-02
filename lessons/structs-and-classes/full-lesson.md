@@ -20,15 +20,41 @@ And [Swift Language Reference, Methods](https://developer.apple.com/library/ios/
 # Assessment Materials
 ## Midday Check-in and solutions
 
-- Exercises and solutions (add links)
-- Homework and solutions (add links)
 
 ## Warm up
-TODO: Some logic warmups like the end of the previous lesson
 
 # Lecture
 
+From the Apple documentation:
+
+> An instance of a class is traditionally known as an object. However, Swift classes and structures are 
+> much closer in functionality than in other languages, and much of this chapter describes functionality 
+> that can apply to instances of either a class or a structure type. Because of this, the more general 
+> term instance is used.
+
 ## Structures and Classes
+
+From the Apple documentation:
+
+> ###Comparing Classes and Structures
+>
+> Classes and structures in Swift have many things in common. Both can:
+> 
+> * Define properties to store values
+> * Define methods to provide functionality
+> * Define subscripts to provide access to their values using subscript syntax
+> * Define initializers to set up their initial state
+> * Be extended to expand their functionality beyond a default implementation
+> * Conform to protocols to provide standard functionality of a certain kind
+> For more information, see Properties, Methods, Subscripts, Initialization, Extensions, and Protocols.
+> 
+> Classes have additional capabilities that structures do not:
+> 
+> * Inheritance enables one class to inherit the characteristics of another.
+> * Type casting enables you to check and interpret the type of a class instance at runtime.
+> * Deinitializers enable an instance of a class to free up any resources it has assigned.
+> * Reference counting allows more than one reference to a class instance.
+
 
 ### XCode Project
 

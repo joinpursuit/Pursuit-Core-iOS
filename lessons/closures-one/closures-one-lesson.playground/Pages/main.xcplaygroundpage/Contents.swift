@@ -3,10 +3,28 @@
 import UIKit
 
 // closure defined using annotation
-var noParameterAndNoReturnValue: () -> () = {
-    print("string")
+//var multiply: (Int, Int)->Int = { (x: Int, y: Int) -> Int in
+//    return x * y
+//}
+
+//let z = 2
+func doMathStuff(a: Int, b: Int, operation:(Int, Int)->Int) -> Int {
+    return operation(a, b)
 }
-noParameterAndNoReturnValue()
+
+doMathStuff(4, b: 5, operation: {(a: Int, b: Int) -> Int in
+    return a * b
+})
+
+doMathStuff(64, b: 26) { (a: Int, b: Int) -> Int in
+    return a / b
+}
+
+doMathStuff(64, b: 26) { (a: Int, b: Int) -> Int in
+    return a + b
+}
+
+//multiply(7, 8)
 
 
 // example of closing over the variables from environment
@@ -53,26 +71,14 @@ applyKTimes(5) {
 
 
 // sort the movies
-let sorted = movies.sort { a, b in
-    if let a = a["year"] as? Int, b = b["year"] as? Int {
-        return a > b
-    }
-    return false
-}
+//let sorted = movies.sort { a, b in
+//    if let a = a["year"] as? Int, b = b["year"] as? Int {
+//        return a > b
+//    }
+//    return false
+//}
 
 
-var doubler = { (a: Int) -> Int in
-    return a * 2
-}
 
-print(doubler(22))
-
-var number = 0
-var addOne = {
-    number += 1
-}
-addOne()
-addOne()
-print(number)
 
 
