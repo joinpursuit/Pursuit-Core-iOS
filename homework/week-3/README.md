@@ -67,6 +67,14 @@ Correct!
 
 #### Q2. Implement your **own** filter function
 
+> **Note**: Questions 2 and 3 should also be implemented inside a variation of the command
+> loop we built in class, and which you used to work on Question 1. This way you can put
+> the whole assignment in one swift file. To hook this up, you should create functions just like we did for
+> ```echo``` and ```number``` in class. From those functions you can call
+> your implementations of ```myFilter``` and ```myMap```.
+> You will have to look out for ```map``` and ```filter``` commands and treat them
+> separately to the operations handled by your solution to Question 1.
+
 Write your own filter function, ```myFilter(_:filter:)```. You'll only
 be able to write it to work for one type at this point. Let's make it work
 for an array of ```Int```.
@@ -98,5 +106,6 @@ func myFilter(inputArray: [Int], filter: (Int) -> Bool) -> [Int] {
 
 Follow the same approach as you used to solve Q2 to write your own map function.
 
-4. Don't forget to read Classes and Structs.
+
+#### Don't forget to read Classes and Structs.
 
