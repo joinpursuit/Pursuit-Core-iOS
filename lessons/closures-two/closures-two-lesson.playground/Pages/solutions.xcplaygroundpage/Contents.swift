@@ -15,6 +15,10 @@ func myFilter(inputArray: [Int], filter: (Int) -> Bool) -> [Int] {
     return outputArray
 }
 
+let filtered = ints.filter { (a) -> Bool in
+    a % 2 == 0
+}
+filtered
 
 myFilter(ints) { (a) -> Bool in
     a % 2 == 0

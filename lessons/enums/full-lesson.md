@@ -36,8 +36,8 @@ default case because we can define an exhaustive set of ```switch``` cases.
 
 ```swift
 enum ErrorCode {
-    case BadInput,
-    case NoNetwork,
+    case BadInput
+    case NoNetwork
     case FileNotFound
 }
 ```
@@ -99,7 +99,6 @@ enum CompassPoint: String {
 }
 ```
 
-> **NYT**: Create an ```enum``` for the HTTP error codes 400-409 using implicitly assigned raw values. Refer to https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html.
 
 ### Associated Values
 
