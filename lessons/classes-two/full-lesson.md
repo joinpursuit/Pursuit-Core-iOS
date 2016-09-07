@@ -95,5 +95,11 @@ than you'll be writing them. They follow the general rule of optionals.
 
 ## Exercise
 
-Finish and fix the movie app to use realistic initializers.
+Returning to our console movie app from yesterday, let's finish it up and fix it to use realistic initializers.
 
+1. Give Movie a designated initializer that allows you to set each property.
+2. Create a convenience initializer that takes in a dictionary and constructs a Movie object.
+Refactor (i.e. move) the code that is doing this in main.swift inside this initializer.
+3. Alter the movie data, changing the cast field to hold an array of tuples (String, Int, Int?, Int, String)
+for (Name, born, died, breakoutYear, breakoutRole) and change the parser to use a convenience
+initializer on Actor that accepts this tuple.
