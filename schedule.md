@@ -20,4 +20,8 @@
 | 1|4|2016-09-07| Prereading |[Classes - Properties, Methods, & Initialization](/lessons/classes-one) and [Classes - Inheritance](/lessons/classes-two) | [Link](/link) | [Link](/link) | [Link](/link) |
 | 1|4|2016-09-08| Prereading |Review and assessment | n/a | n/a | n/a |
 | 1|4|2016-09-09| Prereading | No class | n/a | n/a | n/a |
-
+| 2|1|2016-09-12| iTunesU Swift: 1. Course Overview [https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961] |[Introduction to Apps](/lessons/2_1_intro)| [Link]() | [Link]() | [Link](/link) |
+| 2|2|2016-09-13| iTunesU Swift: 2. Applying MVC [https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961] |[Model View Controller](/lessons/2_1_mvc)| [Link]() | [Link]() | [Link](/link) |
+| 2|3|2016-09-12| iTunesU Swift: 1. Course Overview [https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961] |[Introduction to Apps](/lessons/2_1_ui_1)| [Link]() | [Link]() | [Link](/link) |
+| 2|4|2016-09-12| iTunesU Swift: 1. Course Overview [https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961] |[Introduction to Apps](/lessons/2_1_ui_2)| [Link]() | [Link]() | [Link](/link) |
+| 2|5|2016-09-12| iTunesU Swift: 1. Course Overview [https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961] |[Introduction to Apps](/lessons/2_1_ui_3)| [Link]() | [Link]() | [Link](/link) |
