@@ -1,3 +1,16 @@
+## Unit 2
+
+| Unit|Week|Date|Prework|Lesson|Prework HW Quiz|Midday Check-in|Pair Programming Checkin|
+|--- |---| ---|---|---|---|---|---|
+| 2|1|2016-09-12| iTunesU Swift: 1. [Course Overview](https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961) |[Introduction to Apps](/lessons/2_1_intro)| [Link](https://docs.google.com/forms/d/e/1FAIpQLSfwv1nAbIvplasVLacIrSsD0rX8I1wHAa2fQ0OkDSFcq6pr4g/viewform) | [Link]() | [Link]() |
+| 2|1|2016-09-13| iTunesU Swift: 2. [Applying MVC](https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961) |[Model View Controller](/lessons/2_1_mvc)| [Link](https://docs.google.com/forms/d/e/1FAIpQLSfhp7C0D-362mjLD_V3E0vTVa1vUTRLhJfR1rCZYziBygxcIg/viewform) | [Link]() | [Link]() |
+| 2|1|2016-09-14| | [Link](https://docs.google.com/forms/d/e/1FAIpQLSd4odf2LEhBxF7L3X6Dnec_8wbUNtAVvTDwbjEVaVF3E1eInw/viewform) | [Link]() | [Link]() |
+| 2|1|2016-09-15| |[Introduction to Apps](/lessons/2_1_ui_2)| [Link](https://docs.google.com/forms/d/e/1FAIpQLSfbxmE7ISmpWgqMmMEwAUKSoG-haCkdkhNfJxaNc9O39CbrAA/viewform) | [Link]() | [Link]() |
+| 2|1|2016-09-16|  |[Introduction to Apps](/lessons/2_1_ui_3)| [Link](https://docs.google.com/forms/d/e/1FAIpQLScI0-RHCR-oUCZAz2P4NpuLmjf5ujyPArY1aCdmF0P5AoRmBA/viewform) | [Link]() | [Link]() |
+
+
+## Unit 1
+
 | Unit|Week|Date|Prework|Lesson|Prework HW Quiz|Midday Check-in|Pair Programming Checkin|
 |--- |---| ---|---|---|---|---|---|
 | 1|1|2016-08-15| [Prework link](https://github.com/C4Q/AC3.2/tree/master/lessons/prework) | [Environment, Tools & Resources, Pair programming](lessons/env-and-tools) | [Link](/link) | [Link](/link) | [Link](/link) |
@@ -20,8 +33,3 @@
 | 1|4|2016-09-07| Prereading |[Classes - Properties, Methods, & Initialization](/lessons/classes-one) and [Classes - Inheritance](/lessons/classes-two) | [Link](/link) | [Link](/link) | [Link](/link) |
 | 1|4|2016-09-08| Prereading |Review and assessment | n/a | n/a | n/a |
 | 1|4|2016-09-09| Prereading | No class | n/a | n/a | n/a |
-| 2|1|2016-09-12| iTunesU Swift: 1. Course Overview [https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961] |[Introduction to Apps](/lessons/2_1_intro)| [Link](https://docs.google.com/forms/d/e/1FAIpQLSfwv1nAbIvplasVLacIrSsD0rX8I1wHAa2fQ0OkDSFcq6pr4g/viewform) | [Link]() | [Link]() |
-| 2|1|2016-09-13| iTunesU Swift: 2. Applying MVC [https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961] |[Model View Controller](/lessons/2_1_mvc)| [Link](https://docs.google.com/forms/d/e/1FAIpQLSfhp7C0D-362mjLD_V3E0vTVa1vUTRLhJfR1rCZYziBygxcIg/viewform) | [Link]() | [Link]() |
-| 2|1|2016-09-14| iTunesU Swift: 1. Course Overview [https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961] |[Introduction to Apps](/lessons/2_1_ui_1)| [Link](https://docs.google.com/forms/d/e/1FAIpQLSd4odf2LEhBxF7L3X6Dnec_8wbUNtAVvTDwbjEVaVF3E1eInw/viewform) | [Link]() | [Link]() |
-| 2|1|2016-09-15| iTunesU Swift: 1. Course Overview [https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961] |[Introduction to Apps](/lessons/2_1_ui_2)| [Link](https://docs.google.com/forms/d/e/1FAIpQLSfbxmE7ISmpWgqMmMEwAUKSoG-haCkdkhNfJxaNc9O39CbrAA/viewform) | [Link]() | [Link]() |
-| 2|1|2016-09-16| iTunesU Swift: 1. Course Overview [https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961] |[Introduction to Apps](/lessons/2_1_ui_3)| [Link](https://docs.google.com/forms/d/e/1FAIpQLScI0-RHCR-oUCZAz2P4NpuLmjf5ujyPArY1aCdmF0P5AoRmBA/viewform) | [Link]() | [Link]() |
