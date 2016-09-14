@@ -5,4 +5,4 @@ Welcome back to AC3.2. Hope you enjoyed the break.
 
 ## Schedule
 
-- [Lesson Schedule](schedule.md)
+- [Lesson Schedule](/schedule.md)
