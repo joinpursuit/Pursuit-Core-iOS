@@ -5,8 +5,8 @@
 | 2|1|2016-09-12| iTunesU Swift: 1. [Course Overview](https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961) |[Introduction to Apps](/lessons/2_1_intro)| [Link](https://docs.google.com/forms/d/e/1FAIpQLSfwv1nAbIvplasVLacIrSsD0rX8I1wHAa2fQ0OkDSFcq6pr4g/viewform) | [Link]() | [Link]() |
 | 2|1|2016-09-13| iTunesU Swift: 2. [Applying MVC](https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961) |[Model View Controller](/lessons/2_1_mvc)| [Link](https://docs.google.com/forms/d/e/1FAIpQLSfhp7C0D-362mjLD_V3E0vTVa1vUTRLhJfR1rCZYziBygxcIg/viewform) | [Link]() | [Link]() |
 | 2|1|2016-09-14| * |[Extending Monty](/lessons/2_1_ui_1) | [Link](https://docs.google.com/forms/d/e/1FAIpQLSd4odf2LEhBxF7L3X6Dnec_8wbUNtAVvTDwbjEVaVF3E1eInw/viewform) | [Link]() | [Link]() |
-| 2|1|2016-09-15| iTunesU Swift: 3. [More Swift and Foundation](https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961) |[Introduction to Apps](/lessons/2_1_ui_2)| [Link](https://docs.google.com/forms/d/e/1FAIpQLSfbxmE7ISmpWgqMmMEwAUKSoG-haCkdkhNfJxaNc9O39CbrAA/viewform) | [Link]() | [Link]() |
-| 2|1|2016-09-16|  |[Introduction to Apps](/lessons/2_1_ui_3)| [Link](https://docs.google.com/forms/d/e/1FAIpQLScI0-RHCR-oUCZAz2P4NpuLmjf5ujyPArY1aCdmF0P5AoRmBA/viewform) | [Link]() | [Link]() |
+| 2|1|2016-09-15| iTunesU Swift: 3. [More Swift and Foundation](https://itunes.apple.com/us/course/developing-ios-9-apps-swift/id1104579961) |[Tab Bar and Generics](/lessons/2_1_ui_2)| [Link](https://docs.google.com/forms/d/e/1FAIpQLSfbxmE7ISmpWgqMmMEwAUKSoG-haCkdkhNfJxaNc9O39CbrAA/viewform) | [Link]() | [Link]() |
+| 2|1|2016-09-16| Install XCode 8 and read about [Swift 3](https://www.hackingwithswift.com/swift3) |[Upgrade to Swift 3](/lessons/2_1_ui_3)| [Link](https://docs.google.com/forms/d/e/1FAIpQLScI0-RHCR-oUCZAz2P4NpuLmjf5ujyPArY1aCdmF0P5AoRmBA/viewform) | [Link]() | [Link]() |
 
 
 ## Unit 1

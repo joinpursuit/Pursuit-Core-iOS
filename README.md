@@ -1,8 +1,9 @@
 # Access Code 3.2: Mobile Development with iOS
 
-Hello on this fine Wednesday. Today we're diving back into our Monty project. Also, we're gathering corrections
-for the Unit 1 assessment scoring. My apologies for the confusion. The schedule is updated with pre-work for
-tomorrow. It's the 3rd Stanford video which reviews (really quickly) a bunch of Swift language topics.
+Today is Thursday. We're going to mix it up a bit with Liz in the afternoon. Tonight we're going to 
+bite the bullet and upgrade to XCode 8 (when we're on real networks). While you're waiting for the
+download and install, read this [Swift 3](https://www.hackingwithswift.com/swift3). Tomorrow we'll 
+go through the aftermath together.
 
 ## Schedule
 
