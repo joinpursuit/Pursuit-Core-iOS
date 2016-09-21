@@ -1,6 +1,6 @@
 # Access Code 3.2: Mobile Development with iOS
 
-Hello on this **fine** Monday. The homework submission and project instructions are [here](/lessons/2_2_battleship_1/).
+Tomorrow (Thursday) we're moving on to [Table Views].(/lessons/2_2_tableview/).
 
 ## Schedule
 
