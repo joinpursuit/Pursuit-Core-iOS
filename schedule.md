@@ -11,6 +11,7 @@
 | 2|2|2016-09-20|  |[Battleship Lab](/lessons/2_2_battleship_2)| [Link](https://docs.google.com/forms/d/e/1FAIpQLScI0-RHCR-oUCZAz2P4NpuLmjf5ujyPArY1aCdmF0P5AoRmBA/viewform) | [Link]() | [Link]() |
 | 2|2|2016-09-21|  |[Battleship Review]()| [Link]() | [Link]() | [Link]() |
 | 2|2|2016-09-22| See Resources in the linked lesson |[Table Views](/lessons/2_2_tableview)| [Link]() | [Link]() | [Link]() |
+| 2|2|2016-09-23|  |Review, Assessment, half day| [Link]() | [Link]() | [Link]() |
 
 
 ## Unit 1

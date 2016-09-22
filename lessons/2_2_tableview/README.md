@@ -31,3 +31,28 @@ and ```UITableViewDelegate```.
 * https://developer.apple.com/reference/uikit/uitableviewcontroller
 * Although it's woefully outdated and in Objective-C the diagrammatic part of [this overview](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/TableView_iPhone/CreateConfigureTableView/CreateConfigureTableView.html) is useful.
 
+
+# Lecture
+
+Today's lesson will be to build [C4Q Movie Reel](https://github.com/C4Q/AC3.2-Tableviews_Part_1). Fork the 
+project at that URL, and clone it to your laptop.
+
+# Assessment Dry Run
+
+1. Fork [this](https://github.com/C4Q/AC3.2Unit-Midunit-Mock) repo which has only a README.md and .gitignore.
+2. Clone it locally.
+3. Create a project into that cloned directory. Name it AC32UnitMidunitMock.
+4. Code like the dickens. Or pretend to.
+5. Upon completion/satisfaction/resignation, add the project files to the repo.
+```
+git add .
+```
+6. Commit them locally.
+```
+git commit -a -m "First, and in this case, final commit"
+```
+7. Push to your repo.
+```
+git push origin master
+```
+8. Go to github and make a pull request.
