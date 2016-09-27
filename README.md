@@ -1,8 +1,7 @@
 # Access Code 3.2: Mobile Development with iOS
 
-Homework is [here](/homework/unit2/week-2). 
-
-Re-read tableviews [Table Views](/lessons/2_2_tableview), both the Resources and the lesson from Thursday. 
+Today, Paul Hine will lead us in some UX/UI considerations. After that, time permitting,
+we'll move on to continuing [C4Q Movie Reel - Custom Table Cells](https://github.com/C4Q/AC3.2-Tableviews_Part_2).
 
 ## Schedule
 

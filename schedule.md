@@ -13,6 +13,10 @@
 | 2|2|2016-09-22| See Resources in the linked lesson |[Table Views](/lessons/2_2_tableview)| [Link]() | [Link]() | [Link]() |
 | 2|2|2016-09-23|  |Review, Assessment, half day| [Link]() | [Link]() | [Link]() |
 | 2|3|2016-09-26| Re-read tableviews [Table Views](/lessons/2_2_tableview), both the Resources and the lesson from Thursday |Review, Assessment, half day| [Link]() | [Link]() | [Link]() |
+| 2|3|2016-09-27| [Readings](https://github.com/C4Q/AC3.2-Tableviews_Part_2) | Table Views:[Custom Cells](/lessons/2_3_customcells)| [Link]() | [Link]() | [Link]() |
+| 2|3|2016-09-28|  | | [Link]() | [Link]() | [Link]() |
+| 2|3|2016-09-29|  | | [Link]() | [Link]() | [Link]() |
+| 2|3|2016-09-30|  | | [Link]() | [Link]() | [Link]() |
 
 
 ## Unit 1
