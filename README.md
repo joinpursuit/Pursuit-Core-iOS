@@ -1,7 +1,13 @@
 # Access Code 3.2: Mobile Development with iOS
 
-Today, Paul Hine will lead us in some UX/UI considerations. After that, time permitting,
-we'll move on to continuing [C4Q Movie Reel - Custom Table Cells](https://github.com/C4Q/AC3.2-Tableviews_Part_2).
+Today, Wednesday, we will move on to the last part of the Movie Reel project, 
+[exploring Segues](/lessons/2_3_segues).
+
+In other news:
+
+* Assessments and Homeworks are still being reviewed
+* We have an outline of the remainder of Unit 2 and Unit 3 sketched. We will be able
+to share it with you by next week.
 
 ## Schedule
 
