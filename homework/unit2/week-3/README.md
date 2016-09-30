@@ -68,6 +68,36 @@ At this point your application will look something like this:
 5. Add titles and feedback in the form of ```UILabels``` to help the user know what's what. E.g. mark what the switch
 does; show the value of the stepper.
 
+> **NOTE**
+>
+> You may have to read the values out of a color back into your UI. If you wrote your code that way then this extension
+> might be useful to you.
+
+```swift
+    // based on http://stackoverflow.com/questions/28644311/how-to-get-the-rgb-code-int-from-an-uicolor-in-swift
+
+    extension UIColor {
+        func rgb() -> (red:CGFloat, green:CGFloat, blue:CGFloat, alpha:CGFloat)? {
+            var fRed : CGFloat = 0
+            var fGreen : CGFloat = 0
+            var fBlue : CGFloat = 0
+            var fAlpha: CGFloat = 0
+            if self.getRed(&fRed, green: &fGreen, blue: &fBlue, alpha: &fAlpha) {
+                return (red:fRed, green:fGreen, blue:fBlue, alpha:fAlpha)
+            } else {
+                // Could not extract RGBA components:
+                return nil
+            }
+        }
+    }
+
+    // a (kind of scary) call to this extension method
+    self.redSlider.value = Float((currentColor.rgb()?.red)!)
+```
+
+> You can avoid the need to pull RGB values back out of a ```UIColor``` by storing red, green and 
+> blue properties in your class
+
 #### Reading
 
 * [UITextField](https://developer.apple.com/reference/uikit/uitextfield)
