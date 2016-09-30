@@ -25,7 +25,7 @@
 3. Add an upstream in your local directory thusly:
 
 	```
-	git remote add upstream https://github.com/C4Q/AC3.2-Tableviews_Part_1
+	git remote add upstream https://github.com/C4Q/AC3.2-GesturesAndControls
 	```
 4. Run this to get a working homework branch
 
