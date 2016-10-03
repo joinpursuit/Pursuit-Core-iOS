@@ -17,6 +17,10 @@
 | 2|3|2016-09-28| [Readings section](https://github.com/C4Q/AC3.2-Tableviews_Part_3) | | [Link]() | [Link]() | [Link]() |
 | 2|3|2016-09-29|  | | [Link]() | [Link]() | [Link]() |
 | 2|3|2016-09-30|  | | [Link]() | [Link]() | [Link]() |
+| 2|4|2016-10-03| [Readings](https://github.com/C4Q/AC3.2-TextFields-1)|[Delegation: Text Fields](https://github.com/C4Q/AC3.2-TextFields-1) | [Link]() | [Link]() | [Link]() |
+| 2|4|2016-10-04|  | [Delegation: Scroll Views]()  | [Link]() | [Link]() | [Link]() |
+| 2|4|2016-10-05|  | [Delegation: Pickers]()  | [Link]() | [Link]() | [Link]() |
+| 2|4|2016-10-06|  | Unit 2 Assessment | [Link]() | [Link]() | [Link]() |
 
 
 ## Unit 1
