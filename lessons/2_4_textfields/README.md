@@ -26,5 +26,5 @@ Strings and it's **always** good to improve our String library abilities.
 [Today's lesson](https://github.com/C4Q/AC3.2-TextFields-1) uses ```UITextField``` as our first 
 illustration of the  delegation pattern in a ```UIControl```. We've already encountered delegation 
 in UITableView Fork the [project](https://github.com/C4Q/AC3.2-TextFields-1), and clone 
-**your fork*** to your laptop.
+**your fork** to your laptop.
 
