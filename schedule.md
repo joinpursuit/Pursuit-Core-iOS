@@ -18,7 +18,7 @@
 | 2|3|2016-09-29|  | | [Link]() | [Link]() | [Link]() |
 | 2|3|2016-09-30|  | | [Link]() | [Link]() | [Link]() |
 | 2|4|2016-10-03| [Readings](https://github.com/C4Q/AC3.2-TextFields-1)|[Delegation: Text Fields](https://github.com/C4Q/AC3.2-TextFields-1) | [Link]() | [Link]() | [Link]() |
-| 2|4|2016-10-04| [UIScrollView](https://developer.apple.com/reference/uikit/uiscrollview) and [Using AutoLayout with views](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/UIKitUICatalog/index.html#//apple_ref/doc/uid/TP40012857-UIView-SW5)| [Delegation: Scroll Views]()  | [Link]() | [Link]() | [Link]() |
+| 2|4|2016-10-04| [UIScrollView](https://developer.apple.com/reference/uikit/uiscrollview) and [Using AutoLayout with views](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/UIKitUICatalog/index.html#//apple_ref/doc/uid/TP40012857-UIView-SW5)| [Scroll/Stack Views](/lessons/2_4_scroll_stack)  | [Link]() | [Link]() | [Link]() |
 | 2|4|2016-10-05|  | [Delegation: Pickers]()  | [Link]() | [Link]() | [Link]() |
 | 2|4|2016-10-06|  | Unit 2 Assessment | [Link]() | [Link]() | [Link]() |
 
