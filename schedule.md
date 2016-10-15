@@ -1,9 +1,12 @@
 ## Unit 3
 
-|Unit|Week|Date       |Prework                 |Lesson                   |Prework HW Quiz    |Midday Check-in        |Pair Programming Checkin|
-|---:|---:|----------:|------------------------|-------------------------|-------------------|-----------------------|------------------------|
-| 3  |   1| 2016/10/17| [Prework][311_prework] |[URL][311_lesson]        |[Quiz][311_hw_quiz]|[Check-in][311_midday] | [Pair][311_end]        |
-| 3  |   1| 2016/10/18| [Prework][312_prework] |[URLSession][312_lesson] |[Quiz][312_hw_quiz]|[Check-in][312_midday] | [Pair][312_end]        |
+|Unit|Week|Date       |Prework                 |Lesson                      |Prework HW Quiz    |Midday Check-in        |Pair Programming Checkin|
+|---:|---:|----------:|------------------------|----------------------------|-------------------|-----------------------|------------------------|
+| 3  |   1| 2016/10/17| [Prework][311_prework] |[URL][311_lesson]           |[Quiz][311_hw_quiz]|[Check-in][311_midday] | [Pair][311_end]        |
+| 3  |   1| 2016/10/18| [Prework][312_prework] |[URL II][312_lesson]        |[Quiz][312_hw_quiz]|[Check-in][312_midday] | [Pair][312_end]        |
+| 3  |   1| 2016/10/19|                        |        Day off             |                   |                       |                        |
+| 3  |   1| 2016/10/20| [Prework][314_prework] |[URLSession][314_lesson]    |[Quiz][314_hw_quiz]|[Check-in][314_midday] | [Pair][314_end]        |
+| 3  |   1| 2016/10/21| [Prework][315_prework] |[URLSession II][315_lesson] |[Quiz][315_hw_quiz]|[Check-in][315_midday] | [Pair][315_end]        |
 
 [311_prework]: /lessons/unit3/url
 [311_lesson]: /lessons/unit3/url
@@ -17,6 +20,17 @@
 [312_midday]: https://apple.com
 [312_end]: https://apple.com
 
+[314_prework]: /lessons/unit3/urlsession
+[314_lesson]: /lessons/unit3/urlsession
+[314_hw_quiz]: https://apple.com
+[314_midday]: https://apple.com
+[314_end]: https://apple.com
+
+[315_prework]: /lessons/unit3/urlsession
+[315_lesson]: /lessons/unit3/urlsession
+[315_hw_quiz]: https://apple.com
+[315_midday]: https://apple.com
+[315_end]: https://apple.com
 
 ## Unit 2
 
