@@ -14,8 +14,8 @@
 [311_midday]: https://apple.com
 [311_end]: https://apple.com
 
-[312_prework]: /lessons/unit3/urlsession
-[312_lesson]: /lessons/unit3/urlsession
+[312_prework]: /lessons/unit3/url
+[312_lesson]: /lessons/unit3/url
 [312_hw_quiz]: https://apple.com
 [312_midday]: https://apple.com
 [312_end]: https://apple.com
