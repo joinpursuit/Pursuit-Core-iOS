@@ -43,9 +43,9 @@ either. So I just read in the URLs as strings and ignored them.
 1. Fork and clone https://github.com/C4Q/AC3.2-WalkOfFame. 
 2. Finish the project
 	1. Implement the tableview delegate methods.
-	2. Implment ```getWalks(from:)```.
+	2. Implement ```getWalks(from:)```.
 
-** SPOILER ALERT**
+**SPOILER ALERT**
 
 If you need help with the implementation of ```getWalks(from:)```, the body of that function/method
 is below.

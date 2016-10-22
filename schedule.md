@@ -59,7 +59,7 @@
 [315_midday]: https://apple.com
 [315_end]: https://apple.com
 
-[316_homework]: /lessons/homework/unit3/hw_week1.md
+[316_homework]: /homework/unit3/week_1.md
 
 ## Unit 2
 

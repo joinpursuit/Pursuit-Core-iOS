@@ -1,6 +1,6 @@
 # Access Code 3.2: Mobile Development with iOS
 
-## [BASH](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) today!
+## [Homework](/homework/unit3/week_1)
 
 
 ## Schedule
