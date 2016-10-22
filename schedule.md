@@ -1,12 +1,39 @@
 ## Unit 3
 
-|Unit|Week|Date       |Prework                 |Lesson                      |Prework HW Quiz    |Midday Check-in        |Pair Programming Checkin|
-|---:|---:|----------:|------------------------|----------------------------|-------------------|-----------------------|------------------------|
-| 3  |   1| 2016/10/17| [Prework][311_prework] |[URL][311_lesson]           |[Quiz][311_hw_quiz]|[Check-in][311_midday] | [Pair][311_end]        |
-| 3  |   1| 2016/10/18| [Prework][312_prework] |[URL II][312_lesson]        |[Quiz][312_hw_quiz]|[Check-in][312_midday] | [Pair][312_end]        |
-| 3  |   1| 2016/10/19|                        |        Day off             |                   |                       |                        |
-| 3  |   1| 2016/10/20| [Prework][314_prework] |[URLSession][314_lesson]    |[Quiz][314_hw_quiz]|[Check-in][314_midday] | [Pair][314_end]        |
-| 3  |   1| 2016/10/21| [Prework][315_prework] |[URLSession II][315_lesson] |[Quiz][315_hw_quiz]|[Check-in][315_midday] | [Pair][315_end]        |
+|Unit|Week|Date       |Prework                   |Lesson                      |Prework HW Quiz    |Midday Check-in        |Pair Programming Checkin|
+|---:|---:|----------:|--------------------------|----------------------------|-------------------|-----------------------|------------------------|
+||||| **Week 1**||
+| 3  |   1| 2016/10/17| [Prework][311_prework]   |[URL][311_lesson]           |[Quiz][311_hw_quiz]|[Check-in][311_midday] | [Pair][311_end]        |
+| 3  |   1| 2016/10/18| [Prework][312_prework]   |[URL II][312_lesson]        |[Quiz][312_hw_quiz]|[Check-in][312_midday] | [Pair][312_end]        |
+| 3  |   1| 2016/10/19|                          |        Day off             |                   |                       |                        |
+| 3  |   1| 2016/10/20| [Prework][314_prework]   |[URLSession][314_lesson]    |[Quiz][314_hw_quiz]|[Check-in][314_midday] | [Pair][314_end]        |
+| 3  |   1| 2016/10/21| [Prework][315_prework]   |[URLSession II][315_lesson] |[Quiz][315_hw_quiz]|[Check-in][315_midday] | [Pair][315_end]        |
+| 3  |   1| 2016/10/22| [Homework][316_homework] |                            |                   |                       |                        |
+
+<!--
+||||| **Week 2**||
+| 3  |   2| 2016/10/24| [Prework][321_prework]  |[URLSession][321_lesson]    |[Quiz][321_hw_quiz]|[Check-in][321_midday] | [Pair][321_end]        |
+| 3  |   2| 2016/10/25| [Prework][322_prework]  |[URLSession II][322_lesson] |[Quiz][322_hw_quiz]|[Check-in][322_midday] | [Pair][322_end]        |
+| 3  |   2| 2016/10/26| [Prework][323_prework]  |[URLSession II][322_lesson] |[Quiz][322_hw_quiz]|[Check-in][322_midday] | [Pair][322_end]        |
+| 3  |   2| 2016/10/27| [Prework][324_prework]  |[URLSession II][322_lesson] |[Quiz][322_hw_quiz]|[Check-in][322_midday] | [Pair][322_end]        |
+| 3  |   2| 2016/10/28| [Prework][325_prework]  | Mid-Unit Assessment        |                   |                       |                        |
+-->
+
+<!-- Unit 3 Week 2 -->
+
+[321_prework]: /lessons/unit3/url
+[321_lesson]: /lessons/unit3/url
+[321_hw_quiz]: https://apple.com
+[321_midday]: https://apple.com
+[321_end]: https://apple.com
+
+[322_prework]: /lessons/unit3/url
+[322_lesson]: /lessons/unit3/url
+[322_hw_quiz]: https://apple.com
+[322_midday]: https://apple.com
+[322_end]: https://apple.com
+
+<!-- Unit 3 Week 1 -->
 
 [311_prework]: /lessons/unit3/url
 [311_lesson]: /lessons/unit3/url
@@ -31,6 +58,8 @@
 [315_hw_quiz]: https://apple.com
 [315_midday]: https://apple.com
 [315_end]: https://apple.com
+
+[316_homework]: /lessons/homework/unit3/hw_week1.md
 
 ## Unit 2
 
