@@ -36,14 +36,22 @@ copying the URL, going to your project directory and typing:
 
 ## Part II - Walk of Fame
 
-This project is pre-URLSession, working from a local file. Note, I could not find the original site that 
-housed the images so as JPG filenames by themselves we can't do anything with them. Googling didn't help
-either. So I just read in the URLs as strings and ignored them.
+This project is pre-URLSession, working from a local file.
 
 1. Fork and clone https://github.com/C4Q/AC3.2-WalkOfFame. 
 2. Finish the project
 	1. Implement the tableview delegate methods.
 	2. Implement ```getWalks(from:)```.
+
+### Part II, part deux
+
+BREAKING NEWS: I found a hosted version of the data at https://data.cityofnewyork.us/resource/btth-hrxi.json. 
+After you finish the version loading json from a local file, load it from that URL. When you visit 
+that link and read it (which is the first thing you always do when you see an API URL, right?) you can see it
+has a saner format. You won't be working with ```[[Any]]``` anymore. You can integrate this in your current
+project just like we did on Friday. I suggest making a new convenience init on ```Walk``` that takes a ```Dictionary```.
+I *also* realize that ```Walk``` is indeed a bad object name. There's only one Walk of Fame, isn't there?
+```Designer``` would have been better (someone suggested that in class). Sorry. You can rename it if you like.
 
 **SPOILER ALERT**
 
