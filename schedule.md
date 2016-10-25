@@ -10,51 +10,63 @@
 | 3  |   1| 2016/10/21| [Prework][315_prework]   |[URLSession II][315_lesson] |[Quiz][315_hw_quiz]|[Check-in][315_midday] | [Review][315_DSA]      |
 | 3  |   1| 2016/10/22| [Homework][316_homework] |                            |                   |                       |                        |
 ||||| **Week 2**||
-| 3  |   2| 2016/10/24| [Prework][321_prework]  |[URLSession][321_lesson]    |[Quiz][321_hw_quiz]|[Check-in][321_midday] | [Pair][321_end]        |
-| 3  |   2| 2016/10/25| [Prework][322_prework]  |[URLSession II][322_lesson] |[Quiz][322_hw_quiz]|[Check-in][322_midday] | [Pair][322_end]        |
-| 3  |   2| 2016/10/26| [Prework][323_prework]  |[URLSession II][322_lesson] |[Quiz][322_hw_quiz]|[Check-in][322_midday] | [Pair][322_end]        |
-| 3  |   2| 2016/10/27| [Prework][324_prework]  |[URLSession II][322_lesson] |[Quiz][322_hw_quiz]|[Check-in][322_midday] | [Pair][322_end]        |
-| 3  |   2| 2016/10/28| [Prework][325_prework]  | Mid-Unit Assessment        |                   |                       |                        |
+| 3  |   2| 2016/10/24| [Prework][321_prework]   |[URLSession III][321_lesson]|[Quiz][321_hw_quiz]|[Check-in][321_midday] | [DSA] [321_DSA]        |
+| 3  |   2| 2016/10/25| [Prework][322_prework]   |[APIs         ][322_lesson] |[Quiz][322_hw_quiz]|[Check-in][322_midday] | [DSA] [322_DSA]        |
+| 3  |   2| 2016/10/26| [Prework][323_prework]   |[APIs         ][323_lesson] |[Quiz][323_hw_quiz]|[Check-in][323_midday] | [DSA] [323_DSA]        |
+| 3  |   2| 2016/10/27| [Prework][324_prework]   |[APIs         ][324_lesson] |[Quiz][324_hw_quiz]|[Check-in][324_midday] | [DSA] [324_DSA]        |
+| 3  |   2| 2016/10/28|                          | Mid-Unit Assessment        |                   |                       |                        |
 
 
 <!-- Unit 3 Week 2 -->
 
-[321_prework]: /lessons/unit3/url
-[321_lesson]: /lessons/unit3/url
-[321_hw_quiz]: https://apple.com
-[321_midday]: https://apple.com
-[321_DSA]: https://apple.com
+[321_prework]: /lessons/unit3/urlsession
+[321_lesson]: /lessons/unit3/urlsession
+[321_hw_quiz]: #
+[321_midday]: #
+[321_DSA]: #
 
 [322_prework]: https://github.com/C4Q/AC3.2-APIs
 [322_lesson]: https://github.com/C4Q/AC3.2-APIs
-[322_hw_quiz]: https://apple.com
-[322_midday]: https://apple.com
-[322_DSA]: https://apple.com
+[322_hw_quiz]: #
+[322_midday]: #
+[322_DSA]: #
+
+[323_prework]: https://github.com/C4Q/AC3.2-APIs
+[323_lesson]: https://github.com/C4Q/AC3.2-APIs
+[323_hw_quiz]: #
+[323_midday]: #
+[323_DSA]: #
+
+[324_prework]: https://github.com/C4Q/AC3.2-APIs
+[324_lesson]: https://github.com/C4Q/AC3.2-APIs
+[324_hw_quiz]: #
+[324_midday]: #
+[324_DSA]: #
 
 <!-- Unit 3 Week 1 -->
 
 [311_prework]: https://goo.gl/forms/SkSRAWRbPjNIwJdX2
 [311_lesson]: /lessons/unit3/url
-[311_hw_quiz]: https://apple.com
-[311_midday]: https://apple.com
+[311_hw_quiz]: #
+[311_midday]: #
 [311_DSA]: https://github.com/C4Q/AC-DSA/blob/master/Intro_To_DSA/introToDSA.md
 
 [312_prework]: https://docs.google.com/forms/d/e/1FAIpQLSe1iwMyMAvBaEtkfNfs_Ha7r7VyYVXFYH9yiU9USwB4_wbrTw/viewform
 [312_lesson]: /lessons/unit3/url
-[312_hw_quiz]: https://apple.com
-[312_midday]: https://apple.com
+[312_hw_quiz]: #
+[312_midday]: #
 [312_DSA]: https://github.com/C4Q/AC-DSA/blob/master/Big_O/Big_O_Lesson.md
 
 [314_prework]: /lessons/unit3/url
 [314_lesson]: /lessons/unit3/urlsession
-[314_hw_quiz]: https://apple.com
-[314_midday]: https://apple.com
+[314_hw_quiz]: #
+[314_midday]: #
 [314_DSA]: https://github.com/C4Q/AC-DSA/blob/master/Arrays/Arrays.md
 
 [315_prework]: https://goo.gl/forms/EfLaEGlMNATqsZok2
 [315_lesson]: /lessons/unit3/urlsession
-[315_hw_quiz]: https://apple.com
-[315_midday]: https://apple.com
+[315_hw_quiz]: #
+[315_midday]: #
 [315_DSA]: https://github.com/C4Q/AC-DSA/tree/master/Week%20One%20Review/DSAWeekOneReview.playground
 
 [316_homework]: /homework/unit3/week_1.md
