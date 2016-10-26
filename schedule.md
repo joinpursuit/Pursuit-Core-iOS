@@ -32,13 +32,13 @@
 [322_DSA]: #
 
 [323_prework]: https://github.com/C4Q/AC3.2-APIs
-[323_lesson]: https://github.com/C4Q/AC3.2-APIs
+[323_lesson]: /lessons/unit3/urlsession/exercises.md
 [323_hw_quiz]: #
 [323_midday]: #
 [323_DSA]: #
 
-[324_prework]: https://github.com/C4Q/AC3.2-APIs
-[324_lesson]: https://github.com/C4Q/AC3.2-APIs
+[324_prework]: https://github.com/C4Q/AC3.2-APIs/blob/master/Part%20II/README.md
+[324_lesson]: https://github.com/C4Q/AC3.2-APIs/blob/master/Part%20II/README.md
 [324_hw_quiz]: #
 [324_midday]: #
 [324_DSA]: #
