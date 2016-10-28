@@ -1,7 +1,6 @@
 # Access Code 3.2: Mobile Development with iOS
 
-The [schedule](/schedule.md) has been updated as of Wednesday, October 26.
-Today we're hunkering down into some intense [API coding](/lessons/unit3/urlsession/exercises.md).
+Homework for this weekend is [here](/homework/unit3/week-2.md).
 
 ## Schedule
 
