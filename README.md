@@ -1,6 +1,6 @@
 # Access Code 3.2: Mobile Development with iOS
 
-Homework for this weekend is [here](/homework/unit3/week_2.md).
+Happy Halloween! Today's iOS [lesson outline](/lessons/unit3/mid_review)
 
 ## Schedule
 

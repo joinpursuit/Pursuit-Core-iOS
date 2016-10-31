@@ -1,7 +1,7 @@
 ## Unit 3
 
-|Unit|Week|Date       |Prework                   |Lesson                      |Prework HW Quiz    |Midday Check-in        |DSA Lesson              |
-|---:|---:|----------:|--------------------------|----------------------------|-------------------|-----------------------|------------------------|
+|Unit|Week|Date       |Prework                   |Lesson                                |Prework HW Quiz    |Midday Check-in        |DSA Lesson              |
+|---:|---:|----------:|--------------------------|--------------------------------------|-------------------|-----------------------|------------------------|
 ||||| **Week 1**||
 | 3  |   1| 2016/10/17| [Prework][311_prework]   |[URL][311_lesson]           |[Quiz][311_hw_quiz]|[Check-in][311_midday] | [Intro][311_DSA]       |
 | 3  |   1| 2016/10/18| [Prework][312_prework]   |[URL II][312_lesson]        |[Quiz][312_hw_quiz]|[Check-in][312_midday] | [Big O][312_DSA]       |
@@ -10,12 +10,49 @@
 | 3  |   1| 2016/10/21| [Prework][315_prework]   |[URLSession II][315_lesson] |[Quiz][315_hw_quiz]|[Check-in][315_midday] | [Review][315_DSA]      |
 | 3  |   1| 2016/10/22| [Homework][316_homework] |                            |                   |                       |                        |
 ||||| **Week 2**||
-| 3  |   2| 2016/10/24| [Prework][321_prework]   |[URLSession III][321_lesson]|[Quiz][321_hw_quiz]|[Check-in][321_midday] | [DSA] [321_DSA]        |
-| 3  |   2| 2016/10/25| [Prework][322_prework]   |[APIs         ][322_lesson] |[Quiz][322_hw_quiz]|[Check-in][322_midday] | [DSA] [322_DSA]        |
-| 3  |   2| 2016/10/26| [Prework][323_prework]   |[APIs         ][323_lesson] |[Quiz][323_hw_quiz]|[Check-in][323_midday] | [DSA] [323_DSA]        |
-| 3  |   2| 2016/10/27| [Prework][324_prework]   |[APIs         ][324_lesson] |[Quiz][324_hw_quiz]|[Check-in][324_midday] | [DSA] [324_DSA]        |
+| 3  |   2| 2016/10/24| [Prework][321_prework]   |[URLSession III][321_lesson]|[Quiz][321_hw_quiz]|[Check-in][321_midday] | [Linked Lists 1] [321_DSA]        |
+| 3  |   2| 2016/10/25| [Prework][322_prework]   |[APIs         ][322_lesson] |[Quiz][322_hw_quiz]|[Check-in][322_midday] | [Linked Lists 2] [322_DSA]        |
+| 3  |   2| 2016/10/26| [Prework][323_prework]   |[APIs         ][323_lesson] |[Quiz][323_hw_quiz]|[Check-in][323_midday] | [Linked Lists 3] [323_DSA]        |
+| 3  |   2| 2016/10/27| [Prework][324_prework]   |[APIs         ][324_lesson] |[Quiz][324_hw_quiz]|[Check-in][324_midday] | [n/a] [324_DSA]        |
 | 3  |   2| 2016/10/28|                          | Mid-Unit Assessment        |                   |                       |                        |
+||||| **Week 3**||
+| 3  |   2| 2016/10/31| [Prework][331_prework]   |[HW and Assessment Review][331_lesson]|[Quiz][331_hw_quiz]|[Check-in][331_midday] | [DSA] [331_DSA]        |
+| 3  |   2| 2016/11/1| [Prework][332_prework]   |[APIs         ][332_lesson] |[Quiz][332_hw_quiz]|[Check-in][332_midday] | [Queues] [332_DSA]        |
+| 3  |   2| 2016/11/2| [Prework][333_prework]   |[APIs         ][333_lesson] |[Quiz][333_hw_quiz]|[Check-in][333_midday] | [Hashmaps] [333_DSA]        |
+| 3  |   2| 2016/11/3| [Prework][334_prework]   |[APIs         ][334_lesson] |[Quiz][334_hw_quiz]|[Check-in][334_midday] | [Review] [334_DSA]        |
+| 3  |   2| 2016/11/4|  [Prework][335_prework]   |[APIs         ][335_lesson] |[Quiz][335_hw_quiz]|[Check-in][335_midday] | [Assessment] [335_DSA]        |
 
+<!-- Unit 3 Week 3 -->
+
+[331_prework]: /lessons/unit3/mid_review
+[331_lesson]: /lessons/unit3/mid_review
+[331_hw_quiz]: #
+[331_midday]: #
+[331_DSA]: Stacks
+
+[332_prework]: https://github.com/C4Q/AC3.2-APIs
+[332_lesson]: https://github.com/C4Q/AC3.2-APIs
+[332_hw_quiz]: #
+[332_midday]: #
+[332_DSA]: Queues
+
+[333_prework]: https://github.com/C4Q/AC3.2-APIs
+[333_lesson]: /lessons/unit3/urlsession/exercises.md
+[333_hw_quiz]: #
+[333_midday]: #
+[333_DSA]: Hashmaps
+
+[334_prework]: https://github.com/C4Q/AC3.2-APIs/blob/master/Part%20II/README.md
+[334_lesson]: https://github.com/C4Q/AC3.2-APIs/blob/master/Part%20II/README.md
+[334_hw_quiz]: #
+[334_midday]: #
+[334_DSA]: Review
+
+[335_prework]: https://github.com/C4Q/AC3.2-APIs/blob/master/Part%20II/README.md
+[335_lesson]: https://github.com/C4Q/AC3.2-APIs/blob/master/Part%20II/README.md
+[335_hw_quiz]: #
+[335_midday]: #
+[335_DSA]: Review
 
 <!-- Unit 3 Week 2 -->
 
@@ -23,19 +60,19 @@
 [321_lesson]: /lessons/unit3/urlsession
 [321_hw_quiz]: #
 [321_midday]: #
-[321_DSA]: #
+[321_DSA]: https://github.com/C4Q/AC-DSA/blob/master/Linked%20Lists/LinkedLists.md
 
 [322_prework]: https://github.com/C4Q/AC3.2-APIs
 [322_lesson]: https://github.com/C4Q/AC3.2-APIs
 [322_hw_quiz]: #
 [322_midday]: #
-[322_DSA]: #
+[322_DSA]: https://github.com/C4Q/AC-DSA/blob/master/Linked%20Lists/LinkedListsDayTwo.md
 
 [323_prework]: https://github.com/C4Q/AC3.2-APIs
 [323_lesson]: /lessons/unit3/urlsession/exercises.md
 [323_hw_quiz]: #
 [323_midday]: #
-[323_DSA]: #
+[323_DSA]: https://github.com/C4Q/AC-DSA/blob/master/Linked%20Lists/LinkedListsDayThree.md
 
 [324_prework]: https://github.com/C4Q/AC3.2-APIs/blob/master/Part%20II/README.md
 [324_lesson]: https://github.com/C4Q/AC3.2-APIs/blob/master/Part%20II/README.md
