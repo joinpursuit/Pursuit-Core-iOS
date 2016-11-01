@@ -16,11 +16,11 @@
 | 3  |   2| 2016/10/27| [Prework][324_prework]   |[APIs         ][324_lesson] |[Quiz][324_hw_quiz]|[Check-in][324_midday] | [n/a] [324_DSA]        |
 | 3  |   2| 2016/10/28|                          | Mid-Unit Assessment        |                   |                       |                        |
 ||||| **Week 3**||
-| 3  |   2| 2016/10/31| [Prework][331_prework]   |[HW and Assessment Review][331_lesson]|[Quiz][331_hw_quiz]|[Check-in][331_midday] | [DSA] [331_DSA]        |
-| 3  |   2| 2016/11/1| [Prework][332_prework]   |[APIs         ][332_lesson] |[Quiz][332_hw_quiz]|[Check-in][332_midday] | [Queues] [332_DSA]        |
-| 3  |   2| 2016/11/2| [Prework][333_prework]   |[APIs         ][333_lesson] |[Quiz][333_hw_quiz]|[Check-in][333_midday] | [Hashmaps] [333_DSA]        |
-| 3  |   2| 2016/11/3| [Prework][334_prework]   |[APIs         ][334_lesson] |[Quiz][334_hw_quiz]|[Check-in][334_midday] | [Review] [334_DSA]        |
-| 3  |   2| 2016/11/4|  [Prework][335_prework]   |[APIs         ][335_lesson] |[Quiz][335_hw_quiz]|[Check-in][335_midday] | [Assessment] [335_DSA]        |
+| 3  |   2| 2016/10/31| [Prework][331_prework]   |[HW and Assessment Review][331_lesson]|[Quiz][331_hw_quiz]|[Check-in][331_midday] | [DSA] [331_DSA]       |
+| 3  |   2| 2016/11/1| [Prework][332_prework]    |[APIs           ][332_lesson]         |[Quiz][332_hw_quiz]|[Check-in][332_midday] | [Queues] [332_DSA]    |
+| 3  |   2| 2016/11/2| [Reading][333_prework]    |[Collection View][333_lesson]         |[Quiz][333_hw_quiz]|[Check-in][333_midday] | [Hashmaps] [333_DSA]  |
+| 3  |   2| 2016/11/3| [Prework][334_prework]    |[APIs           ][334_lesson]         |[Quiz][334_hw_quiz]|[Check-in][334_midday] | [Review] [334_DSA]    |
+| 3  |   2| 2016/11/4|  [Prework][335_prework]   |[APIs           ][335_lesson]         |[Quiz][335_hw_quiz]|[Check-in][335_midday] | [Assessment] [335_DSA]|
 
 <!-- Unit 3 Week 3 -->
 
@@ -36,8 +36,8 @@
 [332_midday]: #
 [332_DSA]: Queues
 
-[333_prework]: https://github.com/C4Q/AC3.2-APIs
-[333_lesson]: /lessons/unit3/urlsession/exercises.md
+[333_prework]: /lessons/unit3/collectionview
+[333_lesson]: /lessons/unit3/collectionview
 [333_hw_quiz]: #
 [333_midday]: #
 [333_DSA]: Hashmaps
