@@ -1,3 +1,49 @@
+## Unit 4
+
+|Unit|Week|Date       |Prework                   |Lesson                                |Prework HW Quiz    |Midday Check-in        |DSA Lesson              |
+|---:|---:|----------:|--------------------------|--------------------------------------|-------------------|-----------------------|------------------------|
+||||| **Week 1**||
+| 4  |   1| 2016/11/14|                          |Project Review and Presentation       |[Quiz][411_hw_quiz]|[Check-in][411_midday] | [TBA][411_DSA]         |
+| 4  |   1| 2016/11/15| [Prework][412_prework]   |[URLRequest][412_lesson]              |[Quiz][412_hw_quiz]|[Check-in][412_midday] | [TBA][412_DSA]         |
+| 4  |   1| 2016/11/16| [Prework][413_prework]   |[URLCache][413_lesson]                |[Quiz][413_hw_quiz]|[Check-in][413_midday] | [TBA][413_DSA]         |
+| 4  |   1| 2016/11/17| [Prework][414_prework]   |[OAuth][414_lesson]                   |[Quiz][414_hw_quiz]|[Check-in][414_midday] | [TBA][414_DSA]         |
+| 4  |   1| 2016/11/18| [Prework][415_prework]   |[Review][415_lesson]                  |[Quiz][415_hw_quiz]|[Check-in][415_midday] | [Review][415_DSA]      |
+| 4  |   1| 2016/11/19| [Homework][416_homework] |                                      |                   |                       |                        |
+
+<!-- Unit 3 Week 1 -->
+
+[411_prework]: #
+[411_lesson]: #
+[411_hw_quiz]: #
+[411_midday]: #
+[411_DSA]: #
+
+[412_prework]: #
+[412_lesson]: #
+[412_hw_quiz]: #
+[412_midday]: #
+[412_DSA]: #
+
+[413_prework]: https://github.com/C4Q/AC3.2-URLCache
+[413_lesson]: https://github.com/C4Q/AC3.2-URLCache
+[413_hw_quiz]: #
+[413_midday]: #
+[413_DSA]: #
+
+[414_prework]: #
+[414_lesson]: #
+[414_hw_quiz]: #
+[414_midday]: #
+[414_DSA]: #
+
+[415_prework]:#
+[415_lesson]: #
+[415_hw_quiz]: #
+[415_midday]: #
+[415_DSA]:#
+
+[416_homework]: #
+
 ## Unit 3
 
 |Unit|Week|Date       |Prework                   |Lesson                                |Prework HW Quiz    |Midday Check-in        |DSA Lesson              |
@@ -16,11 +62,16 @@
 | 3  |   2| 2016/10/27| [Prework][324_prework]   |[APIs         ][324_lesson] |[Quiz][324_hw_quiz]|[Check-in][324_midday] | [n/a] [324_DSA]        |
 | 3  |   2| 2016/10/28|                          | Mid-Unit Assessment        |                   |                       |                        |
 ||||| **Week 3**||
-| 3  |   2| 2016/10/31| [Prework][331_prework]   |[HW and Assessment Review][331_lesson]|[Quiz][331_hw_quiz]|[Check-in][331_midday] | [DSA] [331_DSA]       |
-| 3  |   2| 2016/11/1| [Prework][332_prework]    |[APIs           ][332_lesson]         |[Quiz][332_hw_quiz]|[Check-in][332_midday] | [Queues] [332_DSA]    |
-| 3  |   2| 2016/11/2| [Reading][333_prework]    |[Collection View][333_lesson]         |[Quiz][333_hw_quiz]|[Check-in][333_midday] | [Hashmaps] [333_DSA]  |
-| 3  |   2| 2016/11/3| [Prework][334_prework]    |[APIs           ][334_lesson]         |[Quiz][334_hw_quiz]|[Check-in][334_midday] | [Review] [334_DSA]    |
-| 3  |   2| 2016/11/4|  [Prework][335_prework]   |[APIs           ][335_lesson]         |[Quiz][335_hw_quiz]|[Check-in][335_midday] | [Assessment] [335_DSA]|
+| 3  |   3| 2016/10/31| [Prework][331_prework]   |[HW and Assessment Review][331_lesson]|[Quiz][331_hw_quiz]|[Check-in][331_midday] | [DSA] [331_DSA]       |
+| 3  |   3| 2016/11/1| [Prework][332_prework]    |[APIs           ][332_lesson]         |[Quiz][332_hw_quiz]|[Check-in][332_midday] | [Queues] [332_DSA]    |
+| 3  |   3| 2016/11/2| [Reading][333_prework]    |[Collection View][333_lesson]         |[Quiz][333_hw_quiz]|[Check-in][333_midday] | [Hashmaps] [333_DSA]  |
+| 3  |   3| 2016/11/3| [Prework][334_prework]    |[APIs           ][334_lesson]         |[Quiz][334_hw_quiz]|[Check-in][334_midday] | [Review] [334_DSA]    |
+| 3  |   3| 2016/11/4|  [Prework][335_prework]   |[APIs           ][335_lesson]         |[Quiz][335_hw_quiz]|[Check-in][335_midday] | [Assessment] [335_DSA]|
+||||| **Week 4**||
+| 3  |   4| 2016/11/07| Team Project             |     |     |    |    |
+| 3  |   4| 2016/11/08| Team Project             |     |     |    |    |
+| 3  |   4| 2016/11/09| Team Project             |     |     |    |    |
+| 3  |   4| 2016/11/10| Unit Final Assessment    |     |     |    |    |
 
 <!-- Unit 3 Week 3 -->
 
