@@ -25,7 +25,7 @@
 [412_DSA]: #
 
 [413_prework]: https://github.com/C4Q/AC3.2-URLCache
-[413_lesson]: https://github.com/C4Q/AC3.2-URLCache
+[413_lesson]: /lessons/unit4/urlcache
 [413_hw_quiz]: #
 [413_midday]: #
 [413_DSA]: #
