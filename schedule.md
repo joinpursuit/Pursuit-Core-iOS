@@ -9,6 +9,30 @@
 | 4  |   1| 2016/11/17| [Prework][414_prework]   |[OAuth][414_lesson]                   |[Quiz][414_hw_quiz]|[Check-in][414_midday] | [TBA][414_DSA]         |
 | 4  |   1| 2016/11/18| [Prework][415_prework]   |[Review][415_lesson]                  |[Quiz][415_hw_quiz]|[Check-in][415_midday] | [Review][415_DSA]      |
 | 4  |   1| 2016/11/19| [Homework][416_homework] |                                      |                   |                       |                        |
+||||| **Week 2**||
+| 4  |   2| 2016/11/21| NSPredicate              |[NSPredicate][421_lesson]             |[Quiz][421_hw_quiz]|[Check-in][421_midday] | [TBA][421_DSA]         |
+| 4  |   2| 2016/11/22| [Prework][422_prework]   |[URLRequest][422_lesson]              |[Quiz][422_hw_quiz]|[Check-in][422_midday] | [TBA][422_DSA]         |
+| 4  |   2| 2016/11/23| [Prework][423_prework]   |[Table View Sections][423_lesson]     |[Quiz][423_hw_quiz]|[Check-in][423_midday] | [TBA][423_DSA]         |
+
+<!-- Unit 3 Week 2 -->
+
+[421_prework]: /lessons/unit4/NSPredicate
+[421_lesson]: /lessons/unit4/NSPredicate
+[421_hw_quiz]: #
+[421_midday]: #
+[421_DSA]: #
+
+[422_prework]: #
+[422_lesson]: #
+[422_hw_quiz]: #
+[422_midday]: #
+[422_DSA]: #
+
+[423_prework]: /lessons/unit4/TableViewPredicate
+[423_lesson]: /lessons/unit4/TableViewPredicate
+[423_hw_quiz]: #
+[423_midday]: #
+[423_DSA]: #
 
 <!-- Unit 3 Week 1 -->
 
