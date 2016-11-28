@@ -13,6 +13,17 @@
 | 4  |   2| 2016/11/21| NSPredicate              |[NSPredicate][421_lesson]             |[Quiz][421_hw_quiz]|[Check-in][421_midday] | [TBA][421_DSA]         |
 | 4  |   2| 2016/11/22| [Prework][422_prework]   |[Oauth 2 2][422_lesson]               |[Quiz][422_hw_quiz]|[Check-in][422_midday] | [TBA][422_DSA]         |
 | 4  |   2| 2016/11/23| [Prework][423_prework]   |[Table View Sections][423_lesson]     |[Quiz][423_hw_quiz]|[Check-in][423_midday] | [TBA][423_DSA]         |
+||||| **Week 3**||
+| 4  |   3| 2016/11/28|                          |[Core Data - I][431_lesson]           |[Quiz][431_hw_quiz]|[Check-in][431_midday] | [TBA][421_DSA]         |
+
+<!-- Unit 3 Week 2 -->
+
+[431_prework]: /lessons/unit4/CoreData
+[431_lesson]: /lessons/unit4/CoreData
+[431_hw_quiz]: #
+[431_midday]: #
+[431_DSA]: #
+
 
 <!-- Unit 3 Week 2 -->
 
