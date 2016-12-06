@@ -15,6 +15,8 @@
 | 4  |   2| 2016/11/23| [Prework][423_prework]   |[Table View Sections][423_lesson]     |[Quiz][423_hw_quiz]|[Check-in][423_midday] | [TBA][423_DSA]         |
 ||||| **Week 3**||
 | 4  |   3| 2016/11/28|                          |[Core Data - I][431_lesson]           |[Quiz][431_hw_quiz]|[Check-in][431_midday] | [TBA][421_DSA]         |
+||||| **Week 4**||
+| 4  |   4| 2016/12/06|                          |[Midterm Review - Contacts](https://github.com/C4Q/AC3.2-MidtermReview-Contacts)           |Quiz|Check-in | TBA        |
 
 <!-- Unit 3 Week 2 -->
 
