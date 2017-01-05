@@ -112,9 +112,3 @@ Following [this tutorial](http://www.appcoda.com/webkit-framework-intro/) with t
 1. Make outlets for the three buttons
 1. Make Action handlers for them (you can also route them through the same one)
 1. Set "Hide Bars" on swipe which is a nice way to claim some real estate
-
-
-## NEXT
-
-In the next session we'll look at some interactions between the Webview and the app via
-link handling and Javascript/Swift communication.
