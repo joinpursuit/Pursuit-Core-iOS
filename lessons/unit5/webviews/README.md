@@ -64,6 +64,28 @@ the View Controller to the webview itself.
 
 Strange how Apple still has UIWebView in IB despite this warning.
 
+### Security
+
+#### Breaking News
+
+Apple is giving us some more slack.
+
+> From https://developer.apple.com/news/?id=12212016b
+> 
+> App Transport Security (ATS), introduced in iOS 9 and OS X v10.11, improves user security and privacy by 
+> requiring apps to use secure network connections over HTTPS. At WWDC 2016 we announced that apps submitted 
+> to the App Store will be required to support ATS at the end of the year. To give you additional time to 
+> prepare, this deadline has been extended and we will provide another update when a new deadline is confirmed.
+
+
+#### ```NSAllowsArbitraryLoadsInWebContent```
+
+NSAllowsArbitraryLoadsInWebContent is the key that will allow Web Views to continue 
+to access insecure (HTTP) content, even after Apple strictly enforces Transport Security
+for URLs accessed in the rest of your app, i.e. API calls.
+
+[Cocoa Keys](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html)
+
 ## Exercise
 
 ### Objective
