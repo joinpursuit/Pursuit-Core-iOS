@@ -151,11 +151,10 @@ the Simulator.**
 
 ## Homework
 
-I've cleaned up the MobyDick project a bit, leaving the web view and the segmented control. I've also 
-set up an injected script, ```inject.js```. This script will be added to the end of all pages loaded into
-the webview, giving you access to any functions you define in there.
+I've cleaned up the [MobyDick](https://github.com/C4Q/AC3.2-MobyDick) project a bit, leaving the web view and the segmented control. I've also  set up an injected script, ```inject.js```. This script will be added to the end
+ of all pages loaded into the webview, giving you access to any functions you define in there.
 
-1. Fork and clone.
+1. [Fork](https://github.com/C4Q/AC3.2-MobyDick) and clone. 
 1. Fix/change the Segmented control to alter the document background. In the Swift code
 	it is still coded to connect to the "div boxes" which have now been removed. Alter it to work
 	with the background.
