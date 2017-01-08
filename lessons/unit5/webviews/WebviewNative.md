@@ -131,16 +131,14 @@ interactively in desktop Safari. Definitely some magic going on there. Follow th
 
 https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html
 
-I _believe_ this instruction for "WebKit-based apps"
+You don't need to do this:
 
 ```
 defaults write com.bundle.identifier WebKitDeveloperExtras -bool true
 ```
 
-is for Mac apps, so you can try to test w/o it first. (I'm hazy on it because I *did* run this on the command line
-first, and while I subsequently ran it again with ```-bool false```, who knows?). If, after you follow the instructions
-it still doesn't work you can try it. If you do, be sure to use the bundle from your app. The bundle is in Info.plist
-and is featured in the General settings when you highlight your target. It usually looks something like 'nyc.c4q.WebviewAndJS'. 
+
+It is for Mac apps. 
 
 **NB: I found that after following these instructions, I had to restart Safari and "Reset Content and Settings" in 
 the Simulator.**
@@ -149,3 +147,41 @@ the Simulator.**
 ## Exercises:
 1. Add a Text Field and send its content to a div in the WebView.
 1. Write the "the cloud" to "my butt" (or similar) filter 
+
+
+## Homework
+
+I've cleaned up the MobyDick project a bit, leaving the web view and the segmented control. I've also 
+set up an injected script, ```inject.js```. This script will be added to the end of all pages loaded into
+the webview, giving you access to any functions you define in there.
+
+1. Fork and clone.
+1. Fix/change the Segmented control to alter the document background. In the Swift code
+	it is still coded to connect to the "div boxes" which have now been removed. Alter it to work
+	with the background.
+1. Add a back button. You'll need to conform to ```WKNavigationDelegate``` and set ```self``` as the
+	navigationDelegate.
+1. Add a reload button. This has the same requirements as the previous step but you have that covered now.
+1. Create a replacement feature. Add two ```UITextField```s and a button in the area below the webview. 
+	The first text field should hold the value of text you want to change and the second the text you want 
+	to change to. E.g. replace "water" with "fire". Once you get this working and you replace stuff you 
+	can start all over again by hitting your reload button from the previous step.
+1. Change the postProcess() Javascript function in ```inject.js``` to replace graphically inspiring
+	words to images.
+	You can google these and find small ones so they fit inline (enough) and you can
+	look up how to fix the size of an image in its tag. Additionally/alternatively you can replace
+	text with emoji.
+
+	Here's an image tag.
+
+	```
+	<img src="https://somewhere.com/path/to/image.png" /> 
+	```
+
+	This will happen automatically when the page loads, not by any button pressing. 
+	**Remember** to use the existing code in that function as a guide. And don't worry if 
+	it looks totally awful. The replacement is the goal.
+
+**ALSO**: Part of what I did was include [jQuery](http://jquery.com) a powerful library for modifying an HTML
+DOM using Javascript. You can do a lot with it if you feel like playing with it, but I've made a point of
+including enough Javascript inside the project as reference to complete it.
