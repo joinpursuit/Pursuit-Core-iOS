@@ -6,6 +6,7 @@ we've done.
 
 ## Schedule
 
+* [Link to calendar](https://calendar.google.com/calendar/embed?src=accesscode%40c4q.nyc&ctz=America/New_York)
 * [Lesson Schedule](/schedule.md)
 * [Curriculum Overview](/curriculum_overview.pdf)
 
