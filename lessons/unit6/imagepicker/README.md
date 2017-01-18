@@ -238,8 +238,6 @@ ask permission to access the camera or the photo library.
 	<string>to save photos and videos</string>
 ```
 
-### ```Timer``` a.k.a. ```NSTimer```
-
 ## Exercises
 
 1. Use constraints instead of frame to size and position the overlay view.
