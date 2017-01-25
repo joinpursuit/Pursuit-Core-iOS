@@ -54,19 +54,6 @@ The AVKit Player View Controller (```AVPlayerViewController```) class provides a
 If you want to play insecure endpoints, you'll need to set ```NSAllowsArbitraryLoadsForMedia```
 to true in Info.plist.
 
-
-formats
-m3u8
-mov
-allows arbitrary video loads
-
-get video onto simulator
-
-
-player is not the viewcontroller
-
-code and storyboard
-
 ## Demo
 
 We're going to alter our Image Picker project to enable the display of video.
@@ -160,3 +147,66 @@ Put off video display just as with images.
     1. Add the ability to filter by video only
     1. Add the ability to filter by date range
     1. Sort by video length
+
+
+# Part II - ```AVPlayer``` and ```AVPlayerLayer```
+
+We're looking at a lower-level interface for playing Video and Audio today. We'll be following
+the [Apple Documentation](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Articles/02_Playback.html#//apple_ref/doc/uid/TP40010188-CH3-SW1).
+
+## Why?
+
+```AVPlayerViewController``` is nice and all but it kind of takes over the whole
+screen. To build a more integrated experience we'd rather embed the video player in
+our own view. Ultimately, as with all low level interfaces there's more we can do
+and we'll just scratch the surface.
+
+We can also play audio with the same approach. We'll be looking at loading a local
+audio file and then a remote video URL.
+
+#### KVO
+
+Key Value Observation is used to build and update an interface. Having a less Swifty architecture
+we need to work with some Objective-C constructs.
+
+**Context**
+
+The context disabiguates our observer from other possible observers.
+
+* [SO Article](http://stackoverflow.com/questions/24175626/adding-observer-for-kvo-without-pointers-using-swift)
+* [Apple Docs](https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/AdoptingCocoaDesignPatterns.html#//apple_ref/doc/uid/TP40014216-CH7-ID12)
+
+
+```addObserver```
+
+```swift
+item.addObserver(self, forKeyPath: "status", options: .new, context: &myContext)
+
+```
+
+```removeObserver```
+
+We need to make sure to remove observers on objects before those objects are deallocated.
+
+```swift
+item.removeObserver(self, forKeyPath: "status", context: &myContext)
+
+```
+
+#### ```removeTimeObserver```
+
+This is a special KVO call that deals with some efficiency issues.
+
+> Each invocation of this method should be paired with a corresponding call to removeTimeObserver(_:). Releasing the observer object without invoking removeTimeObserver(_:) will result in **undefined behavior.**
+
+
+## Exercises
+
+1. Make the pause button, rate and slider sync.
+1. It seems that for video changing the rate or the position might restart if 
+    paused. We probably don't want that.
+1. Display rate and make the slider snap to logical positions (0.5, 1).
+1. Add a volume slider.
+1. Show duration and current time.
+1. Make interface for switching between video and sound.
+1. Use AVQueuePlayer to create a playlist. What should the interface be? What are the barriers to testing it?
