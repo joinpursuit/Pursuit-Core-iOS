@@ -223,7 +223,7 @@ override func observeValue(forKeyPath keyPath: String?, of object: Any?, change:
         default:
             break
         }
-    }   
+    }
 }
 ```
 
@@ -238,3 +238,13 @@ override func observeValue(forKeyPath keyPath: String?, of object: Any?, change:
 1. Create a visualization of ```loadedTimeRanges``` and ```seekableTimeRanges``` using KVO.
 1. Make interface for switching among items.
 1. Use AVQueuePlayer to create a playlist. What should the interface be? What are the barriers to testing it?
+
+## Homework
+
+You can do this work on the master branch of your fork of https://github.com/C4Q/AC3.2-AVPlayerKVO.
+I've selected these required exercises. Feel free to do any of the others.
+
+1. Add total duration and current time labels adjacent to your progress slider. 
+1. Create a visualization of ```loadedTimeRanges``` and ```seekableTimeRanges``` using KVO.
+1. Support rotation by putting controls to the right of the frame on landscape and under it
+    for portrait.
