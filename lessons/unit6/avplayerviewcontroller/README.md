@@ -164,7 +164,7 @@ and we'll just scratch the surface.
 We can also play audio with the same approach. We'll be looking at loading a local
 audio file and then a remote video URL.
 
-#### KVO
+### KVO
 
 Key Value Observation is used to build and update an interface. Having a less Swifty architecture
 we need to work with some Objective-C constructs.
@@ -177,20 +177,20 @@ The context disabiguates our observer from other possible observers.
 * [Apple Docs](https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/AdoptingCocoaDesignPatterns.html#//apple_ref/doc/uid/TP40014216-CH7-ID12)
 
 
-```addObserver```
+#### ```addObserver```
+
 
 ```swift
 item.addObserver(self, forKeyPath: "status", options: .new, context: &myContext)
 
 ```
 
-```removeObserver```
+#### ```removeObserver```
 
 We need to make sure to remove observers on objects before those objects are deallocated.
 
 ```swift
 item.removeObserver(self, forKeyPath: "status", context: &myContext)
-
 ```
 
 #### ```removeTimeObserver```
@@ -199,14 +199,42 @@ This is a special KVO call that deals with some efficiency issues.
 
 > Each invocation of this method should be paired with a corresponding call to removeTimeObserver(_:). Releasing the observer object without invoking removeTimeObserver(_:) will result in **undefined behavior.**
 
+#### ```#keyPath()```
+
+```#keyPath()``` is a feature in Swift that allows compile time checks on keys. Similar in
+syntax and purpose as ```#selector()``` which makes Objective-C like selectors/messages/methods.
+
+
+```swift
+ playerItem.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.status), options: .new, context: &kvoContext)
+.
+.
+.
+override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    if context == &kvoContext {
+        guard let keyPath = keyPath else { return }
+        switch keyPath {
+        case #keyPath(AVPlayerItem.status):
+            if let item = object as? AVPlayerItem {
+                if item.status == .readyToPlay {
+                    playPauseButton.isEnabled = true
+                }
+            }
+        default:
+            break
+        }
+    }   
+}
+```
 
 ## Exercises
 
 1. Make the pause button, rate and slider sync.
-1. It seems that for video changing the rate or the position might restart if 
-    paused. We probably don't want that.
 1. Display rate and make the slider snap to logical positions (0.5, 1).
+1. Support rotation by putting controls to the right of the frame on landscape and under it
+    for portrait.
 1. Add a volume slider.
 1. Show duration and current time.
-1. Make interface for switching between video and sound.
+1. Create a visualization of ```loadedTimeRanges``` and ```seekableTimeRanges``` using KVO.
+1. Make interface for switching among items.
 1. Use AVQueuePlayer to create a playlist. What should the interface be? What are the barriers to testing it?
