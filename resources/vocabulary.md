@@ -6,7 +6,7 @@ Instructors, TAs, staff, volunteers, and students: if you come across a term you
 
 Please keep the list in alphabetical order.
 
-# Jargon
+# Vocabulary
 
 - **argument**: An input passed to a function in a call to it, related to parameter. A function can take zero, one or many arguments. Most languages also provide a way to pass a variable number of arguments. 
 
