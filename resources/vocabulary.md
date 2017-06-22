@@ -10,6 +10,14 @@ Please keep the list in alphabetical order.
 
 - **argument**: An input passed to a function in a call to it, related to parameter. A function can take zero, one or many arguments. Most languages also provide a way to pass a variable number of arguments. 
 
+- **cache** - A hardware or software component that stores data so future requests for that data can be served faster. The data stored in a cache might be the result of an earlier computation, or the duplicate of data stored elsewhere
+
+- **client** - The client side of a client-server architecture. Typically, a client is an application that runs on a personal computer or workstation and relies on a server to perform some operations. The communication between client and server takes place using HTTP.
+
+>In the real world, businesses have clients. In the computer world, servers have clients. The "client-server" architecture is common in both local and wide area networks. For example, if an office has a server that stores the company's database on it, the other computers in the office that can access the datbase are "clients" of the server.
+>
+>On a larger scale, when you access your e-mail from a mail server on the Internet, your computer acts as the client that connects to the mail server. The term "client software" is used to refer to the software that acts as the interface between the client computer and the server. For example, if you use Microsoft Outlook to check your e-mail, Outlook is your "e-mail client software" that allows you to send and receive messages from the server.
+
 - **command line interface**: A text based interface to the operating system. Programs or commands are invoked by typing them. There is a long and rich history of using these simple programs and even using them in combination. A rough synonym for console. 
 
 - **canonical**: adj. conforming to a general rule or acceptable procedure. This term has many uses within
@@ -30,15 +38,28 @@ is used both in direct coding applications as well as metaphorically about any p
 
 - **iterator**: n. A variable used to access and advance an index during loop operation. 
 
+- **header** - HTTP headers are the code that transfers data between a Web server and a browser. That data is in the form of a text record that a user's browser sends to a Web server containing the details of what the browser wants and will accept back from the server. The request header also contains the type, version and capabilities of the browser that is making the request so that server returns compatible data. Upon receipt of the request header, the server will return an HTTP response header to the client that is attached to the file(s) being sent.
+
 - **holy war**: An unsolvable debate about some aspect of computing that has strong adherents in more than one camp. It's good to recognize when an issue is one of style or choice and when it's being presented otherwise. For example, iOS vs. Android (mobile OSs/phones), Mac vs. PC (computers), spaces vs. tabs (code formatting), vi vs. Emacs (text editors).
 
 - **[HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) = Hypertext Transport Protocol**: The TCP-based network protocol used to transmit web pages and other resources over the Internet.
+
+- **[HTTP Status Codes](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)** (i.e. 200, 404) - In HTTP/1.0 and since, the first line of the HTTP response is called the status line and includes a numeric status code (such as "404") and a textual reason phrase (such as "Not Found")
+
+> HTTP status code is primarily divided into five groups for better explanation of request and responses between client and server as named:
+>  * Informational 1XX
+>  * Successful 2XX
+>  * Redirection 3XX
+>  * Client Error 4XX
+>  * Server Error 5XX
 
 - **low level**: Using technology that's more basic and "closer to the machine." It's often used to compare programming languages. C is a low level language as compared to JavaScript. This implies it's more challenging to use and more at risk to crash.
 
 - **native**: We distinguish a native app from a web-based solution. Native apps have the potential to perform better with more complicated and sophisticated features and interfaces. The contrast is a cross-platform or web-based app. 
 
 - **parameter**: An input to a function, specifically in its definition, related to argument. A function can define zero, one or many parameters. Most languages also provide a way to pass a variable number of arguments. 
+
+- **server** - A computer system that processes requests via HTTP. The term can refer to the entire system, or specifically to the software that accepts and supervises the HTTP requests.
 
 - **set**: v. To assign a value to a variable.
 	adv. The state in which a variable has a value. For example, the variable numberOfHamburgers is currently set (it is equal to 10). This is in contrast to unset/nil/null.
