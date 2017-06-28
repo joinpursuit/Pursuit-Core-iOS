@@ -1,29 +1,25 @@
-# Standards
-Solve problems with Enumerations, Structures and Classes
+### Structs & Classes
+---
 
-# Objectives
-Students will be able to:
-* Create structs and classes
-* Understand the differences between structs and classes
-* Understand when to use a struct vs a class
-* Initialize structures
-* Understand that structures are value types and what this implies
+### Objective
+To be able to create, initialize, and use structs/classes while understanding (1) the differences between a struct and class, (2) the appropriate use cases for each type, and (3) the differences between reference types and value types.
 
-# Resources
+### Readings
 Swift Programming: The Big Nerd Ranch Guide, Chapter 15, Structs and Classes
 
 Apple's [Swift Language Reference, Classes and Structures](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-ID82)
 
 And [Swift Language Reference, Methods](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Methods.html#//apple_ref/doc/uid/TP40014097-CH15-ID234)
 
+---
 
-## Warm up
+### 1. Warm up
 
 I'm choosing to focus on specific topics about ```struct```s and ```class```es to reflect 
 what I believe is essential. We'll return to the topics we skip or touch lightly as they
 come up in our applications.
 
-## Lecture
+### 2. Lecture
 
 From the Apple documentation:
 
@@ -32,7 +28,7 @@ From the Apple documentation:
 > that can apply to instances of either a class or a structure type. Because of this, the more general 
 > term instance is used.
 
-## Structures and Classes
+### 3. Structures and Classes
 
 From the Apple documentation:
 
@@ -56,7 +52,7 @@ From the Apple documentation:
 > * Reference counting allows more than one reference to a class instance.
 
 
-### Properties
+### 4. Properties
 
 Properties are constants and variables encapsulated inside classes and structures.
 
@@ -81,7 +77,7 @@ let someVideoMode = VideoMode()
 print("The width of someResolution is \(someResolution.width)")
 ```
 
-#### Classes are Reference types
+### 5. Classes are Reference types
 
 > From Apple:
 
@@ -99,10 +95,11 @@ alsoTenEighty.frameRate = 30.0
 print("The frameRate property of tenEighty is now \(tenEighty.frameRate)")
 
 ```
+---
 
-## Project
+### 6. Project
 
-### Movie as an Object
+#### Movie as an Object
 
 Let's create a movie object based on the data structure we used in Homework #2. 
 
@@ -110,10 +107,10 @@ Let's create a movie object based on the data structure we used in Homework #2.
 2. Create a Movie class using variables as existing types with default values.
 3. Populate an array of Movie objects converted from the familiar array of dictionaries.
 
-### Inheritance
+#### Inheritance
 
 In my opinion there's a little too much fascination with inheritance. It is necessary to learn
-but you spends more time simply modeling one thing than you do developing a hierarchy.
+but you spend more time simply modeling one thing than you do developing a hierarchy.
 To get started, **encapsulation** is the more important concept to understand than inheritance is.
 
 1. Create a Person class.
@@ -122,19 +119,21 @@ To get started, **encapsulation** is the more important concept to understand th
 3. Create a President class with Person as its parent. Add two fields, ```yearEnteredOffice```
 and ```yearLeftOffice```.
 
-### Instance method
+#### Instance method
 
 Let's create a President class to illustrate an instance method ```inOffice(Int) -> Bool```.
 
-### Type Methods
+#### Type Methods
 
 ```static``` in ```struct```s and ```class``` in ```class```.
 
-### Review and Wrapup
+#### Review and Wrapup
 * Compare and contrast the use of ```struct``` and ```class```.
 * What are type methods?
 
-## Exercises
+---
+
+### Exercises
 
 1. Work Actor class into the Movie class by making ```cast``` type [Actor] and populating it.
 2. Make the ```genre``` field in Movie of type ```Genre```, an enumeration.
