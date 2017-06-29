@@ -58,7 +58,7 @@ a. var favoriteVacationSpot: String
 b. var timesOnAPlane: Int
 c. var amHungry: Bool
 d. var middleInitial: Character
-e. var 25dividedBy10: Double
+e. var twentyFiveDividedByTen: Double
 ```
 
 #### Exercise 7.
