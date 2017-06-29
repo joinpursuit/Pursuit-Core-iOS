@@ -137,7 +137,6 @@ let stringFromChar = String(charNine)
 print(type(of: stringFromChar))
 ```
 
-
 ### Unicode exercises
 
 ---
@@ -148,14 +147,57 @@ the second being one that uses combinable unicode scalars. Show that they are eq
 
 Refer to this [Unicode Table](http://unicode-table.com/en/).
 
+>Solution
+```swift
+let preComposed1 = "See you ma\u{F1}ana"
+let combinableScalars1 = "See you ma\u{6E}\u{303}ana"
+let isEqual1 = preComposed1 == combinableScalars1
+print(isEqual1)
+
+let preComposed2 = "Apple pie \u{E1} la mode is so delicious!"
+let combinableScalars2 = "Apple pie \u{61}\u{301} la mode is so delicious!"
+let isEqual2 = preComposed2 == combinableScalars2
+print(isEqual2)
+
+let preComposed3 = "Beyonc\u{E9} is my favorite artist"
+let combinableScalars3 = "Beyonc\u{65}\u{301} is my favorite artist"
+let isEqual3 = preComposed3 == combinableScalars3
+print(isEqual3)
+
+let preComposed4 = "Have you ever tried cr\u{E8}me br\u{FB}l\u{E9}e?"
+let combinableScalars4 = "Have you ever tried cr\u{65}\u{300}me br\u{75}\u{302}l\u{65}\u{301}e?"
+let isEqual4 = preComposed4 == combinableScalars4
+print(isEqual4)
+
+let preComposed5 = "Being na\u{EF}ve has its pros and cons."
+let combinableScalars5 = "Being na\u{69}\u{308}ve has its pros and cons."
+let isEqual5 = preComposed5 == combinableScalars5
+print(isEqual5)
+```
+
 #### U2.
 Using only Unicode, print out "HELLO WORLD!"
+
+>Solution
+```swift
+print("\u{48}\u{45}\u{4C}\u{4C}\u{4F} \u{57}\u{4f}\u{52}\u{4C}\u{44}\u{21}")
+```
 
 #### U3.
 Using only Unicode, print out your name.
 
+>Solution
+```swift
+print("\u{45}\u{72}\u{69}\u{63}\u{61} \u{53}\u{74}\u{65}\u{76}\u{65}\u{6E}\u{73}")
+```
+
 #### U4
 Using only Unicode, print "Hello World" in another language.
+
+>Solution
+```swift
+print("\u{53}\u{61}\u{6C}\u{61}\u{6D}\u{75}\u{2C} \u{44}\u{75}\u{6E}\u{69}\u{61}") //Salamu, Dunia (Swahili)
+```
 
 #### U5.
 Print the below flower box using the following information.
@@ -175,8 +217,18 @@ Print the below flower box using the following information.
 | ⚘ | ⚘ | ⚘ | ⚘ | ⚘ |
 | ⚘ | ⚘ | ⚘ | ⚘ | ⚘ |
 - - - - - - - - - - -
+```
+
+>Solution
+```swift
 
 ```
+
 #### U6.
 Write a program that builds a [chess board using Unicode](https://en.wikipedia.org/wiki/Chess_symbols_in_Unicode).
+
+>Solution
+```swift
+
+```
 
