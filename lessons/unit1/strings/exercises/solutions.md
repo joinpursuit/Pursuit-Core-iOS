@@ -1,5 +1,7 @@
 ### Strings Exercises
 
+---
+
 #### S1.
 Without using string interpolation, print out a string that combines myGreeting and myName.
 
@@ -135,7 +137,10 @@ let stringFromChar = String(charNine)
 print(type(of: stringFromChar))
 ```
 
+
 ### Unicode exercises
+
+---
 
 #### U1.
 Build five pairs of canonically equivalent strings, the first of each being a pre-composed character and
@@ -144,13 +149,13 @@ the second being one that uses combinable unicode scalars. Show that they are eq
 Refer to this [Unicode Table](http://unicode-table.com/en/).
 
 #### U2.
-* Using only Unicode, print out "HELLO WORLD!"
+Using only Unicode, print out "HELLO WORLD!"
 
 #### U3.
-* Using only Unicode, print out your name.
+Using only Unicode, print out your name.
 
 #### U4
-* Using only Unicode, print "Hello World" in another language.
+Using only Unicode, print "Hello World" in another language.
 
 #### U5.
 Print the below flower box using the following information.
@@ -173,5 +178,5 @@ Print the below flower box using the following information.
 
 ```
 #### U6.
-Write a program that builds a chess board using Unicode.
-* [Chess in Unicode](https://en.wikipedia.org/wiki/Chess_symbols_in_Unicode)
+Write a program that builds a [chess board using Unicode](https://en.wikipedia.org/wiki/Chess_symbols_in_Unicode).
+
