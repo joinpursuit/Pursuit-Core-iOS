@@ -3,7 +3,7 @@
 
 ### Exercise 1.
 What do each of the following expressions evaluate to?
-```
+```swift
 a. 3 < 12.3
 b. 9 == 2
 c. "Hello!" == "Hello!"
@@ -12,7 +12,7 @@ e. 9 > 7 && 7 < 10
 ```
 
 >Solution
-```
+```swift
 a. true
 b. false
 c. true
@@ -22,7 +22,7 @@ e. true
 
 ### Exercise 2.
 What do each of the following expressions evaluate to?
-```
+```swift
 a. false || true
 b. false && true
 c. !false
@@ -31,7 +31,7 @@ e. !(true && true)
 ```
 
 >Solution
-```
+```swift
 a. true
 b. false
 c. true
@@ -41,17 +41,16 @@ e. false
 
 ### Exercise 3.
 What do each of the following expressions evaluate to?
-```
+```swift
 a. 3 == 2 || 9 == 9
 b. !(3 > 3)
 c. !(true || false)
 d. (4 < 3 || 4 > 3) && ("Message: " == "Message: ")
 e. !(3 != 3)
-
 ```
 
 >Solution
-```
+```swift
 a. true
 b. true
 c. false
@@ -61,7 +60,7 @@ e. true
 
 ### Exercise 4.
 What do each of the following expressions evaluate to?
-```
+```swift
 a. !(4 + 3 < 2 * 4)
 b. !(1 + 1 != 2) && !(3 >= 3)
 c. (3 < 2 || (0 < 1 && 3 >= 3)) && true
@@ -70,7 +69,7 @@ e. true && (true && (true && (true || false)))
 ```
 
 >Solution
-```
+```swift
 a. false
 b. false
 c. true
@@ -80,7 +79,7 @@ e. true
 
 ### Exercise 5.
 Identify which variables are correct/incorrect. Change the variable value and/or declaration if it is incorrect.
-```
+```swift
 a. let nameOfPrincipal: Character = "Mrs. Watkins"
 b. var temperatureOutside: Int = 90.7
 c. var isSummer: String = false
@@ -89,7 +88,7 @@ e. var peopleAtParty: Double = "95"
 ```
 
 >Solution
-```
+```swift
 a. incorrect -> let nameOfPrincipal: String = "Mrs. Watkins"
 b. incorrect -> var temperatureOutside: Double = 90.7
 c. incorrect -> var isSummer: Bool = false 
@@ -99,26 +98,26 @@ e. incorrect -> var peopleAtParty: Int = 95
 
 ### Exercise 6.
 The following variables are declared, fill in their value in a separate line.
-```
+```swift
 a. var favoriteVacationSpot: String
 b. var timesOnAPlane: Int
 c. var amHungry: Bool
 d. var middleInitial: Character
-e. var 25dividedBy10: Double
+e. var twentyFiveDividedByTen: Double
 ```
 
 >Solution
-```
+```swift
 a. favoriteVacationSpot = "Hawaii"
 b. timesOnAPlane = 0
 c. amHungry = true
 d. middleInitial = "Y"
-e. 25dividedBy10 = 2.5
+e. twentyFiveDividedByTen = 2.5
 ```
 
 ### Exercise 7.
 Mad-Libs. Add a value to the declared variables below. Insert the variables (already in correct order) inside the string  __madLib__ and print.
-```
+```swift
 var geographicLocation: String
 var adjective1: String
 var pluralNoun1: String
@@ -139,7 +138,7 @@ better plan on wearing your \()".
 ```
 
 >Solution
-```
+```swift
 var geographicLocation: String = "New York"
 var adjective1: String = "cold"
 var pluralNoun1: String = "gasses"
