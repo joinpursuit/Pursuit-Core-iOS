@@ -11,7 +11,7 @@ d. 19.0 >= 19.0
 e. 9 > 7 && 7 < 10
 ```
 
-**Solution**
+>Solution
 ```
 a. true
 b. false
@@ -30,7 +30,7 @@ d. !!!true
 e. !(true && true)
 ```
 
-**Solution**
+>Solution
 ```
 a. true
 b. false
@@ -50,7 +50,7 @@ e. !(3 != 3)
 
 ```
 
-**Solution**
+>Solution
 ```
 a. true
 b. true
@@ -69,7 +69,7 @@ d. !!(!!true && !!false)
 e. true && (true && (true && (true || false)))
 ```
 
-**Solution**
+>Solution
 ```
 a. false
 b. false
@@ -88,7 +88,7 @@ d. let whiteHouseAddress: Int + String = 1600 + "Pennsylvania Ave"
 e. var peopleAtParty: Double = "95"
 ```
 
-**Solution**
+>Solution
 ```
 a. incorrect -> let nameOfPrincipal: String = "Mrs. Watkins"
 b. incorrect -> var temperatureOutside: Double = 90.7
@@ -107,7 +107,7 @@ d. var middleInitial: Character
 e. var 25dividedBy10: Double
 ```
 
-**Solution**
+>Solution
 ```
 a. favoriteVacationSpot = "Hawaii"
 b. timesOnAPlane = 0
@@ -138,7 +138,7 @@ be around \() degrees. So, if you're going out, you had
 better plan on wearing your \()".
 ```
 
-**Solution**
+>Solution
 ```
 var geographicLocation: String = "New York"
 var adjective1: String = "cold"
