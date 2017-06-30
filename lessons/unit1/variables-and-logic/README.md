@@ -229,7 +229,8 @@ let comboIt = !(9 > 2)
 let isntEqual = 3 != 3
 ```
 
-####Integer Operators
+#### Integer Operators
+
 We can also use arithmatic on integers.  We will go into more detail on integer operations later this week.
 
 |Operator Symbol| Explanation |True Example|
