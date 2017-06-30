@@ -17,16 +17,16 @@ Apple's [Swift Language Reference, The Basics](https://developer.apple.com/libra
 * [Midday Check-in and solutions](https://goo.gl/forms/exuAHSxaHwTFWApD3)
 
 #### Vocabulary
-1. **Variable** - *used to store information by pairing a unique name/identifier with a value that can later be accessed and mutated*
-2. **Constant** - *similar to a variable in that it stores values via a unique name, but the value that a constant stores is immutable, and cannot be changed once it has been declared*
-3. **Declaration** - *determines the name and data type of a variable/constant, and specifies the properties of other elements* 
-4. **Initialization** -  *the assignment of an initial value for a variable, constant or object*
-5. **Type** - *a classification of data which tells the compiler how the programmer intends to use the data. The type of a variable defines the kind of operations that can be performed, the meaning of the data, and how the values of that type can be stored in memory*
-6. **Type Annotation** - *explicitly specifies the type of a variable or expression* 
-7. **Type Inference** - *allows you to omit the Type Annotation in a function declaration, and allows the compiler to determine the type based on the value contained*
-8. **Type Safe** - *a type safe language encourages you to be clear about the types of values your code can work with* 
-9. **Mutable** - *a variable, or object, whose state can be modified at any time after its declaration*
-10. **Immutable** - *a variable, or object, whose state can not be changed once it has been declared*
+1. **Variable** - used to store information by pairing a unique name/identifier with a value that can later be accessed and mutated
+2. **Constant** - similar to a variable in that it stores values via a unique name, but the value that a constant stores is immutable, and cannot be changed once it has been declared
+3. **Declaration** - determines the name and data type of a variable/constant, and specifies the properties of other elements
+4. **Initialization** -  the assignment of an initial value for a variable, constant or object
+5. **Type** - a classification of data which tells the compiler how the programmer intends to use the data. The type of a variable defines the kind of operations that can be performed, the meaning of the data, and how the values of that type can be stored in memory
+6. **Type Annotation** - explicitly specifies the type of a variable or expression 
+7. **Type Inference** - allows you to omit the Type Annotation in a function declaration, and allows the compiler to determine the type based on the value contained
+8. **Type Safe** - a type safe language encourages you to be clear about the types of values your code can work with
+9. **Mutable** - a variable, or object, whose state can be modified at any time after its declarationµ
+10. **Immutable** - a variable, or object, whose state can not be changed once it has been declared
 
 ---
 
