@@ -233,7 +233,7 @@ let toPosition = 4
 let end = start.advancedBy(toPosition)
 print(nextMovie[end])
 ```
-#### Exercise 11A - Accessing & Modifying a String
+#### Exercise - Accessing & Modifying a String
 
 Print out a string using a ```for``` loop, ```String.startIndex``` and ```String.endIndex```.
 Print out a string using a ```while``` loop, ```String.startIndex``` and ```String.advancedBy```.
@@ -248,7 +248,7 @@ let firstWord = nextMovie[range]
 print(firstWord)
 ```
 
-#### Exercise 11B - Accessing & Modifying a String
+#### Exercise - Accessing & Modifying a String
 
 Pull out ranges of strings.
 
