@@ -9,9 +9,24 @@ Swift Programming: The Big Nerd Ranch Guide, Chapter 2
 
 Apple's [Swift Language Reference, The Basics](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309
 
-### Assessment Materials
+#### Further Readings
+[Type Safety & Type Inference](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwigt72FnebUAhXPQD4KHbebBHUQygQILDAA&url=https%3A%2F%2Fdeveloper.apple.com%2Flibrary%2Fcontent%2Fdocumentation%2FSwift%2FConceptual%2FSwift_Programming_Language%2FTheBasics.html%23%2F%2Fapple_ref%2Fdoc%2Fuid%2FTP40014097-CH5-ID322&usg=AFQjCNHOuBMHtgkI642rFokkBTRMnNEFDg)
+
+#### Assessment Materials
 * [Prework HW](https://docs.google.com/forms/d/e/1FAIpQLSf6Ocyz-H8mu4KpCzhCdIDaoKY9ZzypOh3a7tF9YmBUySnBuQ/viewform)
 * [Midday Check-in and solutions](https://goo.gl/forms/exuAHSxaHwTFWApD3)
+
+#### Vocabulary
+1. **Variable** - used to store information by pairing a unique name/identifier with a value that can later be accessed and mutated
+2. **Constant** - similar to a variable in that it stores values via a unique name, but the value that a constant stores is immutable, and cannot be changed once it has been declared
+3. **Declaration** - determines the name and data type of a variable/constant, and specifies the properties of other elements
+4. **Initialization** -  the assignment of an initial value for a variable, constant or object
+5. **Type** - a classification of data which tells the compiler how the programmer intends to use the data. The type of a variable defines the kind of operations that can be performed, the meaning of the data, and how the values of that type can be stored in memory
+6. **Type Annotation** - explicitly specifies the type of a variable or expression 
+7. **Type Inference** - allows you to omit the Type Annotation in a function declaration, and allows the compiler to determine the type based on the value contained
+8. **Type Safe** - a type safe language encourages you to be clear about the types of values your code can work with
+9. **Mutable** - a variable, or object, whose state can be modified at any time after its declarationµ
+10. **Immutable** - a variable, or object, whose state can not be changed once it has been declared
 
 ---
 
@@ -20,8 +35,8 @@ You might have visualized a variable as a box that can hold something. The box i
 
 This is true in some form or another in all (reasonable) programming languages. Swift has a couple distinguishing features about its approach to variables that are important to know. First, variables are strongly typed. Second there are constants that work just like variables but can only be set once.
 
-## Variable types
-|Variable type | Explanation | Examples |
+#### Variable Types
+| Type | Explanation | Examples |
 |---|---|---|
 |Int|An integer.  Can be positive, negative or zero.| 3, 0 -9|
 |Double|A number with a decimal component| 3.2934, -39.99, 3.00|
@@ -47,7 +62,7 @@ var singleFare = 2.75 // Double (double is an unfortunate legacy)
 
 #### Exercise - Declaring Variables
 
-* Declare some variables
+> Declare some variables
 
 ```swift
 //Int
@@ -56,7 +71,7 @@ var statesNum = 50
 var currentYear = 2016
 //Double
 var length = 60.4
-var percentCompleted = .87
+var percentCompleted = 0.87
 var gigawatts = 1.21
 //Character
 var grade = "A"
@@ -83,7 +98,7 @@ var numberOfLegos: Int
 
 #### Exercise - Type Annotations
 
-* Declare some variables using type annotations and set their value on the next line.
+> Declare some variables using type annotations and set their value on the next line.
 
 ```swift
 var salutation: String
@@ -100,7 +115,6 @@ hoursWorked = 15.5
 
 var qMark: Character
 qMark = "?"
-
 ```
 
 ### 4. Constants
@@ -125,7 +139,9 @@ These are mathematical and scientific constants (CS borrows the word) and they n
 But in a program there are cases where you want something, once set, to not be reset. 
 
 #### Exercise - Constants
-* Declare some constants
+
+> Declare some constants
+
 ```swift
 //Int
 let degreesInCircle = 360
@@ -202,7 +218,8 @@ The truth tables below give more detail.  (P means the first expression and Q me
 
 
 #### Exercise - Logic
-For each Bool below: evaluate if it is true or false:
+
+> For each Bool below, evaluate if it is true or false:
 
 ```swift
 let isLessthan = 4 < 10
@@ -212,7 +229,8 @@ let comboIt = !(9 > 2)
 let isntEqual = 3 != 3
 ```
 
-####Integer Operators
+#### Integer Operators
+
 We can also use arithmatic on integers.  We will go into more detail on integer operations later this week.
 
 |Operator Symbol| Explanation |True Example|
@@ -223,8 +241,9 @@ We can also use arithmatic on integers.  We will go into more detail on integer 
 | / | Division | 8 / 2 == 4 |
 | % | Modolo (Remainder Operation) | 11 % 3 == 2 |
 
+---
 
-# Review and Wrapup
+### Review and Wrapup
 
 * Define Type.
 * Compare and contrast variables and constants.
