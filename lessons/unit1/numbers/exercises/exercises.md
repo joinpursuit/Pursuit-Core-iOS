@@ -4,7 +4,7 @@
 
 #### Question 1.
 What is true about __Integers__ in computers?
-```swift
+```
 a. Integers must have a positive or negative sign always.
 b. The maximum value for Integers is +∞.
 c. Integer types in computers take up a fixed amount of memory.
@@ -50,7 +50,7 @@ let div2 = 11.0 / 3.0
 
 #### Question 6.
 Given ```var number = 7.5```. What can be inferred about __number__?
-```swift
+```
 a. number is a float variable
 b. number is a double variable
 c. number is a 32-bit floating point number
@@ -68,7 +68,7 @@ print(twelve + thirteen)
 
 #### Question 8.
 Write the following numbers in binary representation:
-```swift
+```
 a. 25
 b. 100
 c. 65
@@ -145,7 +145,7 @@ default:
 
 #### Question 8.
 Which of the following numbers can't be assigned to an Int8, and why?:
-```swift
+```
 a. 25
 b. 100
 c. 65
