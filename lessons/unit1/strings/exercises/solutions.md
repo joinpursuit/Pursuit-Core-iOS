@@ -259,6 +259,27 @@ Write a program that builds a [chess board using Unicode](https://en.wikipedia.o
 
 >Solution
 ```swift
+let whiteKing = "\u{2654}"
+let whiteQueen = "\u{2655}"
+let whiteRook = "\u{2656}"
+let whiteBishop = "\u{2657}"
+let whiteKnight = "\u{2658}"
+let whitePawn = "\u{2659}"
 
+let blackKing = "\u{265A}"
+let blackQueen = "\u{265B}"
+let blackRook = "\u{265C}"
+let blackBishop = "\u{265D}"
+let blackKnight = "\u{265E}"
+let blackPawn = "\u{265F}"
+
+print(whiteRook, whiteKnight, whiteBishop, whiteQueen, whiteKing, whiteBishop, whiteKnight, whiteRook)
+print(whitePawn, whitePawn, whitePawn, whitePawn, whitePawn, whitePawn, whitePawn, whitePawn)
+print()
+print()
+print()
+print()
+print(blackPawn, blackPawn, blackPawn, blackPawn, blackPawn, blackPawn, blackPawn, blackPawn)
+print(blackRook, blackKnight, blackBishop, blackQueen, blackKing, blackBishop, blackKnight, blackRook)
 ```
 
