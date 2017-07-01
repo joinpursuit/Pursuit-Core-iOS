@@ -1,4 +1,4 @@
-### Numbers Exercises
+### Numbers Exercise Solutions
 
 ---
 
