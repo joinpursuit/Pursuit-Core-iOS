@@ -1,7 +1,7 @@
 ### Logic Exercises
 ---
 
-### Exercise 1.
+#### Exercise 1.
 What do each of the following expressions evaluate to?
 ```swift
 a. 3 < 12.3
@@ -25,7 +25,7 @@ e. true
 </details>
 
 
-### Exercise 2.
+#### Exercise 2.
 What do each of the following expressions evaluate to?
 ```swift
 a. false || true
@@ -49,7 +49,7 @@ e. false
 </details>
 
 
-### Exercise 3.
+#### Exercise 3.
 What do each of the following expressions evaluate to?
 ```swift
 a. 3 == 2 || 9 == 9
@@ -74,7 +74,7 @@ e. true
 
 
 
-### Exercise 4.
+#### Exercise 4.
 What do each of the following expressions evaluate to?
 ```swift
 a. !(4 + 3 < 2 * 4)
@@ -99,7 +99,7 @@ e. true
 </details>
 
 
-### Exercise 5.
+#### Exercise 5.
 Identify which variables are correct/incorrect. Change the variable value and/or declaration if it is incorrect.
 ```swift
 a. let nameOfPrincipal: Character = "Mrs. Watkins"
@@ -123,7 +123,7 @@ e. incorrect -> var peopleAtParty: Int = 95
 </details>
 
 
-### Exercise 6.
+#### Exercise 6.
 The following variables are declared, fill in their value in a separate line.
 ```swift
 a. var favoriteVacationSpot: String
@@ -147,7 +147,7 @@ e. twentyFiveDividedByTen = 2.5
 
 </details>
 
-### Exercise 7.
+#### Exercise 7.
 Mad-Libs. Add a value to the declared variables below. Insert the variables (already in correct order) inside the string  __madLib__ and print.
 ```swift
 var geographicLocation: String
