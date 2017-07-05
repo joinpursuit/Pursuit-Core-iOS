@@ -33,6 +33,7 @@ Simplify the following expressions [(PEMDAS Refresher)](https://www.mathsisfun.c
 
 <details>
 <summary><b>Click Here to Toggle Solution</b></summary>
+
 ```swift
 4 + 3 * 5 // 19
 
@@ -69,6 +70,7 @@ Take the code block above and test different mins and maxes. Use `Int`, `Int8`, 
 
 <details>
 <summary><b>Click Here to Toggle Solution</b></summary>
+
 ```swift
 let minInt8Value = Int8.min  // -128
 let maxInt8Value = Int8.max  // 127
@@ -105,6 +107,7 @@ Take the code block above and test different mins and maxes. Use `UInt`, `UInt8`
 
 <details>
 <summary><b>Click Here to Toggle Solution</b></summary>
+
 ```swift
 let minUInt8Value = UInt8.min  // 0
 let maxUInt8Value = UInt8.max  // 255
@@ -127,6 +130,7 @@ Compare them to their corresponding signed type (e.g. `UInt8` to `Int8`).
 
 <details>
 <summary><b>Click Here to Toggle Solution</b></summary>
+
 ```
 INSERT ANSER HERE -> Not sure how to answer
 ```
@@ -180,6 +184,7 @@ let halfOfFive = 5 % 2 //  1
 
 <details>
 <summary><b>Click Here to Toggle Solution</b></summary>
+
 ```swift
 // Example 1
 
