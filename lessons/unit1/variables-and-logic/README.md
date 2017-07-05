@@ -66,6 +66,7 @@ Declare some variables
 
 <details>
 	<summary><b><i>Click Here to Toggle Solution</i></b></summary>
+	
 ```swift
 //Int
 var customersServed = 34
