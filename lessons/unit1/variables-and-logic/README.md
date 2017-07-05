@@ -110,6 +110,7 @@ Declare some variables using type annotations and set their value on the next li
 
 <details>
 	<summary><b><i>Click Here to Toggle Solution</i></b></summary>
+	
 ```swift
 var salutation: String
 salutation = "Dr. and Mrs. Foobar"
@@ -155,6 +156,7 @@ Declare some constants
 
 <details>
 	<summary><b><i>Click Here to Toggle Solution</i></b></summary>
+	
 ```swift
 //Int
 let degreesInCircle = 360
@@ -187,6 +189,7 @@ Think of examples of where to use constants instead of variables.
 
 <details>
 	<summary><b><i>Click Here to Toggle Solution</i></b></summary>
+	
 	```
 	- A person's birthday
 	- Pi
