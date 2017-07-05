@@ -7,7 +7,7 @@ To understand and differentiate among types of data, define constants and variab
 ### Readings
 
 1. Swift Programming: The Big Nerd Ranch Guide, Chapter 2
-1. Apple's [Swift Language Reference, The Basics](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309
+1. Apple's [Swift Language Reference, The Basics](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309)
 
 #### Further Readings
 1. [Type Safety & Type Inference](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwigt72FnebUAhXPQD4KHbebBHUQygQILDAA&url=https%3A%2F%2Fdeveloper.apple.com%2Flibrary%2Fcontent%2Fdocumentation%2FSwift%2FConceptual%2FSwift_Programming_Language%2FTheBasics.html%23%2F%2Fapple_ref%2Fdoc%2Fuid%2FTP40014097-CH5-ID322&usg=AFQjCNHOuBMHtgkI642rFokkBTRMnNEFDg)
