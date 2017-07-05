@@ -11,7 +11,9 @@ d. 19.0 >= 19.0
 e. 9 > 7 && 7 < 10
 ```
 
->Solution
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+
 ```swift
 a. true
 b. false
@@ -19,6 +21,9 @@ c. true
 d. true
 e. true 
 ```
+
+</details>
+
 
 ### Exercise 2.
 What do each of the following expressions evaluate to?
@@ -30,7 +35,9 @@ d. !!!true
 e. !(true && true)
 ```
 
->Solution
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+
 ```swift
 a. true
 b. false
@@ -38,6 +45,9 @@ c. true
 d. false
 e. false
 ```
+
+</details>
+
 
 ### Exercise 3.
 What do each of the following expressions evaluate to?
@@ -49,7 +59,9 @@ d. (4 < 3 || 4 > 3) && ("Message: " == "Message: ")
 e. !(3 != 3)
 ```
 
->Solution
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+
 ```swift
 a. true
 b. true
@@ -57,6 +69,10 @@ c. false
 d. true
 e. true
 ```
+
+</details>
+
+
 
 ### Exercise 4.
 What do each of the following expressions evaluate to?
@@ -68,7 +84,10 @@ d. !!(!!true && !!false)
 e. true && (true && (true && (true || false)))
 ```
 
->Solution
+
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+
 ```swift
 a. false
 b. false
@@ -76,6 +95,9 @@ c. true
 d. false
 e. true
 ```
+
+</details>
+
 
 ### Exercise 5.
 Identify which variables are correct/incorrect. Change the variable value and/or declaration if it is incorrect.
@@ -87,7 +109,9 @@ d. let whiteHouseAddress: Int + String = 1600 + "Pennsylvania Ave"
 e. var peopleAtParty: Double = "95"
 ```
 
->Solution
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+
 ```swift
 a. incorrect -> let nameOfPrincipal: String = "Mrs. Watkins"
 b. incorrect -> var temperatureOutside: Double = 90.7
@@ -95,6 +119,9 @@ c. incorrect -> var isSummer: Bool = false
 d. incorrect -> let whiteHouseAddress: String = "1600 Pennsylvania Ave"
 e. incorrect -> var peopleAtParty: Int = 95
 ```
+
+</details>
+
 
 ### Exercise 6.
 The following variables are declared, fill in their value in a separate line.
@@ -106,7 +133,10 @@ d. var middleInitial: Character
 e. var twentyFiveDividedByTen: Double
 ```
 
->Solution
+
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+
 ```swift
 a. favoriteVacationSpot = "Hawaii"
 b. timesOnAPlane = 0
@@ -114,6 +144,8 @@ c. amHungry = true
 d. middleInitial = "Y"
 e. twentyFiveDividedByTen = 2.5
 ```
+
+</details>
 
 ### Exercise 7.
 Mad-Libs. Add a value to the declared variables below. Insert the variables (already in correct order) inside the string  __madLib__ and print.
@@ -137,7 +169,9 @@ be around \() degrees. So, if you're going out, you had
 better plan on wearing your \()".
 ```
 
->Solution
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+
 ```swift
 var geographicLocation: String = "New York"
 var adjective1: String = "cold"
@@ -157,3 +191,6 @@ be \(number1) miles an hour, and the high temperature should
 be around \(number2) degrees. So, if you're going out, you had
 better plan on wearing your \(articleOfClothing)".
 ```
+
+</details>
+
