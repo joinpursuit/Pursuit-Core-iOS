@@ -1,8 +1,7 @@
-### Logic Exercises
-
+### Logic Exercise Solutions
 ---
 
-#### Exercise 1.
+### Exercise 1.
 What do each of the following expressions evaluate to?
 ```swift
 a. 3 < 12.3
@@ -12,7 +11,21 @@ d. 19.0 >= 19.0
 e. 9 > 7 && 7 < 10
 ```
 
-#### Exercise 2.
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+a. true
+b. false
+c. true
+d. true
+e. true 
+```
+
+</details>
+
+
+### Exercise 2.
 What do each of the following expressions evaluate to?
 ```swift
 a. false || true
@@ -22,7 +35,21 @@ d. !!!true
 e. !(true && true)
 ```
 
-#### Exercise 3.
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+a. true
+b. false
+c. true
+d. false
+e. false
+```
+
+</details>
+
+
+### Exercise 3.
 What do each of the following expressions evaluate to?
 ```swift
 a. 3 == 2 || 9 == 9
@@ -32,7 +59,22 @@ d. (4 < 3 || 4 > 3) && ("Message: " == "Message: ")
 e. !(3 != 3)
 ```
 
-#### Exercise 4.
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+a. true
+b. true
+c. false
+d. true
+e. true
+```
+
+</details>
+
+
+
+### Exercise 4.
 What do each of the following expressions evaluate to?
 ```swift
 a. !(4 + 3 < 2 * 4)
@@ -41,7 +83,23 @@ c. (3 < 2 || (0 < 1 && 3 >= 3)) && true
 d. !!(!!true && !!false)
 e. true && (true && (true && (true || false)))
 ```
-#### Exercise 5.
+
+
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+a. false
+b. false
+c. true
+d. false
+e. true
+```
+
+</details>
+
+
+### Exercise 5.
 Identify which variables are correct/incorrect. Change the variable value and/or declaration if it is incorrect.
 ```swift
 a. let nameOfPrincipal: Character = "Mrs. Watkins"
@@ -51,7 +109,21 @@ d. let whiteHouseAddress: Int + String = 1600 + "Pennsylvania Ave"
 e. var peopleAtParty: Double = "95"
 ```
 
-#### Exercise 6.
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+a. incorrect -> let nameOfPrincipal: String = "Mrs. Watkins"
+b. incorrect -> var temperatureOutside: Double = 90.7
+c. incorrect -> var isSummer: Bool = false 
+d. incorrect -> let whiteHouseAddress: String = "1600 Pennsylvania Ave"
+e. incorrect -> var peopleAtParty: Int = 95
+```
+
+</details>
+
+
+### Exercise 6.
 The following variables are declared, fill in their value in a separate line.
 ```swift
 a. var favoriteVacationSpot: String
@@ -61,7 +133,21 @@ d. var middleInitial: Character
 e. var twentyFiveDividedByTen: Double
 ```
 
-#### Exercise 7.
+
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+a. favoriteVacationSpot = "Hawaii"
+b. timesOnAPlane = 0
+c. amHungry = true
+d. middleInitial = "Y"
+e. twentyFiveDividedByTen = 2.5
+```
+
+</details>
+
+### Exercise 7.
 Mad-Libs. Add a value to the declared variables below. Insert the variables (already in correct order) inside the string  __madLib__ and print.
 ```swift
 var geographicLocation: String
@@ -82,3 +168,29 @@ be \() miles an hour, and the high temperature should
 be around \() degrees. So, if you're going out, you had
 better plan on wearing your \()".
 ```
+
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+var geographicLocation: String = "New York"
+var adjective1: String = "cold"
+var pluralNoun1: String = "gasses"
+var adjective2: String = "strong"
+var pluralNoun2: String = "thunderstorms"
+var number1: Int = 9
+var number2: Int = 56
+var articleOfClothing: String = "hoodie"
+
+var madLib = "Here is tomorrow's weather report for \(geographicLocation)
+and vicinity. Early tomorrow, a \(adjective1)-front will
+collide with a mass of hot \(pluralNoun1) moving from the
+north. This means we can expect \(adjective2) winds and
+occasional \(pluralNoun2) by late afternoon. Wind velocity will
+be \(number1) miles an hour, and the high temperature should
+be around \(number2) degrees. So, if you're going out, you had
+better plan on wearing your \(articleOfClothing)".
+```
+
+</details>
+
