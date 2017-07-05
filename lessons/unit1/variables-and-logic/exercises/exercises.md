@@ -1,4 +1,4 @@
-### Logic Exercise Solutions
+### Logic Exercises
 ---
 
 ### Exercise 1.
