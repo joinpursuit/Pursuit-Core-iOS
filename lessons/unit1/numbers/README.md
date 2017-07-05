@@ -7,7 +7,7 @@ To be able to differentiate between number types (e.g `Int` vs `Float`), solve p
 ### Readings
 
 1. Swift Programming: The Big Nerd Ranch Guide, Chapter 4, Numbers
-1. [Apple's Swift Language Reference, The Basics - Integers](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID317) 
+1. Apple's [Swift Language Reference, The Basics - Integers](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID317) 
 
 ---
 
@@ -31,6 +31,25 @@ Simplify the following expressions [(PEMDAS Refresher)](https://www.mathsisfun.c
 4 + 5 ^ 3 * 6 / 3
 ```
 
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+```swift
+4 + 3 * 5 // 19
+
+3 / 3 * 2 + 5 // 7
+
+2 ^ 6 - 5 // -1
+
+5 + 4 / 2 // 7
+
+9 - 3 * 4 - 2 // -5
+
+4 * (-4) - 2 // -18
+
+4 + 5 ^ 3 * 6 / 3 // 15
+```
+</details>
+
 ### 2. Intro to `Int`
 
 Integer is a term borrowed (taken) from mathematics to describe a number that's not a fraction in the range from -∞ to +∞, including zero. Since computers don't really do infinity we change the definition, substituting minimum and maximum numbers for the infinities. 
@@ -48,11 +67,32 @@ let maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8
 
 Take the code block above and test different mins and maxes. Use `Int`, `Int8`, `Int16`, `Int32`, and `Int64`.
 
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+```swift
+let minInt8Value = Int8.min  // -128
+let maxInt8Value = Int8.max  // 127
+
+let minInt16Value = Int16.min  // -32768
+let maxInt16Value = Int16.max  // 32767
+
+let minInt32Value = Int32.min  // -2147483648
+let maxInt32Value = Int32.max  // 2147483647
+
+let minInt64Value = Int64.min  // -9223372036854775808
+let maxInt64Value = Int64.max  // 9223372036854775807
+
+let minIntValue = Int.min  // -9223372036854775808
+let maxIntValue = Int.max  // 9223372036854775807
+
+```
+</details>
+
 ### 4. Signedness
 
 A "signed" integer can be positive, negative or zero. An "unsigned" integer can only represent a positive number, or zero.
 
-Swift offers unsigned versions of all the interger types. The main advantage of unsigned integers is that it doubles the size of the positive range of the type. This used to be more of an issue when memory was limited and squeezing every bit was a valuable optimization. Now, there are only some use cases that call for it. Similar to the specific Int sizes, controlling the signedness of integers has applications in networking where systems need to agree on the exact format of the data they're communicating.
+Swift offers unsigned versions of all the integer types. The main advantage of unsigned integers is that it doubles the size of the positive range of the type. This used to be more of an issue when memory was limited and squeezing every bit was a valuable optimization. Now, there are only some use cases that call for it. Similar to the specific Int sizes, controlling the signedness of integers has applications in networking where systems need to agree on the exact format of the data they're communicating.
 
 **Question**: Think of applications that require using a very large number.
 
@@ -61,8 +101,36 @@ Swift offers unsigned versions of all the interger types. The main advantage of 
 
 #### Exercise - Signed/Unsigned Integers
 
-1. Take the code block above and test different mins and maxes. Use `UInt`, `UInt8`, `UInt16`, `UInt32`, and `UInt64`.
-1. Compare them to their corresponding signed type (e.g. `UInt8` to `Int8`).
+Take the code block above and test different mins and maxes. Use `UInt`, `UInt8`, `UInt16`, `UInt32`, and `UInt64`.
+
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+```swift
+let minUInt8Value = UInt8.min  // 0
+let maxUInt8Value = UInt8.max  // 255
+
+let minUInt16Value = UInt16.min  // 0
+let maxUInt16Value = UInt16.max  // 65535
+
+let minUInt32Value = UInt32.min  // 0
+let maxUInt32Value = UInt32.max  // 4294967295
+
+let minUInt64Value = UInt64.min  // 0
+let maxUInt64Value = UInt64.max  // 18446744073709551615
+
+let minUIntValue = UInt.min  // 0
+let maxUIntValue = UInt.max  // 18446744073709551615
+```
+</details>
+
+Compare them to their corresponding signed type (e.g. `UInt8` to `Int8`).
+
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+```
+INSERT ANSER HERE -> Not sure how to answer
+```
+</details>
 
 
 ### 5. Creating Instances of `Int`
@@ -109,6 +177,29 @@ let halfOfFive = 5 % 2 //  1
 ```
 12 / 5 = 2, remainder 2.
 ```
+
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+```swift
+// Example 1
+
+var num1 = 25
+var num2 = 4
+
+let twentyFiveDivFour = num1 / num2 // Evaluates to: 6
+let twentyFiveModFour = num1 % num2 // Evaluates to: 1
+print("\(num1) / \(num2) = \(twentyFiveDivFour), remainder \(twentyFiveModFour).") // 25 / 4 = 6, remainder 1.
+
+// Example 2
+
+num1 = 76 // reassignment
+num2 = 14 // reassignment
+
+let seventySixDivFourteen = num1 / num2
+let seventySixModFourteen = num1 % num2
+print("\(num1) / \(num2) = \(seventySixDivFourteen), remainder \(seventySixModFourteen).") // 76 / 14 = 5, remainder 6.
+```
+</details>
 
 ### 8. Operator Shorthand
 
