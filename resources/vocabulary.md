@@ -10,6 +10,9 @@ Please keep the list in alphabetical order.
 
 - **argument**: An input passed to a function in a call to it, related to parameter. A function can take zero, one or many arguments. Most languages also provide a way to pass a variable number of arguments. 
 
+- **branch 1.** - A path of execution in a program.
+- **branch 2. ** - In `git`, a branch is a named pointer to a specific commit. It's a tool we use to maintain more than one version of a codebase in the same repo. [What a branch is - Git](https://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is).
+
 - **cache** - A hardware or software component that stores data so future requests for that data can be served faster. The data stored in a cache might be the result of an earlier computation, or the duplicate of data stored elsewhere
 
 - **client** - The client side of a client-server architecture. Typically, a client is an application that runs on a personal computer or workstation and relies on a server to perform some operations. The communication between client and server takes place using HTTP.
@@ -62,7 +65,9 @@ is used both in direct coding applications as well as metaphorically about any p
 - **server** - A computer system that processes requests via HTTP. The term can refer to the entire system, or specifically to the software that accepts and supervises the HTTP requests.
 
 - **set**: v. To assign a value to a variable.
-	adv. The state in which a variable has a value. For example, the variable numberOfHamburgers is currently set (it is equal to 10). This is in contrast to unset/nil/null.
+	adj. The state in which a variable has a value. For example, the variable numberOfHamburgers is currently set (it is equal to 10). This is in contrast to unset/nil/null.
+
+- **tuple** - A group of zero or more values represented as one value. A tuple is defined by a comma-separated list of types, enclosed in parentheses.
 
 # TODO
 
