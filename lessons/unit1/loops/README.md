@@ -1,14 +1,19 @@
-### Loops
+# Loops
 ---
 
 ### Objective
-To be able to know how and when to use loops, including the `while` and `for-in` loops (both the collection and range variants), as well as to understand control flow through the use of `break` and `continue`.
+- To understand and determine how and when to use loops
+- To understand and use `while` loops
+- To understand and us  `for-in` loops, in both the collection and range variants
+- To understand control flow through the use of `break` and `continue`
 
 ### Readings
+
 1. Swift Programming: The Big Nerd Ranch Guide, Chapter 6, Loops
 1. Apple's [Swift Language Reference, Flow Control](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/ControlFlow.html)
 
 #### Vocabulary
+
 1. **Iteration** - the repetition of a process in a computer program. When the first set of instructions is executed again, it is called an iteration. -[Techopedia](https://www.techopedia.com/definition/3821/iteration)
 1. **Iterator** - an object that enables a programmer to traverse a container, particularly lists. -[Wikipedia](https://en.wikipedia.org/wiki/Iterator)
 
@@ -22,7 +27,7 @@ let r2 = 1...5
 
 First, type in the code above and hold Option- and click on the r (or the r2). This will bring up the documentation on Range. It's a little scary. But I see range conforms to "Equatable". What do you think that means? What code would illustrate that?
 
-### 2. Intro to Loops
+### 1. Introduction
 Loops are a tool for performing the same operation over a range or a list. 
 
 **Question**: What web site or app features probably have a loop behind them?
@@ -37,7 +42,7 @@ Loops are a tool for performing the same operation over a range or a list.
 </details>
 
 
-### 3. ```for-in```
+### 2. ```for-in```
 
 The first step here is to forget a little bit of what you learned about the syntax of creating a loop. All the priciples, and even the inner workings are still there but we have a new (maybe simpler) way of defining loops.
 
@@ -53,7 +58,7 @@ for index in 1...5 {
 // 4 times 5 is 20
 // 5 times 5 is 25
 ```
-### 4. ```_```
+### 3. ```_```
 
 If you only want to iterate a number of times but don't need to use the index you can replace it with the ```_``` (underscore) character.
 
@@ -69,7 +74,7 @@ for _ in 1...power {
 print("\(base) to the power of \(power) is \(answer)")
 ```
 
-### 5. Sneak peek at ```Array```
+### 4. Sneak peek at ```Array```
 
 ```swift
 let names = ["Anna", "Alex", "Brian", "Jack"]
@@ -78,7 +83,7 @@ for name in names {
 }
 ```
 
-### 6. ```where``` clauses
+### 5. ```where``` clauses
 
 A variant of for-in uses the `where` clause that we learned as a part of the ```switch``` statement. With this, we have more control over the conditions under which the body of the loop is run. 
 
@@ -90,7 +95,7 @@ for i in 1...100 where i % 10 == 5 {
 }
 ```
 
-### 7. ```while```
+### 6. ```while```
 
 ```while``` loops put the initialization and increment stages of the loop in the hands of the programmer. It is possible to re-write a for-in style loop with ```while```:
 
@@ -161,7 +166,7 @@ while number > 1 {
 
 Programmers put a lot of effort into avoiding endless loops because they generally make your program freeze and can even crash the computer it's running on. But you should know there are important uses for the endless loop. Apps, in fact, are running in an endless loop as they wait for input from the user.
 
-### 8. ```repeat-while```
+### 7. ```repeat-while```
 
 ```swift
 var i = 0
@@ -176,7 +181,7 @@ repeat {
 > In Swift 3+, `do-while` loops are actually `repeat-while`
 
 
-### 9. ```continue```
+### 8. ```continue```
 
 ```swift
 var shields = 5
@@ -209,7 +214,7 @@ while shields > 0 {
 
 ***Note: This code will execute indefinitely.***
 
-### 10. ```break```
+### 9. ```break```
 
 ```swift
 var shields = 5
@@ -246,7 +251,7 @@ while shields > 0 {
 }
 ```
 
-### 11. ```while``` Challenge
+### 10. ```while``` Challenge
 
 ```swift
 // Zeno's double secret paradox?
@@ -266,7 +271,7 @@ while doubleNumber > 0.01 {
 
 </details>
 
-### 12. Nesting
+### 11. Nesting
 
 Loops can be nested. A simple way to visualize it is with a 2-dimensional matrix.
 
@@ -279,7 +284,7 @@ for i in 1...5 {
 }
 ```
 
-### 13. Labels
+### 12. Labels
 
 Loops can be labeled so that ```continue``` and ```break``` used in nested loops can act on a loop other than the innermost one, which is the default.
 
