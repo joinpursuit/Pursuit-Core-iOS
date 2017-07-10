@@ -195,12 +195,17 @@ print(theMatrix[2][0]) // 7
 ---
 ### Exercises
 
-Write a loop to print out the matrix.
+Write a loop to print out `theMatrix`.
 
 <details>
 <summary><b>Solution</b></summary>
 
 ```swift
+for i in 0..<theMatrix.count {
+    for j in 0..<theMatrix.count {
+        print(theMatrix[i][j])
+    }
+}
 
 ```
 
@@ -213,11 +218,19 @@ Find an element of an array.
 <summary><b>Solution</b></summary>
 
 ```swift
+let shamrock = "\u{2618}"
+let fourLeafClover = "\u{1f340}"
 
+let clovers = [shamrock, shamrock, shamrock, fourLeafClover, shamrock, shamrock]
+
+if clovers.contains(fourLeafClover) {
+    print("You've got some good luck! You found a four-leaf clover: \(fourLeafClover)")
+} else {
+    print("You did not find a four-leaf clover. No good luck for you!")
+}
 ```
 
 </details>
-
 
 Find a missing number in 0...100
 
@@ -225,7 +238,25 @@ Find a missing number in 0...100
 <summary><b>Solution</b></summary>
 
 ```swift
+var zeroToOneHundred = Array(0...100)
 
+let randomIndex = Int(arc4random_uniform(100)) //This line creates a random number
+print(randomIndex)
+let removedNumber = zeroToOneHundred.remove(at: randomIndex) //Now, we are able to remove a random element in the array
+
+var i = 0
+while i+1 < zeroToOneHundred.count {
+    
+    if zeroToOneHundred[i+1] - zeroToOneHundred[i] > 1 {
+        print("Found missing number between \(zeroToOneHundred[i+1]) & \(zeroToOneHundred[i])")
+        print("Missing Number: \(zeroToOneHundred[i] + 1)")
+        break
+    } else if removedNumber == 0 {
+        print("Missing Number: \(removedNumber)")
+        break
+    }
+    i += 1
+}
 ```
 
 </details>
@@ -236,7 +267,17 @@ Find the largest number.
 <summary><b>Solution</b></summary>
 
 ```swift
+let arrayOfNumbers = [3, 50, 28, 35, 17, 9, 0, 91, 63, 2]
 
+var maxInArrOfNums = Int.min
+
+for num in arrayOfNumbers {
+    if num > maxInArrOfNums {
+        maxInArrOfNums = num
+    }
+}
+
+print(maxInArrOfNums)
 ```
 
 </details>
@@ -247,7 +288,19 @@ Find the second smallest number.
 <summary><b>Solution</b></summary>
 
 ```swift
+var smallestInArrOfNums = Int.max
+var secondSmallestInArrOfNums = Int.max
 
+for num in arrayOfNumbers {
+    if num < smallestInArrOfNums {
+        secondSmallestInArrOfNums = smallestInArrOfNums
+        smallestInArrOfNums = num
+    } else if num >= smallestInArrOfNums && num < secondSmallestInArrOfNums {
+        secondSmallestInArrOfNums = num
+    }
+}
+
+print(secondSmallestInArrOfNums)
 ```
 
 </details>
@@ -259,7 +312,12 @@ Copy the characters of a string into an array.
 <summary><b>Solution</b></summary>
 
 ```swift
+let thisString = "Today is a wonderful day to learn about arrays!"
+var thisStringChars: [Character] = []
 
+for char in thisString.characters {
+    thisStringChars.append(char)
+}
 ```
 
 </details>
@@ -270,7 +328,21 @@ Find a character in that array.
 <summary><b>Solution</b></summary>
 
 ```swift
+let characterToFind = "a"
+var characterNotFound = true
+var iterations = 0
 
+while characterNotFound {
+    for char in thisString.characters {
+        iterations += 1
+        
+        if String(char) == characterToFind {
+            characterNotFound = false
+            print("The character `\(characterToFind)` was found in \(iterations) iterations.")
+            break
+        }
+    }
+}
 ```
 
 </details>
