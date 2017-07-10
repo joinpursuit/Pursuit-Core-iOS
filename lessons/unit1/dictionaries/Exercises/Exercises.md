@@ -7,24 +7,20 @@
 
 <details>
 <summary><b>Solution</b></summary>
-
 ```swift
-
+var citiesDict = ["United States": "Washington D.C.", "Great Britain": "London", "France": "Paris"]
 
 ```
-
 </details>
 
 1b. Add two more countries to your dictionary.
 
 <details>
 <summary><b>Solution</b></summary>
-
 ```swift
-
-
+citiesDict["Italy"] = "Rome"
+citiesDict["Japan"] = "Tokyo"
 ```
-
 </details>
 
 1c. Translate at least 3 of the capital names into another language.
@@ -33,10 +29,11 @@
 <summary><b>Solution</b></summary>
 
 ```swift
-
+citiesDict["Great Britain"] = "ロンドン"
+citiesDict["United States"] = "ワシントンDC。"
+citiesDict["Tokyo"] = "東京"
 
 ```
-
 </details>
 
 ### Question 2.
@@ -51,10 +48,15 @@ var someDict:[String:Int] = ["One": 1, "Two": 4, "Three": 9, "Four": 16, "Five":
 <summary><b>Solution</b></summary>
 
 ```swift
+//With Optional Binding (safe)
+if let thirdValue = someDict["Three"],
+    let fifthValue = someDict["Five"] {
+        print(thirdValue + fifthValue)
+}
 
-
+//Alternative: With Force Unwrapping (not so safe)
+print(someDict["Three"]! + someDict["Five"]!)
 ```
-
 </details>
 
 2b. Add values to the dictionary for the keys "Six" and "Seven".
@@ -63,10 +65,9 @@ var someDict:[String:Int] = ["One": 1, "Two": 4, "Three": 9, "Four": 16, "Five":
 <summary><b>Solution</b></summary>
 
 ```swift
-
-
+someDict["Six"] = 34
+someDict["Seven"] = -72
 ```
-
 </details>
 
 2c. Make a key caled "productUpToSeven" and set its value equal to the product of all the values.
@@ -75,10 +76,14 @@ var someDict:[String:Int] = ["One": 1, "Two": 4, "Three": 9, "Four": 16, "Five":
 <summary><b>Solution</b></summary>
 
 ```swift
+var product = 1
 
+for (_, value) in someDict {
+    product *= value
+}
 
+someDict["productUpToSeven"] = product
 ```
-
 </details>
 
 2d. Make a key called "sumUpToSix" and set its value equal to the sum of the keys "One", "Two", "Three", "Four", "Five" and "Six".
@@ -87,10 +92,21 @@ var someDict:[String:Int] = ["One": 1, "Two": 4, "Three": 9, "Four": 16, "Five":
 <summary><b>Solution</b></summary>
 
 ```swift
+var sum = 0
 
+for (key, value) in someDict {
+    switch key {
+    case key where key == "Seven":
+        continue
+    case key where key == "productUpToSeven":
+        continue
+    default:
+        sum += value
+    }
+}
 
+someDict["sumUpToSix"] = sum
 ```
-
 </details>
 
 2e. Remove the new keys made for parts c and d.
@@ -99,10 +115,9 @@ var someDict:[String:Int] = ["One": 1, "Two": 4, "Three": 9, "Four": 16, "Five":
 <summary><b>Solution</b></summary>
 
 ```swift
-
-
+someDict.removeValue(forKey: "productUpToSeven")
+someDict.removeValue(forKey: "sumUpToSix")
 ```
-
 </details>
 
 2f. Add 2 to every value inside of `someDict`.
@@ -111,10 +126,11 @@ var someDict:[String:Int] = ["One": 1, "Two": 4, "Three": 9, "Four": 16, "Five":
 <summary><b>Solution</b></summary>
 
 ```swift
-
-
+for (key, var value) in someDict {
+    value += 2
+    someDict[key] = value
+}
 ```
-
 </details>
 
 
@@ -135,38 +151,66 @@ var someDict:[String:Int] = ["One": 1, "Two": 4, "Three": 9, "Four": 16, "Five":
 <summary><b>Solution</b></summary>
 
 ```swift
-
-
+var authorScores: [String:Float] = ["Mark Twain":8.9,
+                                    "Nathaniel Hawthorne":5.1,
+                                    "John Steinback":2.3,
+                                    "C.S. Lewis":9.9,
+                                    "Jon Krakaur":6.1]
 ```
-
 </details>
 
 3b. Using the dictionary created in the previous problem, do the following: 
 
 * Print out the floating-point score for “John Steinbeck”. 
-* Add an additional author named “Erik Larson” with an assigned score of 9.2.  
+
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+if let johnSteinbackScore = authorScores["John Steinback"] {
+    print(johnSteinbackScore)
+}
+```
+</details>
+
+* Add an additional author named “Erik Larson” with an assigned score of 9.2. 
+
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+authorScores["Erik Larson"] = 9.2
+```
+</details>
+
 * Write an if/else statement that compares the score of John Krakaur with Mark Twain. Print out the name of the author with the highest score.
 
 <details>
 <summary><b>Solution</b></summary>
 
 ```swift
-
+if let jonsScore = authorScores["Jon Krakaur"],
+    let marksScore = authorScores["Mark Twain"] {
+    if jonsScore > marksScore {
+        print("John Krakaur has a higher score than Mark Twain")
+    } else {
+        print("Mark Twain has a higher score than John Krakaur")
+    }
+}
 
 ```
-
 </details>
 
-3c. Use a `for` loop to iterate through the dictionary created in problem 3a and print out the content in the form of key: value, one entry per line.
+3c. Use a `for` loop to iterate through the dictionary created in problem 3a and print out the content in the form of **key: value**, one entry per line.
 
 <details>
 <summary><b>Solution</b></summary>
 
 ```swift
-
-
+for (key, value) in authorScores {
+    print("\(key): \(value)")
+}
 ```
-
 </details>
 
 > Questions 4 - 7 Source: https://www.weheartswift.com/dictionaries/ 
@@ -211,10 +255,18 @@ var message = "hello world"
 <summary><b>Solution</b></summary>
 
 ```swift
+var encodedString = ""
 
-
+for char in message.characters {
+    if char == " " {
+        encodedString.append(" ")
+    }
+    if let encodedChar = code[String(char)] {
+        encodedString.append(encodedChar)
+    }
+}
+print(encodedString)
 ```
-
 </details>
 
 4b. You are also given an `encodedMessage` which contains only lowercase letters and spaces. Use the `code` dictionary to decode the message and print it.
@@ -227,10 +279,21 @@ var encodedMessage = "uijt nfttbhf jt ibse up sfbe"
 <summary><b>Solution</b></summary>
 
 ```swift
+var decodedString = ""
 
+for char in encodedMessage.characters {
+    if char == " " {
+        decodedString.append(" ")
+    }
+    for (key, value) in code {
+        if String(char) == value {
+            decodedString.append(key)
+        }
+    }
+}
 
+print(decodedString)
 ```
-
 </details>
 
 ### Question 5.
@@ -264,8 +327,12 @@ var people: [[String:String]] = [
 <summary><b>Solution</b></summary>
 
 ```swift
-
-
+var firstNames: [String] = []
+for peopleDict in people {
+    if let firstName = peopleDict["firstName"] {
+        firstNames.append(firstName)
+    }
+}
 ```
 
 </details>
@@ -276,10 +343,15 @@ var people: [[String:String]] = [
 <summary><b>Solution</b></summary>
 
 ```swift
+var fullNames: [String] = []
 
-
+for peopleDict in people {
+    if let firstName = peopleDict["firstName"],
+        let lastName = peopleDict["lastName"] {
+            fullNames.append("\(firstName) \(lastName)")
+    }
+}
 ```
-
 </details>
 
 ### Question 6.
@@ -320,10 +392,29 @@ var peopleWithScores: [[String: String]] = [
 <summary><b>Solution</b></summary>
 
 ```swift
+var maxScore = Int.min
 
+for peopleDict in peopleWithScores {
+    if let scoreString = peopleDict["score"],
+        let score = Int(scoreString) {
+        if score > maxScore {
+            maxScore = score
+        }
+    }
+}
 
+for peopleDict in peopleWithScores {
+    if let scoreString = peopleDict["score"],
+        let score = Int(scoreString) {
+        if maxScore == score {
+            if let firstName = peopleDict["firstName"],
+                let lastName = peopleDict["lastName"] {
+                print("\(firstName) \(lastName) has the highest score of \(maxScore)")
+            }
+        }
+    }
+}
 ```
-
 </details>
 
 6b. Print out the dictionary above in the following format: ** full name - score **

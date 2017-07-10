@@ -1,29 +1,31 @@
-# Standards
-* Master Dictionaries
-* Master Collections
+### Dictionaries
+---
 
-# Objectives
-Students will be able to:
+### Objectives
 * Declare and use Dictionaries 
 * Understand common uses of Dictionaries
 * Contrast and compare Dictionaries with Arrays
 
-### Vocabulary: dictionary, hash, collection, key, value, mutable, immutable
+### Readings
+1. Swift Programming: The Big Nerd Ranch Guide, Chapter 10
+1. Apple's [Swift Language Reference, Collections](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html#//apple_ref/doc/uid/TP40014097-CH8-ID105)
 
-# Resources
-Swift Programming: The Big Nerd Ranch Guide, Chapter 10
+#### Vocabulary
+1. Dictionary 
+1. Hash
+1. Collection
+1. Key
+1. Value
 
-Apple's [Swift Language Reference, Collections](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html#//apple_ref/doc/uid/TP40014097-CH8-ID105)
+---
 
-# Lecture
-## Warm up
+### 1. Warm up
 
-Dictionaries can be thought of like arrays where you use an index other than an int to 
-access data. For this reason they're sometimes called associative arrays. Most often the key is a String. 
-They're also called hash maps or hashes for short. This is because the key processed by
-an algorithm called "hashing" to convert it to a unique-ish index.
+Dictionaries can be thought of like arrays where you use an index other than an `Int` to access data. For this reason, they're sometimes called associative arrays. Most often the key is a `String`. 
 
-## Creating and Populating a Dictionary
+They're also called hash maps or hashes for short. This is because the key is processed by an algorithm called "hashing" to convert it to a unique-ish index.
+
+### 2. Creating and Populating a Dictionary
 
 Again, politely ignore the book's old take on creating Dictionaries.
 
@@ -38,24 +40,24 @@ print(baseballTeamsByCode)
 baseballTeamsByCode = [:]
 ```
 
-**Question**: Compare ```baseballTeamsById``` to its array storage equivalent. What advantage
-do we have with Dictionaries?
+**Question**: Compare ```baseballTeamsById``` to its array storage equivalent. What advantage do we have with Dictionaries?
 
-```
-Since Dictionaries keys don't have to be represented in contiguous memory we can use integer 
-keys that are either very large or far apart, or both without wasting space. This kind of array is
-called a 'sparse array'.
-```
+<details>
+<summary><b>Solution</b></summary>
 
-## Accessing and Modifying a Dictionary
+>Since Dictionaries keys don't have to be represented in contiguous memory we can use integer keys that are either very large or far apart, or both without wasting space. This kind of array is called a 'sparse array'.
 
-### Using count
+</details>
+
+### 3. Accessing and Modifying a Dictionary
+
+#### Using `.count()`
 
 ```swift
 print(baseballTeamsByCode.count)
 ```
 
-### Reading a value from the dictionary
+#### Reading a value from the dictionary
 
 ```swift
 print(baseballTeamsByCode["NYN"])
@@ -65,16 +67,20 @@ Note how looking up by key returns an optional of the value type.
 
 **Question**: Why is this?
 
+<details>
+<summary><b>Solution</b></summary>
 
+>Looking up a value by key in a dictionary returns an optional because there is no guarantee that a value exists at the given key.
 
-### Modifying a value
+</details>
+
+### 4. Modifying a Value
 ```swift
 baseballTeamsByCode["TB"] = "Rays"
 ```
 
-Using ```updateValue(_:forKey:)``` allows us to check the return to see if 
-the "updated" value existed already. If it didn't it will be created, but
-```nil``` will be returned from updateValue.
+Using ```updateValue(_:forKey:)``` allows us to check the return to see if the "updated" value existed already. If it didn't it will be created, but
+```nil``` will be returned from `updateValue`.
 
 ```swift
 baseballTeamsById[1003] = "Rays"
@@ -90,16 +96,16 @@ else {
 }
 ```
 
-## Adding and Removing Values
+### 5. Adding and Removing Values
 
-### Adding a value
+#### Adding a value
 
 ```swift
 baseballTeamsByCode["PIT"] = "Pirates"
 baseballTeamsById[1005] = "Pirates"
 ```
 
-### Removing a value
+#### Removing a value
 
 ```swift
 baseballTeamsByCode["PIT"] = nil
@@ -108,7 +114,7 @@ baseballTeamsById.removeValueForKey(1005)
 
 ```removeValueForKey(_:)``` offers the same functionality as ```updateValue(_:forKey:)```.
 
-## Looping
+### 6. Looping
 
 ```swift
 for (key, value) in baseballTeamsByCode {
@@ -124,12 +130,12 @@ for k in baseballTeamsByCode.keys {
 }
 ```
 
-### Can also capture a dictionary's keys into an array
+### 7. Create Array from a Dictionary's Keys 
 
 ```swift
 var codes = Array(baseballTeamsByCode.keys)
 ```
 
-## Immutable Dictionaries
+### 8. Immutable Dictionaries
 
 As with Arrays, Dictionaries can be declared as constants and are more efficient that way.

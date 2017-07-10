@@ -1,7 +1,7 @@
 ### Arrays
 ---
 
-### Objective
+### Objectives
 * Access and Modify Arrays
 * Iterate through arrays
 * Use common array methods
