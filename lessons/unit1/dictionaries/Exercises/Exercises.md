@@ -7,6 +7,7 @@
 
 <details>
 <summary><b>Solution</b></summary>
+
 ```swift
 var citiesDict = ["United States": "Washington D.C.", "Great Britain": "London", "France": "Paris"]
 
@@ -17,6 +18,7 @@ var citiesDict = ["United States": "Washington D.C.", "Great Britain": "London",
 
 <details>
 <summary><b>Solution</b></summary>
+
 ```swift
 citiesDict["Italy"] = "Rome"
 citiesDict["Japan"] = "Tokyo"
@@ -136,6 +138,7 @@ for (key, var value) in someDict {
 
 ### Question 3.  
 (from http://www.themobilemontage.com/wp-content/uploads/2015/05/hw1.pdf)
+
 3a. Create a variable that is explicitly typed as a dictionary that maps strings to floating point numbers. Initialize the variable to the data shown in the table below which lists an author name and their comprehensibility score.
 
 | Author Name | Score |
