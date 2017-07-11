@@ -1,39 +1,33 @@
 ### Structs & Classes
 ---
 
-### Objective
-To be able to create, initialize, and use structs/classes while understanding (1) the differences between a struct and class, (2) the appropriate use cases for each type, and (3) the differences between reference types and value types.
+### Objectives
+* Understand the differences between structs and classes
+* To create and initialize structs and classes
+* Understand when to use a struct vs a class
+* Understand that structures are value types and what this implies
 
 ### Readings
-Swift Programming: The Big Nerd Ranch Guide, Chapter 15, Structs and Classes
-
-Apple's [Swift Language Reference, Classes and Structures](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-ID82)
-
-And [Swift Language Reference, Methods](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Methods.html#//apple_ref/doc/uid/TP40014097-CH15-ID234)
+1. Swift Programming: The Big Nerd Ranch Guide, Chapter 15, Structs and Classes
+1. Apple's [Swift Language Reference, Classes and Structures](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-ID82)
+1. [Swift Language Reference, Methods](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Methods.html#//apple_ref/doc/uid/TP40014097-CH15-ID234)
 
 ---
 
-### 1. Warm up
+### 1. Intro
 
-I'm choosing to focus on specific topics about ```struct```s and ```class```es to reflect 
-what I believe is essential. We'll return to the topics we skip or touch lightly as they
-come up in our applications.
+I'm choosing to focus on specific topics about ```struct```s and ```class```es to reflect what I believe is essential. We'll return to the topics we skip or touch lightly as they come up in our applications.
 
 ### 2. Lecture
 
 From the Apple documentation:
 
-> An instance of a class is traditionally known as an object. However, Swift classes and structures are 
-> much closer in functionality than in other languages, and much of this chapter describes functionality 
-> that can apply to instances of either a class or a structure type. Because of this, the more general 
-> term instance is used.
+> An instance of a class is traditionally known as an object. However, Swift classes and structures are much closer in functionality than in other languages, and much of this chapter describes functionality that can apply to instances of either a class or a structure type. Because of this, the more general term instance is used.
 
-### 3. Structures and Classes
+### 3. Comparing Classes and Structures
 
 From the Apple documentation:
 
-> ###Comparing Classes and Structures
->
 > Classes and structures in Swift have many things in common. Both can:
 > 
 > * Define properties to store values
@@ -42,6 +36,7 @@ From the Apple documentation:
 > * Define initializers to set up their initial state
 > * Be extended to expand their functionality beyond a default implementation
 > * Conform to protocols to provide standard functionality of a certain kind
+>
 > For more information, see Properties, Methods, Subscripts, Initialization, Extensions, and Protocols.
 > 
 > Classes have additional capabilities that structures do not:
@@ -50,7 +45,6 @@ From the Apple documentation:
 > * Type casting enables you to check and interpret the type of a class instance at runtime.
 > * Deinitializers enable an instance of a class to free up any resources it has assigned.
 > * Reference counting allows more than one reference to a class instance.
-
 
 ### 4. Properties
 
@@ -93,95 +87,87 @@ let alsoTenEighty = tenEighty
 alsoTenEighty.frameRate = 30.0
 
 print("The frameRate property of tenEighty is now \(tenEighty.frameRate)")
-
 ```
+
 ---
 
-### 6. Project
+### 6. Project - Movie as an Object
 
-#### Movie as an Object
-
-Let's create a movie object based on the data structure we used in Homework #2. 
+Let's create a movie object based on the data structure we used in [Homework #2](https://github.com/C4Q/AC3.2/blob/master/homework/week-2-homework.playground/Contents.swift). 
 
 1. Make a Movie.swift file.
-2. Create a Movie class using variables as existing types with default values.
-3. Populate an array of Movie objects converted from the familiar array of dictionaries.
+2. Create a `Movie` class using variables as existing types with default values.
+3. Populate an array of `Movie` objects converted from the familiar array of dictionaries.
 
-#### Inheritance
+---
 
-In my opinion there's a little too much fascination with inheritance. It is necessary to learn
-but you spend more time simply modeling one thing than you do developing a hierarchy.
+### 7. Inheritance
+
+In my opinion there's a little too much fascination with inheritance. It is necessary to learn, but you spend more time simply modeling one thing than you do developing a hierarchy.
+
 To get started, **encapsulation** is the more important concept to understand than inheritance is.
 
-1. Create a Person class.
-2. Create an Actor class with Person as its parent. Add two fields, ```breakoutYear``` and  ```breakoutRole```. 
+1. Create a `Person` class.
+1. Create an `Actor` class with `Person` as its parent. Add two fields, `breakoutYear` and  `breakoutRole`. 
+1. Create a `President` class with `Person` as its parent. Add two fields, `yearEnteredOffice` and `yearLeftOffice`.
 
-3. Create a President class with Person as its parent. Add two fields, ```yearEnteredOffice```
-and ```yearLeftOffice```.
+### 8. Instance methods
 
-#### Instance method
+Let's create a `President` class to illustrate an instance method ```inOffice(Int) -> Bool```.
 
-Let's create a President class to illustrate an instance method ```inOffice(Int) -> Bool```.
-
-#### Type Methods
+### 9. Type Methods
 
 ```static``` in ```struct```s and ```class``` in ```class```.
 
-#### Review and Wrapup
+### 10. Review and Wrapup
 * Compare and contrast the use of ```struct``` and ```class```.
 * What are type methods?
 
 ---
 
-### Exercises
+### 11. Exercises
 
-1. Work Actor class into the Movie class by making ```cast``` type [Actor] and populating it.
-2. Make the ```genre``` field in Movie of type ```Genre```, an enumeration.
+1. Work `Actor` class into the `Movie` class by making ```cast``` type `[Actor]` and populating it.
+2. Make the ```genre``` field in `Movie` of type ```Genre```, an enumeration.
 3. Build a ```presidents``` array (of type [President])by processing this array of Strings:
 ```swift
 presidentData = ["1993, 2000, Bill Clinton", "2001, 2008, George W. Bush", "2009, 2016, Barack Obama"]
 ```
-4. Rebuild the ```presidentsByYear``` dictionary based on the ```presidents``` array:
-Your output dictionary should contain a key for every relevant year and use the ```inOffice``` method
-on ```President```.
-5. Re-work the original homework based on our "array of dictionaries" to work with the new
-array of objects. Here are the problems
+4. Rebuild the ```presidentsByYear``` dictionary based on the ```presidents``` array. Your output dictionary should contain a key for every relevant year and use the ```inOffice``` method on ```President```.
+5. Re-work the original homework based on our "array of dictionaries" to work with the new array of objects. Here are the problems:
 
-> WARM UPS
-> 
-> 1. Print the name of the first movie.
+* 5a. Print the name of the first movie.
 
-> 2. Print a list of all movie names, preferably on one line.
+* 5b. Print a list of all movie names, preferably on one line.
 
-> 3. Print a list of all movie years and names as follows:
+* 5c. Print a list of all movie years and names as follows:
 > 2015: Minions
 > 2001: Shrek
 > .
 > .
 > .
 
-> 4. Iterate over all movies. Inside the loop use switch on genre. Print each title
-> and add an appropriate emoji to represent its genre
+* 5d. Iterate over all movies. Inside the loop use switch on genre. Print each title and add an appropriate emoji to represent its genre
 
-> 5. In code, not by literal initialization, create a new dictionary called moviesByName of type
-> [String:[String:Any]]. Copy the elements of movies, adding each to moviesByName
-> with the name as key. Sort by name.
+* 5e. In code, not by literal initialization, create a new dictionary called moviesByName of type [String:[String:Any]]. Copy the elements of movies, adding each to `moviesByName` with the name as key. Sort by name.
 
-> 6. Do the same thing as in (5) for year and genre, creating a new dictionary for each one.
-> What happens, and why? How might you change your approach?
+* 5f. Do the same thing as in (5e) for year and genre, creating a new dictionary for each one. What happens, and why? How might you change your approach?
 
-> THE PROJECT
->
-> Iterate over all movies and print a formatted blurb about each one. Use this out put of the
-> first movie as a guide:
+### 12. PROJECT
+
+Iterate over all movies and print a formatted blurb about each one. Use this output of the first movie as a guide:
 
 > Minions came out in 2015. It was an animation staring Sandra Bullock, Jon Hamm, and Michael Keaton.
 > Barack Obama was president that year.
 
+**Notes**
 
-> Note how it should generate "an animation" in contrast to "a drama"
-> Similarly notice the "and" before the last member of the cast listed.
-> Get it to work any which way you can but try your best to follow these guidelines
->   * Don't use forced unwrapping
->   * Use multiple bindings in one "if let" (no pyramid of doom)
+* Output should generate "an animation" in contrast to "a drama"
+* Similarly notice the "and" before the last member of the cast listed.
+
+
+Get it to work any which way you can but try your best to follow these **guidelines**:
+
+ * Don't use forced unwrapping
+ * Use multiple bindings in one "if let" (no pyramid of doom)
 
