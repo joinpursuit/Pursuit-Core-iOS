@@ -12,19 +12,20 @@
 1. Apple's [Swift Language Reference, Classes and Structures](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-ID82)
 1. [Swift Language Reference, Methods](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Methods.html#//apple_ref/doc/uid/TP40014097-CH15-ID234)
 
+#### Vocabulary
+1. **Instance** - 
+
 ---
 
 ### 1. Intro
-
-I'm choosing to focus on specific topics about ```struct```s and ```class```es to reflect what I believe is essential. We'll return to the topics we skip or touch lightly as they come up in our applications.
-
-### 2. Lecture
 
 From the Apple documentation:
 
 > An instance of a class is traditionally known as an object. However, Swift classes and structures are much closer in functionality than in other languages, and much of this chapter describes functionality that can apply to instances of either a class or a structure type. Because of this, the more general term instance is used.
 
-### 3. Comparing Classes and Structures
+Whenever you define a new class or structure, you effectively define a brand new Swift type. Give types `UpperCamelCase` names (i.e. `SomeClass`, `SomeStructure`) to match the capitalization of standard Swift types (such as `String`, `Int`, and `Bool`). Conversely, always give properties and methods `lowerCamelCase` names (such as `frameRate` and `incrementCount`) to differentiate them from type names. **- Apple**
+
+### 2. Comparing Classes and Structures
 
 From the Apple documentation:
 
@@ -46,7 +47,21 @@ From the Apple documentation:
 > * Deinitializers enable an instance of a class to free up any resources it has assigned.
 > * Reference counting allows more than one reference to a class instance.
 
-### 4. Properties
+### 3. Definition Syntax
+
+Classes and structures have a similar definition syntax. You introduce classes with the class keyword and structures with the struct keyword. Both place their entire definition within a pair of braces.
+
+```swift
+class SomeClass {
+    // class definition goes here
+}
+
+struct SomeStructure {
+    // structure definition goes here
+}
+```
+
+### 3. Stored Properties
 
 Properties are constants and variables encapsulated inside classes and structures.
 
@@ -64,12 +79,41 @@ class VideoMode {
     var frameRate = 0.0
     var name: String?
 }
+```
 
+
+### 4. Creating Instances of Structs & Classes
+
+The `Resolution` structure definition and the `VideoMode` class definition only describe what a `Resolution` or `VideoMode` will look like. They themselves do not describe a specific resolution or video mode. To do that, you need to create an instance of the structure or class. Structures and classes both use **initializer syntax** for new instances.
+
+```swift
+let lowRes = Resolution(width: 800, height: 600)
+```
+
+#### Default Initializers 
+In a default initializer, the name of the type is followed by empty parentheses. You can use default initializers when your types either don’t have any stored properties, or when all of the type’s stored properties have default values. This holds true for both structures and classes.
+
+```swift
 let someResolution = Resolution()
 let someVideoMode = VideoMode()
-
-print("The width of someResolution is \(someResolution.width)")
 ```
+
+Declaring an optional stored property as a constant (without an intial value) will inhibit you from using a default initializer. Declaring your optional properties as variables still enables us to use a default initializer, even if that variable optional has not been given an initial value. The reason for that is because the value contained in a variable can be changed at any point after their initialization, while a constant can never be changed. So, an optional that is declared as a constant with no inital value can never be given a value at any other point. Remember, when you are creating an instance of a new type, all of its properties must be properly instantiated with values.
+
+#### Memberwise Initializers (for Structs only!)
+
+
+
+#### Accessing Properties
+
+You can access the properties of an instance using **dot syntax**. In dot syntax, you write the property name immediately after the instance name, separated by a period (.), without any spaces:
+
+```swift
+print("The width of someResolution is \(someResolution.width)")
+print("The width of lowRes is \(lowRes.width)")
+```
+
+
 
 ### 5. Classes are Reference types
 
@@ -91,83 +135,25 @@ print("The frameRate property of tenEighty is now \(tenEighty.frameRate)")
 
 ---
 
-### 6. Project - Movie as an Object
-
-Let's create a movie object based on the data structure we used in [Homework #2](https://github.com/C4Q/AC3.2/blob/master/homework/week-2-homework.playground/Contents.swift). 
-
-1. Make a Movie.swift file.
-2. Create a `Movie` class using variables as existing types with default values.
-3. Populate an array of `Movie` objects converted from the familiar array of dictionaries.
-
----
-
-### 7. Inheritance
+### 6. Inheritance
 
 In my opinion there's a little too much fascination with inheritance. It is necessary to learn, but you spend more time simply modeling one thing than you do developing a hierarchy.
 
 To get started, **encapsulation** is the more important concept to understand than inheritance is.
 
-1. Create a `Person` class.
-1. Create an `Actor` class with `Person` as its parent. Add two fields, `breakoutYear` and  `breakoutRole`. 
-1. Create a `President` class with `Person` as its parent. Add two fields, `yearEnteredOffice` and `yearLeftOffice`.
+### 7. Instance methods
 
-### 8. Instance methods
 
-Let's create a `President` class to illustrate an instance method ```inOffice(Int) -> Bool```.
 
-### 9. Type Methods
+### 8. Type Methods
 
 ```static``` in ```struct```s and ```class``` in ```class```.
 
-### 10. Review and Wrapup
+### 9. Review and Wrapup
+
 * Compare and contrast the use of ```struct``` and ```class```.
 * What are type methods?
 
----
-
-### 11. Exercises
-
-1. Work `Actor` class into the `Movie` class by making ```cast``` type `[Actor]` and populating it.
-2. Make the ```genre``` field in `Movie` of type ```Genre```, an enumeration.
-3. Build a ```presidents``` array (of type [President])by processing this array of Strings:
-```swift
-presidentData = ["1993, 2000, Bill Clinton", "2001, 2008, George W. Bush", "2009, 2016, Barack Obama"]
-```
-4. Rebuild the ```presidentsByYear``` dictionary based on the ```presidents``` array. Your output dictionary should contain a key for every relevant year and use the ```inOffice``` method on ```President```.
-5. Re-work the original homework based on our "array of dictionaries" to work with the new array of objects. Here are the problems:
-
-* 5a. Print the name of the first movie.
-
-* 5b. Print a list of all movie names, preferably on one line.
-
-* 5c. Print a list of all movie years and names as follows:
-> 2015: Minions
-> 2001: Shrek
-> .
-> .
-> .
-
-* 5d. Iterate over all movies. Inside the loop use switch on genre. Print each title and add an appropriate emoji to represent its genre
-
-* 5e. In code, not by literal initialization, create a new dictionary called moviesByName of type [String:[String:Any]]. Copy the elements of movies, adding each to `moviesByName` with the name as key. Sort by name.
-
-* 5f. Do the same thing as in (5e) for year and genre, creating a new dictionary for each one. What happens, and why? How might you change your approach?
-
-### 12. PROJECT
-
-Iterate over all movies and print a formatted blurb about each one. Use this output of the first movie as a guide:
-
-> Minions came out in 2015. It was an animation staring Sandra Bullock, Jon Hamm, and Michael Keaton.
-> Barack Obama was president that year.
-
-**Notes**
-
-* Output should generate "an animation" in contrast to "a drama"
-* Similarly notice the "and" before the last member of the cast listed.
-
-
-Get it to work any which way you can but try your best to follow these **guidelines**:
-
- * Don't use forced unwrapping
- * Use multiple bindings in one "if let" (no pyramid of doom)
-
+### 10. Project
+Link to Project
+ 
