@@ -425,21 +425,23 @@ let pAndQ: (Bool, Bool)
 ```
 <details>
     <summary>Solution</summary>
-    ```swift
-    let pAndQ: (Bool, Bool) = (false, false)
-    //let pAndQ: (Bool, Bool) = (true, true)
-    //let pAndQ: (Bool, Bool) = (true, false)
-    //let pAndQ: (Bool, Bool) = (false, true)
 
-    switch pAndQ {
-    case (true, true):
-        print("|| or &&")
-    case (false, false):
-        print("No way to true without ! (not)")
-    case (true, false), (false, true):
-        print("||")
-    }
-    ```
+```swift
+let pAndQ: (Bool, Bool) = (false, false)
+//let pAndQ: (Bool, Bool) = (true, true)
+//let pAndQ: (Bool, Bool) = (true, false)
+//let pAndQ: (Bool, Bool) = (false, true)
+
+switch pAndQ {
+case (true, true):
+    print("|| or &&")
+case (false, false):
+    print("No way to true without ! (not)")
+case (true, false), (false, true):
+    print("||")
+}
+```
+
 </details>
 
 Next, write a switch statement that switches on a tuple with 3 Bools `(Bool, Bool, Bool)` and prints what logical operators (i.e. "&&", or "||") could connect all Bools with to make a true expression.
