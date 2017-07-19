@@ -18,7 +18,9 @@ What are some reasons to use a switch instead of an if?
 What's missing from the switch statement below?
 
 a. The case statement needs to say month == 1
+
 b. The code is valid and not missing anything
+
 c. The code will not compile because switch statements need case statements for all expected values, or a default statement.
 
 ```swift
