@@ -17,11 +17,9 @@ What are some reasons to use a switch instead of an if?
 #### Exercise 2.
 What's missing from the switch statement below?
 
-a. The case statement needs to say month == 1
-
-b. The code is valid and not missing anything
-
-c. The code will not compile because switch statements need case statements for all expected values, or a default statement.
+- __a.__ The case statement needs to say month == 1
+- __b.__ The code is valid and not missing anything
+- __c.__ The code will not compile because switch statements need case statements for all expected values, or a default statement.
 
 ```swift
 let monthNum = 3
