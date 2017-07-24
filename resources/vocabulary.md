@@ -10,6 +10,8 @@ Please keep the list in alphabetical order.
 
 - **argument**: An input passed to a function in a call to it, related to parameter. A function can take zero, one or many arguments. Most languages also provide a way to pass a variable number of arguments. 
 
+- **bind** - The mechanism used to test an `Optional` for a value and assign it to a non-Optional.
+
 - **branch 1.** - A path of execution in a program.
 - **branch 2. ** - In `git`, a branch is a named pointer to a specific commit. It's a tool we use to maintain more than one version of a codebase in the same repo. [What a branch is - Git](https://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is).
 
@@ -28,6 +30,8 @@ and outside computer science. Often its sense extends the definition here to mea
 
 - **console**: A text based interface to the operating system. A rough synonym for command line. 
 
+- **diagnostic n.** - A diagnostic is a piece of code or other mechanism whose purpose is to find the answer to 
+
 - **dictionary**: A synonym for an [associative data structure](https://en.wikipedia.org/wiki/Associative_array), which maps keys to values.
 
 - **foo**: A common placeholder name used for variables and functions when the actual name isn't important. See [foobar](https://en.wikipedia.org/wiki/Foobar).
@@ -35,6 +39,10 @@ and outside computer science. Often its sense extends the definition here to mea
 - **high level**: 
     1. An overview with less detail. Ex., "We're going to discuss the requirements on a high level before we get into the implementation."
     1. When used to describe languages and technology it often indicates a simpler means of doing something.
+
+- **idiomatic** - In the context of a programming language, code written in a way natural way for that language, using its conventions and features. 
+
+- **initialize** - To assign a variable or constant its first value.
 
 - **iterate**: v. To do something repeatedly [iterate](http://www.thefreedictionary.com/iterate). Iterate
 is used both in direct coding applications as well as metaphorically about any process such as a project. 
@@ -56,9 +64,17 @@ is used both in direct coding applications as well as metaphorically about any p
 >  * Client Error 4XX
 >  * Server Error 5XX
 
+- **lifecycle** - The progressive states an object or piece of software can progress through over time.
+
 - **low level**: Using technology that's more basic and "closer to the machine." It's often used to compare programming languages. C is a low level language as compared to JavaScript. This implies it's more challenging to use and more at risk to crash.
 
 - **native**: We distinguish a native app from a web-based solution. Native apps have the potential to perform better with more complicated and sophisticated features and interfaces. The contrast is a cross-platform or web-based app. 
+
+- **nest v.** - To place code blocks inside of other code blocks. One could speak of any combination of conditionals, functions, closures being nested within one another.
+
+- **nil** - A special value meaning "no value". Only Optionals can be nil in Swift.
+
+- **Optional** - A Swift type that wraps another allowing it to either have a value or be nil.
 
 - **parameter**: An input to a function, specifically in its definition, related to argument. A function can define zero, one or many parameters. Most languages also provide a way to pass a variable number of arguments. 
 
@@ -68,8 +84,3 @@ is used both in direct coding applications as well as metaphorically about any p
 	adj. The state in which a variable has a value. For example, the variable numberOfHamburgers is currently set (it is equal to 10). This is in contrast to unset/nil/null.
 
 - **tuple** - A group of zero or more values represented as one value. A tuple is defined by a comma-separated list of types, enclosed in parentheses.
-
-# TODO
-
-initialize, nil/null, idiomatic, nested, diagnostic, lifecycle, operating system
-
