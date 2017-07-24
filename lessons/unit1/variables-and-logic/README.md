@@ -1,4 +1,4 @@
-### Variables & Logic
+### Types, Variables and Constants
 ---
 
 ### Objective 
@@ -12,9 +12,8 @@ To understand and differentiate among types of data, define constants and variab
 #### Further Readings
 1. [Type Safety & Type Inference](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwigt72FnebUAhXPQD4KHbebBHUQygQILDAA&url=https%3A%2F%2Fdeveloper.apple.com%2Flibrary%2Fcontent%2Fdocumentation%2FSwift%2FConceptual%2FSwift_Programming_Language%2FTheBasics.html%23%2F%2Fapple_ref%2Fdoc%2Fuid%2FTP40014097-CH5-ID322&usg=AFQjCNHOuBMHtgkI642rFokkBTRMnNEFDg)
 
-#### Assessment Materials
-* [Prework HW](https://docs.google.com/forms/d/e/1FAIpQLSf6Ocyz-H8mu4KpCzhCdIDaoKY9ZzypOh3a7tF9YmBUySnBuQ/viewform)
-* [Midday Check-in and solutions](https://goo.gl/forms/exuAHSxaHwTFWApD3)
+#### Resources
+1. [Intro to App Development with Swift - Apple](https://itunes.apple.com/us/book/intro-to-app-development-with-swift/id1118575552?mt=11)
 
 #### Vocabulary
 1. **Variable** - used to store information by pairing a unique name/identifier with a value that can later be accessed and mutated
@@ -25,15 +24,21 @@ To understand and differentiate among types of data, define constants and variab
 1. **Type Annotation** - explicitly specifies the type of a variable or expression 
 1. **Type Inference** - allows you to omit the Type Annotation in a function declaration, and allows the compiler to determine the type based on the value contained
 1. **Type Safe** - a type safe language encourages you to be clear about the types of values your code can work with
-1. **Mutable** - a variable, or object, whose state can be modified at any time after its declarationµ
+1. **Mutable** - a variable, or object, whose state can be modified at any time after its declaration
 1. **Immutable** - a variable, or object, whose state can not be changed once it has been declared
+
+---
+
+### Warm Up
+
+Read Lesson 2 in "Intro to App Development with Swift" in iBooks and run the associated playground, 02_Naming.playground.
 
 ---
 
 ### 1. Intro to Variables
 You might have visualized a variable as a box that can hold something. The box is a container that holds something "inside". It doesn't change but its contents might. What makes the box variable is that we can put different things in the box at different times.
 
-This is true in some form or another in all (reasonable) programming languages. Swift has a couple distinguishing features about its approach to variables that are important to know. First, variables are strongly typed. Second there are constants that work just like variables but can only be set once.
+This is true in some form or another in all (reasonable) programming languages. Swift has two important distinguishing features in its approach to variables. First, variables are strongly typed, meaning you can't change a variable's type after you declare it. Second there are constants that work just like variables but can only be set once.
 
 #### Variable Types
 | Type | Explanation | Examples |
@@ -45,19 +50,13 @@ This is true in some form or another in all (reasonable) programming languages. 
 |Bool|A binary value that can either be true or false|true, false|
 
 ### 2. Declaring variables
+
 Swift is a language with strong types and type inference during variable declaration.
 
 ```swift
 var favoritePeanut = "Charlie Brown" // String
 var theAnswer = 42 // Int
-var singleFare = 2.75 // Double (double is an unfortunate legacy)
-
-// by the way, this is a comment
-/* this, too, is a comment */
-/* and this kind is more
-   interesting that it can span lines */
-/* one use of the multiline comment is to "comment out" large
-   blocks of code that you might not want to run during testing */
+var singleFare = 2.75 // Double (Double for "double precision" Float)
 ```
 
 #### Exercise - Declaring Variables
@@ -84,7 +83,7 @@ var punctuationSelected = "!"
 var unicodePersonInChinese = "\u{4EBA}"
 
 //String
-var welcomeMessage = "Hi user!  Thanks for downloading!"
+var welcomeMessage = "Hi user! Thanks for downloading!"
 var outOfBagels = "Error: no more bagels"
 var exitMessage = "Thanks so much for playing!  Remember to rate our app!"
 
@@ -171,7 +170,7 @@ let nessieMoney = 3.50
 //Character
 let firstLetter: Character = "A"
 let lastLetter: Character = "Z"
-let questionMark: Characger = "?"
+let questionMark: Character = "?"
 
 //String
 let testmsg = "This is the default testing message"

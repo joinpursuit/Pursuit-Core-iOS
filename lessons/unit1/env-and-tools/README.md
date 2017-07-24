@@ -1,44 +1,74 @@
-# Slides
+# Tools and Installations
 
-The [slides from today](https://docs.google.com/presentation/d/1S6h_P-BGW3njtCvbZaej6wt0SzOdlp1bslxiQh3MLPo/edit?usp=sharing) are available.
+### Objective
 
-# Install Xcode
+* To install the tools (XCode and Slack) used during the course
+* To register and sign into accounts used during the course (Github and Slack)
+
+### Readings
+1. [UNIX Shell](https://en.wikipedia.org/wiki/Shell_(computing))
+
+#### Resources
+1. [Intro to App Development with Swift - Apple](https://itunes.apple.com/us/book/intro-to-app-development-with-swift/id1118575552?mt=11)
+
+
+#### Vocabulary
+
+1. **Operating System** - Software that is responsible for running programs and managing reources on a computer.
+1. **Shell** - A command line interface or window onto an operating system.
+
+---
+
+### Xcode
 
 1. From your Macbook, open the App Store.
 2. Search for *Xcode*.
-  * Note: Make sure you’re downloading Version 7.3.1. Do not download Xcode Beta 8 at this point. 
+  * Note: Make sure you’re downloading Version 8. Do not download Xcode Beta 9 at this point. 
 3. Press ‘Get’ and then ‘Install App’. 
 4. You will now be prompted to provide your AppleID. If you do not have one, create one. Once you’ve provided a correct AppleID, click Buy.
   * Note: Xcode is free. You do not have to make any purchases to download and use Xcode.
 4. When download is complete, open *Xcode* from your Applications folder. 
 5. The first time you open *Xcode* it’ll ask to install some additional components, allow it.
 6. Once complete, you should see a “Welcome to Xcode” screen. 
-7. Congratulations! You have successfully downloaded Xcode. Now you’re able to do the pre-work assignment in directory: /lessons/prework 
+7. Congratulations! You have successfully downloaded and installed Xcode. Now you’re able to do the pre-work assignment in directory: /lessons/prework 
 
-# Install Slack
+
+
+### Slack
 1. Download and install desktop client from http://slack.com
 2. Optionally install the mobile client.
 
-# Setup github
+### Github
 ## Create a github account
 
 [Create a github account](http://github.com) if you don't already have one.
 
-#Terminal commands
-Note: Commands will look like 
+### Terminal
 
-```shell
-$ git add -A
+The *Terminal* program on your Mac opens a text based interface to your computer. This is sometimes called a CLI for command line interface. Since the Mac's operating system (OS) is a version of UNIX much of what you discover about UNIX will be applicable to the Mac's command line.
+
+An example of a command typed into Terminal. 
+
+```bash
+$ ls
 ```
-The dollar sign just indicates that it's a terminal command.  Don't type the "$" character.
 
-##Helpful terminal commands
+The dollar sign is a _prompt_. You type your command after it and hit enter. Some commands take one or more arguments (inputs). Some don't. Don't type the "$" character itself.
+
+A command that's being given one argument.
+
+```bash
+$ git log
+```
+
+#### Helpful terminal commands
 
 |Command |Description|Example|
 |--------|-----------|-------|
+| man    | "manual", it prints comprehensive documentation to the window | man ls|
 | pwd    | "print working directory", it tells you your directory/folder | pwd -> /Users/lara |
-| cd     | "change directory", this moves to a directory | cd Desktop |
 | ls     | lists all files in the directory | ls |
+| cd     | "change directory", this moves to a directory | cd Desktop |
 | rm     | "remove", this deletes a file (careful! NO UNDO) | rm README.md |
 | mkdir  | Makes an empty folder in the current directory | mkdir SurveyInformation |
 | cat    | Displays the text of a file in terminal | cat README.md |
@@ -50,9 +80,6 @@ The dollar sign just indicates that it's a terminal command.  Don't type the "$"
 | git pull   | Updates your local copy to match what it's cloned from | git pull origin master |
 | git status | Shows you the current state of your "working tree" | git status |
 | git diff   | Shows all the differences between your working tree and the previous version | git diff |
-
-* Google for "unix commands"
-* Google for "git cheatsheet"
 
 ## Creating Pull Requests
 
