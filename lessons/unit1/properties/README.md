@@ -227,6 +227,46 @@ Override `personalStatement` in `Actor` to say something actorly, in a general w
 
 ---
 
+### 6. Access Control
+
+Access control restricts access to parts of your code from code in other source files and modules. This feature enables you to hide the implementation details of your code, and to specify a preferred interface through which that code can be accessed and used.
+
+#### Access Levels
+Swift provides five different access levels for entities within your code. These access levels are relative to the source file in which an entity is defined.
+
+|Access Level | Description |
+| :-----: | :-----: |
+| Open | The highest (least restrictive) access level. Same as Public level except applies only to classes and class members.|
+| Public | Enables entities to be used within any source file from their defining module, and also in a source file from another module that imports the defining module. You typically use open or public access when specifying the public interface to a framework.|
+| Internal | Enables entities to be used within any source file from their defining module, but not in any source file outside of that module. You typically use internal access when defining an app’s or a framework’s internal structure. |
+| Fileprivate | Restricts the use of an entity to its own defining source file. Use file-private access to hide the implementation details of a specific piece of functionality when those details are used within an entire file.|
+| Private | Restricts the use of an entity to the enclosing declaration, and to extensions of that declaration that are in the same file. Use private access to hide the implementation details of a specific piece of functionality when those details are used only within a single declaration.|
+
+
+You can define the access level for an entity by placing one of the `open`, `public`, `internal`, `fileprivate`, or `private` modifiers before the entity’s introducer:
+
+```swift
+public class SomePublicClass {}
+internal class SomeInternalClass {}
+fileprivate class SomeFilePrivateClass {}
+private class SomePrivateClass {}
+ 
+public var somePublicVariable = 0
+internal let someInternalConstant = 0
+fileprivate func someFilePrivateFunction() {}
+private func somePrivateFunction() {}
+```
+
+Unless otherwise specified, the default access level is internal. This means that `SomeInternalClass` and `someInternalConstant` can be written without an explicit access-level modifier, and will still have an access level of internal:
+
+
+```swift
+class SomeInternalClass {}     // implicitly internal
+let someInternalConstant = 0   // implicitly internal
+```
+
+---
+
 ### Review
 
 * Compare and contrast the use of stored and computed properties.

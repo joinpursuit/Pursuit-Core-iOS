@@ -9,13 +9,13 @@
 
 ### Readings
 1. Swift Programming: The Big Nerd Ranch Guide, Chapter 15, Structs and Classes
-1. Apple's [Swift Language Reference, Classes and Structures](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-ID82)
+1. [Swift Language Reference, Classes and Structures](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-ID82)
 1. [Swift Language Reference, Methods](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Methods.html#//apple_ref/doc/uid/TP40014097-CH15-ID234)
 
 #### Vocabulary
 1. **Base Class** -  a class that does not inherit from another class.
 1. **Encapsulation** - means that objects keep their state information private.
-1. **Inherit/Inheritance** - means that objects of one class can derive part of their behavior from a base or parent class. When one class inherits from another, the inheriting class is known as a __subclass__, and the class it inherits from is known as its __superclass__. 
+1. **Inherit/Inheritance** - means that objects of one class can derive part of their behavior from a base or parent class. 
 1. **Initialization** - the process of preparing an instance of a class, structure, or enumeration for use by setting an initial value for each stored property on that instance.
 1. **Instance** - a single and unique member of a class (or structure) that has specified values rather than variables, and represents an object. In a non-programming context, you could think of "dog" as a class and your particular pet dog as an instance of that class.
 1. **Instantiation** - "Humans are born. Objects are instantiated. A baby is an instance of a Human, an object is an instance of some Class." [-More on Initialization vs Instantiation](https://stackoverflow.com/questions/2330767/what-is-the-difference-between-instantiated-and-initialized)
@@ -134,9 +134,6 @@ You can access the properties of an instance using **dot syntax**. In dot syntax
 print("The width of someResolution is \(someResolution.width)")
 print("The width of lowRes is \(lowRes.width)")
 ```
-
----
-
 ### 5. Classes are Reference Types
 
 Unlike value types, reference types are not copied when they are assigned to a variable or constant, or when they are passed to a function. Rather than a copy, a reference to the same existing instance is used instead.
@@ -161,49 +158,9 @@ Because classes are reference types, `tenEighty` and `alsoTenEighty` actually bo
 
 Note that `tenEighty` and `alsoTenEighty` are declared as constants, rather than variables. However, you can still change `tenEighty.frameRate` and `alsoTenEighty.frameRate` because the values of the `tenEighty` and `alsoTenEighty` constants themselves do not actually change. `tenEighty` and `alsoTenEighty` themselves do not “store” the `VideoMode` instance. Instead, they both refer to a `VideoMode` instance behind the scenes. It is the `frameRate` property of the underlying `VideoMode` that is changed, not the values of the constant references to that `VideoMode`.
 
-### 6. Inheritance
+---
 
-In my opinion, there's a little too much fascination with inheritance. It is necessary to learn, but you spend more time simply modeling one thing than you do developing a hierarchy.
-
-To get started, **encapsulation** is the more important concept to understand than inheritance is. Encapsulation in Swift in achieved with __Access Control__. 
-
-Access control restricts access to parts of your code from code in other source files and modules. This feature enables you to hide the implementation details of your code, and to specify a preferred interface through which that code can be accessed and used.
-
-#### Access Levels
-Swift provides five different access levels for entities within your code. These access levels are relative to the source file in which an entity is defined.
-
-|Access Level | Description |
-| :-----: | -----: |
-| Open | The highest (least restrictive) access level. Same as Public level except applies only to classes and class members.|
-| Public | Enables entities to be used within any source file from their defining module, and also in a source file from another module that imports the defining module. You typically use open or public access when specifying the public interface to a framework.|
-| Internal | Enables entities to be used within any source file from their defining module, but not in any source file outside of that module. You typically use internal access when defining an app’s or a framework’s internal structure. |
-| Fileprivate | Restricts the use of an entity to its own defining source file. Use file-private access to hide the implementation details of a specific piece of functionality when those details are used within an entire file.|
-| Private | Restricts the use of an entity to the enclosing declaration, and to extensions of that declaration that are in the same file. Use private access to hide the implementation details of a specific piece of functionality when those details are used only within a single declaration.|
-
-
-You can define the access level for an entity by placing one of the `open`, `public`, `internal`, `fileprivate`, or `private` modifiers before the entity’s introducer:
-
-```swift
-public class SomePublicClass {}
-internal class SomeInternalClass {}
-fileprivate class SomeFilePrivateClass {}
-private class SomePrivateClass {}
- 
-public var somePublicVariable = 0
-internal let someInternalConstant = 0
-fileprivate func someFilePrivateFunction() {}
-private func somePrivateFunction() {}
-```
-
-Unless otherwise specified, the default access level is internal. This means that `SomeInternalClass` and `someInternalConstant` can be written without an explicit access-level modifier, and will still have an access level of internal:
-
-
-```swift
-class SomeInternalClass {}     // implicitly internal
-let someInternalConstant = 0   // implicitly internal
-```
-
-### 7. Instance methods
+### 6. Instance methods
 
 Instance methods are functions that belong to instances of a particular class, structure, or enumeration. They support the functionality of those instances, either by providing ways to access and modify instance properties, or by providing functionality related to the instance’s purpose.
 
@@ -281,7 +238,7 @@ if somePoint.isToTheRightOf(x: 1.0) {
 
 Without the `self` prefix, Swift would assume that both uses of `x` referred to the method parameter called `x`.
 
-### 8. Type Methods
+### 7. Type Methods
 
 Type methods are methods that are called on the type itself. You indicate type methods by including the `static` keyword immediately before the method's `func` keyword. Type methods can be used in classes, structs, and enumerations. Classes may also use the `class` keyword to allow subclasses to override the superclass’s implementation of that method.
 
@@ -301,6 +258,102 @@ SomeClass.someTypeMethod()
 ```
 
 Within the body of a type method, the implicit `self` property refers to the type itself, rather than an instance of that type. This means that you can use `self` to disambiguate between type properties and type method parameters, just as you do for instance properties and instance method parameters.
+
+
+### 8. Inheritance
+
+A class can inherit methods, properties, and other characteristics from another class. When one class inherits from another, the inheriting class is known as a __subclass__, and the class it inherits from is known as its __superclass__.
+
+Classes in Swift can call and access methods, properties, and subscripts belonging to their superclass and can provide their own overriding versions of those methods, properties, and subscripts to refine or modify their behavior.
+
+#### Defining a Base Class
+
+Any class that does not inherit from another class is known as a base class. Swift classes do not inherit from a universal base class. Classes you define without specifying a superclass automatically become base classes for you to build upon.
+
+```swift
+class Vehicle {
+    var currentSpeed = 0.0
+    var description: String {
+        return "traveling at \(currentSpeed) miles per hour"
+    }
+    func makeNoise() {
+        // do nothing - an arbitrary vehicle doesn't necessarily make a noise
+    }
+}
+```
+
+The code above defines a base class called `Vehicle`.
+
+#### Subclassing
+
+Subclassing is the act of basing a new class on an existing class. The subclass inherits characteristics from the existing class, which you can then refine. You can also add new characteristics to the subclass.
+
+To indicate that a subclass has a superclass, write the subclass name before the superclass name, separated by a colon:
+
+__General Syntax:__
+```swift
+class SomeSubclass: SomeSuperclass {
+    // subclass definition goes here
+}
+```
+
+Let's subclass our base class `Vehicle`:
+
+```swift
+class Bicycle: Vehicle {
+    var hasBasket = false
+}
+```
+
+The new `Bicycle` class automatically gains all of the characteristics of `Vehicle`, such as its `currentSpeed` and `description` properties and its `makeNoise()` method.
+
+In addition to the characteristics it inherits, the `Bicycle` class defines a new stored property, `hasBasket`, with a default value of false. You can also modify the inherited currentSpeed property of a Bicycle instance, and query the instance’s inherited description property:
+
+```swift
+let bicycle = Bicycle()
+
+bicycle.hasBasket = true
+bicycle.currentSpeed = 15.0
+
+print("Bicycle: \(bicycle.description)")
+// Bicycle: traveling at 15.0 miles per hour
+```
+
+Subclasses can themselves be subclassed. The next example creates a subclass of `Bicycle` for a two-seater bicycle known as a `Tandem`:
+
+```swift
+class Tandem: Bicycle {
+    var currentNumberOfPassengers = 0
+}
+```
+
+#### Overriding
+
+A subclass can provide its own custom implementation of an instance method, type method, instance property, type property, or subscript that it would otherwise inherit from a superclass. This is known as overriding.
+
+To override a characteristic that would otherwise be inherited, you prefix your overriding definition with the `override` keyword. Doing so clarifies that you intend to provide an override and have not provided a matching definition by mistake. 
+
+The `override` keyword also prompts the Swift compiler to check that your overriding class’s superclass (or one of its parents) has a declaration that matches the one you provided for the override. This check ensures that your overriding definition is correct.
+
+__Overriding Methods__
+
+You can override an inherited instance or type method to provide a tailored or alternative implementation of the method within your subclass.
+
+The following example defines a new subclass of `Vehicle` called `Train`, which overrides the `makeNoise()` method that `Train` inherits from `Vehicle`:
+
+```swift
+class Train: Vehicle {
+    override func makeNoise() {
+        print("Choo Choo")
+    }
+}
+
+let train = Train()
+train.makeNoise()
+// Prints "Choo Choo"
+```
+
+When you create a new instance of `Train` and call its `makeNoise()` method, you can see that the `Train` subclass version of the method is called.
 
 ---
 
