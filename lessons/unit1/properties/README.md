@@ -235,7 +235,7 @@ Access control restricts access to parts of your code from code in other source 
 Swift provides five different access levels for entities within your code. These access levels are relative to the source file in which an entity is defined.
 
 |Access Level | Description |
-| :-----: | :-----: |
+| :-----: | :----- |
 | Open | The highest (least restrictive) access level. Same as Public level except applies only to classes and class members.|
 | Public | Enables entities to be used within any source file from their defining module, and also in a source file from another module that imports the defining module. You typically use open or public access when specifying the public interface to a framework.|
 | Internal | Enables entities to be used within any source file from their defining module, but not in any source file outside of that module. You typically use internal access when defining an app’s or a framework’s internal structure. |
