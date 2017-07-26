@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:movies.xcodeproj">
+      location = "self:AC-iOS-StructsClasses.xcodeproj">
    </FileRef>
 </Workspace>
