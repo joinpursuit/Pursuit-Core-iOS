@@ -60,12 +60,18 @@ is used both in direct coding applications as well as metaphorically about any p
 
 - **native**: We distinguish a native app from a web-based solution. Native apps have the potential to perform better with more complicated and sophisticated features and interfaces. The contrast is a cross-platform or web-based app. 
 
+- **operating System** - Software that is responsible for running programs and managing reources on a computer.
+
 - **parameter**: An input to a function, specifically in its definition, related to argument. A function can define zero, one or many parameters. Most languages also provide a way to pass a variable number of arguments. 
+
+- **path** - The address of a file or folder on your computer such as /Users/elmo/Desktop/Garden.png.
 
 - **server** - A computer system that processes requests via HTTP. The term can refer to the entire system, or specifically to the software that accepts and supervises the HTTP requests.
 
 - **set**: v. To assign a value to a variable.
 	adj. The state in which a variable has a value. For example, the variable numberOfHamburgers is currently set (it is equal to 10). This is in contrast to unset/nil/null.
+
+- **shell** - A command line interface or window onto an operating system.
 
 - **tuple** - A group of zero or more values represented as one value. A tuple is defined by a comma-separated list of types, enclosed in parentheses.
 
