@@ -230,7 +230,6 @@ Access control restricts access to parts of your code from code in other source 
 #### Access Levels
 Swift provides five different access levels for entities within your code. These access levels are relative to the source file in which an entity is defined.
 
-| :-----: | :-----: |
 |Access Level | Description |
 | :-----: | :----- |
 | Open | The highest (least restrictive) access level. Same as Public level except applies only to classes and class members.|
