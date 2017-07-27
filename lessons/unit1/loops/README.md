@@ -180,6 +180,26 @@ while number > 1 {
 
 Programmers put a lot of effort into avoiding endless loops because they generally make your program freeze and can even crash the computer it's running on. But you should know there are important uses for the endless loop. Apps, in fact, are running in an endless loop as they wait for input from the user.
 
+```swift
+// Zeno's double secret paradox?
+var doubleNumber = 20.0
+while doubleNumber > 0.01 {
+    doubleNumber /= 2.0
+    
+    print(doubleNumber)
+}
+```
+**Question**: Using 0.01 as the threshold results in 11 iterations. But setting the threshold to 0.0 doesn't loop endlessly as it should according to the laws of math. Why not?
+
+<details>
+<summary><b>Solution</b></summary>
+
+>The Double datatype doesn't have infinite precision. Halving it over and over will eventually drive its value down to zero.
+
+</details>
+
+
+
 ### 7. ```repeat-while```
 
 ```swift
@@ -265,27 +285,7 @@ while shields > 0 {
 }
 ```
 
-### 10. ```while``` Challenge
-
-```swift
-// Zeno's double secret paradox?
-var doubleNumber = 20.0
-while doubleNumber > 0.01 {
-    doubleNumber /= 2.0
-    
-    print(doubleNumber)
-}
-```
-**Question**: Using 0.01 as the threshold results in 11 iterations. But setting the threshold to 0.0 doesn't loop endlessly as it should according to the laws of math. Why not?
-
-<details>
-<summary><b>Solution</b></summary>
-
->The Double datatype doesn't have infinite precision. Halving it over and over will eventually drive its value down to zero.
-
-</details>
-
-### 11. Nesting
+### 10. Nesting
 
 Loops can be nested. A simple way to visualize it is with a 2-dimensional matrix.
 
@@ -298,7 +298,7 @@ for i in 1...5 {
 }
 ```
 
-### 12. Labels
+### 11. Labels
 
 Loops can be labeled so that ```continue``` and ```break``` used in nested loops can act on a loop other than the innermost one, which is the default.
 
