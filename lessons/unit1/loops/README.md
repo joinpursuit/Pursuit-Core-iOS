@@ -49,6 +49,13 @@ The first step here is to forget a little bit of what you learned about the synt
 ```for``` implicitly declares a constant iterator that will be incremented at each iteration of the loop.
 
 ```swift
+for currentNumber in 3..<18 {
+    print(currentNumber)
+}
+```
+
+```swift
+//Make this the "You Do"
 for index in 1...5 {
     print("\(index) times 5 is \(index * 5)")
 }
@@ -63,6 +70,13 @@ for index in 1...5 {
 If you only want to iterate a number of times but don't need to use the index you can replace it with the ```_``` (underscore) character.
 
 ```swift
+for _ in 0..<10 {
+    print("Hello there!")
+}
+```
+
+```swift
+//Probably give this as an exercise
 let base = 3
 let power = 10
 var answer = 1
