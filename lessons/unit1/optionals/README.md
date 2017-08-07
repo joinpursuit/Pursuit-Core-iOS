@@ -13,6 +13,8 @@
 
 #### Further Reading
 
+1. [Swift optionals explained simply](https://hackernoon.com/swift-optionals-explained-simply-e109a4297298) This article is in Swift 2 syntax and becomes increasingly difficult but the box metaphor and illustration is useful.
+
 #### Vocabulary
 
 - **optional** - A Swift type that wraps another allowing it to either have a value or be nil.
@@ -26,15 +28,19 @@
 
 ---
 
-### Introduction
+### 1. Introduction
 
 You use optionals in situations where a value may be absent. An optional represents two possibilities: Either there is a value, and you can unwrap the optional to access that value, or there isn’t a value at all.
 
-#### Warm up
+> Optional is just a type in Swift language, nothing fancy. `Int` and `Int?` [read 'Optional Int'] are two different types.  If your variable is of type `Int` you can be absolutely sure it will always have an integer value, and if your variable is of type `Int?` it will have either an `Int` value or it will have no value at all (in other words, it will be nil).
+>
+> Think of optional as a wrapper. It’s like a gift box which wraps the value inside, and like a real-life box, Optional can either contain something or be empty.
+> – Lusine Margaryan, Hackernoon
 
-Thought experiment. Imagine we’re writing code that interfaces with a digital thermometer. This thermometer populates one Swift variable called `temperature`. When we first plug in the thermometer what value should we give it? 
 
-#### Exercise 
+### 2. The Case for Optionals 
+
+Thought experiment. Imagine we’re writing code that interfaces with a digital thermometer. This thermometer populates one Swift variable called `temperature`. When we first plug in the thermometer what value should we give it? What value should we set the value of `temperature` when we detect the physical device is broken?
 
 1. Declare and initialize a variable of type Double called `temperature`.
 
@@ -48,7 +54,8 @@ Thought experiment. Imagine we’re writing code that interfaces with a digital 
 1. How would you re-initialize `temperature`?
 
 	<details>
-	<summary>Solution</summary>	```swift
+	<summary>Solution</summary>	
+	```swift
 	var temperature = 0.0
 	temperature = -273.0
 	temperature = 212.0
@@ -86,32 +93,42 @@ Thought experiment. Imagine we’re writing code that interfaces with a digital 
 	```
 	</details>
 
-Let's re-declare temperature as an Optional
+Let's re-declare temperature as an `Optional`
 
 ```swift
 var temperature: Double?
 
-// we'll soon learn a better way of doing this
+// we'll soon learn a better way of checking if an optional is not nil
 if temperature != nil && temperature! < 10 {
     print(temperature!)
 }
 ```
 
-Note, we no longer have to initialize it. Or more accurately, it's automatically initialized to nil. In addition to helping us write safer code, which we'll explore later, Optionals can make our code easier to read. We know that this variable, an optional, may or may not have a value (i.e. it may be nil).
+Note, we no longer have to initialize `temperature`. Or more accurately, it's automatically initialized to nil. In addition to helping us write safer code, which we'll explore later, Optionals can make our code easier to read. We know that this variable, an optional, and as such may or may not have a value.
 
-# Exercises
+#### Exercise
 
-Declare an optional String, Int, and Double.
-
+Declare an optional `String`, `Int`, and `Double`.
+	<details>
+		<summary>A solution</summary>
 ```swift
-// imagine a book selling app
-// a book may or may not have a dedication, reviews or a discount
-var bookDedication: String?
-var bookReviewCount: Int?
-var bookDiscount: Double?
+var middleName: String?
+var zipCode: Int?
+var meters: Double?
 ```
+	</details>
 
-Print an assigned optional. What do you see?
+### 3. Optionals and their wrapped type
+
+Let's imagine a book selling app: BuyBooks. Any book for sale in the app may or may not have a dedication, reviews or a discount. We might declare the following `Optional` variables to store this data:
+
+	```swift
+	var bookDedication: String?
+	var bookReviewCount: Int?
+	var bookDiscount: Double?
+	```
+
+Print these Optionals. What do you see?
 
 ```swift
 print(bookDedication)
@@ -119,54 +136,130 @@ print(bookDedication)
 // prints 'nil'
 ```
 
-Declare a non-optional without assigning it and print it
+Let's declare a non-optional without assigning it and print it.
+
 ```swift
-var bookTitle: String
+var bookTitle: String // declaration
 print(bookTitle)
 // error: variable 'bookTitle' used before being initialized
 ```
 
-Declare two variables, one as a non-Optional and another as an Optional of that type. 
+Now, let's declare two variables, one a non-Optional and the other an Optional wrapping that type. 
 Try assigning them to one another.
 
 ```swift
 var bookTitle: String = "The Hobbit"
-var secondTitle: String?
-//secondTitle = "There and Back Again"
-print(bookTitle)
+var alternateTitle: String?
+alternateTitle = "There and Back Again"
+print(bookTitle, alternateTitle)
 
-secondTitle = bookTitle // this works
-print(secondTitle)
+alternateTitle = bookTitle // 😺 this works
+print(alternateTitle)
 
-bookTitle = secondTitle // this doesn't
-
-// we need to unwrap secondTitle
-bookTitle = secondTitle! // ! force-unwraps (not the best way in _most_ cases)
+bookTitle = alternateTitle // 💥 this doesn't
 ```
 
-## Exercises
+😺 A `String?` can be assigned a `String` because an Optional can hold either nil or its associated type, in this case `String`. 
 
-1. Force unwrap an optional and print.
-1. Force unwrap an unset optional and print.
+💥 A `String`, however, cannot be assigned the value of an `Optional` because they are not the same type. 
 
-Observe how Force unwrapping can trigger runtime errors (crash).
 
-**Questions**: 
+### 4. Force unwrapping
 
-* What is the difference between a compile time error and a run time error. 
-* Which is better?
-* How do optionals protect us from run time errors?
+In order to use the value inside an Optional we must unwrap it. The simplest syntax for unwrapping is to force unwrap the Optional with the `!` operator. 
 
-Force unwrapping essentially disables this protection.
+```swift
+// String? example
+var middleName: String? = "Ronald"
+print(middleName!)
 
-## Optional Binding
-Binding to the rescue. Binding allows us to query an optional for set/nil status. 
+// Double? example
+var meters: Double? = 2.11
+let tripleTheMeters = meters! * 3.0
+
+// Int? example
+var zipCode: Int? = 11101
+if zipCode! > 11100 {
+    print("I think we might be in Queens")
+}
+```
+
+The simplicity of force unwrapping comes at a price, however. Our app will crash if we force unwrap and the Optional's value is nil. By using this approach we will be throwing away a saftey feature that Optionals give us. And that is that we can check their value for nil.
+
+We can return to the problem above and use force unwrapping to assign the _value inside_ `alternateTitle` to `bookTitle`:
+
+```swift
+// we need to unwrap alternateTitle before we assign in to bookTitle
+bookTitle = alternateTitle!
+```
+
+<details>
+	<summary>What would happen if `alternateTitle` were nil?</summary>
+The app would crash.
+</details>
+
+
+#### Exercises
+
+Given,
+
+```swift
+var mainCharacter: String?
+```
+
+1. Force unwrap `mainCharacter` and print it.
+
+	<details>
+		<summary>Solution</summary>
+		Observe how force unwrapping can trigger a runtime error (crash).
+		```swift
+		var mainCharacter: String?
+		print(mainCharacter!)
+		```
+	</details>
+1. Give `mainCharacter` a value to fix the problem.
+	<details>
+		<summary>Solution</summary>
+		```swift
+		var mainCharacter: String?
+		mainCharacter = "Bilbo"
+		print(mainCharacter!)
+		```
+	</details>
+
+1. What is the difference between a compile time error and a run time error? 
+	<details>
+		<summary>Answer</summary>
+		A compile time error is found while the compiler is compiling/interpreting your code. Your code is not runnable because it has a syntax error or other invalid code. A run time error, by contrast, happens when code compiles and runs but runs into a problem during execution. E.g. your program attemtps to divide by zero or access memory it doesn't own, or tries to force unwrap a nil Optional.
+	</details>
+
+1. Which is better, a compile time error or a run time error?
+	<details>
+		<summary>Answer</summary>
+		Compile time errors are better because they're encountered during development and the compiler can often give us more details about the error and solution. This is due, in part to the fact that compile time and run time errors are fundamentally different. By analogy, it's easier to fix spelling or even grammatical errors in an essay than it is to write excellent prose.
+	</details>
+
+1. How do optionals protect us from run-time errors?
+	<details>
+		<summary>Answer</summary>
+		They're designed to address a set of run-time errors that arise from data having no valid value. A constant or variable might be `nil` for a variety of reasons, including initialization and failure conditions. Optionals give us a mechanism for explicitly testing for `nil`.
+	</details>
+
+### 5. Binding
+
+So far we've either force unwrapped Optionals, which is dangerous and defeats the purpose of using them, or we explicitly checked for `nil` before force unwrapping, which is clunky, verbose and just not very Swifty. 
+
+Binding to the rescue. Binding allows us to test an optional for `nil` while setting a constant or variable to the unwrapped value, if not `nil`.
+
 
 ```swift
 var bookTitle: String = "The Hobbit"
 var secondTitle: String?
+var author: String = "J.R.R. Tolkien"
+var coAuthor: String?
 secondTitle = "There and Back Again"
 
+// bind the constant title to the value of secondTitle 
 if let title = secondTitle {
     print("Full title: \(bookTitle) or \(title)")
 }
@@ -174,9 +267,42 @@ else {
     print("Full title: \(bookTitle)")
 }
 ```
-### Unwrapping multiple optionals
 
-Consider this nested unwrapping of optionals:
+#### Exercises
+
+Given:
+
+```swift
+var bookTitle: String = "The Hobbit"
+var secondTitle: String?
+var author: String = "J.R.R. Tolkien"
+var coAuthor: String?
+secondTitle = "There and Back Again"
+```
+
+1. Bind `coAuthor` and print either both authors' names when it has a value. Fall back to just the main author otherwise.
+
+	<details>
+		<summary>Solution</summary>
+		```swift
+		if let otherAuthor = coAuthor {
+			print("Written by \(author) and \(otherAuthor)")
+		}
+		else {
+			print("Written by \(author)")
+		}
+		```
+	</details>
+
+1.  How will you test both conditions?
+	<details>
+		<summary>Solution</summary>
+		By setting and unsetting `coAuthor`.
+	</details>
+
+#### Binding more than one Optional
+
+Consider the case where we have two optionals, both of which we want to unwrap for a particular path of execution. The following nested unwrapping of optionals requires both `bookReviewCount` and `avgStarRating` to have values.
 
 ```swift
 var bookReviewCount: Int?
@@ -200,6 +326,8 @@ else {
 }
 ```
 
+We can decrease the depth of these nested blocks by separating the two bindings by a comma and sharing the block entered when both variables have values.
+
 ```swift
 var bookReviewCount: Int?
 var avgStarRating: Double?
@@ -207,7 +335,8 @@ var bookTitle: String = "The Hobbit"
 
 bookReviewCount = 28
 avgStarRating = 2.9
-if let count = bookReviewCount, rating = avgStarRating {
+if let count = bookReviewCount, 
+	let rating = avgStarRating {
     if (rating > 3) {
         print("\(bookTitle): \(rating) stars")
     }
