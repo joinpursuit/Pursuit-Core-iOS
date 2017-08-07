@@ -49,6 +49,13 @@ The first step here is to forget a little bit of what you learned about the synt
 ```for``` implicitly declares a constant iterator that will be incremented at each iteration of the loop.
 
 ```swift
+for currentNumber in 3..<18 {
+    print(currentNumber)
+}
+```
+
+```swift
+//Make this the "You Do"
 for index in 1...5 {
     print("\(index) times 5 is \(index * 5)")
 }
@@ -63,6 +70,13 @@ for index in 1...5 {
 If you only want to iterate a number of times but don't need to use the index you can replace it with the ```_``` (underscore) character.
 
 ```swift
+for _ in 0..<10 {
+    print("Hello there!")
+}
+```
+
+```swift
+//Probably give this as an exercise
 let base = 3
 let power = 10
 var answer = 1
@@ -166,6 +180,26 @@ while number > 1 {
 
 Programmers put a lot of effort into avoiding endless loops because they generally make your program freeze and can even crash the computer it's running on. But you should know there are important uses for the endless loop. Apps, in fact, are running in an endless loop as they wait for input from the user.
 
+```swift
+// Zeno's double secret paradox?
+var doubleNumber = 20.0
+while doubleNumber > 0.01 {
+    doubleNumber /= 2.0
+    
+    print(doubleNumber)
+}
+```
+**Question**: Using 0.01 as the threshold results in 11 iterations. But setting the threshold to 0.0 doesn't loop endlessly as it should according to the laws of math. Why not?
+
+<details>
+<summary><b>Solution</b></summary>
+
+>The Double datatype doesn't have infinite precision. Halving it over and over will eventually drive its value down to zero.
+
+</details>
+
+
+
 ### 7. ```repeat-while```
 
 ```swift
@@ -251,27 +285,7 @@ while shields > 0 {
 }
 ```
 
-### 10. ```while``` Challenge
-
-```swift
-// Zeno's double secret paradox?
-var doubleNumber = 20.0
-while doubleNumber > 0.01 {
-    doubleNumber /= 2.0
-    
-    print(doubleNumber)
-}
-```
-**Question**: Using 0.01 as the threshold results in 11 iterations. But setting the threshold to 0.0 doesn't loop endlessly as it should according to the laws of math. Why not?
-
-<details>
-<summary><b>Solution</b></summary>
-
->The Double datatype doesn't have infinite precision. Halving it over and over will eventually drive its value down to zero.
-
-</details>
-
-### 11. Nesting
+### 10. Nesting
 
 Loops can be nested. A simple way to visualize it is with a 2-dimensional matrix.
 
@@ -284,7 +298,7 @@ for i in 1...5 {
 }
 ```
 
-### 12. Labels
+### 11. Labels
 
 Loops can be labeled so that ```continue``` and ```break``` used in nested loops can act on a loop other than the innermost one, which is the default.
 
