@@ -88,6 +88,8 @@ Swift defines two kinds of initializers for class types to help ensure all store
 
 Designated initializers are the primary initializers for a class. A designated initializer fully initializes all properties introduced by that class and calls an appropriate superclass initializer to continue the initialization process up the superclass chain. __Every class must have at least one designated initializer__.
 
+Designated initializers for classes are written in the same way as simple initializers for value types:
+
 ```swift
 class Person {
     var name: String
@@ -113,7 +115,22 @@ Complete [Part 1 of AC-iOS-Initialization](https://github.com/C4Q/AC-iOS-Initial
 
 
 #### Convenience Initializers
-Convenience initializers let you have simpler initializers that just call through to a designated initializer.
+Convenience initializers let you have simpler initializers that just call through to a designated initializer. They are secondary, supporting initializers for a class.
+
+You can define a convenience initializer to:
+
+* Call a designated initializer from the same class as the convenience initializer with some of the designated initializer’s parameters set to default values 
+* Create an instance of that class for a specific use case or input value type.
+
+Convenience initializers are written in the same style as designated initializers, but with the `convenience` modifier placed before the `init` keyword, separated by a space:
+
+```swift
+convenience init(parameters) {
+    //statements
+}
+```
+
+You do not have to provide convenience initializers if your class does not require them. Create convenience initializers whenever a shortcut to a common initialization pattern will save time or make initialization of the class clearer in intent.
 
 __Exercise__
 Complete [Part 2 of AC-iOS-Initialization](https://github.com/C4Q/AC-iOS-Initialization)
@@ -121,7 +138,13 @@ Complete [Part 2 of AC-iOS-Initialization](https://github.com/C4Q/AC-iOS-Initial
 
 #### Failable Initalizers 
 
-Initializers can fail. It's more likely you'll be using these initializers (you certainly will be) than you'll be writing them. They follow the general rule of optionals.
+It is sometimes useful to define a class, structure, or enumeration for which initialization can fail. This failure might be triggered by invalid initialization parameter values, the absence of a required external resource, or some other condition that prevents initialization from succeeding. 
+
+To cope with initialization conditions that can fail, define one or more failable initializers as part of a class, structure, or enumeration definition. You write a failable initializer by placing a question mark after the init keyword (`init?`). 
+
+A failable initializer creates an optional value of the type it initializes. You write `return nil` within a failable initializer to indicate a point at which initialization failure can be triggered.
+
+>Strictly speaking, initializers do not return a value. Rather, their role is to ensure that self is fully and correctly initialized by the time that initialization ends. Although you write return nil to trigger an initialization failure, you do not use the return keyword to indicate initialization success.
 
 __Exercise__
 Complete [Part 3 of AC-iOS-Initialization](https://github.com/C4Q/AC-iOS-Initialization)
