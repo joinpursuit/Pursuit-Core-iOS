@@ -20,13 +20,13 @@ From Apple:
 
 ```swift
 enum CompassPoint {
-    case North
-    case South
-    case East
-    case West
+    case north
+    case south
+    case east
+    case west
 }
 
-let northDirection = CompassPoint.North
+let northDirection = CompassPoint.north
 ```
 
 ### 2. Switiching on Enum Cases
@@ -35,23 +35,23 @@ We refer to individual possible enumeration values as __cases__. It's no coincid
 
 ```swift
 enum ErrorCode {
-    case BadInput
-    case NoNetwork
-    case FileNotFound
+    case badInput
+    case noNetwork
+    case fileNotFound
 }
 
-let error = ErrorCode.NoNetwork
+let error = ErrorCode.noNetwork
 
 switch error {
-case ErrorCode.BadInput:
+case .badInput:
     print("Please re-enter your information.")
-case ErrorCode.NoNetwork:
+case .noNetwork:
     print("Please check your connection and try again.")
-case ErrorCode.FileNotFound:
+case .fileNotFound:
     print("Missing File. Please make sure your file exists at this location.")
 }
 ```
-Because Swift knows the type of the `ErrorCode` we don't need a default case because we can define an exhaustive set of `switch` cases.
+Because Swift knows the type of the `ErrorCode` we don't need a default case because we can define an exhaustive set of `switch` cases. If the case for `.fileNotFound` is omitted, this code would not compile, because it does not consider the complete list of `ErrorCode` cases. Requiring exhaustiveness ensures that enumeration cases are not accidentally omitted. When it is not appropriate to provide a case for every enumeration case, you can provide a default case to cover any cases that are not addressed explicitly.
 
 ### 3. Raw Value Enumerations
 
@@ -59,11 +59,11 @@ Enumeration cases can come prepopulated with default values, called __raw values
 
 ```swift
 enum NYCBoro: String {
-    case Queens = "Queens"
-    case Brooklyn = "Brooklyn"
-    case Manhattan = "Manhattan"
-    case Bronx = "Bronx"
-    case StatenIsland = "Staten Island"
+    case queens = "Queens"
+    case brooklyn = "Brooklyn"
+    case manhattan = "Manhattan"
+    case bronx = "Bronx"
+    case statenIsland = "Staten Island"
 }
 ```
 
@@ -79,7 +79,7 @@ When integers are used for raw values, the implicit value for each case is one m
 
 ```swift
 enum Planet: Int {
-    case Mercury = 1, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
+    case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
 }
 ```
 
@@ -117,8 +117,8 @@ You can define Swift enumerations to store associated values of any given type, 
 
 ```swift
 enum Barcode {
-    case UPCA(Int, Int, Int, Int)
-    case QRCode(String)
+    case upc(Int, Int, Int, Int)
+    case qrCode(String)
 }
 ```
 
@@ -138,6 +138,31 @@ productBarcode = .qrCode("ABCDEFGHIJKLMNOP")
 
 At this point, the original `Barcode.upc` and its integer values are replaced by the new `Barcode.qrCode` and its string value. Constants and variables of type `Barcode` can store _either_ a `.upc` or a `.qrCode` (together with their associated values), but they can only store one of them at any given time.
 
+#### Extracting Associated Values with a Switch Statement
+
+The different barcode types can be checked using a switch statement, as before. This time, however, the associated values can be extracted as part of the switch statement. You extract each associated value as a constant (with the `let` prefix) or a variable (with the `var` prefix) for use within the switch case’s body:
+
+```swift
+switch productBarcode {
+case .upc(let numberSystem, let manufacturer, let product, let check):
+    print("UPC: \(numberSystem), \(manufacturer), \(product), \(check).")
+case .qrCode(let productCode):
+    print("QR code: \(productCode).")
+}
+// Prints "QR code: ABCDEFGHIJKLMNOP."
+```
+
+If all of the associated values for an enumeration case are extracted as constants, or if all are extracted as variables, you can place a single var or let annotation before the case name, for brevity:
+
+```swift
+switch productBarcode {
+case let .upc(numberSystem, manufacturer, product, check):
+    print("UPC : \(numberSystem), \(manufacturer), \(product), \(check).")
+case let .qrCode(productCode):
+    print("QR code: \(productCode).")
+}
+// Prints "QR code: ABCDEFGHIJKLMNOP."
+```
 ---
 
 ### Review and Wrapup

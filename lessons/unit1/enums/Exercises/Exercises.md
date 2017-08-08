@@ -6,39 +6,83 @@
 
 <details>
 <summary><b>Solution</b></summary>
-
 ```swift
+enum iOSDeviceTypes {
+    case iPhone
+    case iPad
+    case iWatch
+}
 
-
-
+let myDevice = iOSDeviceTypes.iPhone
 ```
-
 </details>
 
 
-1b. Adjust your code above so that iPhone and iPad have associated values of type String which represents the model# eg: iPhone("6 Plus"). Use a switch case and let syntax to print out the model #.
+1b. Adjust your code above so that iPhone and iPad have associated values of type String which represents the model number, eg: iPhone("6 Plus"). Use a switch case and let syntax to print out the model number of each device.
 
 <details>
 <summary><b>Solution</b></summary>
 
 ```swift
+enum iOSDeviceTypes {
+    case iPhone(String)
+    case iPad(String)
+    case iWatch
+}
 
+let myIphone = iOSDeviceTypes.iPhone("iPhone SE")
+let myIpad = iOSDeviceTypes.iPad("iPad Pro")
 
+switch myIphone {
+case .iPhone(let phoneModel):
+    print("I have the \(phoneModel)")
+case .iPad(let model):
+    print("I have the \(model)")
+case .iWatch(let model):
+    print("I have the \(model)")
+}
 
+switch myIpad {
+case .iPhone(let phoneModel):
+    print("I have the \(phoneModel)")
+case .iPad(let model):
+    print("I have the \(model)")
+case .iWatch(let model):
+    print("I have the \(model)")
+}
 ```
 
 </details>
 
 
-2. Write an enum called `Shapes` and give it cases for `Triangles`, `Rectangles`, `Pentagons` and `Hexagons`. Write a method inside that returns how many sides the shape has.  Then assign a variable to `Shapes.Pentagon` and then print how many sides it has.
+2. Write an enum called `Shape` and give it cases for `triangle`, `rectangle`, `pentagon` and `hexagon`. Write a method inside that returns how many sides the shape has.  Then assign a variable to `Shape.pentagon` and then print how many sides it has.
 
 <details>
 <summary><b>Solution</b></summary>
 
 ```swift
+enum Shape {
+    case triangle
+    case pentagon
+    case rectangle
+    case hexagon
+    
+    static func countSidesIn(shape: Shape) -> Int {
+        switch shape {
+        case .triangle:
+            return 3
+        case .pentagon:
+            return 5
+        case .rectangle:
+            return 4
+        case .hexagon:
+            return 6
+        }
+    }
+}
 
-
-
+let deltaSymbol = Shape.triangle
+print(Shape.countSidesIn(shape: deltaSymbol))
 ```
 
 </details>
@@ -50,9 +94,31 @@
 <summary><b>Solution</b></summary>
 
 ```swift
+enum OperatingSystem: Int {
+    case windows
+    case mac
+    case linux
+}
 
+var operatingSystems: [OperatingSystem] = []
 
+for _ in 0...9 {
+    let randomRawValue = arc4random_uniform(2)
+    if let os = OperatingSystem(rawValue: Int(randomRawValue)) {
+        operatingSystems.append(os)
+    }
+}
 
+for os in operatingSystems {
+    switch os {
+    case .windows:
+        print("I love my PC!")
+    case .mac:
+        print("Mac are better than anything else!")
+    case .linux:
+        print("Seriously, who even owns one of these?!")
+    }
+}
 ```
 
 </details>
@@ -69,10 +135,10 @@ Print the final location of the character after all the steps have been taken.
 
 ```swift
 enum Direction {
-    case Up
-    case Down
-    case Left
-    case Right
+    case up
+    case down
+    case left
+    case right
 }
 
 var location = (x: 0, y: 0)
@@ -86,37 +152,64 @@ var steps: [Direction] = [.Up, .Up, .Left, .Down, .Left]
 <details>
 <summary><b>Solution</b></summary>
 
+
 ```swift
+enum Direction {
+    case up
+    case down
+    case left
+    case right
+}
 
+var location = (x: 0, y: 0)
 
+var steps: [Direction] = [.Up, .Up, .Left, .Down, .Left]
 
+for step in steps {
+    switch step {
+    case .up:
+        location.x += 1
+    case .down:
+        location.x -= 1
+    case .left:
+        location .y -= 1
+    case .right:
+        location.y += 1
+    }
+}
+
+print(location)
 ```
 
 </details>
 
 
-5a. Define an enumeration named `HandShape` with three members: `.Rock`, `.Paper`, `.Scissors`.
+5a. Define an enumeration named `HandShape` with three members: `.rock`, `.paper`, `.scissors`.
 
 <details>
 <summary><b>Solution</b></summary>
 
 ```swift
-
-
-
+enum HandShape {
+    case rock
+    case paper
+    case scissors
+}
 ```
 
 </details>
 
-5b. Define an enumeration named `MatchResult` with three members: `.Win`, `.Draw`, `.Lose`.
+5b. Define an enumeration named `MatchResult` with three members: `.win`, `.draw`, `.lose`.
 
 <details>
 <summary><b>Solution</b></summary>
 
 ```swift
-
-
-
+enum MatchResult {
+    case win
+    case lose
+    case draw
+}
 ```
 
 </details>
@@ -129,9 +222,39 @@ var steps: [Direction] = [.Up, .Up, .Left, .Down, .Left]
 <summary><b>Solution</b></summary>
 
 ```swift
+func match(player1: HandShape, player2: HandShape) -> MatchResult {
+    switch player1 {
+    case .paper:
+        switch player2 {
+        case .paper:
+            return .draw
+        case .rock:
+            return .win
+        case .scissors:
+            return .lose
+        }
+    case .rock:
+        switch player2 {
+        case .paper:
+            return .lose
+        case .rock:
+            return .draw
+        case .scissors:
+            return .win
+        }
+    case .scissors:
+        switch player2 {
+        case .paper:
+            return .win
+        case .rock:
+            return .lose
+        case .scissors:
+            return .draw
+        }
+    }
+}
 
-
-
+match(player1: .paper, player2: .rock)
 ```
 
 </details>
@@ -141,18 +264,19 @@ var steps: [Direction] = [.Up, .Up, .Left, .Down, .Left]
 
 ```swift
 enum CoinType: Int {
-    case Penny = 1
-    case Nickle = 5
-    case Dime = 10
-    case Quarter = 25
+    case penny = 1
+    case nickle = 5
+    case dime = 10
+    case quarter = 25
 }
 
-var moneyArray:[(Int,CoinType)] = [(10,.Penny),
-(15,.Nickle),
-(3,.Quarter),
-(20,.Penny),
-(3,.Dime),
-(7,.Quarter)]
+var moneyArray:[(Int,CoinType)] = [(10,.penny),
+                                   (15,.nickle),
+                                   (3,.quarter),
+                                   (20,.penny),
+                                   (3,.dime),
+                                   (7,.quarter)]
+
 
 // your code here
 
@@ -162,9 +286,29 @@ var moneyArray:[(Int,CoinType)] = [(10,.Penny),
 <summary><b>Solution</b></summary>
 
 ```swift
+enum CoinType: Int {
+    case penny = 1
+    case nickle = 5
+    case dime = 10
+    case quarter = 25
+}
+
+var moneyArray:[(Int,CoinType)] = [(10,.penny),
+                                   (15,.nickle),
+                                   (3,.quarter),
+                                   (20,.penny),
+                                   (3,.dime),
+                                   (7,.quarter)]
 
 
+var total = 0
 
+for moneyTuple in moneyArray {
+    let value = moneyTuple.1.rawValue * moneyTuple.0
+    total += value
+}
+
+print(total)
 ```
 
 </details>
@@ -175,9 +319,20 @@ var moneyArray:[(Int,CoinType)] = [(10,.Penny),
 <summary><b>Solution</b></summary>
 
 ```swift
+enum CoinType: Int {
+    case penny = 1
+    case nickle = 5
+    case dime = 10
+    case quarter = 25
+    
+    static func findQuantityToMakeDollar(with coin: CoinType) -> Int {
+        return 100 / coin.rawValue
+    }
+}
 
 
-
+let nickel = CoinType.nickle
+print(CoinType.findQuantityToMakeDollar(with: nickel))
 ```
 
 </details>
