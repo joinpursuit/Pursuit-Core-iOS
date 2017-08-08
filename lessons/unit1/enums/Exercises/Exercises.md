@@ -6,6 +6,7 @@
 
 <details>
 <summary><b>Solution</b></summary>
+
 ```swift
 enum iOSDeviceTypes {
     case iPhone
