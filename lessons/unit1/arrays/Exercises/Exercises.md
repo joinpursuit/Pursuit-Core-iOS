@@ -310,6 +310,7 @@ var secondSmallest = Int.max
 
 for age in ages {
     if age < smallest {
+        secondSmallest = smallest
         smallest = age
     } else if age > smallest && age < secondSmallest {
         secondSmallest = age
