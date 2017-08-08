@@ -1,12 +1,12 @@
-# Access Code 3.2: Mobile Development with iOS
+# Access Code 4.2: Mobile Development with iOS
 
-In preparation for the Midterm on Thursday, Dec 8 we will be 
-reviewing APIs this week. Here's a [run down of API projects](/resources/API-Projects.md) 
-we've done.
+## Welcome!
 
-## Schedule
+This is where you'll find some common resources as well as full lessons through Unit 1.
 
-* [Link to calendar](https://calendar.google.com/calendar/embed?src=accesscode%40c4q.nyc&ctz=America/New_York)
-* [Lesson Schedule](/schedule.md)
-* [Curriculum Overview](/curriculum_overview.pdf)
+- [Vocabulary](resources/vocabulary.md)
 
+- Let's use Ray Wenderlich's [Style Guide](https://github.com/raywenderlich/swift-style-guide)
+	**except** we'll continue to use XCode's default indent of 4 spaces.
+
+- Some pointers about [Git](resources/git.md)
