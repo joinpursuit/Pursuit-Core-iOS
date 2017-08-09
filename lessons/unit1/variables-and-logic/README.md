@@ -236,7 +236,7 @@ We can create <b>truth tables</b> to show how these relationships play out.
 Let's go ahead and create them now.
 
 <details>
-<summary><b><i>Click Here to Toggle Solution</i></b></summary>
+<summary><b><i>Click Here to Toggle Solution p && q</i></b></summary>
 
 | p | q | p && q|
 |---|---|---|
@@ -245,6 +245,11 @@ Let's go ahead and create them now.
 | false | true | false|
 | false | false | false|
 
+</details>
+
+<details>
+<summary><b><i>Click Here to Toggle Solution p &#124;&#124; q</i></b></summary>
+
 | p | q | p &#124;&#124; q|
 |---|---|---|
 | true | true | true | 
@@ -252,6 +257,18 @@ Let's go ahead and create them now.
 | false | true | true |
 | false | false | false |
 </details>
+
+<details>
+<summary><b><i>Click Here to Toggle Solution !p &#124;&#124; q</i></b></summary>
+
+| p | q | !p &#124;&#124; q|
+|---|---|---|
+| true | true | true | 
+| true | false | false |
+| false | true | true |
+| false | false | true |
+</details>
+
 
 #### Exercise - Logic
 
