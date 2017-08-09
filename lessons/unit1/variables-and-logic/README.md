@@ -237,6 +237,7 @@ Let's go ahead and create them now.
 
 <details>
 <summary><b><i>Click Here to Toggle Solution</i></b></summary>
+
 | p | q | p && q|
 |---|---|---|
 | true | true | true| 
