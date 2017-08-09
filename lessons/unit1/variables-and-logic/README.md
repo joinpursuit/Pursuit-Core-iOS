@@ -221,6 +221,8 @@ We've seen the symbol '>' as a comparison operator that means 'Greater than'.  H
 | == | Is equal to | 4.32 == 4.32 | - 12 == 12|
 | != | Not equal to| 30 != 31 | 5 != 5|
 
+Practice: Write 5 expressions that evaluate to <b>true</b> and 5 expressions that evaluate to <b>false</b>
+
 We can also use logical operators like AND, NOT, and OR to make more complex statements.
 
 |Symbol| Meaning| True examples | False example|
