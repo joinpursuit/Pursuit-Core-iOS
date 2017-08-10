@@ -126,15 +126,8 @@ let maxUIntValue = UInt.max  // 18446744073709551615
 ```
 </details>
 
-Compare them to their corresponding signed type (e.g. `UInt8` to `Int8`).
+Compare them to their corresponding signed type (e.g. `UInt8` to `Int8`).  What do you notice is different about them?
 
-<details>
-<summary><b>Click Here to Toggle Solution</b></summary>
-
-```
-INSERT ANSER HERE -> Not sure how to answer
-```
-</details>
 
 
 ### 5. Creating Instances of `Int`
