@@ -1,12 +1,14 @@
+### Vocabulary 
+
 Here are some terms, jargon, and abbreviations that are used in the technology world, which you might not be familiar with, or which may mean something different in tech than in ordinary English.
 
-# Contribution
+#### Contribution
 
 Instructors, TAs, staff, volunteers, and students: if you come across a term you don't know, please look it up and submit a PR adding it to this list!
 
 Please keep the list in alphabetical order.
 
-# Vocabulary
+---
 
 - **argument**: An input passed to a function in a call to it, related to parameter. A function can take zero, one or many arguments. Most languages also provide a way to pass a variable number of arguments. 
 

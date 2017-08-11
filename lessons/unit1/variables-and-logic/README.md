@@ -221,6 +221,8 @@ We've seen the symbol '>' as a comparison operator that means 'Greater than'.  H
 | == | Is equal to | 4.32 == 4.32 | - 12 == 12|
 | != | Not equal to| 30 != 31 | 5 != 5|
 
+<b>Practice</b>: Write 5 expressions that evaluate to <b>true</b> and 5 expressions that evaluate to <b>false</b>
+
 We can also use logical operators like AND, NOT, and OR to make more complex statements.
 
 |Symbol| Meaning| True examples | False example|
@@ -229,7 +231,12 @@ We can also use logical operators like AND, NOT, and OR to make more complex sta
 | && | And | true && true | true && false |
 | &#124;&#124; | Or | true &#124;&#124; false | false &#124;&#124; false
 
-The truth tables below give more detail.  (P means the first expression and Q means the second expression)
+We can create <b>truth tables</b> to show how these relationships play out.
+
+Let's go ahead and create them now.
+
+<details>
+<summary><b><i>Click Here to Toggle Solution p && q</i></b></summary>
 
 | p | q | p && q|
 |---|---|---|
@@ -238,12 +245,29 @@ The truth tables below give more detail.  (P means the first expression and Q me
 | false | true | false|
 | false | false | false|
 
+</details>
+
+<details>
+<summary><b><i>Click Here to Toggle Solution p &#124;&#124; q</i></b></summary>
+
 | p | q | p &#124;&#124; q|
 |---|---|---|
 | true | true | true | 
 | true | false | true |
 | false | true | true |
 | false | false | false |
+</details>
+
+<details>
+<summary><b><i>Click Here to Toggle Solution !p &#124;&#124; q</i></b></summary>
+
+| p | q | !p &#124;&#124; q|
+|---|---|---|
+| true | true | true | 
+| true | false | false |
+| false | true | true |
+| false | false | true |
+</details>
 
 
 #### Exercise - Logic
