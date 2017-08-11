@@ -2,7 +2,7 @@
 
 ### Objective
 
-* To install the tools (XCode and Slack) used during the course
+* To install the tools (Xcode and Slack) used during the course
 * To register and sign into accounts used during the course (Github and Slack)
 
 ### Readings
@@ -17,7 +17,7 @@
 
 #### Vocabulary
 
-1. **operating System** - Software that is responsible for running programs and managing reources on a computer.
+1. **operating system** - Software that is responsible for running programs and managing reources on a computer.
 1. **shell** - A command line interface or window onto an operating system.
 1. **text file** - A document without visual formatting. Swift files are text files.
 1. **path** - The address of a file or folder on your computer such as `/Users/elmo/Desktop/Garden.png`.
@@ -28,10 +28,10 @@
 
 1. From your Macbook, open the App Store.
 2. Search for *Xcode*.
-  * Note: Make sure you’re downloading Version 8. Do not download Xcode Beta 9 at this point. 
+  	**Note:** Make sure you’re downloading Version 8. Do not download Xcode Beta 9 at this point. 
 3. Press ‘Get’ and then ‘Install App’. 
 4. You will now be prompted to provide your AppleID. If you do not have one, create one. Once you’ve provided a correct AppleID, click Buy.
-  * Note: Xcode is free. You do not have to make any purchases to download and use Xcode.
+	**Note:** Xcode is free. You do not have to make any purchases to download and use Xcode.
 4. When download is complete, open *Xcode* from your Applications folder. 
 5. The first time you open *Xcode* it’ll ask to install some additional components. Allow it to do so.
 6. Once complete, you should see a “Welcome to Xcode” screen. 
@@ -39,14 +39,13 @@
 
 #### Activity: 
 
-Let's see what XCode's Playgrounds are all about. 
+Let's see what Xcode's Playgrounds are all about. 
 
 1. Download the [Intro to App Development with Swift](https://itunes.apple.com/us/book/intro-to-app-development-with-swift/id1118575552?mt=11) book and open it in iBooks.
 1. Read the short introductory material and on page 5 "Getting Started" download the project files that go with the course. I've linked them [here, too.](https://developer.apple.com/sample-code/swift/downloads/app-dev-curriculum.zip)
-1. This will create a folder named _Intro to App Development Curriculum_ in your Downloads folder. 
-> 	It's possible you'll get a zipped file instead, named _app-dev-curriculum.zip_. If so, double click it in the Finder.
+1. This will create a folder named _Intro to App Development Curriculum_ in your Downloads folder. (It's possible you'll get a zipped file instead, named _app-dev-curriculum.zip_. If so, double click it in the Finder.)
 1. Make a folder in your home directory named _Projects_ and move the _Intro to App Development Curriculum_ there.
-1. Open the 01_PlaygroundBasics.playground in XCode.
+1. Open the 01_PlaygroundBasics.playground in Xcode.
 1. Follow the lesson in the playground.
 1. Return to the iBook and complete the Check Your Understanding and finish the chapter.
 
@@ -63,7 +62,7 @@ $ git config --global user.email johndoe@example.com
 
 ### Sublime
 
-Sublime Text is a text editor useful for editing files outside of XCode, and without the word processing formatting overhead of applications like TextEdit, Word or Google Docs. Eventually you will need to make short edits to plain text files. We will also use sublime for handling interactive git message editing.
+Sublime Text is a text editor useful for editing files outside of Xcode, and without the word processing formatting overhead of applications like TextEdit, Word or Google Docs. Eventually you will need to make short edits to plain text files. We will also use sublime for handling interactive git message editing.
 
 Dowload and install [Sublime Text](https://www.sublimetext.com/). Once it's up and running 
 
@@ -105,7 +104,7 @@ Slack is our less-formal, more immediate messaging/chat app. It should be used f
 
 ### Github
 
-Github is an hosted git repository. It serves as a centralized place to collaborate on and share code.
+Github is a hosted git repository. It serves as a centralized place to collaborate on and share code.
 
 [Create a github account](http://github.com) if you don't already have one.
 
@@ -141,6 +140,7 @@ Many of the basic commands are for navigating the file system. These are your fi
 | cd     | "change directory", this moves to a directory | cd Desktop |
 | rm     | "remove", this deletes a file (careful! NO UNDO) | rm README.md |
 | mkdir  | Makes an empty folder in the current directory | mkdir SurveyInformation 
+
 
 ##### Special file names
 |Name    |Description|Example|
