@@ -78,7 +78,7 @@ git config --global core.editor "sublime -n -w"
 
 ### Canvas
 
-Canvas is our key organizational tool. You'll find a schedule of lessons and assignments in it.
+[Canvas](https://canvas.instructure.com/) is our key organizational tool. You'll find a schedule of lessons and assignments in it.
 
 You should have received an email already from Canvas asking you to register before you can participate in the class.
 
