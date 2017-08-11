@@ -89,4 +89,6 @@ is used both in direct coding applications as well as metaphorically about any p
 
 - **shell** - A command line interface or window onto an operating system.
 
+- **text file** - A document without visual formatting. Swift and practically all other source files are text files. When editing, it is important to use an editor that will not try to impose formatting on the document. XCode and Sublime Text are recommended. `nano` in the terminal is also a relatively user friendly option.
+
 - **tuple** - A group of zero or more values represented as one value. A tuple is defined by a comma-separated list of types, enclosed in parentheses.

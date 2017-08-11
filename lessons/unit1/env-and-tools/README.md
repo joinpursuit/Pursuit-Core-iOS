@@ -6,20 +6,21 @@
 * To register and sign into accounts used during the course (Github and Slack)
 
 ### Readings
-1. [Marty Aveton's (3.2 grad) Key Resources](https://medium.com/@MartianAviary/ten-key-resources-for-beginner-ios-devs-caba2b83f67c)
+1. [Marty Aveton's (C4Q 3.2 graduate) Key Resources](https://medium.com/@MartianAviary/ten-key-resources-for-beginner-ios-devs-caba2b83f67c)
 1. [Terminal](https://www.imore.com/how-use-terminal-mac-when-you-have-no-idea-where-start)
 1. [UNIX Shell](https://en.wikipedia.org/wiki/Shell_(computing))
 
 #### Resources
 
 1. [Intro to App Development with Swift - Apple](https://itunes.apple.com/us/book/intro-to-app-development-with-swift/id1118575552?mt=11)
-
+1. [Git configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
 
 #### Vocabulary
 
 1. **operating System** - Software that is responsible for running programs and managing reources on a computer.
 1. **shell** - A command line interface or window onto an operating system.
-1. **path** - The address of a file or folder on your computer such as /Users/elmo/Desktop/Garden.png.
+1. **text file** - A document without visual formatting. Swift files are text files.
+1. **path** - The address of a file or folder on your computer such as `/Users/elmo/Desktop/Garden.png`.
 
 ---
 
@@ -36,17 +37,52 @@
 6. Once complete, you should see a “Welcome to Xcode” screen. 
 7. Congratulations! You have successfully downloaded and installed Xcode.
 
+### Git
+
+Git is a source control system that greatly facilitates collaboration on coding projects. We interact with it mainly in Terminal. Both Terminal and Git require some explicit attention to learn and should not be considered outside the scope of your work.
+
+Git should already be installed on your machine but we should configure it. Run the following commands, one at a time and with correct information from the terminal, leaving out the dollar sign prompt.
+
+```bash
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+```
+
+### Sublime
+
+Sublime Text is a text editor useful for editing files outside of XCode, and without the word processing formatting overhead of applications like TextEdit, Word or Google Docs. Eventually you will need to make short edits to plain text files. We will also use sublime for handling interactive git message editing.
+
+Dowload and install [Sublime Text](https://www.sublimetext.com/). Once it's up and running 
+
+#### Sublime as git editor
+
+https://gist.github.com/geekmanager/9939cf67598efd409bc7
+
+```bash
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
+git config --global core.editor "sublime -n -w"
+```
+
 ### Canvas
+
+Canvas is our key organizational tool. You'll find lessons and assignments in it.
 
 ### Piazza
 
+Piazza is our question and answer system.
+
 ### Slack
+
+Slack is our less-formal, more immediate and ephemeral messaging/chat app.
+
 1. Download and install desktop client from http://slack.com
 2. Optionally install the mobile client.
 
 ### Github
 
-## Create a github account
+Github is an hosted git repository. It serves as a centralized place to collaborate on and share code.
+
+#### Create a github account
 
 [Create a github account](http://github.com) if you don't already have one.
 
@@ -127,7 +163,6 @@ $ git log
 | git clone (URL) | makes a local copy of a git repo in the current directory | git 
 
 #### Exercises
-
 
 1. Research the `banner` command and print the following:
 	1. "C4Q" name 80 characters wide
