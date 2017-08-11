@@ -37,6 +37,19 @@
 6. Once complete, you should see a “Welcome to Xcode” screen. 
 7. Congratulations! You have successfully downloaded and installed Xcode.
 
+#### Activity: 
+
+Let's see what XCode's Playgrounds are all about. 
+
+1. Download the [Intro to App Development with Swift](https://itunes.apple.com/us/book/intro-to-app-development-with-swift/id1118575552?mt=11) book and open it in iBooks.
+1. Read the short introductory material and on page 5 "Getting Started" download the project files that go with the course. I've linked them [here, too.](https://developer.apple.com/sample-code/swift/downloads/app-dev-curriculum.zip)
+1. This will create a folder named _Intro to App Development Curriculum_ in your Downloads folder. 
+> 	It's possible you'll get a zipped file instead, named _app-dev-curriculum.zip_. If so, double click it in the Finder.
+1. Make a folder in your home directory named _Projects_ and move the _Intro to App Development Curriculum_ there.
+1. Open the 01_PlaygroundBasics.playground in XCode.
+1. Follow the lesson in the playground.
+1. Return to the iBook and complete the Check Your Understanding and finish the chapter.
+
 ### Git
 
 Git is a source control system that greatly facilitates collaboration on coding projects. We interact with it mainly in Terminal. Both Terminal and Git require some explicit attention to learn and should not be considered outside the scope of your work.
@@ -65,7 +78,7 @@ git config --global core.editor "sublime -n -w"
 
 ### Canvas
 
-Canvas is our key organizational tool. You'll find lessons and assignments in it.
+Canvas is our key organizational tool. You'll find a schedule of lessons and assignments in it.
 
 ### Piazza
 
@@ -81,8 +94,6 @@ Slack is our less-formal, more immediate and ephemeral messaging/chat app.
 ### Github
 
 Github is an hosted git repository. It serves as a centralized place to collaborate on and share code.
-
-#### Create a github account
 
 [Create a github account](http://github.com) if you don't already have one.
 
@@ -162,20 +173,5 @@ $ git log
 | open _file_     | Opens a file using the associated program | open README.md |
 | git clone (URL) | makes a local copy of a git repo in the current directory | git 
 
-#### Exercises
-
-1. Research the `banner` command and print the following:
-	1. "C4Q" name 80 characters wide
-	1. "Swift Rules" 132 characters wide.
-
-1. Research the `cal` command and print the following:
-	1. This months calendar
-	1. This year's calendar
-	1. This February
-	1. January 1892
-
-1. Research the `ls` command and print the following:
-	1. The contents of your home directory
-	2. The contents of your Desktop, with timestamps and permissions
 
 
