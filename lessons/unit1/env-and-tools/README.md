@@ -87,7 +87,7 @@ If you haven't already please create a new account and make sure you set your Ti
 
 Piazza is our question and answer system.
 
-Follow the link [here](piazza.com/access_code/fall2017/iosbridge) to create an account.  Enter the code "iosbridge".
+Follow the link [here](https://piazza.com/access_code/fall2017/iosbridge) to create an account.  Enter the code "iosbridge".
 
 ### Slack
 
