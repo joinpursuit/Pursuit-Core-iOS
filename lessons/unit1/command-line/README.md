@@ -1,114 +1,124 @@
-- title: Console apps in Swift - I/O with stdin an stdout
-- tags: console, command line, operating system
+### Objective
 
-# Objectives
+* Build a command line Mac app for interactive programming
 * Understand what an operating system is
 * Understand where a program one writes lives within the operating system
 * Understand how to get data in and out of that program
-* Return values to the OS
 
+### Reading
+- [Operating System](https://en.wikipedia.org/wiki/Operating_system)
+- [Shell](https://en.wikipedia.org/wiki/Shell_(computing))
+- [readLine](https://developer.apple.com/documentation/swift/1641199-readline)
+- [print](https://developer.apple.com/documentation/swift/1541053-print)
 
-# Resources
-[Operating Systems](https://en.wikipedia.org/wiki/Operating_system)
+---
 
-[Shells](https://en.wikipedia.org/wiki/Shell_(computing))
+### 1. Operating Systems
 
-#Lecture
+What is an Operating System?
 
-## Operating Systems
-* What is an Operating System?
 ![Figure 1. - Operating System Layers](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/330px-Operating_system_placement.svg.png)
 
-* Examples of well known OS’s
-	* Compare some
-  	* Interface differences
-  	* Multiuser differences
-* Compare iOS with OSX
-	  * Pretty similar
-	  * Phone is every bit as much a computer as a laptop/desktop
-* Name an app that is in both OSs
-  	* Safari
-    	 * Facebook
-    	 * Twitter
-    	 * Tumblr
-	* Evernote
-* Computer systems are highly layered
-	* provide the minimum needed at each layer
-	* simplicity
-	* stability
-	* security
-* Shells
-	* Graphical shells
-	* Command Line shells
-		* What Operating System runs "under" OSX
-		* How do we "talk to UNIX"? The terminal
-		* Run Terminal
-			* pwd
-			* ls
-			* echo
-			* date - note how it agrees with the clock in the menu
-			* open .
-	* Environment
-	* Apart from layers shells also imply more than one way to do the same thing
-		* Do you know what DOS in MS-DOS stands for?
-		* Disk might not even be a disk anymore
-* As programmers, much of the time we're thinking only about our code and how it runs and not the environment it runs in and this is good but some input from the user is needed to, at the very least, start our program and maybe interact further with it. Up until this point we've mostly hard coded values into our programs which, if you think of it, is a primitive way of interacting with the only user: you.
+Computer systems are highly layered in order to provide the minimum needed at each layer. This makes things more simple, stable and secure for developers and users. The user usually interacts with the operating system via either an application or a shell.
 
-##Input and Output
-* What is input? 
-	* Think back to the apps we talked about. Where do they get their input?
-* What is output? Where does it go to?
-	* Think back to the apps we talked about. Where do they put their output?
-* Input/output is a breakdown of the broader idea of interface
+As programmers, much of the time we're thinking only about our code and how it runs, and not the environment it runs in. This will get us so far, but some input from the user is needed to start our program and perhaps interact further with it. Up until this point we've mostly hard coded values into our programs which is a limited way of interacting with the user. It requires him or her to be able to change the source code to try different inputs.
 
-## Command Line Interface
-This all sets us up for today's main topic which is how to interact with the user when writing a command line application. The good news is that we're going to be focusing mainly on building apps with beautiful graphical interfaces but text based interfaces have a very important place too.
+We need a way to get information into our program from the user. Enter the shell.
 
-* Why?
-	* Actually very powerful - learning to use and write command driven applications has many uses and deepens your toolkit and professional worth
-	* There is a rich history of it and some tools either don't exist graphically or are really much clunkier to work with.
-	* git is a good example
-	* Most SO solutions to git and other problems will assume command line proficiency 
-	* Imperative for interview exercises
+### 2. Shell
 
-* Swift
-	* [readLine](https://developer.apple.com/library/watchos/documentation/Swift/Reference/Swift_StandardLibrary_Functions/index.html#//apple_ref/swift/func/s:Fs8readLineFT12stripNewlineSb_GSqSS_)
-	* [print](https://developer.apple.com/library/watchos/documentation/Swift/Reference/Swift_StandardLibrary_Functions/index.html#//apple_ref/swift/func/s:Fs5printFTGSaP__9separatorSS10terminatorSS_T_)
-	* Can't use Playgrounds. Based on what we learned today and what you know of playgrounds, can you theorize why?
-	* Must write Console App (Mac OSX)
-	* print, we're already familiar with but has more features we should look at
-* CR/LF
-	* visualize a typewriter
-	* another reminder of how literal computers are
-	* comes into play with readLine and its agurment to strip the newline or not
-	* comes into play with print's terminator parameter
-* Exercises
-	* create a Command Line Tool project
-	* write "echo"
-	* write "dfn" (days from now)
-	* run inside Xcode
-	* find in Finder
-	* run from Terminal
-	* read from file
+> In computing, a shell is a user interface for access to an operating system's services. In general, operating system shells use either a command-line interface (CLI) or graphical user interface (GUI), depending on a computer's role and particular operation. It is named a shell because it is a layer around the operating system kernel.
+> [Wikipedia - Shell (computing)](https://en.wikipedia.org/wiki/Shell_(computing))
 
-# Code
-## echo
+
+##### Graphical shells
+
+Graphical shells are most familiar to modern computer users. A point and click interface is used to launch applications and manage files. This is the type of shell we'll be using for the majority of the course.
+
+##### Command Line shells
+
+Older, but not obsolete, are command line shells. Users launch applications and manage files by typing commands. This is the type of shell this lesson explores.
+
+
+#### Input and Output
+
+Think about apps you've run. Where do they get their input? Where does their output go?
+
+
+### 3. Command Line Interface
+
+At their simplest, command line interfaces get input from the keyboard and send output to a console. Console is another word for screen or terminal.
+
+#### The pros and cons of the command line
+
+**Pros**
+
+* Learning to use and write command driven applications has many uses and deepens your toolkit and professional worth.
+* Programs that run on the comand line can be connected with other command line programs ad hoc, making them become tools to be used inside larger scripts.
+* There is a rich history of the command line and some tools either don't exist graphically or are more difficult to work with.
+* Most Stack Overflow solutions to git and other problems will assume command line proficiency 
+* Will help in interviews and interview exercises
+
+**Cons**
+
+* There's a learning curve to using command driven application
+
+
+### 4. Build a Command Line Tool
+
+1. Make a Projects directory in your home directory.
+1. In XCode, go to File >> New >> Project.
+1. Choose MacOS in the top tab bar.
+1. Choose Command Line Tool in the Application section.
+1. In the next dialog enter `SwiftCLI` for the Product Name, and `nyc.c4q.AC4.3` as the Organization Identifier.
+
+	![Name project](images/name_project.png)
+
+1. Save the project into your Projects directory.
+	
+	![Save project](images/save_project.png)
+
+1. Open the main.swift file and insert code under the `import Foundation` line.
+
+	![main.swift](images/main_swift.png)
+
+1. Run the program with the Play button in the upper left and notice the prompt in the debug console.
+
+	![Entry prompt](images/entry_prompt.png)
+
+1. Interact with your program. This will behave differently based on your input.
+
+	![After user entry](images/entry_given.png)
+
+1. By replacing the code inside `main.swift` you can reuse this project to try different code. This wouldn't be a good strategy for code you wanted to keep but is fine for now.
+
+### 5. Two Sample Apps 
+
+#### Echo clone
+
 ```swift
+import Foundation
+
 print("Type something, please: ", terminator: "")
-if let response = readLine(stripNewline: true) {
+if let response = readLine(strippingNewline: true) {
     print("You wrote this: \(response)")
 }
 else {
     print("You gotta enter something")
 }
+
 ```
 
-## dfn
+#### Days from now
+
 ```swift
+import Foundation
+
 print("How many days in the future: ", terminator: "")
-if let response = readLine(stripNewline: true), days = Double(response) {
-    let aDate = NSDate()
-    let futureDate = aDate.dateByAddingTimeInterval(24*60*60*days)
+if let response = readLine(strippingNewline: true),
+    let days = Double(response) {
+    let aDate = Date()
+    let futureDate = aDate.addingTimeInterval(24 * 60 * 60 * days)
     print("\(days) days in the future will fall on the date \(futureDate)")
 }
 else {
