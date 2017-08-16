@@ -101,6 +101,81 @@ Let's break up some more numbers!
 
 </details>
 
+As shown above, we can calculate the value of the final number by multiplier each digit with its place value.  But what if we changed how much a place value was worth?  In "regular numbers" (base 10) the place value of a number is 10.  What do we think the place value is in binary?
+
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+2
+</details>
+
+Let's take a look at a binary number:
+
+11001
+
+How can we calculate its value in base ten?
+
+
+2^4   2^3   2^2   2^1   2^0
+ 1     1     0     0     1
+            
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+11001 = 1 * 2^4 + 1 * 2^3 + 0*2^2 + 0*2^1 + 1* 2^0
+
+11001 = 16 + 8 + (0 * 4) + (0 * 2) + 1
+
+11001 = 25
+</details>
+
+<b>Practice</b>:  Convert the following binary numbers into decimal
+
+1000
+1111
+1
+10
+10101
+
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+
+```swift
+1000 = 8
+1111 = 15
+1 = 1
+10 = 2
+10101 = 21
+```
+
+</details>
+
+We can also [convert decimal numbers to binary](http://www.wikihow.com/Convert-from-Decimal-to-Binary)
+
+Let's practice a few below
+
+7
+
+8
+
+9
+
+15
+
+257
+
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+
+```swift
+5 = 101
+8 = 1000
+9 = 1001
+15 = 1111
+259 = 100000011
+```
+
+</details>
+
+
 
 
 ---
