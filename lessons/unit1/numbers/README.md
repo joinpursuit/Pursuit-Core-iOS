@@ -57,7 +57,47 @@ Integer is a term borrowed (taken) from mathematics to describe a number that's 
 
 The basic type for integers in Swift is `Int`. Before we explore the many related `Int` types it's important to note that for almost all cases it's considered best to use `Int`.
 
-### 3. Integer Size
+
+### 3. Binary
+
+[Binary Number System](https://www.mathsisfun.com/binary-number-system.html)
+
+Binary is another way of representing values.  While decimal (base 10) uses the digits 0,1,2,3,4,5,6,7,8 and 9, binary only uses the digits 0 and 1.
+
+Before we get into binary, let's better understand the anatomy of a number.  Take 439.  What is its value and how do we know?
+
+When read aloud we say its value is four hundred thirty nine.  Broken up further, we can say 4 hundreds, 3 tens and 9 ones.  This is because each digit's position tells us what its <b>place value</b> is.  Using exponents, we can see this mathematically.
+
+439 = 400 + 30 + 9
+    = 4 * 10^2^ + 30 * 10^1^ + 9 * 10^0^
+
+Let's break up some more numbers!
+29
+940
+10
+10000
+1000000
+2048
+
+<details>
+<summary><b>Click Here to Toggle Solution</b></summary>
+
+```swift
+29 = 2 * 10^1^ + 9 * 10^0^
+940 = 9 * 10^2^ + 4 * 10^1^ + 0 * 10^0^
+10 = 1 * 10^1^ + 0 * 10^0^
+10000 = 1 * 10^4^ + 0 * 10^3^ + 0 * 10^2^ + 0 * 10^1^ + 0 * 10^0^
+1000000 = 1 * 10^6^ + 0 * 10^5^ + 0 * 10^4^ + 0 * 10^3^ + 0 * 10^2^ + 0 * 10^1^ + 0 * 10^0^
+2048 = 2 * 10^3^ + 0 * 10^2^ + 4 * 10^1^ + 8 * 10^0^
+832941 = 8 * 10^5^ + 3 * 10^4^ + 2 * 10^3^ + 9 * 10^2^ + 4 * 10^1^ + 1 * 10^0^
+```
+</details>
+
+
+
+---
+
+### 4. Integer Size
 
 ```swift
 let minValue = UInt8.min  // minValue is equal to 0, and is of type UInt8
@@ -90,7 +130,7 @@ let maxIntValue = Int.max  // 9223372036854775807
 ```
 </details>
 
-### 4. Signedness
+### 5. Signedness
 
 A "signed" integer can be positive, negative or zero. An "unsigned" integer can only represent a positive number, or zero.
 
@@ -130,7 +170,7 @@ Compare them to their corresponding signed type (e.g. `UInt8` to `Int8`).  What 
 
 
 
-### 5. Creating Instances of `Int`
+### 6. Creating Instances of `Int`
 
 ```swift
 let numBonesInHumanBody = 206 // Int by default
@@ -139,7 +179,7 @@ let numLettersInEnglishAlphabet: Int8 = 26  // type annotation lets us control
 
 ---
 
-### 6. Integer Operations
+### 7. Integer Operations
 
 |Symbol| Operation          | Example | Result | 
 |------|--------------------|---------|--------|
@@ -150,7 +190,7 @@ let numLettersInEnglishAlphabet: Int8 = 26  // type annotation lets us control
 | %    | Modulo             | 5 % 8   | 5      |
 
 
-### 7. Integer Division
+### 8. Integer Division
 
 When dividing integers the expression always evaluates to the whole part of the calculation. 
 This can be thought of as throwing away any numbers "after the decimal point".
@@ -199,7 +239,7 @@ print("\(num1) / \(num2) = \(seventySixDivFourteen), remainder \(seventySixModFo
 ```
 </details>
 
-### 8. Operator Shorthand
+### 9. Operator Shorthand
 
 Given:
 ```swift
@@ -222,7 +262,7 @@ var i = 0 // 0
 i += 1 // 1
 ```
 
-### 9. Overflow Operators
+### 10. Overflow Operators
 
 You may see that Swift supports overflow operators. They're not used in everyday coding but the reason they exist is worth looking at quickly. Overflow refers to the result of trying to perform an operation that would result in a value that goes over the maximum, or under the minimum value of the data type.
 
@@ -235,7 +275,7 @@ That crashes, which is actually what we want it to do. This alerts us to the fac
 
 **Takeaway**: Sometimes it's good to crash.
 
-### 10. Conversion between Integer Types
+### 11. Conversion between Integer Types
 
 The range of numbers that can be stored in an integer constant or variable is different for each numeric type. An Int8 constant or variable can store numbers between -128 and 127, whereas a UInt8 constant or variable can store numbers between 0 and 255. A number that will not fit into a constant or variable of a sized integer type is reported as an error when your code is compiled:
 
@@ -257,12 +297,6 @@ let one: UInt8 = 1
 let twoThousandAndOne = twoThousand + UInt16(one)
 Because both sides of the addition are now of type UInt16, the addition is allowed. The output constant (twoThousandAndOne) is inferred to be of type UInt16, because it is the sum of two UInt16 values.
 ```
-
-### 11. Storage of Integers
-
-[Binary Number System](https://www.mathsisfun.com/binary-number-system.html)
-
----
 
 ### 12. Floating Point Numbers
 
