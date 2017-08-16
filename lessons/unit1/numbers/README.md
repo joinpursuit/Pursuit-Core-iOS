@@ -69,7 +69,7 @@ Before we get into binary, let's better understand the anatomy of a number.  Tak
 When read aloud we say its value is four hundred thirty nine.  Broken up further, we can say 4 hundreds, 3 tens and 9 ones.  This is because each digit's position tells us what its <b>place value</b> is.  Using exponents, we can see this mathematically.
 
 439 = 400 + 30 + 9
-    = 4 * 10<super>2</super> + 30 * 10^1^ + 9 * 10^0^
+    = 4 * 10^2 + 30 * 10^1 + 9 * 10^0
 
 Let's break up some more numbers!
 29
@@ -81,15 +81,15 @@ Let's break up some more numbers!
 
 <details>
 <summary><b>Click Here to Toggle Solution</b></summary>
-
-29 = 2 * 10<super>1</super> + 9 * 10^0^
-940 = 9 * 10^2^ + 4 * 10^1^ + 0 * 10^0^
-10 = 1 * 10^1^ + 0 * 10^0^
-10000 = 1 * 10^4^ + 0 * 10^3^ + 0 * 10^2^ + 0 * 10^1^ + 0 * 10^0^
-1000000 = 1 * 10^6^ + 0 * 10^5^ + 0 * 10^4^ + 0 * 10^3^ + 0 * 10^2^ + 0 * 10^1^ + 0 * 10^0^
+```swift
+29 = 2 * 10^1 + 9 * 10^0
+940 = 9 * 10^2 + 4 * 10^1 + 0 * 10^0
+10 = 1 * 10^1 + 0 * 10^0
+10000 = 1 * 10^4 + 0 * 10^3 + 0 * 10^2 + 0 * 10^1 + 0 * 10^0
+1000000 = 1 * 10^6 + 0 * 10^5 + 0 * 10^4 + 0 * 10^3 + 0 * 10^2 + 0 * 10^1 + 0 * 10^0
 2048 = 2 * 10^3^ + 0 * 10^2^ + 4 * 10^1^ + 8 * 10^0^
 832941 = 8 * 10^5^ + 3 * 10^4^ + 2 * 10^3^ + 9 * 10^2^ + 4 * 10^1^ + 1 * 10^0^
-
+```
 </details>
 
 
