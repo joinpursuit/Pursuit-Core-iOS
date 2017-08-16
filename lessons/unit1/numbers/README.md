@@ -72,15 +72,22 @@ When read aloud we say its value is four hundred thirty nine.  Broken up further
     = 4 * 10^2 + 30 * 10^1 + 9 * 10^0
 
 Let's break up some more numbers!
+
 29
+
 940
+
 10
+
 10000
+
 1000000
+
 2048
 
 <details>
 <summary><b>Click Here to Toggle Solution</b></summary>
+
 ```swift
 29 = 2 * 10^1 + 9 * 10^0
 940 = 9 * 10^2 + 4 * 10^1 + 0 * 10^0
@@ -90,6 +97,7 @@ Let's break up some more numbers!
 2048 = 2 * 10^3^ + 0 * 10^2^ + 4 * 10^1^ + 8 * 10^0^
 832941 = 8 * 10^5^ + 3 * 10^4^ + 2 * 10^3^ + 9 * 10^2^ + 4 * 10^1^ + 1 * 10^0^
 ```
+
 </details>
 
 
