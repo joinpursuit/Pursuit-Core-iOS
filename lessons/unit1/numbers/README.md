@@ -82,7 +82,7 @@ Let's break up some more numbers!
 <details>
 <summary><b>Click Here to Toggle Solution</b></summary>
 
-29 = 2 * 10^1^ + 9 * 10^0^
+29 = 2 * 10<super>1</super> + 9 * 10^0^
 940 = 9 * 10^2^ + 4 * 10^1^ + 0 * 10^0^
 10 = 1 * 10^1^ + 0 * 10^0^
 10000 = 1 * 10^4^ + 0 * 10^3^ + 0 * 10^2^ + 0 * 10^1^ + 0 * 10^0^
