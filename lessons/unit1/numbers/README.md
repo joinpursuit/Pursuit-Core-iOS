@@ -69,7 +69,7 @@ Before we get into binary, let's better understand the anatomy of a number.  Tak
 When read aloud we say its value is four hundred thirty nine.  Broken up further, we can say 4 hundreds, 3 tens and 9 ones.  This is because each digit's position tells us what its <b>place value</b> is.  Using exponents, we can see this mathematically.
 
 439 = 400 + 30 + 9
-    = 4 * 10^2^ + 30 * 10^1^ + 9 * 10^0^
+    = 4 * 10<super>2</super> + 30 * 10^1^ + 9 * 10^0^
 
 Let's break up some more numbers!
 29
