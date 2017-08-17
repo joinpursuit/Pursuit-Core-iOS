@@ -130,10 +130,15 @@ How can we calculate its value in base ten?
 <b>Practice</b>:  Convert the following binary numbers into decimal
 
 1000
+
 1111
+
 1
+
 10
+
 10101
+
 
 <details>
 <summary><b>Click Here to Toggle Solution</b></summary>
