@@ -39,7 +39,7 @@ Simplify the following expressions [(PEMDAS Refresher)](https://www.mathsisfun.c
 
 3 / 3 * 2 + 5 // 7
 
-2 ^ 6 - 5 // -1
+2 ^ 6 - 5 // 59
 
 5 + 4 / 2 // 7
 
