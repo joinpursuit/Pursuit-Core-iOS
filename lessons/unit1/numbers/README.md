@@ -340,7 +340,7 @@ var i = 10
 | -=    | Subtract and assign   | i -= 5   |   5    |
 | *=    | Multiply and assign   | i *= 3   |  30    |
 | /=    | Divide and assign     | i /= 4   |   2    |
-| %=    | Mod and assign        | i %= 3   |   5    |
+| %=    | Mod and assign        | i %= 3   |   1    |
 
 **Note**: You might see mention of the ++ and -- operators. They've been deprecated in Swift 3. 
 Since ```i += 1``` offers the same functionality as ```i++``` it makes sense.
