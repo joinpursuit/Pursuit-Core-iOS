@@ -28,31 +28,6 @@
 
 ### Introduction
 
-```swift
-temperatureInFahrenheit = 90
-if temperatureInFahrenheit <= 32 {
-    print("It's very cold. Consider wearing a scarf.")
-} else if temperatureInFahrenheit >= 86 {
-    print("It's really warm. Don't forget to wear sunscreen.")
-} else {
-    print("It's not that cold. Wear a t-shirt.")
-}
-// Prints "It's really warm. Don't forget to wear sunscreen."
-```
-
-### 1. `switch`
-
-```swift
-switch aValue {
-case onePossibleAndExpectedValueToCompareTo:
-	// do something for the case of onePossibleAndExpectedValueToCompareTo
-case anotherPossibleAndExpectedValueToCompareTo:
-	// do something for the case of anotherPossibleAndExpectedValueToCompareTo
-default:
-	// do something for the case when there are no matches
-}
-```
-
 The `switch` statement is a conditional that is most useful when the set of possible values we're comparing to is known. Swift's ```switch``` statement is more powerful than its predecessors in other languages so it can be used more widely. While `if/else` and `switch` can be used to implement the same logic, in many cases `switch` is more readable.
 
 ![A 4-way switch](switch.jpg)
@@ -62,6 +37,22 @@ A 4-way switch
 An image like this helps to link the word "switch" to the `switch` statment. We normally think of a switch as being on or off and so the keyword is not intuitive. But if we think of the input selector on an old style stereo amplifier (I couldn't find a better image.) I think it helps to have a visual of this kind of branching.
 
 The **type** of the cases and the operand on the `switch` line must agree. This makes sense and is consistent with our experience with Swift and its strong typing. As long as we can compare two instances of that type we can use it in a `switch`.
+
+### 1. `switch`
+
+```swift
+switch aValue {
+case onePossibleAndExpectedValueToCompareTo:
+	// do something for the case of onePossibleAndExpectedValueToCompareTo
+	print("First case")
+case anotherPossibleAndExpectedValueToCompareTo:
+	// do something for the case of anotherPossibleAndExpectedValueToCompareTo
+	print("Second case")
+default:
+	// do something for the case when there are no matches
+	print("Default case")
+}
+```
 
 #### `default`
 
@@ -74,7 +65,7 @@ case 99:
 }
 ```
 
-Generates the error: "Switch must be exhaustive, try adding a default clause." This is one important point about `switch`: you must cover all bases (actually, all *cases*). And adding the default clause introduces a second point. If we don't want to do anything in our default case we use the keyword `break`. Swift requires an executable statement in each case. Generally, we may want to break in other matches but default is the most intuitive and therefore the most common. 
+The code above generates the error: "Switch must be exhaustive, try adding a default clause." This is one important point about `switch`: you must cover all bases (actually, all *cases*). And adding the default clause introduces a second point. If we don't want to do anything in our default case we use the keyword `break`. Swift requires an executable statement in each case. Generally, we may want to break in other matches but default is the most intuitive and therefore the most common. 
 
 
 ```swift
@@ -86,6 +77,22 @@ case 99:
 default:
     break
 }
+```
+
+#### Exercise
+
+Let's convert this if/else chain to `switch`.
+
+```swift
+temperatureInFahrenheit = 90
+if temperatureInFahrenheit <= 32 {
+    print("It's very cold. Consider wearing a scarf.")
+} else if temperatureInFahrenheit >= 86 {
+    print("It's really warm. Don't forget to wear sunscreen.")
+} else {
+    print("It's not that cold. Wear a t-shirt.")
+}
+// Prints "It's really warm. Don't forget to wear sunscreen."
 ```
 
 #### ```fallthrough```
