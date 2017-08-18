@@ -24,8 +24,7 @@
 let r = 1...5
 let r2 = 1...5
 ```
-
-First, type in the code above and hold Option- and click on the r (or the r2). This will bring up the documentation on Range. It's a little scary. But I see range conforms to "Equatable". What do you think that means? What code would illustrate that?
+In Xcode, hold Option and click on the r (or the r2). This will show the variables are of type CountableClosedRange<Int>. As the name implies, we can count 
 
 ### 1. Introduction
 Loops are a tool for performing the same operation over a range or a list. 
