@@ -297,7 +297,7 @@ Compare character counts on combined scalars and their pre-composed equivalents.
 
 ### 16. Accessing & Modifying a String
 
-###Accessing Characters in a String
+### Accessing Characters in a String
 
 How can we access a particular character inside of a String?
 
