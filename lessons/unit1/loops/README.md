@@ -14,19 +14,28 @@
 
 #### Vocabulary
 
-1. **Iteration** - the repetition of a process in a computer program. When the first set of instructions is executed again, it is called an iteration. -[Techopedia](https://www.techopedia.com/definition/3821/iteration)
-1. **Iterator** - an object that enables a programmer to traverse a container, particularly lists. -[Wikipedia](https://en.wikipedia.org/wiki/Iterator)
+1. **iteration** - the repetition of a process in a computer program. When the first set of instructions is executed again, it is called an iteration. -[Techopedia](https://www.techopedia.com/definition/3821/iteration)
+1. **iterator** - an object that enables a programmer to traverse a container, particularly lists. -[Wikipedia](https://en.wikipedia.org/wiki/Iterator)
 
 ---
 
 ### 1. Warm up
-```
-let r = 1...5
-let r2 = 1...5
-```
-In Xcode, hold Option and click on the r (or the r2). This will show the variables are of type CountableClosedRange<Int>. As the name implies, we can count 
 
-### 1. Introduction
+```swift
+let closedRange = 1...5
+let openRange = 1..<5
+```
+In Xcode, hold option and click on the constants declared above. They're of types `CountableClosedRange<Int>` and `CountableRange<Int>`. There's a lot going on behind the scenes, but being _countable_ means they can be used as iterators. This isn't true of all ranges. Consider:
+
+```swift
+let range = 1...5.0
+```
+
+Here, `range` is of type `ClosedRange<Double>` and it is not iterable. 
+
+
+### 2. Introduction
+
 Loops are a tool for performing the same operation over a range or a list. 
 
 **Question**: What web site or app features probably have a loop behind them?
@@ -41,32 +50,40 @@ Loops are a tool for performing the same operation over a range or a list.
 </details>
 
 
-### 2. ```for-in```
+### 3. ```for-in```
 
-The first step here is to forget a little bit of what you learned about the syntax of creating a loop. All the priciples, and even the inner workings are still there but we have a new (maybe simpler) way of defining loops.
+The first step here is to forget a little bit of what you learned about the syntax of `for` loops. All the priciples, and even the inner workings are still there but we have a new (maybe simpler) way of defining loops.
 
-```for``` implicitly declares a constant iterator that will be incremented at each iteration of the loop.
+```for``` implicitly declares a constant iterator with the identifier you provide that will be incremented at each iteration of the loop.
 
 ```swift
-for currentNumber in 3..<18 {
-    print(currentNumber)
+for i in 0..<10 {
+    print(i)
 }
 ```
 
+#### Exercise
+
+Print out the first five multiples of 5.
+
+<details>
+    <summary>Solution</summary>
 ```swift
-//Make this the "You Do"
 for index in 1...5 {
     print("\(index) times 5 is \(index * 5)")
 }
+
 // 1 times 5 is 5
 // 2 times 5 is 10
 // 3 times 5 is 15
 // 4 times 5 is 20
 // 5 times 5 is 25
 ```
-### 3. ```_```
+</details>
 
-If you only want to iterate a number of times but don't need to use the index you can replace it with the ```_``` (underscore) character.
+### 4. ```_```
+
+If you only want to iterate a number of times but don't need to refer to the index inside the loop you can replace it with the ```_``` (underscore) character.
 
 ```swift
 for _ in 0..<10 {
@@ -74,8 +91,21 @@ for _ in 0..<10 {
 }
 ```
 
+
+#### Exercise
+
+Given,
+
 ```swift
-//Probably give this as an exercise
+let base = 3
+let power = 10
+```
+
+Write a loop that calculates 3 to the 10th power.
+
+<detail>
+    <summary>Solution</solution>
+```swift
 let base = 3
 let power = 10
 var answer = 1
@@ -86,8 +116,11 @@ for _ in 1...power {
 
 print("\(base) to the power of \(power) is \(answer)")
 ```
+</detail>
 
-### 4. Sneak peek at ```Array```
+### 5. Sneak peek at ```Array```
+
+Since loops and arrays are so closely tied, let's look at a brief example of a `for` loop that iterates over an array, printing its values. We'll revisit this at length in the Arrays lesson.
 
 ```swift
 let names = ["Anna", "Alex", "Brian", "Jack"]
@@ -96,7 +129,7 @@ for name in names {
 }
 ```
 
-### 5. ```where``` clauses
+### 6. ```where``` clauses
 
 A variant of for-in uses the `where` clause that we learned as a part of the ```switch``` statement. With this, we have more control over the conditions under which the body of the loop is run. 
 
@@ -108,7 +141,7 @@ for i in 1...100 where i % 10 == 5 {
 }
 ```
 
-### 6. ```while```
+### 7. ```while```
 
 ```while``` loops put the initialization and increment stages of the loop in the hands of the programmer. It is possible to re-write a for-in style loop with ```while```:
 
@@ -199,7 +232,7 @@ while doubleNumber > 0.01 {
 
 
 
-### 7. ```repeat-while```
+### 8. ```repeat-while```
 
 ```swift
 var i = 0
@@ -214,7 +247,7 @@ repeat {
 > In Swift 3+, `do-while` loops are actually `repeat-while`
 
 
-### 8. ```continue```
+### 9. ```continue```
 
 ```swift
 var shields = 5
@@ -247,7 +280,7 @@ while shields > 0 {
 
 ***Note: This code will execute indefinitely.***
 
-### 9. ```break```
+### 10. ```break```
 
 ```swift
 var shields = 5
@@ -284,7 +317,7 @@ while shields > 0 {
 }
 ```
 
-### 10. Nesting
+### 11. Nesting
 
 Loops can be nested. A simple way to visualize it is with a 2-dimensional matrix.
 
@@ -297,29 +330,31 @@ for i in 1...5 {
 }
 ```
 
-### 11. Labels
+### 12. Labels
 
 Loops can be labeled so that ```continue``` and ```break``` used in nested loops can act on a loop other than the innermost one, which is the default.
 
+Here we have a loop that counts from 1 to the current value of `i` 5 times.
+
 ```swift
 outer: for i in 1...5 {
-    print("\(i) :", separator: "", terminator: " ")
-
+    print("i\(i) :", terminator: " ")
+    
     inner: for j in 1...5 {
         if i == j {
             // uncomment for "outer"
-            // print("")
+             print("")
             
             // toggle outer on and off
             continue outer
         }
-        print("\(j)", separator: "", terminator: " ")
+        print("j\(j)", terminator: " ")
     }
     print("")
 }
 ``` 
 
-If we want to find the first factors of a given product, we can use break to escape the innermost loop.
+If we want to find the first factors of a given product, we can use break to escape the outer loop as soon as it's found.
 
 ```swift
 let product = 24
