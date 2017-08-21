@@ -24,7 +24,23 @@ To be able to use the fundamental data type, `String` by performing simple opera
 
 ### 1. Warmup 
 
-What is a standard?
+What have we used Strings and Characters for so far?  What are all the things we can do with them?
+
+<details>
+<summary>A solution</summary>
+
+```swift
+//Create a String literal "Hello"
+//Compare two Strings for equality: "Hello" == "Goodbye" evaluates to false
+//See which String is greater: "Hello" > "Goodbye" evaluates to true
+//Use String interpolation to put a variable or expression into a String
+let time = "3:30"
+print("The current time is \(time)")
+//Add Strings together: "a" + "b" = "ab"
+
+```
+</details>
+
 
 ### 2. Intro to `String`
 
