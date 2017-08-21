@@ -6,7 +6,7 @@ To be able to use the fundamental data type, `String` by performing simple opera
 
 ### Readings
 1. Swift Programming: The Big Nerd Ranch Guide, Chapter 7, Strings
-1. [Swift Language Reference, Strings and Characters](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/1tringsAndCharacters.html#//apple_ref/doc/uid/TP40014097-CH7-ID285)
+1. [Swift Language Reference, Strings and Characters](https://developer.apple.com/documentation/swift/string)
 1. [What is Unicode?](http://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16)
 1. [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](http://www.joelonsoftware.com/articles/Unicode.html)
 
