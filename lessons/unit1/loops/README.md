@@ -67,7 +67,22 @@ for i in 0..<10 {
 
 Print out the first five multiples of 5.
 
+<details>
+<summary>Solution</summary>
 
+```swift
+for index in 1...5 {
+    print("\(index) times 5 is \(index * 5)")
+}
+
+// 1 times 5 is 5
+// 2 times 5 is 10
+// 3 times 5 is 15
+// 4 times 5 is 20
+// 5 times 5 is 25
+```
+
+</details>
 
 ### 4. ```_```
 
@@ -91,8 +106,9 @@ let power = 10
 
 Write a loop that calculates 3 to the 10th power.
 
-<detail>
-    <summary>Solution</solution>
+<details>
+    <summary>Solution</summary>
+
 ```swift
 let base = 3
 let power = 10
@@ -104,7 +120,8 @@ for _ in 1...power {
 
 print("\(base) to the power of \(power) is \(answer)")
 ```
-</detail>
+
+</details>
 
 ### 5. Sneak peek at ```Array```
 
