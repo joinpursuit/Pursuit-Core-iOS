@@ -56,6 +56,7 @@ The first step here is to forget a little bit of what you learned about the synt
 
 ```for``` implicitly declares a constant iterator with the identifier you provide that will be incremented at each iteration of the loop.
 
+
 ```swift
 for i in 0..<10 {
     print(i)
@@ -66,20 +67,7 @@ for i in 0..<10 {
 
 Print out the first five multiples of 5.
 
-<details>
-    <summary>Solution</summary>
-```swift
-for index in 1...5 {
-    print("\(index) times 5 is \(index * 5)")
-}
 
-// 1 times 5 is 5
-// 2 times 5 is 10
-// 3 times 5 is 15
-// 4 times 5 is 20
-// 5 times 5 is 25
-```
-</details>
 
 ### 4. ```_```
 
