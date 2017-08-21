@@ -47,21 +47,24 @@ print("The current time is \(time)")
 >A string is a series of characters, such as "hello, world" or "albatross". Swift strings are represented by the String type. The contents of a String can be accessed in various ways, including as a collection of Character values. 
 >~Apple
 
-Swift’s `String` and `Character` types provide a fast, Unicode-compliant way to work with text in your code. 
+Swift’s `String` and `Character` types provide a fast, Unicode-compliant way to work with text in your code.
 
 ### 3. Initialization
 To create an empty String value as the starting point for building a longer string, either (a) assign an empty string literal to a variable, or (b) initialize a new String instance with initializer syntax.
 
 **3a. String Literals**
+
 ```swift
 let someString = "Some string literal value"
 ```
 
 **3b. Empty String**
+
 ```swift
 var emptyString = ""               // empty string literal
 var anotherEmptyString = String()  // initializer syntax
 // these two strings are both empty, and are equivalent to each other
+emptyString == anotherEmptyString //true
 ```
 
 #### Exercise - Initialize a String
@@ -97,7 +100,18 @@ Concatenation is a simple and common way we change strings. It might help to rem
 listeningTo += ", Trumpeter"
 ```
 
+We can also use the *append* method to add Strings together
+
+```swift
+var name = "Ben"
+name.append(" Stone")
+name == "Ben Stone" //true
+```
+
 ### 6. Strings are Value Types
+
+A *value type* means that whenever we set a new variable or constant to an existing variable, we make another copy of the old String.
+
 
 This means that Strings, when assigned to one another are always copied. This guarantees that you won't be altering the string you copied.
 
@@ -110,23 +124,19 @@ print("Watching: \(watchingMovie), gonna watch \(nextMovie)")
 
 **Question**: If Strings weren't copied like this, how else might they behave when assigned?
 
+
+<details>
+<summary>Solution</summary>
+
 ```
 Other objects will be references and alterations made to any reference will be seen by all references.
 ```
+</details>
+
 This distinction will become more interesting when we work with references. Don't worry about optimizing this. 
 
 
-### 7. Working with Characters
-
-The String class is a collection of Characters. You can iterate through a string to access each of its elements:
-
-```swift
-for c: Character in nextMovie.characters {
-    print("\(c)")
-}
-```
-
-### 8. String Interpolation
+### 7. String Interpolation
 
 We've been using string interpolation all along as a matter of necessity, when we print to the console. Let's take an explicit look at it for a moment.
 
@@ -150,7 +160,54 @@ To say there are 4 movies in the queue would be false.
 
 ---
 
-### 9. Intro to Unicode
+
+### 8. Iterating through a String
+
+The String class is a collection of Characters. You can iterate through a string to access each of its elements:
+
+Just like you saw iterating over a *Range* using a for loop, you can iterate over a String as well.  Does the following work?  Try it in your compiler and see.
+
+```swift
+for letter in nextMovie {
+    print("letter")
+}
+```
+
+<details>
+<summary> Answer </summary>
+
+You will get a compiler error because "'String' does not conform to protocol 'Sequence'"
+
+We will get into procols later, but it's telling us that it doesn't know how to put a String in order.
+
+</details>
+
+We'll need to do the following to get our desired output:
+
+```swift
+for c: Character in nextMovie.characters {
+    print(c)
+}
+```
+The *property* characters returns a special type called a CharacterView.  This is something that helps put the characters in order.
+
+
+
+
+###9. The String Library
+
+Some useful functions
+
+- hasPrefix(_:)
+- hasSuffix(_:)
+- lowerCased()
+- upperCased()
+- remove(at:)
+- contains(_:)
+
+###10. Terminator and Separator
+
+###11. Intro to Unicode
 
 **Question**: Who speaks a language other than English? That uses characters other than those that are found in English? Or in the Roman alphabet?
 
@@ -158,7 +215,7 @@ Unicode is an international standard created so that characters from all writing
 
 The first plane, plane 0, of the [Basic Multilingual Plane (BMP)](https://en.wikipedia.org/wiki/Plane_%28Unicode%29#Basic_Multilingual_Plane) contains characters for almost all modern languages, and a large number of symbols. 
 
-### 10. Unicode Scalars
+### 12. Unicode Scalars
 
 Every character is built up from **one or more Unicode scalars**. 
 
@@ -168,7 +225,7 @@ Scalar is a term borrowed from mathematics. In Computer Science, we use it to sa
 
 Given that the first Unicode values are ASCII Build, some strings using Unicode escapes of the format `\u{xxxx}`. Type "man ascii" in terminal and look at Hex values or Google it. TL;DR?: A=0x41 and a=0x61.
 
-### 11. Combining Scalars
+### 13. Combining Scalars
 
 Usually there is one visible character per Unicode scalar. But in some cases they combine.
 
@@ -188,7 +245,7 @@ for s in nextMovie.unicodeScalars {
 Do the same as the previous exercise, except try some combining scalars, like tilde, umlaut and accents.
 Use this list of [Combining Diaritical Marks](http://www.fileformat.info/info/unicode/block/combining_diacritical_marks/list.htm) as a reference guide.
 
-### 12. Canonical Equivalence
+### 14. Canonical Equivalence
 
 Unicode has already-combined scalars that represent the equivalent multi-character compositions.
 
@@ -211,7 +268,7 @@ Do the same as the previous exercise, except find combining scalars and their pr
 
 ### More on Strings
 
-### 10. Counting Charcters
+### 15. Counting Charcters
 
 ```swift
 var word = "cafe"
@@ -238,37 +295,127 @@ Because of canonical equivalence and in the same spirit of getting what we would
 
 Compare character counts on combined scalars and their pre-composed equivalents. How about their unicodeScalars count?
 
-### 11. Accessing & Modifying a String
+### 16. Accessing & Modifying a String
 
-Because of the complexities of Unicode we've been discussing, Swift can't use a direct Int subscript to access a character/element. Use indices (String.Index) and ranges to access characters in a string.
+###Accessing Characters in a String
 
-**Index**
+How can we access a particular character inside of a String?
+
+Come up with some ideas for what could make sense.
+
+In Swift, accessing Characters can be a little involved.  We are not able to jump to a number just by telling the compiler.  The following will not compile:
+
 ```swift
-let start = nextMovie.startIndex
-let toPosition = 4
-let end = start.advancedBy(toPosition)
-print(nextMovie[end])
+let myString = "Howdy!"
+let firstChar = myString[0] //COMPILE ERROR
 ```
-#### Exercise - Accessing & Modifying a String
 
-Print out a string using a ```for``` loop, ```String.startIndex``` and ```String.endIndex```.
-Print out a string using a ```while``` loop, ```String.startIndex``` and ```String.advancedBy```.
+This is because a String is **not** the same as an Array.  What it needs to do instead is use a special property it has: String.Index.  In order to get a String.Index, we can use the following String properties:
+
+- startIndex
+- endIndex
+
+And the following String methods:
+
+- index(i: String.Index, offsetBy: String.IndexDistance)
+- index(before: String.Index)
+- index(after: String.Index)
+
+```swift
+//Start index
+let startIndex = myString.startIndex
+let firstChar = myString[startIndex]
+print(firstChar) //prints "H"
+
+//Third character
+let testString = "This string is for testing only"
+let testStringStart = testString.startIndex
+let thirdCharIndex = testString.index(testStringStart, offsetBy: 2)
+let thirdChar = testString[thirdCharIndex]
+print(thirdChar) //prints "i"
+
+//Last character
+let myStringEnd = myString.endIndex
+let lastCharIndex = myString.index(before: myStringEnd)
+let lastChar = myString[lastCharIndex]
+print(lastChar) //prints "!"
+
+```
+
+Let's try a few out on our own:
+
+Print the first character in "Fire blasters!"
+Print the sixth character in "Hello there!"
+Print the fourth character in "Goodbye there"
+Print the second to last character in "adiós"
+Print the last character in "🏆☕🤷"
+
+
+We can also define a ```Range``` of ```Index```
 
 **Range**
+
 ```swift
-let start = nextMovie.startIndex
-let toPosition = 2
-let end = start.advancedBy(toPosition)
+let start = myString.startIndex
+let end = myString.index(start, offsetBy: 2)
 let range = start...end
-let firstWord = nextMovie[range]
-print(firstWord)
+let substring = myString[range]
+print(substring)
 ```
+
+Let's try a few out on our own:
+
+Make a new String that goes from the first Character to the fifth Character in "abcdefghijklmnopqrstuvwxyz"
+
+Make a new String that goes from the eighteenth Character to the twentyfourth Character in "abcdefghijklmnopqrstuvwxyz"
+
+Make a new String that only contains the first word in "This is a sample String")
+
+
 
 #### Exercise - Accessing & Modifying a String
 
-Pull out ranges of strings.
+Now that we've seen how to access indicies, we can write a for loop that goes through the Range of characters and prints each one.
 
-### 12. Comparing Strings
+Print out a string using a ```for``` loop, ```String.startIndex``` and ```String.endIndex```.
+
+let iterableString = "Somewhere over the rainbow"
+
+<details>
+<summary>Solution</summary>
+
+```swift
+let startIndex = iterableString.startIndex
+let endIndex = iterableString.endIndex
+for index in startIndex..<endIndex {
+	let character = iterableString[index]
+	print(character)
+}
+```
+</details>
+
+Print out each Character in a string using a ```while``` loop.
+
+<details>
+<summary>Solution</summary>
+
+```swift
+let startIndex = iterableString.startIndex
+let endIndex = iterableString.endIndex
+var currentIndex = startIndex
+while currentIndex < endIndex {
+	let currentChar = iterableString[currentIndex]
+	print(currentChar)
+	
+	let nextIndex = iterableString.index(currentIndex, offsetBy: 1)
+	currentIndex = nextIndex
+}
+```
+</details>
+
+
+
+### 17. Comparing Strings
 
 As mentioned previously, two `String` values (or two `Character` values) are considered equal if their extended grapheme clusters are canonically equivalent.
 
@@ -299,11 +446,3 @@ if latinCapitalLetterA != cyrillicCapitalLetterA {
 }
 // Prints "These two characters are not equivalent."
 ```
-
-
-
-
-
-
-
-
