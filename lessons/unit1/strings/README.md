@@ -205,9 +205,15 @@ Some useful functions
 - remove(at:)
 - contains(_:)
 
-###10. Terminator and Separator
+### 10. Terminator and Separator
 
-###11. Intro to Unicode
+We can use the terminator and separator arguments in the print(_:terminator:separator) funciton to control our output.
+
+Separator signifies what multiple print statements will be separated by
+
+Terminator signifies what will happen after the whole print statement executes
+
+### 11. Intro to Unicode
 
 **Question**: Who speaks a language other than English? That uses characters other than those that are found in English? Or in the Roman alphabet?
 
@@ -345,9 +351,13 @@ print(lastChar) //prints "!"
 Let's try a few out on our own:
 
 Print the first character in "Fire blasters!"
+
 Print the sixth character in "Hello there!"
+
 Print the fourth character in "Goodbye there"
+
 Print the second to last character in "adiós"
+
 Print the last character in "🏆☕🤷"
 
 
