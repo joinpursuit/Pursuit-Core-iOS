@@ -73,23 +73,21 @@ Storing one Int is easy.  Let's use UInt8 for out example.
 |[0 0 0 0 1 0 1 0]|
 |First Int = 10|
 
-We'll call this byte "Byte zero". 
+
 
 Now let's add another Int to out array
 
- [0 0 0 0 1 0 1 0]   1 1 1 1 1 1 1 0 |
-
-  First Int = 10       Second Int = 254
-  
-     Byte 0               Byte 1
+|Byte 0|Byte 1|
+|---|---|
+|[0 0 0 0 1 0 1 0]| [1 1 1 1 1 1 1 0] |
+|First Int = 10|Second Int = 254|
 
 And one more:
 
-| 0 0 0 0 1 0 1 0 |  | 1 1 1 1 1 1 1 0 |  | 0 0 0 1 0 0 0 1 |
-
-  First Int = 10       Second Int = 254      Third Int = 17
-  
-     Byte 0                Byte 1                Byte 2
+|Byte 0|Byte 1|Byte 2|
+|---|---|---|
+|[0 0 0 0 1 0 1 0]| [1 1 1 1 1 1 1 0] | [0 0 0 1 0 0 0 1] |
+|First Int = 10|Second Int = 254| Third Int = 17 |
 
 
 We can see how we store information.  But how does the computer know how to access it?
@@ -110,7 +108,7 @@ This fast travel is the key to why arrays are so useful.  To get to any position
 I have an array of UInt8 and want to get to the 4th element.  What bit or bits do I look at?
 
 <details>
-<summary>Answers</sumary>
+<summary>Answers</summary>
 
 Each UInt8 takes up 1 byte (8 bits) in memory.  To get to the 4th element, I go to Byte 3 and read the bits there.
 
@@ -120,7 +118,7 @@ Each UInt8 takes up 1 byte (8 bits) in memory.  To get to the 4th element, I go 
 I have an array of Int32 and want to get to the 4th element.  What bit or bits do I look at?
  
 <details>
-<summary>Answers</sumary>
+<summary>Answers</summary>
 
 Each Int32 takes up 4 bytes (32 bits) in memory.  To get to the 4th element, I go to Byte 16 and read the bits in Byte 16, Byte 17, Byte 18 and Byte 19.
 
@@ -129,7 +127,7 @@ Each Int32 takes up 4 bytes (32 bits) in memory.  To get to the 4th element, I g
 I have an array of Int32 and want to get to the 5th element.  What bit or bits do I look at?
 
 <details>
-<summary>Answers</sumary>
+<summary>Answers</summary>
 
 Each Int32 takes up 4 bytes (32 bits) in memory.  To get to the 5th element, I go to Byte 20 and read the bits in Byte 20, Byte 21, Byte 22, and Byte 23.
 
