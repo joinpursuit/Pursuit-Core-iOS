@@ -103,6 +103,8 @@ Because each UInt8 is 8 bits, we can skip directly to Byte 2  and then the 8 bit
 
 </details>
 
+
+
 This fast travel is the key to why arrays are so useful.  To get to any position, I just need to multiple the *element* I want to get to by how many bits it takes to store each element.  Let's do a few to pratice.
 
 I have an array of UInt8 and want to get to the 4th element.  What bit or bits do I look at?
