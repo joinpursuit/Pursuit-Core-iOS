@@ -68,15 +68,16 @@ An array is a way of solving the problems from above.  By using arrays, we can s
 
 Storing one Int is easy.  Let's use UInt8 for out example.
 
-| 0 0 0 0 1 0 1 0 |
-  First Int = 10 
-      Byte 0
+|Byte 0]
+|---|
+|[0 0 0 0 1 0 1 0]|
+|First Int = 10|
 
-We'll call this byte "Byte zerAo". 
+We'll call this byte "Byte zero". 
 
 Now let's add another Int to out array
 
-| 0 0 0 0 1 0 1 0 |  | 1 1 1 1 1 1 1 0 |
+ [0 0 0 0 1 0 1 0]   1 1 1 1 1 1 1 0 |
 
   First Int = 10       Second Int = 254
   
