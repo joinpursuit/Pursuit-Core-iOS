@@ -139,7 +139,7 @@ Each Int32 takes up 4 bytes (32 bits) in memory.  To get to the 5th element, I g
 
 </details>
 
-
+####
 From these examples above, we can draw out the generalized way of accessing an element in an array.
 
 ByteToStartAt = (BytesPerThingStored) * (NumberOfTheElementIWantToLookAt - 1)
