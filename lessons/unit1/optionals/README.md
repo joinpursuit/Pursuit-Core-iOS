@@ -96,6 +96,7 @@ Thought experiment. Imagine we’re writing code that interfaces with a digital 
 	// we're not using temperature in any way
 	// until we've assigned it a value
 	```
+	
 	</details>
 
 Let's re-declare temperature as an optional
@@ -117,14 +118,15 @@ Note, we no longer have to initialize `temperature`. Or more accurately, `temper
 #### Exercise
 
 Declare one each of an optional `String`, `Int`, and a `Double`.
-	<details>
-		<summary>A solution</summary>
+<details>
+	<summary>A solution</summary>
 ```swift
 var middleName: String?
 var zipCode: Int?
 var meters: Double?
 ```
-	</details>
+
+</details>
 
 ### 3. optionals and their wrapped type
 
