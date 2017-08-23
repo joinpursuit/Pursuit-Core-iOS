@@ -77,12 +77,17 @@ We'll call this byte "Byte zerAo".
 Now let's add another Int to out array
 
 | 0 0 0 0 1 0 1 0 |  | 1 1 1 1 1 1 1 0 |
+
   First Int = 10       Second Int = 254
+  
      Byte 0               Byte 1
 
 And one more:
+
 | 0 0 0 0 1 0 1 0 |  | 1 1 1 1 1 1 1 0 |  | 0 0 0 1 0 0 0 1 |
+
   First Int = 10       Second Int = 254      Third Int = 17
+  
      Byte 0                Byte 1                Byte 2
 
 
