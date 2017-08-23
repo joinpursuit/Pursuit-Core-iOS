@@ -107,6 +107,7 @@ This fast travel is the key to why arrays are so useful.  To get to any position
 
 I have an array of UInt8 and want to get to the 4th element.  What bit or bits do I look at?
 
+
 <details>
 <summary>Answers</summary>
 
@@ -116,7 +117,8 @@ Each UInt8 takes up 1 byte (8 bits) in memory.  To get to the 4th element, I go 
 
 
 I have an array of Int32 and want to get to the 4th element.  What bit or bits do I look at?
- 
+
+
 <details>
 <summary>Answers</summary>
 
@@ -124,7 +126,9 @@ Each Int32 takes up 4 bytes (32 bits) in memory.  To get to the 4th element, I g
 
 </details>
 
+
 I have an array of Int32 and want to get to the 5th element.  What bit or bits do I look at?
+
 
 <details>
 <summary>Answers</summary>
@@ -140,18 +144,17 @@ ByteToStartAt = (BytesPerThingStored) * (NumberOfTheElementIWantToLookAt - 1)
 
 To access the 5th element of an array of Int32:
 
-ByteToStartAt = (BytesPerThingStored) * (NumberOfTheElementIWantToLookAt - 1)
-
 ByteToStartAt = (4) * (5 - 1) = 16
-
 
 To access the 1st element of an array of Int 32:
 
-ByteToStartAt = (BytesPerThingStored) * (NumberOfTheElementIWantToLookAt - 1)
-
 ByteToStartAt = (4) * (1 - 1) = 0
 
-This means I always know where to go in an array!  Unlike a String, we don't need to start at the beginning and move one step at a time.  We can skip ahead directly to whatever element we want to look at.
+This means I always know where to go in an array!  
+
+Unlike a String, we don't need to start at the beginning and move one step at a time.  
+
+We can skip ahead directly to whatever element we want to look at.
 
 Now that we understand how an array is stored, let's see how to manipulate it in Swift.
 
