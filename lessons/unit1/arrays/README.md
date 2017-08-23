@@ -116,7 +116,7 @@ Each UInt8 takes up 1 byte (8 bits) in memory.  To get to the 4th element, I go 
 
 </details>
 
-
+####
 I have an array of Int32 and want to get to the 4th element.  What bit or bits do I look at?
 
 
@@ -127,13 +127,14 @@ Each Int32 takes up 4 bytes (32 bits) in memory.  To get to the 4th element, I g
 
 </details>
 
-
+####
 I have an array of Int32 and want to get to the 5th element.  What bit or bits do I look at?
 
 
 <details>
 <summary>Answers</summary>
 
+####
 Each Int32 takes up 4 bytes (32 bits) in memory.  To get to the 5th element, I go to Byte 20 and read the bits in Byte 20, Byte 21, Byte 22, and Byte 23.
 
 </details>
