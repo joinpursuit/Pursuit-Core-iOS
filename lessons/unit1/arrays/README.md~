@@ -252,7 +252,7 @@ Methods
 
 
 
-### 5. Arrays are Value Types
+### 3. Arrays are Value Types
 
 Arrays copy on assignment because they are value types.
 ```swift
@@ -282,12 +282,14 @@ print(planetas == planets) //is now false
 
 ---
 
-### 6. Array Modification Methods In Depth
+### 4. Array Modification Methods
 
 #### Use `.append(_:)` to add new elements to end of array
 ```swift
 var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
-planets.append("Pluto") //Bringing Pluto back
+
+// what the heck
+planets.append("Pluto")
 ```
 
 The signature of the append method on Array is ```append(_:)```.  What is that thing that looks like a broken smiley? We'll look at it closer when we cover functions. For now it's good to just think of ```_``` as a placeholder, similar to how it was a wildcard/placeholder in ```case``` of a ```switch```statement. Here it means that append takes one argument and that we haven't explicitly renamed it.
@@ -326,8 +328,15 @@ planets.remove(at: planets.count - 1)
 
 </details>
 
+#### Use `.count()` to determine the number of elements in an array
+
+
+```swift
+planets.count
+```
+
 ---
-### 7. Subscript Access in Detail
+### 5. Subscript Access
 
 ```swift
 // single
@@ -339,12 +348,10 @@ What type is gasGiants (in snippet above)?
 <details>
 <summary><b>Solution</b></summary>
 
-`gasGiants` is an ArraySlice
+> `gasGiants` is an array.
 
 </details>
 
-
-An ArraySlice is basically like an Array, except it keeps the indicies from the original Array.
 
 #### Use Subscripting to Read an Element
 ```swift
@@ -363,65 +370,22 @@ planets[6] = "Urectum" // https://theinfosphere.org/Urectum
 
 ---
 
-### 8. Iterating through an Array
-
-Just like we wanted to access each Character in a String, we often want to access each element in an Array.  Fortunately, Arrays are much easier to traverse.
-
-We have two main ways that we can iterate through an Array.
-
-```swift
-
-let myFavoriteStrings = ["this one!", "I like this String", "poetry", "bison and camels"]
-
-//Method one: for in loop
-for str in myFavoriteStrings {
-    print(str)
-}
-
-//Method two: Access each index
-for index in 0..<myFavoriteStrings.count {
-    let currentString = myFavoriteStrings[index]
-    print(currentString)
-}
-```
-
-Practice: Use a while loop to print out each string in ```myFavoriteStrings```
-
-
-
-
-
-### 9. Array Equality
+### 6. Array Equality
 
 Arrays support the ```==``` operator.
 
 ```swift
 let galileanMoons = ["Io", "Europa", "Callisto", "Ganymede"]
-let moonsOfJupiter = ["Io", "Europa", "Callisto", "Ganymede"]
-galileanMoons == moonsOfJupiter //true
+galileanMoons == moonsOfJupiter
 ```
 
-Practice: Without using the ```==``` operator to compare Arrays, write code that prints out if galilieanMoons is equal to moonsOfJupiter
-
-
-### 10. Immutable Arrays
+### 7. Immutable Arrays
 
 Try to declare arrays as constants (using ```let```) if you know you will not change them.
 This allows the Swift compiler to make optimizations.
 
 
-### 11. Arrays and Strings
-
-Because Arrays are now our favorite type, we can even turn a String into an Array!
-
-```
-let myStr = "This could be anything, really."
-let myStrAsArray = Array(myStr.characters)
-```
-
-Now we don't need to worry about String indexing!
-
-### 12. Arrays can be multidimensional
+### 8. Arrays can be multidimensional
 
 ```swift
 let theMatrix = [[1, 2, 3],
@@ -431,4 +395,157 @@ let theMatrix = [[1, 2, 3],
 print(theMatrix[2][0]) // 7
 ```
 
-Practice:  Print out the element in each corner, then print out the element in the middle.
+---
+### Exercises
+
+Write a loop to print out `theMatrix`.
+
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+for i in 0..<theMatrix.count {
+    for j in 0..<theMatrix.count {
+        print(theMatrix[i][j])
+    }
+}
+
+```
+
+</details>
+
+#### Applications of Arrays
+Find an element of an array.
+
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+let shamrock = "\u{2618}"
+let fourLeafClover = "\u{1f340}"
+
+let clovers = [shamrock, shamrock, shamrock, fourLeafClover, shamrock, shamrock]
+
+if clovers.contains(fourLeafClover) {
+    print("You've got some good luck! You found a four-leaf clover: \(fourLeafClover)")
+} else {
+    print("You did not find a four-leaf clover. No good luck for you!")
+}
+```
+
+</details>
+
+Find a missing number in 0...100
+
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+var zeroToOneHundred = Array(0...100)
+
+let randomIndex = Int(arc4random_uniform(100)) //This line creates a random number
+print(randomIndex)
+let removedNumber = zeroToOneHundred.remove(at: randomIndex) //Now, we are able to remove a random element in the array
+
+var i = 0
+while i+1 < zeroToOneHundred.count {
+    
+    if zeroToOneHundred[i+1] - zeroToOneHundred[i] > 1 {
+        print("Found missing number between \(zeroToOneHundred[i+1]) & \(zeroToOneHundred[i])")
+        print("Missing Number: \(zeroToOneHundred[i] + 1)")
+        break
+    } else if removedNumber == 0 {
+        print("Missing Number: \(removedNumber)")
+        break
+    }
+    i += 1
+}
+```
+
+</details>
+
+Find the largest number.
+
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+let arrayOfNumbers = [3, 50, 28, 35, 17, 9, 0, 91, 63, 2]
+
+var maxInArrOfNums = Int.min
+
+for num in arrayOfNumbers {
+    if num > maxInArrOfNums {
+        maxInArrOfNums = num
+    }
+}
+
+print(maxInArrOfNums)
+```
+
+</details>
+
+Find the second smallest number.
+
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+var smallestInArrOfNums = Int.max
+var secondSmallestInArrOfNums = Int.max
+
+for num in arrayOfNumbers {
+    if num < smallestInArrOfNums {
+        secondSmallestInArrOfNums = smallestInArrOfNums
+        smallestInArrOfNums = num
+    } else if num >= smallestInArrOfNums && num < secondSmallestInArrOfNums {
+        secondSmallestInArrOfNums = num
+    }
+}
+
+print(secondSmallestInArrOfNums)
+```
+
+</details>
+
+#### Strings as Arrays
+Copy the characters of a string into an array.
+
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+let thisString = "Today is a wonderful day to learn about arrays!"
+var thisStringChars: [Character] = []
+
+for char in thisString.characters {
+    thisStringChars.append(char)
+}
+```
+
+</details>
+
+Find a character in that array.
+
+<details>
+<summary><b>Solution</b></summary>
+
+```swift
+let characterToFind = "a"
+var characterNotFound = true
+var iterations = 0
+
+while characterNotFound {
+    for char in thisString.characters {
+        iterations += 1
+        
+        if String(char) == characterToFind {
+            characterNotFound = false
+            print("The character `\(characterToFind)` was found in \(iterations) iterations.")
+            break
+        }
+    }
+}
+```
+
+</details>
