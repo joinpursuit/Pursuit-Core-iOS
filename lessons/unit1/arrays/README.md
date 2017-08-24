@@ -199,7 +199,7 @@ var anotherThreeDoubles = Array(repeating: 0.0, count: 3)
 
 
 
-### 3. Accessing values inside an array.
+### 6. Accessing values inside an array.
 
 Know that we now how to make an array, how can we use it?  One of the common things we want to do is access a particular *element* of an array.  We saw from the CS introduction above that we can access things quickly, so we should definitely be comfortable with it.
 
@@ -230,7 +230,7 @@ Print the second to last planet
 Print the middle planet (What are different ways this can be interpreted?)
 
 
-### 4. Useful Array Library Methods
+### 7. Useful Array Library Methods
 
 Other than accessing characters directly, the Swift Standard Library gives us some powerful tools for manipulating arrays
 
@@ -259,9 +259,15 @@ Methods
 - reverse()
 - popLast()
 
+### 8. Computer Science Preview: How do arrays get bigger?
 
 
-### 5. Arrays are Value Types
+When we instantiate an Array, we do so with a fixed amount of size.  We need to store it somewhere, after all.  But what happens when we exceed the limits of the space we have allocated?  What do we think could happen?
+
+
+Let's check in a Playground.
+
+### 9. Arrays are Value Types
 
 Arrays copy on assignment because they are value types.
 ```swift
@@ -291,7 +297,7 @@ print(planetas == planets) //is now false
 
 ---
 
-### 6. Array Modification Methods In Depth
+### 10. Array Modification Methods In Depth
 
 #### Use `.append(_:)` to add new elements to end of array
 ```swift
@@ -336,7 +342,7 @@ planets.remove(at: planets.count - 1)
 </details>
 
 ---
-### 7. Subscript Access in Detail
+### 11. Subscript Access in Detail
 
 ```swift
 // single
@@ -372,7 +378,7 @@ planets[6] = "Urectum" // https://theinfosphere.org/Urectum
 
 ---
 
-### 8. Iterating through an Array
+### 12. Iterating through an Array
 
 Just like we wanted to access each Character in a String, we often want to access each element in an Array.  Fortunately, Arrays are much easier to traverse.
 
@@ -400,7 +406,7 @@ Practice: Use a while loop to print out each string in ```myFavoriteStrings```
 
 
 
-### 9. Array Equality
+### 13. Array Equality
 
 Arrays support the ```==``` operator.
 
@@ -413,13 +419,13 @@ galileanMoons == moonsOfJupiter //true
 Practice: Without using the ```==``` operator to compare Arrays, write code that prints out if galilieanMoons is equal to moonsOfJupiter
 
 
-### 10. Immutable Arrays
+### 14. Immutable Arrays
 
 Try to declare arrays as constants (using ```let```) if you know you will not change them.
 This allows the Swift compiler to make optimizations.
 
 
-### 11. Arrays and Strings
+### 15. Arrays and Strings
 
 Because Arrays are now our favorite type, we can even turn a String into an Array!
 
@@ -430,7 +436,7 @@ let myStrAsArray = Array(myStr.characters)
 
 Now we don't need to worry about String indexing!
 
-### 12. Arrays can be multidimensional
+### 16. Arrays can be multidimensional
 
 ```swift
 let theMatrix = [[1, 2, 3],
