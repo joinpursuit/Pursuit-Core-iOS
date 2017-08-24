@@ -27,7 +27,7 @@ Optionals Review:
 
 var goodMorning: String? = "Good morning!"
 
-Safely unwrap goodMorning and print it.  Use 3 different methods.
+Safely unwrap goodMorning and print it.  Use 2 different methods.
 
 
 ### 2. The case for Arrays
@@ -68,7 +68,7 @@ An array is a way of solving the problems from above.  By using arrays, we can s
 
 Storing one Int is easy.  Let's use UInt8 for out example.
 
-|Byte 0]
+|Byte 0|
 |---|
 |[0 0 0 0 1 0 1 0]|
 |First Int = 10|
