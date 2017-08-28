@@ -34,10 +34,11 @@ Unlike an array keys are unordered
 
 #### Use cases
 
-The motivation for indexing by key instead of number
-* natural data - name, zip code, 
-* uniquing - set-like
-* aggregating, histograms
+Some motivations for indexing by key instead of number
+
+* Index on natural data such as a name, zip code or airport code instead of 
+* Means to discover and enforce uniqueness
+* Means to aggregate data associated with a key, e.g. a histogram
 
 ### 2. Creating and Populating
 
