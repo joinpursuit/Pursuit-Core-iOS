@@ -191,7 +191,7 @@ let average = averageThreeNums(x: firstTest, y: secondTest, z: thirdTest)
 
 **Practice**
 
-I have a string and I want to add an exclamation mark to the end.  Use the function above to do that.
+I have a string and I want to add an exclamation mark to the end.  Use the function addBang(to:).
 
 ```swift
 var myString = "Hello there"
