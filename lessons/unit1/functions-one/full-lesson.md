@@ -82,17 +82,12 @@ Let's take apart each piece
 
 ## 3: Anatomy of a Function
 
-*func* is the special keyword in swift for defining a function
-
-*doubleANumber* is the name of our function
-
-*number* is called the **argument label** or external parameter name.  That's what you type in later when you want to call your function.  This is *optional*.  If you don't include it, the parameter name (see below) will be the argument label.
-
-*x* is the **parameter name**.  It's how we refer to the input in the body of the function.
-
-*:Int* is the type annotation of the parameter name.  This means that the function will take an Int as input.
-
-*-> Int* is the syntax for what the function will **return**.  In this case, it means that the function will return an Int.
+- *func* is the special keyword in swift for defining a function
+- *doubleANumber* is the name of our function
+- *number* is called the **argument label** or external parameter name.  That's what you type in later when you want to call your function.  This is *optional*.  If you don't include it, the parameter name (see below) will be the argument label.
+- *x* is the **parameter name**.  It's how we refer to the input in the body of the function.
+- *:Int* is the type annotation of the parameter name.  This means that the function will take an Int as input.
+- *-> Int* is the syntax for what the function will **return**.  In this case, it means that the function will return an Int.
 
 Thinking about the return type is a new concept, but we've seen hints of it before.  What does it mean to return something?
 
