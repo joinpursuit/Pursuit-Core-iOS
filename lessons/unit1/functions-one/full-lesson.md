@@ -101,7 +101,7 @@ Think of a function like a command.  We give it a series of inputs and it will e
 With the example of doubleANumber(number:) the message we get back is an Int that represents the doubled number.  
 
 
-##4: Creating our Own Functions
+## 4: Creating our Own Functions
 
 Let's try to write a few functions of our own:
 
