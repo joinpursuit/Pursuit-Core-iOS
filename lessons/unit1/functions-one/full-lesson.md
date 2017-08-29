@@ -19,7 +19,7 @@ So far, all of the code we've seen is evaluated by starting at the top of the fi
 
 Functions present a new way to think about code.  
 
-##1: Functions in Math
+## 1: Functions in Math
 
 A **function** in math is a set of instructions or relationship between an input and an output.  In math, we use the syntax f(x) to denote a function f that takes one input x.
 
@@ -332,6 +332,7 @@ Write a function that finds the longest word in a list of words.
 
 
 Write a function that finds the average of an Array of Ints.
+
 # Review and Wrapup
 
 * Define function.
