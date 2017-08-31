@@ -110,19 +110,22 @@ Writing code this way avoids long optional chains, and can be helpful fo underst
 
 ## 2: Review
 
-- Bool
-- Int
-- Double
-- Float
-- if/else
-- for in loops
-- while loops
-- String
-- Character
-- Range
-- Optionals
-- Arrays
-- Dictionaries
+- Bool -> Logic questions
+- Int -> Arithmatic
+- Double -> Arithmatic
+- Float -> Arithmatic
+- for in loops -> Iterate through all elements in an object
+- while loops -> Iterate through all indices in an object
+- if/else -> Iterate through all elements matching a condition
+- switch -> Check a variable for a value and run code depending on how it matches a case
+- String -> Iterate through all characters in a String
+- Character -> Convert Characters to String and manipulate Unicode
+- Range -> Check if a number is in a Range.  Iterate through a Range
+- Optionals -> Unwrap and use an optional value
+- Arrays -> Add elements to the beginning and end, access a specific element
+- Dictionaries -> Find frequency of an element in an Array
+
+
 
 
 ## 3: Strings
