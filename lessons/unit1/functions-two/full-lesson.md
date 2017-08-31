@@ -15,6 +15,169 @@ Apple's [Swift Language Reference, Functions](https://developer.apple.com/librar
 
 # Lecture
 
+#Functions Day 2 and Review
+
+## 1: Guard Statements
+
+So far, we have seen several different types of control flow statements.
+
+- break
+- continue
+- if/else
+- switch
+
+All of these provide excellent ways to navigate code and control the way in which code is executed. 
+
+One special type of if statement is the if let statement.  We use it primarily for optional binding.
+
+```swift
+var myInt: Int?
+if let int = myInt {
+	print(int)
+	//More code with int here
+}
+```
+If we have multiple optionals we need to unwrap each one separately.
+
+```swift
+func doStuff(myInt: Int?, myString: String?, myDouble: Double?) {
+	if let int = myInt {
+		if let str = myString {
+		   if let double = myDouble {
+		   		print(int, str, double)
+		   		//More code here
+		   }
+		}
+	}
+}
+```
+This is called the *optional pyramid of doom* because code keeps getting more and more indented.
+
+We can use comma syntax to make it a little better, but it can be difficult to fit too many things on a single line.
+
+Fortunately, we have a better way to handle control flow: the *guard* statement.
+
+The guard statement can only appear inside of a loop or a function.  Let's see an example:
+
+```swift
+//If statement
+
+func firstElement(in arr: [Int]) -> Int? {
+	if arr.count < 1 {
+		return nil
+	} else {
+		return arr[0]
+	}
+}
+
+//Guard statement
+
+func firstElement(in arr: [Int]) -> Int? {
+	guard arr.count > 0 else {
+		return nil
+	}
+	return arr[0]
+}
+
+```
+
+Guard reads the opposite way of if.  In the above example, we would say:
+
+Make sure that the array's count is bigger than 0, if it's not return nil.
+
+We can also use *guard let* like how we would use an *if let*.
+
+```swift
+func doStuff(myInt: Int?, myString: String?, myDouble: Double?) {
+	guard let int = myInt else {
+		return
+	}
+	guard let str = myString else {
+		return
+	}
+	guard let double = myDouble else {
+		return
+	}
+	print(int, str, double)
+	//More code here
+}
+```
+
+Writing code this way avoids long optional chains, and can be helpful fo understanding the flow of a program.
+
+
+#Review
+
+## 2: Review
+
+- Bool
+- Int
+- Double
+- Float
+- if/else
+- for in loops
+- while loops
+- String
+- Character
+- Range
+- Optionals
+- Arrays
+- Dictionaries
+
+
+## 3: Strings
+
+Write your own String() method
+
+Write a function that reverses a String
+
+Write a function that capitalizes the first character in a String
+
+Write a function that capitalizes the first letter of each word in a string (words are spearated by whitespace characters)
+
+Write a function that checks if a String is a Palindrome
+
+Write a function that checks if a String is a pangram
+
+
+## 4: Arrays
+
+Write your own 'contains' function
+
+Write your own min() and max() functions
+
+Write a function that sums an array
+
+Write a function that concatonates all Strings in an array
+
+Given two arrays of Ints, write a function that tells you all the values they have in common
+
+Write a function that "safely" accesses a value in an array of Ints at a given index.
+
+## 5: Dictionaries
+
+Find the most frequently appearing Array in an Array of Arrays
+
+All Ints appear twice in an array, but one element appears only once.  Find the outlier.
+
+Given a Dictionary as input that maps Strings to Ints, return a Dictionary that gets rid of entries that map to a negative value.
+
+Given a String as input, rotate all a-z characters by one.
+
+a -> b, b -> c ... z -> a
+
+
+
+
+
+
+
+
+
+
+
+# Extra Material
+
 ## Parameters
 
 ### In-out parameters
