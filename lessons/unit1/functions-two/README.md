@@ -6,7 +6,8 @@ Students will be able to:
 * Gain greater facility with functions
 * Use less common forms of functions
 
-# Vocabulary: function, argument, parameter, input, output, scope
+# Vocabulary:
+function, argument, parameter, input, output, scope
 
 # Resources
 Swift Programming: The Big Nerd Ranch Guide, Chapter 12, Functions
