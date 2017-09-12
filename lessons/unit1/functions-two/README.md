@@ -44,14 +44,14 @@ If we have multiple optionals we need to unwrap each one separately.
 
 ```swift
 func doStuff(myInt: Int?, myString: String?, myDouble: Double?) {
-	if let int = myInt {
-		if let str = myString {
-		   if let double = myDouble {
-		   		print(int, str, double)
-		   		//More code here
-		   }
-		}
-	}
+    if let int = myInt {
+       if let str = myString {
+           if let double = myDouble {
+	       print(int, str, double)
+	       //More code here
+	   }
+        }
+    }
 }
 ```
 This is called the *optional pyramid of doom* because code keeps getting more and more indented.
