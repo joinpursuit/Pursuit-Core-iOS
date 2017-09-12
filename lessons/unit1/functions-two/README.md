@@ -6,7 +6,7 @@ Students will be able to:
 * Gain greater facility with functions
 * Use less common forms of functions
 
-### Vocabulary: function, argument, parameter, input, output, scope
+# Vocabulary: function, argument, parameter, input, output, scope
 
 # Resources
 Swift Programming: The Big Nerd Ranch Guide, Chapter 12, Functions
@@ -106,29 +106,7 @@ func doStuff(myInt: Int?, myString: String?, myDouble: Double?) {
 Writing code this way avoids long optional chains, and can be helpful fo understanding the flow of a program.
 
 
-#Review
-
-## 2: Review
-
-- Bool -> Logic questions
-- Int -> Arithmatic
-- Double -> Arithmatic
-- Float -> Arithmatic
-- for in loops -> Iterate through all elements in an object
-- while loops -> Iterate through all indices in an object
-- if/else -> Iterate through all elements matching a condition
-- switch -> Check a variable for a value and run code depending on how it matches a case
-- String -> Iterate through all characters in a String
-- Character -> Convert Characters to String and manipulate Unicode
-- Range -> Check if a number is in a Range.  Iterate through a Range
-- Optionals -> Unwrap and use an optional value
-- Arrays -> Add elements to the beginning and end, access a specific element
-- Dictionaries -> Find frequency of an element in an Array
-
-
-
-
-## 3: Strings
+## 2: Strings
 
 Write your own String() method
 
@@ -143,7 +121,7 @@ Write a function that checks if a String is a Palindrome
 Write a function that checks if a String is a pangram
 
 
-## 4: Arrays
+## 3: Arrays
 
 Write your own 'contains' function
 
@@ -157,7 +135,7 @@ Given two arrays of Ints, write a function that tells you all the values they ha
 
 Write a function that "safely" accesses a value in an array of Ints at a given index.
 
-## 5: Dictionaries
+## 4: Dictionaries
 
 Find the most frequently appearing Array in an Array of Arrays
 
