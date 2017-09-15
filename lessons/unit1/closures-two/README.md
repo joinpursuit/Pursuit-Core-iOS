@@ -1,27 +1,80 @@
-# Standards
-Use functions to solve problems
+### Objective
 
-# Objectives
+* To understand and use closures as return types
+* To understand capturing, or closing over variables
 * Create functions that track internal information through closures
 * Use map(:_) to solve problems
 * Use filter(:_) to solve problems
 * Re-implement filter and map to reinforce understanding of closures
 
-Vocabulary: closure, block, algorithm, sort, maintenance, scope, higher-order
 
-# Resources
+### Readings
 Swift Programming: The Big Nerd Ranch Guide, Chapter 13 Closures
 
 Apple's [Swift Language Reference, Closures](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html#//apple_ref/doc/uid/TP40014097-CH11-ID94)
 
-# Lecture
+### Vocabulary
+- **algorithm** - a process or set of rules to be followed in calculations or other problem- **block** - One or more lines of code, enclosed with curly braces. Sometimes used interchangeably with closure, especially in Objective-C.
+- **closure** - An executable block of code. Like a function, it can take input parameters and return a value. A function is actually a special case of a closure.
+-solving operations, especially by a computer.
+- **higher-order function** - A function that takes a closure as one or more of its arguments and/or returns a closure. 
+- **scope** - the visibility of a variable or other identifier based on where it is defined within the program.
 
-## Warm up
 
-Let's see some solutions to the microwave problem (exercise 10 from yesterday). We'll vote on one
-to use.
+### Closures as return types
 
-## Advanced Topics with Closures
+In the first closures lesson we focused on the more common sense of higher order functions, passing in closures as arguments to functions, notably to `sort(by:)`. But a function that returns a closure is also described as being higher order. Let's step through the process of returning a closure from a function and then calling it.
+
+Recall the general form of a closure.
+
+```swift
+{ (parameters) -> ReturnType in
+    statements
+}
+```
+
+And how we can store a closure in a variable and call it.
+
+```swift
+var doubler = { (a: Int) -> Int in
+    return a * 2
+}
+print(doubler(22))
+```
+
+Now, combine the idea that a closure can be assigned to a variable with the idea that a function can return a closure. Here is the definition of a function that returns a closure.
+
+```swift
+func makeMultiplier(factor: Int) -> (Int) -> Int {
+    return {(n) in factor * n}
+}
+```
+
+And here we call the function and store the closure it returns in variables that are executable.
+
+```swift
+let timesTwo = makeMultiplier(factor: 2)
+let timesFive = makeMultiplier(factor: 5)
+print(timesTwo(53))
+print(timesFive(3))
+``` 
+
+// close over "number" and define function
+var number = 0
+var addOne = {
+    number += 1
+}
+addOne()
+addOne()
+print(number)
+```
+
+### Capture values
+```swift
+
+```
+
+### Closures are reference types
 
 The following illustration from Apple's documentation will serve to illustrate all
 three of the following concepts.
@@ -29,9 +82,13 @@ three of the following concepts.
 * Functions as Return Types
 * Closures Capture Values
 * Closures are Reference Types
+* Escaping
 
-First of all, ```incrementer``` is a function that we'll return and when we assign
-a constant to it and call it it will update the  ```runningTotal``` variable
+
+### Examples of returning closures
+
+First of all, `incrementer` is a function that we'll return and when we assign
+a constant to it and call it it will update the  `runningTotal` variable
 that it captured from its enclosing function. By instantiating new copies of the function
 as well as assigning new references to exising ones we can illustrate how closures
 are reference types. See comments.
@@ -113,10 +170,11 @@ func mathStuffFactory(opString: String) -> (Double, Double) -> Double {
 2. Add a power operator.
 3. Add an integer division operator.
 
-## Map and Filter
+### Map and Filter
 
-### Map
-Map is used to perform the same code on an entire array, and returns a new array.
+#### Map
+
+Array's `map(_:)` is used to execute a closure on each element, creating a new corresponding element in an new array.
 
 ```swift
 let someInts = [1, 2, 3]
