@@ -77,7 +77,7 @@ git config --global core.editor "sublime -n -w"
 
 ### Canvas
 
-[Canvas](https://canvas.instructure.com/courses/1186749) is our key organizational tool. You'll find a schedule of lessons and assignments in it.
+[Canvas](https://canvas.instructure.com/courses/1212372) is our key organizational tool. You'll find a schedule of lessons and assignments in it.
 
 You should have received an email already from Canvas asking you to register before you can participate in the class.
 
@@ -87,13 +87,13 @@ If you haven't already please create a new account and make sure you set your Ti
 
 Piazza is our question and answer system.
 
-Follow the link [here](https://piazza.com/access_code/fall2017/iosbridge) to create an account.  Enter the code "iosbridge".
+Follow the link [here](piazza.com/access_code/fall2017/ac43) to create an account.  Enter the code "ac43".
 
 ### Slack
 
 Slack is our less-formal, more immediate messaging/chat app. It should be used for quick short term communication and is not preferred for anything you would want to save long term.
 
-1. To sign up for slack go to this [link](https://join.slack.com/t/c4qbridge-iosdays/shared_invite/MjI0MDgwMjY4NTE3LTE1MDIyMjU3NzQtZThhMjFkZTRlZQ). 
+1. To sign up for slack go to this [link](https://join.slack.com/t/c4q-accesscode-4-3/shared_invite/MjQxMDE5MTkxNjcxLTE1MDUyMzMwMDAtNzBjMmFjZjI4Mw). 
 2. You will be prompted to enter your email address. Enter it and hit the green button.
 3. Check your email for the confirmation and click "Confirm Email".
 4. Enter your name and choose a user name.
