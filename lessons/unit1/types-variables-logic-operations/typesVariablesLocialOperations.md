@@ -1,13 +1,20 @@
 ### Types, Variables, Logic and Operations
 ---
 
-### Objective 
-To understand and differentiate among types of data, define constants and variables, print variables to the console using string interpolation, and to solve basic logic questions.
+
+
+### Objectives
+- To understand and differentiate among types of data, define constants and variables, print variables to the console using string interpolation, and to solve basic logic questions.
+- To be able to differentiate between number types (e.g `Int` vs `Float`), solve problems using integer operations, and apply newly learned information about numbers to conditionals.
+
 
 ### Readings
 
 1. Swift Programming: The Big Nerd Ranch Guide, Chapter 2
-1. Apple's [Swift Language Reference, The Basics](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309)
+2. Swift Programming: The Big Nerd Ranch Guide, Chapter 4, Numbers
+3. Apple's [Swift Language Reference, The Basics](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309)
+4. Apple's [Swift Language Reference, The Basics - Integers](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID317) 
+
 
 #### Further Readings
 1. [Type Safety & Type Inference](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwigt72FnebUAhXPQD4KHbebBHUQygQILDAA&url=https%3A%2F%2Fdeveloper.apple.com%2Flibrary%2Fcontent%2Fdocumentation%2FSwift%2FConceptual%2FSwift_Programming_Language%2FTheBasics.html%23%2F%2Fapple_ref%2Fdoc%2Fuid%2FTP40014097-CH5-ID322&usg=AFQjCNHOuBMHtgkI642rFokkBTRMnNEFDg)
@@ -302,29 +309,7 @@ We can also use arithmatic on integers.  We will go into more detail on integer 
 
 ---
 
-### Review and Wrapup
-
-* Define Type.
-* Compare and contrast variables and constants.
-* What are the benefits of types?
-
-
-
-
-### Numbers & Operations:
----
-
-### Objective
-To be able to differentiate between number types (e.g `Int` vs `Float`), solve problems using integer operations, and apply newly learned information about numbers to conditionals.
-
-### Readings
-
-1. Swift Programming: The Big Nerd Ranch Guide, Chapter 4, Numbers
-1. Apple's [Swift Language Reference, The Basics - Integers](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID317) 
-
----
-
-### 1. Warmup
+### 6. Order of Operations Review
 
 Simplify the following expressions [(PEMDAS Refresher)](https://www.mathsisfun.com/operation-order-pemdas.html):
 
@@ -364,7 +349,7 @@ Simplify the following expressions [(PEMDAS Refresher)](https://www.mathsisfun.c
 ```
 </details>
 
-### 2. Intro to `Int`
+### 7. Intro to `Int`
 
 Integer is a term borrowed (taken) from mathematics to describe a number that's not a fraction in the range from -∞ to +∞, including zero. Since computers don't really do infinity we change the definition, substituting minimum and maximum numbers for the infinities. 
 
@@ -372,7 +357,7 @@ The basic type for integers in Swift is `Int`. Before we explore the many relate
 
 
 
-### 6. Creating Instances of `Int`
+### 8. Creating Instances of `Int`
 
 ```swift
 let numBonesInHumanBody = 206 // Int by default
@@ -381,7 +366,7 @@ let numLettersInEnglishAlphabet: Int8 = 26  // type annotation lets us control
 
 ---
 
-### 7. Integer Operations
+### 9. Integer Operations
 
 |Symbol| Operation          | Example | Result | 
 |------|--------------------|---------|--------|
@@ -392,7 +377,7 @@ let numLettersInEnglishAlphabet: Int8 = 26  // type annotation lets us control
 | %    | Modulo             | 5 % 8   | 5      |
 
 
-### 8. Integer Division
+### 10. Integer Division
 
 When dividing integers the expression always evaluates to the whole part of the calculation. 
 This can be thought of as throwing away any numbers "after the decimal point".
@@ -441,7 +426,7 @@ print("\(num1) / \(num2) = \(seventySixDivFourteen), remainder \(seventySixModFo
 ```
 </details>
 
-### 9. Operator Shorthand
+### 11. Operator Shorthand
 
 Given:
 ```swift
@@ -464,41 +449,6 @@ var i = 0 // 0
 i += 1 // 1
 ```
 
-### 10. Overflow Operators
-
-You may see that Swift supports overflow operators. They're not used in everyday coding but the reason they exist is worth looking at quickly. Overflow refers to the result of trying to perform an operation that would result in a value that goes over the maximum, or under the minimum value of the data type.
-
-```swift
-var x: Int8 = 100
-x += 30
-```
-
-That crashes, which is actually what we want it to do. This alerts us to the fact that we have overflow and we're more likely to fix it. There are operators that will make the value wrap around and our program won't crash but most likely the value we get is totally not what we expect.
-
-**Takeaway**: Sometimes it's good to crash.
-
-### 11. Conversion between Integer Types
-
-The range of numbers that can be stored in an integer constant or variable is different for each numeric type. An Int8 constant or variable can store numbers between -128 and 127, whereas a UInt8 constant or variable can store numbers between 0 and 255. A number that will not fit into a constant or variable of a sized integer type is reported as an error when your code is compiled:
-
-```swift
-let cannotBeNegative: UInt8 = -1
-// UInt8 cannot store negative numbers, and so this will report an error
-let tooBig: Int8 = Int8.max + 1
-// Int8 cannot store a number larger than its maximum value,
-// and so this will also report an error
-```
-
-Because each numeric type can store a different range of values, you must opt in to numeric type conversion on a case-by-case basis. This opt-in approach prevents hidden conversion errors and helps make type conversion intentions explicit in your code.
-
-To convert one specific number type to another, you initialize a new number of the desired type with the existing value. In the example below, the constant twoThousand is of type UInt16, whereas the constant one is of type UInt8. They cannot be added together directly, because they are not of the same type. Instead, this example calls UInt16(one) to create a new UInt16 initialized with the value of one, and uses this value in place of the original:
-
-```swift
-let twoThousand: UInt16 = 2_000
-let one: UInt8 = 1
-let twoThousandAndOne = twoThousand + UInt16(one)
-Because both sides of the addition are now of type UInt16, the addition is allowed. The output constant (twoThousandAndOne) is inferred to be of type UInt16, because it is the sum of two UInt16 values.
-```
 
 ### 12. Floating Point Numbers
 
@@ -563,8 +513,11 @@ Floating-point values are always truncated when used to initialize a new integer
 
 ---
 
-### 16. Review & Wrapup
+### Review & Wrapup
 
+* Define Type.
+* Compare and contrast variables and constants.
+* What are the benefits of types?
 * Remember, (almost) always use ```Int```.
 * What are the rare cases where using an integer type other than ```Int``` is recommended?
 
