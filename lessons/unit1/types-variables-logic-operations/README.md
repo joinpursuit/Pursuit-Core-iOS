@@ -488,6 +488,8 @@ print("d1 + 0.1 is \(d1 + 0.1)")
 
 if d1 + 0.1 == 1.2 {
     print("hello, out there.")
+} else {
+  print("d1 + 0.1 is not 1.2")
 }
 ```
 ### 15. Integer & Floating Point Conversion
