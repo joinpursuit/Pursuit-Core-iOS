@@ -138,6 +138,29 @@ let temperatureInFahrenheit = 40
 let message temperatureInFahrenheit <= 32 ? "cold" : "warm"
 ```
 ### 6. Nested ifs
+We are also able to nest if statements together.
+
+```swift
+var ownsSweater = true
+if temperatureInFahrenheit < 60 {
+	if ownsSweater {
+		print("Put on your sweater!")
+	} else {
+		print("You should get a sweater!")
+	}
+} else if temperatureInFahrenheit > 80 {
+	if ownsSweater {
+		print("Make sure not to wear your sweater!")
+	} else {
+		print("No need to buy a sweater")
+	}
+} else {
+	print("If you have a sweater, up to you what to do with it.")
+}
+
+
+```
+
 
 ### 7. else if
 
