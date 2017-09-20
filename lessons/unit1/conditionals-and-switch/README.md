@@ -137,7 +137,28 @@ Adapting the conditional above we can rewrite it using the ternary if.
 let temperatureInFahrenheit = 40
 let message temperatureInFahrenheit <= 32 ? "cold" : "warm"
 ```
-### 6. Nested ifs
+
+
+
+### 6. else if
+
+For situations where we want to check a series of conditionals in order, chosing only one we use the `else if` construct.  
+
+```swift
+temperatureInFahrenheit = 90
+if temperatureInFahrenheit <= 32 {
+    print("It's very cold. Consider wearing a scarf.")
+} else if temperatureInFahrenheit >= 86 {
+    print("It's really warm. Don't forget to wear sunscreen.")
+} else {
+    print("It's not that cold. Wear a t-shirt.")
+}
+// Prints "It's really warm. Don't forget to wear sunscreen."
+```
+
+In this example we're comparing the temperature to 32 in the `if`, and to 86 in the `else if`.  As with `if`, it doesn't require `else if` but `else if` requires an initial `if`. `else` remains optional as well. It's important to note that at most one condition will match. The conditionals are evaluated top down and in the case where more than one would have matched, only the block for the first match is run and the whole chain is exited at the end of that block.
+
+### 7. Nested ifs
 We are also able to nest if statements together.
 
 ```swift
@@ -158,27 +179,7 @@ if temperatureInFahrenheit < 60 {
 	print("If you have a sweater, up to you what to do with it.")
 }
 
-
 ```
-
-
-### 7. else if
-
-For situations where we want to check a series of conditionals in order, chosing only one we use the `else if` construct.  
-
-```swift
-temperatureInFahrenheit = 90
-if temperatureInFahrenheit <= 32 {
-    print("It's very cold. Consider wearing a scarf.")
-} else if temperatureInFahrenheit >= 86 {
-    print("It's really warm. Don't forget to wear sunscreen.")
-} else {
-    print("It's not that cold. Wear a t-shirt.")
-}
-// Prints "It's really warm. Don't forget to wear sunscreen."
-```
-
-In this example we're comparing the temperature to 32 in the `if`, and to 86 in the `else if`.  As with `if`, it doesn't require `else if` but `else if` requires an initial `if`. `else` remains optional as well. It's important to note that at most one condition will match. The conditionals are evaluated top down and in the case where more than one would have matched, only the block for the first match is run and the whole chain is exited at the end of that block.
 
 ### 8. Exercise
 
