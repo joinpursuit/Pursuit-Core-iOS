@@ -1,3 +1,5 @@
+## How to Update to Xcode 9
+
 1. Click on the App Store icon located in your dock.
 2. Download the Safari 11 update.
 3. Download the Xcode 9 update.
