@@ -377,6 +377,14 @@ let substring = myString[range]
 print(substring)
 ```
 
+We can also create ranges using a special kind of syntax:
+
+```swift
+let middleChar = myString.index(start, offsetBy: myString.count/2)
+let otherSubstring = myString[middleChar...]
+print(otherSubstring)
+```
+
 Let's try a few out on our own:
 
 Make a new String that goes from the first Character to the fifth Character in "abcdefghijklmnopqrstuvwxyz"
