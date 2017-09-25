@@ -153,11 +153,12 @@ print("There are \(numMovies) in the queue")
 let guessNumberOfMoviesInQueue = 4
 print("To say there are \(guessNumberOfMoviesInQueue) movies in the queue would be \(numMovies == guessNumberOfMoviesInQueue).")
 ```
-
+<details>
+<summary>Solution</summary>
 ```
 To say there are 4 movies in the queue would be false.
 ```
-
+</details>
 ---
 
 
