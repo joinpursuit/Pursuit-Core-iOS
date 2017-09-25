@@ -170,7 +170,7 @@ Just like you saw iterating over a *Range* using a for loop, you can iterate ove
 
 ```swift
 for letter in nextMovie {
-    print("letter")
+    print(letter)
 }
 ```
 
