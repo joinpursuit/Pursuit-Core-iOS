@@ -1,4 +1,4 @@
-###Arrays - Day 2
+### Arrays - Day 2
 
 ### Review:
 
