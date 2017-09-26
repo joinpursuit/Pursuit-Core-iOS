@@ -1,4 +1,4 @@
-###Arrays - Day 2
+### Arrays - Part 2
 
 ### Review:
 
@@ -67,8 +67,8 @@ let newArr = Array(repeating: 5, count: 2)
 
 1. Make an array containing 200 copies of the number 9
 2. Make an array containing 20 copies of the string "Hello"
-3. Make an array of 30 optional Ints set to nil
-4. Make a 2-dimensional 5 x 5 array of Ints all set to 0
+3. Make a 2-dimensional 5 x 5 array of Ints all set to 0
+4. Make a 2-dimensional 2 x 6 array of Strings all set to "a"
 
 
 ### 18. Solving problems with multidimensional arrays
