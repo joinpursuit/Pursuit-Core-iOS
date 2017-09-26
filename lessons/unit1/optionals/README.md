@@ -120,6 +120,7 @@ Note, we no longer have to initialize `temperature`. Or more accurately, `temper
 Declare one each of an optional `String`, `Int`, and a `Double`.
 <details>
 	<summary>A solution</summary>
+	
 ```swift
 var middleName: String?
 var zipCode: Int?
