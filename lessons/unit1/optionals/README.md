@@ -477,7 +477,63 @@ else {
 }
 ```
 
-### 6. Implicitly Unwrapped optionals
+### 5b Optional Binding with while let
+
+We can use a ```while let``` pattern to continually unwrap a value, and stop when that value is nil.
+
+```swift
+var myArr = [4,10,3,2,19]
+
+while let lastVal = myArr.popLast() {
+	print(lastVal)
+}
+//Prints
+4
+10
+3
+2
+19
+```
+
+This isn't a super common pattern, but it can be very powerful.  Take note for when you are able to make sure of it.
+
+### 6. Guard statements
+
+If we are inside of a loop, we can use a special type of binding statement called a ```guard``` statement.  A guard statement is a way of checking to see if a condition is true, and only proceeiding forwards if it is.
+
+```swift
+var myArr = [1,4,2,9]
+var currentIndex = 0
+while true {
+	guard currentIndex < myArr.count else {
+		break
+	}
+	print(myArr[currentIndex]
+}
+```
+
+We can read this to be "make sure that the current index is less than the count of the array.  Otherwise, break out of the loop.
+
+guard can only appear inside of a loop (or function) and must have an else that breaks out of the current scope that you are in.
+
+
+### 6b. Guard let statements
+
+We can combine the idea of a guard statements and optional binding to create ```guard let``` statements.  A guard let statement can only appear anywhere that a guard statement would be able to appear.  
+
+```swift
+var tempRecordings: [Double] = [78, nil, 85, 77, nil, 80]
+for temperature in tempRecordings {
+	guard let temperature = temperature else {
+		continue
+	}
+	print("We recorded a temperature of \(temperature)")
+}
+```
+
+In the code above, we are able to use the variable ```temperature``` anywhere below the guard statement that we've written.  Our compiler is happy with us because either (1) we fail to initialize our variable temperature because we found a nil value and then continue our loop or (2) we succeed at unwrapping temperature, then we can use our new variable safely in the rest of our code.
+
+### 7. Implicitly Unwrapped optionals
 
 Implicitly unwrapped optionals don't need to be unwrapped when used. This seems odd, and at this point, before we've dealt with writing our own classes it is a little early to see their purpose. For now, don't declare implicitly unwrapped optionals, but let's be ready to use them when we see them.
 
@@ -487,7 +543,7 @@ firstName = "Caspar"
 print(firstName)
 ```
 
-### 7. The nil coalescing operator
+### 8. The nil coalescing operator
 
 Use the nil coalescing operator to test an optional and supply an alternative if `nil`.
 
@@ -503,7 +559,7 @@ print(secondTitle ?? "(none)")
 
 Since `middleName` and `secondTitle` are optionals, they may be nil. We don't want to print nil values or see the "Optional()" description when printing. We also may not want to add the complexity and lines of code involved in unwrapping.
 
-### 8. Testing optionals for equality
+### 9. Testing optionals for equality
 
 We can compare optionals with `==` without unwrapping them.
 
@@ -539,7 +595,7 @@ else {
 
 This might not be the test you think you're making.
 
-### 9. Optional chaining
+### 10. Optional chaining
 
 Optional chaining is a process for querying and calling properties, methods, and subscripts on an optional that might currently be nil. If the optional contains a value, the property, method, or subscript call succeeds; if the optional is nil, the property, method, or subscript call returns nil. Multiple queries can be chained together, and the entire chain fails gracefully if any link in the chain is nil.
 
@@ -572,3 +628,5 @@ secondTitle = "There and Back Again"
 secondTitle?.append(" AGAIN")
 print(secondTitle ?? "")
 ```
+
+
