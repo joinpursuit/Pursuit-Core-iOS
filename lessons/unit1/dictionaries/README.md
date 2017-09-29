@@ -274,7 +274,7 @@ var accountNumbers3: Set<Int> = [103456, 103761, 103764, 102778]
 Sets can also be populated from an array. This will remove any duplicates.
 
 ```swift
-let tas = ["Ben", "Gabe", "Marcel", "Tom", "Ben"]
+let tas = ["Gabe", "Marcel", "Tom", "Gabe", "Karen"]
 var uniqueTAs = Set(tas)
 ```
 
@@ -321,17 +321,25 @@ To remove values from a set, use the .remove method. This returns the element yo
 uniqueTAs.remove("Vic")  // returns "Vic"
 ```
 
-### 6. Unions and Intersections
+### 6. Unions, Intersections and Disjoint
 
 The union of 2 sets contains all the unique elements of both sets. 
 
 ```swift
-let moreStaff: Set<String> = ["Stefani", "Ben", "Karen", "Vic", "Gabe"]
-let allStaff = moreStaff.union(uniqueTAs)  // returns ["Ben", "Vic", "Karen", "Tom", "Marcel", "Stefani", "Gabe"]
+let moreStaff: Set<String> = ["Stefani", "Ben", "Karen", "Vic", "Gabe", "Will"]
+let allStaff = moreStaff.union(uniqueTAs)  // returns ["Ben", "Vic", "Karen", "Tom", "Marcel", "Stefani", "Gabe", "Will"]
 ```
 
 The intersection of 2 sets contains all the elements shared between them.
 
 ```swift
 let intersectingStaff = moreStaff.intersection(uniqueTAs)  // returns ["Ben", "Gabe"]
+```
+
+Disjoint is a method used on 2 sets that returns a bool determining if the 2 sets share any elements. 
+
+```swift
+let someMoreNames: Set<String> = ["Dave", "Bill", "Gary", "Will"]
+someMoreNames.isDisjoint(with: allStaff)   // returns false
+someMoreNames.isDisjoint(with: uniqueTAs)   // returns true
 ```
