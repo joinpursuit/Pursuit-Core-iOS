@@ -207,3 +207,26 @@ for c in codes {
 ```
 
 
+### Sets
+---
+
+### Objectives
+* Declare and use Sets 
+* Understand common uses of Sets
+* Contrast and compare Sets with Dictionaries
+
+### Readings
+1. Swift Programming: The Big Nerd Ranch Guide, Chapter 11
+1. Apple's [Swift Language Reference, Collections](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html#//apple_ref/doc/uid/TP40014097-CH8-ID105)
+
+#### Vocabulary
+1. **dictionary** - an unordered collection of distinct instances.
+1. **hash** - a number generated from a string of text. (More info: [What exactly is a Hash?](https://cs.stackexchange.com/questions/55471/what-exactly-and-precisely-is-hash/55472))
+1. **element** - a hashable type (i.e. string) that can be stored in a set.
+
+---
+
+### 1. Introduction
+
+
+
