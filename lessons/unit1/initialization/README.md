@@ -3,8 +3,8 @@
 ---
 
 ### Objectives
-* Understand and use initialization 
-* Understand and use inheritance 
+* To understand and use initialization 
+* To understand and use inheritance 
 
 ### Readings
 1. Swift Programming: The Big Nerd Ranch Guide, Chapter 17, Initialization
@@ -12,24 +12,24 @@
 
 #### Vocabulary
 
-1. __Initialization__ - the process of preparing an instance of a class, structure, or enumeration for use.
-1. __Initializer__ - special methods that can be called to create a new instance of a particular type.
+- **initialization** - the process of creating an instance of a class, structure, or enumeration. Memory is allocated and the initial values are set.
+- **initializer** - a special purpose method that is called to create a new instance of a particular type.
 
 ---
 
-### 1. Intro to Initialization
+### 1. Initialization
 
-The process of initialization involves setting an initial value for each stored property on that instance and performing any other setup or initialization that is required before the new instance is ready for use.
+Initialization is the process of allocating memory and setting an initial values for all stored properties of an instance. 
 
-Classes and structures must set all of their stored properties to an appropriate initial value by the time an instance of that class or structure is created. Stored properties cannot be left in an indeterminate state.
+Classes and structures must set all of their stored properties to an appropriate initial value by the time an instance of that class or structure is created. Stored properties cannot be left in an indeterminate state. If any one property were to be without a value the instance would not be whole, and so this results in a compile time error.
 
-__You implement the initialization process by defining initializers.__ Unlike Objective-C initializers, Swift initializers do not return a value. Their primary role is to ensure that new instances of a type are correctly initialized before they are used for the first time.
+Initialization is carried about, surprise, by defining initializers. All initializers have the name `init` but can differ in the rest of their signature. While initializers have much in common with functions (methods), and they create an instance of the type they are defined on, the keyword `return` is not used. After all properties are assigned initial values the "returned" instance value is implied. The primary purpose of the initializer is to ensure that new instances of a type are completely ready before they are used for the first time.
 
-You can set an initial value for a stored property within an initializer, or by assigning a default property value as part of the property’s definition: 
+The initial value for a stored property can either be set within an initializer, or by assigning a default value in the property’s definition.
 
-#### Setting Default Initial Values for Stored Properties
+#### Initializing in `init()`
 
-In its simplest form, an initializer is like an instance method with no parameters, written using the init keyword:
+In its simplest form, an initializer is like an instance method with no `func`, no parameters, and no return value, written using the `init` keyword:
 
 ```swift
 init() {
@@ -38,7 +38,7 @@ init() {
 ```
 
 ```swift
-class Fahrenheit {
+struct Fahrenheit {
     var temperature: Double
     init() {
         temperature = 32.0
@@ -49,15 +49,30 @@ print("The default temperature is \(f.temperature)° Fahrenheit")
 // Prints "The default temperature is 32.0° Fahrenheit"
 ```
 
-As previously stated, you can set the initial value of a stored property from within an initializer, as shown above. 
+Here, the initial value of a stored property is being set from within an initializer.
 
-Alternatively, you can specify a default property value as part of the property’s declaration. You specify a default property value by assigning an initial value to the property when it is defined:
+**Question**: What happens when you comment out the `temperature = 32.0` line inside  `init()`?
+
+<details>
+    <summary>Answer</summary>
+
+You get a relatively useful error message: "Playground execution failed: error: MyPlayground.playground:3:5: error: return from initializer without initializing all stored properties"
+
+</details>
+
+#### Default property values
+
+Alternatively, a default value can be set as part of the property’s declaration:
 
 ```swift
-class Fahrenheit {
+struct Fahrenheit {
     var temperature = 32.0
 }
 ```
+
+#### Initialization parameters
+
+Paremeters can be added to the `init()`.
 
 #### Default Initializers
 
