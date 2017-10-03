@@ -291,7 +291,7 @@ let isLessthan = 4 < 10 // TRUE
 let isEqual = 5 == 5 // TRUE
 let reverseIt = !false // TRUE
 let comboIt = !(9 > 2) // FALSE
-let isntEqual = 3 != 3 // TRUE
+let isntEqual = 3 != 3 // FALSE
 ```
 </details>
 

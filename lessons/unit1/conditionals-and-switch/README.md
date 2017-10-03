@@ -137,9 +137,10 @@ Adapting the conditional above we can rewrite it using the ternary if.
 let temperatureInFahrenheit = 40
 let message temperatureInFahrenheit <= 32 ? "cold" : "warm"
 ```
-### 6. Nested ifs
 
-### 7. else if
+
+
+### 6. else if
 
 For situations where we want to check a series of conditionals in order, chosing only one we use the `else if` construct.  
 
@@ -156,6 +157,29 @@ if temperatureInFahrenheit <= 32 {
 ```
 
 In this example we're comparing the temperature to 32 in the `if`, and to 86 in the `else if`.  As with `if`, it doesn't require `else if` but `else if` requires an initial `if`. `else` remains optional as well. It's important to note that at most one condition will match. The conditionals are evaluated top down and in the case where more than one would have matched, only the block for the first match is run and the whole chain is exited at the end of that block.
+
+### 7. Nested ifs
+We are also able to nest if statements together.
+
+```swift
+var ownsSweater = true
+if temperatureInFahrenheit < 60 {
+	if ownsSweater {
+		print("Put on your sweater!")
+	} else {
+		print("You should get a sweater!")
+	}
+} else if temperatureInFahrenheit > 80 {
+	if ownsSweater {
+		print("Make sure not to wear your sweater!")
+	} else {
+		print("No need to buy a sweater")
+	}
+} else {
+	print("If you have a sweater, up to you what to do with it.")
+}
+
+```
 
 ### 8. Exercise
 

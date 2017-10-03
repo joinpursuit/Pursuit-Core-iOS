@@ -18,17 +18,12 @@
 
 ---
 
-Optionals Review:
+### 1. Warm up - Strings Review
 
 
+var goodMorning: String = "Good morning!"
 
-### 1. Warm up - Optionals Review
-
-
-var goodMorning: String? = "Good morning!"
-
-Safely unwrap goodMorning and print it.  Use 2 different methods.
-
+Write three different ways to print out all the characters in goodMorning
 
 ### 2. The case for Arrays
 
