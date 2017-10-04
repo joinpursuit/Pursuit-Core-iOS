@@ -178,6 +178,17 @@ someInts.filter { (a) -> Bool in
     return a % 2 == 1
 }
 ```
+### Reduce
+
+The reduce method solves the problem of combining the elements of an array to a single value. 
+
+```swift
+let numbers = [1, 2, 3, 4]
+let numberSum = numbers.reduce(0, { x, y in
+    x + y
+})
+// numberSum == 10
+```
 
 ### Exercises
 
