@@ -142,6 +142,77 @@ reversedNames = names.sorted { $0 > $1 }
 9. Operator methods. Since `String` overloads the `>` operator which works just like any function, Swift sees that its type, `>(_:String, _:String) -> Bool` matches what sort expects, just as our `backward(_:_:)` had.
 10. Trailing closure syntax. When the last argument in a function is a closure, you have the option to define it outside the parentheses. This is more apparently useful when the closure has more than one line.
 11. Building on the previous syntax, when a closure is the only argument to a function (which is a special case of being the last argument), the parentheses can be omitted.
+**Exercises** 
+
+1. Add a squaring operator.
+2. Add a power operator.
+3. Add an integer division operator.
+
+### Map and Filter
+
+#### Map
+
+Array's `map(_:)` is used to execute a closure on each element, creating a new corresponding element in an new array.
+
+```swift
+let someInts = [1, 2, 3]
+someInts.map { (a) -> Int in
+    return a * 2
+}
+```
+
+It can return an element type different from that of the input array.
+
+```swift
+someInts.map { (a) -> String in
+    return String(a)
+}
+```
+### Filter
+
+Filter's closure parameter takes an element of the array and returns a Bool that
+determines whether that value is to be included in the ouput array.
+
+```swift
+someInts.filter { (a) -> Bool in
+    return a % 2 == 1
+}
+```
+
+### Exercises
+
+### Use ```filter(_:)```
+
+> Filter out strings containing "bad words".
+> First split text on the space using ```componentsSeparatedByString(_:)```, 
+> then use filter to cut out the words. Print out the expurgated version as a string.
+
+```swift
+let badWords = ["heck", "darn", "drat", "fudge"]
+let text = "What the heck we s'posed to do you darn fool. Drat that cat. Oh fudge."
+// output: What the we s'posed to do you fool. that cat. Oh.
+```
+
+### Use ```map(_:)```
+
+> ```filter``` produced unnatural results. Let's start over.
+> Again, split text on the space using ```componentsSeparatedByString(_:)```
+> but this time use map to replace the words with red blooded American cuss-words
+> (or whatever words you like) and print.
+
+
+### Re-implement ```filter(_:)```. 
+
+> Since you can't add your new filter method to the
+> Array class (yet) just let it take the input array as a first parameter.
+
+### Re-implement ```map(_:)```
+
+> Re-implement ```map(_:)``` the same way. In addition to the limitations placed on the
+> re-implementation of ```filter(_:)```, also limit the mapping so that it can only map values
+> of the same type as the input array. E.g. an ```[Int]``` can only create an ```[Int]``` as its
+> final output, which also affects how the closure will be defined. The ```map(_:)``` method
+> on Array has no such limitation.
 
 ### Exercise
 
