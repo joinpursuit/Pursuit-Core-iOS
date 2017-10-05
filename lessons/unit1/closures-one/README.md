@@ -88,6 +88,49 @@ add(4, 9)
 
 Here, since the signature of the closure is annotated explicitly, the definition of the closure can drop the types of the arguments and the return type.
 
+**Exercise: Make a closure for subtraction, multiplication and division**
+
+<details>
+<summary>Solutions</summary>
+
+```
+let subtract = {(a: Int, b: Int) -> Int in
+    return a - b
+}
+let divide = {(a: Int, b: Int) -> Int in
+    return a / b
+}
+let multiply = {(a: Int, b: Int) -> Int in
+    return a * b
+}
+```
+
+</details>
+
+
+Closures are just like any other type
+
+let operations: [(Int, Int) -> Int] = [add, subtract, multiply, divide]
+
+func combine(_ x: Int, and y: Int, with operation: (Int, Int) -> Int) -> Int {
+    return operation(x, y)
+}
+
+**Exercise: Combine 8 and 3 with modulo using the combine function**
+
+<details>
+<summary>Solution</summary>
+
+```swift
+combine(8, and: 3, with: {(a: Int, b: Int) -> Int in
+    let mod = a % b
+    return mod
+})
+```
+
+</details>
+
+
 ### Closures as function parameters
 
 Both the Big Nerd Ranch book and Apple's documentation use Array's `sorted(by:)` method to introduce closures passed to a function, and to illustrate various shorthand syntaxes used when working with closures. All the calls to `sorted(by:)` in the code below do the same exact thing, except for the first call that uses `backward(_:_:)` which is still functionally equivalent.
@@ -142,13 +185,28 @@ reversedNames = names.sorted { $0 > $1 }
 9. Operator methods. Since `String` overloads the `>` operator which works just like any function, Swift sees that its type, `>(_:String, _:String) -> Bool` matches what sort expects, just as our `backward(_:_:)` had.
 10. Trailing closure syntax. When the last argument in a function is a closure, you have the option to define it outside the parentheses. This is more apparently useful when the closure has more than one line.
 11. Building on the previous syntax, when a closure is the only argument to a function (which is a special case of being the last argument), the parentheses can be omitted.
-**Exercises** 
 
-1. Add a squaring operator.
-2. Add a power operator.
-3. Add an integer division operator.
 
-### Map and Filter
+### Exercise
+
+Let's practice by making calls to `sorted(by:)` with closures to accomplish different orders. In defining the closure think both about the strategy required (to return whether the first argument is less than the second), and reflect on how this extracted bit of functionality is enough to influence the behavior of the `sorted(by:)` function.
+
+Given
+
+```swift
+let numbers = [32, 21, 33, 2, 66, 88, 43, 902, 73, 27, 905]
+let words = ["One", "two", "Buckle", "my", "shoe"]
+```
+
+1. Sort `numbers` ascending.
+1. Sort `words`, descending case-insensitive.
+1. Sort `words` by the length of each element.
+1. Sort `numbers` ascending, even numbers first, odd numbers second. Output will be [2, 32, 66, 88, 902, 21, 27, 33, 43, 73, 905].
+
+-
+-
+
+### Map, Filter and Reduce
 
 #### Map
 
@@ -168,6 +226,7 @@ someInts.map { (a) -> String in
     return String(a)
 }
 ```
+
 ### Filter
 
 Filter's closure parameter takes an element of the array and returns a Bool that
@@ -178,6 +237,7 @@ someInts.filter { (a) -> Bool in
     return a % 2 == 1
 }
 ```
+
 ### Reduce
 
 The reduce method solves the problem of combining the elements of an array to a single value. 
@@ -212,32 +272,5 @@ let text = "What the heck we s'posed to do you darn fool. Drat that cat. Oh fudg
 > (or whatever words you like) and print.
 
 
-### Re-implement ```filter(_:)```. 
-
-> Since you can't add your new filter method to the
-> Array class (yet) just let it take the input array as a first parameter.
-
-### Re-implement ```map(_:)```
-
-> Re-implement ```map(_:)``` the same way. In addition to the limitations placed on the
-> re-implementation of ```filter(_:)```, also limit the mapping so that it can only map values
-> of the same type as the input array. E.g. an ```[Int]``` can only create an ```[Int]``` as its
-> final output, which also affects how the closure will be defined. The ```map(_:)``` method
-> on Array has no such limitation.
-
-### Exercise
-
-Let's practice by making calls to `sorted(by:)` with closures to accomplish different orders. In defining the closure think both about the strategy required (to return whether the first argument is less than the second), and reflect on how this extracted bit of functionality is enough to influence the behavior of the `sorted(by:)` function.
-
-Given
-
-```swift
-let numbers = [32, 21, 33, 2, 66, 88, 43, 902, 73, 27, 905]
-let words = ["One", "two", "Buckle", "my", "shoe"]
-```
-
-1. Sort `numbers` ascending.
-1. Sort `words`, descending case-insensitive.
-1. Sort `words` by the length of each element.
-1. Sort `numbers` ascending, even numbers first, odd numbers second. Output will be [2, 32, 66, 88, 902, 21, 27, 33, 43, 73, 905].
-
+### Use ```reduce(_:)```
+>Our map worked pretty well for us, but we've discovered a newfound hatred of vowels.  We can use reduce directly on our string ```badWords```.  Let's make a new string using reduce that takes out all the vowels.

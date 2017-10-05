@@ -18,6 +18,34 @@ Apple's [Swift Language Reference, Closures](https://developer.apple.com/library
 - **scope** - the visibility of a variable or other identifier based on where it is defined within the program.
 
 
+### Review Exercises
+
+### Use ```filter(_:)```
+
+> Filter out strings containing "bad words".
+> First split text on the space using ```componentsSeparatedByString(_:)```, 
+> then use filter to cut out the words. Print out the expurgated version as a string.
+
+```swift
+let badWords = ["heck", "darn", "drat", "fudge"]
+let text = "What the heck we s'posed to do you darn fool. Drat that cat. Oh fudge."
+// output: What the we s'posed to do you fool. that cat. Oh.
+```
+
+### Use ```map(_:)```
+
+> ```filter``` produced unnatural results. Let's start over.
+> Again, split text on the space using ```componentsSeparatedByString(_:)```
+> but this time use map to replace the words with red blooded American cuss-words
+> (or whatever words you like) and print.
+
+
+### Use ```reduce(_:)```
+>Our map worked pretty well for us, but we've discovered a newfound hatred of vowels.  We can use reduce directly on our string ```badWords```.  Let's make a new string using reduce that takes out all the vowels.
+
+
+
+
 ### Closures as return types
 
 In the first closures lesson we focused on the more common sense of higher order functions, passing in closures as arguments to functions, notably to `sort(by:)`, `map(_:)`, and `filter(_:)`. But a function that returns a closure is also described as being higher order. Let's step through the process of returning a closure from a function and then calling it.
@@ -91,6 +119,9 @@ fiveTimes(6) // 5.  Call the "times 5" function - returns 30
 
 ``` 
 
+
+### Capture values
+```swift
 // close over "number" and define function
 var number = 0
 var addOne = {
@@ -99,11 +130,6 @@ var addOne = {
 addOne()
 addOne()
 print(number)
-```
-
-### Capture values
-```swift
-
 ```
 
 ### Closures are reference types
@@ -157,8 +183,6 @@ the same memory and so increment the same instance.
 
 ## Returning Functions
 
-Solution to tricksy, tricksy exercise from yesterday:
-
 ```swift
 func doublerFactory(funk: (Int)->Int) -> (Int) -> Int {
     let f = {(a: Int) -> Int in
@@ -175,10 +199,15 @@ let f = doublerFactory { (x: Int) -> Int in
 f(3)
 ```
 
-> **Q.** What's the motive for returning functions, and for higher order functions in general?
+**Question:** What's the motive for returning functions, and for higher order functions in general?
 
-A. Flexibility. One way or another these techniques offer flexibility, either allowing for the
+<details>
+<summary>Solution</summary>Flexibility. One way or another these techniques offer flexibility, either allowing for the
 deferment of running code or for more dynamic code. 
+</details>
+
+
+An example in practice:
 
 ```swift
 func mathStuffFactory(opString: String) -> (Double, Double) -> Double {
