@@ -3,9 +3,6 @@
 * To understand and use closures as return types
 * To understand capturing, or closing over variables
 * Create functions that track internal information through closures
-* Use map(:_) to solve problems
-* Use filter(:_) to solve problems
-* Re-implement filter and map to reinforce understanding of closures
 
 
 ### Readings
@@ -23,7 +20,7 @@ Apple's [Swift Language Reference, Closures](https://developer.apple.com/library
 
 ### Closures as return types
 
-In the first closures lesson we focused on the more common sense of higher order functions, passing in closures as arguments to functions, notably to `sort(by:)`. But a function that returns a closure is also described as being higher order. Let's step through the process of returning a closure from a function and then calling it.
+In the first closures lesson we focused on the more common sense of higher order functions, passing in closures as arguments to functions, notably to `sort(by:)`, `map(_:)`, and `filter(_:)`. But a function that returns a closure is also described as being higher order. Let's step through the process of returning a closure from a function and then calling it.
 
 Recall the general form of a closure.
 
@@ -42,21 +39,56 @@ var doubler = { (a: Int) -> Int in
 print(doubler(22))
 ```
 
-Now, combine the idea that a closure can be assigned to a variable with the idea that a function can return a closure. Here is the definition of a function that returns a closure.
+Now, let's make a function that returns a the same closure.
+
+```swift
+func makeDoubler() -> (Int) -> Int {
+    return { (n: Int) -> Int in
+        return n * 2
+    }
+}
+
+// 1. capture the closure into a variable
+let doublersDouble = makeDoubler()
+
+// 2. run the closure
+doublersDouble(5) // has the value of 10
+
+// 3. even this syntax is possible
+makeDoubler()(4)  // has the value of 8
+```
+
+1. We call the function `makeDoubler()` which itself returns a closure. 
+2. A closure is captured in `doublersDouble` and is executable, so we call it.
+3. We don't need to capture the result. Since `makeDoubler()` evaluates to a callable closure we can call it with `()`.
+
+The `makeDoubler()` example is designed to be very simple. Let's write a function `makeMultiplier(factor:)` that is more complex and dynamic. We will pass it the number to muliply by. But, as with `makeDoubler()` it will not multiply directly. Instead, it will return a function that multiplies by the value passed in, named `factor`. The returned function will have the factor baked into it. Also, like `makeDoubler()` we'll need to pass the second operand to the functions `makeMultiplier(factor:)` returns.
+
+> Note: I'm using function and closure interchangeably here. I could have just as easily said the functions returned closures. But it feels a little more natural to speak of functions when the closure has a name by which it is called.
+
 
 ```swift
 func makeMultiplier(factor: Int) -> (Int) -> Int {
-    return {(n) in factor * n}
+    return { (n) in
+        return factor * n
+    }
 }
+
+let doublerFromAnotherFunction = makeMultiplier(factor: 2) // 1. Make a "times 2" function
+let fiveTimes = makeMultiplier(factor: 5) // 2. Make a "times 5" function
+doublerFromAnotherFunction(12) // 3. Call the "times 2" function - returns 24
+fiveTimes(3) // 4.  Call the "times 5" function - returns 15
+fiveTimes(6) // 5.  Call the "times 5" function - returns 30
 ```
 
-And here we call the function and store the closure it returns in variables that are executable.
+1. We call `makeMultiplier(factor:)` with an argument of 2 and it returns a function that will multiply _its_ argument by 2.
+2. Same as the previous, except the returned function will multiply by 5.
+3. Call `doublerFromAnotherFunction(_:)`, passing 12 to complete the mathematical calculation 2 * 12. The "2 *" part is baked into `doublerFromAnotherFunction(_:)` and the 12 is passed during the call.
+4. And same for `fiveTimes(_:)`. Here we're using it to calulate 5 * 3.
+5. We can call `fiveTimes(_:)` as many times as we like, passing a new value to multiply by each time.
 
-```swift
-let timesTwo = makeMultiplier(factor: 2)
-let timesFive = makeMultiplier(factor: 5)
-print(timesTwo(53))
-print(timesFive(3))
+
+
 ``` 
 
 // close over "number" and define function
@@ -165,7 +197,4 @@ func mathStuffFactory(opString: String) -> (Double, Double) -> Double {
 }
 ```
 
-# Review and Wrapup
 
-* What are higher order functions?
-* Why pass functions?
