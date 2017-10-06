@@ -17,7 +17,6 @@ Apple's [Swift Language Reference, Closures](https://developer.apple.com/library
 - **higher-order function** - A function that takes a closure as one or more of its arguments and/or returns a closure. 
 - **scope** - the visibility of a variable or other identifier based on where it is defined within the program.
 
-
 ### Review Exercises
 
 ### Use ```filter(_:)```
@@ -42,9 +41,6 @@ let text = "What the heck we s'posed to do you darn fool. Drat that cat. Oh fudg
 
 ### Use ```reduce(_:)```
 >Our map worked pretty well for us, but we've discovered a newfound hatred of vowels.  We can use reduce directly on our string ```badWords```.  Let's make a new string using reduce that takes out all the vowels.
-
-
-
 
 ### Closures as return types
 
@@ -115,41 +111,37 @@ fiveTimes(6) // 5.  Call the "times 5" function - returns 30
 4. And same for `fiveTimes(_:)`. Here we're using it to calulate 5 * 3.
 5. We can call `fiveTimes(_:)` as many times as we like, passing a new value to multiply by each time.
 
+### Capturing values
 
+If you look at `makeMultiplier(factor:)` carefully you might ask yourself how the returned closure "remembers" what to multiply by. Let's look at it again.
 
-``` 
-
-
-### Capture values
 ```swift
-// close over "number" and define function
-var number = 0
-var addOne = {
-    number += 1
+func makeMultiplier(factor: Int) -> (Int) -> Int {
+    return { (n) in
+        return factor * n
+    }
 }
-addOne()
-addOne()
-print(number)
 ```
 
-### Closures are reference types
+The closure/function that `makeMultiplier(_:)` returns is this:
 
-The following illustration from Apple's documentation will serve to illustrate all
-three of the following concepts.
+```swift
+{ (n) in
+    return factor * n
+}
+```
 
-* Functions as Return Types
-* Closures Capture Values
-* Closures are Reference Types
-* Escaping
+If you try to assign that to a variable as we did in the step before `makeDoubler(_:)` you'll find you get an error. `factor` is not defined. But in the context of `makeMultiplier(factor:)` the closure captures the value of `factor` for use inside the returned function. It is, in a sense baked in.
 
 
-### Examples of returning closures
+#### Exercise
 
-First of all, `incrementer` is a function that we'll return and when we assign
-a constant to it and call it it will update the  `runningTotal` variable
-that it captured from its enclosing function. By instantiating new copies of the function
-as well as assigning new references to exising ones we can illustrate how closures
-are reference types. See comments.
+Write a function that takes two parameters, a prefix string and a suffix string and returns a function that takes one parameter, a string. The returned function should wrap the string in its argument with the prefix and suffix strings provided when the function was created by the "factory" function.
+
+
+### Capturing variables
+
+Let's look at another example from Apple's documentation. We'll be returning a function again and it be capturing a variable, this time a local variable declared in the function, not a parameter like `factor` in the example above. Since the instance of `runningTotal` is a variable it can be changed from within the closures that close over it.
 
 ```swift
 func makeIncrementer(forIncrement amount: Int) -> () -> Int {
@@ -162,52 +154,44 @@ func makeIncrementer(forIncrement amount: Int) -> () -> Int {
 }
 
 // inc is an instance of the incrementer function
-let inc = makeIncrementer(forIncrement: 1)
+let inc = makeIncrementer(forIncrement: 1) // 1.
 
 // calling it repeatedly will increment runningTotal
-inc()                   // runningTotal = 1
-inc()                   // runningTotal = 2
+inc()                   // 2. runningTotal = 1
+inc()                   // 3. runningTotal = 2
 let inc2 = inc
-inc2()                  // runningTotal = 3
+inc2()                  // 4. runningTotal = 3
 
 // new instance starts again
-let inc3 = makeIncrementer(forIncrement: 10)
-inc3()                  // runningTotal = 10
-let inc4 = inc3
-inc4()                  // runningTotal = 20
+let inc3 = makeIncrementer(forIncrement: 10) // 5. another incrementer
+inc3()                  // 6. runningTotal = 10
+let inc4 = inc3         // 7. inc4 is a *reference to* inc3: they point to the same thing
+inc4()                  // 8. runningTotal = 20
 ```
 
-Each unique instance of the function has its own captured ```runningTotal``` which
-is incremented on each call, but additional references to the same function share
-the same memory and so increment the same instance. 
+First of all, `incrementer` is a nested function that we'll return. This could have been written as an unnamed closure as we did with `makeDoubler()` and `makeMultiplier(factor:)`. We'll come back to that. When we assign a constant to the returned function and call it, it will update the `runningTotal` variable that it captured from its enclosing function. By instantiating new copies of the function as well as assigning new references to exising ones we can illustrate how closures are reference types.
 
-## Returning Functions
+Each unique instance of the function has its own captured `runningTotal` which is incremented on each call (comments numbered 2, 3, 4, 6, and 8) but additional references to an instance of the function (7) share the same memory and so increment the same instance (8). 
+
+In this example I chose to create a nested function `incrementor()` simply because it might be clearer to the student or another developer what I'm indending to do. The following is identical in terms of functionality. 
 
 ```swift
-func doublerFactory(funk: (Int)->Int) -> (Int) -> Int {
-    let f = {(a: Int) -> Int in
-        return 2 * funk(a)
+func makeIncrementer(forIncrement amount: Int) -> () -> Int {
+    var runningTotal = 0
+    return {
+        runningTotal += amount
+        return runningTotal
     }
-    return f
 }
-
-
-let f = doublerFactory { (x: Int) -> Int in
-    return x * x
-}
-
-f(3)
 ```
 
-**Question:** What's the motive for returning functions, and for higher order functions in general?
+It is the more common form, as well. The closure doesn't need a name because it's never called by it. When it is returned from the function and captured by another variable, it will have a new name.
 
-<details>
-<summary>Solution</summary>Flexibility. One way or another these techniques offer flexibility, either allowing for the
+
+> **Q.** What's the motive for returning functions, and for higher order functions in general?
+
+A. Flexibility. One way or another these techniques offer flexibility, either allowing for the
 deferment of running code or for more dynamic code. 
-</details>
-
-
-An example in practice:
 
 ```swift
 func mathStuffFactory(opString: String) -> (Double, Double) -> Double {

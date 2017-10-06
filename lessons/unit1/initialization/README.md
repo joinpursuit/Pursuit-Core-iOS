@@ -72,7 +72,7 @@ struct Fahrenheit {
 
 #### Initialization parameters
 
-Paremeters can be added to the `init()`.
+Parameters can be added to the `init()`.
 
 #### Default Initializers
 
@@ -100,6 +100,8 @@ All of a class’s stored properties—including any properties the class inheri
 Swift defines two kinds of initializers for class types to help ensure all stored properties receive an initial value. These are known as designated initializers and convenience initializers.
 
 #### Designated initializers
+
+ Define: stored properties **introduced** by that class
 
 Designated initializers are the primary initializers for a class. A designated initializer fully initializes all properties introduced by that class and calls an appropriate superclass initializer to continue the initialization process up the superclass chain. __Every class must have at least one designated initializer__.
 
