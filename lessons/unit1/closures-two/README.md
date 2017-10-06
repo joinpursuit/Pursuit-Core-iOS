@@ -19,7 +19,7 @@ Apple's [Swift Language Reference, Closures](https://developer.apple.com/library
 
 ### Review Exercises
 
-### Use ```filter(_:)```
+#### Use `filter(_:)`
 
 > Filter out strings containing "bad words".
 > First split text on the space using ```componentsSeparatedByString(_:)```, 
@@ -31,7 +31,7 @@ let text = "What the heck we s'posed to do you darn fool. Drat that cat. Oh fudg
 // output: What the we s'posed to do you fool. that cat. Oh.
 ```
 
-### Use ```map(_:)```
+#### Use `map(_:)`
 
 > ```filter``` produced unnatural results. Let's start over.
 > Again, split text on the space using ```componentsSeparatedByString(_:)```
@@ -39,7 +39,8 @@ let text = "What the heck we s'posed to do you darn fool. Drat that cat. Oh fudg
 > (or whatever words you like) and print.
 
 
-### Use ```reduce(_:)```
+#### Use `reduce(_:)`
+
 >Our map worked pretty well for us, but we've discovered a newfound hatred of vowels.  We can use reduce directly on our string ```badWords```.  Let's make a new string using reduce that takes out all the vowels.
 
 ### Closures as return types
@@ -187,27 +188,5 @@ func makeIncrementer(forIncrement amount: Int) -> () -> Int {
 
 It is the more common form, as well. The closure doesn't need a name because it's never called by it. When it is returned from the function and captured by another variable, it will have a new name.
 
-
-> **Q.** What's the motive for returning functions, and for higher order functions in general?
-
-A. Flexibility. One way or another these techniques offer flexibility, either allowing for the
-deferment of running code or for more dynamic code. 
-
-```swift
-func mathStuffFactory(opString: String) -> (Double, Double) -> Double {
-    switch opString {
-    case "+":
-        return {x, y in x + y }
-    case "-":
-        return {x, y in x - y }
-    case "*":
-        return {x, y in x * y }
-    case "/":
-        return {x, y in x / y }
-    default:
-        return {x, y in x + y }
-    }
-}
-```
 
 
