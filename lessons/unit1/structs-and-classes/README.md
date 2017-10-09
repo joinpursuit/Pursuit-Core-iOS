@@ -500,7 +500,7 @@ SomeClass.someTypeMethod()
 Within the body of a type method, the implicit `self` property refers to the type itself, rather than an instance of that type. This means that you can use `self` to disambiguate between type properties and type method parameters, just as you do for instance properties and instance method parameters.
 
 
-### 8. Inheritance
+### 10. Inheritance
 
 A class can inherit methods, properties, and other characteristics from another class. When one class inherits from another, the inheriting class is known as a __subclass__, and the class it inherits from is known as its __superclass__.
 
@@ -597,12 +597,12 @@ When you create a new instance of `Train` and call its `makeNoise()` method, you
 
 ---
 
-### 9. Review and Wrapup
+### 11. Review and Wrapup
 
 * Compare and contrast the use of ```struct``` and ```class```.
 * What are type methods?
 
-### 10. Project
+### 12. Project
 Link to [AC-iOS-StructsClasses](https://github.com/C4Q/AC-iOS-StructsClasses) Project Instructions
  
 
