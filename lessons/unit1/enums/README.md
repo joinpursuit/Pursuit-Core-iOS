@@ -29,6 +29,18 @@ enum CompassPoint {
 let northDirection = CompassPoint.north
 ```
 
+**Exercise**: 
+
+Defining enumerations:
+
+Make an an enum that represents:
+
+1. Left and right hands
+2. Days in a week
+3. Blood types (A, B, O, AB)
+4. Coins in U.S currency
+
+
 ### 2. Switiching on Enum Cases
 
 We refer to individual possible enumeration values as __cases__. It's no coincidence that this evokes the ```switch```. We'll see that while they are distinct features of the language accomplishing different things, they work very well together.  We can switch on an instance of an ```enum``` type and look for its cases in the switch's cases.
@@ -53,6 +65,16 @@ case .fileNotFound:
 ```
 Because Swift knows the type of the `ErrorCode` we don't need a default case because we can define an exhaustive set of `switch` cases. If the case for `.fileNotFound` is omitted, this code would not compile, because it does not consider the complete list of `ErrorCode` cases. Requiring exhaustiveness ensures that enumeration cases are not accidentally omitted. When it is not appropriate to provide a case for every enumeration case, you can provide a default case to cover any cases that are not addressed explicitly.
 
+**Exercise**: 
+
+Instantiate a new enum, and switch on it to:
+
+1. Print out whether or not the left hand
+2. Print out whether or not it's a weekday
+3. Print out whether or not the blood type is type B
+4. Print out if the value of the coin is 10 cents or higher
+
+
 ### 3. Raw Value Enumerations
 
 Enumeration cases can come prepopulated with default values, called __raw values__. Raw values can be strings, characters, or any of the integer or floating-point number types. Each raw value must be unique within its enumeration declaration.
@@ -69,6 +91,12 @@ enum NYCBoro: String {
 
 Raw Values are not the same as Associated Values _(discussed below)_. Raw values are set to prepopulated values when you first define the enumeration in your code. The raw value for a particular enumeration case is always the same. 
 
+**Exercise**: 
+1. Redefine each of your enums in the previous exercises to have raw values
+2. Than, instantiate a new instance of each enum with its raw value
+3. What happens if you give an invalid raw value to instantiate an enum?  Try it and see.
+
+
 ### 4. Implicitly Assigned Raw Values
 
 When you’re working with enumerations that store integer or string raw values, you don’t have to explicitly assign a raw value for each case. When you don’t, Swift will automatically assign the values for you.
@@ -83,7 +111,7 @@ enum Planet: Int {
 }
 ```
 
-__Exercise__
+**Exercise_**
 Create an ```enum``` for the HTTP error codes 400-409 using implicitly assigned raw values. Refer to these [Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
 
 #### Using `String` for Implicity Assigned Raw Values
@@ -109,6 +137,11 @@ let earthsOrder = Planet.earth.rawValue
 let sunsetDirection = CompassPoint.west.rawValue
 // sunsetDirection is "west"
 ```
+
+**Exercise**
+
+Give default raw values to each of the enums from the previous exercises
+
 
 ### 5. Associated Values
 Storing associated values alongside enumeration case values allows you to store additional custom information along with the case value, and permits this information to vary each time you use that case in your code.
@@ -163,6 +196,11 @@ case let .qrCode(productCode):
 }
 // Prints "QR code: ABCDEFGHIJKLMNOP."
 ```
+
+**Exercise**
+
+Rewrite the blood type enum to have an associated value of if the type is positive or negative
+
 ---
 
 ### Review and Wrapup

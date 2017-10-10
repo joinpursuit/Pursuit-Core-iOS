@@ -70,7 +70,7 @@ For this, your console might look like this:
 > Exit
 
 ## Question Two:
-###Add filter, map and reduce to your calculator
+### Add filter, map and reduce to your calculator
 
 ### Part 2a: Implement your own filter function
 
@@ -92,7 +92,7 @@ Example:
 
 >filter 1,5,2,7,3,4 by < 4
 >
->1,5,7,3
+>1,2,3
 
 
 ### Part 2b: Implement your own map function

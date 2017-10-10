@@ -11,17 +11,17 @@ import Foundation
 //                                 ("Josquin","Des Prez")]
 
 
-print(firstAndLastStrings.sort {(a, b) -> Bool in
+print(firstAndLastStrings.sorted {(a, b) -> Bool in
     return a < b
     })
 
-print(firstAndLastTuples.sort {(a, b) -> Bool in
+print(firstAndLastTuples.sorted {(a, b) -> Bool in
     return a.0 < b.0
     })
 
-print(firstAndLastStrings.sort {(a, b) -> Bool in
-    let a_words = a.componentsSeparatedByString(" ")
-    let b_words = b.componentsSeparatedByString(" ")
+print(firstAndLastStrings.sorted {(a, b) -> Bool in
+    let a_words = a.components(separatedBy: " ")
+    let b_words = b.components(separatedBy: " ")
     
     return a_words.last! < b_words.last!
     })
@@ -29,7 +29,7 @@ print(firstAndLastStrings.sort {(a, b) -> Bool in
 let badWords = ["heck", "darn", "drat", "fudge"]
 let text = "What the heck we s'posed to do you darn fool. Drat that cat. Oh fudge."
 
-let newText = text.componentsSeparatedByString(" ").map { (s) -> String in
+let newText = text.components(separatedBy: " ").map { (s) -> String in
     switch s {
     case "heck":
         return "horkin'"
@@ -52,7 +52,7 @@ print(newText)
 //Input: (Int) -> Int
 //Output: (Int) -> Int
 
-func doublerFactory(funk: (Int)->Int) -> (Int) -> Int {
+func doublerFactory(_ funk: @escaping (Int)->Int) -> (Int) -> Int {
     return {(a: Int) -> Int in
         return 2 * funk(a)
     }
@@ -64,7 +64,7 @@ let f = doublerFactory { (x: Int) -> Int in
 
 f(4)
 
-func mathStuffFactory(opString: String) -> (Double, Double) -> Double {
+func mathStuffFactory(_ opString: String) -> (Double, Double) -> Double {
     switch opString {
     case "+":
         return {x, y in x + y }
