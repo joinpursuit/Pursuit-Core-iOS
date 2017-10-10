@@ -149,7 +149,7 @@ Why does the following struct give you an error at compile-time?
 ```
 struct IdentifyTheError {
 	var propertyOne: String?
-	let propertyTwo: String
+	let propertyTwo: String?
 }
 
 ```
