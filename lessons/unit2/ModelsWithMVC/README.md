@@ -1,3 +1,9 @@
+### Readings
+1. Swift Programming: The Big Nerd Ranch Guide, Chapter 26 page 353
+1. [Apple Documentation, Model-View-Controller](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html)
+1. [Understanding MVC In Swift](https://learnappmaking.com/model-view-controller-mvc-swift/)
+1. [MVC For Beginners](http://www.seemuapps.com/swift-model-view-controller-mvc-beginners)
+
 ### MVC Design
 
 Why not just have the View also execute all the code we want to run?
@@ -18,4 +24,5 @@ The **Controller** mediates between the View and the Model.
 
 
 The guiding principle behind this organization is that we want to separate out the Model
+
 
