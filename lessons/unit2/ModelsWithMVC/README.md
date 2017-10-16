@@ -3,6 +3,10 @@
 
 ### Readings
 
+- Swift Programming: The Big Nerd Ranch Guide, Chapter 26 page 353
+- [Apple Documentation, Model-View-Controller](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html)
+- [Understanding MVC In Swift](https://learnappmaking.com/model-view-controller-mvc-swift/)
+- [MVC For Beginners](http://www.seemuapps.com/swift-model-view-controller-mvc-beginners)
 
 # 1. Assessment One Review
 
