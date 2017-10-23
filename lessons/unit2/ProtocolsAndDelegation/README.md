@@ -214,8 +214,8 @@ struct Point {
 
 protocol Movable {
 	var currentPosition: Point {get}
-	func move(to: Point)
-	func moveStraightForTenSeconds() -> Point
+	mutating func move(to: Point)
+	mutating func moveStraightForTenSeconds() -> Point
 }
 ```
 For something to be Movable, it must have a currentPosition, an ability to move to a Point, and an ability to move straight for ten seconds.  
@@ -283,8 +283,10 @@ Even though my array has a `Car` and a `Plane` in it, we can create this array o
 
 ```swift
 for movableThing in movableThings {
-	//These all work
+	//This works
 	print(movableThing.currentPosition)
+	
+	//These don't work here because you can't change structs as you iterate through them, and our protocol might have a struct behind it.
 	movableThing.move(to: Point(x: 10, y:10))
 	movableThing.moveForTenSeconds()
 	
@@ -292,6 +294,9 @@ for movableThing in movableThings {
 	//movableThing.pilotName
 	//movableThing.honk()
 }
+//We can use the mutating methods here
+movableThings[0].moveForTenSeconds()
+
 ```
 
 ### 7. Classes that conform to protocols and inherit from other classes
