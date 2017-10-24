@@ -263,3 +263,8 @@ The `string` is the String the user is trying to insert.  If the user is deletin
 # 8. Setting up delegates through Interface Builder
 
 Instead of writing the code in viewDidLoad, you can control-drag from your textField to the ViewController in Interface Builder.  It's easy to forget you've done it, so make sure to check the Connections inspector.  I recommend using the method we used above for additional clarity.
+
+
+# 9. Delegation for multiple TextFields
+
+Similar to creating a single IBAction for multiple buttons, we can set our ViewController as the delegate for multiple TextFields.  Inside the body of our delegate methods, we'll need to check to see which TextField it is.  Let's add a field for the user to enter their name.
