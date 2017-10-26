@@ -195,9 +195,9 @@ So far we have been working with a single view.  More often, we will have severa
 <details>
 <summary>Images</summary>
 
-![l1](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/labelOne.png)
+![l1](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/labelsOne.png)
 
-![l1](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/labelTwo.png)
+![l1](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/labelsTwo.png)
 
 </details>
 
