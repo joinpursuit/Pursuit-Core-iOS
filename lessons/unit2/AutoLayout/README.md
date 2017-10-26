@@ -33,7 +33,7 @@ Let's make a new project called AutoLayout to see how we can build an app that h
 
 - Position a UIView in the center of the screen.  Use the blue alignment guides to center it.
 
-![rect](~/images/blueRect)
+![rect](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/blueRect.png)
 
 Run your app and rotate it.  Is the view still in the center?
 
@@ -55,7 +55,7 @@ Let's constrain our blue View using each of those methods.
 <details>
 <summary>Allign</summary>
 
-![rect](~/images/allignment)
+![rect](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/allignment.png)
 
 </details>
 
@@ -69,7 +69,7 @@ What happens?  We get an error!
 <details>
 <summary> Image </summary>
 
-![rect](~/images/error1)
+![rect](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/error1.png)
 
 </details>
 
@@ -79,7 +79,7 @@ To investigate this error, click on the red arrow at the top right of the Docume
 <details>
 <summary> Image </summary>
 
-![rect](~/images/error2)
+![rect](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/error2.png)
 
 </details>
 
@@ -106,7 +106,7 @@ We now have our view centered and we need to set its width and height.  One way 
 <details>
 <summary> More errors! </summary>
 
-![errors](~/images/error3)
+![errors](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/error3.png)
 
 </details>
 
@@ -147,7 +147,7 @@ Notice that we neglected to do that when centering our view vertically.  It didn
 <details>
 <summary> Open the Attributes Inspector </summary>
 
-![errors](~/images/error4)
+![errors](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/error4.png)
 
 </details>
 
@@ -161,7 +161,7 @@ No more errors!  Finally, we have constrained our view appropriately.  Let's che
 <details>
 <summary>Control Drag</summary>
 
-![cdrage](~/images/controlDrag)
+![cdrage](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/controlDrag.png)
 
 </details>
 
@@ -180,9 +180,9 @@ Another option available is to set the width/height of one view equal to the wid
 **Exercise:** Create a view that takes up the entire left side of the screen.  Test your Auto Layout by rotating the app with command-right arrow.
 
 
-![hori](~/images/horizontalHalf)
+![hori](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/horizontalHalf.png)
 
-![hori](~/images/verticalHalf)
+![hori](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/verticalHalf.png)
 
 
 
@@ -195,9 +195,9 @@ So far we have been working with a single view.  More often, we will have severa
 <details>
 <summary>Images</summary>
 
-![l1](~/images/labelOne)
+![l1](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/labelOne.png)
 
-![l1](~/images/labelTwo)
+![l1](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/labelTwo.png)
 
 </details>
 
@@ -208,9 +208,9 @@ Notice that for our label, we didn't need to set its width.  This is because som
 A label has a explicit size, but a UIView does not.  Another element without an explicit size is a TextView.  Set up two TextViews like this:
 
 
-![l1](~/images/tf1)
+![l1](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/tf1.png)
 
-![l1](~/images/tf2)
+![l1](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/tf2.png)
 
 
 Without setting constraint for the width and the height, Auto Layout doesn't know how to configure their relative sizes.  Should the top textview be very big and the bottom one very small?  Vice versa?  Or should they have the same size?  You need to add constraints to let Auto Layout know.
@@ -224,7 +224,7 @@ There are a couples of ways to add a stack view in storyboard:
 - Or, you can select the views and click on the `Stack` button, conveniently located next to the `Align`, `Pin` and `Resolve AutoLayout Issues` buttons on the bottom right corner of Interface Builder.
 
 
-![stack](https://www.github.com/C4Q/AC3.2-Stackview_Scrollview-2/blob/master/Images/embed_in_stack_button.png)
+![stack](https://raw.githubusercontent.com/C4Q/AC3.2-Stackview_Scrollview-2/master/Images/embed_in_stack_button.png)
 
 
 There are three main configuration options needed to consider for a stack view (see `UIStackView` documentation under ["Managing the Stack View's Apperance"](https://developer.apple.com/documentation/uikit/uistackview))
