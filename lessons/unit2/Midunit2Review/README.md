@@ -9,6 +9,7 @@
 
 # 2. Homework Review
 
+- Tic-tac-toe brain
 
 
 # 3. Assessment topics
