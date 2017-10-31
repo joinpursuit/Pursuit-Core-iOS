@@ -51,15 +51,7 @@ The guiding principle behind this organization is that we want to separate out t
 With our color selection app yesterday, we mixed together UI and logic elements together.  While this works for small apps, when you have more complicated programs, you want to ensure that its organized in a way that's sensible.
 
 
-# 4. MVC In depth
-
-The following slides are from Paul Hegarty's Stanford iOS class:
-
-[Slides](file:///Users/c4q-ac01/Downloads/Lecture%201.pdf)
-
-
-
-# 5. Creating an app with MVC
+# 4. Creating an app with MVC
 
 
 Let's go through an example of creating an app in accordance with MVC design patterns.
@@ -139,6 +131,6 @@ We now need an instance of our colorChangingModel inside our Controller.  Let's 
 Now you've made your first app using MVC design patterns.  What might be an advantage for using MVC in this app? 
 
 
-# 6. Practice:
+# 5. Practice:
 
 **Exercise**: Refactor your ThreeCardMonte from yesterday to use MVC design patterns.  What should the model look like? 
