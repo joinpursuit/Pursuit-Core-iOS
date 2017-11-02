@@ -1,5 +1,5 @@
 
-# The Official AC3.2 Swift Style Guide.
+# The Official AC-iOS Swift Style Guide.
 ### Adapted from The Official raywenderlich.com Swift Style Guide.
 
 ## Table of Contents
