@@ -1,5 +1,6 @@
 # Table Views Day 2: Custom TableViewCells
 
+### [Project Repo](https://github.com/C4Q/AC-iOS-TableViewCustomCells)
 
 ### Readings (in Recommended Order)
 1. [A Beginner's Guide to AutoLayout w/ Xcode 8 - Appcoda](http://www.appcoda.com/auto-layout-guide/)
