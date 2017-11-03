@@ -1,6 +1,6 @@
 # Auto Layout
 
-### [Class Repo](https://github.com/C4Q/AutoLayoutExercises)
+### [Project Repo](https://github.com/C4Q/AutoLayoutExercises)
 
 ### Readings
 
