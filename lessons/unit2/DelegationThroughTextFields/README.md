@@ -1,6 +1,6 @@
 # Delegation through Textfields
 
-### [Link to Class Repo](https://github.com/C4Q/AC-iOS-IntroductionToDelegationWithTextFields)
+### [Project Repo](https://github.com/C4Q/AC-iOS-IntroductionToDelegationWithTextFields)
 
 ---
 ### Readings
