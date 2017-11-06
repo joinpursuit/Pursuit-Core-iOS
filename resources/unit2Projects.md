@@ -4,7 +4,7 @@
 |---|---|
 |[Three Card Monte](https://github.com/C4Q/AC-iOS-ThreeCardMonteExercise)|Outlets/Actions|
 [Color Changing App](https://github.com/C4Q/AC-iOS-ColorChangerMVC.git) | MVC Design Pattern |
-|[Tic Tac Toe HW](https://github.com/C4Q/AC-iOS-tictactoe) and [Class Review]((https://github.com/C4Q/tic-tac-toe-classReviewNotes))|Outlets/Action/MVC|
+|[Tic Tac Toe HW](https://github.com/C4Q/AC-iOS-tictactoe) and [Class Review](https://github.com/C4Q/tic-tac-toe-classReviewNotes)|Outlets/Action/MVC|
 |[Text Field Introduction](https://github.com/C4Q/AC-iOS-IntroductionToDelegationWithTextFields)|Delegation|
 |[Auto Layout](https://github.com/C4Q/AutoLayoutExercises)| Design |
 |[Table View Intro](https://github.com/C4Q/AC-iOS-TableViewIntroduction)| Delegate/Data Source|
