@@ -212,3 +212,7 @@ struct Queue<T> {
 6: [Two Stacks](https://www.hackerrank.com/challenges/ctci-queue-using-two-stacks/problem)
 
 7: [Interleave a Queue](http://www.geeksforgeeks.org/interleave-first-half-queue-second-half/)
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4a1017a465339c78a68e3ef78e10124d7d118cbd
