@@ -158,11 +158,11 @@ class func getEpisodes(from data: Data) -> [GOTEpisode] {
                 episodes.append(episode)
             }
         }
-        return episodeArr
     }
-    catch {
-        print("Error serializating data")
+    catch let error {
+        print("Error serializating data: \(error)")
     }
+    return episodeArr
 }
 ```
 
