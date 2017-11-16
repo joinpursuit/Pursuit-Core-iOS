@@ -1,5 +1,11 @@
 # Parsing JSON
 
+### Project Links
+
+- [Downcasting Project](https://github.com/C4Q/AC-iOS-ParsingJSONExample)
+- [Codable Project][https://github.com/C4Q/AC-iOS-CodableExample/tree/master}
+
+
 ### Resources
 
 1. [Postman](https://www.getpostman.com/)
