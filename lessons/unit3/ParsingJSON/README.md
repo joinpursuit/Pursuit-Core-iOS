@@ -151,7 +151,7 @@ convenience init?(from episodeDict: [String: Any]) {
 class func getEpisodes(from data: Data) -> [GOTEpisode] {
     var episodes = [GOTEpisode]()
     do {
-        let json = try JSONSerialization.data(withJSONObject: data, options: [])
+        let json = try JSONSerialization.jsonObject(with: data, options: [])
         guard let episodeArr = json as? [[String: Any]] else {return []}
         for episodeDict in episodeArr {
             if let episode = GOTEpisode(from: episodeDict) {
