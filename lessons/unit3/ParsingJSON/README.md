@@ -150,20 +150,20 @@ convenience init?(from episodeDict: [String: Any]) {
 
 ```swift
 class func getEpisodes(from data: Data) -> [GOTEpisode] {
-    var episodeArr = [GOTEpisode]()
+    var episodes = [GOTEpisode]()
     do {
-        let json = try JSONSerialization.data(withJSONObject: data, options: [])
+        let json = try JSONSerialization.jsonObject(with: data, options: [])
         guard let episodeArr = json as? [[String: Any]] else {return []}
         for episodeDict in episodeArr {
             if let episode = GOTEpisode(from: episodeDict) {
-                episodeArr.append(episode)
+                episodes.append(episode)
             }
         }
-        return episodeArr
     }
-    catch {
-        print("Error serializating data")
+    catch let error {
+        print("Error serializating data: \(error)")
     }
+    return episodeArr
 }
 ```
 
