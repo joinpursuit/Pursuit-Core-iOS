@@ -3,11 +3,14 @@ import UIKit
 class NewsViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    
     var articles: [Article] = []
+    
     let apiClient = NewsAPIClient(apiKey: "e80603556d9d4ab19a37522a7af3a5fc")
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.apiClient.fetchArticles(completion: { (articles) in
             self.articles = articles
             self.tableView.reloadData()
