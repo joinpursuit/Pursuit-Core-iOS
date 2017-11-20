@@ -1,6 +1,7 @@
-# AC iOS - Tableviews: Introduction to Tableviews
+# Introduction to Tableviews
 
----
+### [Project Repo](https://github.com/C4Q/AC-iOS-TableViewIntroduction)
+
 ### Readings
 
 1. [Swith TableView Basics - Tutsplus](https://code.tutsplus.com/tutorials/ios-from-scratch-with-swift-table-view-basics--cms-25160)
