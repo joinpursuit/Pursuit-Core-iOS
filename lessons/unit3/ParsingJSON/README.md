@@ -2,9 +2,8 @@
 
 ### Project Links
 
-- [Downcasting Project - GOT](https://github.com/C4Q/AC-iOS-ParsingJSONExample)
-- [Codable Project - GOT/Pods](https://github.com/C4Q/AC-iOS-CodableExample/tree/master)
-- [Codable Project - Color Scheme](https://github.com/C4Q/AC-iOS-Codable-ColorScheme)
+- [Downcasting Project](https://github.com/C4Q/AC-iOS-ParsingJSONExample)
+- [Codable Project](https://github.com/C4Q/AC-iOS-CodableExample/tree/master)
 
 
 ### Resources
@@ -150,20 +149,20 @@ convenience init?(from episodeDict: [String: Any]) {
 
 ```swift
 class func getEpisodes(from data: Data) -> [GOTEpisode] {
-    var episodes = [GOTEpisode]()
+    var episodeArr = [GOTEpisode]()
     do {
-        let json = try JSONSerialization.jsonObject(with: data, options: [])
+        let json = try JSONSerialization.data(withJSONObject: data, options: [])
         guard let episodeArr = json as? [[String: Any]] else {return []}
         for episodeDict in episodeArr {
             if let episode = GOTEpisode(from: episodeDict) {
-                episodes.append(episode)
+                episodeArr.append(episode)
             }
         }
+        return episodeArr
     }
-    catch let error {
-        print("Error serializating data: \(error)")
+    catch {
+        print("Error serializating data")
     }
-    return episodeArr
 }
 ```
 
