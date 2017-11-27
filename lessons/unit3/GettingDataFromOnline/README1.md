@@ -167,7 +167,7 @@ struct StockAPIClient {
 ```
 </details>
 
-# 5. Using our APIClient
+# 5. Using APIClient
 
 
 <details>
@@ -180,7 +180,7 @@ StockAPIClient.manager.getStock(from: endPoint,
 ```
 </details>
 
-# 6. Overview:
+# 6. Overview of getting data from online:
 
 1. Use the NetworkHelper class to go to a URL and get Data
 2. Convert the Data into a custom class using JSONDecoder() or JSONSerialization
