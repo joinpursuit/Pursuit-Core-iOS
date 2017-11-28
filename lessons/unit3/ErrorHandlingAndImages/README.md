@@ -1,4 +1,4 @@
-#Errors + Loading Images
+# Errors + Loading Images
 
 ## Resources
 https://blog.bobthedeveloper.io/intro-to-error-handling-in-swift-3-edb2ce6a6668
