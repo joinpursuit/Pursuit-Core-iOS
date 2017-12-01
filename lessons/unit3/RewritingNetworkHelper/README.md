@@ -33,7 +33,34 @@ When we call this function, we give it a URL and a closure that takes Data? a UR
 
 # 2. Using URLSession
 
+We can use a URLSession directly to create a network connection inside our app.  Let's return to our NASA app and use URLSession to load the appropriate image for each day.
 
+```swift
+    func loadObjectForSelectedDate() {
+        let selectedDate = datePicker.date.description
+        let formattedYMD = selectedDate.components(separatedBy: " ")[0]
+        guard let url = URL(string: "https://api.nasa.gov/planetary/apod?date=\(formattedYMD)&api_key=DEMO_KEY") else {return}
+        spinner.isHidden = false
+        spinner.startAnimating()
+        let mySession = URLSession(configuration: .default)
+        let myTask = mySession.dataTask(with: url){(data: Data?, response: URLResponse?, error: Error?) in
+            guard let data = data else {return}
+            if let error = error {
+                print("error: \(error)")
+            }
+            do {
+                let nasaObject = try JSONDecoder().decode(NASAObject.self, from: data)
+                DispatchQueue.main.async {
+                    self.nasaObject = nasaObject
+                }
+            }
+            catch {
+                print(error)
+            }
+        }
+        myTask.resume()
+    }
+```
 
 # 3. NetworkHelper
 
@@ -71,6 +98,8 @@ class NetworkHelper {
 ```
 
 
-# 3. Coding Keys
+# 4. Coding Keys
 
-Sometimes
+Sometimes when we get data from online, the names of the keys don't match the preferred Swift formatting.  We can use coding keys to tell Swift that we want different names for our properties.
+
+[Universities API](http://universities.hipolabs.com/search?name=middle)
