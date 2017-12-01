@@ -7,6 +7,7 @@
 
 # Resources
 - [URLSession](https://developer.apple.com/documentation/foundation/urlsession)
+- [Medium - Coding Keys](https://medium.com/@sarunw/codable-in-swift-4-0-1a12e38599d8)
 
 
 # 1. URLSession
