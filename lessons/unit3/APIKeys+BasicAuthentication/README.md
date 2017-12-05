@@ -3,7 +3,7 @@
 ## Objectives
 
 1. Understand what an API Key is and how to register it
-2. User Basic Auth to get data
+2. Use Basic Auth to get data
 
 ## Resources
 
