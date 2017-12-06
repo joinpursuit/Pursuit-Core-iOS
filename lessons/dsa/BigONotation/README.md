@@ -285,10 +285,10 @@ Example:
 
 ```swift
 func bestAverageAndWorstFunc(arr: [Int]) {
-    guard if arr.count < 3 {
+    if arr.count < 3 {
         return
     }
-    guard if arr[0] == 8675309 {
+    if arr[0] == 8675309 {
         return
     }
     if arr[0] + arr[1] == 24601 {
