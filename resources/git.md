@@ -31,7 +31,8 @@
 (resources/CompareCheck.png)
 
 ## Git commands
-
+|Git command | description | example|
+|---|---|---|
 | git clone (URL) | makes a local copy of a git repo in the current directory | git clone https://github.com/C4Q/AC3.2.git |
 | git add -A | Adds the changes you've made to the "index"| git add -A |
 | git commit -m "commit message" | Commits your changes | git commit -m "updated the examples in the table"
