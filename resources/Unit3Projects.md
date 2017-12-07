@@ -105,12 +105,12 @@ struct ThingAPIClient {
 <summary> POST Request </summary>
 
 ```
-func post(order: Order, errorHandler: @escaping (Error) -> Void) {
+func post(thing: Thing, errorHandler: @escaping (Error) -> Void) {
     let urlStr = "https://api.fieldbook.com/v1/5a21d3ea92dfac03005db55a/orders"
     guard var authPostRequest = buildAuthRequest(from: urlStr, httpVerb: .POST) else {errorHandler(AppError.badURL); return }
     do {
-        let encodedOrder = try JSONEncoder().encode(order)
-        authPostRequest.httpBody = encodedOrder
+        let encodedThing = try JSONEncoder().encode(thing)
+        authPostRequest.httpBody = encodedThing
         NetworkHelper.manager.performDataTask(with: authPostRequest,
                                               completionHandler: {_ in print("Made a post request")},
                                               errorHandler: errorHandler)
