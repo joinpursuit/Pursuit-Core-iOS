@@ -120,6 +120,10 @@ struct ThingAPIClient {
 <summary> POST Request </summary>
 
 ```
+enum HTTPVerb: String {
+    case GET
+    case POST
+}
 func post(thing: Thing, errorHandler: @escaping (Error) -> Void) {
     let urlStr = "https://api.fieldbook.com/v1/5a21d3ea92dfac03005db55a/orders"
     guard var authPostRequest = buildAuthRequest(from: urlStr, httpVerb: .POST) else {errorHandler(AppError.badURL); return }
