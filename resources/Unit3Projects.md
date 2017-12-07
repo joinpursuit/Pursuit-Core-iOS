@@ -58,8 +58,8 @@ class NetworkHelper {
                 completionHandler(data)
                 
                 //resume() starts the data task.  Without out, our data task will not run.
-            }.resume()
-        }
+            }
+        }.resume()
     }
 }
 ```
