@@ -80,7 +80,7 @@ class ImageAPIClient {
 ```swift
 struct ThingAPIClient {
     private init(){}
-    static let shared = EpisodeAPIClient()
+    static let shared = ThingAPIClient()
     func getThings(from urlStr: String,
                      completionHandler: @escaping ([Thing]) -> Void,
                      errorHandler: @escaping (Error) -> Void) {
