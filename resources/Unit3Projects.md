@@ -42,20 +42,23 @@ class NetworkHelper {
     
     //Give the manager an instance method that takes a URL, completion handler and error handler.  After getting data from the URL, it runs the completion handler.
     func performDataTask(with request: URLRequest, completionHandler: @escaping (Data) -> Void, errorHandler: @escaping (Error) -> Void) {
-        //Create a dataTask
-        self.urlSession.dataTask(with: request){(data: Data?, response: URLResponse?, error: Error?) in
-            guard let data = data else {return} //Ensure the data is valid
-            
-            //Handle any errors
-            if let error = error {
-                errorHandler(error)
-            }
-            
-            //Input the data into the completion handler
-            completionHandler(data)
-            
-            //resume() starts the data task.  Without out, our data task will not run.
-            }.resume()
+        //Dispatch to the main queue
+        DispatchQueue.main.async {
+            //Create a dataTask
+            self.urlSession.dataTask(with: request){(data: Data?, response: URLResponse?, error: Error?) in
+                guard let data = data else {return} //Ensure the data is valid
+                
+                //Handle any errors
+                if let error = error {
+                    errorHandler(error)
+                }
+                
+                //Input the data into the completion handler
+                completionHandler(data)
+                
+                //resume() starts the data task.  Without out, our data task will not run.
+                }.resume()
+        }        
     }
 }
 ```
