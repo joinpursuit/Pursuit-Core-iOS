@@ -15,11 +15,13 @@
 <details>
 <summary>AppError enum</summary>
 
+```swift
 enum AppError: Error {
  case badURL
  case codingError(rawError: Error)
  //Add more as required
 }
+```
 
 </details>
 
