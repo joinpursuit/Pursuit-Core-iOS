@@ -13,6 +13,18 @@
 ### Helpful Classes/Methods:
 
 <details>
+<summary>AppError enum</summary>
+
+enum AppError: Error {
+ case badURL
+ case codingError(rawError: Error)
+ //Add more as required
+}
+
+</details>
+
+
+<details>
 <summary>Network Helper</summary>
 
 ```swift
