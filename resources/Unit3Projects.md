@@ -53,6 +53,7 @@ class NetworkHelper {
 
 
 ```swift 
+import UIKit
 class ImageAPIClient {
     private init() {}
     static let manager = ImageAPIClient()
