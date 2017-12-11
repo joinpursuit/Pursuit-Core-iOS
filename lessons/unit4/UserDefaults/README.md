@@ -232,7 +232,7 @@ class ReadingPreference: Codable {
 }
 ```
 
-###  `Codable`: Making Swift even Swifter
+### 4.  `Codable`: Making Swift even Swifter
 
 Many of you will be starting your journey of Swift data serialization with some incredibly powerful and easy-to-use tools. I, of course, am refering to the `Codable` protocol which was introduced in Swift 4 to save developers from the agony that is de/serializing `Data`.
 
