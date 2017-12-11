@@ -1,7 +1,11 @@
 # AC-iOS Persistence with UserDefaults (Swift 4.x)
 
 ### Readings
-1. [An Introduction to NSUserDefaults](http://www.codingexplorer.com/nsuserdefaults-a-swift-introduction/)
+1. [Apple Docs on UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults/)
+2. [An Introduction to NSUserDefaults](http://www.codingexplorer.com/nsuserdefaults-a-swift-introduction/)
+3. [StackOverflow Post on UserDefault limits](https://stackoverflow.com/questions/35961005/how-much-data-can-i-store-in-nsuserdefaults)
+4. [More Examples on UserDefaults](https://www.hackingwithswift.com/read/12/2/reading-and-writing-basics-userdefaults)
+5. [Op: Don't Store Sensitive Data in UserDefaults](https://www.andyibanez.com/nsuserdefaults-not-for-sensitive-data/)
 
 ---
 ### 0. Objectives
@@ -383,6 +387,3 @@ class CartStorageManager {
 	- Note: Nested `Codable` items work totally fine with `UserDefaults`!
 4. (Advanced) Have your `CartItem` and `Cart` objects conform to `Equatable`. Implement anyway you see fit, but take into account that `sku` property of `CartItem` is suppose to be unique. Be sure to update your code where needed to make use of your new protocol conformance.
 
-#### Reading Resource for Advanced:
-
-1. [Equatable and Comparable - Use Your Loaf](https://useyourloaf.com/blog/swift-equatable-and-comparable/)
