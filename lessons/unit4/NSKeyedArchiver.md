@@ -151,7 +151,7 @@ func load() {
 ##
 ## Exercises 
 
-Use the Pixabay API to search for and favorit photos  
+Use the Pixabay API to search for and favorite photos  
 **Endpoint:** ```https://pixabay.com/api/?key={YOUR API KEY GOES HERE}&q=```
 If you don't have a Pixabay API key, you can sign up here: https://pixabay.com/en/service/about/api/
 
