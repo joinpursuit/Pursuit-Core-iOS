@@ -1,5 +1,6 @@
 # Unit 4 Week 1 HW
 
+![gif](https://github.com/C4Q/AC-iOS/blob/master/homework/unit4/Unit4Week1HW/exampleGif.gif)
 
 # Overview
 
