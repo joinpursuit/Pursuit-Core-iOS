@@ -37,9 +37,10 @@ You can configure the flow layout either programmatically or using Interface Bui
 5. Set the scroll direction for the layout.  
 
 ## Objectives 
-* Using the UICollectionViewFlowLayout and knowing when to subclass it
-* supplementary views
-* add, delete, or rearrange data in your collection
+* reviewing collection views
+* customizing cells sizes, insets, minimumLineSpacing and minimumInteritemSpacing
+* knowing when to customize view layout 
+* previewing supplementary views and it's existence for customization 
 
 _Laying out sections and cells using the flow layout_
 
