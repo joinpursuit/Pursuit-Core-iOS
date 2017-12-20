@@ -17,8 +17,9 @@ Make sure to use the ImageCache class we used to cache images as we scroll to pr
 </p>
 
 ## PhotoPickerController - Shows images from the Flicker API 
-- you can use a search bar to search photos by name from the Flickr API 
-- or you can hardcode an photo search keyword to populate your PickerViewController 
+- you can use a search bar to search photos by keyword from the Flickr API 
+- or you can hardcode a photo search keyword e.g "christmas" to populate your PickerViewController 
+- the default location is set to NY coordinates ** we can surely refactor later in the course when we talk about CoreLocation and MapKit 
 
 <p align="center">
 <img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Protocols-Delegation-NSCache/photo-picker-controller.png" width="414" height="736" />
