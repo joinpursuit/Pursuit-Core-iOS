@@ -18,6 +18,22 @@ Example: Print the data you get back from a network call.
 Example: Figure out why data isn't being passed via a segue.
 ![](https://media.giphy.com/media/xULW8ieQVRWnA4lT1e/giphy.gif)
 
+#### Set up:
+
+1. Punch in your breakpoint on the line you suspect your code to have an issue with. 
+2. Run your app in simulator until it gets to that point where it stops and the **variable view** (left side) and **console debugger** (right side) activate.
+3. You can observe your values in the **variable view** and type out code in the console, which is like Playground. Click next to `(lldb)` and type in `po` (for "print out") and then your code. ex. `po print(destination.element)`
+4. Click the debugger's run button to continue along your code.
+
+**Pro-Tip:** Be wary of using too many breakpoints. It isn't fun to hit continue over and over.
+
+`LLDB` is a software debugger. It stands for "Low Level Debugger", probably.
+
+#### Clean up options:
+
+* Click on the blue ribbon in the debug bar to deactivate or activate all the breakpoints. You'll see the breakpoints greyed out when they're deactivated, in case you want to refer back to it later.
+* Click on the individual breakpoint and either drag it to the right or release it to get rid of it.
+
 # 3. Take small components into a Playground
 
 Example: Parse JSON in your model in a Playground
