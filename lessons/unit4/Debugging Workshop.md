@@ -11,7 +11,8 @@ Techniques
 
 # 1. Use Print Statements to View Information
 
-Example: Print the data you get back from a network call.
+![](debugAssets/Data.png)
+The highlighted line of code is where you can put a print statement and test to see if you are getting data from the internet.
 
 
 # 2. Use break points to stop execution without rebuilding
