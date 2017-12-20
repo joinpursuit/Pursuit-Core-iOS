@@ -41,6 +41,12 @@ Fullscreen Link: [Giphy](https://giphy.com/gifs/xULW8ieQVRWnA4lT1e/fullscreen)
 
 Example: Parse JSON in your model in a Playground
  ![parsing json into playground](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/debugAssets/playground%20json.png)
+ 
+#### Set up:
+
+1. Make sure to import playground support & UIKit
+2. make this true: PlaygroundPage.current.needsIndefiniteExecution
+3. Then you can do your url session in a playground and check to see if you have the data that you need
 
 # 4. Use online resources to find similar problems and solutions
 
