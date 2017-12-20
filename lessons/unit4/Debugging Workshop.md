@@ -40,6 +40,7 @@ Fullscreen Link: [Giphy](https://giphy.com/gifs/xULW8ieQVRWnA4lT1e/fullscreen)
 # 3. Take small components into a Playground
 
 Example: Parse JSON in your model in a Playground
+ ![parsing json into playground](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/debugAssets/playground%20json.png)
 
 # 4. Use online resources to find similar problems and solutions
 
