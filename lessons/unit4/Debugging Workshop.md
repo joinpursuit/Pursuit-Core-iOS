@@ -44,8 +44,10 @@ Example: Parse JSON in your model in a Playground
 # 4. Use online resources to find similar problems and solutions
 
 Example: How to move info.plist file
+
+[How to move info.plist](https://stackoverflow.com/questions/4159090/how-to-tell-xcode-where-my-info-plist-and-pch-files-are/4159153)
 ### Google Error 
-##### Sometimes you just have to google it ¯\\\_(ツ)_/¯"
+##### Sometimes you just have to Google it ¯\\\_(ツ)_/¯
 - It is very likely that you are not the first person to run into some type of bug 
 - This is when google, stackOverflow, etc. come in handy 
 
