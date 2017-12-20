@@ -19,6 +19,8 @@ Example: Print the data you get back from a network call.
 Example: Figure out why data isn't being passed via a segue.
 ![](https://media.giphy.com/media/xULW8ieQVRWnA4lT1e/giphy.gif)
 
+Fullscreen Link: [Giphy](https://giphy.com/gifs/xULW8ieQVRWnA4lT1e/fullscreen)
+
 #### Set up:
 
 1. Punch in your breakpoint on the line you suspect your code to have an issue with. 
@@ -52,3 +54,5 @@ Example: ![](debugAssets/Screen2.png)
 4. You can rotate your view controller and see if your views are laid out correctly.
 5. The **Debug View Hierarchy** is used to see if views are created but not shown on screen. 
 ![](https://media.giphy.com/media/3ohc1aZ6mrBJISSZWg/giphy.gif)
+
+Fullscreen Link: [Giphy](https://giphy.com/gifs/3ohc1aZ6mrBJISSZWg/fullscreen)
