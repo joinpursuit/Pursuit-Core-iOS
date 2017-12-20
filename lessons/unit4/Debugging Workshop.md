@@ -15,7 +15,8 @@ Example: Print the data you get back from a network call.
 
 # 2. Use break points to stop execution without rebuilding
 
-Example: Figure out why data isn't loading into a TableView
+Example: Figure out why data isn't being passed via a segue.
+![](https://media.giphy.com/media/xULW8ieQVRWnA4lT1e/giphy.gif)
 
 # 3. Take small components into a Playground
 
