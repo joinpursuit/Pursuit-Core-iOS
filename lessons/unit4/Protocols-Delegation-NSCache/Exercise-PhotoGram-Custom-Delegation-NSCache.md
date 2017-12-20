@@ -8,6 +8,7 @@ Selecting an item in the PhotoPickerController should update listeners through a
 Make sure to use the ImageCache class we used to cache images as we scroll to prevent flickering 
 
 <img src=“https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Protocols-Delegation-NSCache/photo-gram-storyboard.png” alt=“storyboard layout”  width=“800” height=“600” />
+![storyboard layout](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Protocols-Delegation-NSCache/nscache-caches-directory.png)
 
 ## PhotoFeedController  - Shows a feed of images you have added from the PhotoPickerController 
 <img src=“https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Protocols-Delegation-NSCache/photo-feed-controller.png” alt=“photo feed controller”  width=“800” height=“600” />
