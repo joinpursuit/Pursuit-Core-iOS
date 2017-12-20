@@ -50,3 +50,4 @@ Example: ![](debugAssets/Screen1.png)
 Example: ![](debugAssets/Screen2.png)
 4. You can rotate your view controller and see if your views are laid out correctly.
 5. The **Debug View Hierarchy** is used to see if views are created but not shown on screen. 
+![](https://media.giphy.com/media/3ohc1aZ6mrBJISSZWg/giphy.gif)
