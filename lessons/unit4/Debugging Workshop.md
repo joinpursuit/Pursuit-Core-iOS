@@ -44,6 +44,14 @@ Example: Parse JSON in your model in a Playground
 # 4. Use online resources to find similar problems and solutions
 
 Example: How to move info.plist file
+### Google Error 
+##### Sometimes you just have to google it ¯\\\_(ツ)_/¯"
+- It is very likely that you are not the first person to run into some type of bug 
+- This is when google, stackOverflow, etc. come in handy 
+
+![](https://media.giphy.com/media/xUNd9C8re61oyDoxLG/giphy.gif)
+
+Fullscreen Link: [Giphy](https://giphy.com/gifs/xUNd9C8re61oyDoxLG/fullscreen)
 
 # 5. Use the Debug View Hierachy
 1. Make sure app is running on the viewController you want to debug
