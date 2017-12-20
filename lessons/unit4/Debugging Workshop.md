@@ -41,3 +41,12 @@ Example: Parse JSON in your model in a Playground
 # 4. Use online resources to find similar problems and solutions
 
 Example: How to move info.plist file
+
+# 5. Use the Debug View Hierachy
+1. Make sure app is running on the viewController you want to debug
+2. In the console click the **Debug View Hierarchy** 
+Example: ![](debugAssets/Screen1.png)
+3. Click Show Clipped Content
+Example: ![](debugAssets/Screen2.png)
+4. You can rotate your view controller and see if your views are laid out correctly.
+5. The **Debug View Hierarchy** is used to see if views are created but not shown on screen. 
