@@ -6,6 +6,7 @@ Techniques
 2. Use break points to stop execution without rebuilding
 3. Take small components into a Playground
 4. Use online resources to find similar problems and solutions
+5. Use the Debug View Hierachy
 
 
 # 1. Use Print Statements to View Information
