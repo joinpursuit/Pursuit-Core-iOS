@@ -103,7 +103,7 @@ navigationController?.dismiss(animated: true, completion: nil)
 [Using Segues](https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
 
 ## The New Hotness which is Codable in Swift 4
-[Persistence using Codable](https://github.com/alexpaul/LessonDrafts/blob/master/CodablePersistence.md)
+[Persistence using Codable](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Persistence-NSKeyedArchiver-Codable/CodablePersistence.md)
 
 ## Persistence using Codable
 
