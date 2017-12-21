@@ -44,8 +44,6 @@ There's a lot of ways to answer this question:
 
 But practically, we've been talking this entire time about understanding a problem and deconstructing it into its atomic components. Laying out your views is using that same skillset, and doing it programmatically lets you better understand how your storyboard's components are constructed. Over time and with practice, you'll be able to "read" a mockup of an app as you would with code.
 
-> **Developer's Note**: I personally find it *much* easier to work with view programmatically than using the storyboard or nibs... I can follow my own logic, but sometimes I just don't understand why storyboard does something. And because there is no "picture" of the UI infront of me, I'm forced to sketch out my thoughts and carefully plan code.
-
 ---
 ### 2. Frames & Autolayout
 It used to be the case that you had to calculate exactly the position of your views using the iPhones coordinate system. Some developers prefer this, but overall you end up writing a lot of difficult-to-understand code as a result. There was one instance where I was asked to make some changes to the layout of something a co-developer had written. Here's an small example of some of their "simpler" code:
