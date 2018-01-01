@@ -51,7 +51,7 @@ private func setupSquare() {
 ```
 
 <p align="center">
-<img src="https://github.com/alexpaul/LessonDrafts/blob/master/Images/frame-vs-bounds.png" width="414" height="736" />
+<img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Programmatic-View-Management/Images/frame-vs-bounds.png" width="414" height="736" />
 </p>
 
 ## Subclassing and Creating a Custom UIView
@@ -211,12 +211,12 @@ class DetailViewController: UIViewController {
 ## Use LayoutAnchors to achive the following:
 **Exercise 1:**
 <p align="center">
-<img src="https://github.com/alexpaul/LessonDrafts/blob/master/Images/exercise-1.png" width="414" height="736" />
+<img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Programmatic-View-Management/Images/exercise-1.png" width="414" height="736" />
 </p>
 
 **Exercise 2:**
 <p align="center">
-<img src="https://github.com/alexpaul/LessonDrafts/blob/master/Images/exercise-2.png" width="414" height="736" />
+<img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Programmatic-View-Management/Images/exercise-2.png" width="414" height="736" />
 </p>
   
 ## Resources 
