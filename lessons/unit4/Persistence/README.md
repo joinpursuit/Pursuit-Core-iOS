@@ -8,7 +8,7 @@
 
 ## Archiving Model Objects to the Documents Directory
 **Pre Swift 4 - NSKeyedArchiver was used**  
-**Swift 4.x - Codable, PropertyListEncoder/PropertyListDecoder is used**
+**Swift 4.x - Codable, PropertyListEncoder/PropertyListDecoder is used**  
 [NSKeyedArchiver and Codable Lesson](https://github.com/C4Q/AC-iOS/tree/master/lessons/unit4/Persistence-NSKeyedArchiver-Codable)
 
 ## NSCache - saves to caches directory, helps stop flickering of network requested images 
