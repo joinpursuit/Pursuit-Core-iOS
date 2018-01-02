@@ -6,7 +6,8 @@
 - [Collection Views](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/CollectionViews/README.md)
 - [Persistence with NSKeyedArchiver / Codable](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Persistence-NSKeyedArchiver-Codable/README.md)
 - [Custom Delegation / NSCache](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Protocols-Delegation-NSCache/README.md)
-- [UIImagePickerController]()
+- [UIImagePickerController](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/ImagePicker/README.mdown)
+- [Subclassing UIViews and Nibs (Xibs)](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/SubclassingUIViewsAndNibs(Xibs)/README.md)
 
 
 ### Helpful Classes/Methods:
