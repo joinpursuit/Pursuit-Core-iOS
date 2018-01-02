@@ -38,7 +38,7 @@ func dataFilePath(withPathName path: String) -> URL {
 
 
 <details>
-<summary>Save Object using PropertyListEncoder</summary>
+<summary>Save Object(s) using PropertyListEncoder</summary>
 
 ```swift 
 // save to documents directory
@@ -58,7 +58,7 @@ func saveToDisk() {
 </details>
 
 <details>
-<summary>Load Object from the Documents Directory using PropertyListDecoder</summary>
+<summary>Load Object(s) from the Documents Directory using PropertyListDecoder</summary>
 
 ```swift 
 // load from documents directory
