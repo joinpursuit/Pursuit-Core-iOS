@@ -126,4 +126,6 @@ class ImageCache {
 |[Persistence using Codable](https://github.com/C4Q/AC-iOS-Persistence-Codable)| Persitence/Codable/FileManager|
 |[MovieSearch](https://github.com/C4Q/AC-iOS-MovieSearch-CollectionViews-FileManager)| Persistence/Codable/FileManager|
 |[Custom Delegation and Image Caching](https://github.com/C4Q/AC-iOS-CatOrDog-Delegation) | Delegation/NSCache |
+|[Nib Demo](https://github.com/C4Q/AC-iOS-NibDemo)|Custom Nibs|
+|[Collection View Introduction Project with MTG Cards](https://github.com/C4Q/AC-iOS-CollectionViews-Introduction)|Collection Views|
 
