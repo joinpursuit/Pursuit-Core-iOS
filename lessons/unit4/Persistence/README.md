@@ -1,18 +1,21 @@
 ## Persistence Overview and Best Practices 
 
 ## FileManager 
-[Saving and Accessing files and Documents Directory](https://github.com/C4Q/AC-iOS/tree/master/lessons/unit4/FileManager)
+[Saving and Accessing Images to/from the Documents Directory](https://github.com/C4Q/AC-iOS/tree/master/lessons/unit4/FileManager)
 
-## UserDefaults 
+## UserDefaults - for saving simple data sets, e.g background color preference 
 [UserDefaults Lesson](https://github.com/C4Q/AC-iOS/tree/master/lessons/unit4/UserDefaults)
 
-## NSKeyedArchiver and Codable
+## Archiving Model Objects to the Documents Directory
+## Pre Swift 4 - NSKeyedArchiver was used 
+## Swift 4.x - Codable, PropertyListEncoder/PropertyListDecoder is used 
 [NSKeyedArchiver and Codable Lesson](https://github.com/C4Q/AC-iOS/tree/master/lessons/unit4/Persistence-NSKeyedArchiver-Codable)
 
-## NSCache 
+## NSCache - saves to caches directory, helps stop flickering of network requested images 
 [NSCache](https://github.com/C4Q/AC-iOS/tree/master/lessons/unit4/Protocols-Delegation-NSCache)
 
-## URLCache 
+## URLCache - works with URLSession
+[AC-iOS 3.2 Lesson](https://github.com/C4Q/AC3.2/blob/master/lessons/unit4/urlcache/README.md)
 [URLCache with URLRequest and URLSession](https://developer.apple.com/documentation/foundation/urlcache)
 
 ## Best Practices 
