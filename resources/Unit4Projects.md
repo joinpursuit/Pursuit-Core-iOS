@@ -78,7 +78,7 @@ func load() {
 </details>
 
 <details>
-<summary>ImageCache</summary>
+<summary>ImageCache using NSCache</summary>
 
 ```swift
 class ImageCache {
