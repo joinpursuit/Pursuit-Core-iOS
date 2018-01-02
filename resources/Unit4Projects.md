@@ -4,7 +4,8 @@
 
 - [UserDefaults](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/UserDefaults/README.md)
 - [Collection Views](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/CollectionViews/README.md)
-- 
+- [Persistence with NSKeyedArchiver / Codable](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Persistence-NSKeyedArchiver-Codable/README.md)
+
 
 
 ### Helpful Classes/Methods:
@@ -121,7 +122,6 @@ class ImageCache {
 | Name | Tags |
 | --- | --- |
 |[Persistence using Codable](https://github.com/C4Q/AC-iOS-Persistence-Codable)| Persitence/Codable/FileManager|
-|[Persistence with NSKeyedArchiver / Codable](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Persistence-NSKeyedArchiver-Codable/README.md)|Persistence/Codable|
 |[MovieSearch](https://github.com/C4Q/AC-iOS-MovieSearch-CollectionViews-FileManager)| Persistence/Codable/FileManager|
 |[Custom Delegation and Image Caching](https://github.com/C4Q/AC-iOS-CatOrDog-Delegation) | Delegation/NSCache |
 
