@@ -228,5 +228,5 @@ class DetailViewController: UIViewController {
 [View and Window Architecture](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/WindowsandViews/WindowsandViews.html)  
 [View Hierarchy](https://developer.apple.com/library/content/documentation/General/Conceptual/Devpedia-CocoaApp/View%20Hierarchy.html)  
 [How to change Auto Layout constraints after they are set when using constraintEqualToAnchor()?](https://stackoverflow.com/questions/34391732/how-to-change-auto-layout-constraints-after-they-are-set-when-using-constrainteq)
-[safeAreaLayoutGuide](https://developer.apple.com/documentation/uikit/uiview/2891102-safearealayoutguide)
+[safeAreaLayoutGuide](https://developer.apple.com/documentation/uikit/uiview/2891102-safearealayoutguide)  
 [NSLayoutAnchor](https://developer.apple.com/documentation/uikit/nslayoutanchor)  
