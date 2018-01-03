@@ -10,7 +10,6 @@
 
 Misc.......
 * Get a Storyboard instance in code?????
-* Create a Tab Bar Controller in code????
 * Create a Collection View in code????
 
 ## UIWindow
