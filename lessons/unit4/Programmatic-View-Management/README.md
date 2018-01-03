@@ -132,14 +132,24 @@ override func viewDidLoad() {
 }
 ```
 
-## Presenting a View Controller 
+## Adding a Blur Effect to a View 
 ```swift 
-extension MainViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let name = names[indexPath.row]
-        let detailVC = DetailViewController(name: name)
-        navigationController?.pushViewController(detailVC, animated: true)
-    }
+private func setupBlurEffectView() {
+    let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark) // .light, .dark, .prominent, .regular, .extraLight
+    let visualEffect = UIVisualEffectView(frame: UIScreen.main.bounds)
+    visualEffect.effect = blurEffect
+    addSubview(visualEffect)
+}
+```
+
+## Presenting a View Controller Modally over its Current Context
+```swift 
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let fellow = fellows[indexPath.row]
+    let detailVC = DetailViewController(fellow: fellow)
+    detailVC.modalPresentationStyle = .overCurrentContext
+    detailVC.modalTransitionStyle = .crossDissolve
+    navigationController?.present(detailVC, animated: true, completion: nil)
 }
 ```
 
