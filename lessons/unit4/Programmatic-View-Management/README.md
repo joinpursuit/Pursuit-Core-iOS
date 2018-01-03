@@ -219,3 +219,4 @@ class DetailViewController: UIViewController {
 [How to change Auto Layout constraints after they are set when using constraintEqualToAnchor()?](https://stackoverflow.com/questions/34391732/how-to-change-auto-layout-constraints-after-they-are-set-when-using-constrainteq)
 [safeAreaLayoutGuide](https://developer.apple.com/documentation/uikit/uiview/2891102-safearealayoutguide)  
 [NSLayoutAnchor](https://developer.apple.com/documentation/uikit/nslayoutanchor)  
+[Randomization](https://developer.apple.com/library/content/documentation/General/Conceptual/GameplayKit_Guide/RandomSources.html)  
