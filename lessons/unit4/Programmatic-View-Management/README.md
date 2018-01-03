@@ -1,11 +1,17 @@
-## Programmable View Management
+## Programmable View Management Continued
 
 ## Objectives 
-* Creating UIControls Programmatically 
-* Create an app without the use of storyboards
+* Create a TableView and its custom cell in code 
+* Create a Custom View and it to a View Controller
+* Create UIBarButtonItems in code
 * Programmable Auto Layout using LayoutAnchors
-* Understand frame and bounds 
-* Understand what is UIWindow and its purpose in our app
+* Understand frame and bounds
+* Dependency Injection using the View Controller's initializer 
+
+Misc.......
+* Get a Storyboard instance in code?????
+* Create a Tab Bar Controller in code????
+* Create a Collection View in code????
 
 ## UIWindow
 Normally, Xcode provides your app's main window. New iOS projects use storyboards to define the app’s views. Storyboards require the presence of a window property on the app delegate object, which the Xcode templates automatically provide. 
@@ -87,49 +93,6 @@ class MainView: UIView {
 }
 ```
 
-## Creating UI elements using Frame Based layout
-Note: This method of laying views could get verbose and complicated really quickly especially for fellow developers 
-to read your code. We will be using Layout Anchors for our layout 
-constraints for this lesson.
-```swift 
-lazy var imageView: UIImageView = {
-    let iv = UIImageView(frame: CGRect(x: 0, y: 0,
-                                       width: UIScreen.main.bounds.width * 0.80,
-                                       height: UIScreen.main.bounds.height * 0.80))
-    iv.image = UIImage.init(named: "happy-2018")
-    iv.contentMode = .scaleAspectFit
-    iv.center = view.center
-    return iv
-}()
-
-lazy var toggleButton: UIButton = {
-    let button = UIButton(frame: CGRect(x: 0, y: 0,
-                                        width: UIScreen.main.bounds.width * 0.60,
-                                        height: 44))
-    button.setTitle("Toggle Image", for: .normal)
-    button.setTitleColor(.orange, for: .normal)
-    button.center = view.center
-    button.addTarget(self, action: #selector(toggleImage), for: .touchUpInside)
-    return button
-}()
-
-override func viewDidLoad() {
-    super.viewDidLoad()
-    view.backgroundColor = .white
-    view.addSubview(imageView)
-    view.addSubview(toggleButton)
-}
-
-override func viewWillLayoutSubviews() {
-    super.viewWillLayoutSubviews()
-    toggleButton.frame.origin.y = UIScreen.main.bounds.height * 0.80
-}
-
-@objc func toggleImage() {
-    imageView.isHidden = !imageView.isHidden
-}
-```
-
 ## Programmable Constraints
 You have three choices when it comes to programmatically creating constraints: You can use layout anchors, you can use the NSLayoutConstraint class, or you can use the Visual Format Language.
 
@@ -194,7 +157,7 @@ class DetailViewController: UIViewController {
     // Dependency Injection in View Controllers with custom initializers
     // This forces the required properties to be injected by the custom initializer
     // Avoids possible silent injection in prepare: for segue if a conditional optional is used
-    // A strong reason some developers prefer programmable view controllers over storyboard
+    // A strong reason why some developers prefer programmable view controllers over storyboard
     init(name: String) {
         super.init(nibName: nil, bundle: nil)
         navigationItem.title = name
