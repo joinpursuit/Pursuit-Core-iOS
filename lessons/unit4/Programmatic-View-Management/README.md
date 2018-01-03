@@ -2,11 +2,11 @@
 
 ## Objectives 
 * Create a TableView and its custom cell in code 
-* Create a Custom View and it to a View Controller
-* Create UIBarButtonItems in code
+* Create a Custom View and add it to a View Controller
+* Create UIBarButtonItems in code add add to the Navigation Bar
 * Programmable Auto Layout using LayoutAnchors
 * Understand frame and bounds
-* Dependency Injection using the View Controller's initializer 
+* Dependency Injection using the View Controller's initializer in code  
 
 Misc.......
 * Get a Storyboard instance in code?????
@@ -93,6 +93,16 @@ class MainView: UIView {
 }
 ```
 
+## Creating a TableView and Registering its cell in code 
+```swift
+lazy var tableView: UITableView = {
+    let tv = UITableView()
+    tv.frame = bounds // bounds here is the MainView's bounds which is UIScreen.main.bounds (entire screen)
+    tv.register(FellowCell.self, forCellReuseIdentifier: "FellowCell")
+    return tv
+}()
+```
+
 ## Programmable Constraints
 You have three choices when it comes to programmatically creating constraints: You can use layout anchors, you can use the NSLayoutConstraint class, or you can use the Visual Format Language.
 
@@ -142,7 +152,13 @@ private func setupBlurEffectView() {
 }
 ```
 
-## Presenting a View Controller Modally over its Current Context
+## Creating a UIBarButtonItem in code 
+```swift 
+let shuffleBarButtonItem = UIBarButtonItem(title: "Shuffle", style: .plain, target: self, action: #selector(shuffleFellows))
+navigationItem.rightBarButtonItem = shuffleBarButtonItem
+```
+
+## Presenting a View Controller Modally over the Current Context
 ```swift 
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let fellow = fellows[indexPath.row]
