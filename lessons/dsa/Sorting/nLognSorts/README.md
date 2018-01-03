@@ -144,7 +144,7 @@ var arr1 = [8,4,2]
  
  var arr2 = [11,8,15,10,4,14,2]
  
-  1. Skip this step as arr1 has 3 elements.
+  1. Skip this step as arr2 has 7 elements.
   2. pivot = 10
   3. less = [8,4,2]
   4. equal = [10]
