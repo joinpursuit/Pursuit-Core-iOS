@@ -219,3 +219,4 @@ class DetailViewController: UIViewController {
 [safeAreaLayoutGuide](https://developer.apple.com/documentation/uikit/uiview/2891102-safearealayoutguide)  
 [NSLayoutAnchor](https://developer.apple.com/documentation/uikit/nslayoutanchor)  
 [Randomization](https://developer.apple.com/library/content/documentation/General/Conceptual/GameplayKit_Guide/RandomSources.html)  
+[http://blog.fluidui.com/designing-for-mobile-101-pixels-points-and-resolutions/](http://blog.fluidui.com/designing-for-mobile-101-pixels-points-and-resolutions/)  
