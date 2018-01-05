@@ -2,7 +2,7 @@
 
 Specifications: 
 * Create a custom view that has a collection view of profile pics with horizontal scrolling 
-* The custom view also has a detail card view that shows details of the fellow in a labe, imageview and textview
+* The custom view also has a detail card view that shows details of the fellow in a label, imageview and textview
 * Tapping on a collection cell should change the detail view to show that selection 
 
 <p align="center">
