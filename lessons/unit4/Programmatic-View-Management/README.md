@@ -362,6 +362,34 @@ private func setupBlurEffectView() {
 
 </details>
 
+<details>
+<summary>Getting a Storyboard and instantiating a View Controller using the Identifier</summary>
+    
+```swift 
+// Get the MainViewController from the "Main" Storyboard and instantiate it
+// We set bundle to nil since were looking in the current application
+let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+```
+
+</details>
+
+
+<details>
+<summary>Setting up a Collection View in code along with its cell and layout</summary>
+    
+```swift 
+lazy var collectionView: UICollectionView = {
+    let layout = UICollectionViewFlowLayout()
+    let cv = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
+    cv.backgroundColor = .white
+    cv.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CollectionCell")
+    return cv
+}()
+```
+
+</details>
+
 ## Exercises
 ## Use LayoutAnchors to achive the following:
 **Exercise 1:**
