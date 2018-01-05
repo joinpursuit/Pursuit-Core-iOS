@@ -195,6 +195,171 @@ class DetailViewController: UIViewController {
 }
 ```
 
+## Utility Functions / Classes for in class Demo
+<details>
+<summary>ImageCache</summary>
+    
+```swift 
+class ImageCache {
+    private init(){
+        
+    }
+    static let manager = ImageCache()
+    
+    private var sharedCached = NSCache<NSString, UIImage>()
+    
+    // get current cached image
+    func cachedImage(url: URL) -> UIImage? {
+        return sharedCached.object(forKey: url.absoluteString as NSString)
+    }
+    
+    // process image and store in cache
+    func processImageInBackground(imageURL: URL, completion: @escaping(Error?, UIImage?) -> Void) {
+        DispatchQueue.global().async {
+            do {
+                let imageData = try Data.init(contentsOf: imageURL)
+                let image  = UIImage.init(data: imageData)
+                
+                // store image in cache
+                if let image = image {
+                    self.sharedCached.setObject(image, forKey: imageURL.absoluteString as NSString)
+                }
+                
+                completion(nil, image)
+            } catch {
+                print("ImageCache - image processing error: \(error.localizedDescription)")
+                completion(error, nil)
+            }
+        }
+    }
+}
+```
+
+</details>
+
+<details>
+<summary>JSONParsingService</summary>
+    
+```swift 
+class JSONParsingService {
+    static func parseJSONFile(filename: String, type: String) -> [Fellow]? {
+        var fellows: [Fellow]? = nil
+        if let pathname = Bundle.main.path(forResource: filename, ofType: type) {
+            guard let jsonData = FileManager.default.contents(atPath: pathname) else { return nil }
+            do {
+                let decoder = JSONDecoder()
+                fellows = try decoder.decode([Fellow].self, from: jsonData)
+            } catch {
+                print("read json error: \(error.localizedDescription)")
+            }
+        }
+        return fellows
+    }
+}
+```
+
+</details>
+
+<details>
+<summary>Fellow Model Object</summary>
+
+```swift 
+struct Fellow: Codable {
+    let name: String
+    let imageURL: URL?
+    let bio: String? 
+}
+```
+
+</details>
+
+<details>
+<summary>Shuffle Array</summary>
+    
+```swift 
+@objc func shuffleFellows() {
+    fellows = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: fellows) as! [Fellow]
+    mainView.tableView.reloadData()
+}
+```
+
+</details>
+
+<details>
+<summaryPresent View Modally Over Current Context</summary>
+
+```swift 
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let cell = tableView.cellForRow(at: indexPath) as! FellowCell
+    let fellow = fellows[indexPath.row]
+    let detailVC = DetailViewController(fellow: fellow, image: cell.profileImage.image)
+    detailVC.modalPresentationStyle = .overCurrentContext
+    detailVC.modalTransitionStyle = .crossDissolve
+    present(detailVC, animated: true, completion: nil)
+}
+```
+
+</details>
+
+<details>
+<summary>Scroll to top of TextView</summary>
+    
+```swift 
+override func viewWillLayoutSubviews() {
+    super.viewWillLayoutSubviews()
+    // scroll to top of text view
+    let range = NSRangeFromString(detailView.bioTextView.text)
+    detailView.bioTextView.scrollRangeToVisible(range)
+}
+```
+
+</details>
+
+<details>
+<summary>View Controller Dependency Injection in code</summary>
+    
+```swift 
+// Dependency Injection in View Controllers with custom initializers
+// This forces the required properties to be injected by the custom initializer
+// Avoids possible silent injection in prepare: for segue if a conditional optional is used
+// A strong reason some developers prefer programmable view controllers over storyboard
+init(fellow: Fellow, image: UIImage?) {
+    super.init(nibName: nil, bundle: nil)
+    navigationItem.title = fellow.name
+    detailView.configureView(fellow: fellow, image: image)
+}
+```
+
+</details>
+
+<details>
+<summary>Create a TableView and register its Cell</summary>
+    
+```swift 
+// here best practices is to create your views by lazy instantiation
+// the view is not created until it's needed leads to better processing time
+lazy var tableView: UITableView = {
+    let tv = UITableView()
+    tv.frame = bounds // bounds here is the MainView's bounds which is UIScreen.main.bounds (entire screen)
+    tv.register(FellowCell.self, forCellReuseIdentifier: "FellowCell")
+    return tv
+}()
+```
+
+</details>
+
+<details>
+<summary>Add Blur Effect to View</summary>
+    
+```swift 
+private func setupBlurEffectView() {
+    let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark) // .light, .dark, .prominent, .regular, .extraLight
+    let visualEffect = UIVisualEffectView(frame: UIScreen.main.bounds)
+    visualEffect.effect = blurEffect
+    addSubview(visualEffect)
+}
+```
+
 ## Exercises
 ## Use LayoutAnchors to achive the following:
 **Exercise 1:**
