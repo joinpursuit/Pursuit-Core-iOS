@@ -403,7 +403,7 @@ lazy var collectionView: UICollectionView = {
 ## Resources 
 [UIWindow](https://developer.apple.com/documentation/uikit/uiwindow)  
 [Programmatically Creating Constraints](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html)  
-[What are lazy variables](https://www.hackingwithswift.com/example-code/language/what-are-lazy-variables) 
+[What are lazy variables](https://www.hackingwithswift.com/example-code/language/what-are-lazy-variables)  
 [Dependency Injection in View Controllers](https://medium.com/ios-os-x-development/dependency-injection-in-view-controllers-9fd7d2c77e55)  
 [iOS: View Controller Data Injection with Storyboards and Segues in Swift](https://www.natashatherobot.com/ios-view-controller-data-injection-with-storyboards-and-segues-in-swift/)  
 [View and Window Architecture](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/WindowsandViews/WindowsandViews.html)  
