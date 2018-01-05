@@ -286,7 +286,7 @@ struct Fellow: Codable {
 </details>
 
 <details>
-<summaryPresent View Modally Over Current Context</summary>
+<summary>Present View Modally Over Current Context</summary>
 
 ```swift 
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -359,6 +359,8 @@ private func setupBlurEffectView() {
     addSubview(visualEffect)
 }
 ```
+
+</details>
 
 ## Exercises
 ## Use LayoutAnchors to achive the following:
