@@ -7,10 +7,8 @@
 * Programmable Auto Layout using LayoutAnchors
 * Understand frame and bounds
 * Dependency Injection using the View Controller's initializer in code  
-
-Misc.......
-* Get a Storyboard instance in code?????
-* Create a Collection View in code????
+* Get a Storyboard instance in code and instantiate a View Controller 
+* Create a CollectionView in code along with its default cell and layout
 
 ## UIWindow
 Normally, Xcode provides your app's main window. New iOS projects use storyboards to define the app’s views. Storyboards require the presence of a window property on the app delegate object, which the Xcode templates automatically provide. 
