@@ -1,5 +1,12 @@
 ## Core Animation - Layer Animations 
 
+## Review - What is Animation?
+Change over Time
+
+<p align="center">
+<img src="https://developer.apple.com/library/content/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Art/timing_graphs_b.jpg"
+width="300" height="200">
+</p>
 
 Animations provide fluid visual transitions between different states of your user interface. In iOS, animations are used extensively to reposition views, change their size, remove them from view hierarchies, and hide them. You might use animations to convey feedback to the user or to implement interesting visual effects.
 
