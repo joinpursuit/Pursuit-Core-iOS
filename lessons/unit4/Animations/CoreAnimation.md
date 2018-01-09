@@ -192,6 +192,68 @@ fadeAndScale.duration = 1
 
 </details>
 
+<details>
+<summary>Animating a Shadow</summary>
+     
+```swift 
+func animateShadow() {
+   let shadowOpacity = CABasicAnimation(keyPath: "shadowOpacity")
+   shadowOpacity.fromValue = 0.0
+   shadowOpacity.toValue = 1.0
+   shadowOpacity.duration = 0.5
+   layerPropertyView.imageView.layer.add(shadowOpacity, forKey: nil)
+
+   // final value
+   layerPropertyView.imageView.layer.shadowOpacity = 1.0
+
+
+   let shadowAnimation = CABasicAnimation(keyPath: "shadowOffset")
+   shadowAnimation.fromValue = CGSize.zero
+   shadowAnimation.toValue = CGSize(width: 5.0, height: 5.0)
+   shadowAnimation.duration = 0.5
+   layerPropertyView.imageView.layer.add(shadowAnimation, forKey: nil)
+
+   // final value
+   layerPropertyView.imageView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+}
+```
+
+</details>
+
+<details>
+<summary>Animate Contents - e.g Cat Image to Lion Image</summary>
+     
+```swift 
+let catRoars = CABasicAnimation(keyPath: "contents")
+catRoars.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+catRoars.fromValue = UIImage(named:"cat")?.cgImage
+catRoars.toValue = UIImage(named:"lion")?.cgImage
+catRoars.duration = 1.0
+catImageView.layer.add(catRoars, forKey: nil)
+catImageView.layer.contents = UIImage(named:"lion")?.cgImage
+```
+
+</details>
+
+<details>
+<summary>Animate Rotation in the Z Axis</summary>
+     
+```swift 
+func animateRotationZ() {
+   let transformRotaion = CABasicAnimation(keyPath: "transform.rotation.z")
+   transformRotaion.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+   transformRotaion.fromValue = 0
+   transformRotaion.byValue = CGFloat(2.0 * .pi)
+   transformRotaion.duration = 2.0
+   layerPropertyView.imageView.layer.add(transformRotaion, forKey: nil)
+   layerPropertyView.imageView.layer.transform = CATransform3DMakeRotation(CGFloat(2.0 * .pi), 0, 0, 1)
+}
+```
+
+</details>
+
+
+
 ## Exercises
 
 Create the following animations in the gif files below: 
