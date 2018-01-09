@@ -175,7 +175,7 @@ Create the following animations in the gif files below:
 
 
 ## Resources   
-[Human Interface Guidelines - Animation](https://developer.apple.com/ios/human-interface-guidelines/visual-design/animation/) 
+[Human Interface Guidelines - Animation](https://developer.apple.com/ios/human-interface-guidelines/visual-design/animation/)   
 [CAAnimation - The abstract superclass for Core Animation animations.
 ](https://developer.apple.com/documentation/quartzcore/caanimation)  
 [Core Animation Framework](https://developer.apple.com/documentation/quartzcore) 
