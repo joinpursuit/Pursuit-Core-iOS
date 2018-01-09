@@ -126,6 +126,11 @@ Animation shows Cubic Bezier Curves
 <img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Animations/Images/animations-cubic-bezier-timing-curves.gif" width="320" height="568"/>
 </p>
 
+**Creating Custom Timing Functions**
+```swift 
+let customTimingFunction = CAMediaTimingFunction(controlPoints: 1.0, 0.01, 0.94, 0.62)
+transformRotaion.timingFunction = customTimingFunction
+```
 
 ## Creating a CAAnimationGroup
 ```swift 
