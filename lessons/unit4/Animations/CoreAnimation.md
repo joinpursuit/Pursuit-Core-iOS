@@ -157,6 +157,21 @@ fadeAndScale.duration = 1
 
 ## In Class Demo
 
+**Let us Animate the following Layer Properties:**
+* Border Color
+* Border Width 
+* Shadow
+* Opacity
+* Rotation X
+* Rotation Y
+* Rotation Z
+* Background Color 
+* Corner Radius
+* Scale 
+* Position 
+* Contents
+
+
 <details>
 <summary>Creating examples of CABasicAnimation</summary>
      
