@@ -65,6 +65,11 @@ One of the most valid reasons to use CoreAnimation over UIKit is for 3-Dimension
 
 [![XYZ Axis Video](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Animations/Images/x-y-z-axis.png)](https://www.youtube.com/watch?v=3qXic7PR64g)  
 
+**Creating 3D Transformations using CATransform3D**
+* Scale: grow or shrink the transform layer - [CATransform3DMakeScale](https://developer.apple.com/documentation/quartzcore/1436560-catransform3dmakescale?language=objc)   
+* Rotation: change angle of transform layer - [CATransform3DMakeRotation](https://developer.apple.com/documentation/quartzcore/1436558-catransform3dmakerotation?language=objc)  
+* Translation: change coordinates of the layer - [CATransform3DMakeTranslation](https://developer.apple.com/documentation/quartzcore/1436536-catransform3dmaketranslation?language=objc)  
+
 ## What is a CALayer
 
 Every UIView has a CALayer.
