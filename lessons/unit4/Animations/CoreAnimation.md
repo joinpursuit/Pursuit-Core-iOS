@@ -199,3 +199,4 @@ Create the following animations in the gif files below:
 [Implicit vs Explicit Animations](http://laurencaponong.com/implicit-vs-explicit-animations-ios/)  
 [Radian to Degrees Conversion](https://www.rapidtables.com/convert/number/radians-to-degrees.html)  
 [CATransform3D vs. CGAffineTransform](https://stackoverflow.com/questions/567829/catransform3d-vs-cgaffinetransform)  
+[Cubic Bezier Preview and Creation](http://cubic-bezier.com/#.17,.67,.83,.67)  
