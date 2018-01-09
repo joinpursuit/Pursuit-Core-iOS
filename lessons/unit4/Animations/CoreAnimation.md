@@ -1,5 +1,12 @@
 ## Core Animation - Layer Animations 
 
+## Review - What is Animation?
+Change over Time
+
+<p align="center">
+<img src="https://developer.apple.com/library/content/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Art/timing_graphs_b.jpg"
+width="300" height="200">
+</p>
 
 Animations provide fluid visual transitions between different states of your user interface. In iOS, animations are used extensively to reposition views, change their size, remove them from view hierarchies, and hide them. You might use animations to convey feedback to the user or to implement interesting visual effects.
 
@@ -44,6 +51,10 @@ Using Core Animation, you can animate the following types of changes for your vi
 - The rasterization behavior of the layer
 
 ## When do we need to use Core Animation over UIKit Animations
+
+One of the most valid reasons to use CoreAnimation over UIKit is for 3-Dimensional Animations. 
+
+[![XYZ Axis Video](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Animations/Images/x-y-z-axis.png)](https://www.youtube.com/watch?v=3qXic7PR64g)  
 
 ## What is a CALayer
 
@@ -195,3 +206,4 @@ Create the following animations in the gif files below:
 [Implicit vs Explicit Animations](http://laurencaponong.com/implicit-vs-explicit-animations-ios/)  
 [Radian to Degrees Conversion](https://www.rapidtables.com/convert/number/radians-to-degrees.html)  
 [CATransform3D vs. CGAffineTransform](https://stackoverflow.com/questions/567829/catransform3d-vs-cgaffinetransform)  
+[Cubic Bezier Preview and Creation](http://cubic-bezier.com/#.17,.67,.83,.67)  
