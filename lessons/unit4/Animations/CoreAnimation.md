@@ -1,11 +1,12 @@
 ## Core Animation - Layer Animations 
 
 ## Review - What is Animation?
-Change over Time
+* Change over Time
+* Practical - how all the bits of your app fit together
+* Artful - how your app feels 
 
 <p align="center">
-<img src="https://developer.apple.com/library/content/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Art/timing_graphs_b.jpg"
-width="300" height="200">
+<img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Animations/Images/animation-change-over-time.png" />
 </p>
 
 Animations provide fluid visual transitions between different states of your user interface. In iOS, animations are used extensively to reposition views, change their size, remove them from view hierarchies, and hide them. You might use animations to convey feedback to the user or to implement interesting visual effects.
@@ -13,9 +14,17 @@ Animations provide fluid visual transitions between different states of your use
 Both UIKit and Core Animation provide support for animations, but the level of support provided by each technology varies. In UIKit, animations are performed using UIView objects. Views support a basic set of animations that cover many common tasks. For example, you can animate changes to properties of views or use transition animations to replace one set of views with another.
 
 ## Three reasons to Animate
-1. Direct user's attention
-2. Keep user's oriented 
+1. Direct your users attention
+2. Keep users oriented 
 3. Help connect behavior to what is on screen
+
+## Apple's Platform Overview  
+* UIKit
+* CoreAnimation 
+* CoreGraphics 
+* CoreImage 
+* SceneKit and SpriteKit
+* Metal 
 
 ## Objectives 
 * Overview of Core Animation 
