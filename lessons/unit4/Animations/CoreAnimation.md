@@ -188,3 +188,4 @@ Create the following animations in the gif files below:
 [CAAnimationGroup](https://developer.apple.com/documentation/quartzcore/caanimationgroup) 
 [CALayer](https://developer.apple.com/documentation/quartzcore/calayer)  
 [Implicit vs Explicit Animations](http://laurencaponong.com/implicit-vs-explicit-animations-ios/)  
+[Radian to Degrees Conversion](https://www.rapidtables.com/convert/number/radians-to-degrees.html)  
