@@ -45,6 +45,10 @@ Using Core Animation, you can animate the following types of changes for your vi
 
 ## When do we need to use Core Animation over UIKit Animations
 
+One of the most valid reasons to use CoreAnimation over UIKit is for 3-Dimensional Animations. 
+
+[![XYZ Axis Video](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Animations/Images/x-y-z-axis.png)](https://www.youtube.com/watch?v=3qXic7PR64g)  
+
 ## What is a CALayer
 
 Every UIView has a CALayer.
