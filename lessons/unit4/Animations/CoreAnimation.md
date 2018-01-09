@@ -32,6 +32,7 @@ Both UIKit and Core Animation provide support for animations, but the level of s
 * What is a Layer
 * Use CABasicAnimation 
 * Use CAAnimationGroup 
+* Use CAKeyframeAnimation
 * Implicity vs Explicit Animation 
 * The default Time Functions available in CoreAnimation 
 * What can we Animate on a Layer
@@ -173,7 +174,7 @@ fadeAndScale.duration = 1
 
 
 <details>
-<summary>Creating examples of CABasicAnimation</summary>
+<summary>Using CABasicAnimation</summary>
      
 ```swift 
 let positionAnimation = CABasicAnimation(keyPath: "position.x")
@@ -186,7 +187,7 @@ loginView.logo.layer.add(positionAnimation, forKey: nil)
 </details>
 
 <details>
-<summary>Creating some examples of CAAnimationGroup</summary>
+<summary>Using CAAnimationGroup</summary>
      
 ```swift 
 let fadeOut = CABasicAnimation(keyPath: "opacity")
@@ -203,6 +204,23 @@ expandScale.toValue = [3, 3, 3]
 let fadeAndScale = CAAnimationGroup()
 fadeAndScale.animations = [fadeOut, expandScale]
 fadeAndScale.duration = 1
+```
+
+</details>
+
+<details>
+<summary>Using CAKeyframeAnimation</summary>
+     
+```swift 
+let colorBackgroundKeyframeAnimation = CAKeyframeAnimation(keyPath: "backgroundColor")
+colorBackgroundKeyframeAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+colorBackgroundKeyframeAnimation.values = [UIColor.red.cgColor,
+                                         UIColor.green.cgColor,
+                                         UIColor.blue.cgColor]
+colorBackgroundKeyframeAnimation.keyTimes = [0, 0.5, 1]
+colorBackgroundKeyframeAnimation.duration = 2
+colorBackgroundKeyframeAnimation.repeatCount = Float.infinity
+view.layer.add(colorBackgroundKeyframeAnimation, forKey: nil)
 ```
 
 </details>
