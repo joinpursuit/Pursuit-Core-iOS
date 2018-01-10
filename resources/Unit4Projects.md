@@ -45,7 +45,7 @@ func dataFilePath(withPathName path: String) -> URL {
 
 
 <details>
-<summary>Save Object(s) using PropertyListEncoder</summary>
+<summary>Save Object(s) using <b>PropertyListEncoder</b></summary>
 
 ```swift 
 // save to documents directory
@@ -65,7 +65,7 @@ func saveToDisk() {
 </details>
 
 <details>
-<summary>Load Object(s) from the Documents Directory using PropertyListDecoder</summary>
+<summary>Load Object(s) from the Documents Directory using <b>PropertyListDecoder</b></summary>
 
 ```swift 
 // load from documents directory
@@ -85,7 +85,7 @@ func load() {
 </details>
 
 <details>
-<summary>ImageCache using NSCache</summary>
+    <summary>ImageCache using <b>NSCache</b></summary>
 
 ```swift
 class ImageCache {
@@ -157,7 +157,7 @@ func animateShadow() {
 </details>
 
 <details>
-<summary>Using CABasicAnimation to animate a rotation in the 3D plane</summary>
+<summary>Using <b>CABasicAnimation</b> to animate a rotation in the 3D plane</summary>
 
 ```swift 
 func animateRotationX() {
@@ -174,7 +174,7 @@ func animateRotationX() {
 </details>
 
 <details>
-<summary>3D Translation using CAKeyframeAnimation</summary>
+<summary>3D Translation using <b>CAKeyframeAnimation</b></summary>
 
 ```swift 
 // 3D Translation using CAKeyframeAnimation
