@@ -510,3 +510,11 @@ Why are insertion and deletion O(1) on a linked list and O(n) for a degenerate b
 Binary Search Trees have to keep a sorted order, which means it can only insert an element in the place it belongs in the tree, which could be at the bottom.
 
 </details>
+
+
+# Exercises
+
+1. [Validate BST](https://leetcode.com/problems/validate-binary-search-tree/description/)
+2. [Path Sum](https://leetcode.com/problems/path-sum-iii/description/)
+3. [kth Smallest Element BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)
+4. [Lattice Paths](https://projecteuler.net/problem=15)
