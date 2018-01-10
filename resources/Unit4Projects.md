@@ -65,7 +65,7 @@ func saveToDisk() {
 </details>
 
 <details>
-<summary>Load Object(s) from the Documents Directory using <b>PropertyListDecoder</b></summary>
+<summary>Load Object(s) from the Documents Directory using <a href="https://developer.apple.com/documentation/foundation/propertylistencoder">PropertyListEncoder</a>PropertyListDecoder</summary>
 
 ```swift 
 // load from documents directory
@@ -85,7 +85,7 @@ func load() {
 </details>
 
 <details>
-    <summary>ImageCache using <b>NSCache</b></summary>
+    <summary>ImageCache using <a href="https://developer.apple.com/documentation/foundation/nscache">NSCache</a></summary>
 
 ```swift
 class ImageCache {
@@ -124,7 +124,7 @@ class ImageCache {
 </details>
 
 <details>
-<summary>Using <b>CAAnimationGroup</b> to animate the shadowOpacity and shadowOffset of a layer</summary>
+<summary>Using <a href="">https://developer.apple.com/documentation/quartzcore/caanimationgroup</a> to animate the shadowOpacity and shadowOffset of a layer</summary>
 
 ```swift 
 func animateShadow() {
@@ -157,7 +157,7 @@ func animateShadow() {
 </details>
 
 <details>
-<summary>Using <b>CABasicAnimation</b> to animate a rotation in the 3D plane</summary>
+<summary>Using <a href="https://developer.apple.com/documentation/quartzcore/cabasicanimation">CABasicAnimation</a> to animate a rotation in the 3D plane</summary>
 
 ```swift 
 func animateRotationX() {
@@ -174,7 +174,7 @@ func animateRotationX() {
 </details>
 
 <details>
-<summary>3D Translation using <b>CAKeyframeAnimation</b></summary>
+<summary>3D Translation using <a href="">CAKeyframeAnimation</a></summary>
 
 ```swift 
 // 3D Translation using CAKeyframeAnimation
