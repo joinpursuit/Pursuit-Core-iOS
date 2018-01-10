@@ -7,7 +7,12 @@
 - [Persistence with NSKeyedArchiver / Codable](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Persistence-NSKeyedArchiver-Codable/README.md)
 - [Custom Delegation / NSCache](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Protocols-Delegation-NSCache/README.md)
 - [UIImagePickerController](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/ImagePicker/README.mdown)
-- [Subclassing UIViews and Nibs (Xibs)](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/SubclassingUIViewsAndNibs(Xibs)/README.md)
+- [Subclassing UIViews and Nibs (Xibs)](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/SubclassingUIViewsAndNibs(Xibs)/README.md)  
+- [Intro to Programmatic View Layout](https://github.com/C4Q/AC-iOS/tree/master/lessons/unit4/IntroductionToProgrammaticUI)  
+- [Programmable View Management Continued](https://github.com/C4Q/AC-iOS/tree/master/lessons/unit4/Programmatic-View-Management)  
+- [UIKit Animation](https://github.com/C4Q/AC-iOS/tree/master/lessons/unit4/Animations)  
+- [Core Animation](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Animations/CoreAnimation.md)  
+- [Debugging Workshop](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Debugging%20Workshop.md)  
 
 
 ### Helpful Classes/Methods:
@@ -113,6 +118,85 @@ class ImageCache {
             }
         }
     }
+}
+```
+
+</details>
+
+<details>
+<summary>Using CABasicAnimation to animate the shadow property of a CALayer</summary>
+
+```swift 
+func animateShadow() {
+    // animate shadowOpacity
+    // default opacity is 0
+    let opacityAnimation = CABasicAnimation(keyPath: "shadowOpacity")
+    opacityAnimation.fromValue = 0 // minimum value
+    opacityAnimation.toValue = 1 // maximum value
+
+    // final value is not on by default
+    // you have to explicity set the final value if you need it to stick
+    imageView.layer.shadowOpacity = 1
+
+
+    // animate the shadow offset
+    // default is CGSize.zero
+    let offsetAnimation = CABasicAnimation(keyPath: "shadowOffset")
+    offsetAnimation.fromValue = CGSize.zero
+    offsetAnimation.toValue = CGSize(width: 5.0, height: 5.0)
+    imageView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+
+    // create group animation for shadow animation
+    let groupAnimation = CAAnimationGroup()
+    groupAnimation.animations = [opacityAnimation, offsetAnimation]
+    groupAnimation.duration = 1.0 
+    imageView.layer.add(groupAnimation, forKey: nil)
+}
+```
+
+</details>
+
+<details>
+<summary>Using CABasicAnimation to animate a rotation in the 3D plane</summary>
+
+```swift 
+func animateRotationX() {
+    let animation = CABasicAnimation(keyPath: "transform.rotation.x")
+    let angleRadian = CGFloat(2.0 * .pi) // 360
+    animation.fromValue = 0 // degrees
+    animation.byValue = angleRadian
+    animation.duration = 5.0 // seconds
+    animation.repeatCount = Float.infinity
+    imageView.layer.add(animation, forKey: nil)
+}
+```
+
+</details>
+
+<details>
+<summary>3D Translation using CAKeyframeAnimation</summary>
+
+```swift 
+// 3D Translation using CAKeyframeAnimation
+func animateTranslation() {
+    let toTopLeft = CATransform3DMakeTranslation(-view.layer.position.x, -view.layer.position.y, 0)     // top left
+    let toBottomRight = CATransform3DMakeTranslation(view.layer.position.x, view.layer.position.y, 0)   // bottom right
+    let toTopRight = CATransform3DMakeTranslation(view.layer.position.x, -view.layer.position.y, 0)     // top right
+    let toBottomLeft = CATransform3DMakeTranslation(-view.layer.position.x, view.layer.position.y, 0)   // bottom left
+    let keyframeAnimation = CAKeyframeAnimation(keyPath: "transform")
+    keyframeAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+    keyframeAnimation.values = [CATransform3DIdentity,
+                                toTopLeft,
+                                CATransform3DIdentity,
+                                toTopRight,
+                                CATransform3DIdentity,
+                                toBottomLeft,
+                                CATransform3DIdentity,
+                                toBottomRight,
+                                CATransform3DIdentity]
+    keyframeAnimation.duration = 4.0
+    keyframeAnimation.repeatCount = Float.infinity
+    imageView.layer.add(keyframeAnimation, forKey: nil)
 }
 ```
 
