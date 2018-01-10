@@ -124,7 +124,7 @@ class ImageCache {
 </details>
 
 <details>
-<summary>Using CABasicAnimation to animate the shadow property of a CALayer</summary>
+<summary>Using <b>CAAnimationGroup</b> to animate the shadowOpacity and shadowOffset of a layer</summary>
 
 ```swift 
 func animateShadow() {
