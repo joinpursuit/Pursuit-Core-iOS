@@ -186,8 +186,8 @@ Source: https://secweb.cs.odu.edu/~zeil/cs361/web/website/Lectures/bst/pages/bst
 
 A Binary Search Tree is Binary Tree with two conditions:
 
-- Every `left` child must be less than its parent
-- Every `right` child must be greater than its parent
+- Every node in the `left` child's subtree its parent
+- Every node in the `right` child's subtree its parent
 - (Generally BSTs are defined to have unique values)
 
 Typically, when people talk about trees they are talking about Binary Search Trees.
