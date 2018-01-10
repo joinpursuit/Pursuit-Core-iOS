@@ -326,7 +326,6 @@ class LLNode<Key> {
         self.val = val
     }
 }
-
 struct Queue<T> {
     private var head: LLNode<T>?
     private var tail: LLNode<T>?
@@ -348,12 +347,16 @@ struct Queue<T> {
             return nil
         }
         self.head = oldHead.next
+        if oldHead.next == nil {
+            self.tail = nil
+        }
         return oldHead.val
     }
     func peek() -> T? {
         return self.head?.val
     }
 }
+
 ```
 
 Now we can implement our breadth first search
