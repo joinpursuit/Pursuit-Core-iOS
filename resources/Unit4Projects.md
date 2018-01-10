@@ -128,4 +128,4 @@ class ImageCache {
 |[Custom Delegation and Image Caching](https://github.com/C4Q/AC-iOS-CatOrDog-Delegation) | Delegation/NSCache |
 |[Nib Demo](https://github.com/C4Q/AC-iOS-NibDemo)|Custom Nibs|
 |[Collection View Introduction Project with MTG Cards](https://github.com/C4Q/AC-iOS-CollectionViews-Introduction)|Collection Views|
-|[Core Animation](https://github.com/C4Q/AC-iOS-CoreAnimationApp)| CoreAnimation|
+|[Core Animation Demo App](https://github.com/C4Q/AC-iOS-CoreAnimationApp)| CoreAnimation|
