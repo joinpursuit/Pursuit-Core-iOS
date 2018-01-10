@@ -45,7 +45,7 @@ func dataFilePath(withPathName path: String) -> URL {
 
 
 <details>
-<summary>Save Object(s) using <b>PropertyListEncoder</b></summary>
+<summary>Save Object(s) using <a href="https://developer.apple.com/documentation/foundation/propertylistencoder">PropertyListEncoder</a></summary>
 
 ```swift 
 // save to documents directory
