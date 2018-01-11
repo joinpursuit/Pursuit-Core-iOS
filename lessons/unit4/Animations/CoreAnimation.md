@@ -321,3 +321,4 @@ Create the following animations in the gif files below:
 [Radian to Degrees Conversion](https://www.rapidtables.com/convert/number/radians-to-degrees.html)  
 [CATransform3D vs. CGAffineTransform](https://stackoverflow.com/questions/567829/catransform3d-vs-cgaffinetransform)  
 [Cubic Bezier Preview and Creation](http://cubic-bezier.com/#.17,.67,.83,.67)  
+[How to pause the animation of a layer tree](https://developer.apple.com/library/content/qa/qa1673/_index.html)  
