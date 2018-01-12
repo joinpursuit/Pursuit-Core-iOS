@@ -1,5 +1,7 @@
 ## FileManger - Saving Images to Documents Folder 
 
+[In Class Demo Project - MovieSearch](https://github.com/C4Q/AC-iOS-MovieSearch-CollectionViews-FileManager)  
+
 ## Objectives
 * What is the FileManager? 
 * Get the Documents Directory Path 
@@ -13,14 +15,14 @@ A FileManager object lets you examine the contents of the file system and make c
 
 Use UIImagePNGRepresentation to convert the file to data and write to the file path 
 ```swift
-let imageData = UIImagePNGRepresentation(UIImage(named:"arkwork.png"))!
-let imageURL = PersistenceStoreManager.manager.dataFilePath(withPathName: artworkPath)
+let imageData = UIImagePNGRepresentation(image)! // image is of type UIImage
+let imageURL = PersistenceStoreManager.manager.dataFilePath(withPathName: filepath) // filepath to use
 try! imageData.write(to: imageURL)
 ```
 
 Read the file stored back to the app 
 ```swift 
-let imageURL = PersistenceStoreManager.manager.dataFilePath(withPathName: artworkPath)
+let imageURL = PersistenceStoreManager.manager.dataFilePath(withPathName: filepath) // the name used when saving
 let newImage = UIImage(contentsOfFile: imageURL.path)!
 ```
 
