@@ -154,7 +154,7 @@ numberOfPaths(to: Point(x: 20, y: 20))
 
 </details>
 
-## 6. Graph Exercises
+## 6. Graph/Tree Exercises
 
 
 1. [Leetcode: Making change 1](https://leetcode.com/problems/coin-change/description/)
