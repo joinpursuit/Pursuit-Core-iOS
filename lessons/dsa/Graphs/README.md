@@ -156,8 +156,11 @@ numberOfPaths(to: Point(x: 20, y: 20))
 
 ## 6. Graph Exercises
 
-1. [Hackerrank Shortest Graph Path](https://www.hackerrank.com/challenges/bfsshortreach/problem)
-1. [Character Selection](https://www.codewars.com/kata/5853213063adbd1b9b0000be/train/swift?collection=graph-1)
-2. [Character Selection 2](https://www.codewars.com/kata/street-fighter-2-character-selection-part-2/swift)
+
+1. [Leetcode: Making change 1](https://leetcode.com/problems/coin-change/description/)
+2. [Leetcode: Making change 2](https://leetcode.com/problems/coin-change-2/description/)
+1. [Hackerrank: Shortest Graph Path](https://www.hackerrank.com/challenges/bfsshortreach/problem)
+1. [Codewars: Character Selection](https://www.codewars.com/kata/5853213063adbd1b9b0000be/train/swift?collection=graph-1)
+2. [Codewars: Character Selection 2](https://www.codewars.com/kata/street-fighter-2-character-selection-part-2/swift)
 
 
