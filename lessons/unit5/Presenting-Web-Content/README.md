@@ -65,18 +65,46 @@ UI features include the following:
 * A Done button, back and forward navigation buttons, and a button to open the page directly in Safari
 * On devices that support 3D Touch, automatic Peek and Pop for links and detected data
 
+Open in Safari - downside is users are leaving your app to view content 
+```swift
+UIApplication.shared.open(URL(string:"https://developer.apple.com/documentation")!, options: [:]) { (done) in
+   print("launched Safari Web Browser")
+}
+```
+
+Use WKWebView - this is ideal for customizing web content in your UI, lack keychain access for saved user credentials
+```swift 
+let webviewVC = WebViewController(githubLink: URL(string:"https://www.c4q.nyc/")!)
+navigationController?.pushViewController(webviewVC, animated: true)
+```
+
+Use SFSafariViewController - best of all worlds, access to keychain, users stay in your app
+```swift
+safariVC = SFSafariViewController(url: fellow.githubURL)
+safariVC.delegate = self
+navigationController?.pushViewController(safariVC, animated: true)
+```
+
+Implement SFSafariViewControllerDelegate to dismiss controller 
+```swift 
+extension DetailViewController: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+}
+```
+
 ## Resources 
 
 |Resource|Summary|
 |:--------|:---------|
 |[WKWebView](https://developer.apple.com/documentation/webkit/wkwebview)|Displays Web Content|
-|WKUIDelegate| Provides methods for presenting native user interface|
-|WKNavigationDelegate|Helps implement custom behaviors that are triggered during a web view's process of accepting, loading, and completing a navigation request.|
-|WKWebViewConfiguration|A collection of properties used to initialize a web view.|
-|WKPreferences|A WKPreferences object encapsulates the preference settings for a web view.|
+|[WKUIDelegate](https://developer.apple.com/documentation/webkit/wkuidelegate)| Provides methods for presenting native user interface|
+|[WKNavigationDelegate](https://developer.apple.com/documentation/webkit/wknavigationdelegate)|Helps implement custom behaviors that are triggered during a web view's process of accepting, loading, and completing a navigation request.|
+|[WKWebViewConfiguration](https://developer.apple.com/documentation/webkit/wkwebviewconfiguration)|A collection of properties used to initialize a web view.|
+|[WKPreferences](https://developer.apple.com/documentation/webkit/wkpreferences)|A WKPreferences object encapsulates the preference settings for a web view.|
 |[SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller)|An object that provides a standard interface for browsing the web.|
 |[SFSafariViewControllerDelegate](https://developer.apple.com/documentation/safariservices/sfsafariviewcontrollerdelegate)|A protocol used to implement custom event handling for a Safari view controller.|
-
 
 
 
