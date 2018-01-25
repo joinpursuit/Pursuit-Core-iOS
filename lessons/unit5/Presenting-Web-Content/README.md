@@ -10,6 +10,39 @@
 * Impplementing SFSafariViewController 
 * Choosing the Best Web Viewing Class
 
+Three Methods to Present Web content: 
+```swift 
+// Presenting Web Content (Method 1) - via Safari
+// Advantage: user is taken away from your app, may not return :-(
+@objc private func launchSafari() {
+    UIApplication.shared.open(URL(string:"https://developer.apple.com/documentation")!, options: [:]) { (done) in
+        print("safari was launched")
+    }
+}
+
+// Presenting Web Content (Method 2) - via WKWebView
+// Advantages: developer is able to customize UI, user is still in your app
+// Disadvantages: you don't access to the Apple's keychain, so the user's credentials is not available
+@objc private func showWebView() {
+    let urlRequest = URLRequest(url: URL(string:"https://c4q.nyc")!)
+    let webVC = WebViewController(urlRequest: urlRequest)
+    navigationController?.pushViewController(webVC, animated: true)
+}
+
+// Presenting Web Content (Method 3) - via SFSafariViewController
+// Advantage: * all the benefits of Safari, e.g Apple Keychain access
+//            Security Note: developers don't have access to user's information
+//            * users stay within your app
+//            * third party authentication via (Oauth) e.g logging with Facebook
+// Disadvantage: n/a
+@objc private func showSFSafariVC() {
+    sfSafariVC = SFSafariViewController(url: fellow.githubURL)
+    sfSafariVC.delegate = self
+
+    navigationController?.pushViewController(sfSafariVC, animated: true)
+}
+```
+
 ## WebKit Overview
 WebKit provides a set of classes to display web content in windows, and implements browser features such as following links when clicked by the user, managing a back-forward list, and managing a history of pages recently visited. WebKit greatly simplifies the complicated process of loading webpages—that is, asynchronously requesting web content from an HTTP server where the response may arrive incrementally, in random order, or partially due to network errors. WebKit also simplifies the process of displaying that content which can contain various MIME types, and compound frame elements each with their own set of scroll bars.
 
@@ -76,6 +109,33 @@ Use WKWebView - this is ideal for customizing web content in your UI, lack keych
 ```swift 
 let webviewVC = WebViewController(githubLink: URL(string:"https://www.c4q.nyc/")!)
 navigationController?.pushViewController(webviewVC, animated: true)
+```
+
+Using WKNavigationDelegate
+```swift 
+override func viewDidLoad() {
+    super.viewDidLoad()
+    view.addSubview(webView)
+    webView.load(urlRequest)
+    SVProgressHUD.show()
+}
+```
+
+```swift 
+extension WebViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        DispatchQueue.main.async {
+            SVProgressHUD.dismiss()
+        }
+        print("didFail: \(error)")
+    }
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        DispatchQueue.main.async {
+            SVProgressHUD.dismiss()
+        }
+        print("didFinish: \(navigation.description)")
+    }
+}
 ```
 
 Use SFSafariViewController - best of all worlds, access to keychain, users stay in your app
