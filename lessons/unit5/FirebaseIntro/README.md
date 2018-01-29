@@ -340,7 +340,7 @@ Call this method in your app delegate (or wherever) to get these sample Tasks pu
 
 We can confirm in the Firebase Console that our data has been added. Then delete your call to addTestTasks() so you don't have lots of duplicate entries.
 
-**Important Note!**  If your JSON has any Arrays in it, Firebase will silently ignore them.  If you want to store collections of things, you'll need to use the JSON structure or store Dictionaries.
+**Important Note!**  If your JSON has any Arrays in it, Firebase will either silently ignore them, or transform them into Dictionaries.  If you want to store collections of things, you'll need to use the JSON structure or store Dictionaries.
 
 
 #### Reading our custom objects
