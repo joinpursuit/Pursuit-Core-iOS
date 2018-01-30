@@ -21,7 +21,7 @@ Location data whether in apps that are providing navigation or social services i
 * Region monitoring lets you monitor boundary crossings for defined geographical regions and Bluetooth low-energy beacon regions. (Beacon region monitoring is available in iOS only.)
 * The significant-change location service provides a way to get the current location and be notified when significant changes occur, but it’s critical to use it correctly to avoid using too much power.
 
-To use the features of the Core Location framework, you must link your app to CoreLocation.framework in your Xcode project ie import CoreLocation
+To use the features of the Core Location framework, you must link your app to CoreLocation.framework in your Xcode project and import CoreLocation
 
 #### Requiring the Presence of Location Services in an iOS App
 If your iOS app requires location services to function properly, include the UIRequiredDeviceCapabilities key in the app’s Info.plist file. The App Store uses the information in this key to prevent users from downloading apps to devices that don’t contain the listed features.
