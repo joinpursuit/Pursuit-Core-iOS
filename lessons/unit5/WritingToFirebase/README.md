@@ -1,7 +1,5 @@
 # Reading and Writing to Firebase
 
-### [Project Link](https://github.com/C4Q/AC-iOS-FirebaseIntroProject)
-
 ## Readings
 1. [Structuring Data on Firebase](https://firebase.google.com/docs/database/ios/structure-data)
 https://www.simplifiedios.net/firebase-realtime-database-tutorial/
