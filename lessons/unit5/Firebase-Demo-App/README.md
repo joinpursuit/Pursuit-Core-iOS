@@ -140,6 +140,9 @@ When completed and pods are installed open ```YourAppName.xcworkspace```
 ||isComplete|||
 
 [Security and Rules](https://firebase.google.com/docs/database/security/?authuser=1)  
+
+Here we are validating that a job only gets created if an imageURL is present  
+
 ```json
 {
   "rules": {
@@ -153,7 +156,6 @@ When completed and pods are installed open ```YourAppName.xcworkspace```
   }
 }
 ```
-
 
 ## Resources 
 |Resource|Summary|
