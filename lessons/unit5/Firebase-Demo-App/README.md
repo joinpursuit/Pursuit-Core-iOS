@@ -139,6 +139,21 @@ When completed and pods are installed open ```YourAppName.xcworkspace```
 ||isScheduled|||
 ||isComplete|||
 
+[Security and Rules](https://firebase.google.com/docs/database/security/?authuser=1)  
+```json
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null", 
+    "jobs" : {
+    	"$jobId" : {
+        ".validate" : "newData.hasChildren(['imageURL'])"
+      }
+    }
+  }
+}
+```
+
 
 ## Resources 
 |Resource|Summary|
@@ -148,3 +163,4 @@ When completed and pods are installed open ```YourAppName.xcworkspace```
 |[Database](https://firebase.google.com/docs/database/)|Firebase Database|
 |[Storage](https://firebase.google.com/docs/storage/)|Firebase Cloud Storage|
 |[Available Pods](https://firebase.google.com/docs/ios/setup?authuser=1)|These pods are available for the different Firebase features.|
+|[Security and Rules](https://firebase.google.com/docs/database/security/?authuser=1)|More on Security and Rules|  
