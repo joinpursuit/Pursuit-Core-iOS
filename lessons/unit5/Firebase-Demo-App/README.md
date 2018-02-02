@@ -159,8 +159,9 @@ When completed and pods are installed open ```YourAppName.xcworkspace```
 |Resource|Summary|
 |:----------|:------------|
 |[Firebase Console](https://console.firebase.google.com/?authuser=1)|Firebase Console|
-|[Authentication](https://firebase.google.com/docs/auth/)|Authentication|
-|[Database](https://firebase.google.com/docs/database/)|Firebase Database|
-|[Storage](https://firebase.google.com/docs/storage/)|Firebase Cloud Storage|
+|[Firebase Authentication](https://firebase.google.com/docs/auth/)|Authentication|
+|[Firebase Database](https://firebase.google.com/docs/database/)|Firebase Database|
+|[Firebase Storage](https://firebase.google.com/docs/storage/)|Firebase Cloud Storage|
+|[Firebase Analytics](https://firebase.google.com/docs/analytics/ios/start)|Analytics in your app - track user events, crashes, etc|
 |[Available Pods](https://firebase.google.com/docs/ios/setup?authuser=1)|These pods are available for the different Firebase features.|
-|[Security and Rules](https://firebase.google.com/docs/database/security/?authuser=1)|More on Security and Rules|  
+|[Firebase Security and Rules](https://firebase.google.com/docs/database/security/?authuser=1)|More on Security and Rules|  
