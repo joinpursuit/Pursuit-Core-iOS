@@ -1,5 +1,7 @@
 # Core Data - NSPredicate and FetchedResultsController
 
+## [Repo](https://github.com/C4Q/AC-iOS-CoreDataArticles)
+
 ## Readings
 
 1. [Apple Docs - NSPredicate](https://developer.apple.com/documentation/foundation/nspredicate)
