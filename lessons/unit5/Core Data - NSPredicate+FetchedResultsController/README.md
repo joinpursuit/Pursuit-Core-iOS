@@ -5,7 +5,7 @@
 1. [Apple Docs - NSPredicate](https://developer.apple.com/documentation/foundation/nspredicate)
 2. [NSHipster](http://nshipster.com/nspredicate/)
 3. [Predicate Cheat Sheet](https://academy.realm.io/posts/nspredicate-cheatsheet/)
-4. [Apple Docs - NSFetchedResultsController]
+4. [Apple Docs - NSFetchedResultsController](https://developer.apple.com/documentation/coredata/nsfetchedresultscontroller)
 
 ## Objectives
 
