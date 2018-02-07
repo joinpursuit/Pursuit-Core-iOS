@@ -1,9 +1,26 @@
 # iOS Interview Questions
 
-### 1. Given an array of integers, find the highest product you can get from three of the integers.
+### 1. You're working with an intern that keeps coming to you with code that won't run because the braces, brackets, and parentheses are off. To save you both some time, you decide to write a braces/brackets/parentheses validator.
+Let's say:
+
+```swift
+'(', '{', '[' are called "openers."
+')', '}', ']' are called "closers."
+```
+Write an efficient function that tells us whether or not an input string's openers and closers are properly nested.
+Examples:
+
+```swift
+"{ [ ] ( ) }" should return true
+"{ [ ( ] ) }" should return false
+"{ [ }" should return false
+```
+
+
+### 2. Given an array of integers, find the highest product you can get from three of the integers.
 The input items will always have at least three integers.
 
-### 2. You want to be able to access the largest element in a stack.
+### 3. You want to be able to access the largest element in a stack.
 You've already implemented this Stack class:
 
 ```swift
@@ -43,21 +60,6 @@ An in-place algorithm operates directly on its input and changes it, instead of 
 
 Careful: "In-place" does not mean "without creating any additional variables!" Rather, it means "without creating a new copy of the input." In general, an in-place function will only create additional variables that are O(1) space.
 
-### 4. You're working with an intern that keeps coming to you with JavaScript code that won't run because the braces, brackets, and parentheses are off. To save you both some time, you decide to write a braces/brackets/parentheses validator.
-Let's say:
-
-```swift
-'(', '{', '[' are called "openers."
-')', '}', ']' are called "closers."
-```
-Write an efficient function that tells us whether or not an input string's openers and closers are properly nested.
-Examples:
-
-```swift
-"{ [ ] ( ) }" should return true
-"{ [ ( ] ) }" should return false
-"{ [ }" should return false
-```
 
 
 ### 5. You have a function rand7() that generates a random integer from 1 to 7. Use it to write a function rand5() that generates a random integer from 1 to 5.
