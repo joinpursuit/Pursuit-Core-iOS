@@ -52,7 +52,7 @@ Turning on Larger Text
 * Be aware of contrast ratio e.g Gray on Gray useful link
 * Avoid clutter 
 * Keep color schemes simple 
-* Tap targets should be no more that 44 x 44 points
+* Tap targets should be no less than 44 x 44 points
 * label should be short and clear 
 * label/hints should not contain trait information 
 * hints should begin with a verb, should not contain action such as "tapping" unless it's a custom action 
