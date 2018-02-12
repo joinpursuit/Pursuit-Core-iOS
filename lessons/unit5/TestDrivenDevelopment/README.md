@@ -61,13 +61,13 @@ Objects that interact with the `SUT` and are needed to be able to write a unit t
 
 Unit testing in iOS has come a long way since the iOS SDK was released in 2008. It's no longer rare to see iOS developers unit testing the majority of the code they write. The following are some of the most common cases for unit tests:
 1. Assert a method returns an expected value given:
-*         An input
-*         The state of a dependency
+* An input
+* The state of a dependency
 2. Assert properties instantiated depending on parameters
 3. Assert a method in a mock gets called
 4. Assert that calling a method in the SUT has a side effect in:
-*         The SUT
-*         A mock
+* The SUT
+* A mock
 5. Assert that a change in a (mocked) dependency has a side effect in the SUT
 
 Here is a robust list of tests for different conditions you may want to test in your app!
@@ -224,8 +224,6 @@ waitForExpectations(timeout: 5, handler: nil)
 XCTAssertEqual(controllerUnderTest?.searchResults.count, 3, "Didn't parse 3 items from fake response")
 }
 ```
-https://www.appcoda.com/unit-testing-swift/
-
 ## What is UI Testing?
 
 Xcode 7 introduced UI testing, which lets you create a UI test by recording interactions with the UI. UI testing works by finding an app’s UI objects with queries, synthesizing events, then sending them to those objects. The API enables you to examine a UI object’s properties and state in order to compare them against the expected state.
@@ -259,22 +257,12 @@ self.controllerUnderTest?.startDownload(track)
 ```
 |Resource|Summary|
 |:-------|:-------|
-|[Accessibility on iOS](https://developer.apple.com/accessibility/ios/)|Accessibility on iOS|
-
 |[List of Articles on Swift Unit Testing](https://medium.com/flawless-app-stories/a-complete-list-of-articles-on-unit-testing-with-swift-from-2017-9be8f046ef25)|List of Articles on Swift Unit-Testing|
-
 |[Intro to UI Testing With Swift](https://medium.com/@johnsundell/getting-started-with-xcode-ui-testing-in-swift-ac7b1f5101e5)|Intro to UI Testing With Swift|
-
 |[Unit Testing With XCTest](https://medium.com/ios-seminar/the-magic-of-ios-unit-testing-with-xctest-and-swift-3-8889c838b911)|Unit Testing With XCTest|
-
 |[Sample Project Walkthrough With Different Tests](https://www.hackingwithswift.com/read/39/overview)|Sample Project Walkthrough With Different Tests|
-
 |[Apple Docs: Testing in Xcode](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/01-introduction.html#//apple_ref/doc/uid/TP40014132-CH1-SW1)|Apple Docs: Testing in Xcode|
-
 |[A Primer to TDD](http://agiledata.org/essays/tdd.html)|A Primer to TDD|
-
 |[Ray Wenderlich Unit/UI Testing Example](https://www.raywenderlich.com/150073/ios-unit-testing-and-ui-testing-tutorial)|Ray Wenderlich Unit/UI Testing Example|
-
 |[Test Driven Development in Swift](https://www.packtpub.com/mapt/book/application_development/9781785880735/1)|Test Driven Development in Swift|
-
 |[Unit Testing in Swift](https://www.appcoda.com/unit-testing-swift/)|Unit Testing in Swift|
