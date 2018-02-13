@@ -112,6 +112,8 @@ Server replies with an access token:
 }
 ```
 
+## Hosting the redirect_uri
+
 **pages.github.io will be used to host the redirect_uri in cases that the web service doesn't allow app custom uri's** 
 Pages allows hosting directly from your GitHub repository. Just edit, push, and your changes are live.
 [Github pages](https://pages.github.com/)
