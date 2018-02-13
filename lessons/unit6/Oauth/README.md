@@ -57,26 +57,32 @@ The dismiss button in SFAuthenticationSession always says Cancel. Applications c
 [SFAuthenticationSession](https://developer.apple.com/documentation/safariservices/sfauthenticationsession)  
  
 ```swift 
+private let scheme = "FacebookLogin://"
 private var authSession: SFAuthenticationSession?
 
-func getQueryStringParameter(url: String, param: String) -> String? {
-  guard let url = URLComponents(string: url) else { return nil }
-  return url.queryItems?.first(where: { $0.name == param })?.value
+func getParam(url: URL, param: String) -> String? {
+  guard let urlComponents = URLComponents(string: url.absoluteString) else { return nil }
+  return urlComponents.queryItems?.first{ $0.name == param }?.value
 }
 
-let spotifyAuthURL = URL(string: SpotifyKeys.oauthURL)!
-authSession = SFAuthenticationSession(url: spotifyAuthURL, callbackURLScheme: scheme, completionHandler: { (callbackURL,        error) in
+authSession = SFAuthenticationSession(url: FacebookKeys.authURL, callbackURLScheme: scheme, completionHandler: { (callbackURL,        error) in
   if let error = error {
-      print("spotify auth error: \(error)")
+      print("facebook auth error: \(error)")
   } else if let callbackURL = callbackURL {
-      guard let code = self.getQueryStringParameter(url: callbackURL.absoluteString, param: "code") else { print("code is 
-          nil"); return }
-      self.spotifyAPI.tokenExchange(code: code)
+      guard let code = self.getParam(url: callbackURL, param: "code") else { print("code not found"); return }
+      self.facebookAPI.tokenExchange(code: code)
   }
 })
 authSession?.start()
 
 ```
+
+**Adding a URL Scheme in Xcode**
+> select your root project in the project navigator  
+> select info in the Editor window 
+> click on the URL Types dropdown
+> click on + to create a scheme 
+> in URL Schemes Text field enter your app scheme name e.g MyApp and press enter 
  
 ## Authorization 
 * **code** - Indicates that your server expects to receive an authorization code
@@ -144,4 +150,5 @@ Pages allows hosting directly from your GitHub repository. Just edit, push, and 
 |[Spotify](https://developer.spotify.com/web-api/authorization-guide/)|Web API Authorization Guide|
 |[Stocktwits](https://api.stocktwits.com/developers/docs/authentication)|The Largest Social Network for Investors and Traders|
 |[Use Your Loaf](https://useyourloaf.com/blog/querying-url-schemes-with-canopenurl/)|Querying URL Schemes with canOpenURL|
+|[Custom URL schemes](https://developer.apple.com/documentation/uikit/core_app/communicating_with_other_apps_using_custom_urls)|Communicating with Other Apps Using Custom URLs|  
 
