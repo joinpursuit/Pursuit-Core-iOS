@@ -36,7 +36,7 @@ We are writing an app that accesses the user's data from a third party app e.g I
 </p>
 </details>
 
-## SFSafariAuthenticationSession 
+## SFAuthenticationSession 
 
 **Overview**
 Overview
