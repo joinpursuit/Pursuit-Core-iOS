@@ -197,7 +197,7 @@ When we set unit4A to nil, all strong references to the Aparment instance are re
 
 Delegation is one way that we can create retain cycles, if we are not careful.  If we give our cells a strong reference to our view controller and give our view controller a strong reference to our cells, this will create a retain cycle, and the view controller will never leave memory.
 
-![image link](here)
+![image link](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit6/MemoryManagement%2BRetainCycles/Screen%20Shot%202018-02-14%20at%202.02.06%20PM.png)
 
 We can create a simple application that demonstrates this problem.  Our app will load a list of quotes.  Each quote will have a like button.  Our cells will set a strong reference to the View Controller as its delegate, and the View Controller keeps a strong reference to each cell it is displaying.
 
