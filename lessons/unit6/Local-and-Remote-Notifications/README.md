@@ -90,6 +90,14 @@ extension PodcastViewController: UNUserNotificationCenterDelegate {
 ## Configuring Remote Push Notifications 
 
 ### Apple Push Notification Service 
+
+Apple Push Notification service Overview
+Apple Push Notification service (APNs) is the centerpiece of the remote notifications feature. It is a robust, secure, and highly efficient service for app developers to propagate information to iOS (and, indirectly, watchOS), tvOS, and macOS devices.
+
+On initial launch of your app on a user’s device, the system automatically establishes an accredited, encrypted, and persistent IP connection between your app and APNs. This connection allows your app to perform setup to enable it to receive notifications, as explained in Configuring Remote Notification Support.
+
+The other half of the connection for sending notifications—the persistent, secure channel between a provider server and APNs—requires configuration in your online developer account and the use of Apple-supplied cryptographic certificates. A provider is a server, that you deploy and manage, that you configure to work with APNs. Figure 6-1 shows the path of delivery for a remote notification.
+
 <p align="center">
 <img src="https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Art/remote_notif_simple_2x.png" width="691" height="132" />
 </p>
