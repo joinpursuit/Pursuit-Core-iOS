@@ -112,22 +112,21 @@ To see an example of how to model an efficient Queue with an array, check out th
 A more standard implementation of a queue is using a linked list.  We will need to keep track of both the *head* and the *tail* of our linked list.  When we **enqueue**, we will add something to end and reset the tail to it.  When we **dequeue**, we will move the head one node forwards and return the old head value.  An empty queue will be represented by having both the head and the tail be nil.
 
 ```swift
-class Node<Key> {
+class LLNode<Key> {
     let val: Key
-    var next: Node?
+    var next: LLNode?
     init(val: Key) {
         self.val = val
     }
 }
-
 struct Queue<T> {
-    private var head: Node<T>?
-    private var tail: Node<T>?
+    private var head: LLNode<T>?
+    private var tail: LLNode<T>?
     var isEmpty: Bool {
         return head == nil
     }
     mutating func enQueue(_ newElement: T) {
-        let newNode = Node(val: newElement)
+        let newNode = LLNode(val: newElement)
         guard let tail = tail else {
             self.head = newNode
             self.tail = newNode
@@ -141,6 +140,9 @@ struct Queue<T> {
             return nil
         }
         self.head = oldHead.next
+        if oldHead.next == nil {
+            self.tail = nil
+        }
         return oldHead.val
     }
     func peek() -> T? {
