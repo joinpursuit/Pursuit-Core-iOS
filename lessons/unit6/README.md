@@ -18,3 +18,4 @@
 | [Quotes App + Retain Cycles](https://github.com/C4Q/AC-iOS-RetainCycles) | Memory Management/Xcode Instruments/Memory Leaks |
 | [NotifyMe](https://github.com/C4Q/AC-iOS-NotifyMe) | APNS/UNMutableNotificationContent | 
 | [Fellows App - iPad](https://github.com/C4Q/AC-iOS-iFellows-iPadIntro) | UISplitViewController / Popovers / Drag and Drop |
+| [KVOSampleApp](https://github.com/C4Q/AC-iOS-KVOSampleApp) | Key-Value Observing / KVO |
