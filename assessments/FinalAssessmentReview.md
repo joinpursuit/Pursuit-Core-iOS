@@ -35,7 +35,7 @@ The final will have 3 componenets
 - Memory Management / Retain Cycles
 
 
-# Fundementals
+# Fundamentals
 
 Types:
 
