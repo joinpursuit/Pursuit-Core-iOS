@@ -5,7 +5,7 @@
 Be able to complete these from scratch:
 
 - [Group Project 2](https://github.com/C4Q/AC-iOS-Unit5Group2Project)
-- [Unit 6 Review HW]()
+- [Unit 6 Review HW](https://github.com/C4Q/AC-ios-unit6HW)
 
 ## Fundamentals
 
