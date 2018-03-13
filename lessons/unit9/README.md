@@ -11,7 +11,7 @@ Here's what we have to look forward to for Objective-C. Try to figure out how it
 
 Before:
 
-```objective-c
+```objc
 // Figure 1.1
 Calculator *deskCalc; // 1 // 6
 
@@ -58,4 +58,4 @@ There's already a few differences between Swift and objc that you can identify r
 
 ## Syntax
 
-TBC
+To be continued...
