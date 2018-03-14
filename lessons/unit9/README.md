@@ -3,17 +3,16 @@
 ### Quick links
 * [Rude Awakening](#rude-awakening)
 * [Syntax](#syntax)
-	* [Declaring Variables](#declaring-variables)
+	* [General Declaration](#general-declaration)
 
 ---
 ## Rude Awakening
 
 Here's what we have to look forward to for Objective-C. Try to figure out how it'd look in Swift.
 
-Before:
+Before, in Objective-C:
 
 ```objc
-// Figure 1.1
 Calculator *deskCalc; // 1 // 6
 
 deskCalc = [Calculator alloc]; // 2
@@ -28,10 +27,9 @@ NSLog(@"The result is %g", [deskCalc value]); // 5
 ```
 
 <details>
-<summary>After:</summary>
+<summary>After, in the glory of Swift:</summary>
 
 ```swift
-// Figure 1.2
 let deskCalc = Calculator()
 
 deskCalc.setInitialValue(100.0)
@@ -59,12 +57,12 @@ There's already a few differences between Swift and objc that you can identify r
 
 ## Syntax
 
-### Declaring Variables
-Ever wonder why sometimes we declare our Swift variables with type annotation when it's already inferred?
+### General Declaration
+Ever wonder why sometimes you see Swift variables and constants declared with type annotation when it's already inferred?
 
 ```swift
 var number: Int = 123
-var numbers: [Float] = [0.0, 12.3, 65.3]
+var numbers: [Double] = [0.0, 12.3, 65.3]
 var phrase: String = "yo fax!"
 var validity: Bool = true
 ```
@@ -72,7 +70,7 @@ Yup, that's how you spot an objc user in the wild.
 
 ```objc
 int number = 12;
-float numbers[3] = {0.0, 12.3, 65.3};
+double numbers[3] = {0.0, 12.3, 65.3};
 NSString *phrase = @"yo fax!";
-BOOL validity = YES
+BOOL validity = YES;
 ```
