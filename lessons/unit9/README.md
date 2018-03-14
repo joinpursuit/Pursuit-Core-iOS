@@ -3,6 +3,7 @@
 ### Quick links
 * [Rude Awakening](#rude-awakening)
 * [Syntax](#syntax)
+	* [Declaring Variables](#declaring-variables)
 
 ---
 ## Rude Awakening
@@ -58,7 +59,7 @@ There's already a few differences between Swift and objc that you can identify r
 
 ## Syntax
 
-### Variables
+### Declaring Variables
 Ever wonder why sometimes we declare our Swift variables with type annotation when it's already inferred?
 
 ```swift
