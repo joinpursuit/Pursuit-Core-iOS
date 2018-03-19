@@ -51,7 +51,7 @@ There's already a few differences between Swift and objc that you can identify r
 2. After we have `deskCalc` to store the reference in, we create the object itself by `alloc`ating memory storage space for the object. Calling this method gets back the instance of the `Calculator` class. `alloc` also "zeroes out" all that instance's properties so it can be initialized after.
 3. We `init`ialize the `deskCalc`instance here. Notice that the `init` method is called on `deskCalc` **and not** `Calculator` because you want to initialize that specific object. `init` returns a value, which you are storing in `deskCalc`.
 4. Well, these are the methods you're calling on `deskCalc`. The brackets should give it away by now. Instead of Swift's `Class.method()` syntax, we go with `[Class method]` for objc.
-5. Several things are happening here. There's not string interpolation in objc, so we use the fan-favorite `NSLog()` with two arguments: the string with a [`format specifier`](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html) placeholder within the `NSString`, and the `value` method that returns the value. Note that while Swift has dot syntax to access instance properties, objc doesn't and requires a method to return instance property values.
+5. Several things are happening here. There isn't any string interpolation in objc, so we use the fan-favorite `NSLog()` with two arguments: the string with a [`format specifier`](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html) (%s, %d, %@) token within the `NSString`, and a variable or instance method return to replace the token. 
 6. The asterisk (**\***) that precedes the variable name denotes that `deskCalc` is actually a reference/pointer to a `Calculator` object. It doesn't actually store any data, just a memory address to where the `Calculator` object resides at.
 </details>
 
@@ -66,7 +66,7 @@ var numbers: [Double] = [0.0, 12.3, 65.3]
 var phrase: String = "yo fax!"
 var validity: Bool = true
 ```
-Yup, that's how you spot an objc user in the wild. 
+Yup, that's how you spot an objc user in the wild: Type annotation during declaration.
 
 ```objc
 int number = 12;
