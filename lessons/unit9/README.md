@@ -4,6 +4,7 @@
 * [Rude Awakening](#rude-awakening)
 * [Syntax](#syntax)
 	* [General Declaration](#general-declaration)
+	* [Strings](#strings)
 
 ---
 ## Rude Awakening
@@ -74,3 +75,18 @@ double numbers[3] = {0.0, 12.3, 65.3};
 NSString *phrase = @"yo fax!";
 BOOL validity = YES;
 ```
+### Strings
+Strings in objc are class objects, until the value types in Swift. As such, you declare the name of your `NSString` as a reference pointer with the asterick (**\***). There are other methods to `init` a string, such as `stringWithFormat:` or `initWithFormat:`-- which you might need to use if you want to deal with 
+
+#### String Manipulation
+Strings are harder to play with in objc. You want to concatenate two strings? You have to make an entirely new one. Enjoy playing with `NSString` methods.
+
+```objc
+NSString *hString = @"Hello";
+NSString *hwString = [hString stringByAppendingString:@", world!"];
+
+NSString *myString = @"My string";
+myString = [NSString stringWithFormat:@"%@ and another string", myString];
+```
+
+
