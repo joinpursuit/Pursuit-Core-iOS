@@ -5,6 +5,8 @@
 * [Syntax](#syntax)
 	* [General Declaration](#general-declaration)
 	* [Strings](#strings)
+		* [String Manipulation](#string-manipulation) 
+		* [String Mutability](#string-mutability) 	 
 
 ---
 ## Rude Awakening
@@ -76,7 +78,7 @@ NSString *phrase = @"yo fax!";
 BOOL validity = YES;
 ```
 ### Strings
-Strings in objc are class objects, until the value types in Swift. As such, you declare the name of your `NSString` as a reference pointer with the asterick (**\***). There are other methods to `init` a string, such as `stringWithFormat:` or `initWithFormat:`-- which you might need to use if you want to deal with 
+Strings in objc are class objects, unlike the value types in Swift. As such, you declare the name of your `NSString` as a reference pointer with the asterick (**\***). A string object of class `NSString` is **immutable** by default. There are other methods to `init` a string, such as `stringWithFormat:` or `initWithFormat:`-- which you might need to use if you want to deal with manipulation or mutability. 
 
 #### String Manipulation
 Strings are harder to play with in objc. You want to concatenate two strings? You have to make an entirely new one. Enjoy playing with `NSString` methods.
@@ -89,4 +91,4 @@ NSString *myString = @"My string";
 myString = [NSString stringWithFormat:@"%@ and another string", myString];
 ```
 
-
+#### String Mutability
