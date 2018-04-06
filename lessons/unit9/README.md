@@ -74,6 +74,7 @@ var number: Int = 123
 var numbers: [Double] = [0.0, 12.3, 65.3]
 var phrase: String = "yo fax!"
 var validity: Bool = true
+
 ```
 Yup, that's how you spot an objc user in the wild: Type annotation during declaration.
 
@@ -83,9 +84,54 @@ double numbers[3] = {0.0, 12.3, 65.3};
 NSString *phrase = @"yo fax!";
 BOOL validity = YES;
 ```
+You can initialize variables first and then set their values later with objc. But without optionals, you're more prone to runtime crashes if you forget to set values later.
+
+Swift:
+
+```swift
+var setIntLater: Int?
+setIntLater = 10
+
+var setStringLater: String?
+setStringLater = "Sup?"
+
+var a: Double?
+var b: Double?
+var c: Double?
+
+a = 1.0
+b = 2.0
+c = 3.0
+```
+objc:
+
+```objc
+int setLater;
+setLater = 10;
+
+NSString *setStringLater;
+setStringLater = @"Sup?"
+
+double a, b, c; //Note the multiple initilizations at once!
+a = 1.0;
+b = 2.0;
+c = 3.0;
+```
 
 ### Strings
-Strings in objc are class objects, unlike the value types in Swift. As such, you declare the name of your `NSString` as a reference pointer with the asterick (**\***). A string object of class `NSString` is **immutable** by default. There are other methods to `init` a string, such as passing a variable into a new string via `stringWithFormat:` or `initWithFormat:`-- which you might need to use if you want some manipulation. 
+Strings in objc are class objects, unlike the value types in Swift. As such, you declare the name of your `NSString` as a reference pointer with the asterick (**\***). There are other methods to `init` a string, such as passing a variable into a new string via `stringWithFormat:` or `initWithFormat:`-- which you might need to use if you want some manipulation. 
+
+A string object of class `NSString` is **immutable** by default, but you can set the pointer to reference a new string instead.
+
+```objc
+NSString *str1 = @"Hello Testing";
+NSString *str2 = str1;
+
+str2 = @"This is a different string";
+
+NSLog(@"str1 = %@, str2 = %@", str1, str2);
+//str1 = Hello Testing, str2 = This is a different string
+```
 
 #### Format Specifier Tokens
 Basically a placeholder for a variable to use within `NSLog()`. You will need these to print non-string values or references to your console, or if you want to miss Swift's string interpolation even more. Different types needs different, specific tokens. There are readily identifiable in a string by the `%` symbol.
@@ -113,14 +159,26 @@ myString = [NSString stringWithFormat:@"%@ and another string", myString];
 ```
 
 #### Mutable Strings
+So, there's an `NSMutableString`, which inherits from `NSString`. It changes the value of the object that the pointer is referencing, so all others pointer to the same object would reflect the new value at that memory address (passing by reference).
 
+```objc
+NSMutableString *str1 = [NSMutableString stringWithString:@"Hello Testing"];
+NSMutableString *str2 = str1;
+
+[str2 setString:@"This changes everything"];
+
+NSLog(@"str1 = %@, str2 = %@", str1, str2);
+//str1 = This changes everything, str2 = This changes everything
+
+```
+Note that to set the pointer towards a mutable string, you must pass in a string as a parameter with the `stringWithString:` or `setString:` methods.
 
 ### Arrays
 
 Arrays in objc hold pointers to other objects. An instance of `NSArray` is **immutable**. Once an array has been created, you can never add or remove a pointer from that array. Nor can you change the order of the pointers in that array.
 
 #### Mutable Arrays
-
+Stubbin'
 
 ### Control Flow
 
