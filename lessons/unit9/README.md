@@ -1,7 +1,7 @@
-# Unit 9 - Moving backward to get ahead (with Objective-C)
+# Unit 9 - Objective-C Syntax
 
 ### Quick links
-* [Rude Awakening](#rude-awakening)
+* [Quick Intro](#quick-intro)
 * [Syntax](#syntax)
 	* [General Declaration](#general-declaration)
 	* [Strings](#strings)
@@ -15,9 +15,11 @@
 		* [Switch Statements](#switch-statements)
 
 ---
-## Rude Awakening
+## Quick Intro
 
-Here's what we have to look forward to for Objective-C. Try to figure out how it'd look in Swift.
+Here's what we have to look forward to for Objective-C. It's not too bad. With camel-casing and Apple naming conventions, you can identify objects, methods, and variables without too much difficulty. 
+
+Try to guess how the below would look in Swift. 
 
 Before, in Objective-C:
 
@@ -47,6 +49,7 @@ deskCalc.subtract(10.0)
 
 print("The result is \(deskCalc.value)")
 ```
+*Ok, so it wasn't completely 1:1.*
 
 </details>
 
