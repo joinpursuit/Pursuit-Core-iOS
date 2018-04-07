@@ -3,5 +3,5 @@
 
 
 ## Quick links
-* [Swift vs. Objective-C Syntax](../lessons/unit9/syntax)
+* [Swift vs. Objective-C Syntax](../unit9/syntax)
 
