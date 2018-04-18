@@ -455,3 +455,11 @@ func configureCompletionHandler() {
     }
 }
 ```
+
+# 3. DSA Review
+
+1. [Rotate Array](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/646/)
+2. [Move Zeros](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/)
+3. [Rotate Image](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/770/)
+4. [Speak and Say Sequence](https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/886/)
+5. [Reverse Digits](https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/880/)
