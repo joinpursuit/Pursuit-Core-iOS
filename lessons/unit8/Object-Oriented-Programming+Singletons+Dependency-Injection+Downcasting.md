@@ -47,6 +47,21 @@ let aVehicle = Rocket()
 setMaxSpeed(vehicle: aVehicle)
 ```
 
+In this example with the use of Inheritance and Polymorphism the rootViewController could be in the form of a UITabBarController or custom LoginViewController both which inherits from UIViewController. 
+```swift 
+var viewController: UIViewController!
+if let _ = AuthUserService.getCurrentUser() {
+    let tabController = TabBarController.storyboardInstance()
+    viewController = tabController
+} else {
+    let loginVC = LoginViewController.storyboardInstance()
+    viewController = loginVC
+}
+window = UIWindow(frame: UIScreen.main.bounds)
+window?.rootViewController = viewController
+window?.makeKeyAndVisible()
+```
+
 ## Singleton 
 A Singleton is a design pattern used for ensuring that there is a single, globally shared instance of a custom class. A Singleton is essentially just a global variable. It can be useful if there is a global state that you might need to access or manipulate that everything in your app could want to access.  
 
