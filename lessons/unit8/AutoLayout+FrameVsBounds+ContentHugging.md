@@ -1,4 +1,4 @@
-# Protocols, POP, Generics and Delegation
+# AutoLayout, Frame Vs Bounds, Content Hugging / Compression Resistance
 
 ### Past Lesson Links
 
@@ -25,7 +25,7 @@ So just to remind us all:
 
 The UIView is a basic building block for any iOS app. It can be both a container with subviews, that allow you to organize your app screen into parts, as well as something the user can interact with.
 
- - [Swift Docs](https://developer.apple.com/documentation/uikit/uiview)
+ - [UIView Docs](https://developer.apple.com/documentation/uikit/uiview)
 
 Unlike a class hierarchy, which defines the lineage of a class, the view hierarchy defines the layout of views relative to other views.
 
@@ -33,7 +33,7 @@ The UIWindow is the root view of the view hierarchy and provides the surface on 
 
  The view instances enclosed within a view are called subviews. The parent view that encloses a view is referred to as its superview. While a view instance can have multiple subviews, it can have only one superview. In order for a view and its subviews to be visible to the user, the view must be inserted into a window's view hierarchy.
 
- - [Swift Docs](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/WindowsandViews/WindowsandViews.html)
+ - [ViewHierarchy Apple](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/WindowsandViews/WindowsandViews.html)
 
 ### What is AutoLayout? Why is it useful?
 
