@@ -101,3 +101,14 @@ More Readings:
 ([CHCR](https://medium.com/@abhimuralidharan/ios-content-hugging-and-content-compression-resistance-priorities-476fb5828ef))
 
 
+## DSA Practice
+Pick your poison :)
+- [Two-Sum Problem](Two-Sum%20Problem/)
+- [Three-Sum/Four-Sum Problem](3Sum%20and%204Sum/)
+- [Fizz Buzz](Fizz%20Buzz/)
+- [Monty Hall Problem](Monty%20Hall%20Problem/)
+- [Finding Palindromes](Palindromes/)
+- [Dining Philosophers](DiningPhilosophers/)
+- [Egg Drop Problem](Egg%20Drop%20Problem/)
+- [Encoding and Decoding Binary Tree](Encode%20and%20Decode%20Tree/)
+
