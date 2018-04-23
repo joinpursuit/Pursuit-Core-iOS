@@ -26,50 +26,47 @@ viewDidDisappear()—Called just after the view controller’s content view has 
 
 Apps start off not running. When the user explicitly launches the app, the app moves briefly to the inactive state before entering the active state. (An active app appears onscreen and is known as a foreground app.) Quitting an active app moves it offscreen and into the background state, where it stays until the system suspends it a short time later. At its discretion, the system may quietly terminate a suspended app, returning it to the not running state.
 
-The following methods are called when state transitions occur. For information about what to do in response to each transition, see the method descriptions listed for each state.
-
 <p align="center">
 <img src="https://docs-assets.developer.apple.com/published/cfb6ae10b1/high_level_flow_2x_2bc77269-019d-4554-83b8-6aeecb73c348.png" width="414" height="736" />
 </p>
 
+When your app transitions from one state to another, UIKit notifies your app delegate object—an object that conforms to the UIApplicationDelegate protocol. Use your app delegate to modify your app's behavior to match its new state. For example, when moving from the not running to inactive state, handle the launch-time tasks needed to prepare your app to run.
+
+Your app’s current state defines what system resources are available to it. Because active apps are visible onscreen and must respond to user interactions, they have priority when it comes to using system resources. Background apps are not visible onscreen, and therefore have more limited access to system resources and receive limited execution time.
+
+
+The system notifies your app delegate about the following transitions:
+
 #### Launch time:
+Launch. Your app transitions from the not running to the inactive or background state. Use this transition to prepare your app to run
 
 application(_:willFinishLaunchingWithOptions:)
 application(_:didFinishLaunchingWithOptions:)
 
 #### Transitioning to the foreground:
+Activation. Your app transitions from the inactive to the active state. Prepare your app to run in the foreground and be visible onscreen
 
 applicationDidBecomeActive(_:)
 
 #### Transitioning to the background:
+Background execution. Your app transitions from the inactive or not running state to the background state. Prepare to handle only essential tasks while running offscreen
 
 applicationDidEnterBackground(_:)
 
 #### Transitioning to the inactive state:
 
+Deactivation. Your app transitions from the active to the inactive state. Quiet your app, perhaps only temporarily; see Preparing Your App to Run in the Background.
+
 applicationWillResignActive(_:) (Called when leaving the foreground state.)
 applicationWillEnterForeground(_:) (Called when transitioning out of the background state.)
 
 #### Termination:
+Your app transitions from any running state to the not running state. (Suspended apps are not notified when they are terminated.) Cancel all tasks and prepare to exit; see applicationWillTerminate(_:).
+
 applicationWillTerminate(_:) (Called only when the app is running. This method is not called if the app is suspended.)
 
+
 The specific tasks you perform during a given state transition are dependent upon your app and its capabilities. 
-
-Your app’s current state defines what system resources are available to it. Because active apps are visible onscreen and must respond to user interactions, they have priority when it comes to using system resources. Background apps are not visible onscreen, and therefore have more limited access to system resources and receive limited execution time.
-
-When your app transitions from one state to another, UIKit notifies your app delegate object—an object that conforms to the UIApplicationDelegate protocol. Use your app delegate to modify your app's behavior to match its new state. For example, when moving from the not running to inactive state, handle the launch-time tasks needed to prepare your app to run.
-
-The system notifies your app delegate about the following transitions:
-Launch. Your app transitions from the not running to the inactive or background state. Use this transition to prepare your app to run; see Responding to the Launch of Your App.
-
-Activation. Your app transitions from the inactive to the active state. Prepare your app to run in the foreground and be visible onscreen; see Preparing Your App to Run in the Foreground.
-
-Deactivation. Your app transitions from the active to the inactive state. Quiet your app, perhaps only temporarily; see Preparing Your App to Run in the Background.
-
-Background execution. Your app transitions from the inactive or not running state to the background state. Prepare to handle only essential tasks while running offscreen; see Preparing Your App to Run in the Background.
-
-Termination. Your app transitions from any running state to the not running state. (Suspended apps are not notified when they are terminated.) Cancel all tasks and prepare to exit; see applicationWillTerminate(_:).
-
 
 Your app delegate also responds to some other important events:
 - Memory warnings. Reduce the amount of memory your app uses; see Responding to Memory Warnings.
