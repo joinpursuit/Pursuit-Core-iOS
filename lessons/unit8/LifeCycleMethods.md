@@ -2,8 +2,8 @@
 
 ### Key Interview Questions
 
-1. What are the different lifestyle methods a ViewController calls?
-2. What is the App Delegate what does it manage?
+1. What are the different life cycle methods a ViewController calls?
+2. What is the App Delegate and what does it manage?
 
 # 1. View Controller LifeCycle
 
@@ -32,25 +32,25 @@ The following methods are called when state transitions occur. For information a
 <img src="https://docs-assets.developer.apple.com/published/cfb6ae10b1/high_level_flow_2x_2bc77269-019d-4554-83b8-6aeecb73c348.png" width="414" height="736" />
 </p>
 
-####Launch time:
+#### Launch time:
 
 application(_:willFinishLaunchingWithOptions:)
 application(_:didFinishLaunchingWithOptions:)
 
-####Transitioning to the foreground:
+#### Transitioning to the foreground:
 
 applicationDidBecomeActive(_:)
 
-####Transitioning to the background:
+#### Transitioning to the background:
 
 applicationDidEnterBackground(_:)
 
-####Transitioning to the inactive state:
+#### Transitioning to the inactive state:
 
 applicationWillResignActive(_:) (Called when leaving the foreground state.)
 applicationWillEnterForeground(_:) (Called when transitioning out of the background state.)
 
-####Termination:
+#### Termination:
 applicationWillTerminate(_:) (Called only when the app is running. This method is not called if the app is suspended.)
 
 The specific tasks you perform during a given state transition are dependent upon your app and its capabilities. 
