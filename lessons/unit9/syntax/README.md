@@ -3,6 +3,10 @@
 ### Quick links
 * [Quick Intro](#quick-intro)
 * [General Declaration](#general-declaration)
+* [Variable Types](#variable-types)
+	* [Local Variables](#local-variables)
+	* [Pointers](#pointers)
+	* [Pass-By-Reference using Pointers](#pass-by-reference-using-pointers)
 * [Strings](#strings)
 	* [Format Specifier Tokens](#format-specifier-tokens)
 	* [String Manipulation](#string-manipulation)
@@ -14,10 +18,7 @@
 	* [While loops](#while-loops)
 	* [Do-While loops](#do-while-loops)
 	* [Switch Statements](#switch-statements)
-* [Variable Types](#variable-types)
-	* [Local Variables](#local-variables)
-	* [Pointers](#pointers)
-	* [Pass-By-Reference using Pointers](#pass-by-reference-using-pointers)
+
 
 ---
 ## Quick Intro
@@ -123,6 +124,75 @@ a = 1.0;
 b = 2.0;
 c = 3.0;
 ```
+## Variable Types
+### Local Variables
+In Swift, we've been spoiled with good ol' variable declarations that handle all the memory management for us. This isn't the case with objc.
+
+```objc
+int one, two, three;
+
+one = 1;
+two = 2;
+three = 3;
+```
+
+The above variables live in the `stack`, where it is easily accessible within the function they're declared in. 
+
+### Pointers
+`Pointers` are basically variables that live in the `stack` that point to a value that lives in the `heap`.
+
+```objc
+// These are local variables
+int one, two, three;
+
+one = 1;
+two = 2;
+three = 3;
+
+// These are pointers
+int *addressOfOne, *addressOfTwo, *addressOfThree;
+
+addressOfOne = &one;
+addressOfTwo = &two;
+addressOfThree = &three;
+
+NSLog(@"%d is located at %p", one, addressOfOne); // Prints "1 is located at 0x7ffee6d88fe0"
+
+```
+You might notice the ampersand (**&**), which is an operator that represents the address of the variable. 
+
+### Pass-By-Reference using Pointers
+
+Sometimes, though, you want to set multiple values, but you don't have tuples to play with (since this is objc). That's when you can **pass-by-reference**. 
+
+Check out the below function.
+
+```objc
+void quickMaths(int first, int second, int *addAnswer, int *subtractAnswer)
+{
+	// Do all the maths!
+	int sum = first + second;
+	int difference = first - second;
+	
+	// Store the answers at the supplied addresses
+	*addAnswer = sum;
+	*subtractAnswer = difference;
+}
+```
+And now, we can call it.
+
+```objc
+int sum, difference;
+
+// Note that we're passing in the addresses that we want to store the values at
+quickMaths(1, 2, &sum, &difference); 
+
+NSLog(@"Sum: %d, Difference: %d", sum, difference); // Prints "Sum: 3, Difference: -1"
+
+```
+
+The way we passed in the addresses of `sum` and `difference` is almost the same as how we use `inout` parameters in Swift functions.
+
 
 ## Strings
 Strings in objc are class objects, unlike the value types in Swift. As such, you declare the name of your `NSString` as a reference pointer with the asterick (**\***). There are other methods to `init` a string, such as passing a variable into a new string via `stringWithFormat:` or `initWithFormat:`-- which you might need to use if you want some manipulation. 
@@ -221,69 +291,4 @@ Pretty much the same as Swift's `repeat-while` loops, since `do` is a reserved k
 ### Switch Statements
 Generally the same as with Swift with one key difference. The only difference is that `fallthrough` is default in objc for all cases, so you need to `break` unless you intentionally want that.
 
-## Variable Types
-### Local Variables
-In Swift, we've been spoiled with good ol' variable declarations that handle all the memory management for us. This isn't the case with objc.
 
-```objc
-int one, two, three;
-
-one = 1;
-two = 2;
-three = 3;
-```
-
-The above variables live in the `stack`, where it is easily accessible within the function they're declared in. 
-
-### Pointers
-`Pointers` are basically variables that live in the `stack` that point to a value that lives in the `heap`.
-
-```objc
-int one, two, three;
-
-one = 1;
-two = 2;
-three = 3;
-
-int *addressOfOne, *addressOfTwo, *addressOfThree;
-
-addressOfOne = &one;
-addressOfTwo = &two;
-addressOfThree = &three;
-
-NSLog(@"%d is located at %p", one, addressOfOne); // Prints "1 is located at 0x7ffee6d88fe0"
-
-```
-You might notice the ampersand (**&**), which is an operator that represents the address of the variable. 
-
-### Pass-By-Reference using Pointers
-
-Sometimes, though, you might want to place your values in the `heap`, so you can **pass-by-reference**. 
-
-Check out the below function.
-
-```objc
-void quickMaths(int first, int second, int *addAnswer, int *subtractAnswer)
-{
-	// Do all the maths!
-	int sum = first + second;
-	int difference = first - second;
-	
-	// Store the answers at the supplied addresses
-	*addAnswer = sum;
-	*subtractAnswer = difference;
-}
-```
-And now, we can call it.
-
-```objc
-int sum, difference;
-
-quickMaths(1, 2, &sum, &difference);
-
-NSLog(@"Sum: %d, Difference: %d", sum, difference); // Prints "Sum: 3, Difference: -1"
-
-```
-This is better for more complex functions where you have to "return" multiple values, but don't necessarily want to pass big values around. Also, you might be getting the sense that tuples don't exist in objc. You're right.
-
-The way we passed in the addresses of `sum` and `difference` is basically the same as how we use `inout` parameters in Swift functions.  
