@@ -11,7 +11,13 @@
 	* [Mutable Arrays](#mutable-arrays)
 * [Control Flow](#control-flow)	 
 	* [For loops](#for-loops)
+	* [While loops](#while-loops)
+	* [Do-While loops](#do-while-loops)
 	* [Switch Statements](#switch-statements)
+* [Variable Types](#variable-types)
+	* [Local Variables](#local-variables)
+	* [Pointers](#pointers)
+	* [Pass-By-Reference using Pointers](#pass-by-reference-using-pointers)
 
 ---
 ## Quick Intro
@@ -56,14 +62,14 @@ Enjoy those semicolons.
 
 There's already a few differences between Swift and objc that you can identify right off the bat. If objc latter seems more verbose, that's because we're been spoiled by the conveniences of a modern language.
 
-<details><summary>Here's a breakdown of the above code:</summary>
+<details><summary>Here's a breakdown of the above code, which we'll go into more detail later:</summary>
 
-1. First, we define a variable called `deskCalc`. 
-2. After we have `deskCalc` to store the reference in, we create the object itself by `alloc`ating memory storage space for the object. Calling this method gets back the instance of the `Calculator` class. `alloc` also "zeroes out" all that instance's properties so it can be initialized after.
-3. We `init`ialize the `deskCalc`instance here. Notice that the `init` method is called on `deskCalc` **and not** `Calculator` because you want to initialize that specific object. `init` returns a value, which you are storing in `deskCalc`.
+1. First, we define a variable called `deskCalc`, which stores the **memory address** of the object. This is an important objc distinction.
+2. After we have `deskCalc` to store the reference in, we create the object itself by `alloc`ating memory storage space for the object at that address. Calling this **class method** gets back the instance of the `Calculator` class. `alloc` also "zeroes out" all that instance's properties so it can be initialized after.
+3. We `init`ialize the `deskCalc`instance here with an **instance method**. As such, notice that the `init` method is called on `deskCalc` **and not** `Calculator` because you want to initialize that specific object. `init` returns a value, which you are storing in `deskCalc`.
 4. Well, these are the methods you're calling on `deskCalc`. The brackets should give it away by now. Instead of Swift's `Class.method()` syntax, we go with `[Class method]` for objc.
-5. Several things are happening here. There isn't any string interpolation in objc, so we use the fan-favorite `NSLog()` with two arguments: the string with a [`format specifier` token](#format-specifier-tokens) (%s, %d, %@) token within the `NSString`, and a variable or instance method return to pass into the token. 
-6. The asterisk (**\***) that precedes the variable name denotes that `deskCalc` is actually a reference/pointer to a `Calculator` object. It doesn't actually store any data, just a memory address to where the `Calculator` object resides at.
+5. Several things are happening here. There isn't any string interpolation in objc, so we use the fan-favorite `NSLog()` with two arguments: the string with a [`format specifier` token](#format-specifier-tokens) (%s, %d, %@) token within the `NSString`, and a variable or class or instance method return to pass into the token. In this case, we use an **instance method** 
+6. The asterisk (**\***) that precedes the variable name denotes that `deskCalc` is actually a reference/pointer to a `Calculator` object. It doesn't actually store any data locally, just a memory address to where the `Calculator` object resides at on the heap.
 </details>
 
 ## General Declaration
@@ -206,5 +212,78 @@ for (NSString *str in helloArray) {
 ```
 
 
+### While loops
+Pretty much the same.
+
+### Do-While loops
+Pretty much the same as Swift's `repeat-while` loops, since `do` is a reserved keyword for `try`. Since objc doesn't have that, it's called `do-while` here.
+
 ### Switch Statements
 Generally the same as with Swift with one key difference. The only difference is that `fallthrough` is default in objc for all cases, so you need to `break` unless you intentionally want that.
+
+## Variable Types
+### Local Variables
+In Swift, we've been spoiled with good ol' variable declarations that handle all the memory management for us. This isn't the case with objc.
+
+```objc
+int one, two, three;
+
+one = 1;
+two = 2;
+three = 3;
+```
+
+The above variables live in the `stack`, where it is easily accessible within the function they're declared in. 
+
+### Pointers
+`Pointers` are basically variables that live in the `stack` that point to a value that lives in the `heap`.
+
+```objc
+int one, two, three;
+
+one = 1;
+two = 2;
+three = 3;
+
+int *addressOfOne, *addressOfTwo, *addressOfThree;
+
+addressOfOne = &one;
+addressOfTwo = &two;
+addressOfThree = &three;
+
+NSLog(@"%d is located at %p", one, addressOfOne); // Prints "1 is located at 0x7ffee6d88fe0"
+
+```
+You might notice the ampersand (**&**), which is an operator that represents the address of the variable. 
+
+### Pass-By-Reference using Pointers
+
+Sometimes, though, you might want to place your values in the `heap`, so you can **pass-by-reference**. 
+
+Check out the below function.
+
+```objc
+void quickMaths(int first, int second, int *addAnswer, int *subtractAnswer)
+{
+	// Do all the maths!
+	int sum = first + second;
+	int difference = first - second;
+	
+	// Store the answers at the supplied addresses
+	*addAnswer = sum;
+	*subtractAnswer = difference;
+}
+```
+And now, we can call it.
+
+```objc
+int sum, difference;
+
+quickMaths(1, 2, &sum, &difference);
+
+NSLog(@"Sum: %d, Difference: %d", sum, difference); // Prints "Sum: 3, Difference: -1"
+
+```
+This is better for more complex functions where you have to "return" multiple values, but don't necessarily want to pass big values around. Also, you might be getting the sense that tuples don't exist in objc. You're right.
+
+The way we passed in the addresses of `sum` and `difference` is basically the same as how we use `inout` parameters in Swift functions.  
