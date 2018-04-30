@@ -3,7 +3,7 @@
 ### Quick links
 * [Quick Intro](#quick-intro)
 * [General Declaration](#general-declaration)
-* [Variable Types](#variable-types)
+* [Variables and Pointers](#variables-and-pointers)
 	* [Local Variables](#local-variables)
 	* [Pointers](#pointers)
 	* [Pass-By-Reference using Pointers](#pass-by-reference-using-pointers)
@@ -117,16 +117,19 @@ int setLater;
 setLater = 10;
 
 NSString *setStringLater;
-setStringLater = @"Sup?"
+setStringLater = @"Sup?";
 
-double a, b, c; //Note the multiple initilizations at once!
+double a, b, c; // Note the multiple declarations at once!
 a = 1.0;
 b = 2.0;
 c = 3.0;
 ```
-## Variable Types
+
+## Variables and Pointers
 ### Local Variables
-In Swift, we've been spoiled with good ol' variable declarations that handle all the memory management for us. This isn't the case with objc.
+In Swift, we've been spoiled with good ol' variable declarations that handle all the memory management for us. This isn't the case with objc. 
+
+They can be declared with `type name;` or initialized with `type name = value;`. As a shortcut, you can declare multiple variables at once to be initialized later: `type name1, name2, name3;`
 
 ```objc
 int one, two, three;
@@ -139,7 +142,9 @@ three = 3;
 The above variables live in the `stack`, where it is easily accessible within the function they're declared in. 
 
 ### Pointers
-`Pointers` are basically variables that live in the `stack` that point to a value that lives in the `heap`.
+`Pointers` are basically variables that live in the `stack` that point to a value that lives in the `heap`. The difference between declaring 
+
+They're also the only way you can declare objects, such as class or string instances. 
 
 ```objc
 // These are local variables
@@ -192,7 +197,6 @@ NSLog(@"Sum: %d, Difference: %d", sum, difference); // Prints "Sum: 3, Differenc
 ```
 
 The way we passed in the addresses of `sum` and `difference` is almost the same as how we use `inout` parameters in Swift functions.
-
 
 ## Strings
 Strings in objc are class objects, unlike the value types in Swift. As such, you declare the name of your `NSString` as a reference pointer with the asterick (**\***). There are other methods to `init` a string, such as passing a variable into a new string via `stringWithFormat:` or `initWithFormat:`-- which you might need to use if you want some manipulation. 
