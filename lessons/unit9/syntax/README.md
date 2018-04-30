@@ -13,10 +13,11 @@
 	* [Mutable Strings](#mutable-strings) 
 * [Arrays](#arrays)
 	* [Mutable Arrays](#mutable-arrays)
-* [Control Flow](#control-flow)	 
-	* [For loops](#for-loops)
-	* [While loops](#while-loops)
-	* [Do-While loops](#do-while-loops)
+* [Control Flow](#control-flow)
+	* [if/else](#if-else)
+	* [for loops](#for-loops)
+	* [while loops](#while-loops)
+	* [do-while loops](#do-while-loops)
 	* [Switch Statements](#switch-statements)
 
 
@@ -199,7 +200,7 @@ NSLog(@"Sum: %d, Difference: %d", sum, difference); // Prints "Sum: 3, Differenc
 The way we passed in the addresses of `sum` and `difference` is almost the same as how we use `inout` parameters in Swift functions.
 
 ## Strings
-Strings in objc are class objects, unlike the value types in Swift. As such, you declare the name of your `NSString` as a reference pointer with the asterick (**\***). There are other methods to `init` a string, such as passing a variable into a new string via `stringWithFormat:` or `initWithFormat:`-- which you might need to use if you want some manipulation. 
+Strings in objc are class objects, unlike the value types in Swift. As such, you declare the name of your `NSString` as a reference pointer with the asterick (**\***), and set the value with a string literal (identifed with the **@** symbol). There are other methods to `init` a string, such as passing a variable into a new string via `stringWithFormat:` or `initWithFormat:`-- which you might need to use if you want some manipulation. 
 
 A string object of class `NSString` is **immutable** by default, but you can set the pointer to reference a new string instead.
 
@@ -262,7 +263,21 @@ Stubbin'
 
 ## Control Flow
 
-### For loops
+### if/else
+Pretty much the same. If, else, else if... You know.
+
+There is a difference, though. If your `if` or `else` or `else if` block only has one line, then you don't have to use curly braces. 
+
+```objc
+if (true)
+	NSLog(@"This is true");
+else if ( 2 < 1)
+	NSLog(@"This is not true");
+else
+	NSLog(@"Hello world");
+```
+
+### for loops
 
 Enjoy your C-style loops! You should recall that your for condition should utilize the `initializer, evaluation, incrementer` model, using semicolons to separate the expressions.
 
@@ -286,10 +301,10 @@ for (NSString *str in helloArray) {
 ```
 
 
-### While loops
+### while loops
 Pretty much the same.
 
-### Do-While loops
+### do-while loops
 Pretty much the same as Swift's `repeat-while` loops, since `do` is a reserved keyword for `try`. Since objc doesn't have that, it's called `do-while` here.
 
 ### Switch Statements
