@@ -12,9 +12,15 @@
 	* [String Manipulation](#string-manipulation)
 	* [Mutable Strings](#mutable-strings) 
 * [Arrays](#arrays)
+	* [Array from C Array](#array-from-c-array)
 	* [Mutable Arrays](#mutable-arrays)
+	* [Accessing objects](#accessing-objects)
+	* [Array Methods](#array-methods)
+		* [NSArray class methods](nsarray-class-methods)
+		* [NSArray instance methods](nsarray-instance-methods)
+		* [NSArray properties](nsarray-properties)
 * [Control Flow](#control-flow)
-	* [if/else](#if-else)
+	* [if/else](#ifelse)
 	* [for loops](#for-loops)
 	* [while loops](#while-loops)
 	* [do-while loops](#do-while-loops)
@@ -75,6 +81,7 @@ There's already a few differences between Swift and objc that you can identify r
 </details>
 
 ## General Declaration
+
 Ever wonder why sometimes you see Swift variables and constants declared with type annotation when it's already inferred?
 
 ```swift
@@ -127,7 +134,9 @@ c = 3.0;
 ```
 
 ## Variables and Pointers
+
 ### Local Variables
+
 In Swift, we've been spoiled with good ol' variable declarations that handle all the memory management for us. This isn't the case with objc. 
 
 They can be declared with `type name;` or initialized with `type name = value;`. As a shortcut, you can declare multiple variables at once to be initialized later: `type name1, name2, name3;`
@@ -143,6 +152,7 @@ three = 3;
 The above variables live in the `stack`, where it is easily accessible within the function they're declared in. 
 
 ### Pointers
+
 `Pointers` are basically variables that live in the `stack` that point to a value that lives in the `heap`. The difference between declaring 
 
 They're also the only way you can declare objects, such as class or string instances. 
@@ -200,6 +210,7 @@ NSLog(@"Sum: %d, Difference: %d", sum, difference); // Prints "Sum: 3, Differenc
 The way we passed in the addresses of `sum` and `difference` is almost the same as how we use `inout` parameters in Swift functions.
 
 ## Strings
+
 Strings in objc are class objects, unlike the value types in Swift. As such, you declare the name of your `NSString` as a reference pointer with the asterick (**\***), and set the value with a string literal (identifed with the **@** symbol). There are other methods to `init` a string, such as passing a variable into a new string via `stringWithFormat:` or `initWithFormat:`-- which you might need to use if you want some manipulation. 
 
 A string object of class `NSString` is **immutable** by default, but you can set the pointer to reference a new string instead.
@@ -215,6 +226,7 @@ NSLog(@"str1 = %@, str2 = %@", str1, str2);
 ```
 
 ### Format Specifier Tokens
+
 Basically a placeholder for a variable to use within `NSLog()`. You will need these to print non-string values or references to your console, or if you want to miss Swift's string interpolation even more. Different types needs different, specific tokens. There are readily identifiable in a string by the `%` symbol.
 
 Here are key ones:
@@ -228,6 +240,7 @@ Here are key ones:
 Read more at [Apple Developers](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html).
 
 ### String Manipulation
+
 Strings are harder to play with in objc. You want to concatenate two strings? You have to make an entirely new one. Enjoy playing with `NSString` methods.
 
 ```objc
@@ -240,6 +253,7 @@ myString = [NSString stringWithFormat:@"%@ and another string", myString];
 ```
 
 ### Mutable Strings
+
 So, there's an `NSMutableString`, which inherits from `NSString`. It changes the value of the object that the pointer is referencing, so all others pointer to the same object would reflect the new value at that memory address (passing by reference).
 
 ```objc
@@ -258,8 +272,116 @@ Note that to set the pointer towards a mutable string, you must pass in a string
 
 Arrays in objc hold pointers to other objects. An instance of `NSArray` is **immutable**. Once an array has been created, you can never add or remove a pointer from that array. Nor can you change the order of the pointers in that array.
 
+There are two ways to make an array: using a literal and using `arrayWithObjects:`.
+
+Literal:
+```objc
+// Note the literal (@) operator.
+NSArray *hello = @[@"Is", @"it", @"me", @"you're", @"looking", @"for"];
+```
+`arrayWithObjects:`
+```objc
+// The nil is necessary most of the time to let other functions (like sort) know where the array ends.
+NSArray *myColors = [NSArray arrayWithObjects: @"Red", @"Green", @"Blue", @"Yellow", nil];
+```
+
+When using an array literal, you don't need `nil` to terminate your arrays-- `nil` is actually invalid in a literal.
+
+### Array from C Array
+You can also create an array with a C array of objects.
+
+```objc
+// Making a C array! You need to define the size of the array first.
+NSString *strings[3];
+strings[0] = @"First";
+strings[1] = @"Second";
+strings[2] = @"Third";
+
+// Making an NSArray
+NSArray *stringsArray = [NSArray arrayWithObjects:strings count:3];
+// strings array contains { @"First", @"Second", @"Third" }
+```
+
+
 ### Mutable Arrays
-Stubbin'
+Mutable arrays are created using the `NSMutableArray` class (a subclass of `NSArray`) and can be modified after they have been created and initialized.
+
+```objc
+NSMutableArray *myColors;
+
+myColors = [NSMutableArray arrayWithObjects: @"Red", @"Green", @"Blue", @"Yellow", nil];
+
+[myColors addObject: @"Indigo"];
+[myColors addObject: @"Violet"];
+
+NSLog(@"%@", myColors); //prints: "(Red, Green, Blue, Yellow, Indigo, Violet)"
+```
+
+### Accessing objects
+
+The fastest way to access an object is subscripting:
+
+```objc
+NSArray *hello = @[@"Is", @"it", @"me", @"you're", @"looking", @"for"];
+
+NSLog(@"This should print \"it\": %@", hello[1]);
+// This should print "it": it
+```
+
+Alternatively, you can also use the `objectAtIndex:` method.
+
+```objc
+NSArray *hello = @[@"Is", @"it", @"me", @"you're", @"looking", @"for"];
+
+for (int i = 0; i < [hello count]; i++)
+        NSLog (@"Element %i = %@", i, [hello objectAtIndex: i]);
+        
+// Prints "Element 0 = Is", "Element 1 = it", and so forth.
+```
+
+### Array Methods
+These are the ones we care about.
+
+#### NSArray class methods:
+
+`+ arrayWithArray` Call on NSArray to create an array from another array.
+
+`+ arrayWithObjects:` Create an array from input objects.
+
+`+ arrayWithObjects:count:` Create an array from input objects, up to the count you specify.
+
+
+#### NSArray instance methods:
+
+`- arrayByAddingObject:` Returns a new array that is a copy of the receiving array with a given object added to the end.
+
+`- arrayByAddingObjectsFromArray:` Returns a new array that is a copy of the receiving array with the objects contained in another array added to the end.
+
+`- componentsJoinedByString:` Input a separator to turn it into a string.
+
+`- containsObject:` Returns a boolean if the object exists.
+
+`- filteredArrayUsingPredicate:` Evaluates a given predicate against each object in the receiving array and returns a new array containing the objects for which the predicate returns true.
+
+`- indexOfObject:` Returns index value of input object.
+
+`- insertObject:atIndex:` Inserts an object at a certain index.
+
+`- objectAtIndex:` Returns the object at the index.
+
+`- objectEnumerator` Enumerates the objects by index value.
+
+`- removeObjectAtIndex:` Removes object at index.
+
+
+#### NSArray properties:
+
+`count` Returns the count of the array.
+
+`firstObject` Returns the first object.
+
+`lastObject` Returns the last object.
+
 
 ## Control Flow
 
