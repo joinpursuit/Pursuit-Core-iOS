@@ -386,7 +386,7 @@ These are the ones we care about.
 ## Control Flow
 
 ### if/else
-Pretty much the same. If, else, else if... You know.
+Pretty much the same. The condition has to be in quotes.
 
 There is a difference, though. If your `if` or `else` or `else if` block only has one line, then you don't have to use curly braces. 
 
@@ -424,10 +424,10 @@ for (NSString *str in helloArray) {
 
 
 ### while loops
-Pretty much the same.
+Pretty much the same. The condition has to be in quotes, and if the block is one line, then curly braces are optional. 
 
 ### do-while loops
-Pretty much the same as Swift's `repeat-while` loops, since `do` is a reserved keyword for `try`. Since objc doesn't have that, it's called `do-while` here.
+Pretty much the same as Swift's `repeat-while` loops, since `do` is a reserved keyword for `try`. Since objc doesn't have that, it's called `do-while` here. The condition has to be in quotes.
 
 ### Switch Statements
 Generally the same as with Swift with one key difference. The only difference is that `fallthrough` is default in objc for all cases, so you need to `break` unless you intentionally want that.
