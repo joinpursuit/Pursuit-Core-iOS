@@ -8,7 +8,9 @@ void SomeFunction();
 
 The equivalent Objective-C method declaration looks like this:
 
+```objective-c
 - (void)someMethod;
+```
 
 https://stackoverflow.com/questions/4846825/c-function-vs-objective-c-method/4847477#4847477
 
