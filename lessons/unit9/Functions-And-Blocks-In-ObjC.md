@@ -1,6 +1,6 @@
 ## Objective-C Functions (Methods/Messages) and Blocks
 
-Objective-C software is built around a large network of objects, that interact with each other by sending what are referred to as messages. In Objective-C land, one object sends a message to another object by calling a method on that object.
+Objective-C software is built around a large network of objects that interact with each other by sending what are referred to as messages. In Objective-C land, one object sends a message to another object by calling a method on that object.
 
 Objective-C methods are conceptually similar to standard functions in C and other programming languages, though the syntax is quite different. A C function declaration looks like this:
 
@@ -75,7 +75,7 @@ Although there are several different ways to send messages between objects in Ob
 
 The reference on the left, someObject in this case, is the receiver of the message. The message on the right, doSomething, is the name of the method to call on that receiver. In other words, when the above line of code is executed, someObject will be sent the doSomething message.
 
-Exercises: 
+### Exercises: 
 
 Write a function called multiply that takes in two integers and returns them multiplied along with a formatted message printed to the console. 
 
@@ -222,7 +222,7 @@ It also means that the block cannot change the value of the original variable, o
 
 ### You Can Pass Blocks as Arguments to Methods or Functions
 
-Each of the previous examples in this chapter invokes the block immediately after it’s defined. In practice, it’s common to pass blocks to functions or methods for invocation elsewhere. You might use Grand Central Dispatch to invoke a block in the background, for example, or define a block to represent a task to be invoked repeatedly, such as when enumerating a collection. Concurrency and enumeration are covered later in this chapter.
+In practice, it’s common to pass blocks to functions or methods for invocation elsewhere. You might use Grand Central Dispatch to invoke a block in the background, for example, or define a block to represent a task to be invoked repeatedly, such as when enumerating a collection. Concurrency and enumeration are covered later in this chapter.
 
 Blocks are also used for callbacks, defining the code to be executed when a task completes. As an example, your app might need to respond to a user action by creating an object that performs a complicated task, such as requesting information from a web service. Because the task might take a long time, you should display some kind of progress indicator while the task is occurring, then hide that indicator once the task is complete.
 
@@ -242,7 +242,7 @@ Blocks make this much easier, however, because you can define the callback behav
 }
 ```
 
-This example calls a method to display the progress indicator, then creates the task and tells it to start. The callback block specifies the code to be executed once the task completes; in this case, it simply calls a method to hide the progress indicator. Note that this callback block captures self in order to be able to call the hideProgressIndicator method when invoked. It’s important to take care when capturing self because it’s easy to create a strong reference cycle, as described later in Avoid Strong Reference Cycles when Capturing self.
+This example calls a method to display the progress indicator, then creates the task and tells it to start. The callback block specifies the code to be executed once the task completes; in this case, it simply calls a method to hide the progress indicator. Note that this callback block captures self in order to be able to call the hideProgressIndicator method when invoked. It’s important to take care when capturing self because it’s easy to create a strong reference cycle.
 
 In terms of code readability, the block makes it easy to see in one place exactly what will happen before and after the task completes, avoiding the need to trace through delegate methods to find out what’s going to happen.
 
