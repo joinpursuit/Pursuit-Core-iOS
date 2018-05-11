@@ -51,6 +51,8 @@ Objective-C class syntax used to be very verbose.  We'll go through the old way,
 
 <details>
 <summary>Point Implementation</summary>
+
+```objective-c
 @implementation Point
 
 - (id) x: (double) x_value
@@ -81,6 +83,7 @@ Objective-C class syntax used to be very verbose.  We'll go through the old way,
 }
 
 @end
+```
 </details>
 
 ### Objective-C classes using @synthesize
