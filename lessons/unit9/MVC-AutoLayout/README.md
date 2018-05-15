@@ -3,19 +3,41 @@
 In this Objective-C Demo app we will use MVC principles to build a Tip calculator. We will use programmatic autolayout to size and position the UIView elements in the app. 
 
 ## Model 
-**Tip**
+**Tip.h**
 A tip object has a bill and the percent allocated to the bill, i.e 10%, 15% or 20% accordingly. 
 
 ```objective-c
+@interface Tip: NSObject
+
 typedef NS_ENUM(NSInteger, TipPercent) {
-    Percent10 = 10,
-    Percent15 = 15,
-    Percent20 = 20
+    tenPercent = 10,
+    fifteenPercent = 15,
+    twentyPercent = 20
 };
 
-@interface Tip: NSObject
+// we use (assign) attribute for primitive types: int, char, float.....
 @property (assign) double bill;
-@property (nonatomic) TipPercent percent;
+@property (nonatomic) TipPercent tipPercent;
+@property (nonatomic, readonly) double totalBill; 
+
+- (instancetype)initWithBill: (double)bill tipPercent: (double)tipPercent;
+
+@end
+```
+
+**Tip.m**
+
+```objective-c 
+@implementation Tip
+- (instancetype)initWithBill:(double)bill tipPercent:(double)tipPercent {
+    self = [super init];
+    if (self) {
+        _bill = bill;
+        _tipPercent = tipPercent;
+        _totalBill = bill * (tipPercent / 100.0);
+    }
+    return self;
+}
 @end
 ```
 
@@ -290,61 +312,38 @@ The TipController adds the tipView as its subview, calculates the Tip and manage
 #import "Tip.h"
 
 @interface TipViewController ()
-// private properties, methods
-@property TipView *tipView;
+// private properties or methods
+@property (nonatomic) TipView *tipView;
 @end
 
 @implementation TipViewController
 
-#pragma mark View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor yellowColor];
     
     // lazy initialization
-    if (!_tipView) {
+    if(!_tipView)
         _tipView = [[TipView alloc] initWithFrame:UIScreen.mainScreen.bounds];
-        [self.view addSubview: _tipView];
-        [_tipView.calculateTipButton addTarget:self action:@selector(calculateTip) forControlEvents:UIControlEventTouchUpInside];
-    }
+    
+    // we can send message to nil without crashes
+    [self.view addSubview:self.tipView];
     
     [self registerForKeyboardNotifications];
+    
+    [self.tipView.calculateTipButton addTarget:self action:@selector(calculateTip) forControlEvents:UIControlEventTouchUpInside];
 }
 
-#pragma mark Helper Methods
-- (void)calculateTip {
-    NSString *strippedValue = [self.tipView.billTextField.text stringByReplacingOccurrencesOfString:@"$" withString:@""];
-    self.tipView.billTextField.text = strippedValue;
+-(void)calculateTip {
+    double bill = [self.tipView.billTextField.text doubleValue];
     
-    // resign textfield as first responder
-    [self.tipView.billTextField resignFirstResponder];
+    Tip *tenPercentTip = [[Tip alloc] initWithBill:bill tipPercent:tenPercent];
+    Tip *fifteenPercentTip = [[Tip alloc] initWithBill:bill tipPercent:fifteenPercent];
+    Tip *twentyPercentTip = [[Tip alloc] initWithBill:bill tipPercent:twentyPercent];
     
-    double value = [self.tipView.billTextField.text doubleValue];
-    
-    Tip *tenPercenttip = [[Tip alloc] init];
-    tenPercenttip.bill = value;
-    tenPercenttip.percent = Percent10;
-    double tenPercent = tenPercenttip.bill * (tenPercenttip.percent / 100.0);
-    
-    Tip *fifteenPercenttip = [[Tip alloc] init];
-    fifteenPercenttip.bill = value;
-    fifteenPercenttip.percent = Percent15;
-    double fifteenPercent = fifteenPercenttip.bill * (fifteenPercenttip.percent / 100.0);
-    
-    Tip *twentyPercenttip = [[Tip alloc] init];
-    twentyPercenttip.bill = value;
-    twentyPercenttip.percent = Percent20;
-    double twentyPercent = twentyPercenttip.bill * (twentyPercenttip.percent / 100.0);
-
-    NSLog(@"10%% tip is %1.2f \n", tenPercent);
-    NSLog(@"15%% tip is %1.2f \n", fifteenPercent);
-    NSLog(@"20%% tip is %1.2f \n", twentyPercent);
-    
-    [self.tipView updateTipValuesTenPercent:tenPercent
-                                 fifteenPercent:fifteenPercent
-                                  twentyPercent:twentyPercent];
-    
-    NSString *stringValue = [self.tipView.billTextField.text stringByReplacingOccurrencesOfString:@"$" withString:@""];
-    self.tipView.billTextField.text = [NSString stringWithFormat:@"$%@", stringValue];
+    [self.tipView updatesTipValues:tenPercentTip.totalBill
+                    fifteenPercent:fifteenPercentTip.totalBill
+                     twentyPercent:twentyPercentTip.totalBill];
 }
 
 #pragma mark Keyboard Handling
@@ -445,4 +444,6 @@ Below an inputAccessoryView is used as a property on the UITextField to dismiss 
 <p align="center">
 <img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit9/MVC-AutoLayout/Images/tip-app-2.png" width="321" height="560"/>
 </p>
+
+[Completed Demo Link](https://github.com/C4Q/AC-iOS-ObjC-Autolayout-MVC/tree/master)
 
