@@ -1,6 +1,7 @@
 # Swift vs. Objective-C Syntax
 
 ### Quick links
+
 * [Quick Intro](#quick-intro)
 * [General Declaration](#general-declaration)
 * [Variables and Pointers](#variables-and-pointers)
@@ -28,6 +29,7 @@
 
 
 ---
+
 ## Quick Intro
 
 Here's what we have to look forward to for Objective-C. It's not too bad. With camel-casing and Apple naming conventions, you can identify objects, methods, and variables without too much difficulty. 
@@ -275,11 +277,14 @@ Arrays in objc hold pointers to other objects. An instance of `NSArray` is **imm
 There are two ways to make an array: using a literal and using `arrayWithObjects:`.
 
 Literal:
+
 ```objc
 // Note the literal (@) operator.
 NSArray *hello = @[@"Is", @"it", @"me", @"you're", @"looking", @"for"];
 ```
+
 `arrayWithObjects:`
+
 ```objc
 // The nil is necessary most of the time to let other functions (like sort) know where the array ends.
 NSArray *myColors = [NSArray arrayWithObjects: @"Red", @"Green", @"Blue", @"Yellow", nil];
@@ -288,6 +293,7 @@ NSArray *myColors = [NSArray arrayWithObjects: @"Red", @"Green", @"Blue", @"Yell
 When using an array literal, you don't need `nil` to terminate your arrays-- `nil` is actually invalid in a literal.
 
 ### Array from C Array
+
 You can also create an array with a C array of objects.
 
 ```objc
@@ -304,6 +310,7 @@ NSArray *stringsArray = [NSArray arrayWithObjects:strings count:3];
 
 
 ### Mutable Arrays
+
 Mutable arrays are created using the `NSMutableArray` class (a subclass of `NSArray`) and can be modified after they have been created and initialized.
 
 ```objc
@@ -340,6 +347,7 @@ for (int i = 0; i < [hello count]; i++)
 ```
 
 ### Array Methods
+
 These are the ones we care about.
 
 #### NSArray class methods:
@@ -386,7 +394,8 @@ These are the ones we care about.
 ## Control Flow
 
 ### if/else
-Pretty much the same. The condition has to be in quotes.
+
+Pretty much the same. The condition has to be in parentheses.
 
 There is a difference, though. If your `if` or `else` or `else if` block only has one line, then you don't have to use curly braces. 
 
@@ -422,14 +431,15 @@ for (NSString *str in helloArray) {
 }
 ```
 
-
 ### while loops
-Pretty much the same. The condition has to be in quotes, and if the block is one line, then curly braces are optional. 
+
+Pretty much the same. The condition has to be in parentheses, and if the block is one line, then curly braces are optional. 
 
 ### do-while loops
+
 Pretty much the same as Swift's `repeat-while` loops, since `do` is a reserved keyword for `try`. Since objc doesn't have that, it's called `do-while` here. The condition has to be in quotes.
 
 ### Switch Statements
-Generally the same as with Swift with one key difference. The only difference is that `fallthrough` is default in objc for all cases, so you need to `break` unless you intentionally want that.
 
+Generally the same as with Swift with one key difference. The only difference is that `fallthrough` is default in objc for all cases, so you need to `break` unless you intentionally want that.
 
