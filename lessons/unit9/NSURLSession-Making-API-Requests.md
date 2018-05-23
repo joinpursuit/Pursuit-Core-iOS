@@ -1,5 +1,7 @@
 ## NSURLSession (Networking - Making API Requests)
 
+[Demo Link](https://github.com/C4Q/AC-iOS-EventsApp-ObjC/blob/master/README.md)
+
 ## Objectives 
 
 * Use NSURLSession to make a GET request to the MeetupAPI 
