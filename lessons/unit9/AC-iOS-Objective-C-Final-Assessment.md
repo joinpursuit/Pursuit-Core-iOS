@@ -103,7 +103,10 @@ Building upon the Events project [here](https://github.com/C4Q/AC-iOS-EventsApp-
    * Group Name 
    * Date (local_date from the JSON, this event has been parsed in the Event.m file)
    * Event Description
-   	* This will strip HTML tags (```objective-c [self.textView setValue:self.event.eventDescription forKey:@"contentToHTMLString"];```)
+   	* The following statement will strip HTML tags from the JSON description
+	```objective-c 
+	[self.textView setValue:self.event.eventDescription forKey:@"contentToHTMLString"];
+	```
    * RSVP count
    * Feel free to add more properties as needed
 * Embed the EventsViewController into an TabBarController. 
