@@ -113,6 +113,94 @@ Login Screen UI
   <img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit10/Images/login-screen.png" width="341" height="605" />
 </p>
 
+**Completed Code from lesson**  
+
+```javascript 
+import React, { Component } from 'react'; 
+import { View, 
+         Text, 
+         ImageBackground,
+         TextInput, 
+         TouchableHighlight, 
+         Alert, 
+         StyleSheet } from 'react-native';
+
+export default class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {email: '', password: ''}
+  }
+
+  login = (email, password) => {
+    Alert.alert('email: ' + email + '\n' + 'password:' + password)
+  }
+
+  updateEmail = (text) => {
+    this.setState({email : text})
+  }
+
+  updatePassword = (text) => {
+    this.setState({password : text})
+  }
+
+  render() {
+    return(
+      <ImageBackground 
+        source={{uri:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Grass_dsc08672-nevit.jpg/1200px-Grass_dsc08672-nevit.jpg'}}
+        style={styles.container}> 
+        <Text style={{color: 'white', fontSize: 24, fontWeight: 'bold'}}>Login</Text>
+        <Text style={{color: 'white', fontSize: 17}}>Enter your credentials here</Text>
+        <TextInput 
+          style={styles.input}
+          placeholder='Username'
+          placeholderTextColor='white'
+          onChangeText={this.updateEmail}
+        />
+         <TextInput 
+          style={styles.input}
+          placeholder='Password'
+          placeholderTextColor='white'
+          secureTextEntry = {true}
+          onChangeText={this.updatePassword}
+        />
+        <TouchableHighlight
+          style={styles.button}
+          onPress={() => this.login(this.state.email, this.state.password)}
+          underlayColor='white'
+        >
+          <Text>SIGN IN</Text>
+        </TouchableHighlight> 
+      </ImageBackground>
+    )
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, 
+    alignItems: 'center',
+    backgroundColor: 'bisque'
+  }, 
+  input: {
+    color: 'white',
+    height: 40, 
+    width: '80%', 
+    borderColor: 'white', 
+    borderWidth: 1, 
+    fontSize: 20, 
+    marginTop: 40, 
+  }, 
+  button: {
+    marginTop: 20, 
+    backgroundColor: 'limegreen', 
+    height: 40, 
+    width: '80%', 
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+})
+```
+
 ## Implementing a ScrollView component
 
 ```javascript 
