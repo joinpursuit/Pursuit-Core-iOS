@@ -179,8 +179,12 @@ export default class App extends Component {
                     'Adding Delight to your iOS App']
 
     return(
-      <View style={{flex: 1, backgroundColor:'white'}}>
-        <SectionList 
+      <View style={styles.container}>
+        <View style={styles.topBar}>
+          <Text style={styles.title}>WWDC 2018</Text>
+        </View>
+        <SectionList
+        // required props: sections, renderItem, renderSectionHeader, keyExtractor 
         sections={[
           {title: 'Monday', data: monday}, 
           {title: 'Tuesday', data: tuesday},
@@ -198,6 +202,20 @@ export default class App extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1, 
+  },
+  topBar: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 44,  
+    backgroundColor: '#f5a623'
+  },
+  title: {
+    fontSize: 24, 
+    fontWeight: '900',
+    color: 'white'
+  },
   sectionHeader: {
     backgroundColor: '#f5a623', 
     fontSize: 20, 
@@ -216,7 +234,7 @@ const styles = StyleSheet.create({
 SectionList Demo UI
 
 <p align="center">
- <img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit10/Images/section-list.png" width="340" height="650" />
+ <img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit10/Images/section-lists.png" width="340" height="650" />
 </p>
 
 
