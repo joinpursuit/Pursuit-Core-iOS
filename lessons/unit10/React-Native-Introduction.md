@@ -14,7 +14,7 @@ Let's get started.
 > At this point if you do not have node installed or need to verify if node is installed run ```node -v``` if you get **command not found** in terminal then node is not installed, otherwise you will see the current version number of your node installation e.g v9.6.1. 
 
 > If you do not have homebrew installed paste and run the following command in terminal 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
 
 > To install node run the following command ```brew install node```
 
