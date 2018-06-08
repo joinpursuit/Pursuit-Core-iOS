@@ -87,6 +87,8 @@ Let's now run our app
 What is **yarn**  
 Yarn is a third party package manager used in Node. (Node alos has its default package manager called npm). According to Yarn, it caches every package it downloads so it never needs to download it again. It also parallelizes operations to maximize resource utilization so install times are faster than ever. 
 
+> Installing ```yarn``` if not already installed. ```npm -g install yarn```
+
 Now we will have some options in which to run and view the app: 
 * Android device: point the **expo** app to the QR code in terminal 
 * iOS Device: also point the device to the QR code using the **expo** app or press s to email/text the app URL to your phone
