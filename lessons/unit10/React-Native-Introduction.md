@@ -122,6 +122,8 @@ const styles = StyleSheet.create({
 });
 ```
 
+Continue reading more about react-native from the official facebook react-native [documentation](https://facebook.github.io/react-native/)
+
 
 
 
