@@ -115,7 +115,7 @@ FlatList Demo UI
 
 ## SectionList 
 
-**SectionList** as the name suggests is a list of rendered contents with a section header which grounps it's appropriate data accordingly. The required props of a SectionList are **renderItem**, **renderSectionHeader** and **keyExtractor**.   
+**SectionList** as the name suggests is a list of rendered contents with a section header which grounps it's appropriate data accordingly. The required props of a SectionList are **sections**, **renderItem**, **renderSectionHeader** and **keyExtractor**.   
 
 **keyExtractor** : needs to be a unique key for tracking the items in the list 
 
