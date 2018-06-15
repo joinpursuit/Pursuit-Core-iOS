@@ -438,6 +438,8 @@ export default class StationDetailsScreen extends Component {
 
 ## Completed Screenshots
 
+Follow this [link](https://github.com/C4Q/AC-iOS-React-Native-CitiBike-App/blob/master/README.md) to the completed demo
+
 By far the most attractive part of react-native is being cross-platform. Evident below with screenshots of our citi-bike-app running on both iOS and Android with an identical codebase of Javacript and react-native.
 
 BikeStationsListScreen 
