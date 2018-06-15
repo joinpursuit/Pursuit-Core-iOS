@@ -1,5 +1,7 @@
 ## React-Native
 
+**From the react-native documentation** "_React Native lets you build mobile apps using only JavaScript. It uses the same design as React, letting you compose a rich mobile UI from declarative components._"
+
 ## Lessons
 
 | Lesson | Summary |
