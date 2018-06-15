@@ -7,7 +7,7 @@
 | Lesson | Summary |
 |:------|:--------|
 | [React-Native Introduction](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit10/React-Native-Introduction.md) | node, npm, yarn, create-react-native-app, expo app |
-| [Official React-Native Documentation](https://facebook.github.io/react-native/docs/getting-started.html) | Getting Started |
+| [Official React-Native Documentation](https://facebook.github.io/react-native/docs/getting-started.html) | Getting Started, props, state, style, flexbox, TextInput, TouchableHighlight, ScrollView, FlatList, SectionList |
 | [TextInput, Handling Touches, ScrollView](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit10/TextInput-Touches-ScrollView.md) | TextInput, TouchableHighlight, ScrollView, ImageBackground, StyleSheet  |
 | [ListViews](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit10/Flat-List-Section-List.md) | FlatList, SectionList, StyleSheet, data, renderItem, keyExtractor, sections, renderSectionHeader |
 | [Javascript Networking](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit10/Javascript-Networking.md) | Fetch API /fetch(), Promise, Response, json(), Array.prototype, String.prototype |
