@@ -17,7 +17,5 @@
 
 | Project | Summary |
 |:------|:------|
-| [citi-bikes-app](https://github.com/C4Q/AC-iOS-React-Native-CitiBike-App) | A react-native app that uses the citibike api to show real time bike status data at stations. Edit
-Add topics
- |
- | [flickr-photos-app](https://github.com/C4Q/AC-iOS-React-Native-FlickrPhotosApp) | A react-native app that queries the Flickr API for searched photos and renders the results in a FlatList component.  |
+| [citi-bikes-app](https://github.com/C4Q/AC-iOS-React-Native-CitiBike-App) | A react-native app that uses the citibike api to show real time bike status data at bike stations. |
+| [flickr-photos-app](https://github.com/C4Q/AC-iOS-React-Native-FlickrPhotosApp) | A react-native app that queries the Flickr API for searched photos and renders the results in a FlatList component.  |
