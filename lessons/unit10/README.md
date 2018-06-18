@@ -13,6 +13,7 @@
 | [Javascript Networking](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit10/Javascript-Networking.md) | fetch(), Promise, Response, json(), Array.prototype, String.prototype |
 | [React-Native Networking](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit10/React-Native-Networking.md) | props, state, constructor(), componentDidMount()|
 | [Navigation in React-Native ](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit10/React-Native-Navigation.md) | npm install --save package-name, react-navigation, createStackNavigator, createBottomTabNavigator, this.props.navigation.navigate('RouteName'), react-native-maps, react-native-vection-icons|
+| [Animations in React-Native](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit10/React-Native-Animations.md) | Animated, Animated.timing(), Animated.sequence(), Animated.parallel(), interpolate, Animated.View, transform |
 
 
 ## Projects - Demo
@@ -21,3 +22,4 @@
 |:------|:------|
 | [flickr-photos-app](https://github.com/C4Q/AC-iOS-React-Native-FlickrPhotosApp) | A react-native app that queries the Flickr API for searched photos and renders the results in a FlatList component. |
 | [citi-bikes-app](https://github.com/C4Q/AC-iOS-React-Native-CitiBike-App) | A react-native app that uses the citibike api to show real time bike status data at bike stations. |
+| [animations-app](https://github.com/C4Q/AC-iOS-React-Native-Animations) | Animations in React-Native |
