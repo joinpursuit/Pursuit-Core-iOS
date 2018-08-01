@@ -1,0 +1,157 @@
+# MapKit and CoreLocation
+
+Adding location-based information and UX into your app is a great way to connect users to their external world and their are many practical purposes for maps in the mobile development space. 
+
+Location based information is predicated on 2 components:
+- Location Services
+- Maps
+
+### Location Services:
+
+Provided by the `Core Location` framework
+- Interfaces for obtaining information about the user’s location and heading (the direction in which the device is pointing). 
+    - Heading Information provides more precise information about which way a device is pointed. This can clearly be used in the creation of a compass, but it has been documented to also be applicable in the creation of augmented reality experiences, games, and navigational apps 
+
+
+#### Getting the User’s Location
+
+Location data whether in apps that are providing navigation or social services is fueled by the `Core Location` framework which provides several services that you can use to get and monitor the device’s current location:
+
+* The standard location service offers a highly configurable way to get the current location and track changes.
+* Region monitoring lets you monitor boundary crossings for defined geographical regions and Bluetooth low-energy beacon regions. (Beacon region monitoring is available in iOS only.)
+* The significant-change location service provides a way to get the current location and be notified when significant changes occur, but it’s critical to use it correctly to avoid using too much power.
+
+To use the features of the Core Location framework, you must link your app to CoreLocation.framework in your Xcode project and import CoreLocation
+
+#### Requiring the Presence of Location Services in an iOS App
+If your iOS app requires location services to function properly, include the UIRequiredDeviceCapabilities key in the app’s Info.plist file. The App Store uses the information in this key to prevent users from downloading apps to devices that don’t contain the listed features.
+The value for the UIRequiredDeviceCapabilities is an array of strings indicating the features that your app requires. Two strings are relevant to location services:
+* Include the location-services string if you require location services in general.
+* Include the gps string if your app requires the accuracy offered only by GPS hardware.
+
+#### Getting the User’s Current Location
+The Core Location framework lets you locate the current position of the device and use that information in your app. The framework reports the device’s location to your code and, depending on how you configure the service, also provides periodic updates as it receives new or improved data.
+Two services can give you the user’s current location:
+* The standard location service is a configurable, general-purpose solution for getting location data and tracking location changes for the specified level of accuracy.
+* The significant-change location service delivers updates only when there has been a significant change in the device’s location, such as 500 meters or more.
+Gathering location data is a power-intensive operation. For most apps, it’s usually sufficient to establish an initial position fix and then acquire updates only periodically after that. Regardless of the importance of location data in your app, you should choose the appropriate location service and use it wisely to avoid draining a device’s battery. For example:
+
+* If your iOS app must keep monitoring location even while it’s in the background, use the standard location service and specify the location value of the UIBackgroundModes key to continue running in the background and receiving location updates. (In this situation, you should also make sure the location manager’s pausesLocationUpdatesAutomatically property is set to YES to help conserve power.) Examples of apps that might need this type of location updating are fitness or turn-by-turn navigation apps.
+* If GPS-level accuracy isn’t critical for your app and you don’t need continuous tracking, you can use the significant-change location service. It’s crucial that you use the significant-change location service correctly, because these updates run continuously, around the clock, until you stop them, and can actually result in higher energy use if not employed effectively.
+
+#### Determining Whether Location Services Are Available
+There are situations where location services may not be available. For example:
+* The user disables location services in the Settings app or System Preferences.
+* The user denies location services for a specific app.
+* The device is in Airplane mode and unable to power up the necessary hardware.
+For these reasons, it’s recommended that you always call the `locationServicesEnabled` class method of CLLocationManager before attempting to start either the standard or significant-change location services. If it returns NO and you attempt to start location services anyway, the system prompts the user to confirm whether location services should be re-enabled. Because the user probably disabled location services on purpose, the prompt is likely to be unwelcome
+
+#### Starting the Standard Location Service
+The standard location service is the most common way to get a user’s current location because it’s available on all devices and in both iOS and OS X. Before using this service, you configure it by specifying the desired accuracy of the location data and the distance that must be traveled before reporting a new location. When you start the service, it uses the specified parameters to determine the hardware to enable and then proceeds to report location events to your app. Because this service takes into account these parameters, it’s most appropriate for apps that need more fine-grained control over the delivery of location events. The precision of the standard location service is needed by navigation apps or any app that requires high-precision location data or a regular stream of updates. Because this service typically requires the location-tracking hardware to be enabled for longer periods of time, higher power usage can result.
+To use the standard location service, create an instance of the `CLLocationManager` class and configure its `desiredAccuracy` and `distanceFilter` properties. To begin receiving location notifications, assign a delegate to the object and call the `startUpdatingLocation` method. As location data becomes available, the location manager notifies its assigned delegate object. If a location update has already been delivered, you can also get the most recent location data directly from the `CLLocationManager` object without waiting for a new event to be delivered. To stop the delivery of location updates, call the `stopUpdatingLocation` method of the location manager object.
+
+### Maps and MapKit:
+Maps help users visualize geographical data in a way that is easy to understand. 
+
+Provided by the `MapKit` framework
+
+> MapKit is Apple’s framework designed to display map or satellite imagery directly from your app’s interface, annotate/placemark areas of interest and determine information on map coordinates. 
+
+Mapkit
+
+- Supports both the display and notation of maps similar to those found in the Maps app.
+- Knowing the user’s geographic location can improve the quality of your application’s dissemination of information.
+- Apps with navigation features at the heart of their architecture often use location services to monitor user’s position and generate updates. You can also use location services to enable social connections among nearby users.
+
+Cool things you can do with mapkit if you’re interested in some pizazz: 
+
+- Add annotations and overlays to the map to call out points of interest or user destinations
+- Provide text completion for users querying a particular point of interest
+- Make travel directions available to users
+
+#### Displaying Maps
+The Map Kit framework lets you embed a fully functional map interface into your app. The map support provided by this framework includes many features of the Maps app in both iOS and OS X. You can display standard street-level map information, satellite imagery, or a combination of the two. You can zoom, pan, and pitch the map programmatically, display 3D buildings, and annotate the map with custom information. The Map Kit framework also provides automatic support for the touch events that let users zoom and pan the map.
+To use the features of the Map Kit framework, turn on the Maps capability in your Xcode project (doing so also adds the appropriate entitlement to your App ID). Note that the only way to distribute a maps-based app is through the iOS App Store or Mac App Store.
+
+How you specify data points on a map depends on how you intend to use them. Map Kit supports three basic coordinate systems for specifying map data points:
+* A map coordinate is a latitude and longitude on the spherical representation of the Earth. Map coordinates are the primary way of specifying locations on the globe. You specify individual map coordinate values using the `CLLocationCoordinate2D` structure. You can specify areas using the `MKCoordinateSpan` and `MKCoordinateRegion` structures.
+* A map point is an x and y value on the Mercator map projection. Map points are used for many map-related calculations instead of map coordinates because they simplify the mathematics involved in the calculations. In your app, you use map points primarily when specifying the shape and position of custom map overlays. You specify individual map points using the `MKMapPoint` structure. You can specify areas using the `MKMapSize`and `MKMapRect` structures.
+* A point is a graphical unit associated with the coordinate system of a view object. Map points and map coordinates must be mapped to points before drawing custom content in a view. You specify individual points using the `CGPoint`structure. You can specify areas using the `CGSize`and `CGRect`structures.
+In most situations, the coordinate system you should use is predetermined by the Map Kit interfaces you are using. When it comes to storing actual data in files or inside your app, map coordinates are precise, portable, and the best option for storing location data. Core Location also uses map coordinates when specifying location values.
+
+#### Adding a Map View to Your User Interface
+The MKMapView class is a self-contained interface for presenting map data in your app: It provides support for displaying map data, managing user interactions, and hosting custom content provided by your app. Never subclass MKMapView. Instead, embed it as-is into your app’s view hierarchy.
+Also assign a delegate object to the map. The map view reports all relevant interactions to its delegate so that the delegate has a chance to respond appropriately.
+You can add a map view to your app programmatically or using Interface Builder:
+* To add a map using Interface Builder, drag a Map view object to the appropriate view or window.
+* To add a map programmatically, create an instance of the MKMapView class, initialize it using the initWithFrame: method, and then add it as a subview to your window or view hierarchy.
+Because a map view is a view, you can manipulate it the same way you manipulate other views. You can change its size and position in your view hierarchy, configure its autoresizing behaviors, and add subviews to it. The map view itself is an opaque container for a complex view hierarchy that handles the display of map-related data and all interactions with that data. Any subviews you add to the map view retain the position specified by their frame property and don’t scroll with the map contents. If you want content to remain fixed relative to a specific map coordinate (and thus scroll with the map itself), you must use annotations or overlays as described in Annotating Maps.
+
+We need to import the MapKit framework in our ViewController to load the map. Voila! A fully interactive and ready to use map. 
+
+Oh what’s that you say? You want to focus your map? Okay sure...
+
+To control the map view, you must create an outlet for it in `ViewController.swift`.
+
+```
+let regionRadius: CLLocationDistance = 1000
+func centerMapOnLocation(location: CLLocation) {
+  let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 
+    regionRadius, regionRadius)
+  mapView.setRegion(coordinateRegion, animated: true)
+}
+```
+The location argument is the center point. The region will have north-south and east-west spans based on a distance of regionRadius.
+
+`setRegion(_:animated:)` tells mapView to display the region. The map view automatically transitions the current view to the desired region with a neat zoom animation, with no extra code required!
+
+centerMapOnLocation(location: initialLocation)
+
+#### Displaying Items on Map
+
+##### User Location
+
+User Location Authorization
+This app doesn’t need to ask the user for authorization to access their location, but it’s something you might want to include in your other MapKit-based apps.
+In ViewController.swift, add the following lines:
+
+In ViewController.swift, add the following lines:
+```
+let locationManager = CLLocationManager()
+func checkLocationAuthorizationStatus() {
+  if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+    mapView.showsUserLocation = true
+  } else {
+    locationManager.requestWhenInUseAuthorization()
+  }
+}
+
+override func viewDidAppear(_ animated: Bool) {
+  super.viewDidAppear(animated)
+  checkLocationAuthorizationStatus()
+}
+```
+Here, you create a CLLocationManager to keep track of your app’s authorization status for accessing the user’s location. In `checkLocationAuthorizationStatus()`, you “tick” the map view’s Shows-User-Location checkbox if your app is authorized; otherwise, you tell locationManager to request authorization from the user.
+
+Note: The locationManager can make two kinds of authorization requests: `requestWhenInUseAuthorization` or `requestAlwaysAuthorization`. The first lets your app use location services while it is in the foreground; the second authorizes your app whenever it is running. Apple’s documentation discourages the use of “Always”:
+
+Requesting “Always” authorization is discouraged because of the potential negative impacts to user privacy. You should request this level of authorization only when doing so offers a genuine benefit to the user.
+
+#### Don't forget to set up your Info.plist !
+There’s just one more authorization-related task you need to do – if you don’t, your app won’t crash but the locationManager’s request won’t appear. To get the request to work, you must provide a message explaining to the user why your app wants to access their location.
+In Info.plist, open Information Property List. Hover your cursor over the up-down arrows, or click on any item in the list, to display the + and – symbols, then click the + symbol to create a new item. Scroll down to select Privacy – Location When In Use Usage Description, then set its Value to something like 'To show you cool things nearby' we also need to select Privacy - Location WhenInUseAndAlways Usage Description.
+
+
+#### Simulating a Location for testing
+
+[`Check out this link!`](https://blackpixel.com/writing/2016/05/simulating-locations-with-xcode-revisited.html)
+
+#### Further Reading
+
+[`Apple Programming Guide`](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/LocationAwarenessPG/Introduction/Introduction.html%23//apple_ref/doc/uid/TP40009497-CH1-SW1)
+[`WWDC on what's new in MapKit`](https://developer.apple.com/videos/play/wwdc2017/237/)
+[`Build a run-tracker app using CoreLocation Ray Wenderlich`](https://www.raywenderlich.com/73984/make-app-like-runkeeper-part-1)
+
+
+
+
