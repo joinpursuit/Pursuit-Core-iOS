@@ -60,21 +60,6 @@ $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 ```
 
-### Sublime
-
-Sublime Text is a text editor useful for editing files outside of Xcode, and without the word processing formatting overhead of applications like TextEdit, Word or Google Docs. Eventually you will need to make short edits to plain text files. We will also use sublime for handling interactive git message editing.
-
-Dowload and install [Sublime Text](https://www.sublimetext.com/). Once it's up and running 
-
-#### Sublime as git editor
-
-https://gist.github.com/geekmanager/9939cf67598efd409bc7
-
-```bash
-ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
-git config --global core.editor "sublime -n -w"
-```
-
 ### Canvas
 
 [Canvas](https://canvas.instructure.com/courses/1212372) is our key organizational tool. You'll find a schedule of lessons and assignments in it.
@@ -82,12 +67,6 @@ git config --global core.editor "sublime -n -w"
 You should have received an email already from Canvas asking you to register before you can participate in the class.
 
 If you haven't already please create a new account and make sure you set your Time Zone to "Eastern Time". You can then accept the invitation.
-
-### Piazza
-
-Piazza is our question and answer system.
-
-Follow the link [here](http://www.piazza.com/access_code/fall2017/ac43) to create an account.  Enter the code "ac43".
 
 ### Slack
 
