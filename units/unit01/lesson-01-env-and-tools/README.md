@@ -62,7 +62,7 @@ $ git config --global user.email johndoe@example.com
 
 ### Canvas
 
-[Canvas](https://canvas.instructure.com/courses/1212372) is our key organizational tool. You'll find a schedule of lessons and assignments in it.
+[Canvas](https://canvas.instructure.com/courses/1433048/assignments/syllabus) is our key organizational tool. You'll find a schedule of lessons and assignments in it.
 
 You should have received an email already from Canvas asking you to register before you can participate in the class.
 
