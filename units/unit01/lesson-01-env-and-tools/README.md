@@ -24,6 +24,10 @@
 
 ---
 
+### Apple Developer Account 
+
+The free tier Apple developer account enables most of Apple development features except a few including deploying applications to the App Store and configuring Push Remote Notifications. The cost of the Paid membership is $99 per year. Sign up and create a developer account here [https://developer.apple.com/programs/how-it-works/].
+
 ### Xcode
 
 1. From your Macbook, open the App Store.
