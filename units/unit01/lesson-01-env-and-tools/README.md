@@ -7,7 +7,7 @@
 
 ### Readings
 1. [Marty Aveton's (C4Q 3.2 graduate) Key Resources](https://medium.com/@MartianAviary/ten-key-resources-for-beginner-ios-devs-caba2b83f67c)
-1. [Terminal](https://www.imore.com/how-use-terminal-mac-when-you-have-no-idea-where-start)
+1. [Terminal](https://github.com/joinpursuit/AC_4_Web/blob/master/units/fundamentals/lessons/terminal/cheat_sheet.md)
 1. [UNIX Shell](https://en.wikipedia.org/wiki/Shell_(computing))
 
 #### Resources
