@@ -72,14 +72,14 @@ If you haven't already please create a new account and make sure you set your Ti
 
 Slack is our less-formal, more immediate messaging/chat app. It should be used for quick short term communication and is not preferred for anything you would want to save long term.
 
-1. To sign up for slack go to this [link](https://join.slack.com/t/c4q-accesscode-4-3/shared_invite/MjQxMDE5MTkxNjcxLTE1MDUyMzMwMDAtNzBjMmFjZjI4Mw). 
+1. Join the pursuit-core.slack.com workspace [link](http://pursuit-core.slack.com). 
 2. You will be prompted to enter your email address. Enter it and hit the green button.
 3. Check your email for the confirmation and click "Confirm Email".
 4. Enter your name and choose a user name.
 5. Create a password.
 6. You should be brought to the web app, ready to go!
 7. Download and install desktop client from http://slack.com
-8. Optionally install the mobile client.
+8. Optionally install the mobile client on your iPhone or Android phone.
 
 ### Github
 
