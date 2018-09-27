@@ -53,7 +53,7 @@ Let's see what Xcode's Playgrounds are all about.
 1. Follow the lesson in the playground.
 1. Return to the iBook and complete the Check Your Understanding and finish the chapter.
 
-### Git
+### Github
 
 Git is a source control system that greatly facilitates collaboration on coding projects. We interact with it mainly in Terminal. Both Terminal and Git require some explicit attention to learn and should not be considered outside the scope of your work.
 
