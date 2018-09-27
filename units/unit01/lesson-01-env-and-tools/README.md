@@ -25,6 +25,18 @@
 
 ---
 
+## Laptop Account 
+
+If you are using a loaner laptop we suggest you create your own user account. 
+
+Creating your own account on a mac: 
+
+1. Choose Apple menu > System Preferences, then click Users & Groups.
+1. Click the lock icon to unlock it, then enter an administrator name and password.
+1. Click the Add button below the list of users.
+1. Click the New Account pop-up menu, then choose a type of user. ...
+1. Enter a full name for the new user.
+
 ### Apple Developer Account 
 
 The free tier Apple developer account enables most of Apple development features except a few including deploying applications to the App Store and configuring Push Remote Notifications. The cost of the Paid membership is $99 per year. Sign up and create a developer account [here](https://developer.apple.com/programs/how-it-works/).
