@@ -12,6 +12,7 @@
 
 #### Resources
 
+1. [The Swift Programming Language Guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
 1. [Intro to App Development with Swift - Apple](https://itunes.apple.com/us/book/intro-to-app-development-with-swift/id1118575552?mt=11)
 1. [Git configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
 
