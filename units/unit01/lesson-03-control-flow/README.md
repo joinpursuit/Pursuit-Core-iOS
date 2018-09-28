@@ -484,5 +484,3 @@ default:
 
 1. Create enough tuples of the (String, Int, Int) type to to hit every case in the switch above.
 1. Add a case that matches all people named "Agnes". How does the placement of the case affect the output?
-
-
