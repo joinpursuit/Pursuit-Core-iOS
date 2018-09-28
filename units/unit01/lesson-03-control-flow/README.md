@@ -13,9 +13,7 @@
 
 ### Reading
 
-1. Swift Programming: The Big Nerd Ranch Guide, Chapter 3, Conditionals
 1. [Swift Language Reference, Control Flow - Apple](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ControlFlow.html#//apple_ref/doc/uid/TP40014097-CH9-ID120) Seek to **Conditional Statements**
-1. Swift Programming: The Big Nerd Ranch Guide, Chapter 5, Switch (pp. 35-39)
 1. [Swift Language Reference, Control Flow - Apple](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ControlFlow.html#//apple_ref/doc/uid/TP40014097-CH9-ID120) Seek to **Conditional Statements > Switch**
 1. [Tuples - Apple's Swift Reference](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Types.html#//apple_ref/doc/uid/TP40014097-CH31-ID448])
 1. [Tuples - Apple's Swift Guide](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309)
