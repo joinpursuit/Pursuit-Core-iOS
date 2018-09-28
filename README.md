@@ -1,4 +1,4 @@
-# Access Code 5.3: Mobile Development with iOS
+# Pursuit Core 5.3: Mobile Development with iOS
 
 ## Welcome!
 
