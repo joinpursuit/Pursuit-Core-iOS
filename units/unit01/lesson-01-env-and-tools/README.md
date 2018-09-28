@@ -43,7 +43,7 @@ The free tier Apple developer account enables most of Apple development features
 
 ### Xcode
 
-If you haven't Xcode installed then proceed to the installation instructions below: 
+If you haven't installed Xcode, proceed to the installation instructions below: 
 
 1. From your Macbook, open the App Store.
 2. Search for *Xcode*.
