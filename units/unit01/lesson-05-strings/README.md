@@ -5,7 +5,6 @@
 To be able to use the fundamental data type, `String` by performing simple operations like concatenation & character printing, and to be able to understand what Unicode is and how to print and manipulate Unicode Characters.
 
 ### Readings
-1. Swift Programming: The Big Nerd Ranch Guide, Chapter 7, Strings
 1. [Swift Language Reference, Strings and Characters](https://developer.apple.com/documentation/swift/string)
 1. [What is Unicode?](http://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16)
 1. [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](http://www.joelonsoftware.com/articles/Unicode.html)
@@ -217,6 +216,11 @@ Separator signifies what multiple print statements will be separated by
 
 Terminator signifies what will happen after the whole print statement executes
 
+To print a value without a line break after it, pass an empty string as the terminator—for example:
+
+```swift
+print(someValue, terminator: "")
+```
 ### 11. Intro to Unicode
 
 **Question**: Who speaks a language other than English? That uses characters other than those that are found in English? Or in the Roman alphabet?
