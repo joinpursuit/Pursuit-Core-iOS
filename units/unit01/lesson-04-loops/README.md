@@ -9,7 +9,6 @@
 
 ### Readings
 
-1. Swift Programming: The Big Nerd Ranch Guide, Chapter 6, Loops
 1. Apple's [Swift Language Reference, Flow Control](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/ControlFlow.html)
 
 #### Vocabulary
