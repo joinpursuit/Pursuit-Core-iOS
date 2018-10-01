@@ -96,9 +96,9 @@ var isLoggedIn = true
 Usually Swift will infer the type from an assignment but there's also a way to explicitly note the type. This is called type annotations. Even though the assignment is the preferred way to define type this form is both good to know and will come back later in function definitions.
 
 ```swift
-var welcomeMessage: String
-var isLoggedIn: Bool
-var numberOfLegos: Int
+var welcomeMessage: String = "Welcome Home"
+var isLoggedIn: Bool = false
+var numberOfLegos: Int = 293
 ```
 
 #### Exercise - Type Annotations
