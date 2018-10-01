@@ -70,7 +70,11 @@ Let's see what Xcode's Playgrounds are all about.
 
 ### Github
 
-Git is a source control system that greatly facilitates collaboration on coding projects. We interact with it mainly in Terminal. Both Terminal and Git require some explicit attention to learn and should not be considered outside the scope of your work.
+Github is a source control system that greatly facilitates collaboration on coding projects. Github is a hosted git repository. It serves as a centralized place to collaborate on and share code.
+
+[Create a github account](http://github.com) if you don't already have one.
+
+We interact with it mainly in Terminal. Both Terminal and Git require some explicit attention to learn and should not be considered outside the scope of your work.
 
 Git should already be installed on your machine but we should configure it. Run the following commands, one at a time and with correct information from the terminal, leaving out the dollar sign prompt.
 
@@ -78,6 +82,8 @@ Git should already be installed on your machine but we should configure it. Run 
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 ```
+
+[Github Hello World project - an introduction to the Github platform](https://guides.github.com/activities/hello-world/#commit)
 
 ### Canvas
 
@@ -100,15 +106,9 @@ Slack is our less-formal, more immediate messaging/chat app. It should be used f
 7. Download and install desktop client from http://slack.com
 8. Optionally install the mobile client on your iPhone or Android phone.
 
-### Github
-
-Github is a hosted git repository. It serves as a centralized place to collaborate on and share code.
-
-[Create a github account](http://github.com) if you don't already have one.
-
 ### Terminal
 
-*Terminal* is a program on your Mac that gives a text based interface to your computer. This is sometimes called a CLI for command line interface. Since the Mac's operating system (OS) is a version of UNIX much of what you discover about UNIX will be applicable to the Mac's command line.
+*Terminal* is a program on your Mac that gives a text based interface to your computer. This is sometimes called a CLI for command line interface. Since the Mac's operating system (macOS) is a version of UNIX much of what you discover about UNIX will be applicable to the Mac's command line.
 
 An example of a command typed into Terminal. 
 
