@@ -38,29 +38,3 @@ There is a growing divide between companies that use the traditional whiteboardi
 4. Code your solution
 5. Test and refactor your code
 
-## 4. Example questions (Demo)
-
-1. Find the second second smallest integer in an array of integers.
-2. Determine if a given string is a palindrome
-
-
-## 5. Practice questions
-
-Get into pairs and altenate with the following quesitons.  One person should be the interviewer, and one person should be the interviewee.
-
-1. Find the sum of the first five even numbers in an array of Ints (~ 20 minutes)
-2. Find the sum of all elements in an array except for the corners (~ 20 minutes)
-
-Come back to class to review.
-
-Find a new partner and split up to work on the following two questions:
-
-3. Find all elements in an array that appear more than once (~20 minutes)
-4. Determine if a given string has all the letters in the alphabet in it. (~20 minutes)
-
-Bonus questions:
-
-1. Find the sum of the diagonals of a square, two-dimensional array of Ints
-2. Given a square, two dimensional array of Ints, find the row or column that has the greatest sum
-3. Remove all duplicates from an array
-4. Given an array of Ints, find the two numbers that when multiplied together give the greatest product
