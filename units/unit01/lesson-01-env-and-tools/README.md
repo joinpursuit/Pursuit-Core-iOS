@@ -83,6 +83,8 @@ $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 ```
 
+[Github Hello World project - an introduction to the Github platform](https://guides.github.com/activities/hello-world/#commit)
+
 ### Canvas
 
 [Canvas](https://canvas.instructure.com/courses/1433048/assignments/syllabus) is our key organizational tool. You'll find a schedule of lessons and assignments in it.
