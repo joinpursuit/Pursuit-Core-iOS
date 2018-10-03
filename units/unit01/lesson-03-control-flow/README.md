@@ -3,7 +3,7 @@
 
 ### Objective
 
-* To understand and use `if / then / else` constructs
+* To understand and use `if / else` constructs
 * To apply boolean logic to conditionals 
 * To understand and use the ternary operator ` ? : `
 * To understand and use `switch`
