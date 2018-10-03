@@ -342,7 +342,7 @@ Simplify the following expressions [(PEMDAS Refresher)](https://www.mathsisfun.c
 
 4 * (-4) - 2 // -18
 
-4 + 5 ^ 3 * 6 / 3 // 15
+4 + 5 ^ 3 * 6 / 3 // 254 - note exponentiation takes precedence 
 ```
 </details>
 
