@@ -218,16 +218,8 @@ let currentTemp = 65
     </details>
 
 
-### 9. Triangle
 
-Consider this diagram.
-
-![Triangle tree](images/triangle_tree.png)
-
-It models an algorithm for determining what kind of triangle we have based on the length of its sides. Convert this into a series of `if`s, printing a message when we've determined triangle type.
-
-
-### 10. Switch Introduction
+### 9. Switch Introduction
 
 The `switch` statement is a conditional that is most useful when the set of possible values we're comparing to is known. Swift's ```switch``` statement is more powerful than its predecessors in other languages so it can be used more widely. While `if/else` and `switch` can be used to implement the same logic, in many cases `switch` is more readable.
 
@@ -239,7 +231,7 @@ An image like this helps to link the word "switch" to the `switch` statment. We 
 
 The **type** of the cases and the operand on the `switch` line must agree. This makes sense and is consistent with our experience with Swift and its strong typing. As long as we can compare two instances of that type we can use it in a `switch`.
 
-### 11. `switch`
+### 10. `switch`
 
 ```swift
 switch aValue {
@@ -313,7 +305,7 @@ default:
 print(description)
 ```
 
-### 12. `switch` with `Range` 
+### 11. `switch` with `Range` 
 
 ```switch``` can also match values in ranges. This introduces the ```Range``` type. Let's look at a range by itself before we see it in the context of ```switch```. The ```Range``` is always defined by two numbers: the upper bound and the lower bound. There are two forms, one that *doesn't* include the higher bound and one that does. 
 
@@ -371,7 +363,7 @@ if temperatureInFahrenheit <= 32 {
 // Prints "It's really warm. Don't forget to wear sunscreen."
 ```
 
-### 13. Tuples
+### 12. Tuples
 
 The ```switch``` statement also allows for matching on tuples. A tuple is a grouping of a set of related variables into one. Let's look at Tuples on their own before we use them within a `switch`.
 
@@ -453,7 +445,7 @@ print(hollyInfo.name)
 
 * Declare some tuples and inspect their component values.
 
-#### 14. ```switch``` with Tuples
+#### 13. ```switch``` with Tuples
 
 So let's look at a ```switch``` with a tuple. Remember how a tuple's type is a collection of types that follow a specific pattern. Swift uses pattern matching in its `switch` cases to match specific combinations of tuple elements.
 
@@ -479,7 +471,7 @@ default:
 }
 ```
 
-### 15. Exercises
+### 14. Exercises
 
 1. Create enough tuples of the (String, Int, Int) type to to hit every case in the switch above.
 1. Add a case that matches all people named "Agnes". How does the placement of the case affect the output?
