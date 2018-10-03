@@ -131,7 +131,7 @@ Adapting the conditional above we can rewrite it using the ternary if.
 
 ```
 let temperatureInFahrenheit = 40
-let message temperatureInFahrenheit <= 32 ? "cold" : "warm"
+let message = temperatureInFahrenheit <= 32 ? "cold" : "warm"
 ```
 
 
