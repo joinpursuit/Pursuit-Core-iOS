@@ -25,7 +25,6 @@
 
 #### Vocabulary
 - **block** - One or more lines of code inside curly braces, `{ }`.
-- **branch** - A path of execution in a program.
 - **dynamic** - Changing, responding to its environment. Opposite of static.
 - **branch** - A path of execution in a program.
 - **tuple** - A group of zero or more values represented as one value. A tuple is defined by a comma-separated list of types, enclosed in parentheses.
