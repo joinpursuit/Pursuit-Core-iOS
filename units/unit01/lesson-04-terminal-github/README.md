@@ -30,6 +30,7 @@ Terminal comes shipped with the macOS operating system. It provides text-based o
 | mkdir GitIntro | create a folder named GitIntro |
 | cd GitIntro | navigate to the newly created GitIntro folder |
 | echo "Github Introduction" >> README.md | create a markdown file called README.md |
+| touch testFile.txt | also creates a file with a given extension - however won't populate it with text as above |
 | open README.md | open the README.md file for editing |
 
 ## Git Commands  
