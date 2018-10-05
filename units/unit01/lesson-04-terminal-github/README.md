@@ -32,6 +32,7 @@ Terminal comes shipped with the macOS operating system. It provides text-based o
 | echo "Github Introduction" >> README.md | create a markdown file called README.md |
 | touch testFile.txt | also creates a file with a given extension - however won't populate it with text as above |
 | open README.md | open the README.md file for editing |
+| rm -rf fileName.txt | to delete a file from the file system |
 
 ## Git Commands  
 
