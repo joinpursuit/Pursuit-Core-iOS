@@ -12,6 +12,9 @@ This is where you'll find some common resources as well as full lessons.
 1. [Unit 4 - Persistence, Animation, Autolayout](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/units/unit04)
 1. [Unit 5 - Core Data, Firebase & Solo Portfolio Project](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/units/unit05)
 
+## Apple - Swift Language Guide
+[Swift Language Guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)  
+
 ## Style Guide 
 
 [RayWenderlich Swift Style Guide](https://github.com/raywenderlich/swift-style-guide#spacing)
