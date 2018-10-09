@@ -138,15 +138,8 @@ Methods
 - reverse()
 - popLast()
 
-### 8. Computer Science Preview: How do arrays get bigger?
 
-
-When we instantiate an Array, we do so with a fixed amount of size.  We need to store it somewhere, after all.  But what happens when we exceed the limits of the space we have allocated?  What do we think could happen?
-
-
-Let's check in a Playground.
-
-### 9. Arrays are Value Types
+### 5. Arrays are Value Types
 
 Arrays copy on assignment because they are value types.
 ```swift
