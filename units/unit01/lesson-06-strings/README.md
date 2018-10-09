@@ -5,8 +5,8 @@
 To be able to use the fundamental data type, `String` by performing simple operations like concatenation & character printing, and to be able to understand what Unicode is and how to print and manipulate Unicode Characters.
 
 ### Readings
-1. [Swift Language Reference, Strings and Characters](https://developer.apple.com/documentation/swift/string)
-1. [What is Unicode?](http://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16)
+1. [Apple Documentation - String](https://developer.apple.com/documentation/swift/string)
+1. [Stackoverflow - What is Unicode?](http://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16)
 1. [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](http://www.joelonsoftware.com/articles/Unicode.html)
 
 #### Further Readings
@@ -102,9 +102,9 @@ listeningTo += ", Trumpeter"
 We can also use the *append* method to add Strings together
 
 ```swift
-var name = "Ben"
-name.append(" Stone")
-name == "Ben Stone" //true
+var name = "John"
+name.append(" Appleseed")
+name == "John Appleseed" //true
 ```
 
 ### 6. Strings are Value Types
@@ -169,7 +169,7 @@ Just like you saw iterating over a *Range* using a for loop, you can iterate ove
 
 ```swift
 for letter in nextMovie {
-    print(letter)
+print(letter)
 }
 ```
 
@@ -250,7 +250,7 @@ Put in more technical terms we say each character in Swift is an *extended graph
 
 ```swift
 for s in nextMovie.unicodeScalars {
-    print("Scalar: \(s) (\(s.value))")
+print("Scalar: \(s) (\(s.value))")
 }
 ```
 
@@ -288,9 +288,9 @@ Do the same as the previous exercise, except find combining scalars and their pr
 var word = "cafe"
 print("the number of characters in \(word) is \(word.count)")
 // Prints "the number of characters in cafe is 4"
- 
+
 word += "\u{301}"    // COMBINING ACUTE ACCENT, U+0301
- 
+
 print("the number of characters in \(word) is \(word.count)")
 // Prints "the number of characters in café is 4"
 ```
@@ -368,6 +368,8 @@ Print the second to last character in "adiós"
 
 Print the last character in "🏆☕🤷"
 
+**Reading** - [Stackoverflow - How does String.Index work in Swift?](https://stackoverflow.com/questions/39676939/how-does-string-index-work-in-swift)  
+
 
 We can also define a ```Range``` of ```Index```
 
@@ -412,12 +414,9 @@ let iterableString = "Somewhere over the rainbow"
 
 ```swift
 let iterableString = "Somewhere over the rainbow"
-let stringIndices = iterableString.indices
 
-for index in stringIndices {
-    let character = iterableString[index]
-    print(character)
-}
+for index in iterableString.indices {
+  print(iterableString[index], terminator:"")
 }
 ```
 </details>
@@ -428,15 +427,10 @@ Print out each Character in a string using a ```while``` loop.
 <summary>Solution</summary>
 
 ```swift
-let startIndex = iterableString.startIndex
-let endIndex = iterableString.endIndex
-var currentIndex = startIndex
-while currentIndex < endIndex {
-	let currentChar = iterableString[currentIndex]
-	print(currentChar)
-	
-	let nextIndex = iterableString.index(currentIndex, offsetBy: 1)
-	currentIndex = nextIndex
+var currentIndex = iterableString.startIndex
+while currentIndex != iterableString.endIndex {
+  print(iterableString[currentIndex], terminator:"")
+  currentIndex = iterableString.index(after: currentIndex)
 }
 ```
 </details>
@@ -452,12 +446,12 @@ For example, `LATIN SMALL LETTER E WITH ACUTE (U+00E9)` is canonically equivalen
 ```swift
 // "Voulez-vous un café?" using LATIN SMALL LETTER E WITH ACUTE
 let eAcuteQuestion = "Voulez-vous un caf\u{E9}?"
- 
+
 // "Voulez-vous un café?" using LATIN SMALL LETTER E and COMBINING ACUTE ACCENT
 let combinedEAcuteQuestion = "Voulez-vous un caf\u{65}\u{301}?"
- 
+
 if eAcuteQuestion == combinedEAcuteQuestion {
-    print("These two strings are considered equal")
+print("These two strings are considered equal")
 }
 // Prints "These two strings are considered equal"
 ```
@@ -466,11 +460,11 @@ Conversely, `LATIN CAPITAL LETTER A (U+0041, or "A")`, as used in English, is no
 
 ```swift
 let latinCapitalLetterA: Character = "\u{41}"
- 
+
 let cyrillicCapitalLetterA: Character = "\u{0410}"
- 
+
 if latinCapitalLetterA != cyrillicCapitalLetterA {
-    print("These two characters are not equivalent.")
+print("These two characters are not equivalent.")
 }
 // Prints "These two characters are not equivalent."
 ```
@@ -574,4 +568,5 @@ print(rick)
 
 
 ```
+
 
