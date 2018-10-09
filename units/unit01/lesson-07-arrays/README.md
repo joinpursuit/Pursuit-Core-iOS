@@ -169,7 +169,7 @@ print(planetas == planets) //is now false
 
 ---
 
-### 10. Array Modification Methods In Depth
+### 6. Array Modification Methods In Depth
 
 #### Use `.append(_:)` to add new elements to end of array
 ```swift
@@ -214,7 +214,7 @@ planets.remove(at: planets.count - 1)
 </details>
 
 ---
-### 11. Subscript Access in Detail
+### 7. Subscript Access in Detail
 
 ```swift
 // single
@@ -250,7 +250,7 @@ planets[6] = "Urectum" // https://theinfosphere.org/Urectum
 
 ---
 
-### 12. Iterating through an Array
+### 8. Iterating through an Array
 
 Just like we wanted to access each Character in a String, we often want to access each element in an Array.  Fortunately, Arrays are much easier to traverse.
 
