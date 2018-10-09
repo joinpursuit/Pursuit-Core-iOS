@@ -50,22 +50,14 @@ var availableJerseyNumbers = 3..<31
 We'll need something more robust that can keep track of a *collection* of Ints.
 
 
-### 5. Initalizing an Array
+### 2. Initalizing an Array
 
-Note: p.75 of the Big Nerd Ranch book shows an old syntax for creating and initializing an Array.
-
-```swift
-var oldSyntaxArray: Array<String>
-```
-
-In general do not use the above annotation.  Instead, use the syntax below to intialize an Array.
+Use the syntax below to intialize an Array with type annotation.
 
 ```swift
 var bucketList: [String]
 ```
-
-This illustrates a core challenge for all software development that's particularly noticeable in iOS at this time: the need to improve the technology, sometimes at the expense of previous versions.
-
+This is a way to initialize an Array with a literal.
 
 ```swift
 // initialize with Array literals
