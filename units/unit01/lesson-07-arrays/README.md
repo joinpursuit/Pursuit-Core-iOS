@@ -23,7 +23,7 @@ So far, the types we have seen have a fairly straightforward means of storage.
 
 How is a Bool stored in memory?
 
-How is an Int8 stored in memory?
+How is an Int stored in memory?
 
 With the exception of String, we only have to worry about storing a single thing somewhere in the computer.  But what happens when we want to store many Integers instead of just one?  Without using an Array, how could we store multiple Ints?
 
@@ -80,13 +80,11 @@ var anotherThreeDoubles = Array(repeating: 0.0, count: 3)
 
 
 
-### 6. Accessing values inside an array.
+### 3. Accessing values inside an array.
 
-Know that we now how to make an array, how can we use it?  One of the common things we want to do is access a particular *element* of an array.  We saw from the CS introduction above that we can access things quickly, so we should definitely be comfortable with it.
+Know that we now how to make an array, how can we use it?  One of the common things we want to do is access a particular *element* of an array.
 
-Remember from Strings that we can use the subscript notation [] to access a particular Character in an Array.
-
-We can use the same subscript notation for Arrays.
+We can use subscript notation for Arrays to access a particular element.
 
 
 ```swift
@@ -111,7 +109,7 @@ Print the second to last planet
 Print the middle planet (What are different ways this can be interpreted?)
 
 
-### 7. Useful Array Library Methods
+### 4. Useful Array Library Methods
 
 Other than accessing characters directly, the Swift Standard Library gives us some powerful tools for manipulating arrays
 
