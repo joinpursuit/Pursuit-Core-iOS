@@ -278,7 +278,7 @@ Practice: Use a while loop to print out each string in ```myFavoriteStrings```
 
 
 
-### 13. Array Equality
+### 9. Array Equality
 
 Arrays support the ```==``` operator.
 
@@ -291,13 +291,13 @@ galileanMoons == moonsOfJupiter //true
 Practice: Without using the ```==``` operator to compare Arrays, write code that prints out if galilieanMoons is equal to moonsOfJupiter
 
 
-### 14. Immutable Arrays
+### 10. Immutable Arrays
 
 Try to declare arrays as constants (using ```let```) if you know you will not change them.
 This allows the Swift compiler to make optimizations.
 
 
-### 15. Arrays and Strings
+### 11. Arrays and Strings
 
 Because Arrays are now our favorite type, we can even turn a String into an Array!
 
@@ -308,7 +308,7 @@ let myStrAsArray = Array(myStr.characters)
 
 Now we don't need to worry about String indexing!
 
-### 16. Arrays can be multidimensional
+### 12. Arrays can be multidimensional
 
 ```swift
 let theMatrix = [[1, 2, 3],
