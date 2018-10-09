@@ -17,14 +17,7 @@
 
 ---
 
-### 1. Warm up - Strings Review
-
-
-var goodMorning: String = "Good morning!"
-
-Write three different ways to print out all the characters in goodMorning
-
-### 2. The case for Arrays
+### 1. The case for Arrays
 
 So far, the types we have seen have a fairly straightforward means of storage.
 
@@ -55,104 +48,6 @@ var availableJerseyNumbers = 3..<31
 ```
 
 We'll need something more robust that can keep track of a *collection* of Ints.
-
-### 3. What is an Array?
-
-An array is a way of solving the problems from above.  By using arrays, we can store as many Ints (or any other type) as we want and manipulate the collection.  But how can we store all of this information?
-
-Storing one Int is easy.  Let's use UInt8 for out example.
-
-|Byte 0|
-|---|
-|[0 0 0 0 1 0 1 0]|
-|First Int = 10|
-
-
-
-Now let's add another Int to out array
-
-|Byte 0|Byte 1|
-|---|---|
-|[0 0 0 0 1 0 1 0]| [1 1 1 1 1 1 1 0] |
-|First Int = 10|Second Int = 254|
-
-And one more:
-
-|Byte 0|Byte 1|Byte 2|
-|---|---|---|
-|[0 0 0 0 1 0 1 0]| [1 1 1 1 1 1 1 0] | [0 0 0 1 0 0 0 1] |
-|First Int = 10|Second Int = 254| Third Int = 17 |
-
-
-We can see how we store information.  But how does the computer know how to access it?
-
-### 4. Computer Science Preview: Accessing information
-
-If I want to go the the first Int, it's just whatever is at the beginning of my array.  How can I get to the third Int?  How does the computer know where it is stored?
-
-<details>
-<summary>Answer</summary>
-
-Because each UInt8 is 8 bits, we can skip directly to Byte 2  and then the 8 bits from that position.
-
-</details>
-
-####
-This fast travel is the key to why arrays are so useful.  To get to any position, I just need to multiple the *element* I want to get to by how many bits it takes to store each element.  Let's do a few to pratice.
-
-I have an array of UInt8 and want to get to the 4th element.  What bit or bits do I look at?
-
-
-<details>
-<summary>Answers</summary>
-
-Each UInt8 takes up 1 byte (8 bits) in memory.  To get to the 4th element, I go to Byte 3 and read the bits there.
-
-</details>
-
-####
-I have an array of Int32 and want to get to the 4th element.  What bit or bits do I look at?
-
-
-<details>
-<summary>Answers</summary>
-
-Each Int32 takes up 4 bytes (32 bits) in memory.  To get to the 4th element, I go to Byte 16 and read the bits in Byte 16, Byte 17, Byte 18 and Byte 19.
-
-</details>
-
-####
-I have an array of Int32 and want to get to the 5th element.  What bit or bits do I look at?
-
-
-<details>
-<summary>Answers</summary>
-
-####
-Each Int32 takes up 4 bytes (32 bits) in memory.  To get to the 5th element, I go to Byte 20 and read the bits in Byte 20, Byte 21, Byte 22, and Byte 23.
-
-</details>
-
-####
-From these examples above, we can draw out the generalized way of accessing an element in an array.
-
-ByteToStartAt = (BytesPerThingStored) * (NumberOfTheElementIWantToLookAt - 1)
-
-To access the 5th element of an array of Int32:
-
-ByteToStartAt = (4) * (5 - 1) = 16
-
-To access the 1st element of an array of Int 32:
-
-ByteToStartAt = (4) * (1 - 1) = 0
-
-This means I always know where to go in an array!  
-
-Unlike a String, we don't need to start at the beginning and move one step at a time.  
-
-We can skip ahead directly to whatever element we want to look at.
-
-Now that we understand how an array is stored, let's see how to manipulate it in Swift.
 
 
 ### 5. Initalizing an Array
