@@ -19,3 +19,6 @@ This is where you'll find some common resources as well as full lessons.
 
 [RayWenderlich Swift Style Guide](https://github.com/raywenderlich/swift-style-guide#spacing)
 
+## Github and Terminal 
+
+[Github and Terminal Basic Commands](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit01/lesson-04-terminal-github/README.md)
