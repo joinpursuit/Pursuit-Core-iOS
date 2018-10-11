@@ -65,3 +65,4 @@ Terminal comes shipped with the macOS operating system. It provides text-based o
 | [Terminal User Guide](https://support.apple.com/en-md/guide/terminal/welcome/mac) | Apple - Terminal User Guide |
 | [git commands reference](https://git-scm.com/docs) | git commands reference |
 | [Fork a repo](https://help.github.com/articles/fork-a-repo/) | Fork a repo |
+| [Pushing your Xcode Project to Github](https://gist.github.com/alexpaul/71888780c41228b5f3370b8cbd079dad) | Steps to push your Xcode project to Github |
