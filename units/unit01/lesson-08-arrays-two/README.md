@@ -17,6 +17,7 @@ let myArr = [1,5,2,3,194,-32]
 ### Arrays review
 
 [https://www.weheartswift.com/arrays/](https://www.weheartswift.com/arrays/)
+[Apple Documentation - Arrays Documentation](https://developer.apple.com/documentation/swift/array)
 
 
 ### 16. Arrays can be multidimensional
