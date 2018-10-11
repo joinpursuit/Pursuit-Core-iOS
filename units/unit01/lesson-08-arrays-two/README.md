@@ -78,36 +78,3 @@ let newArr = Array(repeating: 5, count: 2)
 3. Given a square array, print out the sum of the border
 4. Given a square array, print out the sum of all elements in odd numbered columns
 5. Given a rectangular array, print out the sum of all elements in even numbered columns
-
-
-# In depth matrix problems
-
-### Tic-Tac-Toe
-Given a tic tac toe board, determine if a player has won or if it's a cat's game.
-
-```
-let TTTboard = 
-[["X", "X", "X"],
-["O", "O", "X"],
-["X", "O", "O"]]
-```
-
-
-
-### Sudoku Solution Checker
-Given a Sudoku board, determine if the board is valid.
-
-The rules can be found [here](http://sudoku.com.au/TheRules.aspx)
-
-```swift
-let validSudokuBoard = 
-[[1,5,2,4,6,9,3,7,8],
-[7,8,9,2,1,3,4,5,6],
-[4,3,6,5,8,7,2,9,1],
-[6,1,3,8,7,2,5,4,9],
-[9,7,4,1,5,6,8,2,3],
-[8,2,5,9,3,4,1,6,7],
-[5,6,7,3,4,8,9,1,2],
-[2,4,8,6,9,1,7,3,5],
-[3,9,1,7,2,5,6,8,4]]
-```
