@@ -70,12 +70,9 @@ print(newArr) // output [9, 9, 9, 9]
 1. Make an array containing 200 copies of the number 9
 1. Make an array containing 20 copies of the string "Hello"
 1. Make a 2-dimensional 5 x 5 array of Ints all set to 0
-
-
-### 18. Solving problems with multidimensional arrays
-
 1. Given a square array, print out all elements
-1. Given a square array, print out the difference of the two diagonals
-1. Given a square array, print out the sum of the border
-1. Given a square array, print out the sum of all elements in odd numbered columns
-1. Given a rectangular array, print out the sum of all elements in even numbered columns
+```swift 
+let squareMatrix = [[6, 4, 4],
+                    [3, 4, 1],
+                    [1, 10, 5]]
+```
