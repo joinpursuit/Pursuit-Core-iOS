@@ -57,11 +57,12 @@ Conceptually, the first index corresponds with the *row* and the second index co
 
 ### 17. Building Arrays
 
-We can use the Array Constructor methods to create new instances of Arrays.
+If you need an array that is preinitialized with a fixed number of default values, use the Array(repeating:count:) initializer.
 
-```
-//Array(repeating: <Value>, count: <Int>)
-let newArr = Array(repeating: 5, count: 2)
+```swift
+// using the array repeating initializer
+let newArr = Array(repeating: 9, count: 4)
+print(newArr) // output [9, 9, 9, 9]
 ```
 
 **Practice:** 
