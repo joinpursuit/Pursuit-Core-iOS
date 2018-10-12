@@ -19,8 +19,17 @@ let myArr = [1,5,2,3,194,-32]
 [We Heart Swift - Arrays Review](https://www.weheartswift.com/arrays/)  
 [Apple Documentation - Arrays Documentation](https://developer.apple.com/documentation/swift/array)
 
+### 13. Let's see some other built-in Array functions 
 
-### 16. Arrays can be multidimensional
+1. contains
+1. min / max
+1. first / last
+1. filter
+1. reverse 
+1. shuffle 
+1. randomElement
+
+### 14. Arrays can be multidimensional
 
 ```swift
 let theMatrix = [[1, 2, 3],
@@ -55,7 +64,7 @@ Conceptually, the first index corresponds with the *row* and the second index co
 
 **Practice**:  Print out the element in each corner, then print out the element in the middle.
 
-### 17. Building Arrays
+### 15. Building Arrays
 
 If you need an array that is preinitialized with a fixed number of default values, use the Array(repeating:count:) initializer.
 
