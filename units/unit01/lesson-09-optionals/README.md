@@ -8,12 +8,8 @@
 
 ### Reading
 
-1. Swift Programming: The Big Nerd Ranch Guide, Chapter 8
 1. [Swift Language Reference, The Basics - Apple](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309) *Seek to optionals* in right hand menu.
 
-#### Further Reading
-
-1. [Swift optionals explained simply](https://hackernoon.com/swift-optionals-explained-simply-e109a4297298) This article is in Swift 2 syntax and becomes increasingly difficult but the box metaphor and illustration is useful.
 
 #### Vocabulary
 
