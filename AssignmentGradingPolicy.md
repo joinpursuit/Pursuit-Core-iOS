@@ -14,14 +14,24 @@ var lateOrRevisionPenalty: Float = 5.0
 switch fellowProjectSubmitted {
 case true:
     if projectSubmissionDate! <= projectDeadlineDate {
-        print("Assignments submitted on time will be graded within one (1) week of submission.")
+        print("Assignments submitted on time will be graded within one (1) week.")
         if fellowProjectGrade <= maxProjectGrade / 2 {
-            print("Assignments submitted on time that receive an initial grade of 50% or less of the maximum score may be revised and resubmitted within one (1) week of initial grading for a maximum grade of \(maxProjectGrade) - \(lateOrRevisionPenalty) points")
+            print("""
+                Assignments submitted on time that receive an initial grade of 50% or less
+                may be revised and resubmitted within one (1) week of initial grading
+                for a maximum grade of \(maxProjectGrade - lateOrRevisionPenalty) points
+                """)
         } else {
-            print("Assignments submitted on time that receive an initial grade that is greater than 50% of the maximum score are not eligible for resubmission.")
+            print("""
+                Assignments submitted on time that receive an initial grade that is greater than 50%
+                are not eligible for resubmission.
+                """)
         }
     } else {
-        print("Assignments submitted late will be graded within one (1) week of \(projectSubmissionDate) for a maximum grade of \(maxProjectGrade) - \(lateOrRevisionPenalty) points.")
+        print("""
+            Assignments submitted late will be graded within one (1) week of \(projectSubmissionDate!)
+            for a maximum grade of \(maxProjectGrade - lateOrRevisionPenalty) points.
+            """)
     }
 case false:
     print("No submission for an assignment will receive a score of 0 points.")
