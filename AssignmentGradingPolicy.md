@@ -19,7 +19,7 @@ case true:
             print("""
                 Assignments submitted on time that receive an initial grade of 50% or less
                 may be revised and resubmitted within one (1) week of initial grading
-                for a maximum grade of \(maxProjectGrade - lateOrRevisionPenalty) points
+                for a maximum grade of \(maxProjectGrade - lateOrRevisionPenalty) points.
                 """)
         } else {
             print("""
@@ -34,7 +34,7 @@ case true:
             """)
     }
 case false:
-    print("No submission for an assignment will receive a score of 0 points.")
+    print("If a fellow does not submit an assignment, they will receive a score of 0 points.")
 }
 ```
 
@@ -43,7 +43,7 @@ case false:
   * Assignments submitted on time that receive an initial grade of 50% or less of the maximum score may be revised and resubmitted within one (1) week of initial grading for a maximum grade of 5 points less than the maximum score.
   * Assignments submitted on time that receive an initial grade that is greater than 50% of the maximum score are not eligible for resubmission.
 * Assignments submitted late will be graded within one (1) week of submission for a maximum grade of 5 points less than the maximum score.
-* No submission for an assignment will receive a score of 0 points.
+* If a fellow does not submit an assignment, they will receive a score of 0 points.
 
 ## Notes
 - Grading policy is subject to change and fellows will be notified of changes.
