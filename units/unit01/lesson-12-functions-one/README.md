@@ -1,61 +1,26 @@
-# Standards
-* Master the use of functions
-
 # Objectives
-Students will be able to:
 * Define and call functions
 * Understand the components of a function signature
 
-### Vocabulary: function, argument, parameter, input, output, define, call
+### Vocabulary: 
+1. function 
+1. argument 
+1. parameter 
+1. input 
+1. output 
+1. define
+1. call
 
 # Resources
-Swift Programming: The Big Nerd Ranch Guide, Chapter 12, Functions
-
 Apple's [Swift Language Reference, Functions](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158)
 
-#Functions
+**Functions**
+
+Functions are self-contained chunks of code that perform a specific task. You give a function a name that identifies what it does, and this name is used to “call” the function to perform its task when needed.
 
 So far, all of the code we've seen is evaluated by starting at the top of the file and reading down.  Conditional statements allowed us to chose *not* to run certain sections, and loops allowed us to run code repeatedly.
 
-Functions present a new way to think about code.  
-
-## 1: Functions in Math
-
-A **function** in math is a set of instructions or relationship between an input and an output.  In math, we use the syntax f(x) to denote a function f that takes one input x.
-
-A simple function is f(x) = 2x
-
-This means that to get from the input to the output, we double it.
-
-**Practice**
-
-Write a function that adds two to a number, then triples it.
-
-Write a function that averages 3 numbers
-
-Write a function that, given a number of bits, tells you how many bytes it represents.
-
-Write a function that, given a number of bits, tells you how many Megabytes it represents.
-
-<details>
-<summary>Answers</summary>
-
-f(x) = (x + 2) * 4
-
-f(x, y, z) = (x + y + z) / 3
-
-f(x) = x / 8
-
-f(x) = x / 8 / 1000
-
-</details>
-
-
-
-Programming languages borrow from this same idea to implement functions.  Let's take a look at the syntax in Swift.
-
-
-## 2: Function Syntax in Swift
+## 1: Function Syntax in Swift
 
 ```swift
 func myFirstFunction() {
@@ -80,7 +45,7 @@ func doubleANumber(number x: Int) -> Int {
 
 Let's take apart each piece
 
-## 3: Anatomy of a Function
+## 2: Anatomy of a Function
 
 - *func* is the special keyword in swift for defining a function
 - *doubleANumber* is the name of our function
@@ -96,7 +61,7 @@ Think of a function like a command.  We give it a series of inputs and it will e
 With the example of doubleANumber(number:) the message we get back is an Int that represents the doubled number.  
 
 
-## 4: Creating our Own Functions
+## 3: Creating our Own Functions
 
 Let's try to write a few functions of our own:
 
@@ -131,7 +96,7 @@ func addBang(to str: String) -> String {
 ```
 </details>
 
-## 5: Using Functions
+## 4: Using Functions
 We've defined some useful functions above.  Let's see how we can make use of them in code.
 
 ```swift
@@ -188,6 +153,7 @@ let average = averageThreeNums(x: firstTest, y: secondTest, z: thirdTest)
 ```
 </details>
 
+</br>
 
 **Practice**
 
@@ -205,13 +171,36 @@ myString = addBang(to: myString)
 ```
 </details>
 
-## 6: Function Parameters as Value Types
+</br>
 
-In the solution above, we had to reset the variable myString.  Why would we not write the code below to solve our problem?
+**Practice** 
+
+Write a function that returns the sum of the numbers in an array.
+
+<details>
+<summary>Solution</summary>
+
+```swift 
+func addNumbers(numbers: [Int]) -> Int {
+  var sum = 0
+  for num in numbers {
+    sum += num
+  }
+  return sum
+}
+addNumbers(numbers: [2, 4, 10, 5]) // returns 21
+```
+
+</details>
+
+## 5: Function Parameters as Value Types
+
+In the solution above, we had to reset the variable myString.  How would we write the code below to solve our problem?
 
 ```swift
 var myString = "Hello there"
 addBand(to: myString)
+print(myString) // is still Hello, there without the ! 
 ```
 
 **Turn and talk**
@@ -223,7 +212,7 @@ A String is a Value Type.  That means it gets copied when we run our function.  
 
 </details>
 
-## 7: Void as a Return Type
+## 6: Void as a Return Type
 
 We've already seen a function that doesn't return anything.  myFirstFunction() just printed out a message.  We wrote the function:
 
@@ -247,7 +236,7 @@ func myFirstFunction() -> () {
 }
 ```
 
-## 8: All Paths Must Return
+## 7: All Paths Must Return
 
 ```swift
 func divide(_ dividend: Int, by divisor: Int) -> Int {
@@ -278,7 +267,7 @@ func divide(_ dividend: Int, by divisor: Int) -> Int {
 
 What are some problems with the result above?  What's a good Swifty way that we could handle this more elegantly?
 
-## 9: Optional Types in Functions
+## 8: Optional Types in Functions
 
 Using Optionals, we can handle the problem of not wanting to return anything, because we had some problem with our input.  We can rewrite the function below:
 
@@ -295,17 +284,21 @@ func safeDivide(_ dividend: Int, by divisor: Int) -> Int? {
 This can be very helpful when we are not sure if we will get a value from the inputs to our function.  We can also have optional types for the parameters.
 
 
-## 10: Default Values
+## 9: Default Values
 
 We can also define a function with a default value.  This is helpful if most of the time we want it to be the same, but want the option to change it later.
 
 ```swift
-func excitedPrint(str: String, terminator: String = "\n") {
-    print(str + "!", terminator: terminator)
+func coffeeOrTea(coffee: Bool, amountOfSugar: Int = 1) {
+  let choice = coffee ? "coffee" : "tea"
+  print("here is your \(choice) with \(amountOfSugar) sugar(s) added")
 }
+
+coffeeOrTea(coffee: false)
+coffeeOrTea(coffee: true, amountOfSugar: 3)
 ```
 
-## 11: Introduction to Problem Solving
+## 10: Introduction to Problem Solving
 
 We now have seen most of the core types in Swift.  As we start to approach problems now, we will almost always ask you to write functions.  Here are some key steps to follow as you approach writing functions to solve problems:
 
