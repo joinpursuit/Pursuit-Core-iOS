@@ -4,14 +4,13 @@
 ### Objectives
 * Declare and use Sets 
 * Understand common uses of Sets
-* Contrast and compare Sets with Dictionaries
 
 ### Readings
-1. Swift Programming: The Big Nerd Ranch Guide, Chapter 11
 1. Apple's [Swift Language Reference, Collections](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html#//apple_ref/doc/uid/TP40014097-CH8-ID105)
+1. [Set Documentation](https://developer.apple.com/documentation/swift/set)  
 
 #### Vocabulary
-1. **dictionary** - an unordered collection of distinct instances.
+1. **set** -  distinct values of the same type in a collection with no defined ordering  
 1. **hash** - a number generated from a string of text. (More info: [What exactly is a Hash?](https://cs.stackexchange.com/questions/55471/what-exactly-and-precisely-is-hash/55472))
 1. **element** - a hashable type (i.e. string) that can be stored in a set.
 
@@ -65,8 +64,8 @@ var accountNumbers3: Set<Int> = [103456, 103761, 103764, 102778]
 Sets can also be populated from an array. This will remove any duplicates.
 
 ```swift
-let tas = ["Gabe", "Marcel", "Tom", "Gabe", "Karen"]
-var uniqueTAs = Set(tas)
+let fellows = ["Ashli", "Ian", "Stephanie", "Joshua", "Kathy", "Ian"]
+var uniqueFellows = Set(fellows)
 ```
 
 ### 3. Accessing values
@@ -76,7 +75,7 @@ var uniqueTAs = Set(tas)
 The `count` property on a set reports the number of elements, just like arrays.
 
 ```swift
-print(uniqueTAs.count)
+print(uniqueFellows.count)
 ```
 
 #### isEmpty
@@ -88,49 +87,73 @@ The `isEmpty` property reports if the set is empty. It is a more expressive way 
 Because sets are unordered, there is no way to access a specific element. You can use the .contains method to see if an element is contained in the set.
 
 ```swift
-uniqueTAs.contains("Tom")  // this will return true
+uniqueFellows.contains("Ian")  // this will return true
 ```
 You can loop through a set, just like arrays, to access all of its elements but you will not know the order with which they will be accessed, not like arrays. 
 
 ```swift
-for name in uniqueTAs {
+for name in uniqueFellows {
     print(name)
 }
 ```
 
-### 5. Adding and Removing Values
+### 4. Adding and Removing Values
 
 Add values using the .insert method on a set. This will return a tuple containing a bool to show whether the insertion was succesful (the value that you're inserting may already exist in the set) and the element you attempted to insert.
 
 ```swift
-uniqueTAs.insert("Vic")  // returns (inserted: true, memberAfterInsert: "Vic")
+uniqueFellows.insert("Matthew")  // returns (inserted: true, memberAfterInsert: "Matthew")
 ```
 
 To remove values from a set, use the .remove method. This returns the element you successfully remove. Notice that the return is optional, why is this?
 
 ```swift
-uniqueTAs.remove("Vic")  // returns "Vic"
+uniqueFellows.remove("Ian")  // returns "Ian"
 ```
 
-### 6. Unions, Intersections and Disjoint
+### Fundamental Set Operations 
+
+<p align="center">
+<img src="https://docs.swift.org/swift-book/_images/setVennDiagram_2x.png" width="700" height="500" />  
+</p>
+
+### 5. Unions, Intersections and Disjoint
 
 The union of 2 sets contains all the unique elements of both sets. 
 
 ```swift
-let moreStaff: Set<String> = ["Stefani", "Ben", "Karen", "Vic", "Gabe", "Will"]
-let allStaff = moreStaff.union(uniqueTAs)  // returns ["Ben", "Vic", "Karen", "Tom", "Marcel", "Stefani", "Gabe", "Will"]
+let evenNumbers: Set<Int> = [2, 4, 6, 8, 10]
+let numbersFrom1to10: Set<Int> = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let allNumbers = evenNumbers.union(numbersFrom1to10)  // returns unsorted list
+print(allNumbers.sorted()) // will sort allNumbers as expected [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
 The intersection of 2 sets contains all the elements shared between them.
 
 ```swift
-let intersectingStaff = moreStaff.intersection(uniqueTAs)  // returns ["Ben", "Gabe"]
+let intersectingNumbers = evenNumbers.intersection(numbersFrom1to10)  // returns unsorted list
 ```
 
 Disjoint is a method used on 2 sets that returns a bool determining if the 2 sets share any elements. 
 
 ```swift
-let someMoreNames: Set<String> = ["Dave", "Bill", "Gary", "Will"]
-someMoreNames.isDisjoint(with: allStaff)   // returns false
-someMoreNames.isDisjoint(with: uniqueTAs)   // returns true
+let staff: Set<String> = ["Alex", "Dave", "Elle", "Alan", "Joshua"]
+let teacherAssistants: Set<String> = ["Kaniz", "Maggie", "Jermaine"]
+let teachersAssistantsStaffDisjoint = teacherAssistants.isDisjoint(with: staff)   // returns true
+let staffFellowsDisjoint = staff.isDisjoint(with: fellows)   // returns false
+
+print("teachersAssistantsStaffDisjoint is \(teachersAssistantsStaffDisjoint)")
+print("staffFellowsDisjoint is \(staffFellowsDisjoint)")
+```
+
+### 6. Set Membership and Equality
+
+```swift 
+let houseAnimals: Set = ["🐶", "🐱"]
+let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]
+let cityAnimals: Set = ["🐦", "🐭"]
+
+print(houseAnimals.isSubset(of: farmAnimals)) // true
+print(farmAnimals.isSuperset(of: houseAnimals)) // true
+print(farmAnimals.isDisjoint(with: cityAnimals)) // true
 ```
