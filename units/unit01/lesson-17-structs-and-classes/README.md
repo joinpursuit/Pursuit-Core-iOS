@@ -1,16 +1,14 @@
 ### Structs & Classes
 ---
 
-Note: include property observers (pending space)
-
 ### Objectives
 * Understand the differences between structs and classes
 * To create and initialize structs and classes
 * Understand when to use a struct vs a class
 * Understand that structures are value types and what this implies
+* Undertand classes are reference types and what this implies
 
 ### Readings
-1. Swift Programming: The Big Nerd Ranch Guide, Chapter 15, Structs and Classes
 1. [Swift Language Reference, Classes and Structures](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-ID82)
 1. [Swift Language Reference, Methods](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Methods.html#//apple_ref/doc/uid/TP40014097-CH15-ID234)
 
@@ -46,17 +44,20 @@ What are the types that we've seen so far in Swift?
 - Function types (e.g (String, Int) -> Void)
 </details>
 
-We saw yesterday that an Enum gives us more flexibility and customization.  But what if the Swift types we've seen so far don't do what we need them to?  
+We saw that an Enum gives us more flexibility and customization.  But what if the Swift types we've seen so far is not sufficient for our custom application?   
 
-We can make *new* types that do whatever we want!
+We can create *custom* types!
 
 By using Classes and Structs, we can define new types that can hold any information we want and can be manipulated as we choose.
 
 We call Classes and Structs *Objects* and when programming with them, we talk about *Object Oriented Programming* (OOP).
 
-From the Apple documentation:
+**Structures and classes** 
+Structures and classes are general-purpose, flexible constructs that become the building blocks of your program’s code. You define properties and methods to add functionality to your structures and classes using the same syntax you use to define constants, variables, and functions.
 
-> An instance of a class is traditionally known as an object. However, Swift classes and structures are much closer in functionality than in other languages, and much of this chapter describes functionality that can apply to instances of either a class or a structure type. Because of this, the more general term instance is used.
+Unlike other programming languages, Swift doesn’t require you to create separate interface and implementation files for custom structures and classes. In Swift, you define a structure or class in a single file, and the external interface to that class or structure is automatically made available for other code to use.
+
+>An instance of a class is traditionally known as an object. However, Swift structures and classes are much closer in functionality than in other languages, and much of this chapter describes functionality that applies to instances of either a class or a structure type. Because of this, the more general term instance is used.
 
 
 ### 2. Definition Syntax
@@ -601,8 +602,5 @@ When you create a new instance of `Train` and call its `makeNoise()` method, you
 
 * Compare and contrast the use of ```struct``` and ```class```.
 * What are type methods?
-
-### 12. Project
-Link to [AC-iOS-StructsClasses](https://github.com/C4Q/AC-iOS-StructsClasses) Project Instructions
  
 
