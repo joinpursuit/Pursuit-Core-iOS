@@ -3,20 +3,30 @@
 ### Objectives
 * Create an enumeration and understand when it is helpful
 * Create enumerations with different types of raw and associated values
+* Iterate over an enum by conforming to the CaseIterable protocol and using the allCases property
 
 ### Readings
-1. Swift Programming: The Big Nerd Ranch Guide, Chapter 14, Enumerations
 1. [Swift Language Reference, Enumerations](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Enumerations.html#//apple_ref/doc/uid/TP40014097-CH12-ID145)
 
 ---
 
 ### 1. Intro to Enumerations
 
-The main use of enumerations, ```enum``` in Swift is to make our code safer and more readable. We've heard that said generally about a lot of features in Swift. Enumerations are specifically for organizing groups or lists of related values.
+An enumeration defines a common type for a group of related values and enables you to work with those values in a type-safe way within your code.
 
-From Apple:
+Enumerations in Swift are first-class types in their own right. They adopt many features traditionally supported only by classes, such as computed properties to provide additional information about the enumeration’s current value, and instance methods to provide functionality related to the values the enumeration represents. Enumerations can also define initializers to provide an initial case value; can be extended to expand their functionality beyond their original implementation; and can conform to protocols to provide standard functionality.
 
 > Each enumeration definition defines a brand new type. Like other types in Swift, their names (such as `CompassPoint` and `Planet`) should start with a capital letter. Give enumeration types singular rather than plural names, so that they read as self-evident.
+
+**Enumeration Syntax**  
+
+```swift 
+enum SomeEnumeration {
+  // enumeration definition goes here
+}
+```
+
+CompassPoint enumeraton   
 
 ```swift
 enum CompassPoint {
@@ -26,6 +36,8 @@ enum CompassPoint {
     case west
 }
 
+// You use the case keyword to introduce new enumeration cases
+
 let northDirection = CompassPoint.north
 ```
 
@@ -33,12 +45,21 @@ let northDirection = CompassPoint.north
 
 Defining enumerations:
 
-Make an an enum that represents:
+Make enums that represent the following:
 
+**Part 1**  
 1. Left and right hands
 2. Days in a week
 3. Blood types (A, B, O, AB)
 4. Coins in U.S currency
+
+**Part 2**  
+Switch on the enums you created above to do the following:
+
+1. Print out whether or not the left hand
+2. Print out whether or not it's a weekday
+3. Print out whether or not the blood type is type B
+4. Print out if the value of the coin is 10 cents or higher
 
 
 ### 2. Switiching on Enum Cases
@@ -65,17 +86,40 @@ case .fileNotFound:
 ```
 Because Swift knows the type of the `ErrorCode` we don't need a default case because we can define an exhaustive set of `switch` cases. If the case for `.fileNotFound` is omitted, this code would not compile, because it does not consider the complete list of `ErrorCode` cases. Requiring exhaustiveness ensures that enumeration cases are not accidentally omitted. When it is not appropriate to provide a case for every enumeration case, you can provide a default case to cover any cases that are not addressed explicitly.
 
-**Exercise**: 
+### 3. Case Iterable 
 
-Instantiate a new enum, and switch on it to:
+For some enumerations, it’s useful to have a collection of all of that enumeration’s cases. You enable this by writing : CaseIterable after the enumeration’s name. Swift exposes a collection of all the cases as an allCases property of the enumeration type. Here’s an example:
 
-1. Print out whether or not the left hand
-2. Print out whether or not it's a weekday
-3. Print out whether or not the blood type is type B
-4. Print out if the value of the coin is 10 cents or higher
+```swift 
+enum CompassPoint: CaseIterable {
+  case North
+  case South
+  case East
+  case West
+}
 
+let move = CompassPoint.East
 
-### 3. Raw Value Enumerations
+switch move {
+case .North:
+  print("moving north")
+case .South:
+  print("moving south")
+case .East:
+  print("moving east")
+case .West:
+  print("moving west")
+}
+
+print("there are \(CompassPoint.allCases.count) compass points")
+
+// iterating through an enum 
+for point in CompassPoint.allCases {
+  print(point)
+}
+```
+
+### 4. Raw Value Enumerations
 
 Enumeration cases can come prepopulated with default values, called __raw values__. Raw values can be strings, characters, or any of the integer or floating-point number types. Each raw value must be unique within its enumeration declaration.
 
@@ -93,11 +137,20 @@ Raw Values are not the same as Associated Values _(discussed below)_. Raw values
 
 **Exercise**: 
 1. Redefine each of your enums in the previous exercises to have raw values
-2. Than, instantiate a new instance of each enum with its raw value
+2. Then, initialize a new instance of each enum with its raw value
+   e.g 
+   ```swift 
+   // initializing from a rawValue
+    if let borough = NYCBoro(rawValue: "Queens") {
+      if borough.rawValue == "Queens" {
+        print("welcome to Queens where diversity lives")
+      }
+    }
+   ```
 3. What happens if you give an invalid raw value to instantiate an enum?  Try it and see.
 
 
-### 4. Implicitly Assigned Raw Values
+### 5. Implicitly Assigned Raw Values
 
 When you’re working with enumerations that store integer or string raw values, you don’t have to explicitly assign a raw value for each case. When you don’t, Swift will automatically assign the values for you.
 
@@ -143,7 +196,7 @@ let sunsetDirection = CompassPoint.west.rawValue
 Give default raw values to each of the enums from the previous exercises
 
 
-### 5. Associated Values
+### 6. Associated Values
 Storing associated values alongside enumeration case values allows you to store additional custom information along with the case value, and permits this information to vary each time you use that case in your code.
 
 You can define Swift enumerations to store associated values of any given type, and the value types can be different for each case of the enumeration if needed. 
@@ -203,6 +256,3 @@ Rewrite the blood type enum to have an associated value of if the type is positi
 
 ---
 
-### Review and Wrapup
-
-1. Describe the uses of `enum`.
