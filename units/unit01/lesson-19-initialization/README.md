@@ -7,7 +7,6 @@
 * Understand and use inheritance 
 
 ### Readings
-1. Swift Programming: The Big Nerd Ranch Guide, Chapter 17, Initialization
 1. [Swift Language Reference, Initialization](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-ID203)
 
 #### Vocabulary
