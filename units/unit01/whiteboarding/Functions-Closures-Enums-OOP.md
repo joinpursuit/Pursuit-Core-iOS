@@ -200,4 +200,31 @@ if spaceships1.isSubset(of: spaceships2) {
   print("This is not a subset")
 }
 </pre>
+
+</br>
+
+<pre>
+ 13. Define an enum called CoinType which describes different coin values (penny, nickle, dime and quarter) with their respective raw values.
+ You are given a moneyArray which has tuples(ammount, coinType), amount is the amount of coins and coinType represent the enum case.
+ Print the total value of the coins in the array.
+ 
+ let moneyArray:[(Int,CoinType)] = [(10,.penny),
+ (15,.nickle),
+ (3,.quarter),
+ (20,.penny),
+ (3,.dime),
+ (7,.quarter)]
+ 
+ output: 385
+</pre>
+
+</br>
+
+<pre>
+ 14. Implement a function forEach that takes an array of integers
+ and a closure and runs the closure for each element of the array.
+ 
+ Test your function by squaring and printing each element in the test array
+</pre>
+
  
