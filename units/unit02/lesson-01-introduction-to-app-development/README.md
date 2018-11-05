@@ -1,11 +1,9 @@
 # Introduction to iOS Development in Xcode
 
-### [Project Repo](https://github.com/C4Q/AC-iOS-ThreeCardMonteExercise)
-
 It's now time to get into the world of iOS development.  We have built apps for command line and for experimented with different types in Playground.  Now we will enter the iOS section of the environment and see how we can be creating apps of our own.  Let's start by making a new Project in Xcode.
 
 - Select a Single View Application
-- For the Project Name, enter "My First App"
+- For the Product Name, enter "My First App"
 - Save the project in your Projects folder
 
 You should now see a screen that looks like this:
@@ -14,9 +12,7 @@ You should now see a screen that looks like this:
 
 In the Navigator area, select the AppDelegate.swift and LaunchScreen.storyboard using command click.  Right click, then select "New Group from Selection" and name that file "Supporting Files".  This is just to clean up what you are looking at.
 
-Go to the Toolbar, and select iPhone 6s.  Then hit the play button.
-
-(Note, this might take a while)
+Go to the Toolbar, and select iPhone XS. Then hit the play button.
 
 Congrats!  You made your first app!  It's a blank white screen, but it's a totally functioning app.
 
@@ -24,28 +20,26 @@ Let's see how we can make it a little more interesting.
 
 # 1. Storyboard
 
-Click on the Main.storyboard file.  You know are in the **Interface Builder** and can edit the UI of your app.  Interface Builder is incredibly powerful and you can make many components of your app there.  Let's play with a couple features.
+Click on the Main.storyboard file.  You now are in **Interface Builder** and can edit the UI of your app.  Interface Builder is incredibly powerful and you can make many components of your app there.
 
-Click on the main rectangle.  This is the screen that the user sees, called the **ViewController**.  It's called a view controller because it controllers the view that is displayed to the user.
+Click on the main scene.  This is the screen (view) that the user sees, called the **ViewController**.  It's called a view controller because it controls the view that is displayed to the user.
 
-Look over to the right in the **Utility Area**  If it is not selected already, select the **Attributes Inspector**.  There are a variety of different options here. Select the attribute "Background Color" and change it to your favorite color.  Then click the play button again in the Toolbar and rerun your app.
+Look over to the right in the **Utility Area**  If it is not selected already, select the **Attributes Inspector**. Make sure to select the main scene in order to get the attributes showing up for the view. There are a variety of different options here. Select the attribute "Background Color" and change it to your favorite color. Then click the play button again in the Toolbar and rerun your app.
 
 Now our app can be any color we like!  But it is just a background color.  Let's add some more features.
 
 
 # 2. UIView and Subclasses
 
-Return to the storyboard and select the main view.  Click on the **Identity Inspector** in the Utility Area.  Notice that the class is listed as **UIView**.  
+Return to the storyboard and select the main scene (view).  Click on the **Identity Inspector** in the Utility Area.  Notice that the class is listed as **UIView**.  
 
-Remembering back to when we learned about classes, UIView is a key class in UIKit.  Many of the UI elements that we use will inherit from UIView.  Here are some properties of UIView that will be helpful to us:
+Remembering back to when we learned about classes, [UIView](https://developer.apple.com/documentation/uikit/uiview) is a key class in [UIKit](https://developer.apple.com/documentation/uikit).  Many of the UI elements that we use will use inherit from UIView.  Here are some properties of UIView that will be helpful to us:
 
 1. backgroundColor: UIColor?
 2. isHidden: Bool
 3. tag: Int
 
-**backgroundColor** is an Optional UIColor that determines the background color of the view
-
-UIColor is an enum that has common colors as its cases.  You can also use the tool we saw before in the Attributes Inspector to select any RGB color that we want.
+**backgroundColor** is an Optional [UIColor](https://developer.apple.com/documentation/uikit/uicolor) that determines the background color of the view
 
 **isHidden** is a Bool that sets whether or not the view is hidden from the user.  This appears as a checkbox in the Attributes Inspector
 
@@ -53,23 +47,23 @@ UIColor is an enum that has common colors as its cases.  You can also use the to
 
 # 3. UILabel
 
-Now we want to add some more information to our app.  Let's say we want to have some text displayed to the user.
+Now we want to add some more information to our app.  Let's say we want to have some text displayed to the user. For that we will use a [UILabel](https://developer.apple.com/documentation/uikit/uilabel).
 
-In the **Utility Area** select the **Object Library**.  We want to create a label, so type *label* into the search bar.  Then, drag and drop the label into the center of your app.  You can use the blue gridlines to know if it is being placed in the center.  We'll learn much more robust ways of organizing our UI when we get to Autolayout next week.
+In the **Toolbar Area** select the **Object Library** which is next to the **Standard Editor** tab.  We want to create a label, so type *label* into the search bar.  Then, drag and drop the label into the center of your app.  You can use the blue gridlines to know if it is being placed in the center.  We'll learn much more robust ways of organizing our UI when we get to Autolayout next week.
 
-Click on the label and change the text to a different message, then click play and run your app.  Now you can display text as well!
+Click on the label and change the text to a different message e.g This is my favorite color, then click play and run your app or use the shortcut, cmd + r.  Now you can display text as well!
 
-Let's look a little more in depth into our label.  Clicking back to the Attributes Inspector, we can see all the ways we can manipulate our label.  Some key properties are:
+Let's look a little more in depth into our label.  Clicking back to the Attributes Inspector, we can see all the ways we can manipulate our label. Reminder select the control you're interested in inspecting, in this case make sure to click on the UILabel in the main scene.  Some key properties are:
 
 1. text: String
 2. textAllignment: NSTextAlignment
 3. textColor: UIColor!
 
-We can set the text proporty by double clicking the label or by editing it in the attributes inspector.  We can also set the textColor just like we set the background color of our main view.
+We can set the text property by double clicking the label or by editing it in the attributes inspector.  We can also set the textColor just like we set the background color of our main view.
 
-textAllignment is an enum, but one with a strange name.  The "NS" refers to [NeXTSTEP](https://en.wikipedia.org/wiki/NeXTSTEP) which previous source of iOS which Objective-C.  Anything marked NS is a holdover from earlier, which means you should be on the lookout for unusual behavior.  We'll talk much more about NS marked classes throughout the program.
+[textAllignment](https://developer.apple.com/documentation/uikit/nstextalignment) is an enum, prefix with NS.  "NS" refers to [NeXTSTEP](https://en.wikipedia.org/wiki/NeXTSTEP).
 
-We also we see that there is a section marked `View` below that has all of the same properties we just saw in UIView.  Why do we see those same properties in our UILabel?
+We also see that there is a section marked `View` below that has all of the same properties we just saw in UIView.  Why do we see those same properties in our UILabel?
 
 <details>
 <summary>Solution</summary>
@@ -94,6 +88,11 @@ We have our View and underneath the view we can see our textLabel makred with an
 view.subviews is an array with our label
 view.superView is nil
 
+**Let's use some debugging to print out the values of those properties:**  
+1. Navigate to ViewController.swift and click on a line number (gutter) in the viewDidLoad() function after ```super.viewDidLoad```, this will activate a [breakpoint](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/debugging_tools.html). 
+1. A breakpoint enables us to investigate a part of our code for bugs, logic failures or pure investigation. 
+1. Run the application using the play button or cmd + r. The application will now stop at the breakpoint you activated.
+1. At this point you can enter ```po view.subviews``` into the console area and press enter. The value of that command will now be shown. 
 
 **For our Label:**
 label.subviews is an empty array
@@ -103,7 +102,7 @@ The way that the views are nested is known as the **view hierarchy**
 
 Let's add some more views and work them into the view hierarchy.
 
-Go to the Object Library and type UIView in the search bar.  Drag in a new UIView to the middle of the screen.  What happens and why?
+Go to the Object Library or use the keyboard shortcut, shift + cmd + l,  and type UIView in the search bar.  Drag in a new UIView to the middle of the screen.  What happens and why?
 
 <details>
 <summary>Solution</summary>
@@ -118,7 +117,7 @@ Now we can have an app that displays some information to the user.  But everythi
 
 Let's change the text to read "The background color is blue".
 
-Now let's add a button that will let the use change the background color to something else.
+Now let's add a [UIButton](https://developer.apple.com/documentation/uikit/uibutton) that will let the use change the background color to something else.
 
 ### Button Attributes
 
@@ -133,19 +132,9 @@ The text for a button works just the same as it does in a label.
 
 The buttonType is a way of setting certain defaults of a button.  Change the type to `Custom` so it will work with images later on.
 
-Preview for later
-
-> We can also set a background image and a primary image for buttons.  To do this, we use the functions:
-> 
-> - myButton.setImage(\_:for:_)
-> - myButton.setBackgroundImage(\_:for:_)
-> Or set them in the Attributes Inspector
-
-We'll take a look at images a little later.
-
 ### UIButton inherits from UIControl
 
-Underneath the Button section, we see a section named "Control".  UIButton inherits from UIControl which inherits from UIView.  A Control is something like a switch or a button that the user can toggle.  The main control we will use is:
+Underneath the Button section, we see a section named "Control".  UIButton inherits from UIControl which inherits from UIView.  A Control is something like a switch or a button that the user can toggle.  The property we will use is:
 
 - isEnabled: Bool
 
@@ -167,11 +156,11 @@ You should now see your Storyboard on the left and code on the right.  Your code
 
 ### What is a ViewController?
 
-Simply put, a ViewController is a class that controllers a View.  Every ViewController has a property
+Simply put, a ViewController is a class that manages a View.  Every [UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller) has a **view** property
 
 - view: UIView!
 
-that represents the view inside the rectangle we worked with in Storyboard.  Instead of writing code inside that View, so write it inside the ViewController.  This way, we could re-use the same ViewController for different views later.  This also connects directly with MVC design which we'll discuss tomorrow.
+that represents the view inside the rectangle we worked with in Storyboard.
 
 Let's start by deleting all the code inside of it.  We'll get into what it does later.
 
@@ -201,13 +190,13 @@ We now have our Action function defined.  We see a new keyword in the definition
 }
 ```
 
-@IBAction stands for Interface Builder Action.  Interface Builder is the name of the program where we've been working with our Main.storyboard file.  The @ is a little bit of magic that helps connect the ViewController.swift file with the Main.storyboard file.
+@IBAction stands for Interface Builder Action.  Interface Builder is the name of the program where we've been working with our Main.storyboard file. 
 
 Now we can define our function.  We want to change the background color of the View that our ViewController controllers to red
 
 ```swift
 @IBAction func colorChangeButtonPressed(_ sender: UIButton) {
-	self.view.backgroundColor = UIColor.red        
+	view.backgroundColor = .red        
 }
 ```
 
@@ -217,15 +206,15 @@ Great!  We've now changed our background color to .red.  We've still got a bug t
 
 # 7. Outlets
 
-What we need to do first is to find a way to talk to our Label inside of our ViewController.  We want to add an *outlet* to our ViewController so that we can refer to other views directly.  We could access it by diving into self.view.subViews, but it's better to access it directly.
+What we need to do first is to find a way to talk to our Label inside of our ViewController.  We want to add an *outlet* to our ViewController so that we can refer to other views directly. =
 
-We add an Outlet the same way we added an IBAction.  Control click on the label, then drag into your ViewController.  Keep all properties as they are, and enter the name "displayLabel".   The declaration looks fairly similar to our Action before:
+We add an Outlet the same way we added an @IBAction.  Control click on the label, then drag into your ViewController.  Keep all properties as they are, and enter the name "displayLabel".   The declaration looks fairly similar to our Action before:
 
 ```swift
 @IBOutlet weak var displayLabel: UILabel!
 ```
 
-IBOutlet means Interface Builder Outlet.
+@IBOutlet means Interface Builder Outlet.
 
 This is a `weak` variable that is an Optional UILabel.  It's `weak` and Optional due to memory reasons, because our ViewController doesn't exist immediately, the app needs to set it up for us.  We don't need to worry about that right now.  Treat it as a regular variable for now.
 
@@ -238,8 +227,8 @@ Now that we have a way of talking about our label, we want to update it.
 
 ```swift
 @IBAction func colorChangeButtonPressed(_ sender: UIButton) {
-        self.view.backgroundColor = UIColor(named: "red")
-        self.displayLabel.text = "The background color is red"
+        view.backgroundColor = .red
+        displayLabel.text = "The background color is red"
 }
 ```
 </details>
@@ -256,28 +245,28 @@ So far so good!  We can change the color to red and our label updates accordingl
 
 ```swift
 @IBAction func colorChangeButtonPressed(_ sender: UIButton) {
-    guard let buttonText = sender.currentTitle else {
-        return
-    }
-    let newColor: UIColor?
-    switch buttonText {
-    case "red":
-        newColor = .red
-    case "green":
-        newColor = .green
-    case "blue":
-        newColor = .blue
-    default:
-        newColor = nil
-    }
-    self.view.backgroundColor = newColor
-    self.displayLabel.text = "The background color is \(buttonText)"
+  guard let buttonTitle = sender.currentTitle else {
+    return
+  }
+  var backgroundColor: UIColor? = .white
+  switch buttonTitle.lowercased() {
+  case "red":
+    backgroundColor = .red
+  case "green":
+    backgroundColor = .green
+  case "blue":
+    backgroundColor = .blue
+  default:
+    backgroundColor = .white
+  }
+  view.backgroundColor = backgroundColor
+  displayLabel.text = "The background color is red"
 }
 ```
 </details>
 
 
-In the solution above, we saw how we can use the currentTitle property to set the color.  But what if the titles were something else?  Our code right now depends on those titles being exactly correct.  If we needed to capitlize the labels, our code would break.  Let's make it a little more flexible:
+In the solution above, we saw how we can use the currentTitle property to set the color.  But what if the titles were something else?  Our code right now depends on those titles being exactly correct. Let's make it a little more flexible:
 
 **Exercise**: Refactor your code to use the tag property.
 
@@ -286,19 +275,19 @@ In the solution above, we saw how we can use the currentTitle property to set th
 
 ```swift
 @IBAction func colorChangeButtonPressed(_ sender: UIButton) {
-    let newColor: (color: UIColor?, name: String)
-    switch sender.tag {
-    case 0:
-        newColor = (.red, "red")
-    case 1:
-        newColor = (.green, "green")
-    case 2:
-        newColor = (.blue, "blue")
-    default:
-        newColor = (nil, "error")
-    }
-    self.view.backgroundColor = newColor.color
-    self.displayLabel.text = "The background color is \(newColor.name)"
+  let newColor: (color: UIColor?, name: String)
+  switch sender.tag {
+  case 0:
+    newColor = (.red, "Red")
+  case 1:
+    newColor = (.green, "Green")
+  case 2:
+    newColor = (.blue, "Blue")
+  default:
+    newColor = (.white, "White")
+  }
+  view.backgroundColor = newColor.color
+  displayLabel.text = "The background color is \(newColor.name)"
 }
 ```
 </details>
@@ -311,19 +300,14 @@ Let's make our buttons a little more exciting by adding image assets.
 Download the following images to your desktop with the following names
 
 - [redImage](https://www.organicfacts.net/wp-content/uploads/2013/05/Pomegranate11.jpg)
-- [greenImage](https://www.freshfruitportal.com/assets/uploads/2013/05/limes_74531311.jpg)
-- [blueImage](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAApmAAAAJDg3YjBkMzIwLTdmNGUtNDVhYi04NmRiLTBkM2U2M2I5ZjJkMw.jpg)
+- [greenImage](http://www.pngmart.com/files/3/Lime-Transparent-Background.png)
+- [blueImage](https://cdn.shopify.com/s/files/1/0542/2249/products/Blue-Raspberry_1200x_3a05b07c-4ed6-4ff8-85a7-969ca56c7693_600x.jpg?v=1501516300)
 
 Return to Xcode and select on the folder *Assets.xcassets*
 
 Drag your images right below the AppIcon label.
 
 Delete the text for each image, then change the backgroundImage to be from the appropriate color.  Shrink the images down so they don't take up the whole screen.  Now you have image assets in your app!
-
-If you want to set the image based on an action use the following two functions:
-
-> - myButton.setImage(\_:for:_)
-> - myButton.setBackgroundImage(\_:for:_)
 
 
 # 10. override viewDidLoad()
