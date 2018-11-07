@@ -1,7 +1,5 @@
 # Building Apps with MVC Design
 
-### [Project Repo](https://github.com/C4Q/AC-iOS-ColorChangerMVC.git)
-
 ### Readings
 
 - [Apple Documentation, Model-View-Controller](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html)
