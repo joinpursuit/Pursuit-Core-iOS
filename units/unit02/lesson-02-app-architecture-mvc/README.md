@@ -4,16 +4,11 @@
 
 ### Readings
 
-- Swift Programming: The Big Nerd Ranch Guide, Chapter 26 page 353
 - [Apple Documentation, Model-View-Controller](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html)
 - [Understanding MVC In Swift](https://learnappmaking.com/model-view-controller-mvc-swift/)
 - [MVC For Beginners](http://www.seemuapps.com/swift-model-view-controller-mvc-beginners)
 
-# 1. Assessment one review
-
-Review questions from the first assessment
-
-# 2. App development review
+# 1. App development review
 
 - UIViewController
 - UIView
@@ -28,7 +23,7 @@ Review questions from the first assessment
 Warmup project: Create a "Flashlight app".  Make a button that switches the background from black to white or from white to black.
 
 
-# 3. MVC Design
+# 2. MVC Design
 
 Why not just have the View also execute all the code we want to run?
 
@@ -52,7 +47,7 @@ The guiding principle behind this organization is that we want to separate out t
 With our color selection app yesterday, we mixed together UI and logic elements together.  While this works for small apps, when you have more complicated programs, you want to ensure that its organized in a way that's sensible.
 
 
-# 4. Creating an app with MVC
+# 3. Creating an app with MVC
 
 
 Let's go through an example of creating an app in accordance with MVC design patterns.
@@ -132,6 +127,6 @@ We now need an instance of our colorChangingModel inside our Controller.  Let's 
 Now you've made your first app using MVC design patterns.  What might be an advantage for using MVC in this app? 
 
 
-# 5. Practice:
+# 4. Practice:
 
 **Exercise**: Refactor your ThreeCardMonte from yesterday to use MVC design patterns.  What should the model look like? 
