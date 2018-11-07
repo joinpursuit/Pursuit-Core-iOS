@@ -79,7 +79,7 @@ Now we have our Controller set up to manage the Views and handle the actions we 
 
 ### Create the model
 
-Now we have to think about what date we need for our application. We are building a Recipes application. So it would be evident that we need to encapsulate the data object as a "Recipe" object. So let's create a ```struct``` called Recipe in a new ```swift``` file. 
+Now we have to think about what data we need for our application. We are building a Recipes application. So it would be evident that we need to encapsulate the data object as a "Recipe" object. So let's create a ```struct``` called Recipe in a new ```swift``` file. 
 
 Now, consider the properties, methods of the Recipe object.
 
