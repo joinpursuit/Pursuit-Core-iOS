@@ -6,7 +6,7 @@
 - [Understanding MVC In Swift](https://learnappmaking.com/model-view-controller-mvc-swift/)
 - [MVC For Beginners](http://www.seemuapps.com/swift-model-view-controller-mvc-beginners)
 
-# 1. App development review
+# App development review
 
 - UIViewController
 - UIView
@@ -17,11 +17,9 @@
 - IBAction
 - IBOutlet
 
-
 Warmup project: Create a "Flashlight app".  Make a button that switches the background from black to white or from white to black.
 
-
-# 2. MVC Design
+# MVC Design
 
 Why not just have the View also execute all the code we want to run?
 
@@ -45,86 +43,175 @@ The guiding principle behind this organization is that we want to separate out t
 With our color selection app yesterday, we mixed together UI and logic elements together.  While this works for small apps, when you have more complicated programs, you want to ensure that its organized in a way that's sensible.
 
 
-# 3. Creating an app with MVC
+# Creating an app with MVC
 
 
-Let's go through an example of creating an app in accordance with MVC design patterns.
-
-We are going to make an app similar to what we saw yesterday that will change the background color.  We will start by putting together what will comprise the **View**
+Let's go through an example of creating an app in accordance with MVC design patterns. Create a new single view application and name it, Recipes. 
 
 ### Create the view
 
-- Create a label that reads "The background color is"
-- Create a label that reads "Grey" and put it right below the top label
-- Create a view and set its backgroundColor to .grey
-- Create a button with a title of "Random Color"
-- Create a button with a title of "Next Color"
+- Drag in an ImageView from the Object Library the will hold the image of the recipe
+- Drag in a Label that will state the name of the recipe
+- Drag in a UITextView, we haven't seen this control. It will have the description and ingredients of the recipe
+- Drag in a few UIButton's to help us navigate through recipes. 
 
-Our app will go through a list of colors and show them in the same order every time.  We can disrupt this by selecting "Random Color" which will choose a color at random.  When we click "Next Color" again, it will resume our order from before.
-
-Example
->colors = [.blue, .red, .green, .white]
->
->nextColor
->
->//.blue
->
->randomColor
->
->//.white
->
->nextColor
->
->//.red
-
-We now have most of our view set up.  
 
 ### Create the controller
 
-We now need to set up our **Controller** so that it can change our Views.
+We now need to set up our **Controller** so that it can change our Views (recipes).
 
 
 **Exercises:** 
 
-- Add an outlet from your label to your ViewController
-- Add an outlet from you view to your ViewController
-- Add an action from your random color button to your ViewController
-- Add an action from your next color button to your ViewController
+- Drag an outlet from your ImageView to the ViewController and name it ```recipeImage```.
+- Drag an outlet from the Label and name it ```recipeName```
+- Drag an outlet from the TextView and name it ```recipeDescription```
 
+Your ViewController should now look like the code snippet below
+
+```swift 
+@IBOutlet weak var recipeImage: UIImageView!
+@IBOutlet weak var recipeName: UILabel!
+@IBOutlet weak var recipeDescription: UITextView!
+```
 
 Now we have our Controller set up to manage the Views and handle the actions we get from the buttons.
 
 ### Create the model
 
-Now we have to think about what logic will dictate our code.
+Now we have to think about what date we need for our application. We are building a Recipes application. So it would be evident that we need to encapsulate the data object as a "Recipe" object. So let's create a ```struct``` called Recipe in a new ```swift``` file. 
 
-The best way to conceptualize this is to start by making our Model as a new file, named ColorChangingModel.swift.
+Now, consider the properties, methods of the Recipe object.
 
-Now, consider what the **public API** will be.
+Some properties would be: 
+- name of the recipe
+- ingredients 
+- cook time
+- an image
 
-API stands for Application Programming Interface, and here it just means what will the Controller need to get from the model.
+<details>
+  <summary>Completed Model</summary>
+  
+```swift 
+#import UIKit 
 
-Our public API will have two methods:
+struct Recipe {
+  // properties
+  let name: String
+  let numberOfServings: Int // yield
+  let ingredients: [String: String] // ingredient and quantity
+  let duration: Int // preparation time plus cooking time - in minutes
+  let equipment: String // equipment for the dish
+  let temperature: Double // cooking procedures - temperature and bake time if necessary
+  let servingProcedure: String // served while warm or cold
+  let review: Bool // would you recommend the dish to a friend
+  let image: UIImage
+  let nutritionalValue: String // number of calories or grams per serving
+  let directions: [String]
+  
+  
+  // methods
+  static func getRecipes() -> [Recipe] {
+    var recipes = [Recipe]()
+    let deviledEggsRecipe = Recipe.init(name: "Classic Deviled Eggs", numberOfServings: 4,
+                                        ingredients: ["eggs": "6",
+                                                      "mayonnaise" : "1/4 cup"],
+                                        duration: 35,
+                                        equipment: "saucepan", temperature: 100, servingProcedure: "",
+                                        review: true, image: UIImage.init(named: "classic-deviled-eggs")!,
+                                        nutritionalValue: "",
+                                        directions: ["Place eggs in a single layer in a saucepan and cover with enough water that there's 1 1/2 inches of water above the eggs. Heat on high until water begins to boil, then cover, turn the heat to low, and cook for 1 minute. Remove from heat and leave covered for 14 minutes, then rinse under cold water continuously for 1 minute.",
+                                                     "Crack egg shells and carefully peel under cool running water. Gently dry with paper towels. Slice the eggs in half lengthwise, removing yolks to a medium bowl, and placing the whites on a serving platter. Mash the yolks into a fine crumble using a fork. Add mayonnaise, vinegar, mustard, salt, and pepper, and mix well.",
+                                                     "Evenly disperse heaping teaspoons of the yolk mixture into the egg whites. Sprinkle with paprika and serve."])
+    let perfectRoastChicken = Recipe.init(name: "Perfect Roast Chicken", numberOfServings: 8,
+                                          ingredients: ["roasting chicken" : "5 or 6lbs",
+                                                        "lemon" : "1",
+                                                        "Freshly ground black pepper": "",
+                                                        "large bunch fresh thyme" : "1",
+                                                        "head garlic" : "1",
+                                                        "tablespoons butter" : "2",
+                                                        "carrots" : "4",
+                                                        "fennel" : "1 bulb",
+                                                        "Olive Oil" : ""
+                                        ],
+                                        duration: 130,
+                                        equipment: "saucepan", temperature: 100, servingProcedure: "",
+                                        review: true, image: UIImage.init(named: "perfect-roast-chicken")!,
+                                        nutritionalValue: "",
+                                        directions: ["Preheat the oven to 425 degrees F",
+                                                     "Remove the chicken giblets. Rinse the chicken inside and out. Remove any excess fat and leftover pin feathers and pat the outside dry. Liberally salt and pepper the inside of the chicken. Stuff the cavity with the bunch of thyme, both halves of lemon, and all the garlic. Brush the outside of the chicken with the butter and sprinkle again with salt and pepper. Tie the legs together with kitchen string and tuck the wing tips under the body of the chicken. Place the onions, carrots, and fennel in a roasting pan. Toss with salt, pepper, 20 sprigs of thyme, and olive oil. Spread around the bottom of the roasting pan and place the chicken on top.",
+                                                     "Roast the chicken for 1 1/2 hours, or until the juices run clear when you cut between a leg and thigh. Remove the chicken and vegetables to a platter and cover with aluminum foil for about 20 minutes. Slice the chicken onto a platter and serve it with the vegetables."])
+    recipes.append(deviledEggsRecipe)
+    recipes.append(perfectRoastChicken)
+    return recipes
+  }
+}
+```
 
-- getNextColor() -> UIColor
-- getRandomColor() -> UIColor
+</details> 
 
-Our Controller doesn't need to know what the full sequence is or how we are selecting our random color.  It only needs answers when it asks for the next color or a random color.
-
-Everything else we write in our model we want to be *private*.  We can do this by using the `private` keyword.  This means that our ViewController won't even be able to access these properties and methods.  This is a good thing.  We don't want to give it access to anything except what it needs.
-
-**Exercise** Build private methods and properties to complete the implementation of your model
+</br> 
 
 ### Complete your Controller
 
-We now need an instance of our colorChangingModel inside our Controller.  Let's set that as a property.
+We now need an array of recipers in the controller. We will be able to access a particular recipe base on the button the user presses through the recipes array.
 
-**Excercise**: Complete the implementations in your button Action methods.
+```swift 
+let recipes = Recipe.getRecipes
+```
 
+**Excercise**: Complete the implementation of the recipes app by connecting the recipe buttons to the @IBAction function ```recipeChanged(_ recipeButton: UIButton)```
 
 Now you've made your first app using MVC design patterns.  What might be an advantage for using MVC in this app? 
 
+<details>
+  <summary>Completed Controller</summary>
 
-# 4. Practice:
+```swift 
+class ViewController: UIViewController {
+  
+  @IBOutlet weak var recipeImage: UIImageView!
+  @IBOutlet weak var recipeName: UILabel!
+  @IBOutlet weak var recipeDescription: UITextView!
+  
+  let recipes = Recipe.getRecipes()
 
-**Exercise**: Refactor your ThreeCardMonte from yesterday to use MVC design patterns.  What should the model look like? 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    updateRecipeAtIndex(index: 0)
+  }
+  
+  @IBAction func recipeChanged(_ recipeButton: UIButton) {
+    updateRecipeAtIndex(index: recipeButton.tag)
+  }
+  
+  func updateRecipeAtIndex(index: Int) {
+    let recipe = recipes[index]
+    recipeImage.image = recipe.image
+    recipeName.text = recipe.name
+    
+    var description = "Ingredients\n"
+    for (ingredient, quantity) in recipe.ingredients {
+      if quantity.isEmpty {
+        description += ingredient + "\n"
+      } else {
+        description += quantity + " " + ingredient + "\n"
+      }
+    }
+    
+    let cookingTime = "\nCooking Time\n"
+    description += cookingTime
+    description += recipe.duration.description + " minutes\n"
+    
+    let directions = "\nDirections\n"
+    description += directions
+    for (index, direction) in recipe.directions.enumerated() {
+      description += "\(index + 1). " + direction + "\n\n"
+    }
+    
+    recipeDescription.text = description
+  }
+}
+```
+  
+</details> 
