@@ -1,8 +1,5 @@
 # Delegation through Textfields
 
-### [Project Repo](https://github.com/C4Q/AC-iOS-IntroductionToDelegationWithTextFields)
-
----
 ### Readings
 
 1. [`UITextField` - Apple Doc Ref ](https://developer.apple.com/reference/uikit/uitextfield)
