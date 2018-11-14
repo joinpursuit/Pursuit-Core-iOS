@@ -1,7 +1,5 @@
 # Auto Layout
 
-### [Project Repo](https://github.com/C4Q/AutoLayoutExercises)
-
 ### Readings
 
 - [Apple Documentation](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithConstraintsinInterfaceBuidler.html)
@@ -236,16 +234,4 @@ There are three main configuration options needed to consider for a stack view (
 > Developer's Note: It's encouraged that you try out variations of each of these properties to get a sense for what each is accomplishing. Visual changes made by each of these properties is best understood having used them for a while.
 
 **Exercise:** Create three labels and put them into a stack view that is alligned in the center of your app.  Put different lengths of text into each label.
-
-
-
-
-
-# 6. Homework Review
-
-- How to create a TicTacToeBrain
-- Cite your sources
-
-
-
 
