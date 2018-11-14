@@ -31,8 +31,6 @@ Let's make a new project called AutoLayout to see how we can build an app that h
 
 - Position a UIView in the center of the screen.  Use the blue alignment guides to center it.
 
-![rect](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/blueRect.png)
-
 Run your app and rotate it.  Is the view still in the center?
 
 The guidelines can only take us so far.  If we control the type of phone that we are running on, we can make the UI look good, but users of our apps will be using iPhones of all different sizes.  
@@ -50,13 +48,8 @@ Let's constrain our blue View using each of those methods.
 
 ### Using the Allign Menu
 
-<details>
+
 <summary>Allign</summary>
-
-![rect](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/allignment.png)
-
-</details>
-
 
 Setting constraints in the allign menu serves to allign multiple views to the same constraints.  Because we only have one view right now, we can only chose to allign it to its superview, the main view of the ViewController.
 
@@ -64,23 +57,7 @@ Select  ```Horizontally in Container``` and ```Vertically in Container```, keepi
 
 What happens?  We get an error!
 
-<details>
-<summary> Image </summary>
-
-![rect](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/error1.png)
-
-</details>
-
-
 To investigate this error, click on the red arrow at the top right of the Document Outline.
-
-<details>
-<summary> Image </summary>
-
-![rect](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/error2.png)
-
-</details>
-
 
 It tells us that we are missing two constraints.  We don't have constraints set for its width, or its height.  When we didn't have any constraints, our app knew what to do.  What's different now?
 
@@ -100,13 +77,6 @@ source: www.raywenderlich.com
 
 We now have our view centered and we need to set its width and height.  One way that we can do that is by adding constraints to its nearest neighbors.  We only have one view, so its nearest neighbors on all sides are the edges of the screen.  Change the top and bottom values to 200 and the left and right values to 50.  Select all four constraints around the center (they look like red I-beams).  Then click add constraints.
 
-
-<details>
-<summary> More errors! </summary>
-
-![errors](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/error3.png)
-
-</details>
 
 What now?  We tried to give it a width and height by constraining it to its nearby neighbors, but we get more errors.  This brings us to the most important section of Auto Layout.
 
@@ -142,12 +112,7 @@ Notice that we neglected to do that when centering our view vertically.  It didn
 
 ### Inspecting Constraints
 
-<details>
 <summary> Open the Attributes Inspector </summary>
-
-![errors](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/error4.png)
-
-</details>
 
 We want to be centering our view in the center of the safe area.  Change the ```Second Item``` from Superview.Center Y to Safe Area.Center Y.
 
@@ -155,13 +120,6 @@ No more errors!  Finally, we have constrained our view appropriately.  Let's che
 
 
 ### Using Control Drag
-
-<details>
-<summary>Control Drag</summary>
-
-![cdrage](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/controlDrag.png)
-
-</details>
 
 By control dragging from our view onto its superview, we see several different options for constraining it.  Hold down command, then click on the top four options.  Click add constraints.  And we're done!  Control-dragging can be a very quick way of setting constraints, but note that we didn't have any options about setting constants.  We have to do that manually later in the Attributes Inspector.
 
@@ -178,11 +136,6 @@ Another option available is to set the width/height of one view equal to the wid
 **Exercise:** Create a view that takes up the entire left side of the screen.  Test your Auto Layout by rotating the app with command-right arrow.
 
 
-![hori](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/horizontalHalf.png)
-
-![hori](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/verticalHalf.png)
-
-
 
 # 4. Constraining Views to Each Other
 
@@ -190,26 +143,11 @@ So far we have been working with a single view.  More often, we will have severa
 
 **Exercise:** Set up three labels.  The middle one should be in the center with one label 20 points above it, and one 20 points below.
 
-<details>
-<summary>Images</summary>
-
-![l1](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/labelsOne.png)
-
-![l1](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/labelsTwo.png)
-
-</details>
-
 Notice that for our label, we didn't need to set its width.  This is because some UIKit objects have intrinsic widths/heights that are given to them, which they then tell Auto Layout themselves.
 
 ### Constraining Views with Variable Size to Each Other
 
 A label has a explicit size, but a UIView does not.  Another element without an explicit size is a TextView.  Set up two TextViews like this:
-
-
-![l1](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/tf1.png)
-
-![l1](https://raw.githubusercontent.com/C4Q/AC-iOS/master/lessons/unit2/AutoLayout/images/tf2.png)
-
 
 Without setting constraint for the width and the height, Auto Layout doesn't know how to configure their relative sizes.  Should the top textview be very big and the bottom one very small?  Vice versa?  Or should they have the same size?  You need to add constraints to let Auto Layout know.
 
