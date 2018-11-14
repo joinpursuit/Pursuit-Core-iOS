@@ -3,7 +3,6 @@
 ### Readings
 
 - [Apple Documentation](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithConstraintsinInterfaceBuidler.html)
-- App Development with Swift: Lesson 2.10
 - [raywenderlich](https://www.raywenderlich.com/160527/auto-layout-tutorial-ios-11-getting-started])
 - [weheartswift](https://www.weheartswift.com/auto-layout-101/)
 
