@@ -20,6 +20,7 @@ func sum(of stack: Stack&lt;Int&gt;) -> Int {
 
 </br></br> 
 
+<pre> 
 3. Write a function that pushes a new element to the bottom of a Stack
 
 func pushBottom&lt;T&gt;(stack: Stack&lt;T&gt;, newElement: T) -> Stack&lt;T&gt; {
