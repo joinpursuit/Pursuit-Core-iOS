@@ -177,8 +177,7 @@ Sample Output 1:
 1 -> 4 -> 8 -> 3 -> nil
 ```
 
-<details> 
-  <summary>Linked List Implementation</summary> 
+**Linked List Implementation**  
   
 ```swift 
 class Node<T: Equatable>: CustomStringConvertible, Equatable {
@@ -253,8 +252,6 @@ class LinkedList<T: Equatable>: CustomStringConvertible {
   }
 }
 ```
-
-</details> 
 
 ## Doubly Linked List
 
