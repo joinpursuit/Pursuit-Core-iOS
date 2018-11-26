@@ -3,7 +3,7 @@
 | Project | Summary |
 |:------:|:------:|
 | [Card Game](https://github.com/joinpursuit/Pursuit-Core-iOS-CardGame) | MVC architecture (model-view-controller), Protocols, Enums, Mutiple View Controllers |
-| [Recipes App](https://github.com/joinpursuit/Pursuit-Core-iOS-Recipes) | UITableView, UITableViewDataSource, UITableViewDelegate, UISearchBar, UISearchBarDelegate |
+| [Recipes App](https://github.com/joinpursuit/Pursuit-Core-iOS-Recipes) | UITableView, Custom Table View Cell using Storyboard, UITableViewDataSource, UITableViewDelegate, UISearchBar, UISearchBarDelegate |
 
 ## UITableViewDataSource 
 In order to get data populated into a table view the following methods are required
