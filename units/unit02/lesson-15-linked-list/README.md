@@ -146,8 +146,6 @@ self.value = value
 
 We might want to build a little more structure on top of our Node class.  Let's make a LinkedList class that will wrap the function
 
-Live-coding
-
 **Exercise**: Write a function that checks if two linked lists are the same
 
 ```
@@ -178,6 +176,85 @@ Sample Output 1:
 
 1 -> 4 -> 8 -> 3 -> nil
 ```
+
+<details> 
+  <summary>Linked List Implementation</summary> 
+  
+```swift 
+class Node<T: Equatable>: CustomStringConvertible, Equatable {
+  public var value: T
+  public var next: Node?
+  
+  var description: String {
+    guard let next = next else { return "\(value) -> nil" }
+    return "\(value) -> \(next)"
+  }
+  
+  static func ==(lhs: Node, rhs: Node) -> Bool {
+    return
+      lhs.value == rhs.value &&
+      lhs.next == rhs.next
+  }
+  
+  init(value: T) {
+    self.value = value
+  }
+}
+
+class LinkedList<T: Equatable>: CustomStringConvertible {
+  private var head: Node<T>?
+  private var tail: Node<T>?
+  
+  var description: String {
+    guard let head = head else { return "empty list" }
+    return "\(head)"
+  }
+  
+  public var first: Node<T>? {
+    return head
+  }
+  
+  public var last: Node<T>? {
+    return tail
+  }
+  
+  public var isEmpty: Bool {
+    return head == nil
+  }
+  
+  public func append(_ value: T) {
+    let newNode = Node(value: value)
+    if let lastNode = tail {
+      lastNode.next = newNode
+    } else {
+      head = newNode
+    }
+    tail = newNode
+  }
+  
+  public func removeLast() -> Node<T>?  {
+    guard !isEmpty else { return nil }
+    var removedNode: Node<T>?
+    if head == tail {
+      removedNode = head
+      head = nil
+      tail = nil
+    }
+    var currentNode = head
+    while currentNode != nil {
+      if currentNode?.next == tail {
+        removedNode = currentNode?.next
+        currentNode?.next = nil
+        tail = currentNode
+      }
+      currentNode = currentNode?.next
+    }
+    return removedNode
+  }
+}
+```
+
+</details> 
 
 ## Doubly Linked List
 
