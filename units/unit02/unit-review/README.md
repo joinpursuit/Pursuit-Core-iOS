@@ -1,15 +1,5 @@
-# Unit 2 Review Guide: 
+## Unit 2 Review Guide: 
 --
-
-### Git Commands
-
-1. Fork C4Q Repo (where the test/homework is located) 
-2. Clone your fork locally to your laptop git clone [insert fork url here](no brackets)
-3. Once your project or feature is complete git commit -am “insert message here” (no quotations)
-4. Push to your repo git push origin [branch (master in this case)](no brackets)
-5. Make pull request 
-6. Paste you fork link into canvas
-
 
 ### Actions and Outlets
 
@@ -107,7 +97,7 @@ To create a Search Bar:
 6. Add appropriate delegate methods that will modify the searchTerm
 
 ### Life Cycle & Controls 
-	
+
 ![Life Cycle](https://camo.githubusercontent.com/99eb0236dc45072b16e5abb76b822b7d7b3962e1/68747470733a2f2f646576656c6f7065722e6170706c652e636f6d2f6c6962726172792f636f6e74656e742f7265666572656e63656c6962726172792f47657474696e67537461727465642f446576656c6f70694f534170707353776966742f4172742f575756435f76636c6966655f32782e706e67)
 
 - **viewDidLoad()**
