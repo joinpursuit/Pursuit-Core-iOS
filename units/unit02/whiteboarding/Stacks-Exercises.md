@@ -4,7 +4,7 @@
 1. Find the largest integer in a Stack of Ints
 
 func largestElement &lt;T&gt;(in stack: Stack &lt;T&gt;) -> T? {
-  return stack.peek
+  return nil 
 }
 </pre> 
 
