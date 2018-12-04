@@ -80,19 +80,23 @@ The code below creates a Linked List where we enqueue by appending to the Array,
 
 ```swift
 struct Queue<T> {
-    private var arr = [T]()
-    var isEmpty: Bool {
-        return arr.isEmpty
-    }
-    mutating func enQueue(_ newElement: T) {
-        arr.append(newElement)
-    }
-    mutating func deQueue() -> T? {
-        return arr.removeFirst()
-    }
-    func peek() -> T? {
-        return arr.first
-    }
+  private var items = [T]()
+  
+  public var isEmpty: Bool {
+    return items.isEmpty
+  }
+  
+  public var peek: T? {
+    return items.first
+  }
+  
+  public mutating func enqueue(_ item: T) {
+    items.append(item)
+  }
+  
+  public mutating func dequeue() -> T? {
+    return items.first
+  }
 }
 ```
 
@@ -112,42 +116,77 @@ To see an example of how to model an efficient Queue with an array, check out th
 A more standard implementation of a queue is using a linked list.  We will need to keep track of both the *head* and the *tail* of our linked list.  When we **enqueue**, we will add the new element to end and reset the tail to it.  When we **dequeue**, we will move the head one node forwards and return the old head value.  An empty queue will be represented by having both the head and the tail be nil.
 
 ```swift
-class LLNode<Key> {
-    let val: Key
-    var next: LLNode?
-    init(val: Key) {
-        self.val = val
-    }
+class LLNode<T: Equatable>: Equatable, CustomStringConvertible {
+  public var value: T
+  public var next: LLNode?
+  
+  var description: String {
+    guard let next = next else { return "nil <- \(value)" }
+    return "\(next) <- \(value)"
+  }
+  
+  init(value: T) {
+    self.value = value
+  }
+  
+  static func ==(lhs: LLNode, rhs: LLNode) -> Bool {
+    return lhs.value == rhs.value &&
+      lhs.next == rhs.next
+  }
 }
-struct Queue<T> {
-    private var head: LLNode<T>?
-    private var tail: LLNode<T>?
-    var isEmpty: Bool {
-        return head == nil
+
+struct Queue<T: Equatable>: Equatable, CustomStringConvertible {
+  private var head: LLNode<T>? // front
+  private var tail: LLNode<T>? // back
+  private var itemCount = 0
+  
+  var description: String {
+    guard let head = head else { return "empty queue" }
+    return "(Back) \(head) (Front)"
+  }
+  
+  public var isEmpty: Bool {
+    return head == nil
+  }
+  
+  public var count: Int {
+    return itemCount
+  }
+  
+  public var peek: T? {
+    return head?.value
+  }
+  
+  public mutating func enqueue(_ value: T) {
+    let newNode = LLNode(value: value)
+    guard let lastNode = tail else {
+      tail = newNode; head = newNode
+      itemCount += 1
+      return
     }
-    mutating func enQueue(_ newElement: T) {
-        let newNode = LLNode(val: newElement)
-        guard let tail = tail else {
-            self.head = newNode
-            self.tail = newNode
-            return
-        }
-        tail.next = newNode
-        self.tail = newNode
+    lastNode.next = newNode
+    tail = newNode
+    itemCount += 1
+  }
+  
+  @discardableResult
+  public mutating func dequeue() -> T? {
+    var valueRemoved: T?
+    guard let _ = head else {
+      itemCount = 0
+      return valueRemoved
     }
-    mutating func deQueue() -> T? {
-        guard let oldHead = head else {
-            return nil
-        }
-        self.head = oldHead.next
-        if oldHead.next == nil {
-            self.tail = nil
-        }
-        return oldHead.val
+    itemCount -= 1
+    if head?.next == nil {
+      valueRemoved = head?.value
+      head = nil
+      tail = nil
+      return valueRemoved
     }
-    func peek() -> T? {
-        return self.head?.val
-    }
+    valueRemoved = head?.value
+    head = head?.next
+    return valueRemoved
+  }
 }
 ```
 
@@ -162,46 +201,60 @@ A common interview problem is to use two stacks to represent a Queue.  This is l
 As such, this implementation is not meant to be particularly efficient.
 
 ```swift
-struct Stack<T> {
-    private var arr = [T]()
-    var isEmpty: Bool {
-        return arr.isEmpty
-    }
-    mutating func push(_ newElement: T) {
-        arr.append(newElement)
-    }
-    mutating func pop() -> T? {
-        return arr.popLast()
-    }
-    func peek() -> T? {
-        return arr.last
-    }
+struct Stack<T: Equatable> {
+  private var items = [T]()
+  
+  public var isEmpty: Bool {
+    return items.isEmpty
+  }
+  
+  public var count: Int {
+    return items.count
+  }
+  
+  public var peek: T? {
+    return items.last
+  }
+  
+  public mutating func push(_ item: T) {
+    items.append(item)
+  }
+  
+  @discardableResult
+  public mutating func pop() -> T? {
+    guard !isEmpty else { return nil }
+    return items.removeLast()
+  }
 }
 
-struct Queue<T> {
-    private var enQueueStack = Stack<T>()
-    private var deQueueStack = Stack<T>()
-    var isEmpty: Bool {
-        return enQueueStack.isEmpty && deQueueStack.isEmpty
+struct Queue<T: Equatable> {
+  private var enqueueStack = Stack<T>()
+  private var dequeueStack = Stack<T>()
+  
+  public var isEmpty: Bool {
+    return enqueueStack.isEmpty && dequeueStack.isEmpty
+  }
+  
+  public mutating func enqueue(_ value: T) {
+    while let popElement = dequeueStack.pop() {
+      enqueueStack.push(popElement)
     }
-    mutating func enQueue(_ newElement: T) {
-        while !deQueueStack.isEmpty {
-            enQueueStack.push(deQueueStack.pop()!)
-        }
-        enQueueStack.push(newElement)
+    enqueueStack.push(value)
+  }
+  
+  public mutating func dequeue() -> T? {
+    while let popElement = enqueueStack.pop() {
+      dequeueStack.push(popElement)
     }
-    mutating func deQueue() -> T? {
-        while !enQueueStack.isEmpty {
-            deQueueStack.push(enQueueStack.pop()!)
-        }
-        return deQueueStack.pop()
+    return dequeueStack.pop()
+  }
+  
+  public mutating func peek() -> T? {
+    while let popElement = enqueueStack.pop() {
+      dequeueStack.push(popElement)
     }
-    mutating func peek() -> T? {
-        while !enQueueStack.isEmpty {
-            deQueueStack.push(enQueueStack.pop()!)
-        }
-        return deQueueStack.peek()
-    }
+    return dequeueStack.peek
+  }
 }
 ```
 
