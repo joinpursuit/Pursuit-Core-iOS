@@ -1,6 +1,6 @@
 # Queues
 
-A **Queue** is another way to organize and store data.
+A **Queue** is another way to organize and store data. A queue is an [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type). 
 
 A queue is like a line of people.  When someone enters the line, they enter at the back.  When someone leaves the line, they leave from the front.
 
