@@ -207,4 +207,4 @@ struct Queue<T> {
 
 # Exercises
 
-[Link]() to exercises for pair whiteboarding.
+[Link](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit03/whiteboarding/Queue-Exercises.md) to exercises for pair whiteboarding.
