@@ -95,7 +95,7 @@ struct Queue<T> {
   }
   
   public mutating func dequeue() -> T? {
-    return items.first
+    return items.removeFirst()
   }
 }
 ```
