@@ -190,6 +190,8 @@ struct Queue<T: Equatable>: Equatable, CustomStringConvertible {
 }
 ```
 
+**Excersie: Write a function that prints out all elements in a Queue**   
+
 ## Implementation - Two Stacks
 
 A Queue is an Abstract Data Type.  As such, we can chose to have any any data structure  underlying our queue.  We saw implementations with both an Array and a Linked List above.  
