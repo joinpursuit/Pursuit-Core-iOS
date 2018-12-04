@@ -2,11 +2,13 @@
 
 <pre>
 Find the smallest element in a queue
+</pre> 
 
+```swift
 func smallestElement<T: Comparable>(queue: Queue<T>) -> T? {
   return nil
 }
-</pre> 
+```
 
 </br></br>
 
