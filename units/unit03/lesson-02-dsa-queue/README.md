@@ -135,13 +135,12 @@ class LLNode<T: Equatable>: Equatable, CustomStringConvertible {
   }
 }
 
-struct Queue<T: Equatable>: Equatable, CustomStringConvertible {
-  private var head: LLNode<T>? // front
-  private var tail: LLNode<T>? // back
-  private var itemCount = 0
+struct Queue<T: Equatable>: CustomStringConvertible {
+  private var head: LLNode<T>? // could be nil
+  private var tail: LLNode<T>? // could be nil
   
   var description: String {
-    guard let head = head else { return "empty queue" }
+    guard let head = head else { return "empty" }
     return "(Back) \(head) (Front)"
   }
   
@@ -149,41 +148,31 @@ struct Queue<T: Equatable>: Equatable, CustomStringConvertible {
     return head == nil
   }
   
-  public var count: Int {
-    return itemCount
-  }
-  
-  public var peek: T? {
+  public var peek: T? { // read-only property
     return head?.value
   }
   
   public mutating func enqueue(_ value: T) {
     let newNode = LLNode(value: value)
     guard let lastNode = tail else {
-      tail = newNode; head = newNode
-      itemCount += 1
+      head = newNode
+      tail = newNode
       return
     }
     lastNode.next = newNode
     tail = newNode
-    itemCount += 1
   }
   
+  // reminder: check for empty state first
+  // remove item from the front of the queue
+  // modify the head next value
+  // return the value removed (T?)
   @discardableResult
   public mutating func dequeue() -> T? {
     var valueRemoved: T?
-    guard let _ = head else {
-      itemCount = 0
-      return valueRemoved
-    }
-    itemCount -= 1
-    if head?.next == nil {
-      valueRemoved = head?.value
-      head = nil
-      tail = nil
-      return valueRemoved
-    }
+    guard !isEmpty else { return valueRemoved }
     valueRemoved = head?.value
+    if head == tail { tail = nil }
     head = head?.next
     return valueRemoved
   }
