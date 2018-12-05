@@ -2,7 +2,7 @@
 
 ### Project Links
 
-- [Starting Project](https://github.com/C4Q/AC-iOS-CodableExample/tree/master)
+- [Starting Project](https://github.com/lynksdomain/JsonParsing)
 
 
 ### Resources
@@ -117,6 +117,3 @@ if let path = Bundle.main.path(forResource: "gameofthrones", ofType: "json") {
     }
 }
 ```
-
-
-# Codable Practice
