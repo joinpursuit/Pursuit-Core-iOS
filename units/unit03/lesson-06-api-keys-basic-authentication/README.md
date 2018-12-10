@@ -87,24 +87,3 @@ Basic Authentication provides another way to handle information.  Instead of jus
 
 OAuth is a common security standard for authentication.  It is a somewhat complex process that involves a series of communications with the API to ensure that the credentials are valid.
 
-
-
-## 4. Basic Authentication Example - Fieldbook
-
-Endpoint: [Baseball Stats](https://api.fieldbook.com/v1/5a24b99891f9bc030027338b)
-
-```
-Username: key-2
-Password: wJjqJIIdcnVMp7tuFx21
-```
-
-
-```swift
-var request = URLRequest(url: url)
-let namePassStr = "\(Constants.fbAuth.userName):\(Constants.fbAuth.password)"
-let nameAndPassData = namePassStr.data(using: .utf8)!
-let base64AuthEncoding = nameAndPassData.base64EncodedString()
-let authStr = "Basic \(base64AuthEncoding)"
-request.addValue(authStr, forHTTPHeaderField: "Authorization")
-```
-
