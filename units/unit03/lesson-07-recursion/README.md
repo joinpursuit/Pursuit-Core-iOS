@@ -254,3 +254,6 @@ In iterative loops, we count the number of loops in order to figure out the Big 
 
 ## Recursive State
 In recursive functions, state is passed down through arguments. In other words, you should generally not save variables within your recursive functions. Instead, if you want to keep track of any data, you should pass them down through arguments. In this way the function's arguments basically keep a history of the state of the function. This makes recursive functions immutable, which is one of their advantages.
+
+**Pair Programming exercises**   
+[Recursion Exercises](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit03/whiteboarding/Recursion-Exercises.md)  
