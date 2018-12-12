@@ -20,6 +20,9 @@
 2. Basic Auth
 3. OAuth (Now OAuth 2.0)
 
+### Meetup API 
+
+Get an API key from [Meetup](https://secure.meetup.com/meetup_api/key/)   
 
 ### 1. API Keys
 
@@ -89,27 +92,66 @@ let namePassStr = "\(userName):\(password)"
 let nameAndPassData = namePassStr.data(using: .utf8)!
 let base64AuthEncoding = nameAndPassData.base64EncodedString()
 let authStr = "Basic \(base64AuthEncoding)"
+request.httpMethod = "POST"
 request.addValue(authStr, forHTTPHeaderField: "Authorization")
 ```
 
 
-# 4. POST Request example
+# 4. POST Request example 
 
-When creating a POST request, we also need to include the data we are looking to post.  We do this by setting the request.httpBody to the data we want to put online.
+Now that we are making multiple types of requests in our app (GET, POST), let's start to encapsulate some of our network boilerplate code into a class called **NetworkHelper** 
 
-What is this data?  We will encode the custom object that we are looking to post.  This encoding process is the other half of Decodable.  We can encode JSON as simply as we can decode it by using the following method:
-
-```swift
-do {
-	let encodedData = try JSONEncoder().encode(myCustomObject)
-}
-catch {
-	//handle errors
+```swift 
+class NetworkHelper {
+  static func performDataTask(urlString: String, httpMethod: String, completionHandler: @escaping (APIError?, Data?) -> ()) {
+    guard let url = URL(string: urlString) else {
+      completionHandler(APIError.badURL("bad url: \(urlString)"), nil)
+      return
+    }
+    var request = URLRequest(url: url)
+    request.httpMethod = httpMethod
+    URLSession.shared.dataTask(with: request) { (data, response, error) in
+      if let error = error {
+        completionHandler(APIError.networkError(error.localizedDescription), nil)
+        return
+      }
+      guard let httpResponse = response as? HTTPURLResponse,
+        httpResponse.statusCode >= 200 && httpResponse.statusCode < 300 else {
+          if let response = response as? HTTPURLResponse {
+            completionHandler(APIError.badStatusCode("bad status code \(response.statusCode)"), nil)
+          } else {
+            completionHandler(APIError.badStatusCode("response is nil"), nil)
+          }
+          return
+      }
+      guard let data = data else {
+        completionHandler(APIError.noData, nil)
+        return
+      }
+      completionHandler(nil, data)
+    }.resume()
+  }
 }
 ```
 
-Endpoint: [https://api.fieldbook.com/v1/5a21d3ea92dfac03005db55a/orders](https://api.fieldbook.com/v1/5a21d3ea92dfac03005db55a/orders)
+Making a POST request to update the RSVP status on a Meetup event. 
+```swift 
+static func createUpdateRsvp(eventId: String, rsvp: String, completionHandler: @escaping (APIError?, RSVP?) -> Void) {
+  let urlString = "https://api.meetup.com/2/rsvp?key=\(SecretKeys.APIKey)&event_id=\(eventId)&rsvp=\(rsvp)"
+  NetworkHelper.performDataTask(urlString: urlString, httpMethod: "POST") { (error, data) in
+    if let error = error {
+      completionHandler(error, nil)
+    } else if let data = data {
+      do {
+        let rsvp = try JSONDecoder().decode(RSVP.self, from: data)
+        completionHandler(nil, rsvp)
+      } catch {
+        completionHandler(APIError.decodingError(error), nil)
+      }
+    }
+  }
+}
+```
 
 
-Username: key-1
-Password: p3Z-A83YixDsI-B4aRLm
+
