@@ -24,6 +24,11 @@
 
 Get an API key from [Meetup](https://secure.meetup.com/meetup_api/key/)   
 
+**Meetup API Key**   
+This is the easiest way to get started using the API. Simply access your API Key and append it to any request. The request's authorization will be based on your key. Remember that an API key is your personal secret key to access the Meetup API. Do not share or publish this private token. Do not access the Meetup API using an API key that does not belong to your account. To make requests on behalf of another user, use OAuth instead.
+
+Please Note: When using the Meetup AP Key, you're making requests on behalf of your account. So you will need meetup events in your calendar to get relevant information.
+
 ### 1. API Keys
 
 An API Key is useful for ensuring that a single user doesn't make too many querries.  This is userful, but does not provide for a strong level of security.  
