@@ -21,6 +21,10 @@ On its own, a time interval does not specify a unique point in time, or even a s
 **timeIntervalSince1970**  
 The interval between the date value and 00:00:00 UTC on 1 January 1970.
 
+**Why is 1970 the epoch?**  
+why its always 1st jan 1970 , Because - '1st January 1970' usually called as "epoch date" is the date
+when the time started for Unix computers, and that timestamp is marked as '0'.
+Any time since that date is calculated based on the number of seconds elapsed
 
 ## DateFormatter 
 
