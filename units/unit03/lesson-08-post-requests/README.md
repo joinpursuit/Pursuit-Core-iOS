@@ -22,7 +22,13 @@
 
 ### Meetup API 
 
-Get an API key from [Meetup](https://secure.meetup.com/meetup_api/key/)   
+Get an API key from [Meetup](https://secure.meetup.com/meetup_api/key/)  
+
+**Enpoints used in demo**  
+
+- Find upcoming events: ```https://api.meetup.com/find/upcoming_events?key=(API KEY GOES HERE)&fields=group_photo&text=ios``` 
+- Your scheduled meetup events: ```https://api.meetup.com/self/events?key=(API KEY GOES HERE)&page=10&status=upcoming&desc=false&rsvp=yes```   
+- Update/Create RSVP to an event: ```https://api.meetup.com/2/rsvp?key=(API KEY GOES HERE)&event_id=(EVENT ID GOES HERE)&rsvp=(RSVP "yes" or "no")```  
 
 **Meetup API Key**   
 This is the easiest way to get started using the API. Simply access your API Key and append it to any request. The request's authorization will be based on your key. Remember that an API key is your personal secret key to access the Meetup API. Do not share or publish this private token. Do not access the Meetup API using an API key that does not belong to your account. To make requests on behalf of another user, use OAuth instead.
