@@ -10,5 +10,9 @@ class MyClass {
  private init() {}
 //create a type property to access the only instance
 static let shared = MyClass()
+
+//write your methods below
+
+
 }
 ```
