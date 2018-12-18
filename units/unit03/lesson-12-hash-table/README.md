@@ -1,4 +1,4 @@
-## Hash Tables
+## Hash Table
 
 ## References
 
