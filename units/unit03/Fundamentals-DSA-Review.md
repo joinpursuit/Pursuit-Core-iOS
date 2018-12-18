@@ -13,7 +13,7 @@
 
 ## Data Structures - Abstract Data Types - Lessons
 
-- [Linked List](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/units/unit02/lesson-14-linked-list)  
+- [Node, Linked List](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/units/unit02/lesson-14-linked-list)  
 - [Stacks](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/units/unit02/lesson-15-dsa-stacks)  
 - [Queues](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/units/unit03/lesson-02-dsa-queue)  
 - [Hash Table](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/units/unit03/lesson-12-hash-table)    
