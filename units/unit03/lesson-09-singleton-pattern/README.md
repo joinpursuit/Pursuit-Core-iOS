@@ -26,3 +26,7 @@ static let shared = MyClass()
 ```swift
 myClass.shared.yourMethod
 ```
+
+
+
+[Example Project](https://github.com/lynksdomain/SingletonExample)
