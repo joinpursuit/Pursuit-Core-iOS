@@ -24,5 +24,5 @@ static let shared = MyClass()
 ## Accessing a singleton
 
 ```swift
-myClass.shared.youMethod
+myClass.shared.yourMethod
 ```
