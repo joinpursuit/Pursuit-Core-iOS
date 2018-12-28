@@ -14,7 +14,7 @@ func pageViewController(_ pageViewController: UIPageViewController, viewControll
       //the viewcontroller before the one you are currently looking at
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
             //the viewcontroller after the one you are currently looking at
 
     }
@@ -24,7 +24,7 @@ func pageViewController(_ pageViewController: UIPageViewController, viewControll
 You also have to set the first ViewController to be seen when the UiPageViewController is first loaded. This can be done in the viewDidLoad:
 
 ```swift
-        setViewControllers([allViewControllers[0]], direction: .forward, animated: true, completion: nil)
+setViewControllers([allViewControllers[0]], direction: .forward, animated: true, completion: nil)
 
 ```
 
