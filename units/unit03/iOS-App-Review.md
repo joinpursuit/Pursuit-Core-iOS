@@ -8,7 +8,7 @@
 - [JSONEncoder](https://developer.apple.com/documentation/foundation/jsonencoder)  
 - [Codable - Encoding and Decoding Custom Types](https://developer.apple.com/documentation/foundation/archives_and_serialization/encoding_and_decoding_custom_types)
 
-## Helper Methods we wrote 
+## Helper Classes we wrote 
 
 <details> 
 	<summary>Network Helper - wrapper for URLSession</summary>
