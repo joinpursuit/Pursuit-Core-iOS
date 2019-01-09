@@ -63,7 +63,7 @@ Collection views can be configured to scroll both vertically and horizontally si
 
 ## Sizing Collection View Cells
 
-We can set the size of a collection view cell by conforming to a special protocol named "UICollectionViewDelegateFlowLayout".  Flow Layout is the standard setup for collection views.  We will see how to customize this in later lessons.
+We can set the size of a collection view cell by conforming to a special protocol named "UICollectionViewDelegateFlowLayout".  Then you are able to calll the appropriate method.
 
 ```
 extension BestSellersViewController: UICollectionViewDelegateFlowLayout {
@@ -73,28 +73,8 @@ extension BestSellersViewController: UICollectionViewDelegateFlowLayout {
 }
 ```
 
-### Search
-
-We're going to embed a ```UITextField``` 
-in the [Navigation Item](https://developer.apple.com/reference/uikit/uinavigationitem) of the Navigation Bar
-to allow the user to change the search term. The navigation item is an object the view controller 
-uses to configure the navigation bar. 
-
-1. Drag a Text Field into the navigation bar of the collection view controller.
-2. Control drag from the Text Field to the View Controller to set the delegate property of the Text Field.
-3. Declare the collection view controller as adopting the ```UITextFieldDelegate``` protocol.
-4. Implement ```textFieldShouldReturn(_:)```
-
-    ```swift
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        search(textField.text!)
-        textField.text = nil
-        textField.resignFirstResponder()
-        return true
-    }
-    ```
     
     
 ## Building a collection view application
 
-Endpoint for instruction: "https://api.magicthegathering.io/v1/cards?name=\(searchName)"
+Endpoint for app: "https://dog.ceo/api/breeds/image/random/10"
