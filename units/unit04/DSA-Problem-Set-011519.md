@@ -1,19 +1,19 @@
 ## DSA - Problem Set - 011519
 
 <pre>
-1. Write a function that takes a String and determines if it is a palindrome
-
-Sample input: "racecar"
-
-Sample output: true
-</pre>
-
-<pre>
-2. Write a function that reverses a given string
+1. Write a function that reverses a given string
 
 Input: "Hello, Swift"
 
 Output: "tfiwS ,olleH""
+</pre>
+
+<pre>
+2. Write a function that takes a String and determines if it is a palindrome
+
+Sample input: "racecar"
+
+Sample output: true
 </pre>
 
 <pre>
