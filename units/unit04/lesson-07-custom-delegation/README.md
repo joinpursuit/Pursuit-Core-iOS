@@ -132,7 +132,7 @@ needing to know the underlying type of that source.
 
 Class that defines custom Delegate 
 ```swift
-protocol SettingsDelegate: class {
+protocol SettingsDelegate: AnyObject {
     func darkModeOn()
     func darkModeOff()
     func setLabel(message: String)
