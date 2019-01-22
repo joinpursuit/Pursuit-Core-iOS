@@ -43,6 +43,8 @@ Sample Input: 3 ^ 4
 Sample Output: 81
 </pre> 
 
+</br></br> 
+
 <pre> 
 6. Write a function that takes a starting number and a target number and recursively prints out the 
 start number to the target number.
