@@ -1,4 +1,4 @@
-## NSCache / Protocol Oriented Programming / Writing Custom Delegation
+## Protocol Oriented Programming / Writing Custom Delegation
 
 A protocol defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of 
 functionality. The protocol can then be adopted by a class, structure, or enumeration to provide an actual implementation of
@@ -27,7 +27,6 @@ properties are indicated by writing { get set } after their type declaration, an
 * understand how a protocol helps us to write more usable code  
 * write and make use of protocols in what Apple calls - Protocol Oriented Programming  
 * use protocols to write custom delegations in our iOS apps
-* use NSCache in processing images loaded from network api calls 
 
 Here’s an example of a protocol with a single instance property requirement:
 ```swift 
@@ -133,91 +132,53 @@ needing to know the underlying type of that source.
 
 Class that defines custom Delegate 
 ```swift
-protocol AnimalPickerControllerDelegate: class {
-    func didSelectNewProfileImage(_ controller: AnimalPickerController, _ image: UIImage?, _ photo: Photo)
+protocol SettingsDelegate: AnyObject {
+    func darkModeOn()
+    func darkModeOff()
+    func setLabel(message: String)
 }
+
 ```
 delegate variable conforming class needs to set, similar to tableView.delegate = self 
 ```swift 
-weak var delegate: AnimalPickerControllerDelegate?
+weak var delegate: SettingsDelegate?
 ```
 Trigger action when user selectes a new animal profile image 
 ```swift 
-delegate?.didSelectNewProfileImage(self, cell.imageView.image, photo)
+delegate?.darkModeOn()
 ```
 
 Conforming Class 
 delegate variable needs to be set
 ```swift
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "showPicker" {
-        let animalPickerController = segue.destination as! AnimalPickerController
-        animalPickerController.delegate = self
-    }
+    guard let destination = segue.destination as? SettingsViewController else { return }
+        destination.delegate = self
 }
 ```
 As part of comforming to the delegate, its methods need to be implemented 
 ```swift
-extension ProfileViewController: AnimalPickerControllerDelegate {
-    func didSelectNewProfileImage(_ controller: AnimalPickerController, _ image: UIImage?, _ photo: Photo) {
-        pickerButton.isHidden = true
-        profileImageView.isHidden = false
-        photoDescription.isHidden = false 
-        profileImageView.image = image
-        photoDescription.text = photo.title
+extension ViewController: SettingsDelegate {
+    func setLabel(message: String) {
+        myLabel.text = message
+    }
+    
+    func darkModeOff() {
+        myLabel.textColor = .black
+        self.view.backgroundColor = .white
+        darkModeIsOn = false
+    }
+    
+    func darkModeOn() {
+        myLabel.textColor = .white
+        self.view.backgroundColor = .black
+        darkModeIsOn = true
     }
 }
 ```
-
-## NSCache 
-
-You typically use NSCache objects to temporarily store objects with transient data that are expensive to create. Reusing these objects can provide performance benefits, because their values do not have to be recalculated. However, the objects are not critical to the application and can be discarded if memory is tight. If discarded, their values will have to be recomputed again when needed.
-
-## NSCache Usage 
-Declare NSCache instance 
-```swift 
-var nsCache = NSCache<NSString, UIImage>()
-```
-
-```swift 
-if let image = FlickrAPI.apiservice.sharedNSCache().object(forKey: photo.url_m.absoluteString as NSString) {
-    cell.imageView.image = image
-} else {
-    // keep track of the cell that was set
-    cell.urlString = photo.url_m.absoluteString
-    cell.imageView.image = UIImage(named:"placeholder-image")
-    cell.activityIndicator.startAnimating()
-    DispatchQueue.global().async {
-        do {
-            let imageData = try Data.init(contentsOf: photo.url_m)
-            let image  = UIImage.init(data: imageData)
-            FlickrAPI.apiservice.sharedNSCache().setObject(image!, forKey: photo.url_m.absoluteString as NSString)
-            DispatchQueue.main.async {
-                // only set if image for particular cell hasn't been set
-                if cell.urlString == photo.url_m.absoluteString {
-                    cell.imageView.image = image
-                    cell.activityIndicator.stopAnimating()
-                }
-            }
-        } catch {
-            print("image processing error: \(error.localizedDescription)")
-        }
-    }
-}
-```
-## Caches Directory - ideal directory for storing temporary resources
-<p align="center">
-<img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Protocols-Delegation-NSCache/nscache-caches-directory.png" alt="caches directory" width="800" height="600" \>  
-</p>  
-
-## In class demo here
-<p align="center"> 
-<img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/Protocols-Delegation-NSCache/cat-or-dog.gif" alt="catordog app show custom delegation pattern" width="414" height="736" />  
-</p>
+]
 
 
 ## Resources 
 [Protocols](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html#//apple_ref/doc/uid/TP40014097-CH25-ID267)  
-[NSCache](https://developer.apple.com/documentation/foundation/nscache)     
-[Best Practices - NSCache vs Documents Directory](https://stackoverflow.com/questions/29434617/ios-best-practice-to-save-images-locally-nscache-vs-save-in-document-directo)  
 

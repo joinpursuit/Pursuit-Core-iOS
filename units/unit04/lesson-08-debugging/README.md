@@ -1,76 +1,411 @@
-# Debugging Workshop
+# Debugging
 
-Techniques
+## Read the error message 
 
-1. Use print statements to view your data
-2. Use break points to stop execution without rebuilding
-3. Take small components into a Playground
-4. Use online resources to find similar problems and solutions
-5. Use the Debug View Hierachy
+Reading the error message is you first entry way into debugging your code. 
+
+## Using print statements (caveman debugging) 
+
+The most basic form of debugging. 
+
+## Using breakpoints 
+
+e.g using po to explore the contents of a variable
+
+![Using Breakpoints](https://camo.githubusercontent.com/43af4635fa7e6e59632e90bc52ee00f9c3923be2/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f78554c57386965515652576e41346c5431652f67697068792e676966)
+
+## Reading Documentation 
+
+e.g know the framework you're using by being familiar with its documentation and sample code, tutorials as provided.
+
+## Use Google, Stackoverflow and other online resources 
+
+![Google Issue](https://camo.githubusercontent.com/1c17cb8384b0e71b80651c32fdbd3a61741c7eb4/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f78554e64394338726536316f79446f784c472f67697068792e676966)  
+
+## Using Playgrounds 
+
+<details>
+  <summary>Playground Example</summary>
+
+```swift 
+// json data
+let json = """
+{
+"_embedded": {
+"events": [{
+"name": "Greta Van Fleet",
+"type": "event",
+"id": "Z7r9jZ1AefvoY",
+"test": false,
+"url": "http://www.ticketsnow.com/InventoryBrowse/TicketList.aspx?PID=2501470",
+"locale": "en-us",
+"images": [{
+"ratio": "16_9",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_RECOMENDATION_16_9.jpg",
+"width": 100,
+"height": 56,
+"fallback": false
+},
+{
+"ratio": "16_9",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_RETINA_LANDSCAPE_16_9.jpg",
+"width": 1136,
+"height": 639,
+"fallback": false
+},
+{
+"ratio": "16_9",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_RETINA_PORTRAIT_16_9.jpg",
+"width": 640,
+"height": 360,
+"fallback": false
+},
+{
+"ratio": "4_3",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_CUSTOM.jpg",
+"width": 305,
+"height": 225,
+"fallback": false
+},
+{
+"ratio": "3_2",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_TABLET_LANDSCAPE_3_2.jpg",
+"width": 1024,
+"height": 683,
+"fallback": false
+},
+{
+"ratio": "3_2",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_RETINA_PORTRAIT_3_2.jpg",
+"width": 640,
+"height": 427,
+"fallback": false
+},
+{
+"ratio": "16_9",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_EVENT_DETAIL_PAGE_16_9.jpg",
+"width": 205,
+"height": 115,
+"fallback": false
+},
+{
+"ratio": "16_9",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+"width": 2048,
+"height": 1152,
+"fallback": false
+},
+{
+"ratio": "16_9",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_TABLET_LANDSCAPE_16_9.jpg",
+"width": 1024,
+"height": 576,
+"fallback": false
+},
+{
+"ratio": "3_2",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_ARTIST_PAGE_3_2.jpg",
+"width": 305,
+"height": 203,
+"fallback": false
+}
+],
+"sales": {
+"public": {
+"startDateTime": "1900-01-01T06:00:00Z",
+"startTBD": false,
+"endDateTime": "2019-05-25T23:00:00Z"
+}
+},
+"dates": {
+"start": {
+"localDate": "2019-05-25",
+"localTime": "19:00:00",
+"dateTime": "2019-05-25T23:00:00Z",
+"dateTBD": false,
+"dateTBA": false,
+"timeTBA": false,
+"noSpecificTime": false
+},
+"status": {
+"code": "onsale"
+},
+"spanMultipleDays": false
+},
+"classifications": [{
+"primary": true,
+"segment": {
+"id": "KZFzniwnSyZfZ7v7nJ",
+"name": "Music"
+},
+"genre": {
+"id": "KnvZfZ7vAvl",
+"name": "Other"
+},
+"subGenre": {
+"id": "KZazBEonSMnZfZ7vk1I",
+"name": "Other"
+},
+"family": false
+}],
+"outlets": [{
+"url": "https://www.ticketmaster.com/greta-van-fleet-forest-hills-new-york-05-25-2019/event/Z7r9jZ1AefvoY",
+"type": "tmMarketPlace"
+}],
+"seatmap": {
+"staticUrl": "http://resale.ticketmaster.com.au/akamai-content/graphics/TMResale/2/VenueMaps/586-43719-2-0-ForestHillsStadium71524.png"
+},
+"_links": {
+"self": {
+"href": "/discovery/v2/events/Z7r9jZ1AefvoY?locale=en-us"
+},
+"attractions": [{
+"href": "/discovery/v2/attractions/K8vZ91738o0?locale=en-us"
+}],
+"venues": [{
+"href": "/discovery/v2/venues/Z6r9jZka6e?locale=en-us"
+}]
+},
+"_embedded": {
+"venues": [{
+"name": "Forest Hills Stadium",
+"type": "venue",
+"id": "Z6r9jZka6e",
+"test": false,
+"locale": "en-us",
+"postalCode": "11375",
+"timezone": "America/New_York",
+"city": {
+"name": "Forest Hills"
+},
+"state": {
+"name": "New York",
+"stateCode": "NY"
+},
+"country": {
+"name": "United States Of America",
+"countryCode": "US"
+},
+"address": {
+"line1": "1 Tennis Place"
+},
+"location": {
+"longitude": "-73.845001",
+"latitude": "40.722801"
+},
+"dmas": [{
+"id": 345
+}],
+"upcomingEvents": {
+"_total": 2,
+"tmr": 2
+},
+"_links": {
+"self": {
+"href": "/discovery/v2/venues/Z6r9jZka6e?locale=en-us"
+}
+}
+}],
+"attractions": [{
+"name": "Greta Van Fleet",
+"type": "attraction",
+"id": "K8vZ91738o0",
+"test": false,
+"url": "https://www.ticketmaster.com/greta-van-fleet-tickets/artist/1971779",
+"locale": "en-us",
+"externalLinks": {
+"twitter": [{
+"url": "https://twitter.com/GretaVanFleet"
+}],
+"itunes": [{
+"url": "https://itunes.apple.com/us/artist/id646178956"
+}],
+"wiki": [{
+"url": "https://en.wikipedia.org/wiki/Greta_Van_Fleet"
+}],
+"facebook": [{
+"url": "https://www.facebook.com/gretavanfleet"
+}],
+"instagram": [{
+"url": "https://www.instagram.com/gretavanfleet/"
+}],
+"musicbrainz": [{
+"id": "0be22557-d8c7-4706-a531-625c4c570162"
+}],
+"homepage": [{
+"url": "http://gretavanfleet.com/"
+}]
+},
+"images": [{
+"ratio": "16_9",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_RECOMENDATION_16_9.jpg",
+"width": 100,
+"height": 56,
+"fallback": false
+},
+{
+"ratio": "16_9",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_RETINA_LANDSCAPE_16_9.jpg",
+"width": 1136,
+"height": 639,
+"fallback": false
+},
+{
+"ratio": "16_9",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_RETINA_PORTRAIT_16_9.jpg",
+"width": 640,
+"height": 360,
+"fallback": false
+},
+{
+"ratio": "4_3",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_CUSTOM.jpg",
+"width": 305,
+"height": 225,
+"fallback": false
+},
+{
+"ratio": "3_2",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_TABLET_LANDSCAPE_3_2.jpg",
+"width": 1024,
+"height": 683,
+"fallback": false
+},
+{
+"ratio": "3_2",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_RETINA_PORTRAIT_3_2.jpg",
+"width": 640,
+"height": 427,
+"fallback": false
+},
+{
+"ratio": "16_9",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_EVENT_DETAIL_PAGE_16_9.jpg",
+"width": 205,
+"height": 115,
+"fallback": false
+},
+{
+"ratio": "16_9",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+"width": 2048,
+"height": 1152,
+"fallback": false
+},
+{
+"ratio": "16_9",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_TABLET_LANDSCAPE_16_9.jpg",
+"width": 1024,
+"height": 576,
+"fallback": false
+},
+{
+"ratio": "3_2",
+"url": "https://s1.ticketm.net/dam/a/9f7/438ce02a-b6da-409b-b716-1ef0424989f7_831871_ARTIST_PAGE_3_2.jpg",
+"width": 305,
+"height": 203,
+"fallback": false
+}
+],
+"classifications": [{
+"primary": true,
+"segment": {
+"id": "KZFzniwnSyZfZ7v7nJ",
+"name": "Music"
+},
+"genre": {
+"id": "KnvZfZ7vAeA",
+"name": "Rock"
+},
+"subGenre": {
+"id": "KZazBEonSMnZfZ7v6F1",
+"name": "Pop"
+},
+"type": {
+"id": "KZAyXgnZfZ7v7nI",
+"name": "Undefined"
+},
+"subType": {
+"id": "KZFzBErXgnZfZ7v7lJ",
+"name": "Undefined"
+},
+"family": false
+}],
+"upcomingEvents": {
+"_total": 34,
+"mfx-nl": 1,
+"tmr": 5,
+"mfx-de": 3,
+"ticketmaster": 25
+},
+"_links": {
+"self": {
+"href": "/discovery/v2/attractions/K8vZ91738o0?locale=en-us"
+}
+}
+}]
+}
+}]
+}
+}
+""".data(using: .utf8)!
+
+// model code
+struct EventData: Codable {
+  struct Embedded: Codable {
+    let events: [Event]
+  }
+  let _embedded: Embedded
+}
+
+struct Event: Codable {
+  let name: String
+  let type: String
+  let id: String
+  let url: URL
+  struct ImageInfo: Codable {
+    let ratio: String
+    let url: URL
+    let width: Int
+    let height: Int
+  }
+  let images: [ImageInfo]
+  
+}
+
+// api client code
+do {
+  let eventData = try JSONDecoder().decode(EventData.self, from: json)
+  print(eventData._embedded.events.first?.name ?? "no event name")
+} catch {
+  print("json decoding error: \(error)")
+}
+```
+
+</details> 
+
+## Using the Visual debugger 
+
+e.g view is not in the hierarchy
+
+![Visual Debugger](https://camo.githubusercontent.com/3bfeeea7102ec32d3f2ba266855aa042a83a80d7/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f336f686331615a366d72424a4953535a57672f67697068792e676966)
+
+## Rubber ducking 
+
+e.g tableview is not loading data
+walk your duck through the process of setting up a table view with all its required components
+
+In software engineering, rubber duck debugging is a method of debugging code. The name is a reference to a story in the book The Pragmatic Programmer in which a programmer would carry around a rubber duck and debug their code by forcing themselves to explain it, line-by-line, to the duck.[1] Many other terms exist for this technique, often involving different inanimate objects.
+
+Many programmers have had the experience of explaining a problem to someone else, possibly even to someone who knows nothing about programming, and then hitting upon the solution in the process of explaining the problem. In describing what the code is supposed to do and observing what it actually does, any incongruity between these two becomes apparent.[2] More generally, teaching a subject forces its evaluation from different perspectives and can provide a deeper understanding.[3] By using an inanimate object, the programmer can try to accomplish this without having to interrupt anyone else.
+
+## Reading Resources
+
+[Crash Reporting](https://developer.apple.com/library/content/technotes/tn2151/_index.html#//apple_ref/doc/uid/DTS40008184)  
+[Xcode - Using the Debugger](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UsingtheDebugger.html)  
+[Basic debugging using logging for Swift and Objective-C apps.](https://developer.apple.com/library/archive/technotes/tn2347/_index.html)  
+[Instruments Overview](https://help.apple.com/instruments/mac/current/#/dev7b09c84f5)  
+[Debugging](https://developer.apple.com/support/debugging/)  
+[Rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)  
 
 
-# 1. Use Print Statements to View Information
-
-![](debugAssets/Data.png)
-The highlighted line of code is where you can put a print statement and test to see if you are getting data from the internet.
-
-
-# 2. Use break points to stop execution without rebuilding
-
-Example: Figure out why data isn't being passed via a segue.
-![](https://media.giphy.com/media/xULW8ieQVRWnA4lT1e/giphy.gif)
-
-Fullscreen Link: [Giphy](https://giphy.com/gifs/xULW8ieQVRWnA4lT1e/fullscreen)
-
-#### Set up:
-
-1. Punch in your breakpoint on the line you suspect your code to have an issue with. 
-2. Run your app in simulator until it gets to that point where it stops and the **variable view** (left side) and **console debugger** (right side) activate.
-3. You can observe your values in the **variable view** and type out code in the console, which is like Playground. Click next to `(lldb)` and type in `po` (for "print out") and then your code. ex. `po print(destination.element)`
-4. Click the debugger's run button to continue along your code.
-
-**Pro-Tip:** Be wary of using too many breakpoints. It isn't fun to hit continue over and over.
-
-`LLDB` is a software debugger. It stands for "Low Level Debugger", probably.
-
-#### Clean up options:
-
-* Click on the blue ribbon in the debug bar to deactivate or activate all the breakpoints. You'll see the breakpoints greyed out when they're deactivated, in case you want to refer back to it later.
-* Click on the individual breakpoint and either drag it to the right or release it to get rid of it.
-
-# 3. Take small components into a Playground
-
-Example: Parse JSON in your model in a Playground
- ![parsing json into playground](https://github.com/C4Q/AC-iOS/blob/master/lessons/unit4/debugAssets/playground%20json.png)
- 
-#### Set up:
-
-1. Make sure to import playground support & UIKit
-2. make this true: PlaygroundPage.current.needsIndefiniteExecution
-3. Then you can do your url session in a playground and check to see if you have the data that you need
-
-# 4. Use online resources to find similar problems and solutions
-
-Example: How to move info.plist file
-
-[How to move info.plist](https://stackoverflow.com/questions/4159090/how-to-tell-xcode-where-my-info-plist-and-pch-files-are/4159153)
-### Google Error 
-##### Sometimes you just have to Google it ¯\\\_(ツ)_/¯
-- It is very likely that you are not the first person to run into some type of bug 
-- This is when google, stackOverflow, etc. come in handy 
-
-![](https://media.giphy.com/media/xUNd9C8re61oyDoxLG/giphy.gif)
-
-Fullscreen Link: [Giphy](https://giphy.com/gifs/xUNd9C8re61oyDoxLG/fullscreen)
-
-# 5. Use the Debug View Hierachy
-1. Make sure app is running on the viewController you want to debug
-2. In the console click the **Debug View Hierarchy** 
-Example: ![](debugAssets/Screen1.png)
-3. Click Show Clipped Content
-Example: ![](debugAssets/Screen2.png)
-4. You can rotate your view controller and see if your views are laid out correctly.
-5. The **Debug View Hierarchy** is used to see if views are created but not shown on screen. 
-![](https://media.giphy.com/media/3ohc1aZ6mrBJISSZWg/giphy.gif)
-
-Fullscreen Link: [Giphy](https://giphy.com/gifs/3ohc1aZ6mrBJISSZWg/fullscreen)
