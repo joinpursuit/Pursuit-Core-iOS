@@ -18,15 +18,12 @@ If your app does not use storyboards, you must create this window yourself.
 ```swift 
 func application(_ application: UIApplication, 
 didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Create a Navigation Controller
-    // Same as when we embed a View Controller in a Navigation Controller in Storyboard
-    let navController = UINavigationController()
 
     // Set the View Hierarchy
     // In this case it's a Navigation Controller with a root View Controller
     let mainVC = MainViewController()
-    navController.viewControllers = [mainVC]
-
+    let navController = UINavigationController(rootViewController: mainVC)
+    
     // Set the Main Window of the app
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = navController
