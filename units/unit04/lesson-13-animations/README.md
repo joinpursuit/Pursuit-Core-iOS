@@ -1,94 +1,90 @@
-# Standards
+# Introduction to UIView Animations 
 
-* Understand ```Animation```
+## What is Animation 
 
-# Objectives
+Animations provide fluid visual transitions between different states of your user interface. In iOS, animations are used extensively to reposition views, change their size, remove them from view hierarchies, and hide them. You might use animations to convey feedback to the user or to implement interesting visual effects.
 
-* Learn about animation using UIView.animate
-* Practice performing various kind of animations with different properties
-* Understand in what spaces is using animation helpful
+Both UIKit and Core Animation provide support for animations, but the level of support provided by each technology varies. In UIKit, animations are performed using UIView objects. Views support a basic set of animations that cover many common tasks. For example, you can animate changes to properties of views or use transition animations to replace one set of views with another.
 
-# Resources
+## Three Reasons to Animate 
 
-* [UI Animations in Swift](https://medium.com/written-code/ui-animations-with-swift-2ebb5e6d2292)
-* [Animating Constraints](https://medium.com/@sdrzn/animating-constraints-using-ios-10s-new-uiviewpropertyanimator-944bbb42347b)
-* [Apple Developer Docs](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/AnimatingViews/AnimatingViews.html#//apple_ref/doc/uid/TP40009503-CH6-SW2)
-* [Simple Animations in Swift](https://www.appcoda.com/view-animation-in-swift/)
+- Direct your users attention
+- Keep users oriented
+- Help connect behavior to what is on screen
 
-# Lesson
+## Objectives 
 
-## Animations
+- What is the basic syntax of a UIView animation
+- What properties can we animate
 
-Animation is the visible change of an attribute over time. The properties we change are the ones marked Animatable: * center * alpha * frame * bounds * transform * backgroundColor * contentStretch etc. The changing attribute might be positional: something moves or changes size or a view’s background color or opacity might change.
+## What can be Animated 
 
-<details>
-<summary> Why might we use animations in our app?</summary>
+- frame 
+- bounds 
+- center
+- transform 
+- alpha
+- backgroundColor
+- contentStretch 
 
-- Set your app apart
-- Improve user experience
-- Convey important information to users
+## Sample Code
 
-</details>
-
-
-### UIView.animate
-
-Animation in iOS is done by starting an animation block, then telling iOS what changes you want to make. Because the animation block is active, those changes won't happen straight away – instead, iOS will execute them smoothly over the time you specified, so you don't have to worry when it will finish or what all the intermediate states are. The simplest way to employ animations in code are with the animateWithDuration functions provided through UIView:
-
-
-animateWithDuration:animations:
-
-animateWithDuration:animations:completion:
-
-animateWithDuration:delay:options:animations:completion:
-
-
-### Example
-
-Here is a simple example of changing a view's background color using AWD
-<details>
+**Here the logo is being moved using a transform translation animation**   
+```swift 
+UIView.animate(withDuration: 1.0, delay: 0.3, options: [], animations: {
+  self.loginView.pursuitLogo.transform = CGAffineTransform(translationX: 0, y: 600)
+})
 ```
-UIView.animate(withDuration: 1, animations: {
-    self.yourView.backgroundColor = .red
-    
-} , completion : nil )
+
+**Here the logo is being pulsated through the use of transform scale animation**   
+```swift 
+UIView.animate(withDuration: 1.0, delay: 0.3, options: [.repeat, .curveEaseInOut], animations: {
+  self.loginView.pursuitLogo.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+})
 ```
-</details>
-## Exercises
 
-- How would we animate a change in your view's size (frame.size)
-
-<details>
+**Using transform rotation**  
+```swift 
+UIView.animate(withDuration: 1.0, delay: 0.3, options: [.repeat, .autoreverse], animations: {
+  self.loginView.sledgeHammer.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2.0)
+})
 ```
-UIView.animate(withDuration: 1, animations: {
-    self.yourView.frame.size.width += 20
-    self.yourView.frame.size.height += 20
-} , completion : nil )
+
+**Animating backgroundColor**   
+```swift 
+UIView.animate(withDuration: 1.0, delay: 0.3, options: [.repeat, .autoreverse], animations: {
+  self.loginView.backgroundColor = .red
+})
 ```
-</details>
+
+- **withDuration**: The total duration of the animations, measured in seconds. If you specify a negative value or 0, the changes are made without animating them.
+- **delay**: The amount of time (measured in seconds) to wait before beginning the animations. Specify a value of 0 to begin the animations immediately.
+- **options**: A mask of options indicating how you want to perform the animations. For a list of valid constants, see [UIViewAnimationOptions](https://developer.apple.com/documentation/uikit/uiviewanimationoptions?language=swift).
+- **animations**: A block object containing the changes to commit to the views. This is where you programmatically change any animatable properties of the views in your view hierarchy. This block takes no parameters and has no return value. This parameter must not be NULL.
+- **completion**: A block object to be executed when the animation sequence ends. This block has no return value and takes a single Boolean argument that indicates whether or not the animations actually finished before the completion handler was called. If the duration of the animation is 0, this block is performed at the beginning of the next run loop cycle. This parameter may be NULL.
+
+## Cubic Bezier curve representations of the predefined timing function
+
+<p align="center">
+<img src="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Animation_Types_Timing/Art/standardtiming_2x.png" width="600" height="600"/>
+</p>
+
+Visualize timing curves [here](http://cubic-bezier.com/#.17,.67,.83,.67)
+
+## CGAffineTransform
+
+An affine transformation matrix for use in drawing 2D graphics.
+
+**Overview**  
+An affine transformation matrix is used to rotate, scale, translate, or skew the objects you draw in a graphics context. The [CGAffineTransform](https://developer.apple.com/documentation/coregraphics/cgaffinetransform) type provides functions for creating, concatenating, and applying affine transformations.
+
+![radians degrees chart conversion](https://www.1728.org/degrees.png)   
 
 
-- How would we animate a change in your view's position (frame.origin)
+## Resources 
 
-<details>
-```
-UIView.animate(withDuration: 1, animations: {
-    self.yourView.frame.origin.x -= 50
-    self.yourView.frame.origin.y -= 50
-} , completion : nil )
-```
-</details>
-
-Why do we use the self dot in these functions?
-
-### Animation Options
-
-UIView's come with a number of Animation Options we can pass into our functions in order to change aspects of how our animation works: [AppleDocs](https://developer.apple.com/documentation/uikit/uiviewanimationoptions?language=objc)
-
-For instance we can define our animation curve to be:
-
-.easeInOut - An ease-in ease-out curve causes the animation to begin slowly, accelerate through the middle of its duration, and then slow again before completing.
-.easeIn - An ease-in curve causes the animation to begin slowly, and then speed up as it progresses.
-.easeOut - An ease-out curve causes the animation to begin quickly, and then slow down as it completes.
-.linear - A linear animation curve causes an animation to occur evenly over its duration.
-    
+| Resource | Summary |
+|:--------:|:---------:|
+| [Apple - Human Interface Guideline](https://developer.apple.com/ios/human-interface-guidelines/visual-design/animation/)  | Apple - Human Interface Guidelines (Animation) |
+| [Apple - Animations Programming Guide](https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/AnimatingViews/AnimatingViews.html) | Apple - Animations Programming Guide |
+| [Radians to Degrees](https://www.rapidtables.com/convert/number/radians-to-degrees.html) | Radians to Degrees conversion calculator |
