@@ -51,3 +51,7 @@ let input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 binarySearch(inputArray: input, searchKey: 16, range: 0..<input.count)
 
 ```
+
+## Reading 
+
+[Reading](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Binary%20Search)  
