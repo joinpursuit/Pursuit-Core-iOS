@@ -54,4 +54,4 @@ binarySearch(inputArray: input, searchKey: 16, range: 0..<input.count)
 
 ## Reading 
 
-[Reading](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Binary%20Search)  
+[More on Binary Search from Ray Wenderlich](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Binary%20Search)  
