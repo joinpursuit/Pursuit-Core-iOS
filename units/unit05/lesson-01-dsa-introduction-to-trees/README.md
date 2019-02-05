@@ -160,4 +160,4 @@ The **depth** of the reptile node is 1.
 [Trees - Ray Wenderlich](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Tree)    
 
 **Exercise - Create the following Tree, search and print the Primate Node**  
-![Exercise](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRjQW-1pjHGITkZN8UU99M566cbJPtA1WxeU2KkH4AK0ofZPNPK)   
+![Exercise](http://cs.lmu.edu/~ray/images/isa.png)   
