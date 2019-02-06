@@ -1,5 +1,7 @@
 ## Notifications
 
+[In class demo](https://github.com/joinpursuit/Pursuit-Core-iOS-ToDoList-Local-Notifications)   
+
 Local notifications and remote notifications are ways to inform users when new data becomes available for your app, even when your app is not running in the foreground. For example, a messaging app might let the user know when a new message has arrived, and a calendar app might inform the user of an upcoming appointment. Both local and remote notifications require you to add code to support the scheduling and handling of notifications in your app. For remote notifications, you must also provide a server environment that is capable of receiving data from user devices and sending notification-related data to the Apple Push Notification service (APNs), which is an Apple-provided service that handles the delivery of remote notifications to user devices.
 
 
