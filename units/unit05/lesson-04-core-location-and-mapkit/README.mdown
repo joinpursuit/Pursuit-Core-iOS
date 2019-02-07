@@ -96,7 +96,7 @@ To control the map view, you must create an outlet for it in `ViewController.swi
 ```
 let regionRadius: CLLocationDistance = 1000
 func centerMapOnLocation(location: CLLocation) {
-  let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 
+  let coordinateRegion = MKCoordinateRegion(location.coordinate, 
     regionRadius, regionRadius)
   mapView.setRegion(coordinateRegion, animated: true)
 }
