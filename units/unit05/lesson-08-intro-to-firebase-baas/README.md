@@ -15,9 +15,9 @@
 
 Firebase is a platform that manages a backend for mobile applications.  There are three main features that Firebase offers that we will take advantage of.
 
-1. Cloud Firestore database
-2. Authentication
-3. Image Hosting
+1. Authentication
+2. Cloud Firestore database
+3. Storage (Images, etc)
 
 Without a backend, there is a limit to what kind of apps we are able to build.  We have been able to build applications that request and process data, and even applications that post some limited amount of information.  Companies like Facebook or Spotify provide APIs for logging into user accounts and editing information using OAuth.  But these services only let you interact with specific products.  If we want to build our own service, we need to have our own backend.
 
