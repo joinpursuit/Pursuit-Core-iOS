@@ -15,7 +15,7 @@
 
 Firebase is a platform that manages a backend for mobile applications.  There are three main features that Firebase offers that we will take advantage of.
 
-1. Realtime database
+1. Cloud Firestore database
 2. Authentication
 3. Image Hosting
 
