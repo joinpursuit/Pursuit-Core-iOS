@@ -2,10 +2,8 @@
 
 ## Readings
 
-1. [Firebase Docs](https://firebase.google.com/docs/ios/setup?authuser=0)
-2. [Ray Wenderlich](https://www.raywenderlich.com/139322/firebase-tutorial-getting-started-2)
-3. [appcoda](https://www.appcoda.com/firebase/)
-4. [codelabs.developers.google.com](https://codelabs.developers.google.com/codelabs/firebase-ios-swift/#0)
+[Firebase Docs](https://firebase.google.com/docs/ios/setup?authuser=0)
+
 
 ## Objectives
 
