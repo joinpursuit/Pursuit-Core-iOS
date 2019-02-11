@@ -71,7 +71,7 @@ You are now set up to use Firebase!
 
 5. Run your app to verify installation
 
-![firebase added](https://github.com/alexpaul/LessonDrafts/blob/master/Firebase/Images/firebase-added.png)   
+![firebase added](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit05/lesson-08-intro-to-firebase-baas/Images/firebase-added.png)   
 
 # 4. Configuring Auth
 
