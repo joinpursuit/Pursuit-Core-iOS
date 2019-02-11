@@ -20,6 +20,9 @@ Run the terminal command:
 Check the current version: 
 ```pod --version```
 
+[Cocoapods Changelog - Description of version releases](https://github.com/CocoaPods/CocoaPods/blob/master/CHANGELOG.md)    
+
+Shows where CocoaPods is installed
 ```gem which cocoapods```
 
 To Install or update cocoapods run the following command: 
@@ -88,8 +91,9 @@ So as stated above, now you have to open ```CocoapodsApp.xcworkspace``` to work 
 **Reminder:** at this point you should include a .gitignore file to your project at the root level  
 Use this .gitignore [template](https://github.com/github/gitignore/blob/master/Swift.gitignore)  
 
-**NB:** don't include the Podfile and Podfile.lock to your ```.gitignore```  
-**Also** remember to uncomment the line #Pods/ to include it in your .gitignore
+[Should I check the pods directory into source control](https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control)   
+
+Whether or not you check in the Pods directory, the Podfile and Podfile.lock should always be kept under version control.
 
 Files generated as a result of installing pods into the project:  
 
@@ -146,7 +150,7 @@ File created by Xcode, a development application for creating iOS and Mac OS X (
 
 When you open an XCWORKSPACE file, it opens the associated project and restores the perspective. Therefore, Xcode workspace files can be used as a wrapper or container for an Xcode .XCODEPROJ project.
 
-## In class Demo - Using some Cocoapods solutions in buidling an app
+## Using some Cocoapods solutions in buidling an app
 Needed in our app are the following fundamentals: 
 * Networking
 * Autolayout
@@ -162,5 +166,4 @@ Needed in our app are the following fundamentals:
 |[Cocoapods Guides](https://guides.cocoapods.org/)|Cocoapods Guides in Depth|
 |[Workspace](https://fileinfo.com/extension/xcworkspace)|Xcode Workspace|
 |[30 Amazing iOS Libraries](https://medium.mybridge.co/30-amazing-ios-swift-libraries-for-the-past-year-v-2018-7cf15027eee9)|30 Amazing iOS Swift Libraries for the Past Year (v.2018)|
-|[Trending Cocoapods](https://trendingcocoapods.github.io/)|Trending Cocoapods|
 |[33 iOS Top Libraries](https://medium.com/app-coder-io/33-ios-open-source-libraries-that-will-dominate-2017-4762cf3ce449)|33 iOS open source libraries|
