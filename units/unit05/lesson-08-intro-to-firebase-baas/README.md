@@ -269,7 +269,7 @@ users:
 </pre> 
 
 **Data types supported by Cloud Firestore**  
-- Array **NB** cannot contain another array value 
+- Array (note: cannot contain another array value)  
 - Boolean e.g true or false 
 - Bytes
 - Date and time 
