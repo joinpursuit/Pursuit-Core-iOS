@@ -202,13 +202,9 @@ let db = Firestore.firestore()
 ```swift 
 // Using Firebase Cloudstore - Writing a race review document to the database
 static func postRaceReviewToDatabase(race: Race) {
-  guard let user = Auth.auth().currentUser else {
-    print("no logged user")
-    return
-  }
   var ref: DocumentReference? = nil
   ref = firestoreDB.collection("raceReviews").addDocument(data: [
-    "reviewerId"  : user.uid,
+    "reviewerId"  : race.reviewerId,
     "name"        : race.name,
     "type"        : "\(race.type)",
     "review"      : race.review,
