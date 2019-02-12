@@ -200,18 +200,49 @@ let db = Firestore.firestore()
 **Add data**  
 
 ```swift 
-// Add a new document with a generated ID
-var ref: DocumentReference? = nil
-ref = db.collection("users").addDocument(data: [
-    "first": "Ada",
-    "last": "Lovelace",
-    "born": 1815
-]) { err in
+// Using Firebase Cloudstore - Writing a race review document to the database
+static func postRaceReviewToDatabase(race: Race) {
+  guard let user = Auth.auth().currentUser else {
+    print("no logged user")
+    return
+  }
+  var ref: DocumentReference? = nil
+  ref = firestoreDB.collection("raceReviews").addDocument(data: [
+    "reviewerId"  : user.uid,
+    "name"        : race.name,
+    "type"        : "\(race.type)",
+    "review"      : race.review,
+    "lat"         : race.lat,
+    "lon"         : race.lon,
+    "createdDate" : Date.getISOTimestamp()
+  ]) { err in
     if let err = err {
-        print("Error adding document: \(err)")
+      print("Error adding document: \(err)")
     } else {
-        print("Document added with ID: \(ref!.documentID)")
+      print("Document added with ID: \(ref!.documentID)")
     }
+  }
+}
+
+// Using Firebase Cloudstore - Writing a user document to the database
+static func saveCreatedUserToDatabase() {
+  guard let user = Auth.auth().currentUser else {
+    print("no logged user")
+    return
+  }
+  var ref: DocumentReference? = nil
+  ref = firestoreDB.collection("users").addDocument(data: [
+    "userId" : "\(user.uid)",
+    "username": user.email ?? "no email",
+    "createdDate": Date.getISOTimestamp()
+  ])
+    { (error) in
+    if let error = error {
+      print("error adding user to database: \(error)")
+    } else {
+      print("user added to database with id: \(ref!.documentID)")
+    }
+  }
 }
 ```
 
@@ -222,14 +253,22 @@ To quickly verify that you've added data to Cloud Firestore, use the data viewer
 You can also use the "get" method to retrieve the entire collection.
 
 ```swift 
-db.collection("users").getDocuments() { (querySnapshot, err) in
-    if let err = err {
-        print("Error getting documents: \(err)")
-    } else {
-        for document in querySnapshot!.documents {
-            print("\(document.documentID) => \(document.data())")
+private func fetchRaceReviews() {
+  DatabaseManager.firestoreDB.collection("raceReviews")
+    .addSnapshotListener { querySnapshot, error in
+      if let error = error {
+        print("Error retreiving collection: \(error)")
+      } else if let querySnapshot = querySnapshot {
+        
+        var races = [Race]()
+        for document in querySnapshot.documents {
+          let race = Race(dict: document.data())
+          print(race.name)
+          races.append(race)
         }
-    }
+        self.raceReviews = races
+      }
+  }
 }
 ```
 
