@@ -1,10 +1,5 @@
 # Firebase Intro
 
-## Readings
-
-[Firebase Docs](https://firebase.google.com/docs/ios/setup?authuser=0)
-
-
 ## Objectives
 
 1. Understand what Firebase is and what it is used for
@@ -160,3 +155,135 @@ private func presentGroceryTabController(user: User, title: String, message: Str
   present(alertController, animated: true, completion: nil)
 }
 ```
+
+# 5. Using the database to read and write data
+
+#### Getting Started
+
+Now that we can create users, what can they do?  We are going to create a simple to-do list that will demonstrate the features of the Cloud Firestore.
+
+Ariticles on differences between Firebase Realtime Database and Cloud Firestore 
+1. [Firebase - Choosing a database](https://firebase.google.com/docs/firestore/rtdb-vs-firestore)  
+1. [Stackoverflow](https://stackoverflow.com/questions/46549766/whats-the-difference-between-cloud-firestore-and-the-firebase-realtime-database)  
+
+**Realtime Database** is Firebase's original database. It's an efficient, low-latency solution for mobile apps that require synced states across clients in realtime.
+
+**Cloud Firestore** is Firebase's new flagship database for mobile app development. It improves on the successes of the Realtime Database with a new, more intuitive data model. Cloud Firestore also features richer, faster queries and scales better than the Realtime Database.
+
+**Create a Cloud Firestore project**  
+1. In the Database section, click the Get Started button for Cloud Firestore.
+1. Select a starting mode for your Cloud Firestore Security Rules.
+
+We will use the following security rule below, this rule ensure that only authenticated users can read and write to our database: 
+
+```javascript 
+// Allow read/write access on all documents to any user signed in to the application
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if request.auth.uid != null;
+    }
+  }
+}
+```
+
+**Initialize Cloud Firestore**   
+
+```swift 
+import Firebase
+
+FirebaseApp.configure()
+
+let db = Firestore.firestore()
+```
+
+**Add data**  
+
+```swift 
+// Add a new document with a generated ID
+var ref: DocumentReference? = nil
+ref = db.collection("users").addDocument(data: [
+    "first": "Ada",
+    "last": "Lovelace",
+    "born": 1815
+]) { err in
+    if let err = err {
+        print("Error adding document: \(err)")
+    } else {
+        print("Document added with ID: \(ref!.documentID)")
+    }
+}
+```
+
+**Read data**   
+
+To quickly verify that you've added data to Cloud Firestore, use the data viewer in the [Firebase console](https://console.firebase.google.com/project/_/database/firestore/data?authuser=1).
+
+You can also use the "get" method to retrieve the entire collection.
+
+```swift 
+db.collection("users").getDocuments() { (querySnapshot, err) in
+    if let err = err {
+        print("Error getting documents: \(err)")
+    } else {
+        for document in querySnapshot!.documents {
+            print("\(document.documentID) => \(document.data())")
+        }
+    }
+}
+```
+
+
+# 6. Cloud Firestore Data model
+
+Cloud Firestore is a NoSQL, document-oriented database. Unlike a SQL database, there are no tables or rows. Instead, you store data in documents, which are organized into collections.
+
+Each document contains a set of key-value pairs. Cloud Firestore is optimized for storing large collections of small documents.
+
+All documents must be stored in collections. Documents can contain subcollections and nested objects, both of which can include primitive fields like strings or complex objects like lists.
+
+Collections and documents are created implicitly in Cloud Firestore. Simply assign data to a document within a collection. If either the collection or document does not exist, Cloud Firestore creates it.
+
+**Documents**  
+In Cloud Firestore, the unit of storage is the document. A document is a lightweight record that contains fields, which map to values. Each document is identified by a name.
+
+A document might look like this 
+
+```json 
+cohort: 5.3
+currentYear: 2019
+programmingLanguage: "Swift" 
+platform: "iOS"
+```
+
+**Collections**  
+Documents live in collections, which are simply containers for documents. For example, you could have a users collection to contain your various users, each represented by a document:
+
+<pre> 
+users: 
+	first: "Tom" 
+	last" "Jones" 
+	
+	first: "Heather"
+	last: "Jackson" 
+</pre> 
+
+**Data types supported by Cloud Firestore**  
+- Array **NB** cannot contain another array value 
+- Boolean e.g true or false 
+- Bytes
+- Date and time 
+- Floating point number 
+- Geographical point 
+- Integer
+- Dictionaries e.g { first: "Martha" } 
+- Null
+- Reference e.g projects/[PROJECT_ID]/databases/[DATABASE_ID]/documents/[DOCUMENT_PATH]
+- Text String 
+
+
+## Readings
+[Firebase Docs](https://firebase.google.com/docs/ios/setup?authuser=0)  
+[Authentication](https://firebase.google.com/docs/auth/?authuser=1)     
+[Cloud Firestore](https://firebase.google.com/docs/firestore/?authuser=1)   
+[Cloud Storage](https://firebase.google.com/docs/storage/?authuser=1)
