@@ -18,6 +18,8 @@
 - performBackgroundTask
 - perform
 - saveContext
+- NSFetchResultsController
+- NSFetchResultsControllerDelegate
 
 ## Readings 
 
@@ -231,5 +233,100 @@ if let context = container?.viewContext {
   }
 }
 ```
+
+## 9. NSFetchResultsController and NSFetchControllerDelegate
+
+A controller (not in the view controller sense) that you use to manage the results of a Core Data fetch request and display data to the user.
+
+**Configuring the NSFetchController**   
+```swift 
+private func configureFetchResultsController() {
+  let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
+  // predicate
+  // use some example predicates
+  //request.predicate = NSPredicate(format: "label contains [c] %@", "Salmon")
+
+  // sort descriptor
+  // use some example sort descriptors
+  request.sortDescriptors = [NSSortDescriptor(key: "label", ascending: true, selector: #selector(NSString.localizedStandardCompare(_:)))]
+  if let context = container?.viewContext {
+    context.perform {
+      self.fetchResultsController = NSFetchedResultsController<Recipe>(fetchRequest: request,
+                                                                  managedObjectContext: context,
+                                                                  sectionNameKeyPath: nil,
+                                                                  cacheName: nil)
+      do {
+        try self.fetchResultsController?.performFetch()
+      } catch {
+        print("fetchResultsController performFetch error: \(error)")
+      }
+      self.fetchResultsController?.delegate = self
+      self.tableView.reloadData()
+    }
+  }
+}
+```
+
+**Using the fetchResultsController along with table view datasource methods to populate the table view**   
+```swift 
+extension SavedRecipesController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    if let sections = fetchResultsController?.sections,
+      sections.count > 0 {
+      return sections[section].numberOfObjects
+    } else {
+      return 0
+    }
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath)
+    if let recipe = fetchResultsController?.object(at: indexPath) {
+      cell.textLabel?.text = recipe.label
+      cell.detailTextLabel?.text = recipe.source?.name
+    }
+    return cell
+  }
+}
+```
+
+**NSFetchResultsControllerDelegate Methods**    
+```swift 
+extension SavedRecipesController: NSFetchedResultsControllerDelegate {
+  func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+    tableView.beginUpdates()
+  }
+  
+  func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+    switch type {
+    case .insert:
+      tableView.insertSections([sectionIndex], with: .fade)
+    case .delete:
+      tableView.deleteSections([sectionIndex], with: .fade)
+    default:
+      break
+    }
+  }
+  
+  func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+    switch type {
+    case .insert:
+      tableView.insertRows(at: [newIndexPath!], with: .fade)
+    case .delete:
+      tableView.deleteRows(at: [indexPath!], with: .fade)
+    case .update:
+      tableView.reloadRows(at: [indexPath!], with: .fade)
+    case .move:
+      tableView.deleteRows(at: [indexPath!], with: .fade)
+      tableView.insertRows(at: [newIndexPath!], with: .fade)
+    }
+  }
+  
+  func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+    tableView.endUpdates()
+  }
+}
+```
+
 
 
