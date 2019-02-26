@@ -393,6 +393,10 @@ extension SavedRecipesController: NSFetchedResultsControllerDelegate {
 </br>
 
 2. Create a new Data Model file. File -> New -> File (Select **Data Model** below the Core Data heading)   
-3. Make sure the NSPersistentContainer name matches the newly created Data Model file. e.g if your Data Model file is called Company.xcdatamodeld then the name should be "Company".
+3. Make sure that the NSPersistentContainer name matches the newly created Data Model file. e.g if your Data Model file is called Company.xcdatamodeld then the name should be "Company". See below.
+
+```swift 
+let container = NSPersistentContainer(name: "Name of Your Data Model Goes Here")
+```
 
 
