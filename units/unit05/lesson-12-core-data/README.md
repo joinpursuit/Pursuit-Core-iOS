@@ -351,7 +351,7 @@ extension SavedRecipesController: NSFetchedResultsControllerDelegate {
        application to it. This property is optional since there are legitimate
        error conditions that could cause the creation of the store to fail.
       */
-      let container = NSPersistentContainer(name: "CoreData_Recipes")
+      let container = NSPersistentContainer(name: "Name of Your Data Model Goes Here")
       container.loadPersistentStores(completionHandler: { (storeDescription, error) in
           if let error = error as NSError? {
               // Replace this implementation with code to handle the error appropriately.
@@ -392,7 +392,7 @@ extension SavedRecipesController: NSFetchedResultsControllerDelegate {
 
 </br>
 
-2. Create a new Data Model file 
-3. Make sure the NSPersistentContainer name matches the newly created Data Model file
+2. Create a new Data Model file. File -> New -> File (Select **Data Model** below the Core Data heading)   
+3. Make sure the NSPersistentContainer name matches the newly created Data Model file. e.g if your Data Model file is called Company.xcdatamodeld then the name should be "Company".
 
 
