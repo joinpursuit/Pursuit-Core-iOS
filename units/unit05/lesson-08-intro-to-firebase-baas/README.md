@@ -86,9 +86,9 @@ The LoginViewController will host the LoginView.xib and outlets will be connecte
 
 ### Add auth logic
 
-Firebase is going to be a service responsible for many different functions, so we are going to want to build a singleton for it to keep its code out of the rest of our project.  This is also helpful if we ever need to change backend providers, there is only one class that directly talks to Firebase that we could refactor.
+Create a **UserSession** class to hold all Firebase authentication methods e.g createUser(), signInExistingUser(), signOut().
 
-In your FirebaseAPIClient, import FirebaseAuth
+In your UserSession class, import **FirebaseAuth**
 
 For Auth, we will have two instance methods
 
@@ -119,6 +119,8 @@ public func signInExistingUser(email: String, password: String) {
   }
 }
 ```
+
+... more methods as needed.
 
 It's that simple!  Firebase does all the heavy lifting for you.  Let's configure our View controller to call these methods appropriately.
 
