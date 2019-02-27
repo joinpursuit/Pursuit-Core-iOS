@@ -77,19 +77,19 @@ class ViewController: UIViewController {
 To investigate memory issues in your app you can use the **Memory Graph Debugger** It can be found next to the **Visual Debbugger** button in Xcode. 
 
 <p align="center">
-  <img src="https://github.com/alexpaul/LessonDrafts/blob/master/Memory-Management/Images/memory-graph-debugger.png" width="273" height="129" />
+  <img src="https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit05/lesson-13-memory-management/Images/memory-graph-debugger.png" width="273" height="129" />
 </p>
 
 
 Visual Debugger shows a strong reference cycle between Apartment and Tenant classes. 
 <p align="center">
-  <img src="https://github.com/alexpaul/LessonDrafts/blob/master/Memory-Management/Images/strong-reference-cycle.png" width="429" height="427" />
+  <img src="https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit05/lesson-13-memory-management/Images/strong-reference-cycle.png" width="429" height="427" />
 </p>
 
 **Let's resolve this memory cycle. **
 
 <p align="center">
-  <img src="https://github.com/alexpaul/LessonDrafts/blob/master/Memory-Management/Images/weak-reference.jpg" width="700" height="525" />
+  <img src="https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit05/lesson-13-memory-management/Images/weak-reference.jpg" width="700" height="525" />
 </p>
 
 We will mark one of the classes **weak** to break the reference cycle
