@@ -27,6 +27,8 @@
 
 1. [Core Data Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/index.html#//apple_ref/doc/uid/TP40001075-CH2-SW1)  
 1. [Core Data Framework](https://developer.apple.com/documentation/coredata)
+1. [NSPredicate Class](https://developer.apple.com/documentation/foundation/nspredicate)
+1. [Predicate Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Predicates/AdditionalChapters/Introduction.html#//apple_ref/doc/uid/TP40001789)
 1. [Stackoverflow - Why should I use Core Data?](https://stackoverflow.com/questions/1883879/why-should-i-use-core-data-for-my-iphone-app)  
 
 ## Other Persistence mechanisms we have used
