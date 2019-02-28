@@ -1,5 +1,8 @@
 # Core Data 
 
+## Demo App 
+[Demo app](https://github.com/joinpursuit/Pursuit-Core-iOS-CoreData-Recipes)
+
 ## Vocabulary 
 
 - NSPersistentContainer
