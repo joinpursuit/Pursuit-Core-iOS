@@ -1,6 +1,9 @@
 
 # Keyboard Handling 
 
+
+## [In class demo](https://github.com/joinpursuit/Pursuit-Core-iOS-Keyboard-Handling)     
+
 When users touch a text field, a text view, or a field in a web view, the system displays a keyboard. You can configure the type of keyboard that is displayed along with several attributes of the keyboard. You also have to manage the keyboard when the editing session begins and ends. Because the keyboard could hide the portion of your view that is the focus of editing, this management might include adjusting the user interface to raise the area of focus so that is visible above the keyboard.
 
 
