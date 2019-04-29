@@ -3,10 +3,10 @@
 
 ## Helper Classes written in Unit 3 to handle Networking
 
-<details> 
+<details>
 	<summary>Network Helper - wrapper for URLSession</summary>
-	
-```swift 
+
+```swift
 import Foundation
 
 public final class NetworkHelper {
@@ -15,7 +15,7 @@ public final class NetworkHelper {
     URLCache.shared = cache
   }
   public static let shared = NetworkHelper()
-  
+
   public func performDataTask(endpointURLString: String,
                               httpMethod: String,
                               httpBody: Data?,
@@ -36,7 +36,7 @@ public final class NetworkHelper {
     }
     task.resume()
   }
-  
+
   public func performUploadTask(endpointURLString: String,
                                 httpMethod: String,
                                 httpBody: Data?,
@@ -48,7 +48,7 @@ public final class NetworkHelper {
     var request = URLRequest(url: url)
     request.httpMethod = httpMethod
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    
+
     let task = URLSession.shared.uploadTask(with: request, from: httpBody) { (data, response, error) in
       if let error = error {
         completionHandler(AppError.networkError(error), nil, response as? HTTPURLResponse)
@@ -62,13 +62,13 @@ public final class NetworkHelper {
 }
 ```
 
-</details> 
+</details>
 
 
-<details> 
+<details>
 	<summary>AppError - handles error throughout the app</summary>
-	
-```swift 
+
+```swift
 import Foundation
 
 public enum AppError: Error {
@@ -78,7 +78,7 @@ public enum AppError: Error {
   case decodingError(Error)
   case badStatusCode(String)
   case badMimeType(String)
-  
+
   public func errorMessage() -> String {
     switch self {
     case .badURL(let message):
@@ -98,13 +98,13 @@ public enum AppError: Error {
 }
 ```
 
-</details> 
+</details>
 
 
-<details> 
+<details>
 	<summary>ImageHelper - wrapper for image processing including caching images in memory for optimization in performance</summary>
-	
-```swift 
+
+```swift
 import UIKit
 
 public final class ImageHelper {
@@ -115,9 +115,9 @@ public final class ImageHelper {
     imageCache.totalCostLimit = 10 * 1024 * 1024 // max 10MB used
   }
   public static let shared = ImageHelper()
-  
+
   private var imageCache: NSCache<NSString, UIImage>
-  
+
   public func fetchImage(urlString: String, completionHandler: @escaping (AppError?, UIImage?) -> Void) {
     NetworkHelper.shared.performDataTask(endpointURLString: urlString, httpMethod: "GET", httpBody: nil) { (error, data, response) in
       if let error = error {
@@ -152,13 +152,13 @@ public final class ImageHelper {
       }
     }
   }
-  
+
   public func image(forKey key: NSString) -> UIImage? {
     return imageCache.object(forKey: key)
   }
 }
 ```
 
-</details> 
+</details>
 
-</br> 
+</br>
