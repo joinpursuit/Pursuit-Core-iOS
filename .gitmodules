@@ -1,0 +1,4 @@
+[submodule "fundamentals/types-variables-logic-operations/types-variables-logic-operations-lab"]
+	path = fundamentals/types-variables-logic-operations/types-variables-logic-operations-lab
+	url = https://github.com/joinpursuit/types-variables-logic-operations-lab.git
+	branch = master
