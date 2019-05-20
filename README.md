@@ -2,11 +2,11 @@
 
 ## Welcome!
 
-This is where you'll find some common resources as well as full lessons. 
+This is where you'll find some common resources as well as full lessons.
 
-## Units 
+## Units
 
-1. [Unit 1 - Swift Fundamentals](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/units/unit01)
+1. [Unit 1 - Swift Fundamentals](./fundamentals/README.md)
 1. [Unit 2 - MVC, View Life Cycle](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/units/unit02)
 1. [Unit 3 - Networking, Concurrency, APIs](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/units/unit03)
 1. [Unit 4 - Persistence, Animation, Autolayout](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/units/unit04)
@@ -18,8 +18,8 @@ This is where you'll find some common resources as well as full lessons.
 ## Apple - Swift Language Guide
 [Swift Language Guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)  
 
-## Style Guide 
+## Style Guide
 [RayWenderlich Swift Style Guide](https://github.com/raywenderlich/swift-style-guide#spacing)
 
-## Github and Terminal 
+## Github and Terminal
 [Github and Terminal Basic Commands](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit01/lesson-04-terminal-github/README.md)
