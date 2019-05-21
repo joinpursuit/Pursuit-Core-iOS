@@ -1,12 +1,31 @@
 
-# Unit 3 -  Networking, Concurrency, APIs
+# Unit 3:  Networking, Concurrency, APIs
+
+## Contents
+
+1. [Intro to the Internet and Networking](./intro-to-the-internet-and-networking/README.md)
+2. [Into to Unit Testing](./introduction-to-unit-testing/README.md)
+3. [Parsing JSON](./parsing-json/README.md)
+4. [DSA: Queues](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Queues/ios/README.md)
+5. [URLSession](./urlsession/README.md)
+6. [Concurrency](./concurrency/README.md)
+7. [API Keys and Basic Auth](./api-keys-basic-authentication/README.md)
+8. [Recursion](./recursion/README.md)
+9. [Post Requests](./post-requests/README.md)
+10. [Singleton Pattern](./singleton-pattern/README.md)
+11. [Working with Dates](./working-with-dates/README.md)
+12. [UIPageViewController](./uipageviewcontroller/README.md)
+13. [DSA: Review](https://github.com/joinpursuit/DSA-Curriculum)
+14. [DSA: Hash Tables](https://github.com/joinpursuit/DSA-Curriculum/blob/master/hash_tables/ios/README.md)
+15. [App Transport Security](./app-transport-security/README.md)
+16. [Uploading JSON Data](./uploading-json-data/README.md)
 
 ## Helper Classes written in Unit 3 to handle Networking
 
-<details> 
+<details>
 	<summary>Network Helper - wrapper for URLSession</summary>
-	
-```swift 
+
+```swift
 import Foundation
 
 public final class NetworkHelper {
@@ -15,7 +34,7 @@ public final class NetworkHelper {
     URLCache.shared = cache
   }
   public static let shared = NetworkHelper()
-  
+
   public func performDataTask(endpointURLString: String,
                               httpMethod: String,
                               httpBody: Data?,
@@ -36,7 +55,7 @@ public final class NetworkHelper {
     }
     task.resume()
   }
-  
+
   public func performUploadTask(endpointURLString: String,
                                 httpMethod: String,
                                 httpBody: Data?,
@@ -48,7 +67,7 @@ public final class NetworkHelper {
     var request = URLRequest(url: url)
     request.httpMethod = httpMethod
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    
+
     let task = URLSession.shared.uploadTask(with: request, from: httpBody) { (data, response, error) in
       if let error = error {
         completionHandler(AppError.networkError(error), nil, response as? HTTPURLResponse)
@@ -62,13 +81,13 @@ public final class NetworkHelper {
 }
 ```
 
-</details> 
+</details>
 
 
-<details> 
+<details>
 	<summary>AppError - handles error throughout the app</summary>
-	
-```swift 
+
+```swift
 import Foundation
 
 public enum AppError: Error {
@@ -78,7 +97,7 @@ public enum AppError: Error {
   case decodingError(Error)
   case badStatusCode(String)
   case badMimeType(String)
-  
+
   public func errorMessage() -> String {
     switch self {
     case .badURL(let message):
@@ -98,13 +117,13 @@ public enum AppError: Error {
 }
 ```
 
-</details> 
+</details>
 
 
-<details> 
+<details>
 	<summary>ImageHelper - wrapper for image processing including caching images in memory for optimization in performance</summary>
-	
-```swift 
+
+```swift
 import UIKit
 
 public final class ImageHelper {
@@ -115,9 +134,9 @@ public final class ImageHelper {
     imageCache.totalCostLimit = 10 * 1024 * 1024 // max 10MB used
   }
   public static let shared = ImageHelper()
-  
+
   private var imageCache: NSCache<NSString, UIImage>
-  
+
   public func fetchImage(urlString: String, completionHandler: @escaping (AppError?, UIImage?) -> Void) {
     NetworkHelper.shared.performDataTask(endpointURLString: urlString, httpMethod: "GET", httpBody: nil) { (error, data, response) in
       if let error = error {
@@ -152,13 +171,13 @@ public final class ImageHelper {
       }
     }
   }
-  
+
   public func image(forKey key: NSString) -> UIImage? {
     return imageCache.object(forKey: key)
   }
 }
 ```
 
-</details> 
+</details>
 
-</br> 
+</br>
