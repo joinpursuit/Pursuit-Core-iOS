@@ -36,6 +36,18 @@
 
 ---
 
+## UITableViewDataSource
+In order to get data populated into a table view the following methods are required
+```swift
+func tableView(_ tableView: UITableView,
+cellForRowAt indexPath: IndexPath) -> UITableViewCell
+```
+and
+
+```swift
+func tableView(_ tableView: UITableView,
+numberOfRowsInSection section: Int) -> Int
+```
 
 ### 1. Creating a TableView
 
@@ -98,7 +110,7 @@ A tableView also has a *dataSource*.  When the tableView wants to know how many 
 We must also must set the dataSource of our tableView to be the instance of the view controller we are currently in.
 
 
-```swift 
+```swift
 override func viewDidLoad() {
     super.viewDidLoad()
     tableView.delegate = self
@@ -109,11 +121,11 @@ override func viewDidLoad() {
 
 We can define those methods with any implementation that we choose.  Below, we are returning a UITableViewCell with the default initializer and stating we want five rows.  Let's rerun our app after implementing the data source methods below.
 
-```swift 
+```swift
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -142,7 +154,7 @@ There are three properties of a UITableViewCell we have access to:
 3. imageView
 
 
-```swift 
+```swift
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 	let rowToSetUp = indexPath.row
 	let dayAtRow = daysOfWeek[rowToSetUp]
@@ -174,7 +186,7 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 
 Now, let's add a *subtitle* to each of our cells.  The subtitle will be the number of the row.
 
-```swift 
+```swift
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 	let rowToSetUp = indexPath.row
 	let dayAtRow = daysOfWeek[rowToSetUp]
@@ -197,7 +209,7 @@ Go to Main.storyboard, and select the tableView inside your ViewController.
 
 Return to your ViewController and your tableView(_: cellForRowAt:) method.  Instead of making a generic UITableViewCell, we want to create the cell that we just defined inside our Interface Builder.
 
-```swift 
+```swift
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let rowToSetUp = indexPath.row
     let dayAtRow = daysOfWeek[rowToSetUp]
@@ -229,7 +241,7 @@ let daysOfWeek = [["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satu
 
 By remodeling our daysOfWeek as a [[String]], we will make array 0 English and array 1 Chinese.
 
-```swift 
+```swift
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let rowToSetUp = indexPath.row
     let currentSection = indexPath.section //NEW
@@ -243,7 +255,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return daysOfWeek[section].count //NEW
 }
-    
+
 func numberOfSections(in tableView: UITableView) -> Int {
     return 2
 }
