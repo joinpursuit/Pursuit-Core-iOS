@@ -13,12 +13,13 @@
 8. [Debugging](./debugging/README.md)
 9. [Subclassing UIViews](./subclassing-uiviews/README.md)
 10. [Introduction to Programmatic UI](./introduction-to-programmatic-ui/README.md)
-11. [DSA: Quick Sort and Merge Sort](https://github.com/joinpursuit/DSA-Curriculum/blob/master/merge_sort/ios/README.md)
-12. [Animations](./animations/README.md)
-13. [Animations Cont](./animations-continued/README.md)
-14. [DSA: Binary Search](https://github.com/joinpursuit/DSA-Curriculum/blob/master/binary_search/ios/README.md)
-15. [Keyboard Handling](./keyboard-handling/README.md)
-16. [NY Times Bestsellers Project](https://github.com/joinpursuit/Pursuit-Core-iOS-New-York-Times-Bestsellers)
+11. [Programmatic View Management](./programmatic-view-management/README.md)
+12. [DSA: Quick Sort and Merge Sort](https://github.com/joinpursuit/DSA-Curriculum/blob/master/merge_sort/ios/README.md)
+13. [Animations](./animations/README.md)
+14. [Animations Cont](./animations-continued/README.md)
+15. [DSA: Binary Search](https://github.com/joinpursuit/DSA-Curriculum/blob/master/binary_search/ios/README.md)
+16. [Keyboard Handling](./keyboard-handling/README.md)
+17. [NY Times Bestsellers Project](https://github.com/joinpursuit/Pursuit-Core-iOS-New-York-Times-Bestsellers)
 
 
 ## In class demos
