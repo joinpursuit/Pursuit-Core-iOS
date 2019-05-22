@@ -10,7 +10,7 @@
 5. [URLSession](./urlsession/README.md)
 6. [Concurrency](./concurrency/README.md)
 7. [API Keys and Basic Auth](./api-keys-basic-authentication/README.md)
-8. [Recursion](./recursion/README.md)
+8. [DSA: Recursion](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Recursion/ios/README.md)
 9. [Post Requests](./post-requests/README.md)
 10. [Singleton Pattern](./singleton-pattern/README.md)
 11. [Working with Dates](./working-with-dates/README.md)
