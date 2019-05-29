@@ -92,32 +92,35 @@ var arr1 = [8,4,2]
 ```swift
 // first we need to partition the array using a partitioning scheme
 // other partitioning schemes include Hoare's and Dutch Flag scheme
-func partitionLomuto<T: Comparable>(inputArray: inout [T], low: Int, high: Int) -> Int {
-  let pivot = inputArray[high] // we always use the last element for the Lomuto scheme
-  var i = low // so we can mutate i
+public func partitionLomuto<T: Comparable>(_ a: inout [T], low: Int, high: Int) -> Int {
+  let pivot = a[high]
+  var i = low
   for j in low..<high {
-    if inputArray[j] <= pivot { // swap elements if less than or equal to pivot
-      (inputArray[i], inputArray[j]) = (inputArray[j], inputArray[i])
-      i += 1 // move i
+    if a[j] <= pivot {
+      a.swapAt(i, j)
+      i += 1
     }
   }
-  (inputArray[i], inputArray[high]) = (inputArray[high], inputArray[i]) // swap i with high value
-  return i // return the pivot index
+  a.swapAt(i, high)
+  return i
 }
-var list = [ 10, 0, 3, 9, 2, 14, 26, 27, 1, 5, 8, -1, 8]
-partitionLomuto(inputArray: &list, low: 0, high: list.count - 1)
-print(list)
 
 // we are making sure only types that are comparable work with quicksort
-func quicksortLomuto<T: Comparable>(inputArray: inout [T], low: Int, high: Int) {
+public func quicksortLomuto<T: Comparable>(_ a: inout [T], low: Int, high: Int) {
   if low < high {
-    let p = partitionLomuto(inputArray: &inputArray, low: low, high: high) // gets a pivot for each smaller recursive call
-    quicksortLomuto(inputArray: &inputArray, low: low, high: p - 1) // using recursion on smaller subsets
-    quicksortLomuto(inputArray: &inputArray, low: p + 1, high: high)
+    let pivot = partitionLomuto(&a, low: low, high: high)
+    quicksortLomuto(&a, low: low, high: pivot - 1)
+    quicksortLomuto(&a, low: pivot + 1, high: high)
   }
 }
-var list2 = [ 10, 0, 3, 9, 2, 14, 26, 27, 1, 5, 8, -1, 8]
-quicksortLomuto(inputArray: &list2, low: 0, high: list2.count - 1) // [-1, 0, 1, 2, 3, 5, 8, 8, 9, 10, 14, 26, 27]
+
+var list = [12, 0, 3, 9, 2, 21, 18, 27, 1, 5, 8, -1, 8]
+partitionLomuto(&list, low: 0, high: list.count - 1)
+print(list)
+
+var list2 = [12, 0, 3, 9, 2, 21, 18, 27, 1, 5, 8, -1, 8]
+quicksortLomuto(&list2, low: 0, high: list2.count - 1) // [-1, 0, 1, 2, 3, 5, 8, 8, 9, 12, 18, 21, 27]
+print(list2)
 ```
 
 ### Time Complexity:
@@ -177,45 +180,45 @@ var arr3 = [3,1,8,2,10,4,6,5]
 ### In Code:
 
 ```swift
-func mergeSort<T: Comparable>(inputArray: [T]) -> [T] {
-  guard inputArray.count > 1 else { return inputArray }
-  let middleIndex = inputArray.count / 2
-  let leftArray = mergeSort(inputArray: Array(inputArray[0..<middleIndex]))
-  let rightArray = mergeSort(inputArray: Array(inputArray[middleIndex..<inputArray.count]))
-  return merge(leftPile: leftArray, rightPile: rightArray)
+public func mergeSort<Element>(_ array: [Element]) -> [Element] where Element: Comparable {
+  guard array.count > 1 else { return array }
+  let middle = array.count / 2
+  let left = mergeSort(Array(array[..<middle]))
+  let right = mergeSort(Array(array[middle...]))
+  return merge(left, right)
 }
 
-func merge<T: Comparable>(leftPile: [T], rightPile: [T]) -> [T] {
+private func merge<Elememnt>(_ left: [Elememnt], _ right: [Elememnt]) -> [Elememnt] where Elememnt: Comparable {
   var leftIndex = 0
   var rightIndex = 0
-  var orderedPile = [T]()
-  while leftIndex < leftPile.count && rightIndex < rightPile.count {
-    if leftPile[leftIndex] < rightPile[rightIndex] {
-      orderedPile.append(leftPile[leftIndex])
+  var result: [Elememnt] = []
+  while leftIndex < left.count && rightIndex < right.count {
+    let leftElement = left[leftIndex]
+    let rightElement = right[rightIndex]
+    if leftElement < rightElement {
+      result.append(leftElement)
       leftIndex += 1
-    } else if leftPile[leftIndex] > rightPile[rightIndex] {
-      orderedPile.append(rightPile[rightIndex])
+    } else if leftElement > rightElement {
+      result.append(rightElement)
       rightIndex += 1
     } else {
-      orderedPile.append(leftPile[leftIndex])
+      result.append(leftElement)
       leftIndex += 1
-      orderedPile.append(rightPile[rightIndex])
+      result.append(rightElement)
       rightIndex += 1
     }
   }
-  while leftIndex < leftPile.count {
-    orderedPile.append(leftPile[leftIndex])
-    leftIndex += 1
+  if leftIndex < left.count {
+    result.append(contentsOf: left[leftIndex...])
   }
-  while rightIndex < rightPile.count {
-    orderedPile.append(rightPile[rightIndex])
-    rightIndex += 1
+  if rightIndex < right.count {
+    result.append(contentsOf: right[rightIndex...])
   }
-  return orderedPile
+  return result
 }
 
 var list = [10, 0, 3, 9, 2, 14, 8, 27, 1, 5, 8, -1, 26]
-mergeSort(inputArray: list) // [-1, 0, 1, 2, 3, 5, 8, 8, 9, 10, 14, 26, 27]
+print(mergeSort(list)) // [-1, 0, 1, 2, 3, 5, 8, 8, 9, 10, 14, 26, 27]
 ```
 
 ### Time complexity
