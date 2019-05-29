@@ -184,7 +184,7 @@ The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number) is made
 
 ```swift
 func recursiveFib(n: Int) -> Int {
-    guard n > 1 else { return 1 }
+    guard n > 2 else { return 1 }
     return recursiveFib(n: n - 1) + recursiveFib(n: n - 2)
 }
 ```
