@@ -263,13 +263,13 @@ We'll need to rewrite our Node to include a previous Node.
 
 ```swift
 class Node<T: Equatable> {
-var value: T
-var next: Node?
-var previous: Node?
+  var value: T
+  var next: Node?
+  var previous: Node?
 
-init(value: T, next: Node? = nil) {
-self.value = value
-}
+  init(value: T, next: Node? = nil) {
+    self.value = value
+  }
 }
 ```
 
