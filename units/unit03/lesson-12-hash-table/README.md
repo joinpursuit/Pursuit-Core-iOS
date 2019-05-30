@@ -196,7 +196,8 @@ struct HashTable<Key: Hashable, Value> {
     buckets = Array<Bucket>(repeating: [], count: capacity)
   }
   
-  // after hashing the key we return the index if will be in using the mod of the buckets count
+  // after hashing the key we return the index, 
+  // here we will be using the mod of the buckets count to calculate the index
   private func index(forKey key: Key) -> Int {
     return abs(key.hashValue) % buckets.count
   }
