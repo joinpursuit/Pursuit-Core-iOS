@@ -10,8 +10,6 @@ Each key appears only once in the collection and can be used as an index much in
 the way an integer is used to index an array. In fact, this gives a hint as to 
 part of a common implementation of hashes.
 
-![phone book - hash table](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg/315px-Hash_table_3_1_1_0_1_0_0_SP.svg.png)
-
 ## A Hash Table by any other name...
 
 A Hash Table can also be referred to as:
@@ -34,6 +32,8 @@ let swedenHash = "Sweden".hashValue // 3649514877415349888 - this number will va
 let bucket = swedenHash % 5 // bucket 3
 let hobbiesHashValues = 4799450060928805186 % 5 // index 1
 ```
+
+![phone book - hash table](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg/315px-Hash_table_3_1_1_0_1_0_0_SP.svg.png)
 
 ## Operations
 
