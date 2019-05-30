@@ -35,6 +35,20 @@ let hobbiesHashValues = 4799450060928805186 % 5 // index 1
 
 ![phone book - hash table](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg/315px-Hash_table_3_1_1_0_1_0_0_SP.svg.png)
 
+Let's try this in Playgrounds. Reminder bucket positions are not guaranteed to be in the same position across launches of Playgrounds. Contrary to Arrays, Hashmaps are not ordered. 
+
+```swift
+let john = "John Smith"
+let lisa = "Lisa Smith"
+let Sandra = "Sandra Dee"
+
+let buckets = 16
+
+print("John is in bucket \(abs(john.hashValue) % buckets)")
+print("lisa is in bucket \(abs(lisa.hashValue) % buckets)")
+print("Sandra is in bucket \(abs(Sandra.hashValue) % buckets)")
+```
+
 ## Operations
 
 * add (insert, set)
