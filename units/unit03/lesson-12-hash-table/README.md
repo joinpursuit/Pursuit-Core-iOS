@@ -90,6 +90,8 @@ There is one problem: because we take the modulo of the hash value with the size
 
 A common way to handle collisions is to use chaining. 
 
+![collision resolution techniques](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2015/07/hashChaining1.png)
+
 
 ### Load Factor
 
