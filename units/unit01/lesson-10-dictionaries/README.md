@@ -212,14 +212,14 @@ for c in codes {
 
 let countries = ["England" : "London", "France" : "Paris", "Japan" : "Tokyo", "Germany" : "Berlin", "Denmark" : "Copenhagen"]
 
-a. Print out the copital of Germany?   
+a. Print out the capital of Germany?   
 b. In what country is Tokyo?  
 </pre> 
 
 </br> 
 
 <pre> 
-2. Given the list below, write a function that return the frequency of each number is the array 
+2. Given the list below, write a function that returns the frequency of each number in the array 
 var list = [1, 1, 5, 6, 6, 7, 1]
 
 example output: [1: 3, 6: 2, 5: 1, 7: 1] (reminder: dictionaries are not ordered, the output order may be different) 
