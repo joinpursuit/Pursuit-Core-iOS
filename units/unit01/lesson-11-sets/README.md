@@ -169,6 +169,8 @@ struct Person {
 }
 let alex = Person(name: "Tom", age: "29")
 let sally = Person(name: "Sally", age: "26")
+
+let names: Set<Person> = [alex, sally]
 ```
 <details> 
     <summary>Solution</summary> 
