@@ -27,23 +27,23 @@
 
 ## Laptop Account
 
-If you are using a loaner laptop we suggest you create your own user account.
+If you are using a loaner laptop, we suggest you create your own user account.
 
-Creating your own account on a mac:
+Creating your own account on a Mac:
 
 1. Choose Apple menu > System Preferences, then click Users & Groups.
-1. Click the lock icon to unlock it, then enter an administrator name and password.
-1. Click the Add button below the list of users.
-1. Click the New Account pop-up menu, then choose a type of user. ...
-1. Enter a full name for the new user.
+1. Click the "lock" icon to unlock the users, then enter an administrator name and password.
+1. Click the Add (+) button below the list of users.
+1. In the pop-up, click the "New Account" menu, then choose an "Administrator" type of user.
+1. Enter a full name for the new user, and a password that you will remember.
 
 ### Apple Developer Account
 
-The "free tier" Apple developer account enables most of Apple development features except a few (most notably, deploying applications to the App Store and configuring Remote Push Notifications). The cost of the Paid membership is $99 per year. Sign up and create a free developer account [here](https://developer.apple.com/programs/how-it-works/).
+The "free tier" Apple developer account enables most of Apple's development features, except for a few (most notably, deploying applications to the App Store and configuring Remote Push Notifications). The cost of the Paid membership is $99 per year. Sign up and create a free developer account [here](https://developer.apple.com/programs/how-it-works/).
 
 ### Xcode
 
-If you haven't installed Xcode, proceed to the installation instructions below:
+If you haven't installed *Xcode*, proceed to the installation instructions below:
 
 1. From your Macbook, open the App Store.
 1. Search for *Xcode*.
@@ -70,7 +70,7 @@ Let's see what Xcode's Playgrounds are all about.
 
 ### Github
 
-Github is a source control system that greatly facilitates collaboration on coding projects. Github is a hosted git repository. It serves as a centralized place to collaborate on and share code.
+*Git* is a source control system that greatly facilitates collaboration on coding projects. *Github* is a hosted git repository. It serves as a centralized place to collaborate on and share code.
 
 [Create a github account](http://github.com) if you don't already have one.
 
@@ -87,30 +87,30 @@ $ git config --global user.email johndoe@example.com
 
 ### Canvas
 
-[Canvas](https://canvas.instructure.com/courses/1433048/assignments/syllabus) is our key organizational tool. You'll find a schedule of lessons and assignments in it.
+[Canvas](https://canvas.instructure.com/courses/1605734/assignments/syllabus) is our key organizational tool. In it, you'll find a schedule of lessons and assignments.
 
-You should have received an email already from Canvas asking you to register before you can participate in the class.
+You should have already received an email from Canvas asking you to register. You will need to register before you can participate in the class.
 
-If you haven't already please create a new account and make sure you set your Time Zone to "Eastern Time". You can then accept the invitation.
+If you haven't already, please create a new account and make sure you set your Time Zone to "Eastern Time". You can then accept the invitation.
 
 ### Slack
 
-Slack is our less-formal, more immediate messaging/chat app. It should be used for quick short term communication and is not preferred for anything you would want to save long term.
+*Slack* is our less-formal, more immediate messaging/chat app. It should be used for quick, short-term communication and is **not preferred** for anything you would want to save long-term.
 
-1. Join the pursuit-core.slack.com workspace [link](http://pursuit-core.slack.com).
+1. Join the `pursuit-core.slack.com` workspace [link](http://pursuit-core.slack.com).
 2. You will be prompted to enter your email address. Enter it and hit the green button.
 3. Check your email for the confirmation and click "Confirm Email".
 4. Enter your name and choose a user name.
 5. Create a password.
 6. You should be brought to the web app, ready to go!
-7. Download and install desktop client from http://slack.com
-8. Optionally install the mobile client on your iPhone or Android phone.
+7. Download and install the desktop app from http://slack.com
+8. Optionally, you can install the mobile client on your iPhone or Android phone.
 
 ### Terminal
 
-*Terminal* is a program on your Mac that gives a text based interface to your computer. This is sometimes called a CLI for command line interface. Since the Mac's operating system (macOS) is a version of UNIX much of what you discover about UNIX will be applicable to the Mac's command line.
+*Terminal* is a program on your Mac that gives a text-based interface to your computer. This is sometimes called a *CLI*, which stands for "command line interface". Since the Mac's operating system (macOS) is a version of UNIX, much of what you discover about UNIX will be applicable to the Mac's command line.
 
-An example of a command typed into Terminal.
+Here is an example of a command typed into Terminal.
 
 ```bash
 $ ls
@@ -122,47 +122,49 @@ Downloads	Pictures
 
 ```
 
-Broken down, `ls`, followed by the return/enter key is the command. The four lines after are the output.
+Explanation: `ls` is the command. In order to execute the command, we press the return/enter key. The four lines after are the output.
 
 #### File System
 
-Many of the basic commands are for navigating the file system. These are your files and folders. All you see and do in *Finder* (the graphical app used to navigate files) can be done in Terminal on the command line.
+Many of the Terminal commands are for navigating the file system. The file system is your files and folders. Everything you see and do in *Finder* (the graphical app used to navigate files) can be done in Terminal by entering commands.
 
 
 ##### File system commands
 
 |Command |Description|Example|
-|--------|-----------|-------|
-| pwd    | "print working directory", it tells you your directory/folder | pwd -> /Users/lara |
-| ls     | lists all files in the directory | ls |
-| cd     | "change directory", this moves to a directory | cd Desktop |
-| rm     | "remove", this deletes a file (careful! NO UNDO) | rm README.md |
-| mkdir  | Makes an empty folder in the current directory | mkdir SurveyInformation
+|:------:|:---------:|:-----:|
+| pwd    | "print working directory", tells you what directory (folder) you are in | pwd -> /Users/lara |
+| ls     | lists all files and folders in the directory | ls |
+| cd     | "change directory", moves to a directory | cd Desktop |
+| rm     | "remove", deletes a file (careful! THERE IS NO UNDO) | rm README.md |
+| mkdir  | Makes an empty folder in the current directory | mkdir SurveyInformation |
 
 
 ##### Special file names
 |Name    |Description|Example|
-|--------|-----------|-------|
+|:------:|:---------:|:-----:|
 | .      | The current directory | ls . |
 | ..     | The parent directory | ls .. |
 | ~      | Your _home_ directory | ls ~ |
 | /      | The root directory | ls / |
-| ../..  | Parent's parent's directory | ls ../..
+| ../..  | Parent's parent's directory | ls ../.. |
 
 
 ##### Reading and writing files
 
 |Command |Description|Example|
-|--------|-----------|-------|
-| cat    | Displays the text of a file in terminal | cat README.md |
-| more   | Displays the text of a file in terminal, with paging | more README.md |
-| open _file_     | Opens a file using the associated program | open README.md |
-| nano _file_     | Edit a file in the terminal | nano README.md |
+|:------:|:---------:|:-----:|
+| cat  _file_ | Displays the text of a file in terminal | cat README.md |
+| more _file_ | Displays the text of a file in terminal, with paging | more README.md |
+| open _file_ | Opens a file using the associated program | open README.md |
+| nano _file_ | Edit a file in the terminal | nano README.md |
 
 
-The dollar sign is a _prompt_. You type your command after it and hit enter. Some commands take one or more arguments (inputs). Some don't. Don't type the "$" character itself.
+The dollar sign is a _prompt_. Don't type the "$" character itself!
 
-A command that's being given one argument.
+You type your command after the prompt and hit enter. Some commands "take" one or more arguments, which are inputs separated by a space. Some commands don't take any arguments.
+
+Here is a command that is being given one argument.
 
 ```bash
 $ git log
@@ -171,17 +173,17 @@ $ git log
 #### Helpful terminal commands
 
 |Command |Description|Example|
-|--------|-----------|-------|
-| man    | "manual", it prints comprehensive documentation to the window | man ls|
-| pwd    | "print working directory", it tells you your directory/folder | pwd -> /Users/lara |
+|:------:|:---------:|:-----:|
+| man    | "manual", prints comprehensive documentation to the window | man ls|
+| pwd    | "print working directory", tells you your directory/folder | pwd -> /Users/lara |
 | ls     | lists all files in the directory | ls |
-| cd     | "change directory", this moves to a directory | cd Desktop |
-| rm     | "remove", this deletes a file (careful! NO UNDO) | rm README.md |
+| cd     | "change directory", moves to a directory | cd Desktop |
+| rm     | "remove", deletes a file (careful! THERE IS NO UNDO) | rm README.md |
 | mkdir  | Makes an empty folder in the current directory | mkdir SurveyInformation |
 | cat    | Displays the text of a file in terminal | cat README.md |
 | more   | Displays the text of a file in terminal, with paging | more README.md |
 | open _file_     | Opens a file using the associated program | open README.md |
-| git clone (URL) | makes a local copy of a git repo in the current directory | git
+| git clone (URL) | makes a local copy of a git repo in the current directory | git clone website.git|
 
 #### Standards
 
