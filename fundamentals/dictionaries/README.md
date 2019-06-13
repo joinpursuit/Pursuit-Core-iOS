@@ -2,7 +2,7 @@
 ---
 
 ### Objectives
-* Declare and use Dictionaries 
+* Declare and use Dictionaries
 * Understand common uses of Dictionaries
 * Contrast and compare Dictionaries with Arrays
 
@@ -19,7 +19,7 @@
 
 ### 1. Introduction
 
-A dictionary is a data structure that can be thought of as an array that is indexed by any value, not just `Int`. For this reason, dictionaries are sometimes called _associative arrays_: they associate a key value with another value. It's possible to use many different types as keys but in practice, most often the key is a `String`. 
+A dictionary is a data structure that can be thought of as an array that is indexed by any value, not just `Int`. For this reason, dictionaries are sometimes called _associative arrays_: they associate a key value with another value. It's possible to use many different types as keys but in practice, most often the key is a `String`.
 
 Dictionaries are also called hash maps. A map is created between two values by hashing a key,  generating an index from it that is used to store and look up a value. A hashing algorithm is a process that can quickly convert a non-numerical key into a hidden numerical index that is used to look up the value.
 
@@ -35,7 +35,7 @@ Unlike an array keys are unordered
 
 Some motivations for indexing by key instead of number
 
-* Index on natural data such as a name, zip code or airport code instead of 
+* Index on natural data such as a name, zip code or airport code instead of
 * Means to discover and enforce uniqueness
 * Means to aggregate data associated with a key, e.g. a histogram
 
@@ -179,7 +179,7 @@ for k in baseballTeamsByCode.keys {
 }
 ```
 
-#### Array from keys 
+#### Array from keys
 
 A dictionary's indices are its keys. They can be captured into a separate array, the elements of which can be used to index the dictionary.
 
@@ -205,3 +205,8 @@ for c in codes {
 }
 ```
 
+#### Standards
+
+IOS: IOS.1
+
+Language Fundamentals: LF.3, LF.3.c

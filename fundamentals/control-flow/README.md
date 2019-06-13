@@ -4,11 +4,11 @@
 ### Objective
 
 * To understand and use `if / else` constructs
-* To apply boolean logic to conditionals 
+* To apply boolean logic to conditionals
 * To understand and use the ternary operator ` ? : `
 * To understand and use `switch`
 * To develop the ability to choose among variations of conditionals
-* To understand switch with Tuples 
+* To understand switch with Tuples
 * To understand switch Ranges
 
 ### Reading
@@ -34,7 +34,7 @@
 
 ### 1. Introduction
 
-Conditionals are what makes a program dynamic. Without them programs would have no way to do anything differently. We use the expression "branch" to refer to a possible path our program can take. The analogy allows us to visualize program execution as a tree. The code enters at the trunk, and as it executes it will conditionally enter branches. We might imagine the branches getting thinner as a representation of the likliness that the branch will be reached. 
+Conditionals are what makes a program dynamic. Without them programs would have no way to do anything differently. We use the expression "branch" to refer to a possible path our program can take. The analogy allows us to visualize program execution as a tree. The code enters at the trunk, and as it executes it will conditionally enter branches. We might imagine the branches getting thinner as a representation of the likliness that the branch will be reached.
 
 > There are a few places where we use the analogy of trees and branches in Computer Science. In this case branching refers to the path of execution through a program.
 
@@ -81,7 +81,7 @@ let currentTemp = 65
 
 ### 3. Control Flow
 
-Control flow is the process by which choices are made as to which of two or more paths to follow in a program. The subject of control flow includes the conditionals we'll explore here, another conditional statement `switch`, and loops. 
+Control flow is the process by which choices are made as to which of two or more paths to follow in a program. The subject of control flow includes the conditionals we'll explore here, another conditional statement `switch`, and loops.
 
 
 #### Flow Charts
@@ -94,7 +94,7 @@ XKCD, a web comic that has many scientific and computer gags has a number of [fl
 
 #### if
 
-`if` allows us to control entry into a block of code depending upon a boolean value or expression. 
+`if` allows us to control entry into a block of code depending upon a boolean value or expression.
 
 ```swift
 var temperatureInFahrenheit = 30
@@ -107,7 +107,7 @@ The boolean expression that the `if` is testing is always followed by a block wh
 
 #### else
 
-`else` defines a block to be run when the `if` condition evaluates false. 
+`else` defines a block to be run when the `if` condition evaluates false.
 
 ```swift
 temperatureInFahrenheit = 40
@@ -258,7 +258,7 @@ case 99:
 }
 ```
 
-The code above generates the error: "Switch must be exhaustive, try adding a default clause." This is one important point about `switch`: you must cover all bases (actually, all *cases*). And adding the default clause introduces a second point. If we don't want to do anything in our default case we use the keyword `break`. Swift requires an executable statement in each case. Generally, we may want to break in other matches but default is the most intuitive and therefore the most common. 
+The code above generates the error: "Switch must be exhaustive, try adding a default clause." This is one important point about `switch`: you must cover all bases (actually, all *cases*). And adding the default clause introduces a second point. If we don't want to do anything in our default case we use the keyword `break`. Swift requires an executable statement in each case. Generally, we may want to break in other matches but default is the most intuitive and therefore the most common.
 
 
 ```swift
@@ -305,9 +305,9 @@ default:
 print(description)
 ```
 
-### 11. `switch` with `Range` 
+### 11. `switch` with `Range`
 
-```switch``` can also match values in ranges. This introduces the ```Range``` type. Let's look at a range by itself before we see it in the context of ```switch```. The ```Range``` is always defined by two numbers: the upper bound and the lower bound. There are two forms, one that *doesn't* include the higher bound and one that does. 
+```switch``` can also match values in ranges. This introduces the ```Range``` type. Let's look at a range by itself before we see it in the context of ```switch```. The ```Range``` is always defined by two numbers: the upper bound and the lower bound. There are two forms, one that *doesn't* include the higher bound and one that does.
 
 ```swift
 let r = 0..<5
@@ -400,7 +400,7 @@ print(type(of: hollyInfo))
 // (String, Int, String)
 ```
 
-Note how the type is represented as a collection of other types. It follows a specific pattern. What happens when we try to assign `hollyInfo` to `agnesInfo`? 
+Note how the type is represented as a collection of other types. It follows a specific pattern. What happens when we try to assign `hollyInfo` to `agnesInfo`?
 
 <details>
 <summary>Try `agnesInfo = hollyInfo`</summary>
@@ -417,7 +417,7 @@ agnesInfo = hollyInfo
 Change the type of one of the tuples to match the other.
 
 ```swift
-let hollyInfo = ("Holly", 33, 10301) 
+let hollyInfo = ("Holly", 33, 10301)
 var agnesInfo = ("Agnes", 24, 11106)
 agnesInfo = hollyInfo
 ```
@@ -425,7 +425,7 @@ agnesInfo = hollyInfo
 - OR -
 
 ```swift
-let hollyInfo = ("Holly", 33, "10301") 
+let hollyInfo = ("Holly", 33, "10301")
 var agnesInfo = ("Agnes", 24, "11106")
 agnesInfo = hollyInfo
 ```
@@ -475,3 +475,9 @@ default:
 
 1. Create enough tuples of the (String, Int, Int) type to to hit every case in the switch above.
 1. Add a case that matches all people named "Agnes". How does the placement of the case affect the output?
+
+### Standards
+
+IOS: IOS.1
+
+Language Fundamentals: LF.4

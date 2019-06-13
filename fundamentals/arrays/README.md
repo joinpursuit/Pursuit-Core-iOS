@@ -163,7 +163,7 @@ planets.remove(at: 0)
 print(planetas == planets) //is now false
 
 ```
->Although `planetas` was originally given the value of `planets`, a change to `planets` does not alter `planetas` becuase arrays copy on assignment. 
+>Although `planetas` was originally given the value of `planets`, a change to `planets` does not alter `planetas` becuase arrays copy on assignment.
 
 </details>
 
@@ -219,7 +219,7 @@ planets.remove(at: planets.count - 1)
 ```swift
 // single
 let earth = planets[2]
-let gasGiants = planets[4...6] 
+let gasGiants = planets[4...6]
 ```
 
 What type is gasGiants (in snippet above)?
@@ -319,3 +319,9 @@ print(theMatrix[2][0]) // 7
 ```
 
 Practice:  Print out the element in each corner, then print out the element in the middle.
+
+### Standards
+
+IOS: IOS.1
+
+Language Fundamentals: LF.3, LF.3.a

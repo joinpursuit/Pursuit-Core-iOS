@@ -3,8 +3,8 @@
 ---
 
 ### Objectives
-* Understand and use initialization 
-* Understand and use inheritance 
+* Understand and use initialization
+* Understand and use inheritance
 
 ### Readings
 1. [Swift Language Reference, Initialization](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-ID203)
@@ -52,7 +52,7 @@ Classes and structures must set all of their stored properties to an appropriate
 
 __You implement the initialization process by defining initializers.__ Unlike Objective-C initializers, Swift initializers do not return a value. Their primary role is to ensure that new instances of a type are correctly initialized before they are used for the first time.
 
-You can set an initial value for a stored property within an initializer, or by assigning a default property value as part of the property’s definition: 
+You can set an initial value for a stored property within an initializer, or by assigning a default property value as part of the property’s definition:
 
 #### Setting Default Initial Values for Stored Properties
 
@@ -76,7 +76,7 @@ print("The default temperature is \(f.temperature)° Fahrenheit")
 // Prints "The default temperature is 32.0° Fahrenheit"
 ```
 
-As previously stated, you can set the initial value of a stored property from within an initializer, as shown above. 
+As previously stated, you can set the initial value of a stored property from within an initializer, as shown above.
 
 Alternatively, you can specify a default property value as part of the property’s declaration. You specify a default property value by assigning an initial value to the property when it is defined:
 
@@ -122,7 +122,7 @@ class Person {
     var name: String
     var yearBorn: Int
     var yearDied: Int?
-    
+
     init(name: String, born: Int, died: Int?) {
         self.name = name
         self.yearBorn = born
@@ -188,7 +188,7 @@ Convenience initializers let you have simpler initializers that just call throug
 
 You can define a convenience initializer to:
 
-* Call a designated initializer from the same class as the convenience initializer with some of the designated initializer’s parameters set to default values 
+* Call a designated initializer from the same class as the convenience initializer with some of the designated initializer’s parameters set to default values
 * Create an instance of that class for a specific use case or input value type.
 
 Convenience initializers are written in the same style as designated initializers, but with the `convenience` modifier placed before the `init` keyword, separated by a space:
@@ -310,11 +310,11 @@ The following image helps illustrate this:
 
 
 
-### Failable Initalizers 
+### Failable Initalizers
 
-It is sometimes useful to define a class, structure, or enumeration for which initialization can fail. This failure might be triggered by invalid initialization parameter values, the absence of a required external resource, or some other condition that prevents initialization from succeeding. 
+It is sometimes useful to define a class, structure, or enumeration for which initialization can fail. This failure might be triggered by invalid initialization parameter values, the absence of a required external resource, or some other condition that prevents initialization from succeeding.
 
-To cope with initialization conditions that can fail, define one or more failable initializers as part of a class, structure, or enumeration definition. You write a failable initializer by placing a question mark after the init keyword (`init?`). 
+To cope with initialization conditions that can fail, define one or more failable initializers as part of a class, structure, or enumeration definition. You write a failable initializer by placing a question mark after the init keyword (`init?`).
 
 A failable initializer creates an optional value of the type it initializes. You write `return nil` within a failable initializer to indicate a point at which initialization failure can be triggered.
 
@@ -350,7 +350,7 @@ Complete [Part 3 of AC-iOS-Initialization](https://github.com/C4Q/AC-iOS-Initial
 
 #### Deinitialization
 
-Deinitialization is not as important as the same construct in other languages where memory management is more hands on. There may be other resources associated with an object going out of scope. 
+Deinitialization is not as important as the same construct in other languages where memory management is more hands on. There may be other resources associated with an object going out of scope.
 
 ```swift
 deinit {
@@ -443,3 +443,7 @@ enum Color {
 let myColor = Color(c: "b")
 ```
 
+
+### Standards
+
+IOS: IOS.1, IOS.1.b

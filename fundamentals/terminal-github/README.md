@@ -1,18 +1,18 @@
 ## Brief Introduction to Github and Terminal
 
-## Objective 
+## Objective
 
-To be able to use Terminal on your mac, git commands and [Github.com](https://github.com). 
+To be able to use Terminal on your mac, git commands and [Github.com](https://github.com).
 
-## What is Github 
+## What is Github
 
 GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
-## What is a repository 
+## What is a repository
 
 A repository is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets – anything your project needs.
 
-## What is Git 
+## What is Git
 
 Open source version control system developed by Linus Torvalds in 2005. This is the version control system that Github uses for it's platform.
 
@@ -20,7 +20,7 @@ Open source version control system developed by Linus Torvalds in 2005. This is 
 
 Terminal comes shipped with the macOS operating system. It provides text-based or command-line-interface access to the operating system.
 
-## Terminal Commands 
+## Terminal Commands
 
 | Command | Summary |
 |:----:|:-----:|
@@ -50,12 +50,12 @@ Terminal comes shipped with the macOS operating system. It provides text-based o
 | clone | clone a repository into a newly created directory |
 | fork | a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project |
 
-## Github.com 
+## Github.com
 
 1. Navigate to [Github](https://github.com)
 1. Click on New repository
 
-## Other Resources 
+## Other Resources
 
 | Resource | Summary |
 |:----:|:-----:|
@@ -66,3 +66,7 @@ Terminal comes shipped with the macOS operating system. It provides text-based o
 | [git commands reference](https://git-scm.com/docs) | git commands reference |
 | [Fork a repo](https://help.github.com/articles/fork-a-repo/) | Fork a repo |
 | [Pushing your Xcode Project to Github](https://gist.github.com/alexpaul/71888780c41228b5f3370b8cbd079dad) | Steps to push your Xcode project to Github |
+
+## Standards
+
+Engineering Foundations: EF.2, EF.2.a, EF.2.b, EF.2.c, EF.2.d, EF.3, EF.4

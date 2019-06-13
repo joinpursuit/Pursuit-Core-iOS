@@ -17,7 +17,7 @@
 - **initialize** - To assign a variable or constant its first value.
 - **nil** - A special value meaning "no value". Only optionals can be nil in Swift.
 - **bind** - The mechanism used to test an optional for a value and assign it to a non-optional.
-- **idiomatic** - In the context of a programming language, code written in a way natural way for that language, using its conventions and features. 
+- **idiomatic** - In the context of a programming language, code written in a way natural way for that language, using its conventions and features.
 - **nest v.** - To place code blocks inside of other code blocks. One could speak of any combination of conditionals, functions, closures being nested within one another.
 - **diagnostic n.** - A diagnostic is a piece of code or other mechanism whose purpose is to find the answer to a question or problem, not to accomplish functionality of the application.
 - **lifecycle** - The progressive states an object or piece of software can progress through over time.
@@ -34,7 +34,7 @@ You use optionals in situations where a value may be absent. An optional represe
 > – Lusine Margaryan, Hackernoon
 
 
-### 2. The Case for optionals 
+### 2. The Case for optionals
 
 Thought experiment. Imagine we’re writing code that interfaces with a digital thermometer. This thermometer populates one Swift variable called `temperature`. When we first plug in the thermometer what value should we give it? What value should we set `temperature` to when we detect the physical device is broken?
 
@@ -51,7 +51,7 @@ Thought experiment. Imagine we’re writing code that interfaces with a digital 
 1. How would you re-initialize `temperature`?
 
 	<details>
-	<summary>Solution</summary>	
+	<summary>Solution</summary>
 
 	```swift
 	var temperature = 0.0
@@ -92,7 +92,7 @@ Thought experiment. Imagine we’re writing code that interfaces with a digital 
 	// we're not using temperature in any way
 	// until we've assigned it a value
 	```
-	
+
 	</details>
 
 Let's re-declare temperature as an optional
@@ -150,7 +150,7 @@ print(bookTitle)
 // error: variable 'bookTitle' used before being initialized
 ```
 
-Now, let's declare two variables, one a non-optional and the other an optional wrapping that type. 
+Now, let's declare two variables, one a non-optional and the other an optional wrapping that type.
 Try assigning them to one another.
 
 ```swift
@@ -165,9 +165,9 @@ print(alternateTitle)
 bookTitle = alternateTitle // 💥 this doesn't
 ```
 
-😺 A `String?` can be assigned a `String` because an optional can hold either nil or its associated type, in this case `String`. 
+😺 A `String?` can be assigned a `String` because an optional can hold either nil or its associated type, in this case `String`.
 
-💥 A `String`, however, cannot be assigned the value of an optional because they are not the same type. 
+💥 A `String`, however, cannot be assigned the value of an optional because they are not the same type.
 
 
 ### 4. Force unwrapping
@@ -238,7 +238,7 @@ var mainCharacter: String?
 
 	</details>
 
-1. What is the difference between a compile time error and a run time error? 
+1. What is the difference between a compile time error and a run time error?
 	<details>
 		<summary>Answer</summary>
 		A compile time error is found while the compiler is compiling/interpreting your code. Your code is not runnable because it has a syntax error or other invalid code. A run time error, by contrast, happens when code compiles and runs but runs into a problem during execution. E.g. your program attemtps to divide by zero or access memory it doesn't own, or tries to force unwrap a nil optional.
@@ -258,7 +258,7 @@ var mainCharacter: String?
 
 ### 5. Binding
 
-So far we've either force unwrapped optionals, which is dangerous and defeats the purpose of using them, or we explicitly checked for `nil` before force unwrapping, which is clunky, verbose and just not very Swifty. 
+So far we've either force unwrapped optionals, which is dangerous and defeats the purpose of using them, or we explicitly checked for `nil` before force unwrapping, which is clunky, verbose and just not very Swifty.
 
 Binding to the rescue. Binding allows us to test an optional for `nil` while setting a constant or variable to the unwrapped value, if not `nil`.
 
@@ -270,7 +270,7 @@ var author: String = "J.R.R. Tolkien"
 var coAuthor: String?
 secondTitle = "There and Back Again"
 
-// bind the constant title to the value of secondTitle 
+// bind the constant title to the value of secondTitle
 if let title = secondTitle {
     print("Full title: \(bookTitle) or \(title)")
 }
@@ -295,7 +295,7 @@ secondTitle = "There and Back Again"
 
 	<details>
 		<summary>Solution</summary>
-	
+
 	```swift
 	if let otherAuthor = coAuthor {
 		print("Written by \(author) and \(otherAuthor)")
@@ -348,7 +348,7 @@ var bookTitle: String = "The Hobbit"
 
 bookReviewCount = 28
 avgStarRating = 2.9
-if let count = bookReviewCount, 
+if let count = bookReviewCount,
 	let rating = avgStarRating {
     if (rating > 3) {
         print("\(bookTitle): \(rating) stars")
@@ -422,8 +422,8 @@ else {
 	}
 	```
 
-	Note how the same line implementation is shorter. 
-	
+	Note how the same line implementation is shorter.
+
 	</details>
 
 
@@ -446,7 +446,7 @@ else {
 
 	<details>
 		<summary>Solution</summary>
-		The nested version allows us to treat the case where the first name is set but the last name is not. The same line only branches to two directions: both are set or neither is set. 
+		The nested version allows us to treat the case where the first name is set but the last name is not. The same line only branches to two directions: both are set or neither is set.
 	</details>
 
 1. Can the first option detect if the specific case where lastName is set but firstName is not?
@@ -464,7 +464,7 @@ We can further condense our dependent bindings by adding in other conditionals u
 
 ```swift
 if let count = bookReviewCount,
-    let rating = avgStarRating, 
+    let rating = avgStarRating,
     rating > 3 {
     print("\(bookTitle): \(rating) stars")
 }
@@ -572,7 +572,7 @@ else {
 }
 ```
 
-If the optional is nil the test for equality will evaluate false. If it has a value the boolean comparison will be with the value of the wrapped type. 
+If the optional is nil the test for equality will evaluate false. If it has a value the boolean comparison will be with the value of the wrapped type.
 
 
 Note, if two `nil` optionals are tested for equality, the expression will evaluate true.
@@ -625,4 +625,8 @@ secondTitle?.append(" AGAIN")
 print(secondTitle ?? "")
 ```
 
+#### Standards
 
+IOS: IOS.1, IOS.1.a
+
+Language Fundamentals: LF.1

@@ -1,4 +1,4 @@
-## Excericse: Structs and Classes
+## Exercise: Structs and Classes
 
 <pre>
 1. Given this class that represents a giant:
@@ -17,7 +17,7 @@ class Giant {
 
 let fred = Giant(name: "Fred", weight: 340.0, homePlanet: "Earth")
 
- 
+
 
 Will these three lines of code run? If not, why not?
 
@@ -28,7 +28,7 @@ fred.homePlanet = "Mars"
 Fix the class definition above so that it does work.
 </pre>
 
-</br> 
+</br>
 
 <pre>
 2. Take a look at this struct that represents an alien:
@@ -46,9 +46,9 @@ bilbo.name = "Jake"
 bilbo.height = 1.42
 bilbo.homePlanet = "Saturn"
 Change the declaration of bilbo so that the above three lines of code do work.
-</pre> 
+</pre>
 
-</br> 
+</br>
 
 <pre>
 3. Consider this bit of code that uses the Giant class:
@@ -59,20 +59,20 @@ jason.name = "Jason"
 What will the value of edgar.name be after those three lines of code are run? What will the value of jason.name be? Why?
 </pre>
 
-</br> 
+</br>
 
-<pre> 
+<pre>
 4. Given this bit of code that uses the Alien struct:
 
 var charles = Alien(name: "Charles", height: 2.25, homePlanet: "Pluto")
 var charlesFromJupiter = charles
 charlesFromJupiter.homePlanet = "Jupiter"
 What will the value of charles.homePlanet be after the above code run? What about the value of charlesFromJupiter.homePlanet? Why?
-</pre> 
+</pre>
 
-</br> 
+</br>
 
-<pre> 
+<pre>
 5. Here's a struct that represents a bank account:
 
 struct BankAccount {
@@ -91,7 +91,7 @@ Does this code work? Why or why not?
 
 Fix the BankAccount struct so it does work.
 
- 
+
 
 Given this bit of code (which incorporates any fixes you made):
 
@@ -99,33 +99,33 @@ var joeAccount = BankAccount(owner: "Joe", balance: 100.0)
 var joeOtherAccount = joeAccount
 joeAccount.withdraw(50.0)
 What will the value of joeAccount.balance be after the above code runs? What about the value of joeOtherAccount.balance? Why?
-</pre> 
+</pre>
 
 </br>
 
-<pre> 
-6. //a. Write a struct called person that has 3 properties of type String, a first name, a last name and a middle name. Have the middle name be optional. Create 2 instances of a person, one with a middle name and one without. Print one of their first names. 
+<pre>
+6. //a. Write a struct called person that has 3 properties of type String, a first name, a last name and a middle name. Have the middle name be optional. Create 2 instances of a person, one with a middle name and one without. Print one of their first names.
 
- 
+
 
 //b. Write a method in Person called fullName that will return a formatted string of an instance's full name. Call this method on both the instances you created in part a.
 </pre>
 
-</br> 
+</br>
 
 <pre>
 7. //a. Create a class called Book that has properties for title, author and rating, of type String, String, Double respectively. Dont forget the initializer. Create some instances of Book.
 
- 
+
 
 //b. Add a method to Book called isGood that returns true if its rating is greater than or equal to 7
 </pre>
 
-</br> 
+</br>
 
 <pre>
 8. class Dog {
- 
+
 }
 //Work through the following tasks one by one, in order. Each time, add to the dog class above. Each task has sample output that you should be able to replicate when you are done.
 
@@ -168,29 +168,29 @@ What will the value of joeAccount.balance be after the above code runs? What abo
 //Breed: Golden Retriever
 //Mood: feeling pawesome
 
- 
+
 
 //6. Add a type property called count that keeps track of how many dogs have been created so far.
 //There have been five dogs created so far
 //Dog.count //returns 5
 </pre>
 
-</br> 
+</br>
 
-<pre> 
+<pre>
 9. //There are three common scales that are used to measure temperature: Celsius, Fahrenheit, and Kelvin
 //C = (F - 32) / 1.8
 //F = 1.8 * C + 32
 //K = C + 273
-//Level One: 
+//Level One:
 //Make a struct called FreezingPoint that has three properties: celsius, fahrenheit, and kelvin. Give them all default values equal to the freezing point of water.
 
- 
+
 
 //Level Two
 //Make a struct called Celsius that has three properties: celsius, fahrenheit, and kelvin. Give celsius a default value of 0.0, and make the values of fahrenheit and kelvin correct values, converted from the celsius property.
 
- 
+
 
 
 //var tenDegreesCelsius = Celsius(celsius: 10.0)
@@ -198,21 +198,21 @@ What will the value of joeAccount.balance be after the above code runs? What abo
 //tenDegreesCelsius.kelvin //returns 283.0
 //tenDegreesCelsius.fahrenheit //returns 50.0
 
- 
+
 
 //Level Three
 
 //Give the Celsius struct a method called isBelowFreezing that returns a boolean value of true if the temperature is below freezing.
 </pre>
 
-</br> 
+</br>
 
 <pre>
 10. // Create a struct called RGBColor that has 3 properties, red, green, blue that are all of type Double.
 
 // Given the below array of color dictionaries, create an array of RGBColor
 
- 
+
 
 let colorDictArray: [[String: Double]] = [["red": 1.0, "green": 0.0, "blue": 0.0],
  ["red": 0.0, "green": 1.0, "blue": 0.0],
@@ -220,26 +220,26 @@ let colorDictArray: [[String: Double]] = [["red": 1.0, "green": 0.0, "blue": 0.0
  ["red": 0.6, "green": 0.9, "blue": 0.0],
  ["red": 0.2, "green": 0.2, "blue": 0.5],
  ["red": 0.5, "green": 0.1, "blue": 0.9],]
- </pre> 
- 
- </br> 
- 
- <pre> 
+ </pre>
+
+ </br>
+
+ <pre>
  11. // a. Create a class called Movie that has properties for name (String), year (Int), genre (String), cast ([String]), and description (String). Create an instance of your Movie class
 
- 
+
 
 // Create an instance method inside Movie called blurb that returns a formatted string describing the movie.
 
 e.g. Minions came out in 2015. It was an animation staring Sandra Bullock, Jon Hamm, and Michael Keaton.
-</pre> 
+</pre>
 
-</br> 
+</br>
 
-<pre> 
+<pre>
 12. // Create a function outside of your Movie class called makeMovie that takes in a dictionary of type [String: Any], like dieHardDict below, and returns an optional Movie. Use dieHardDict to create an instance of a Movie.
 
- 
+
 
 let dieHardDict: [String: Any] = ["name": "Die Hard",
  "year" : 1987,
@@ -265,11 +265,11 @@ if let yearAsString = dieHardDict["year"] as? String {
 } else {
  print("this didn't work")
 }
-</pre> 
+</pre>
 
-</br> 
+</br>
 
-<pre> 
+<pre>
 13. Given this array of movie dictionaries, use your function in the last question to create a Array of Movie.
 
 
@@ -341,4 +341,4 @@ var movies: [[String:Any]] = [
  "description": "Navy S.E.A.L. sniper Chris Kyle\"s pinpoint accuracy saves countless lives on the battlefield and turns him into a legend. Back home to his wife and kids after four tours of duty, however, Chris finds that it is the war he can\"t leave behind."
  ]
 ]
-</pre> 
+</pre>

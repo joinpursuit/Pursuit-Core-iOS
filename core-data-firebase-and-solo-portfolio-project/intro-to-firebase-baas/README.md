@@ -22,7 +22,7 @@ Firebase provides this backend to mobile developers.  There is a [free tier](htt
 
 # 2. Competitors to Firebase
 
-Firebase is one of the most popular backend as a service providers, but there are other competitors.  CloudKit is Apple's service that requires an iCloud account which makes it only useful for iOS users.  Amazon Web Services provides an alternative to Firebase that provides the same functionality, but can be trickier to learn. Realm is also a very strong competitor to Firebase. 
+Firebase is one of the most popular backend as a service providers, but there are other competitors.  CloudKit is Apple's service that requires an iCloud account which makes it only useful for iOS users.  Amazon Web Services provides an alternative to Firebase that provides the same functionality, but can be trickier to learn. Realm is also a very strong competitor to Firebase.
 
 1. [CloudKit](https://developer.apple.com/icloud/)    
 2. [Amazon Web Services](https://aws.amazon.com/)    
@@ -40,8 +40,8 @@ Then, go to [https://firebase.google.com/](https://firebase.google.com/) and log
 You will be brought to a Firebase dashboard. Here will be all the options you now have for your Firebase Project, some are Authentication, Datatabase and Storage. Navigate to the top left of the dashboard. Click on Settings -> Project Settings.  Click on the iOS option below **Your apps** and it will have you complete the following steps:
 
 1. Register your Bundle Identifier (Copy Bundle Id from Xcode).
-2. Download the Google plist and drag it in directly below your Info.plist. Make sure "Copy Items if needed" is selected when you drag the .plist file to Xcode. The GoogleService-Info.plist file contains settings that Firebase uses to set up your app. 
-3. Add the Firebase SDK. We will be using Cocoapods. Navigate to the root of your Xcode project in Terminal and run ```pod init```.  Open the newly created podfile ```open Podfile``` and add ```pod 'Firebase/Core'``` below ```# Pods for``` .  Run ```pod install```. 
+2. Download the Google plist and drag it in directly below your Info.plist. Make sure "Copy Items if needed" is selected when you drag the .plist file to Xcode. The GoogleService-Info.plist file contains settings that Firebase uses to set up your app.
+3. Add the Firebase SDK. We will be using Cocoapods. Navigate to the root of your Xcode project in Terminal and run ```pod init```.  Open the newly created podfile ```open Podfile``` and add ```pod 'Firebase/Core'``` below ```# Pods for``` .  Run ```pod install```.
 
 Let's also add the following pods to our project, so go ahead and include the Database and Auth pod in your Podfile and run ```pod install``` again:
 
@@ -51,14 +51,14 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 ```
 
-Running ```ls``` will now reveal additional files/folders in your project. 
-- ProjectName.xcworkspace	
+Running ```ls``` will now reveal additional files/folders in your project.
+- ProjectName.xcworkspace
 - Podfile			
 - Podfile.lock		
 - Pods
 
 If your Xcode project is opened, close it then open the ```.xcworkspace``` file which now includes Firebase.
-4. Navigate to your App Delegate, ```import Firebase```, then under didFinishLaunchingWithOptions, add the line: 
+4. Navigate to your App Delegate, ```import Firebase```, then under didFinishLaunchingWithOptions, add the line:
 
 ```swift
 FirebaseApp.configure()
@@ -84,7 +84,7 @@ Return to your xcode workspace project. Let's create a  .xib Login View. We will
 
 Create or refactor/rename the default ViewController to "LoginViewController".
 
-The LoginViewController will host the LoginView.xib and outlets will be connected to a created LoginView.swift UIView subclass. 
+The LoginViewController will host the LoginView.xib and outlets will be connected to a created LoginView.swift UIView subclass.
 
 ### Add auth logic
 
@@ -134,7 +134,7 @@ extension LoginController: UserSessionCreationDelegate {
     showAlert(title: "Creating User Error",
               message: error.localizedDescription)
   }
-  
+
   func didCreateFirebaseUser(_ userSession: UserSession, user: User) {
     presentGroceryTabController(user: user, title: "Successfully Created User", message: "created new user using \(user.email ?? "no email") email")    
     DatabaseManager.saveUser()
@@ -142,9 +142,9 @@ extension LoginController: UserSessionCreationDelegate {
 }
 ```
 
-If the user successfully creates an account segue to the Tab bar Controller 
+If the user successfully creates an account segue to the Tab bar Controller
 
-```swift 
+```swift
 private func presentGroceryTabController(user: User, title: String, message: String) {
   let alertController = UIAlertController(title: title,
                                           message: message, preferredStyle: .alert)
@@ -166,7 +166,7 @@ private func presentGroceryTabController(user: User, title: String, message: Str
 
 Now that we can create users, what can they do?  We are going to create a simple to-do list that will demonstrate the features of the Cloud Firestore.
 
-Ariticles on differences between Firebase Realtime Database and Cloud Firestore 
+Ariticles on differences between Firebase Realtime Database and Cloud Firestore
 1. [Firebase - Choosing a database](https://firebase.google.com/docs/firestore/rtdb-vs-firestore)  
 1. [Stackoverflow](https://stackoverflow.com/questions/46549766/whats-the-difference-between-cloud-firestore-and-the-firebase-realtime-database)  
 
@@ -178,9 +178,9 @@ Ariticles on differences between Firebase Realtime Database and Cloud Firestore
 1. In the Database section, click the Get Started button for Cloud Firestore.
 1. Select a starting mode for your Cloud Firestore Security Rules.
 
-We will use the following security rule below, this rule ensure that only authenticated users can read and write to our database: 
+We will use the following security rule below, this rule ensure that only authenticated users can read and write to our database:
 
-```javascript 
+```javascript
 // Allow read/write access on all documents to any user signed in to the application
 service cloud.firestore {
   match /databases/{database}/documents {
@@ -193,7 +193,7 @@ service cloud.firestore {
 
 **Initialize Cloud Firestore**   
 
-```swift 
+```swift
 import Firebase
 
 FirebaseApp.configure()
@@ -203,7 +203,7 @@ let db = Firestore.firestore()
 
 **Add data**  
 
-```swift 
+```swift
 // Using Firebase Cloudstore - Writing a race review document to the database
 static func postRaceReviewToDatabase(race: Race) {
   var ref: DocumentReference? = nil
@@ -252,14 +252,14 @@ To quickly verify that you've added data to Cloud Firestore, use the data viewer
 
 You can also use the "get" method to retrieve the entire collection.
 
-```swift 
+```swift
 private func fetchRaceReviews() {
   DatabaseManager.firestoreDB.collection("raceReviews")
     .addSnapshotListener { querySnapshot, error in
       if let error = error {
         print("Error retreiving collection: \(error)")
       } else if let querySnapshot = querySnapshot {
-        
+
         var races = [Race]()
         for document in querySnapshot.documents {
           let race = Race(dict: document.data())
@@ -286,39 +286,39 @@ Collections and documents are created implicitly in Cloud Firestore. Simply assi
 **Documents**  
 In Cloud Firestore, the unit of storage is the document. A document is a lightweight record that contains fields, which map to values. Each document is identified by a name.
 
-A document might look like this 
+A document might look like this
 
-```json 
-cohort: 5.3
-currentYear: 2019
-programmingLanguage: "Swift" 
+```json
+cohort: 6.1
+currentYear: 2020
+programmingLanguage: "Swift"
 platform: "iOS"
 ```
 
 **Collections**  
 Documents live in collections, which are simply containers for documents. For example, you could have a users collection to contain your various users, each represented by a document:
 
-<pre> 
-users: 
-	first: "Tom" 
-	last" "Jones" 
-	
+<pre>
+users:
+	first: "Tom"
+	last" "Jones"
+
 	first: "Heather"
-	last: "Jackson" 
-</pre> 
+	last: "Jackson"
+</pre>
 
 **Data types supported by Cloud Firestore**  
 - Array (note: cannot contain another array value)  
-- Boolean e.g true or false 
+- Boolean e.g true or false
 - Bytes
-- Date and time 
-- Floating point number 
-- Geographical point 
+- Date and time
+- Floating point number
+- Geographical point
 - Integer
-- Dictionaries e.g { first: "Martha" } 
+- Dictionaries e.g { first: "Martha" }
 - Null
 - Reference e.g projects/[PROJECT_ID]/databases/[DATABASE_ID]/documents/[DOCUMENT_PATH]
-- Text String 
+- Text String
 
 
 ## Readings

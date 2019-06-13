@@ -28,17 +28,17 @@ Incorporate mathStuffFactory(_:) that we worked on in Closures Two into a comman
 For example, your console might look like this:
 
 > 5 + 3
-> 
+>
 > 5 + 3 = 8
-> 
+>
 > 5 * 3
-> 
+>
 > 5 * 3 = 15
-> 
+>
 > 5 & 3
-> 
+>
 > Unknown operator: &
-> 
+>
 > Exit
 
 ### Part 1b: Random Math Stuff
@@ -52,21 +52,21 @@ When the question mark operator is used the application will secretly perform th
 For this, your console might look like this:
 
 > 5 + 3
-> 
+>
 > 5 + 3 = 8
-> 
+>
 > 5 ? 3
-> 
+>
 > 15
-> 
+>
 > \-
-> 
+>
 > Nope!
-> 
+>
 > *
-> 
+>
 > Correct!
-> 
+>
 > Exit
 
 ## Question Two:

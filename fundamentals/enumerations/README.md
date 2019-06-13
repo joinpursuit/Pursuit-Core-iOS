@@ -20,7 +20,7 @@ Enumerations in Swift are first-class types in their own right. They adopt many 
 
 **Enumeration Syntax**  
 
-```swift 
+```swift
 enum SomeEnumeration {
   // enumeration definition goes here
 }
@@ -41,7 +41,7 @@ enum CompassPoint {
 let northDirection = CompassPoint.north
 ```
 
-**Exercise**: 
+**Exercise**:
 
 Defining enumerations:
 
@@ -86,11 +86,11 @@ case .fileNotFound:
 ```
 Because Swift knows the type of the `ErrorCode` we don't need a default case because we can define an exhaustive set of `switch` cases. If the case for `.fileNotFound` is omitted, this code would not compile, because it does not consider the complete list of `ErrorCode` cases. Requiring exhaustiveness ensures that enumeration cases are not accidentally omitted. When it is not appropriate to provide a case for every enumeration case, you can provide a default case to cover any cases that are not addressed explicitly.
 
-### 3. Case Iterable 
+### 3. Case Iterable
 
 For some enumerations, it’s useful to have a collection of all of that enumeration’s cases. You enable this by writing : CaseIterable after the enumeration’s name. Swift exposes a collection of all the cases as an allCases property of the enumeration type. Here’s an example:
 
-```swift 
+```swift
 enum CompassPoint: CaseIterable {
   case North
   case South
@@ -113,7 +113,7 @@ case .West:
 
 print("there are \(CompassPoint.allCases.count) compass points")
 
-// iterating through an enum 
+// iterating through an enum
 for point in CompassPoint.allCases {
   print(point)
 }
@@ -133,13 +133,13 @@ enum NYCBoro: String {
 }
 ```
 
-Raw Values are not the same as Associated Values _(discussed below)_. Raw values are set to prepopulated values when you first define the enumeration in your code. The raw value for a particular enumeration case is always the same. 
+Raw Values are not the same as Associated Values _(discussed below)_. Raw values are set to prepopulated values when you first define the enumeration in your code. The raw value for a particular enumeration case is always the same.
 
-**Exercise**: 
+**Exercise**:
 1. Redefine each of your enums in the previous exercises to have raw values
 2. Then, initialize a new instance of each enum with its raw value
-   e.g 
-   ```swift 
+   e.g
+   ```swift
    // initializing from a rawValue
     if let borough = NYCBoro(rawValue: "Queens") {
       if borough.rawValue == "Queens" {
@@ -186,7 +186,7 @@ You can access the raw value of an enumeration case with its `rawValue` property
 ```swift
 let earthsOrder = Planet.earth.rawValue
 // earthsOrder is 3
- 
+
 let sunsetDirection = CompassPoint.west.rawValue
 // sunsetDirection is "west"
 ```
@@ -199,7 +199,7 @@ Give default raw values to each of the enums from the previous exercises
 ### 6. Associated Values
 Storing associated values alongside enumeration case values allows you to store additional custom information along with the case value, and permits this information to vary each time you use that case in your code.
 
-You can define Swift enumerations to store associated values of any given type, and the value types can be different for each case of the enumeration if needed. 
+You can define Swift enumerations to store associated values of any given type, and the value types can be different for each case of the enumeration if needed.
 
 ```swift
 enum Barcode {
@@ -256,3 +256,9 @@ Rewrite the blood type enum to have an associated value of if the type is positi
 
 ---
 
+
+### Standards
+
+IOS: IOS.1, IOS.1.b
+
+Language Fundamentals: LF.3

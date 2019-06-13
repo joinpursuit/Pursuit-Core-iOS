@@ -12,7 +12,7 @@ Apple's [Swift Language Reference, Closures](https://developer.apple.com/library
 - **algorithm** - a process or set of rules to be followed in calculations or other problem- **block** - One or more lines of code, enclosed with curly braces. Sometimes used interchangeably with closure, especially in Objective-C.
 - **closure** - An executable block of code. Like a function, it can take input parameters and return a value. A function is actually a special case of a closure.
 -solving operations, especially by a computer.
-- **higher-order function** - A function that takes a closure as one or more of its arguments and/or returns a closure. 
+- **higher-order function** - A function that takes a closure as one or more of its arguments and/or returns a closure.
 - **scope** - the visibility of a variable or other identifier based on where it is defined within the program.
 
 ### Review Exercises
@@ -20,7 +20,7 @@ Apple's [Swift Language Reference, Closures](https://developer.apple.com/library
 #### Use `filter(_:)`
 
 > Filter out strings containing "bad words".
-> First split text on the space using ```componentsSeparatedByString(_:)```, 
+> First split text on the space using ```componentsSeparatedByString(_:)```,
 > then use filter to cut out the words. Print out the expurgated version as a string.
 
 ```swift
@@ -81,7 +81,7 @@ doublersDouble(5) // has the value of 10
 makeDoubler()(4)  // has the value of 8
 ```
 
-1. We call the function `makeDoubler()` which itself returns a closure. 
+1. We call the function `makeDoubler()` which itself returns a closure.
 2. A closure is captured in `doublersDouble` and is executable, so we call it.
 3. We don't need to capture the result. Since `makeDoubler()` evaluates to a callable closure we can call it with `()`.
 
@@ -170,9 +170,9 @@ inc4()                  // 8. runningTotal = 20
 
 First of all, `incrementer` is a nested function that we'll return. This could have been written as an unnamed closure as we did with `makeDoubler()` and `makeMultiplier(factor:)`. We'll come back to that. When we assign a constant to the returned function and call it, it will update the `runningTotal` variable that it captured from its enclosing function. By instantiating new copies of the function as well as assigning new references to exising ones we can illustrate how closures are reference types.
 
-Each unique instance of the function has its own captured `runningTotal` which is incremented on each call (comments numbered 2, 3, 4, 6, and 8) but additional references to an instance of the function (7) share the same memory and so increment the same instance (8). 
+Each unique instance of the function has its own captured `runningTotal` which is incremented on each call (comments numbered 2, 3, 4, 6, and 8) but additional references to an instance of the function (7) share the same memory and so increment the same instance (8).
 
-In this example I chose to create a nested function `incrementor()` simply because it might be clearer to the student or another developer what I'm indending to do. The following is identical in terms of functionality. 
+In this example I chose to create a nested function `incrementor()` simply because it might be clearer to the student or another developer what I'm indending to do. The following is identical in terms of functionality.
 
 ```swift
 func makeIncrementer(forIncrement amount: Int) -> () -> Int {
@@ -187,4 +187,10 @@ func makeIncrementer(forIncrement amount: Int) -> () -> Int {
 It is the more common form, as well. The closure doesn't need a name because it's never called by it. When it is returned from the function and captured by another variable, it will have a new name.
 
 
+### Standards
 
+IOS: IOS.1
+
+Language Fundamentals: LF.6
+
+Engineering Foundations: EF.1

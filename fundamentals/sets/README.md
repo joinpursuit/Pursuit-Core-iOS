@@ -2,7 +2,7 @@
 ---
 
 ### Objectives
-* Declare and use Sets 
+* Declare and use Sets
 * Understand common uses of Sets
 
 ### Readings
@@ -48,7 +48,7 @@ var accountNumbers2 = Set<Int>()
 
 ```
 
-Swift cannot use type inference on a set as it uses similar syntax to arrays. Instances must be declared with type annotation. 
+Swift cannot use type inference on a set as it uses similar syntax to arrays. Instances must be declared with type annotation.
 
 
 #### Population
@@ -89,7 +89,7 @@ Because sets are unordered, there is no way to access a specific element. You ca
 ```swift
 uniqueFellows.contains("Ian")  // this will return true
 ```
-You can loop through a set, just like arrays, to access all of its elements but you will not know the order with which they will be accessed, not like arrays. 
+You can loop through a set, just like arrays, to access all of its elements but you will not know the order with which they will be accessed, not like arrays.
 
 ```swift
 for name in uniqueFellows {
@@ -111,7 +111,7 @@ To remove values from a set, use the .remove method. This returns the element yo
 uniqueFellows.remove("Ian")  // returns "Ian"
 ```
 
-### Fundamental Set Operations 
+### Fundamental Set Operations
 
 <p align="center">
 <img src="https://docs.swift.org/swift-book/_images/setVennDiagram_2x.png" width="700" height="500" />  
@@ -119,7 +119,7 @@ uniqueFellows.remove("Ian")  // returns "Ian"
 
 ### 5. Unions, Intersections and Disjoint
 
-The union of 2 sets contains all the unique elements of both sets. 
+The union of 2 sets contains all the unique elements of both sets.
 
 ```swift
 let evenNumbers: Set<Int> = [2, 4, 6, 8, 10]
@@ -134,7 +134,7 @@ The intersection of 2 sets contains all the elements shared between them.
 let intersectingNumbers = evenNumbers.intersection(numbersFrom1to10)  // returns unsorted list
 ```
 
-Disjoint is a method used on 2 sets that returns a bool determining if the 2 sets share any elements. 
+Disjoint is a method used on 2 sets that returns a bool determining if the 2 sets share any elements.
 
 ```swift
 let staff: Set<String> = ["Alex", "Dave", "Elle", "Alan", "Joshua"]
@@ -148,7 +148,7 @@ print("staffFellowsDisjoint is \(staffFellowsDisjoint)")
 
 ### 6. Set Membership and Equality
 
-```swift 
+```swift
 let houseAnimals: Set = ["🐶", "🐱"]
 let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]
 let cityAnimals: Set = ["🐦", "🐭"]
@@ -157,3 +157,9 @@ print(houseAnimals.isSubset(of: farmAnimals)) // true
 print(farmAnimals.isSuperset(of: houseAnimals)) // true
 print(farmAnimals.isDisjoint(with: cityAnimals)) // true
 ```
+
+### Standards
+
+IOS: IOS.1
+
+Language Fundamentals: LF.3, LF.3.b

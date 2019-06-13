@@ -25,7 +25,7 @@
 1. **Declaration** - determines the name and data type of a variable/constant, and specifies the properties of other elements
 1. **Initialization** -  the assignment of an initial value for a variable, constant or object
 1. **Type** - a classification of data which tells the compiler how the programmer intends to use the data. The type of a variable defines the kind of operations that can be performed, the meaning of the data, and how the values of that type can be stored in memory
-1. **Type Annotation** - explicitly specifies the type of a variable or expression 
+1. **Type Annotation** - explicitly specifies the type of a variable or expression
 1. **Type Inference** - allows you to omit the Type Annotation in a function declaration, and allows the compiler to determine the type based on the value contained
 1. **Type Safe** - a type safe language encourages you to be clear about the types of values your code can work with
 1. **Mutable** - a variable, or object, whose state can be modified at any time after its declaration
@@ -63,7 +63,7 @@ Declare some variables
 
 <details>
 	<summary><b><i>Click Here to Toggle Solution</i></b></summary>
-	
+
 ```swift
 //Int
 var customersServed = 34
@@ -107,7 +107,7 @@ Declare some variables using type annotations and set their value on the next li
 
 <details>
 	<summary><b><i>Click Here to Toggle Solution</i></b></summary>
-	
+
 ```swift
 var salutation: String
 salutation = "Dr. and Mrs. Foobar"
@@ -141,11 +141,11 @@ You might have visualized a variable as a box that can hold something; the box i
 let pi = 3.1415926536
 let e = 2.718281828459
 let c = 299_792_458
-``` 
+```
 
-These are mathematical and scientific constants (CS borrows the word) and they never change. 
+These are mathematical and scientific constants (CS borrows the word) and they never change.
 
-But in a program there are cases where you want something, once set, to not be reset. 
+But in a program there are cases where you want something, once set, to not be reset.
 
 #### Exercise - Constants
 
@@ -153,7 +153,7 @@ Declare some constants
 
 <details>
 	<summary><b><i>Click Here to Toggle Solution</i></b></summary>
-	
+
 ```swift
 //Int
 let degreesInCircle = 360
@@ -186,14 +186,14 @@ Think of examples of where to use constants instead of variables.
 
 <details>
 	<summary><b><i>Click Here to Toggle Solution</i></b></summary>
-	
+
 	```
 	- A person's birthday
 	- Pi
 	```
 </details>
 
---- 
+---
 ### 5. Intro to Logic
 We have seen that a Bool can either be true or false.  Sometimes we might want to check if an expression is true.  Let's say that we are hosting an event.  We have people attending this event, and chairs for them to sit at given by the following declarations.
 ```swift
@@ -238,7 +238,7 @@ Let's go ahead and create them now.
 
 | p | q | p && q|
 |---|---|---|
-| true | true | true| 
+| true | true | true|
 | true | false | false|
 | false | true | false|
 | false | false | false|
@@ -250,7 +250,7 @@ Let's go ahead and create them now.
 
 | p | q | p &#124;&#124; q|
 |---|---|---|
-| true | true | true | 
+| true | true | true |
 | true | false | true |
 | false | true | true |
 | false | false | false |
@@ -261,7 +261,7 @@ Let's go ahead and create them now.
 
 | p | q | !p &#124;&#124; q|
 |---|---|---|
-| true | true | true | 
+| true | true | true |
 | true | false | false |
 | false | true | true |
 | false | false | true |
@@ -342,13 +342,13 @@ Simplify the following expressions [(PEMDAS Refresher)](https://www.mathsisfun.c
 
 4 * (-4) - 2 // -18
 
-4 + 5 ^ 3 * 6 / 3 // 254 - note exponentiation takes precedence 
+4 + 5 ^ 3 * 6 / 3 // 254 - note exponentiation takes precedence
 ```
 </details>
 
 ### 7. Intro to `Int`
 
-Integer is a term borrowed (taken) from mathematics to describe a number that's not a fraction in the range from -∞ to +∞, including zero. Since computers don't really do infinity we change the definition, substituting minimum and maximum numbers for the infinities. 
+Integer is a term borrowed (taken) from mathematics to describe a number that's not a fraction in the range from -∞ to +∞, including zero. Since computers don't really do infinity we change the definition, substituting minimum and maximum numbers for the infinities.
 
 The basic type for integers in Swift is `Int`. Before we explore the many related `Int` types it's important to note that for almost all cases it's considered best to use `Int`.
 
@@ -365,7 +365,7 @@ let numLettersInEnglishAlphabet: Int8 = 26  // type annotation lets us control
 
 ### 9. Integer Operations
 
-|Symbol| Operation          | Example | Result | 
+|Symbol| Operation          | Example | Result |
 |------|--------------------|---------|--------|
 | +    | Addition           | 5 + 8   |  13    |
 | -    | Subtraction        | 5 - 8   |  -3    |
@@ -376,21 +376,21 @@ let numLettersInEnglishAlphabet: Int8 = 26  // type annotation lets us control
 
 ### 10. Integer Division
 
-When dividing integers the expression always evaluates to the whole part of the calculation. 
+When dividing integers the expression always evaluates to the whole part of the calculation.
 This can be thought of as throwing away any numbers "after the decimal point".
 
 ```swift
-let nineDivThree = 9 / 3 //  3 
-let halfOfFive = 5 / 2 //  2 
+let nineDivThree = 9 / 3 //  3
+let halfOfFive = 5 / 2 //  2
 ```
 There is a partner operator to pick up that remainder named the modulo (sometimes called modulus).
 
 ```swift
-let nineDivThree = 9 % 3 //  0 
-let halfOfFive = 5 % 2 //  1 
+let nineDivThree = 9 % 3 //  0
+let halfOfFive = 5 % 2 //  1
 ```
 
-#### Exercise - Integer Division: 
+#### Exercise - Integer Division:
 1. Try various division examples.
 1. Try corresponding modulo examples.
 1. Recreate the exact message below using calculations that use /, % and string interpolation:
@@ -430,7 +430,7 @@ Given:
 var i = 10
 ```
 
-|Symbol| Operation              | Example  | Result | 
+|Symbol| Operation              | Example  | Result |
 |------|------------------------|----------|--------|
 | +=    | Add and assign        | i += 3   |  13    |
 | -=    | Subtract and assign   | i -= 5   |   5    |
@@ -438,7 +438,7 @@ var i = 10
 | /=    | Divide and assign     | i /= 4   |   2    |
 | %=    | Mod and assign        | i %= 3   |   1    |
 
-**Note**: You might see mention of the ++ and -- operators. They've been deprecated in Swift 3. 
+**Note**: You might see mention of the ++ and -- operators. They've been deprecated in Swift 3.
 Since ```i += 1``` offers the same functionality as ```i++``` it makes sense.
 
 ```swift
@@ -449,12 +449,12 @@ i += 1 // 1
 
 ### 12. Floating Point Numbers
 
-Floating-point numbers are used to represent the set of mathematical "real" numbers. 
+Floating-point numbers are used to represent the set of mathematical "real" numbers.
 
 Floating-point refers to the fact that the decimal point can be placed anywhere whithin the number. The computer stores floats in two parts: the mantissa and exponent. It could be an interesting math discussion but for our purposes we just need to know:
 
 * Floating point numbers are very close approximations
-* For a given data type they have a fixed precision. This limitation/power is exposed when you 
+* For a given data type they have a fixed precision. This limitation/power is exposed when you
 enter a very large or very small number
 
 Swift has two floating-point types ```Float``` and ```Double```. Floats are stored in 32 bits and Doubles in 64. Hence double. Not double the size but double the precision. Double the fun? Not really.
@@ -520,3 +520,8 @@ Floating-point values are always truncated when used to initialize a new integer
 * Remember, (almost) always use ```Int```.
 * What are the rare cases where using an integer type other than ```Int``` is recommended?
 
+### Standards
+
+IOS: IOS.1
+
+Language Fundamentals: LF.1, LF.1.a, LF.2

@@ -15,7 +15,7 @@
 #### Vocabulary
 1. **Base Class** -  a class that does not inherit from another class.
 1. **Encapsulation** - means that objects keep their state information private.
-1. **Inherit/Inheritance** - means that objects of one class can derive part of their behavior from a base or parent class. 
+1. **Inherit/Inheritance** - means that objects of one class can derive part of their behavior from a base or parent class.
 1. **Initialization** - the process of preparing an instance of a class, structure, or enumeration for use by setting an initial value for each stored property on that instance.
 1. **Instance** - a single and unique member of a class (or structure) that has specified values rather than variables, and represents an object. In a non-programming context, you could think of "dog" as a class and your particular pet dog as an instance of that class.
 1. **Instantiation** - "Humans are born. Objects are instantiated. A baby is an instance of a Human, an object is an instance of some Class." [-More on Initialization vs Instantiation](https://stackoverflow.com/questions/2330767/what-is-the-difference-between-instantiated-and-initialized)
@@ -52,7 +52,7 @@ By using Classes and Structs, we can define new types that can hold any informat
 
 We call Classes and Structs *Objects* and when programming with them, we talk about *Object Oriented Programming* (OOP).
 
-**Structures and classes** 
+**Structures and classes**
 Structures and classes are general-purpose, flexible constructs that become the building blocks of your program’s code. You define properties and methods to add functionality to your structures and classes using the same syntax you use to define constants, variables, and functions.
 
 Unlike other programming languages, Swift doesn’t require you to create separate interface and implementation files for custom structures and classes. In Swift, you define a structure or class in a single file, and the external interface to that class or structure is automatically made available for other code to use.
@@ -135,7 +135,7 @@ Where have you seen this syntax before?
 
 </details>
 
-#### Default Initializers 
+#### Default Initializers
 In a default initializer, the name of the type is followed by empty parentheses. You can use default initializers when your types either don’t have any stored properties, or when all of the type’s stored properties have default values. This holds true for both structures and classes.
 
 ```swift
@@ -178,7 +178,7 @@ let twoByTwo = Size(width: 2.0, height: 2.0) //free memberwise initializer provi
 
 ##### Preview for next lesson
 
-Note that if you define a custom initializer for a value type, you will no longer have access to the default initializer (or the memberwise initializer, if it is a structure) for that type. 
+Note that if you define a custom initializer for a value type, you will no longer have access to the default initializer (or the memberwise initializer, if it is a structure) for that type.
 
 >If you do want your custom value type to be initializable with the default initializer and memberwise initializer, and also with your own custom initializers, write your custom initializers in an extension rather than as part of the value type’s original implementation.
 
@@ -216,7 +216,7 @@ For future reference, here is the passage from the Apple documentation.  We will
 
 
 > Classes and structures in Swift have many things in common. Both can:
-> 
+>
 > * Define properties to store values
 > * Define methods to provide functionality
 > * Define subscripts to provide access to their values using subscript syntax
@@ -225,9 +225,9 @@ For future reference, here is the passage from the Apple documentation.  We will
 > * Conform to protocols to provide standard functionality of a certain kind
 >
 > For more information, see Properties, Methods, Subscripts, Initialization, Extensions, and Protocols.
-> 
+>
 > Classes have additional capabilities that structures do not:
-> 
+>
 > * Inheritance enables one class to inherit the characteristics of another.
 > * Type casting enables you to check and interpret the type of a class instance at runtime.
 > * Deinitializers enable an instance of a class to free up any resources it has assigned.
@@ -243,7 +243,7 @@ So far, all of the types we have seen so far are actually structures, and thus a
 public struct Bool {
 
   ...
-  
+
   public init(_ value: Bool) {
     self = value
   }
@@ -404,17 +404,17 @@ func increment() {
 }
 ```
 
-In practice, if you don’t explicitly write `self`, Swift assumes that you are referring to a property or method of the current instance whenever you use a known property or method name within a method. 
+In practice, if you don’t explicitly write `self`, Swift assumes that you are referring to a property or method of the current instance whenever you use a known property or method name within a method.
 
 
-__The main exception to this rule occurs when a parameter name for an instance method has the same name as a property of that instance.__ 
+__The main exception to this rule occurs when a parameter name for an instance method has the same name as a property of that instance.__
 
 
 Here, `self` makes the difference clear between a method parameter called `x` and an instance property that is also called `x`:
 
 ```swift
 struct Point {
-    var x = 0.0 
+    var x = 0.0
     var y = 0.0
     func isToTheRightOf(x: Double) -> Bool {
         return self.x > x
@@ -479,7 +479,7 @@ let radius = 5.0
 let pi = ?
 let circleArea = pi * radius * radius
 
-We could write in the value of pi ourselves, but 
+We could write in the value of pi ourselves, but
 
 Type methods are methods that are called on the type itself. You indicate type methods by including the `static` keyword immediately before the method's `func` keyword. Type methods can be used in classes, structs, and enumerations. Classes may also use the `class` keyword to allow subclasses to override the superclass’s implementation of that method.
 
@@ -572,7 +572,7 @@ class Tandem: Bicycle {
 
 A subclass can provide its own custom implementation of an instance method, type method, instance property, type property, or subscript that it would otherwise inherit from a superclass. This is known as overriding.
 
-To override a characteristic that would otherwise be inherited, you prefix your overriding definition with the `override` keyword. Doing so clarifies that you intend to provide an override and have not provided a matching definition by mistake. 
+To override a characteristic that would otherwise be inherited, you prefix your overriding definition with the `override` keyword. Doing so clarifies that you intend to provide an override and have not provided a matching definition by mistake.
 
 The `override` keyword also prompts the Swift compiler to check that your overriding class’s superclass (or one of its parents) has a declaration that matches the one you provided for the override. This check ensures that your overriding definition is correct.
 
@@ -602,5 +602,10 @@ When you create a new instance of `Train` and call its `makeNoise()` method, you
 
 * Compare and contrast the use of ```struct``` and ```class```.
 * What are type methods?
- 
 
+
+### Standards
+
+IOS: IOS.1, IOS.1.c
+
+Language Fundamentals: LF.3

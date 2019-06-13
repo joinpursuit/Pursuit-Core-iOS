@@ -2,11 +2,11 @@
 
 ### Objective
 
-* To install the tools (Xcode and Slack) used during the course
+* To install the tools (Xcode and Slack) we use during the course
 * To register and sign into accounts used during the course (Github and Slack)
 
 ### Readings
-1. [Marty Aveton's (C4Q 3.2 graduate) Key Resources](https://medium.com/@MartianAviary/ten-key-resources-for-beginner-ios-devs-caba2b83f67c)
+1. [Marty Aveton's (3.2 graduate) Key Resources](https://medium.com/@MartianAviary/ten-key-resources-for-beginner-ios-devs-caba2b83f67c)
 1. [Terminal](https://github.com/joinpursuit/AC_4_Web/blob/master/units/fundamentals/lessons/terminal/cheat_sheet.md)
 1. [UNIX Shell](https://en.wikipedia.org/wiki/Shell_(computing))
 
@@ -18,18 +18,18 @@
 
 #### Vocabulary
 
-1. **operating system** - Software that is responsible for running programs and managing reources on a computer.
+1. **operating system** - Software that is responsible for running programs and managing resources on a computer.
 1. **shell** - A command line interface or window onto an operating system.
 1. **text file** - A document without visual formatting. Swift files are text files.
 1. **path** - The address of a file or folder on your computer such as `/Users/elmo/Desktop/Garden.png`.
 
 ---
 
-## Laptop Account 
+## Laptop Account
 
-If you are using a loaner laptop we suggest you create your own user account. 
+If you are using a loaner laptop we suggest you create your own user account.
 
-Creating your own account on a mac: 
+Creating your own account on a mac:
 
 1. Choose Apple menu > System Preferences, then click Users & Groups.
 1. Click the lock icon to unlock it, then enter an administrator name and password.
@@ -37,28 +37,28 @@ Creating your own account on a mac:
 1. Click the New Account pop-up menu, then choose a type of user. ...
 1. Enter a full name for the new user.
 
-### Apple Developer Account 
+### Apple Developer Account
 
-The free tier Apple developer account enables most of Apple development features except a few including deploying applications to the App Store and configuring Push Remote Notifications. The cost of the Paid membership is $99 per year. Sign up and create a developer account [here](https://developer.apple.com/programs/how-it-works/).
+The "free tier" Apple developer account enables most of Apple development features except a few (most notably, deploying applications to the App Store and configuring Remote Push Notifications). The cost of the Paid membership is $99 per year. Sign up and create a free developer account [here](https://developer.apple.com/programs/how-it-works/).
 
 ### Xcode
 
-If you haven't installed Xcode, proceed to the installation instructions below: 
+If you haven't installed Xcode, proceed to the installation instructions below:
 
 1. From your Macbook, open the App Store.
-2. Search for *Xcode*.
-  	**Note:** Make sure you’re downloading Version 8. Do not download Xcode Beta 9 at this point. 
-3. Press ‘Get’ and then ‘Install App’. 
-4. You will now be prompted to provide your AppleID. If you do not have one, create one. Once you’ve provided a correct AppleID, click Buy.
+1. Search for *Xcode*.
+  	**Note:** Make sure you’re downloading Version 10. Do not download Xcode Beta 11 at this point in time.
+1. Press ‘Get’ and then ‘Install App’.
+1. You will now be prompted to provide your AppleID. If you do not have one, create one. Once you’ve provided a correct AppleID, click `Buy`.
 	**Note:** Xcode is free. You do not have to make any purchases to download and use Xcode.
-4. When download is complete, open *Xcode* from your Applications folder. 
-5. The first time you open *Xcode* it’ll ask to install some additional components. Allow it to do so.
-6. Once complete, you should see a “Welcome to Xcode” screen. 
-7. Congratulations! You have successfully downloaded and installed Xcode.
+1. When download is complete, open *Xcode* from your Applications folder.
+1. The first time you open *Xcode* it will ask to install some additional components. Allow it to do so.
+1. Once complete, you should see a “Welcome to Xcode” screen.
+1. Congratulations! You have successfully downloaded and installed Xcode.
 
-#### Activity: 
+#### Activity:
 
-Let's see what Xcode's Playgrounds are all about. 
+Let's see what Xcode's Playgrounds are all about.
 
 1. Download the [Intro to App Development with Swift](https://itunes.apple.com/us/book/intro-to-app-development-with-swift/id1118575552?mt=11) book and open it in iBooks.
 1. Read the short introductory material and on page 5 "Getting Started" download the project files that go with the course. I've linked them [here, too.](https://developer.apple.com/sample-code/swift/downloads/app-dev-curriculum.zip)
@@ -97,7 +97,7 @@ If you haven't already please create a new account and make sure you set your Ti
 
 Slack is our less-formal, more immediate messaging/chat app. It should be used for quick short term communication and is not preferred for anything you would want to save long term.
 
-1. Join the pursuit-core.slack.com workspace [link](http://pursuit-core.slack.com). 
+1. Join the pursuit-core.slack.com workspace [link](http://pursuit-core.slack.com).
 2. You will be prompted to enter your email address. Enter it and hit the green button.
 3. Check your email for the confirmation and click "Confirm Email".
 4. Enter your name and choose a user name.
@@ -110,7 +110,7 @@ Slack is our less-formal, more immediate messaging/chat app. It should be used f
 
 *Terminal* is a program on your Mac that gives a text based interface to your computer. This is sometimes called a CLI for command line interface. Since the Mac's operating system (macOS) is a version of UNIX much of what you discover about UNIX will be applicable to the Mac's command line.
 
-An example of a command typed into Terminal. 
+An example of a command typed into Terminal.
 
 ```bash
 $ ls
@@ -119,7 +119,7 @@ Applications	Library		Projects
 Desktop		Movies		Public		
 Documents	Music		Sites		iPhone
 Downloads	Pictures			
-					
+
 ```
 
 Broken down, `ls`, followed by the return/enter key is the command. The four lines after are the output.
@@ -129,7 +129,7 @@ Broken down, `ls`, followed by the return/enter key is the command. The four lin
 Many of the basic commands are for navigating the file system. These are your files and folders. All you see and do in *Finder* (the graphical app used to navigate files) can be done in Terminal on the command line.
 
 
-##### File system commands 
+##### File system commands
 
 |Command |Description|Example|
 |--------|-----------|-------|
@@ -137,7 +137,7 @@ Many of the basic commands are for navigating the file system. These are your fi
 | ls     | lists all files in the directory | ls |
 | cd     | "change directory", this moves to a directory | cd Desktop |
 | rm     | "remove", this deletes a file (careful! NO UNDO) | rm README.md |
-| mkdir  | Makes an empty folder in the current directory | mkdir SurveyInformation 
+| mkdir  | Makes an empty folder in the current directory | mkdir SurveyInformation
 
 
 ##### Special file names
@@ -147,7 +147,7 @@ Many of the basic commands are for navigating the file system. These are your fi
 | ..     | The parent directory | ls .. |
 | ~      | Your _home_ directory | ls ~ |
 | /      | The root directory | ls / |
-| ../..  | Parent's parent's directory | ls ../.. 
+| ../..  | Parent's parent's directory | ls ../..
 
 
 ##### Reading and writing files
@@ -181,7 +181,8 @@ $ git log
 | cat    | Displays the text of a file in terminal | cat README.md |
 | more   | Displays the text of a file in terminal, with paging | more README.md |
 | open _file_     | Opens a file using the associated program | open README.md |
-| git clone (URL) | makes a local copy of a git repo in the current directory | git 
+| git clone (URL) | makes a local copy of a git repo in the current directory | git
 
+#### Standards
 
-
+Engineering Foundations: EF.2, EF.3

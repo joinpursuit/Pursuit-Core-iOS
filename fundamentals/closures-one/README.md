@@ -10,7 +10,7 @@
 - **algorithm** - a process or set of rules to be followed in calculations or other problem- **block** - One or more lines of code, enclosed with curly braces. Sometimes used interchangeably with closure, especially in Objective-C.
 - **closure** - An executable block of code. Like a function, it can take input parameters and return a value. A function is actually a special case of a closure.
 -solving operations, especially by a computer.
-- **higher-order function** - A function that takes a closure as one or more of its arguments and/or returns a closure. 
+- **higher-order function** - A function that takes a closure as one or more of its arguments and/or returns a closure.
 - **lambda** - A more general computer science term synonymous with closure.
 - **sort** - Reorder a list of data, usually an Array in Swift.
 
@@ -20,9 +20,9 @@
 
 ### Closures
 
-Closures are self-contained blocks of functionality that can be passed around and used in your code. Closures can capture and store references to any constants and variables from the context in which they are defined. This is known as closing over those constants and variables. 
+Closures are self-contained blocks of functionality that can be passed around and used in your code. Closures can capture and store references to any constants and variables from the context in which they are defined. This is known as closing over those constants and variables.
 
-Functions are actually special cases of closures. 
+Functions are actually special cases of closures.
 
 Functions and closures are first class citizens. They are "things" that can be passed as functions and returned from functions like any other type.
 
@@ -69,7 +69,7 @@ let add = { (a: Int, b: Int) -> Int in
     return a + b
 }
 
-// add is of type (Int, Int) -> Int 
+// add is of type (Int, Int) -> Int
 // it is executable and can be called just like a function
 add(4, 9)
 ```
@@ -239,7 +239,7 @@ someInts.filter { (a) -> Bool in
 
 ### Reduce
 
-The reduce method solves the problem of combining the elements of an array to a single value. 
+The reduce method solves the problem of combining the elements of an array to a single value.
 
 ```swift
 let numbers = [1, 2, 3, 4]
@@ -254,7 +254,7 @@ let numberSum = numbers.reduce(0, { x, y in
 ### Use ```filter(_:)```
 
 > Filter out strings containing "bad words".
-> First split text on the space using ```componentsSeparatedByString(_:)```, 
+> First split text on the space using ```componentsSeparatedByString(_:)```,
 > then use filter to cut out the words. Print out the expurgated version as a string.
 
 ```swift
@@ -273,3 +273,12 @@ let text = "What the heck we s'posed to do you darn fool. Drat that cat. Oh fudg
 
 ### Use ```reduce(_:)```
 >Our map worked pretty well for us, but we've discovered a newfound hatred of vowels.  We can use reduce directly on our string ```badWords```.  Let's make a new string using reduce that takes out all the vowels.
+
+
+### Standards
+
+IOS: IOS.1
+
+Language Fundamentals: LF.6
+
+Engineering Foundations: EF.1

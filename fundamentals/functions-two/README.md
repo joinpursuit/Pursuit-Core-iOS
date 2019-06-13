@@ -27,7 +27,7 @@ So far, we have seen several different types of control flow statements.
 - if/else
 - switch
 
-All of these provide excellent ways to navigate code and control the way in which code is executed. 
+All of these provide excellent ways to navigate code and control the way in which code is executed.
 
 One special type of if statement is the if let statement.  We use it primarily for optional binding.
 
@@ -142,7 +142,7 @@ Here is a common algorithm called "FizzBuzz"
 
 <details>
 	<summary>One solution</summary>
-	
+
 	for i in 1...100 {
 		switch i {
 			case _ where i % 15 == 0:
@@ -152,7 +152,7 @@ Here is a common algorithm called "FizzBuzz"
 			case _ where i % 5 == 0:
 				print("Buzz")
 			default:
-				print(i)	
+				print(i)
 		}
 	}
 
@@ -162,7 +162,7 @@ Your solution might look totally diffferent.  There are an infinite amount of wa
 
 <details>
 	<summary>Another solution</summary>
-	
+
 	if i == 1 { print("1") }
 	if i == 2 { print("2") }
 	if i == 3 { print("Fizz") }
@@ -274,8 +274,8 @@ Your solution might look totally diffferent.  There are an infinite amount of wa
 2. It will enable you to pass technical interviews
 3. It's interesting!
 
- 
-## How to solve algorithms 
+
+## How to solve algorithms
 1. Clarify the problem
 2. Identify the function signature
 3. Explain a possible solution in words and images
@@ -288,40 +288,40 @@ Example:
 
 <details>
 	<summary> 1. Clarify the problem</summary>
-	
+
 	Is zero even or odd?
 	Can negative numbers be even?
-	
+
 </details>
 
 <details>
 	<summary> 2a. What are the inputs?</summary>
-	
+
 	An array of Ints as an [Int]
-	
-</details>	
+
+</details>
 
 <details>
 	<summary> 2b. What are the outputs?</summary>
-	
+
 	The sum of the even numbers as an Int.
-	
-</details>	
+
+</details>
 
 <details>
 	<summary> 3. Explain a possible solution</summary>
-	
+
 	- Initialize a variable Int called "sum" and set sum equal to zero
 	- Iterate through the array of Ints
 	- Check each Int if even by checking if the Int is divisible by two
 	- If the Int is divisible by two, increment sum by the number
 	- Return sum after you check each Int
-	
-</details>	
+
+</details>
 
 <details>
 	<summary> 4. Code the solution </summary>
-	
+
 	func sumAllEven(arr: [Int]) -> Int {
 		var sum = 0
 		for num in arr {
@@ -331,14 +331,14 @@ Example:
 		}
 		return sum
 	}
-</details>	
+</details>
 
 <details>
 	<summary> 5. Test and refactor the solution </summary>
-	
+
 	input: [2,5,7,6]
 	output: 8
-	
+
 </details>
 
 
@@ -435,7 +435,7 @@ print(name1, name2)
 ```
 ### Variadic parameters
 
-Good to know these exist. Don't use this. 
+Good to know these exist. Don't use this.
 
 ## Return
 
@@ -488,7 +488,7 @@ func reportOnMovies(movies:[[String:Any]]) -> String? {
             if output == nil {
                 output = ""
             }
-            
+
             var castString = ""
             for (i, actor) in cast.enumerate() {
                 if i == cast.count - 1 {
@@ -523,20 +523,20 @@ else {
 
 ```swift
 func findRangeFromNumbers(numbers: Int...) -> (min: Int, max: Int) {
-    
+
     var min = numbers[0]
     var max = numbers[0]
-    
+
     for number in numbers {
         if number > max {
             max = number
         }
-        
+
         if number < min {
             min = number
         }
     }
-    
+
     return (min, max)
 }
 
@@ -575,7 +575,7 @@ func generateMovieReport(movieArray:[[String:Any]]?) -> String? {
     guard let movieArray = movieArray else {
         return nil
     }
-    
+
     var output: String = ""
     for movie in movieArray {
         // we can continue execution if one of these is missing but we want to skip it
@@ -592,16 +592,16 @@ func generateMovieReport(movieArray:[[String:Any]]?) -> String? {
                 castString += "\(actor), "
             }
         }
-        
+
         output += "\(name) came out in \(year) starring \(castString)."
 
         if let president = presidentsByYear[year] {
             output.appendContentsOf(" \(president) was president.")
         }
-        
+
         output += "\n"
     }
-    
+
     return output
 }
 
@@ -659,14 +659,14 @@ func reportOnMovies(movies:[[String:Any]]) -> String? {
         }
         return output
     }
-    
+
     var output: String?
     for movie in movies {
         if let name = movie["name"] as? String, year = movie["year"] as? Int, cast = movie["cast"] as? [String] {
             if output == nil {
                 output = ""
             }
-            
+
             let castString = buildCommaSeparatedList(cast)
 
             output?.appendContentsOf("\(name) came out in \(year) starring \(castString).")
@@ -689,3 +689,12 @@ func reportOnMovies(movies:[[String:Any]]) -> String? {
 * What's the differencd between ```guard``` and ```if```?
 * What's the benefit of the limited scope inside a function?
 * Compare and contrast a function's signature with its type.
+
+
+## Standards
+
+IOS: IOS.1
+
+Language Fundamentals: LF.5, LF.5.a
+
+Engineering Foundations: EF.1

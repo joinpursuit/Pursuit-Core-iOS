@@ -18,9 +18,9 @@ Properties associate values with a particular class, structure, or enumeration. 
 
 ### 2. Stored Properties
 
-A stored property is a constant or variable that is stored as part of an instance of a particular class, or structure. Stored properties are only provided by classes and stuctures (not enums). 
+A stored property is a constant or variable that is stored as part of an instance of a particular class, or structure. Stored properties are only provided by classes and stuctures (not enums).
 
-Variable stored properties are introduced with the `var` keyword, while constant stored properties are introduced with the `let` keyword. 
+Variable stored properties are introduced with the `var` keyword, while constant stored properties are introduced with the `let` keyword.
 
 You can provide a default value for the stored property as a part of its definition, or you can set and modify the initial value for a stored property during initialization. Once a constant stored property has been given an initial value, it's value can no longer be changed.
 
@@ -39,7 +39,7 @@ rangeOfThreeItems.firstValue = 6
 
 #### Stored Properties of Constant Structure Instances
 
-If you create an instance of a stucture, and assign that instance to a constant, you cannot modify the stucture's properties even if those properties were declared as variables. This behavior is due to stuctures being value types. 
+If you create an instance of a stucture, and assign that instance to a constant, you cannot modify the stucture's properties even if those properties were declared as variables. This behavior is due to stuctures being value types.
 
 ```swift
 let rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)
@@ -49,13 +49,13 @@ rangeOfFourItems.firstValue = 6
 // this will report an error, even though firstValue is a variable property
 ```
 
-The same cannot be said of classes because they are reference types. If you assign an instance of a reference type to a constant, you are still able to change that instance's variable properties. 
+The same cannot be said of classes because they are reference types. If you assign an instance of a reference type to a constant, you are still able to change that instance's variable properties.
 
 ### 3. Lazy Stored Properties
 
-An optimization we're not going to spend any time implementing now. Just know what they are used for and why. 
+An optimization we're not going to spend any time implementing now. Just know what they are used for and why.
 
-A lazy stored property is a property whose initial value is not calcualted until the first time the property is needed. Reasons to use lazy stored propeties depends on the situation. We usually use them either because we want to create an instance of the object in question before something external is ready (think network or other resource), or because the work of fully instantiating the property is expensive and there's a good enough chance we may never need to do it. Hence lazy (in the good sense). 
+A lazy stored property is a property whose initial value is not calcualted until the first time the property is needed. Reasons to use lazy stored propeties depends on the situation. We usually use them either because we want to create an instance of the object in question before something external is ready (think network or other resource), or because the work of fully instantiating the property is expensive and there's a good enough chance we may never need to do it. Hence lazy (in the good sense).
 
 To make a stored property lazy, simply add the `lazy` keyword in front of your stored property definition.
 
@@ -84,9 +84,9 @@ var variableName: dataType {
 ```
 
 
-Because computed properties do not actually store values, the value from the getter (marked with the `get` keyword) is meant to be computed from other instance properties. 
+Because computed properties do not actually store values, the value from the getter (marked with the `get` keyword) is meant to be computed from other instance properties.
 
-If a computed property’s setter does not define a name for the new value to be set, a default name of `newValue` is used. 
+If a computed property’s setter does not define a name for the new value to be set, a default name of `newValue` is used.
 
 __Example:__
 
@@ -117,7 +117,7 @@ print(parrot.wingSpan)
 In the example above, when the `wingSpan` computed property was accessed using dot syntax, the value passed (2) was captured by `newValue`. In the setter, `newValue` was divided by two, and the result was captured by `wingLength`. Once `wingLength` was set to the result of that computation, it was then used to calculate `wingSpan` in the getter.
 
 #### Read-Only Computed Properties
-A computed property with a getter, but no setter is known as a _read-only computed property_. 
+A computed property with a getter, but no setter is known as a _read-only computed property_.
 
 A read-only computed property always returns a value, and can be accessed through dot syntax, but cannot be set to a different value.
 
@@ -142,7 +142,7 @@ var yearsInOffice: Int {
 }
 ```
 
-By using a setter, we can affect the backing variables. 
+By using a setter, we can affect the backing variables.
 
 ```swift
     var yearsInOffice: Int {
@@ -171,7 +171,7 @@ Unlike stored instance properties, you must always give stored type properties a
 
 #### Type Property Syntax
 
-Mark ordinary properties with the keyword ```static```. 
+Mark ordinary properties with the keyword ```static```.
 
 ```swift
 struct SomeStructure {
@@ -197,7 +197,7 @@ class SomeClass {
 }
 ```
 
-For computed type properties for class types, you can use the `class` keyword instead to allow subclasses to override the superclass’s implementation. 
+For computed type properties for class types, you can use the `class` keyword instead to allow subclasses to override the superclass’s implementation.
 
 ```swift
 class var personalStatement: String {
@@ -245,7 +245,7 @@ public class SomePublicClass {}
 internal class SomeInternalClass {}
 fileprivate class SomeFilePrivateClass {}
 private class SomePrivateClass {}
- 
+
 public var somePublicVariable = 0
 internal let someInternalConstant = 0
 fileprivate func someFilePrivateFunction() {}
@@ -267,3 +267,8 @@ let someInternalConstant = 0   // implicitly internal
 * Compare and contrast the use of stored and computed properties.
 * What are getters and setters?
 * Why use access control?
+
+
+### Standards
+
+IOS: IOS.1, IOS.1.e

@@ -19,14 +19,14 @@ let myArr = [1,5,2,3,194,-32]
 [We Heart Swift - Arrays Review](https://www.weheartswift.com/arrays/)  
 [Apple Documentation - Arrays Documentation](https://developer.apple.com/documentation/swift/array)
 
-### 13. Let's see some other built-in Array functions 
+### 13. Let's see some other built-in Array functions
 
 1. contains
 1. min / max
 1. first / last
 1. filter
-1. reverse 
-1. shuffle 
+1. reverse
+1. shuffle
 1. randomElement
 
 ### 14. Arrays can be multidimensional
@@ -74,14 +74,20 @@ let newArr = Array(repeating: 9, count: 4)
 print(newArr) // output [9, 9, 9, 9]
 ```
 
-**Practice:** 
+**Practice:**
 
 1. Make an array containing 200 copies of the number 9
 1. Make an array containing 20 copies of the string "Hello"
 1. Make a 2-dimensional 5 x 5 array of Ints all set to 0
 1. Given a square array, print out all elements
-```swift 
+```swift
 let squareMatrix = [[6, 4, 4],
                     [3, 4, 1],
                     [1, 10, 5]]
 ```
+
+### Standards
+
+IOS: IOS.1
+
+Language Fundamentals: LF.3, LF.3.a

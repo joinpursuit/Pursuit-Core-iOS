@@ -30,12 +30,12 @@ In Xcode, hold option and click on the constants declared above. They're of type
 let range = 1...5.0
 ```
 
-Here, `range` is of type `ClosedRange<Double>` and it is not iterable. 
+Here, `range` is of type `ClosedRange<Double>` and it is not iterable.
 
 
 ### 2. Introduction
 
-Loops are a tool for performing the same operation over a range or a list. 
+Loops are a tool for performing the same operation over a range or a list.
 
 **Question**: What web site or app features probably have a loop behind them?
 
@@ -51,7 +51,7 @@ Loops are a tool for performing the same operation over a range or a list.
 
 ### 3. ```for-in```
 
-The first step here is to forget a little bit of what you learned about the syntax of `for` loops. All the priciples, and even the inner workings are still there but we have a new (maybe simpler) way of defining loops.
+The first step here is to forget a little bit of what you learned about the syntax of `for` loops. All the principles, and even the inner workings are still there but we have a new (maybe simpler) way of defining loops.
 
 ```for``` implicitly declares a constant iterator with the identifier you provide that will be incremented at each iteration of the loop.
 
@@ -135,7 +135,7 @@ for name in names {
 
 ### 6. ```where``` clauses
 
-A variant of for-in uses the `where` clause that we learned as a part of the ```switch``` statement. With this, we have more control over the conditions under which the body of the loop is run. 
+A variant of for-in uses the `where` clause that we learned as a part of the ```switch``` statement. With this, we have more control over the conditions under which the body of the loop is run.
 
 The `where` clause provides a logical test that must be met in order to execute the loop’s code. If the condition established by the `where` clause is not met, then the loop’s code is not run.
 
@@ -159,7 +159,7 @@ while i < 10 { // condition
 }
 ```
 
-But it's main application is where we don't know how many times the loop will repeat before we enter it. 
+But `while` loops are usually used when **we don't know** how many times the loop will repeat before we enter it.
 
 ```swift
 var number = 10
@@ -172,20 +172,20 @@ while number > 1 {
 
 ***Graph the snippet above in playgrounds.***
 
-We can see by changing the initial value of number there's not a simple way of knowing how many iterations there will be before we enter the loop. So we enter the loop knowing the condition for exiting without knowing how many iterations will be needed before that condition is met. 
+We can see by changing the initial value of number there's not a simple way of knowing how many iterations there will be before we enter the loop. So we enter the loop knowing the condition for exiting without knowing how many iterations will be needed before that condition is met.
 
 **Question**: What do you think the following will do?
 
 ```swift
 while true { // condition
-    print("Hello") 
+    print("Hello")
 }
 ```
 
 <details>
 <summary><b>Solution</b></summary>
 
->It will loop endlessly. 
+>It will loop endlessly.
 
 </details>
 
@@ -204,7 +204,7 @@ while number > 1 {
 
 >This loop will run 3 times.
 
-```swift 
+```swift
 // Expected Output
 5
 2
@@ -221,7 +221,7 @@ Programmers put a lot of effort into avoiding endless loops because they general
 var doubleNumber = 20.0
 while doubleNumber > 0.01 {
     doubleNumber /= 2.0
-    
+
     print(doubleNumber)
 }
 ```
@@ -276,7 +276,7 @@ while shields > 0 {
 
     // Fire blasters!
     print("Fire blasters!")
-    
+
     // note the version in the book used ++
     blasterFireCount += 1
 }
@@ -288,15 +288,15 @@ while shields > 0 {
 
 ```swift
 var shields = 5
-var blastersOverheating = false 
+var blastersOverheating = false
 var blasterFireCount = 0
-var spaceDemonsDestroyed = 0 
+var spaceDemonsDestroyed = 0
 
 while shields > 0 {
 
     if spaceDemonsDestroyed == 500 {
         print("You beat the game!")
-        break 
+        break
     }
 
     if blastersOverheating {
@@ -311,7 +311,7 @@ while shields > 0 {
 
     if blasterFireCount > 100 {
         blastersOverheating = true
-        continue 
+        continue
     }
 
     // Fire blasters!
@@ -343,12 +343,12 @@ Here we have a loop that counts from 1 to the current value of `i` 5 times.
 ```swift
 outer: for i in 1...5 {
     print("i\(i) :", terminator: " ")
-    
+
     inner: for j in 1...5 {
         if i == j {
             // uncomment for "outer"
              print("")
-            
+
             // toggle outer on and off
             continue outer
         }
@@ -356,7 +356,7 @@ outer: for i in 1...5 {
     }
     print("")
 }
-``` 
+```
 
 If we want to find the first factors of a given product, we can use break to escape the outer loop as soon as it's found.
 
@@ -380,6 +380,12 @@ outer: for i in 1...12 {
 <details>
 <summary><b>Solution</b></summary>
 
->With the current break as-is, once we find the combination of i and j whose product is equal to `product`, we break the outerloop which would subsequenlty stop the nested innerloop as well. If we don't break the outerloop, the outerloop would continue to exeucte until it reaches the upperbound of its range. Not breaking the outerloop has the same effect as not breaking at all. 
+>With the current break as-is, once we find the combination of i and j whose product is equal to `product`, we break the outerloop which would subsequently stop the nested innerloop as well. If we don't break the outerloop, the outerloop would continue to execute until it reaches the upperbound of its range. Not breaking the outerloop has the same effect as not breaking at all.
 
 </details>
+
+### Standards
+
+IOS: IOS.1
+
+Language Fundamentals: LF.4

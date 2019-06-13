@@ -2,12 +2,12 @@
 * Define and call functions
 * Understand the components of a function signature
 
-### Vocabulary: 
-1. function 
-1. argument 
-1. parameter 
-1. input 
-1. output 
+### Vocabulary:
+1. function
+1. argument
+1. parameter
+1. input
+1. output
 1. define
 1. call
 
@@ -173,14 +173,14 @@ myString = addBang(to: myString)
 
 </br>
 
-**Practice** 
+**Practice**
 
 Write a function that returns the sum of the numbers in an array.
 
 <details>
 <summary>Solution</summary>
 
-```swift 
+```swift
 func addNumbers(numbers: [Int]) -> Int {
   var sum = 0
   for num in numbers {
@@ -200,7 +200,7 @@ In the solution above, we had to reset the variable myString.  How would we writ
 ```swift
 var myString = "Hello there"
 addBand(to: myString)
-print(myString) // is still Hello, there without the ! 
+print(myString) // is still Hello, there without the !
 ```
 
 **Turn and talk**
@@ -334,3 +334,11 @@ Write a function that finds the average of an Array of Ints.
 * What's the difference between a parameter and an argument?
 * What's the purpose of a function's internal parameter names?
 * Its external parameter names?
+
+## Standards
+
+IOS: IOS.1
+
+Language Fundamentals: LF.5, LF.5.a
+
+Engineering Foundations: EF.1
