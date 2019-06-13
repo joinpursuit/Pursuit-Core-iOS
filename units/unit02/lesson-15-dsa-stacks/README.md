@@ -218,6 +218,3 @@ struct Stack<T: Comparable>: CustomStringConvertible {
   }
 }
 ```
-
-**Whiteboard Exercises**  
-Pair up according to your group to solve the whiteboard [exercises](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit02/whiteboarding/Stacks-Exercises.md)
