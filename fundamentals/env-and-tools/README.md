@@ -47,7 +47,7 @@ If you haven't installed *Xcode*, proceed to the installation instructions below
 
 1. From your Macbook, open the App Store.
 1. Search for *Xcode*.
-  	**Note:** Make sure you’re downloading Version 10. Do not download Xcode Beta 11 at this point in time.
+  	**Note:** Make sure you’re downloading Version 10. Do not download Xcode 11 Beta at this point in time.
 1. Press ‘Get’ and then ‘Install App’.
 1. You will now be prompted to provide your AppleID. If you do not have one, create one. Once you’ve provided a correct AppleID, click `Buy`.
 	**Note:** Xcode is free. You do not have to make any purchases to download and use Xcode.
@@ -164,7 +164,7 @@ The dollar sign is a _prompt_. Don't type the "$" character itself!
 
 You type your command after the prompt and hit enter. Some commands "take" one or more arguments, which are inputs separated by a space. Some commands don't take any arguments.
 
-Here is a command that is being given one argument.
+Here is a command that is being given one argument:
 
 ```bash
 $ git log

@@ -7,12 +7,12 @@
 * Use common array methods
 
 ### Readings
-1. Apple's [Swift Language Reference, Collections](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html#//apple_ref/doc/uid/TP40014097-CH8-ID105)
+1. [Apple's Swift Language Reference - Collections](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html)
 
 #### Vocabulary
 1. **Array** - stores values of the same type in an ordered list
-1. **Collection** - a Foundation framework object whose primary role is to store other objects in the form of arrays, dictionaries, and sets. -[Apple](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Collection.html)
-1. **Index** - a number that indicates the position of an element in an ordered collection (i.e. array) [Ray Wanderlich - Seek to Arrays](https://www.raywenderlich.com/123100/collection-data-structures-swift-2)
+1. **Collection** - a Foundation framework object whose primary role is to store other objects in the form of arrays, dictionaries, and sets.
+1. **Index** - a number that indicates the position of an element in an ordered collection (i.e. array)
 1. **Subscript** - a symbol or number used to identify an element in an array. Usually, the subscript is placed in brackets following the array name (i.e. `arrayName[0] //accesses first element`)
 
 ---
@@ -21,11 +21,11 @@
 
 So far, the types we have seen have a fairly straightforward means of storage.
 
-How is a Bool stored in memory?
+How is a `Bool` stored in memory?
 
-How is an Int stored in memory?
+How is an `Int` stored in memory?
 
-With the exception of String, we only have to worry about storing a single thing somewhere in the computer.  But what happens when we want to store many Integers instead of just one?  Without using an Array, how could we store multiple Ints?
+With the exception of `String`, we only have to worry about storing a single thing somewhere in the computer.  But what happens when we want to store many Integers instead of just one?  Without using an Array, how could we store multiple Ints?
 
 <details>
 <summary>Solutions</summary>
@@ -50,13 +50,12 @@ var availableJerseyNumbers = 3..<31
 We'll need something more robust that can keep track of a *collection* of Ints.
 
 
-### 2. Initalizing an Array
+### 2. Initializing an Array
 
-Use the syntax below to intialize an Array with type annotation.
+Use the syntax below to initialize an Array with type annotation.
 
-```swift
-var bucketList: [String]
-```
+`var bucketList: [String]`
+
 This is a way to initialize an Array with a literal.
 
 ```swift
@@ -72,7 +71,7 @@ var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus
 var dwarfPlanets = ["Pluto"]
 ```
 
-We can also make an Array of repeated objects
+We can also initialize an Array with repeated objects
 ```swift
 var threeDoubles = [Double](repeating: 0.0, count: 3)
 var anotherThreeDoubles = Array(repeating: 0.0, count: 3)
@@ -84,14 +83,12 @@ var anotherThreeDoubles = Array(repeating: 0.0, count: 3)
 
 Know that we now how to make an array, how can we use it?  One of the common things we want to do is access a particular *element* of an array.
 
-We can use subscript notation for Arrays to access a particular element.
+We can use subscript notation for arrays to access a particular element.
 
 
-```swift
-let thirdRockFromTheSun = planets[2]
-```
+`let thirdRockFromTheSun = planets[2]`
 
-**Question** Why is the thirdRockFromTheSun at 2 and not 3?
+**Question** Why is the `thirdRockFromTheSun` at 2 and not 3?
 
 <details>
 <summary>Answer</summary>
@@ -106,12 +103,13 @@ Print the last planet
 
 Print the second to last planet
 
-Print the middle planet (What are different ways this can be interpreted?)
+Print the middle planet?
+ - (What are different ways this question can be interpreted?)
 
 
 ### 4. Useful Array Library Methods
 
-Other than accessing characters directly, the Swift Standard Library gives us some powerful tools for manipulating arrays
+Other than accessing characters directly, the Swift Standard Library gives us some powerful tools for manipulating arrays.
 
 Properties
 - first
@@ -142,9 +140,8 @@ Methods
 ### 5. Arrays are Value Types
 
 Arrays copy on assignment because they are value types.
-```swift
-var planetas = planets
-```
+`var planetas = planets`
+
 **Question**: How can we go about proving this?
 
 <details>
@@ -171,13 +168,14 @@ print(planetas == planets) //is now false
 
 ### 6. Array Modification Methods In Depth
 
-#### Use `.append(_:)` to add new elements to end of array
+#### Use .append(_:) to add new elements to end of array
+
 ```swift
 var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
-planets.append("Pluto") //Bringing Pluto back
+planets.append("Pluto") //Bringing Pluto back!
 ```
 
-The signature of the append method on Array is ```append(_:)```.  What is that thing that looks like a broken smiley? We'll look at it closer when we cover functions. For now it's good to just think of ```_``` as a placeholder, similar to how it was a wildcard/placeholder in ```case``` of a ```switch```statement. Here it means that append takes one argument and that we haven't explicitly renamed it.
+The signature of the append method on Array is `append(_:)`.  What is that thing that looks like a broken smiley? We'll look at it closer when we cover functions. For now it's good to just think of `_` as a placeholder, similar to how it was a wildcard/placeholder in `case` of a `switch` statement. Here it means that `append` takes one argument and that we haven't explicitly renamed it.
 
 #### Append an entire array with `+` or `+=`
 
@@ -204,7 +202,7 @@ planets.remove(at: planets.count - 1)
 
 </details>
 
-**Question** What might be a performance consideration with ```.remove(at:)```?
+**Question** What might be a performance consideration with `.remove(at:)`?
 
 <details>
 <summary><b>Solution</b></summary>
@@ -231,7 +229,7 @@ What type is gasGiants (in snippet above)?
 </details>
 
 
-An ArraySlice is basically like an Array, except it keeps the indicies from the original Array.
+An ArraySlice is basically like an Array, except it keeps the indices from the original Array.
 
 #### Use Subscripting to Read an Element
 ```swift
@@ -257,7 +255,6 @@ Just like we wanted to access each Character in a String, we often want to acces
 We have two main ways that we can iterate through an Array.
 
 ```swift
-
 let myFavoriteStrings = ["this one!", "I like this String", "poetry", "bison and camels"]
 
 //Method one: for in loop
@@ -272,15 +269,13 @@ for index in 0..<myFavoriteStrings.count {
 }
 ```
 
-Practice: Use a while loop to print out each string in ```myFavoriteStrings```
-
-
+Practice: Use a while loop to print out each string in `myFavoriteStrings`
 
 
 
 ### 9. Array Equality
 
-Arrays support the ```==``` operator.
+Arrays support the `==` operator.
 
 ```swift
 let galileanMoons = ["Io", "Europa", "Callisto", "Ganymede"]
@@ -288,12 +283,12 @@ let moonsOfJupiter = ["Io", "Europa", "Callisto", "Ganymede"]
 galileanMoons == moonsOfJupiter //true
 ```
 
-Practice: Without using the ```==``` operator to compare Arrays, write code that prints out if galilieanMoons is equal to moonsOfJupiter
+Practice: Without using the `==` operator to compare Arrays, write code that prints out if galilieanMoons is equal to moonsOfJupiter
 
 
 ### 10. Immutable Arrays
 
-Try to declare arrays as constants (using ```let```) if you know you will not change them.
+Try to declare arrays as constants (using `let`) if you know you will not change them.
 This allows the Swift compiler to make optimizations.
 
 
@@ -301,7 +296,7 @@ This allows the Swift compiler to make optimizations.
 
 Because Arrays are now our favorite type, we can even turn a String into an Array!
 
-```
+```swift
 let myStr = "This could be anything, really."
 let myStrAsArray = Array(myStr.characters)
 ```
