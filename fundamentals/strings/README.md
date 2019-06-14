@@ -6,7 +6,7 @@ To be able to use the fundamental data type, `String` by performing simple opera
 
 ### Readings
 1. [Apple Documentation - String](https://developer.apple.com/documentation/swift/string)
-1. [Stackoverflow - What is Unicode?](http://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16)
+1. [Stack Overflow - What is Unicode?](http://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16)
 1. [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](http://www.joelonsoftware.com/articles/Unicode.html)
 
 #### Further Readings
@@ -14,14 +14,14 @@ To be able to use the fundamental data type, `String` by performing simple opera
 1. [Hexadecimal Refresher](https://en.wikipedia.org/wiki/Hexadecimal)
 
 #### Vocabulary
-1. **Concatenation** - the operation of merging two (or more) strings into one string, using the `+` operator
-1. **String Interpolation** - a way to construct a new `String` value from a mix of constants, variables, literals, and expressions by including their values inside of a string literal
-1. **String Literal** - a sequence of characters surrounded by quotation marks (double quotes)
-1. **Value Type** - a type that creates a new instance (copy) when assigned to a variable or constant, or when passed to a function
-1. **Reference Type** - a type that once initialized, when assigned to a variable or constant, or when passed to a function, returns a reference to the same existing instance
+1. **Concatenation** - the operation of merging two (or more) strings into one string, using the `+` operator.
+1. **String Interpolation** - a way to construct a new `String` value from a mix of constants, variables, literals, and expressions by including their values inside of a string literal.
+1. **String Literal** - a sequence of characters surrounded by quotation marks (double quotes).
+1. **Value Type** - a type that creates a new instance (copy) when assigned to a variable or constant, or when passed to a function.
+1. **Reference Type** - a type that once initialized, when assigned to a variable or constant, or when passed to a function, returns a reference to the same existing instance.
 ---
 
-### 1. Warmup 
+### 1. Warmup
 
 What have we used Strings and Characters for so far?  What are all the things we can do with them?
 
@@ -43,7 +43,7 @@ print("The current time is \(time)")
 
 ### 2. Intro to `String`
 
->A string is a series of characters, such as "hello, world" or "albatross". Swift strings are represented by the String type. The contents of a String can be accessed in various ways, including as a collection of Character values. 
+>A string is a series of characters, such as "hello, world" or "albatross". Swift strings are represented by the String type. The contents of a String can be accessed in various ways, including as a collection of Character values.
 >~Apple
 
 Swift’s `String` and `Character` types provide a fast, Unicode-compliant way to work with text in your code.
@@ -53,9 +53,7 @@ To create an empty String value as the starting point for building a longer stri
 
 **3a. String Literals**
 
-```swift
-let someString = "Some string literal value"
-```
+`let someString = "Some string literal value"`
 
 **3b. Empty String**
 
@@ -69,9 +67,7 @@ emptyString == anotherEmptyString //true
 #### Exercise - Initialize a String
 Type the following exactly:
 
-```swift
-var walden = String(
-```
+`var walden = String(`
 
 And look for autocomplete options. Take a look at the other initializers, play with them and be ready to present and/or discuss them.
 
@@ -87,17 +83,13 @@ var listeningTo = "John Dowland"
 
 I don't want to change my favorite but I might want to change the one I'm currently listening to.
 
-```swift
-listeningTo = "Miles Davis"
-```
+`listeningTo = "Miles Davis"`
 
 ### 5. Concatenation
 
 Concatenation is a simple and common way we change strings. It might help to remember the term to know it's related to catena, chain in Latin or Italian (cadena in Spanish). When we concatenate we link two strings together.
 
-```swift
-listeningTo += ", Trumpeter"
-```
+`listeningTo += ", Trumpeter"`
 
 We can also use the *append* method to add Strings together
 
@@ -127,12 +119,12 @@ print("Watching: \(watchingMovie), gonna watch \(nextMovie)")
 <details>
 <summary>Solution</summary>
 
-```
+
 Other objects will be references and alterations made to any reference will be seen by all references.
-```
+
 </details>
 
-This distinction will become more interesting when we work with references. Don't worry about optimizing this. 
+This distinction will become more interesting when we work with references. Don't worry about optimizing this.
 
 
 ### 7. String Interpolation
@@ -152,37 +144,27 @@ print("There are \(numMovies) in the queue")
 let guessNumberOfMoviesInQueue = 4
 print("To say there are \(guessNumberOfMoviesInQueue) movies in the queue would be \(numMovies == guessNumberOfMoviesInQueue).")
 ```
+
 <details>
 <summary>Solution</summary>
-```
-To say there are 4 movies in the queue would be false.
-```
+`To say there are 4 movies in the queue would be false.`
 </details>
 ---
 
 
 ### 8. Iterating through a String
 
-The String class is a collection of Characters. You can iterate through a string to access each of its elements:
+The `String` class is a collection of `Character`s. You can iterate through a string to access each of its elements:
 
-Just like you saw iterating over a *Range* using a for loop, you can iterate over a String as well.  Does the following work?  Try it in your compiler and see.
+Just like you saw iterating over a *Range* using a for-loop, you can iterate over a String as well.  Does the following work?  Try it in your compiler and see.
 
 ```swift
 for letter in nextMovie {
-print(letter)
+  print(letter)
 }
 ```
 
-<details>
-<summary> Answer </summary>
-
-
-In Swift 4, strings are collections, which means that you can simply treat them as “a collection of characters”
-
-
-</details>
-
-Which means we get all the properties and methods of Sequence and Collection. They are protocols, google them but we will cover them later. 
+In Swift, strings are collections, which means that you can simply treat them as “a collection of characters.” This means Strings have all the properties and methods of `Sequence` and `Collection`. These are protocols, which we will cover later. You should google them to find out more!
 
 ```swift
 
@@ -192,8 +174,7 @@ nextMovie.dropFirst()
 
 String(nextMovie.reversed())
 ```
-The *method* reversed() returns a special type called a ReversedCollection<String>. So we change the type back to String so we continue modifying it. 
-
+The *method* reversed() returns a special type called a `ReversedCollection<String>`. So we change the type back to String so we continue modifying it.
 
 
 
@@ -210,54 +191,56 @@ Some useful functions
 
 ### 10. Terminator and Separator
 
-We can use the terminator and separator arguments in the print(_:terminator:separator) funciton to control our output.
+We can use the `terminator` and `separator` arguments in the print(_:terminator:separator) function to control our output.
 
-Separator signifies what multiple print statements will be separated by
+Separator signifies what multiple print statements will be separated by.
 
-Terminator signifies what will happen after the whole print statement executes
+Terminator signifies what will happen after the whole print statement executes.
 
-To print a value without a line break after it, pass an empty string as the terminator—for example:
+To print a value without a line break after it, pass an empty string as the terminator:
 
-```swift
-print(someValue, terminator: "")
-```
+`print(someValue, terminator: "")`
+
 ### 11. Intro to Unicode
 
-**Question**: Who speaks a language other than English? That uses characters other than those that are found in English? Or in the Roman alphabet?
+**Question**: Who speaks a language other than English? A language that uses characters other than those that are found in English? Or in the Roman alphabet?
 
-Unicode is an international standard created so that characters from all writing systems can be represented on the same computer and even the same document. 
+Unicode is an international standard created so that characters from all writing systems can be represented on the same computer and even in the same document.
 
-The first plane, plane 0, of the [Basic Multilingual Plane (BMP)](https://en.wikipedia.org/wiki/Plane_%28Unicode%29#Basic_Multilingual_Plane) contains characters for almost all modern languages, and a large number of symbols. 
+The first plane, plane 0, of the [Basic Multilingual Plane (BMP)](https://en.wikipedia.org/wiki/Plane_%28Unicode%29#Basic_Multilingual_Plane) contains characters for almost all modern languages, and a large number of symbols.
 
 ### 12. Unicode Scalars
 
-Every character is built up from **one or more Unicode scalars**. 
+Every character is built up from **one or more Unicode scalars**.
 
-Scalar is a term borrowed from mathematics. In Computer Science, we use it to say an instance is a single or one dimensional thing. It's used in contrast to the term vector which indicates a list or a string of things. 
+Scalar is a term borrowed from mathematics. In Computer Science, we use "scalar" to say an instance is a single or one dimensional thing. It's used in contrast to the term "vector" which indicates a list or a string of things.
 
 #### Exercise - Unicode Scalars
 
-Given that the first Unicode values are ASCII Build, some strings using Unicode escapes of the format `\u{xxxx}`. Type "man ascii" in terminal and look at Hex values or Google it. TL;DR?: A=0x41 and a=0x61.
+Given that the first Unicode values are ASCII Build, some strings are created using Unicode escapes of the format `\u{xxxx}`. Type "man ascii" in terminal and look at the Hexadecimal values for the alphabet.
+
+Example: A=0041 and a=0061.
 
 ### 13. Combining Scalars
 
-Usually there is one visible character per Unicode scalar. But in some cases they combine.
+Usually there is one visible character per Unicode scalar. But in some cases they combine. Consider the acute-accented a: `"á"`
 
-```swift
-aAcute = "\u{0061}\u{0301}"
-```
-Put in more technical terms we say each character in Swift is an *extended grapheme cluster*. These are sequences of one or more Unicode characters that combine to one human readable character. 
+`aAcute = "\u{0061}\u{0301}"`
+
+Here, we combine the Unicode scalars for `"a"` (0061) and `" ́"` (0301) to create a single character.
+
+Put in more technical terms, we say that each character in Swift is an *extended grapheme cluster*. These are sequences of one or more Unicode characters that combine to one human-readable character.
 
 ```swift
 for s in nextMovie.unicodeScalars {
-print("Scalar: \(s) (\(s.value))")
+  print("Scalar: \(s) (\(s.value))")
 }
 ```
 
 #### Exercise - Combining Scalars
 
-Do the same as the previous exercise, except try some combining scalars, like tilde, umlaut and accents.
-Use this list of [Combining Diaritical Marks](http://www.fileformat.info/info/unicode/block/combining_diacritical_marks/list.htm) as a reference guide.
+Do the same as the previous exercise, except try combining some scalars, like tilde, umlaut and accents.
+Use this list of [Combining Diacritical Marks](http://www.fileformat.info/info/unicode/block/combining_diacritical_marks/list.htm) as a reference guide.
 
 ### 14. Canonical Equivalence
 
@@ -267,7 +250,7 @@ Unicode has already-combined scalars that represent the equivalent multi-charact
 let aAcutePrecomposed = "\u{00E1}"
 (aAcute == aAcutePrecomposed)
 
-// another example 
+// another example
 let precomposed: Character = "\u{D55C}"                  // 한
 let decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // ᄒ, ᅡ, ᆫ
 ```
@@ -282,7 +265,7 @@ Do the same as the previous exercise, except find combining scalars and their pr
 
 ### More on Strings
 
-### 15. Counting Charcters
+### 15. Counting Characters
 
 ```swift
 var word = "cafe"
@@ -295,13 +278,11 @@ print("the number of characters in \(word) is \(word.count)")
 // Prints "the number of characters in café is 4"
 ```
 
-NB: The book says (correctly) that "```count``` iterates over a string's Unicode scalars to determine its length" but we should add that as it iterates over the scalars it may count more than one scalar into the same character.
+Note: `count` iterates over a string's Unicode scalars to determine its length, but we should understand that as it iterates over the scalars it may count more than one scalar into the same character.
 
 **Question**: Are e and é canonically equivalent?
 
-```
 No, because they are linguistically different.
-```
 
 Because of canonical equivalence and in the same spirit of getting what we would expect linguistically, the count is the same because the linguistic meaning of both compositions of café.
 
@@ -395,7 +376,7 @@ Let's try a few out on our own:
 
 Make a new String that goes from the first Character to the fifth Character in "abcdefghijklmnopqrstuvwxyz"
 
-Make a new String that goes from the eighteenth Character to the twentyfourth Character in "abcdefghijklmnopqrstuvwxyz"
+Make a new String that goes from the eighteenth Character to the twenty fourth Character in "abcdefghijklmnopqrstuvwxyz"
 
 Make a new String that only contains the first word in "This is a sample String")
 
@@ -403,9 +384,9 @@ Make a new String that only contains the first word in "This is a sample String"
 
 #### Exercise - Accessing & Modifying a String
 
-Now that we've seen how to access indicies, we can write a for loop that goes through the Range of characters and prints each one.
+Now that we've seen how to access indices in a String, we can write a for-loop that goes through the Range of characters and prints each one.
 
-Print out a string using a ```for``` loop, ```String.indices```.
+Print out a string using a `for` loop, `String.indices`.
 
 let iterableString = "Somewhere over the rainbow"
 
@@ -413,15 +394,13 @@ let iterableString = "Somewhere over the rainbow"
 <summary>Solution</summary>
 
 ```swift
-let iterableString = "Somewhere over the rainbow"
-
 for index in iterableString.indices {
   print(iterableString[index], terminator:"")
 }
 ```
 </details>
 
-Print out each Character in a string using a ```while``` loop.
+Print out each Character in a string using a `while` loop.
 
 <details>
 <summary>Solution</summary>
@@ -441,7 +420,7 @@ while currentIndex != iterableString.endIndex {
 
 As mentioned previously, two `String` values (or two `Character` values) are considered equal if their extended grapheme clusters are canonically equivalent.
 
-For example, `LATIN SMALL LETTER E WITH ACUTE (U+00E9)` is canonically equivalent to `LATIN SMALL LETTER E (U+0065)` followed by `COMBINING ACUTE ACCENT (U+0301)`. Both of these extended grapheme clusters are valid ways to represent the character é, and so they are considered to be canonically equivalent:
+For example, `LATIN SMALL LETTER E WITH ACUTE (U+00E9)` is canonically equivalent to `LATIN SMALL LETTER E (U+0065)` followed by `COMBINING ACUTE ACCENT (U+0301)`. Both of these extended grapheme clusters are valid ways to represent the character `"é"`, and so they are considered to be canonically equivalent:
 
 ```swift
 // "Voulez-vous un café?" using LATIN SMALL LETTER E WITH ACUTE
@@ -451,8 +430,11 @@ let eAcuteQuestion = "Voulez-vous un caf\u{E9}?"
 let combinedEAcuteQuestion = "Voulez-vous un caf\u{65}\u{301}?"
 
 if eAcuteQuestion == combinedEAcuteQuestion {
-print("These two strings are considered equal")
+  print("These two strings are considered equal")
+} else {
+  print("These two strings are NOT considered equal")
 }
+
 // Prints "These two strings are considered equal"
 ```
 
@@ -464,18 +446,18 @@ let latinCapitalLetterA: Character = "\u{41}"
 let cyrillicCapitalLetterA: Character = "\u{0410}"
 
 if latinCapitalLetterA != cyrillicCapitalLetterA {
-print("These two characters are not equivalent.")
+  print("These two characters are not equivalent.")
 }
+
 // Prints "These two characters are not equivalent."
 ```
-### 18. Multiline string literals 
+### 18. Multiline string literals
 
 Multiline string literals are enclosed in three double quotation marks (""")
 
 ```swift
 
 var rick = """
-
 
 ::,,:,,::,:;:.::;;;'','''';;:@@............``#@:@@`.............@@::,;';''';;';;:;;'''
 +:,,,::,,,::;.;::;;'' ''';;,:@#............`.+@@@``.............@;:::;;';''::';;;;;'''
@@ -561,12 +543,8 @@ var rick = """
 ;;;;:;;;';;;;::,:::::;:::,,,:::::@@`...........`'@;::::::,,.,::::,;:,;;':;;;;;;:;;;;;'
 ;;;;;;;'':;;;:,:,:,,,,::::::'#@@@@@............`@@@@@@#':,,:::,::::;::;;';;;:;;;;;;;;'
 
-
 """
 
 print(rick)
 
-
 ```
-
-
