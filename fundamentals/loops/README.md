@@ -4,7 +4,7 @@
 ### Objective
 - To understand and determine how and when to use loops
 - To understand and use `while` loops
-- To understand and us  `for-in` loops, in both the collection and range variants
+- To understand and use  `for-in` loops, in both the collection and range variants
 - To understand control flow through the use of `break` and `continue`
 
 ### Readings
@@ -35,7 +35,7 @@ Here, `range` is of type `ClosedRange<Double>` and it is not iterable.
 
 ### 2. Introduction
 
-Loops are a tool for performing the same operation over a range or a list.
+Loops are a tool for performing the same operation over a range or a list. We can say the loop "iterates" over the range/list.
 
 **Question**: What web site or app features probably have a loop behind them?
 
@@ -51,9 +51,9 @@ Loops are a tool for performing the same operation over a range or a list.
 
 ### 3. ```for-in```
 
-The first step here is to forget a little bit of what you learned about the syntax of `for` loops. All the principles, and even the inner workings are still there but we have a new (maybe simpler) way of defining loops.
+The first step here is to forget a little bit of what you might have learned about the syntax of `for` loops. All the principles, and even the inner workings are still there but we have a new (maybe simpler) way of defining loops.
 
-```for``` implicitly declares a constant iterator with the identifier you provide that will be incremented at each iteration of the loop.
+`for` implicitly declares a constant iterator with the identifier you provide. The iterator will be incremented (increased by one) at each iteration of the loop.
 
 
 ```swift
@@ -85,7 +85,7 @@ for index in 1...5 {
 
 ### 4. ```_```
 
-If you only want to iterate a number of times but don't need to refer to the index inside the loop you can replace it with the ```_``` (underscore) character.
+If you want to use a loop to iterate a certain number of times, but don't need to refer to the iterator inside the loop, you can replace it with the `_` (underscore) character.
 
 ```swift
 for _ in 0..<10 {
@@ -135,7 +135,7 @@ for name in names {
 
 ### 6. ```where``` clauses
 
-A variant of for-in uses the `where` clause that we learned as a part of the ```switch``` statement. With this, we have more control over the conditions under which the body of the loop is run.
+A variant of for-in uses the `where` clause that we learned as a part of the ```switch``` statement. With this, we have more control over the conditions that run in the body of the loop.
 
 The `where` clause provides a logical test that must be met in order to execute the loop’s code. If the condition established by the `where` clause is not met, then the loop’s code is not run.
 
@@ -145,9 +145,9 @@ for i in 1...100 where i % 10 == 5 {
 }
 ```
 
-### 7. ```while```
+### 7. `while`
 
-```while``` loops put the initialization and increment stages of the loop in the hands of the programmer. It is possible to re-write a for-in style loop with ```while```:
+`while` loops put the initialization and increment stages of the loop in the hands of the programmer. It is possible to re-write a for-in style loop with `while`:
 
 ```swift
 i = 0 // initialize
@@ -225,6 +225,7 @@ while doubleNumber > 0.01 {
     print(doubleNumber)
 }
 ```
+
 **Question**: Using 0.01 as the threshold results in 11 iterations. But setting the threshold to 0.0 doesn't loop endlessly as it should according to the laws of math. Why not?
 
 <details>
@@ -380,7 +381,7 @@ outer: for i in 1...12 {
 <details>
 <summary><b>Solution</b></summary>
 
->With the current break as-is, once we find the combination of i and j whose product is equal to `product`, we break the outerloop which would subsequently stop the nested innerloop as well. If we don't break the outerloop, the outerloop would continue to execute until it reaches the upperbound of its range. Not breaking the outerloop has the same effect as not breaking at all.
+>With the current break, once we find the combination of i and j whose product is equal to `product`, we break the outer loop which would subsequently stop the nested inner loop as well. If we don't break the outer loop, the outer loop would continue to execute until it reaches the upper bound of its range. Not breaking the outer loop has the same effect as not breaking at all.
 
 </details>
 
