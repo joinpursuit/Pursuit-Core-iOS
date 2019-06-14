@@ -2,7 +2,7 @@
 
 ## Objective
 
-To be able to use Terminal on your mac, git commands and [Github.com](https://github.com).
+To be able to use Terminal on your Mac, `git` commands and [Github.com](https://github.com).
 
 ## What is Github
 
@@ -14,7 +14,7 @@ A repository is usually used to organize a single project. Repositories can cont
 
 ## What is Git
 
-Open source version control system developed by Linus Torvalds in 2005. This is the version control system that Github uses for it's platform.
+Open-source version control system developed by Linus Torvalds in 2005. This is the version control system that Github uses for its platform.
 
 ## What is Terminal
 
@@ -24,7 +24,7 @@ Terminal comes shipped with the macOS operating system. It provides text-based o
 
 | Command | Summary |
 |:----:|:-----:|
-| cd ~/Documents | navigate to the documents directory of your mac |
+| cd ~/Documents | navigate to the Documents directory of your mac |
 | pwd | show current directory |
 | ls | list contents of current directory |
 | mkdir GitIntro | create a folder named GitIntro |
@@ -32,7 +32,8 @@ Terminal comes shipped with the macOS operating system. It provides text-based o
 | echo "Github Introduction" >> README.md | create a markdown file called README.md |
 | touch testFile.txt | also creates a file with a given extension - however won't populate it with text as above |
 | open README.md | open the README.md file for editing |
-| rm -rf fileName.txt | to delete a file from the file system |
+| rm fileName.txt | to delete a file from the file system |
+| rm -rf folderName | to delete a folder, and EVERYTHING inside it, from the file system |
 
 ## Git Commands  
 
