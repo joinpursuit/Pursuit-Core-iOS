@@ -3,15 +3,13 @@
 ### Review:
 
 
-```swift
-let myArr = [1,5,2,3,194,-32]
-```
+`let myArr = [1,5,2,3,194,-32]`
 
-1. print out all the numbers in the array
-2. print out the length of the array
-3. print out the last element in the array
-4. print out the first element in the array
-5. print out the sum of the array
+1. Print out all the numbers in the array
+1. Print out the length of the array
+1. Print out the last element in the array
+1. Print out the first element in the array
+1. Print out the sum of the array
 
 
 ### Arrays review
@@ -42,15 +40,11 @@ We are not limited to one dimension when creating arrays.  Arrays have to take o
 
 We can access whole arrays by subscripting the original array:
 
-```
-let firstArr = theMatrix[0]
-```
+`let firstArr = theMatrix[0]`
 
 We can access individual elements by subscripting the array we get from that
 
-```
-let firstElementInFirstArr = firstArr[0]
-```
+`let firstElementInFirstArr = firstArr[0]`
 
 
 We can combine both of these lines together in a single expression:
