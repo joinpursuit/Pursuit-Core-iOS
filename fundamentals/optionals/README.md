@@ -8,33 +8,33 @@
 
 ### Reading
 
-1. [Swift Language Reference, The Basics - Apple](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309) *Seek to optionals* in right hand menu.
+1. [Swift Language Reference, The Basics - Apple](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html) *Seek to optionals* in right hand menu.
 
 
 #### Vocabulary
 
-- **optional** - A Swift type that wraps another allowing it to either have a value or be nil.
+- **optional** - A Swift type that wraps another type, allowing it to safely either have a value or be nil.
 - **initialize** - To assign a variable or constant its first value.
 - **nil** - A special value meaning "no value". Only optionals can be nil in Swift.
-- **bind** - The mechanism used to test an optional for a value and assign it to a non-optional.
-- **idiomatic** - In the context of a programming language, code written in a way natural way for that language, using its conventions and features.
-- **nest v.** - To place code blocks inside of other code blocks. One could speak of any combination of conditionals, functions, closures being nested within one another.
-- **diagnostic n.** - A diagnostic is a piece of code or other mechanism whose purpose is to find the answer to a question or problem, not to accomplish functionality of the application.
+- **bind** - The mechanism that is used to test an optional for a value and then assign it to a non-optional.
+- **idiomatic** - In the context of a programming language, this is code that is written in a natural way _for that language_, using its conventions and features.
+- **nest** - To place code blocks inside of other code blocks. One could speak of any combination of conditionals, functions, closures as being nested within one another.
+- **diagnostic** - A diagnostic is a piece of code or other mechanism whose purpose is to find the answer to a question or problem, not to accomplish functionality of the application.
 - **lifecycle** - The progressive states an object or piece of software can progress through over time.
 
 ---
 
 ### 1. Introduction
 
-You use optionals in situations where a value may be absent. An optional represents two possibilities: Either there is a value, and you can unwrap the optional to access that value, or there isn’t a value at all.
+You use optionals in situations where a value _may_ be absent. An optional represents two possibilities: Either there is a value, and you can "unwrap" the optional to access that value, or there isn’t a value at all.
 
-> Optional is just a type in Swift language, nothing fancy. `Int` and `Int?` [read 'optional Int'] are two different types.  If your variable is of type `Int` you can be absolutely sure it will always have an integer value, and if your variable is of type `Int?` it will have either an `Int` value or it will have no value at all (in other words, it will be nil).
+> Optional is just a type in Swift language, nothing fancy. `Int` and `Int?` [read as 'optional Int'] are two different types.  If your variable is of type `Int` you can be absolutely sure it will always have an integer value, and if your variable is of type `Int?` it will have either an `Int` value or it will have no value at all (in other words, it will be nil).
 >
 > Think of optional as a wrapper. It’s like a gift box which wraps the value inside, and like a real-life box, optional can either contain something or be empty.
 > – Lusine Margaryan, Hackernoon
 
 
-### 2. The Case for optionals
+### 2. The Case for Optionals
 
 Thought experiment. Imagine we’re writing code that interfaces with a digital thermometer. This thermometer populates one Swift variable called `temperature`. When we first plug in the thermometer what value should we give it? What value should we set `temperature` to when we detect the physical device is broken?
 
@@ -109,7 +109,7 @@ else {
 }
 ```
 
-Note, we no longer have to initialize `temperature`. Or more accurately, `temperature` is automatically initialized to `nil`. In addition to helping us write safer code, which we'll explore later, optionals can make our code easier to read. We know that this variable, an optional, and as such may or may not have a value.
+Now we no longer have to initialize `temperature`. More accurately, `temperature` is automatically initialized to `nil`. In addition to helping us write safer code, which we'll explore later, optionals can make our code easier to read. We know that this variable, an optional, and as such may or may not have a value.
 
 #### Exercise
 
@@ -124,7 +124,7 @@ var meters: Double?
 
 </details>
 
-### 3. optionals and their wrapped type
+### 3. Optionals and their wrapped type
 
 Let's imagine a book selling app: BuyBooks. Any book for sale in the app may or may not have a dedication, reviews or a discount. We might declare the following optional variables to store this data:
 
@@ -172,7 +172,7 @@ bookTitle = alternateTitle // 💥 this doesn't
 
 ### 4. Force unwrapping
 
-In order to use the value inside an optional we must unwrap it. The simplest syntax for unwrapping is to force unwrap the optional with the `!` operator. This is also called unconditional unwrapping.
+In order to use the value inside an optional we must unwrap it. The simplest syntax for unwrapping is to _force unwrap_ the optional with the `!` operator. This is also called unconditional unwrapping.
 
 ```swift
 // String? example
@@ -190,7 +190,7 @@ if zipCode! > 11100 {
 }
 ```
 
-The simplicity of force unwrapping comes at a price, however. Our app will crash if we force unwrap an optional whose value is `nil`. By using this approach we will be throwing away the saftey feature that optionals give us: the ability to check their values for `nil`.
+The simplicity of force unwrapping comes at a price, however. Our app will crash if we force unwrap an optional whose value is `nil`. By using this approach we are throwing away the safety feature that optionals give us: the ability to check their values for `nil`.
 
 We can return to the problem above and use force unwrapping to assign the _value inside_ `alternateTitle` to `bookTitle`:
 
@@ -209,9 +209,7 @@ The app would crash.
 
 Given,
 
-```swift
-var mainCharacter: String?
-```
+`var mainCharacter: String?`
 
 1. Force unwrap `mainCharacter` and print it.
 
@@ -241,7 +239,7 @@ var mainCharacter: String?
 1. What is the difference between a compile time error and a run time error?
 	<details>
 		<summary>Answer</summary>
-		A compile time error is found while the compiler is compiling/interpreting your code. Your code is not runnable because it has a syntax error or other invalid code. A run time error, by contrast, happens when code compiles and runs but runs into a problem during execution. E.g. your program attemtps to divide by zero or access memory it doesn't own, or tries to force unwrap a nil optional.
+		A compile time error is found while the compiler is compiling/interpreting your code. Your code might not be runnable because it has a syntax error or other invalid code. A run time error, by contrast, happens when code compiles and runs, but there is a problem during execution. E.g. your program attempts to divide by zero or access memory it doesn't own, or tries to force unwrap a nil optional.
 	</details>
 
 1. Which is better, a compile time error or a run time error?
@@ -253,14 +251,14 @@ var mainCharacter: String?
 1. How do optionals protect us from run-time errors?
 	<details>
 		<summary>Answer</summary>
-		They're designed to address a set of run-time errors that arise from data having no valid value. A constant or variable might be `nil` for a variety of reasons, including initialization and failure conditions. optionals give us a mechanism for explicitly testing for `nil`.
+		They're designed to address a set of run-time errors that arise from data having no valid value. A constant or variable might be `nil` for a variety of reasons, including initialization and failure conditions. Optionals give us a mechanism for explicitly testing for `nil`.
 	</details>
 
 ### 5. Binding
 
-So far we've either force unwrapped optionals, which is dangerous and defeats the purpose of using them, or we explicitly checked for `nil` before force unwrapping, which is clunky, verbose and just not very Swifty.
+So far we've either force unwrapped optionals, which is dangerous and defeats the purpose of using them, or we've explicitly checked for `nil` before force unwrapping, which is clunky, verbose and not very Swift-y.
 
-Binding to the rescue. Binding allows us to test an optional for `nil` while setting a constant or variable to the unwrapped value, if not `nil`.
+Here comes binding to the rescue. Binding allows us to test an optional for `nil` while setting a constant or variable to the unwrapped value, if not `nil`.
 
 
 ```swift
@@ -475,7 +473,7 @@ else {
 
 ### 5b Optional Binding with while let
 
-We can use a ```while let``` pattern to continually unwrap a value, and stop when that value is nil.
+We can use a `while let` pattern to continually unwrap a value, and stop when that value is nil.
 
 ```swift
 var myArr = [4,10,3,2,19]
@@ -495,7 +493,7 @@ This isn't a super common pattern, but it can be very powerful.  Take note for w
 
 ### 6. Guard statements
 
-If we are inside of a loop, we can use a special type of binding statement called a ```guard``` statement.  A guard statement is a way of checking to see if a condition is true, and only proceeiding forwards if it is.
+If we are inside of a loop, we can use a special type of binding statement called a `guard` statement.  A guard statement is a way of checking to see if a condition is true, and only proceeding forward if it is.
 
 ```swift
 var myArr = [1,4,2,9]
@@ -515,7 +513,7 @@ guard can only appear inside of a loop (or function) and must have an else that 
 
 ### 6b. Guard let statements
 
-We can combine the idea of a guard statements and optional binding to create ```guard let``` statements.  A guard let statement can only appear anywhere that a guard statement would be able to appear.  
+We can combine the idea of a guard statements and optional binding to create `guard let` statements.  A guard let statement can only appear anywhere that a guard statement would be able to appear.  
 
 ```swift
 var tempRecordings: [Double] = [78, nil, 85, 77, nil, 80]
@@ -527,7 +525,7 @@ for temperature in tempRecordings {
 }
 ```
 
-In the code above, we are able to use the variable ```temperature``` anywhere below the guard statement that we've written.  Our compiler is happy with us because either (1) we fail to initialize our variable temperature because we found a nil value and then continue our loop or (2) we succeed at unwrapping temperature, then we can use our new variable safely in the rest of our code.
+In the code above, we are able to use the variable `temperature` anywhere below the guard statement that we've written.  Our compiler is happy with us because either (1) we fail to initialize our variable temperature because we found a nil value and then continue our loop or (2) we succeed at unwrapping temperature, then we can use our new variable safely in the rest of our code.
 
 ### 7. Implicitly Unwrapped optionals
 
@@ -541,13 +539,13 @@ print(firstName)
 
 ### 8. The nil coalescing operator
 
-Use the nil coalescing operator to test an optional and supply an alternative if `nil`.
+Use the nil coalescing operator to test an optional and supply an alternative if it turns out to be `nil`.
 
 ```swift
 let mn = middleName ?? "X."
 print(mn)
 
-// uncomment one of the following two
+// comment out one of the following two
 secondTitle = nil
 secondTitle = "Life in the Woods"
 print(secondTitle ?? "(none)")
