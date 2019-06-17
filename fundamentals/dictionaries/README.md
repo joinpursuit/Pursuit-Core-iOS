@@ -7,7 +7,7 @@
 * Contrast and compare Dictionaries with Arrays
 
 ### Readings
-1. Apple's [Swift Language Reference, Collections](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html#//apple_ref/doc/uid/TP40014097-CH8-ID105)
+1. Apple's [Swift Language Reference, Collections](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html)
 
 #### Vocabulary
 1. **dictionary** - an unordered collection of key-value associations.
@@ -21,21 +21,21 @@
 
 A dictionary is a data structure that can be thought of as an array that is indexed by any value, not just `Int`. For this reason, dictionaries are sometimes called _associative arrays_: they associate a key value with another value. It's possible to use many different types as keys but in practice, most often the key is a `String`.
 
-Dictionaries are also called hash maps. A map is created between two values by hashing a key,  generating an index from it that is used to store and look up a value. A hashing algorithm is a process that can quickly convert a non-numerical key into a hidden numerical index that is used to look up the value.
+Dictionaries are also called hash maps. A map is created between two values by "hashing" a key, generating an index from it that is used to store and look up a value. A hashing algorithm is a process that can quickly convert a non-numerical key into a hidden numerical index that is used to look up the value.
 
 #### Keys are unique
 
-Every key appears only once in a dictionary. It is unique.
+Each key appears only once in a dictionary.
 
 #### Keys are unordered
 
-Unlike an array keys are unordered
+Unlike in an array, keys in a dictionary are not ordered.
 
 #### Use cases
 
-Some motivations for indexing by key instead of number
+Some reasons for indexing by key instead of number:
 
-* Index on natural data such as a name, zip code or airport code instead of
+* Index on natural data such as a name, zip code or airport code
 * Means to discover and enforce uniqueness
 * Means to aggregate data associated with a key, e.g. a histogram
 
