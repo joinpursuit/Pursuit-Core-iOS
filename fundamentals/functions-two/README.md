@@ -10,9 +10,9 @@ Students will be able to:
 function, argument, parameter, input, output, scope
 
 # Resources
-Apple's [Swift Language Reference, Functions](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158)
+Apple's [Swift Language Reference, Functions](https://docs.swift.org/swift-book/LanguageGuide/Functions.html)
 
-[Introduction to algorithms](https://www.youtube.com/watch?v=6hfOvs8pY1k)
+[What's an algorithm?](https://www.youtube.com/watch?v=6hfOvs8pY1k)
 
 # Lecture
 
@@ -38,6 +38,7 @@ if let int = myInt {
 	//More code with int here
 }
 ```
+
 If we have multiple optionals we need to unwrap each one separately.
 
 ```swift
@@ -104,7 +105,7 @@ func doStuff(myInt: Int?, myString: String?, myDouble: Double?) {
 }
 ```
 
-Writing code this way avoids long optional chains, and can be helpful fo understanding the flow of a program.
+Writing code this way avoids long optional chains, and can be helpful for understanding the flow of a program.
 
 
 ## 2: Introduction to Algorithms
@@ -158,7 +159,7 @@ Here is a common algorithm called "FizzBuzz"
 
 </details>
 
-Your solution might look totally diffferent.  There are an infinite amount of ways to solve this problem.   Here's another solution:
+Your solution might look totally different.  There are an infinite amount of ways to solve this problem.   Here's another solution:
 
 <details>
 	<summary>Another solution</summary>
@@ -466,7 +467,7 @@ func hyperAtoi(s: String) -> Int? {
 Using a random number generator again simply to give us variation.
 
 ```swift
-func myFuncWithOptonalReturnType() -> String? {
+func myFuncWithOptionalReturnType() -> String? {
     let someNumber = arc4random() % 100
     if someNumber > 50 {
         return "someString"
@@ -475,7 +476,7 @@ func myFuncWithOptonalReturnType() -> String? {
     }
 }
 
-myFuncWithOptonalReturnType()
+myFuncWithOptionalReturnType()
 ```
 
 Let's look at a more realistic and familiar example.
@@ -686,7 +687,7 @@ func reportOnMovies(movies:[[String:Any]]) -> String? {
 
 * What are in-out parameters used for?
 * When would you need variadic parameters?
-* What's the differencd between ```guard``` and ```if```?
+* What's the difference between `guard` and `if`?
 * What's the benefit of the limited scope inside a function?
 * Compare and contrast a function's signature with its type.
 

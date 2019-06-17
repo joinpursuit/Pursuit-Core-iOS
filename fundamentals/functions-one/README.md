@@ -12,13 +12,13 @@
 1. call
 
 # Resources
-Apple's [Swift Language Reference, Functions](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158)
+Apple's [Swift Language Reference, Functions](https://docs.swift.org/swift-book/LanguageGuide/Functions.html)
 
 **Functions**
 
 Functions are self-contained chunks of code that perform a specific task. You give a function a name that identifies what it does, and this name is used to “call” the function to perform its task when needed.
 
-So far, all of the code we've seen is evaluated by starting at the top of the file and reading down.  Conditional statements allowed us to chose *not* to run certain sections, and loops allowed us to run code repeatedly.
+So far, all of the code we've seen is evaluated by starting at the top of the file and reading down.  Conditional statements allowed us to choose *not* to run certain sections, and loops allowed us to run code repeatedly.
 
 ## 1: Function Syntax in Swift
 
@@ -43,7 +43,7 @@ func doubleANumber(number x: Int) -> Int {
 }
 ```
 
-Let's take apart each piece
+Let's take each piece apart
 
 ## 2: Anatomy of a Function
 
@@ -56,9 +56,9 @@ Let's take apart each piece
 
 Thinking about the return type is a new concept, but we've seen hints of it before.  What does it mean to return something?
 
-Think of a function like a command.  We give it a series of inputs and it will execute code.  The return statement is the function's way of telling us a message after it has finished exectuing its code.
+Think of a function like a command.  We give it a series of inputs and it will execute code.  The return statement is the function's way of telling us a message after it has finished executing its code.
 
-With the example of doubleANumber(number:) the message we get back is an Int that represents the doubled number.  
+With the example of `doubleANumber(number:)` the message we get back is an `Int` that represents the doubled number.  
 
 
 ## 3: Creating our Own Functions
@@ -99,15 +99,11 @@ func addBang(to str: String) -> String {
 ## 4: Using Functions
 We've defined some useful functions above.  Let's see how we can make use of them in code.
 
-```swift
-let initialNumber = 10
-```
+`let initialNumber = 10`
 
-I want to add two to initialNumber, and then triple it.  How can I use the function I've defined above to do that?
+I want to add two to `initialNumber`, and then triple it.  How can I use the function I've defined above to do that?
 
-```swift
-addTwoAndTriple(x: initialNumber)
-```
+`addTwoAndTriple(x: initialNumber)`
 
 Great start!  When we put this into out Playground, we see the correct value of 36 appear on the right hand side.  But that number doesn't show up anywhere else.  We could print it, but then we've lost it in our code.  How can we retain the value that we want?  This question brings us a key understanding about functions:
 
@@ -117,20 +113,15 @@ Great start!  When we put this into out Playground, we see the correct value of 
 
 This line:
 
-```swift
-addTwoAndTriple(x: initialNumber)
-```
+`addTwoAndTriple(x: initialNumber)`
+
 And this line:
 
-```swift
-36
-```
+`36`
 
 Are *exactly* the same to Swift.  When you call a function, it becomes its return type.  If you want to do something with the return value, you'll need to capture it in a variable:
 
-```swift
-let modifiedInitialNumber = addTwoAndTriple(x: initialNumber)
-```
+`let modifiedInitialNumber = addTwoAndTriple(x: initialNumber)`
 
 Let's try another problem below.
 
@@ -195,7 +186,7 @@ addNumbers(numbers: [2, 4, 10, 5]) // returns 21
 
 ## 5: Function Parameters as Value Types
 
-In the solution above, we had to reset the variable myString.  How would we write the code below to solve our problem?
+In the solution above, we had to reset the variable `myString`.  How would we write the code below to solve our problem?
 
 ```swift
 var myString = "Hello there"
@@ -214,7 +205,7 @@ A String is a Value Type.  That means it gets copied when we run our function.  
 
 ## 6: Void as a Return Type
 
-We've already seen a function that doesn't return anything.  myFirstFunction() just printed out a message.  We wrote the function:
+We've already seen a function that doesn't return anything.  `myFirstFunction()` just printed out a message.  We wrote the function:
 
 ```swift
 func myFirstFunction() {
@@ -224,7 +215,7 @@ func myFirstFunction() {
 
 This is the preferred style.
 
-We also call a funciton that returns nothing as returning *Void*.  We can represent this using an empty tuple (), or the *Void* keyword.  The following two definitions are equivalent to the one above.
+We also call a function that returns nothing as returning *Void*.  We can represent this using an empty tuple (), or the *Void* keyword.  The following two definitions are equivalent to the one above.
 
 ```swift
 func myFirstFunction() -> Void {
@@ -332,8 +323,7 @@ Write a function that finds the average of an Array of Ints.
 * What's the difference between a function definition and a function call?
 * Define parameter.
 * What's the difference between a parameter and an argument?
-* What's the purpose of a function's internal parameter names?
-* Its external parameter names?
+* What's the purpose of a function's internal parameter names? Its external parameter names?
 
 ## Standards
 
