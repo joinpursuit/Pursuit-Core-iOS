@@ -6,7 +6,7 @@
 * Understand common uses of Sets
 
 ### Readings
-1. Apple's [Swift Language Reference, Collections](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html#//apple_ref/doc/uid/TP40014097-CH8-ID105)
+1. Apple's [Swift Language Reference, Collections](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html)
 1. [Set Documentation](https://developer.apple.com/documentation/swift/set)  
 
 #### Vocabulary
@@ -20,7 +20,7 @@
 
 A Set is an unordered collection of distinct instances. This definition sets it apart from an Array, which is ordered and can accommodate repeated values. For example, an array could have the content [2,2,2,2], but a set cannot.
 
-A Set has some similarities to a Dictionary, but it is also a little different. Like a dictionary, a set’s values are unordered within the collection. Similar to the requirement that a dictionary’s keys must be unique, Set does not allow repeated values. To ensure that elements are unique, Set requires that its elements conform to the protocol Hashable, as a dictionary’s keys do. However, while dictionary values are accessed via their corresponding key, a set only stores individual elements, not key-value pairs.
+A Set has some similarities to a Dictionary, but it is also a little different. Like a dictionary, a set’s values are unordered within the collection. Similar to the requirement that a dictionary’s keys must be unique, Set does not allow repeated values. To ensure that elements are unique, Set requires that its elements conform to the [Hashable protocol](https://developer.apple.com/documentation/swift/hashable), as a dictionary’s keys do. However, while dictionary values are accessed via their corresponding key, a set only stores individual elements, not key-value pairs.
 
 #### Elements are unique
 
@@ -55,16 +55,12 @@ Swift cannot use type inference on a set as it uses similar syntax to arrays. In
 
 Sets, like arrays, can be populated with a literal on declaration.
 
-```swift
-
-var accountNumbers3: Set<Int> = [103456, 103761, 103764, 102778]
-
-```
+`var accountNumbers3: Set<Int> = [103456, 103761, 103764, 102778]`
 
 Sets can also be populated from an array. This will remove any duplicates.
 
 ```swift
-let fellows = ["Ashli", "Ian", "Stephanie", "Joshua", "Kathy", "Ian"]
+let fellows = ["Liana", "Ian", "Sunni", "Adam", "Carolina", "Sunni"]
 var uniqueFellows = Set(fellows)
 ```
 
@@ -86,9 +82,8 @@ The `isEmpty` property reports if the set is empty. It is a more expressive way 
 
 Because sets are unordered, there is no way to access a specific element. You can use the .contains method to see if an element is contained in the set.
 
-```swift
-uniqueFellows.contains("Ian")  // this will return true
-```
+`uniqueFellows.contains("Ian")  // this will return true`
+
 You can loop through a set, just like arrays, to access all of its elements but you will not know the order with which they will be accessed, not like arrays.
 
 ```swift
@@ -99,17 +94,13 @@ for name in uniqueFellows {
 
 ### 4. Adding and Removing Values
 
-Add values using the .insert method on a set. This will return a tuple containing a bool to show whether the insertion was succesful (the value that you're inserting may already exist in the set) and the element you attempted to insert.
+Add values using the `.insert` method on a set. This will return a tuple containing a bool to show whether the insertion was successful (the value that you're inserting may already exist in the set) and the element you attempted to insert.
 
-```swift
-uniqueFellows.insert("Matthew")  // returns (inserted: true, memberAfterInsert: "Matthew")
-```
+`uniqueFellows.insert("Matthew")  // returns (inserted: true, memberAfterInsert: "Matthew")`
 
 To remove values from a set, use the .remove method. This returns the element you successfully remove. Notice that the return is optional, why is this?
 
-```swift
-uniqueFellows.remove("Ian")  // returns "Ian"
-```
+`uniqueFellows.remove("Ian")  // returns "Ian"`
 
 ### Fundamental Set Operations
 
@@ -130,14 +121,12 @@ print(allNumbers.sorted()) // will sort allNumbers as expected [1, 2, 3, 4, 5, 6
 
 The intersection of 2 sets contains all the elements shared between them.
 
-```swift
-let intersectingNumbers = evenNumbers.intersection(numbersFrom1to10)  // returns unsorted list
-```
+`let intersectingNumbers = evenNumbers.intersection(numbersFrom1to10)  // returns unsorted list`
 
 Disjoint is a method used on 2 sets that returns a bool determining if the 2 sets share any elements.
 
 ```swift
-let staff: Set<String> = ["Alex", "Dave", "Elle", "Alan", "Joshua"]
+let staff: Set<String> = ["Istishna", "Olimpia", "David", "Alex", "Alan"]
 let teacherAssistants: Set<String> = ["Kaniz", "Maggie", "Jermaine"]
 let teachersAssistantsStaffDisjoint = teacherAssistants.isDisjoint(with: staff)   // returns true
 let staffFellowsDisjoint = staff.isDisjoint(with: fellows)   // returns false
