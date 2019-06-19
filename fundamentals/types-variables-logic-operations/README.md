@@ -14,7 +14,7 @@
 
 
 #### Further Readings
-1. [Type Safety & Type Inference](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwigt72FnebUAhXPQD4KHbebBHUQygQILDAA&url=https%3A%2F%2Fdeveloper.apple.com%2Flibrary%2Fcontent%2Fdocumentation%2FSwift%2FConceptual%2FSwift_Programming_Language%2FTheBasics.html%23%2F%2Fapple_ref%2Fdoc%2Fuid%2FTP40014097-CH5-ID322&usg=AFQjCNHOuBMHtgkI642rFokkBTRMnNEFDg)
+1. [Type Safety & Type Inference](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html) (seek for "Type Safety and Type Inference")
 
 #### Resources
 1. [Intro to App Development with Swift - Apple](https://itunes.apple.com/us/book/intro-to-app-development-with-swift/id1118575552?mt=11)

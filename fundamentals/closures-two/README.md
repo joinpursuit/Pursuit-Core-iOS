@@ -6,7 +6,7 @@
 
 
 ### Readings
-Apple's [Swift Language Reference, Closures](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html#//apple_ref/doc/uid/TP40014097-CH11-ID94)
+[Apple's Swift Language Reference - Closures](https://docs.swift.org/swift-book/LanguageGuide/Closures.html)
 
 ### Vocabulary
 - **algorithm** - a process or set of rules to be followed in calculations or other problem- **block** - One or more lines of code, enclosed with curly braces. Sometimes used interchangeably with closure, especially in Objective-C.
@@ -20,7 +20,7 @@ Apple's [Swift Language Reference, Closures](https://developer.apple.com/library
 #### Use `filter(_:)`
 
 > Filter out strings containing "bad words".
-> First split text on the space using ```componentsSeparatedByString(_:)```,
+> First split text on the space using `componentsSeparatedByString(_:)`,
 > then use filter to cut out the words. Print out the expurgated version as a string.
 
 ```swift
@@ -31,15 +31,15 @@ let text = "What the heck we s'posed to do you darn fool. Drat that cat. Oh fudg
 
 #### Use `map(_:)`
 
-> ```filter``` produced unnatural results. Let's start over.
-> Again, split text on the space using ```componentsSeparatedByString(_:)```
+> `filter` produced unnatural results. Let's start over.
+> Again, split text on the space using `componentsSeparatedByString(_:)`
 > but this time use map to replace the words with red blooded American cuss-words
 > (or whatever words you like) and print.
 
 
 #### Use `reduce(_:)`
 
->Our map worked pretty well for us, but we've discovered a newfound hatred of vowels.  We can use reduce directly on our string ```badWords```.  Let's make a new string using reduce that takes out all the vowels.
+>Our map worked pretty well for us, but we've discovered a newfound hatred of vowels.  We can use reduce directly on our string `badWords`.  Let's make a new string using reduce that takes out all the vowels.
 
 ### Closures as return types
 
@@ -85,7 +85,7 @@ makeDoubler()(4)  // has the value of 8
 2. A closure is captured in `doublersDouble` and is executable, so we call it.
 3. We don't need to capture the result. Since `makeDoubler()` evaluates to a callable closure we can call it with `()`.
 
-The `makeDoubler()` example is designed to be very simple. Let's write a function `makeMultiplier(factor:)` that is more complex and dynamic. We will pass it the number to muliply by. But, as with `makeDoubler()` it will not multiply directly. Instead, it will return a function that multiplies by the value passed in, named `factor`. The returned function will have the factor baked into it. Also, like `makeDoubler()` we'll need to pass the second operand to the functions `makeMultiplier(factor:)` returns.
+The `makeDoubler()` example is designed to be very simple. Let's write a function `makeMultiplier(factor:)` that is more complex and dynamic. We will pass it the number to multiply by. But, as with `makeDoubler()` it will not multiply directly. Instead, it will return a function that multiplies by the value passed in, named `factor`. The returned function will have the factor baked into it. Also, like `makeDoubler()` we'll need to pass the second operand to the functions `makeMultiplier(factor:)` returns.
 
 > Note: I'm using function and closure interchangeably here. I could have just as easily said the functions returned closures. But it feels a little more natural to speak of functions when the closure has a name by which it is called.
 
@@ -106,8 +106,8 @@ fiveTimes(6) // 5.  Call the "times 5" function - returns 30
 
 1. We call `makeMultiplier(factor:)` with an argument of 2 and it returns a function that will multiply _its_ argument by 2.
 2. Same as the previous, except the returned function will multiply by 5.
-3. Call `doublerFromAnotherFunction(_:)`, passing 12 to complete the mathematical calculation 2 * 12. The "2 *" part is baked into `doublerFromAnotherFunction(_:)` and the 12 is passed during the call.
-4. And same for `fiveTimes(_:)`. Here we're using it to calulate 5 * 3.
+3. Call `doublerFromAnotherFunction(_:)`, passing 12 to complete the mathematical calculation 2 * 12. The "2 \*" part is baked into `doublerFromAnotherFunction(_:)` and the 12 is passed during the call.
+4. And same for `fiveTimes(_:)`. Here we're using it to calculate 5 * 3.
 5. We can call `fiveTimes(_:)` as many times as we like, passing a new value to multiply by each time.
 
 ### Capturing values
@@ -168,11 +168,11 @@ let inc4 = inc3         // 7. inc4 is a *reference to* inc3: they point to the s
 inc4()                  // 8. runningTotal = 20
 ```
 
-First of all, `incrementer` is a nested function that we'll return. This could have been written as an unnamed closure as we did with `makeDoubler()` and `makeMultiplier(factor:)`. We'll come back to that. When we assign a constant to the returned function and call it, it will update the `runningTotal` variable that it captured from its enclosing function. By instantiating new copies of the function as well as assigning new references to exising ones we can illustrate how closures are reference types.
+First of all, `incrementer` is a nested function that we'll return. This could have been written as an unnamed closure as we did with `makeDoubler()` and `makeMultiplier(factor:)`. We'll come back to that. When we assign a constant to the returned function and call it, it will update the `runningTotal` variable that it captured from its enclosing function. By instantiating new copies of the function as well as assigning new references to existing ones we can illustrate how closures are reference types.
 
 Each unique instance of the function has its own captured `runningTotal` which is incremented on each call (comments numbered 2, 3, 4, 6, and 8) but additional references to an instance of the function (7) share the same memory and so increment the same instance (8).
 
-In this example I chose to create a nested function `incrementor()` simply because it might be clearer to the student or another developer what I'm indending to do. The following is identical in terms of functionality.
+In this example I chose to create a nested function `incrementor()` simply because it might be clearer to the student or another developer what I'm intending to do. The following is identical in terms of functionality.
 
 ```swift
 func makeIncrementer(forIncrement amount: Int) -> () -> Int {

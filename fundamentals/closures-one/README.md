@@ -7,7 +7,8 @@
 
 ### Vocabulary
 
-- **algorithm** - a process or set of rules to be followed in calculations or other problem- **block** - One or more lines of code, enclosed with curly braces. Sometimes used interchangeably with closure, especially in Objective-C.
+- **algorithm** - a process or set of rules to be followed in calculations or other problem
+- **block** - One or more lines of code, enclosed with curly braces. Sometimes used interchangeably with closure, especially in Objective-C.
 - **closure** - An executable block of code. Like a function, it can take input parameters and return a value. A function is actually a special case of a closure.
 -solving operations, especially by a computer.
 - **higher-order function** - A function that takes a closure as one or more of its arguments and/or returns a closure.
@@ -16,7 +17,7 @@
 
 ### Readings
 
-1. Apple's [Swift Language Reference, Closures](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html#//apple_ref/doc/uid/TP40014097-CH11-ID94)
+1. [Apple Swift Language Reference - Closures](https://docs.swift.org/swift-book/LanguageGuide/Closures.html)
 
 ### Closures
 
@@ -39,7 +40,6 @@ Swift’s closure expressions have a clean, clear style, with optimizations that
 - Shorthand argument names
 - Trailing closure syntax
 
-> Adapted from [The Swift Programming Language - Apple](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html#//apple_ref/doc/uid/TP40014097-CH11-ID94)
 
 ### Why closures?
 
@@ -74,7 +74,7 @@ let add = { (a: Int, b: Int) -> Int in
 add(4, 9)
 ```
 
-Note how Swift is inferring the type of `add` from the closure just as it would for any type or literal. That type is `(Int, Int) -> Int`, read, "a closure of Int, Int returning Int".
+Note how Swift is inferring the type of `add` from the closure just as it would for any type or literal. That type is `(Int, Int) -> Int`, which can be read as, "a closure of Int, Int returning Int".
 
 If the type is annotated in the constant or variable the inference can happen on the right hand of the assignment.
 
@@ -229,7 +229,7 @@ someInts.map { (a) -> String in
 ### Filter
 
 Filter's closure parameter takes an element of the array and returns a Bool that
-determines whether that value is to be included in the ouput array.
+determines whether that value is to be included in the output array.
 
 ```swift
 someInts.filter { (a) -> Bool in
@@ -251,10 +251,10 @@ let numberSum = numbers.reduce(0, { x, y in
 
 ### Exercises
 
-### Use ```filter(_:)```
+### Use `filter(_:)`
 
 > Filter out strings containing "bad words".
-> First split text on the space using ```componentsSeparatedByString(_:)```,
+> First split text on the space using `componentsSeparatedByString(_:)`,
 > then use filter to cut out the words. Print out the expurgated version as a string.
 
 ```swift
@@ -263,16 +263,16 @@ let text = "What the heck we s'posed to do you darn fool. Drat that cat. Oh fudg
 // output: What the we s'posed to do you fool. that cat. Oh.
 ```
 
-### Use ```map(_:)```
+### Use `map(_:)`
 
-> ```filter``` produced unnatural results. Let's start over.
-> Again, split text on the space using ```componentsSeparatedByString(_:)```
+> `filter` produced unnatural results. Let's start over.
+> Again, split text on the space using `componentsSeparatedByString(_:)`
 > but this time use map to replace the words with red blooded American cuss-words
 > (or whatever words you like) and print.
 
 
-### Use ```reduce(_:)```
->Our map worked pretty well for us, but we've discovered a newfound hatred of vowels.  We can use reduce directly on our string ```badWords```.  Let's make a new string using reduce that takes out all the vowels.
+### Use `reduce(_:)`
+>Our map worked pretty well for us, but we've discovered a newfound hatred of vowels.  We can use reduce directly on our string `badWords`.  Let's make a new string using reduce that takes out all the vowels.
 
 
 ### Standards
