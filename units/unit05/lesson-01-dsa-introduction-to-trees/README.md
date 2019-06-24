@@ -13,12 +13,11 @@ Let's implement the following hierarchical tree structure in Swift
 
 Basic TreeNode class, doen't have the ability to add children nodes yet, let's implement this next. 
 ```swift 
-class TreeNode<T> {
+class TreeNode<T: Equatable> {
   var value: T
-  var parent: TreeNode?
   var children = [TreeNode]()
-  
-  init(value: T) {
+  var parent: TreeNode?
+  init(_ value: T) {
     self.value = value
   }
 }
@@ -26,133 +25,152 @@ class TreeNode<T> {
 
 Here we have added a addChild() method on the TreeNode class to have the ability to add children to the tree. 
 ```swift 
-class TreeNode<T> {
+class TreeNode<T: Equatable> {
   var value: T
-  var parent: TreeNode?
   var children = [TreeNode]()
-  
-  init(value: T) {
+  var parent: TreeNode?
+  init(_ value: T) {
     self.value = value
   }
   
-  public func addChild(node: TreeNode) {
-    children.append(node)
-    node.parent = self
+  // adding a child node
+  public func addChild(_ child: TreeNode) {
+    children.append(child)
+    child.parent = self
   }
 }
 ```
 
-We can now add children to our animal created Tree, however when we print our animal Tree the print console does not give us a human readeable print statement as seen below. We will have to conform to CustomStringConvertible and provide implement the **description** variable to return a more verbose string representing our current Tree structure.
+**Queue is used to implement level-Order traversal** 
 ```swift
-class TreeNode<T> {
-  var value: T
-  var parent: TreeNode?
-  var children = [TreeNode]()
-  
-  init(value: T) {
-    self.value = value
+public struct Queue<T> {
+  private var items = [T]()
+  public var isEmpty: Bool {
+    return items.isEmpty
   }
-  
-  public func addChild(node: TreeNode) {
-    children.append(node)
-    node.parent = self
+  public var peek: T? {
+    return items.first
   }
-}
-
-let tree = TreeNode<String>(value: "animal")
-let mammalNode = TreeNode<String>(value: "mammal")
-let reptileNode = TreeNode<String>(value: "reptile")
-tree.children = [mammalNode, reptileNode]
-print(tree) // __lldb_expr_23.TreeNode<Swift.String>
-```
-
-After conforming to CustomStringConvertible we can now get a more readable print statement representing the current animal Tree.
-```swift 
-class TreeNode<T>: CustomStringConvertible {
-  var value: T
-  var parent: TreeNode?
-  var children = [TreeNode]()
-  
-  var description: String {
-    guard !children.isEmpty else {
-      return "\(value)"
-    }
-    return "\(value)" + "{" + "\(children.map{ $0.description }.joined(separator: ", ") )" + "}"
+  @discardableResult
+  mutating public func enqueue(_ element: T) -> Bool {
+    items.append(element)
+    return true
   }
-  
-  init(value: T) {
-    self.value = value
-  }
-  
-  public func addChild(node: TreeNode) {
-    children.append(node)
-    node.parent = self
+  mutating public func dequeue() -> T? {
+    guard items.count > 0 else { return nil }
+    return items.removeFirst()
   }
 }
-
-let tree = TreeNode<String>(value: "animal")
-let mammalNode = TreeNode<String>(value: "mammal")
-let reptileNode = TreeNode<String>(value: "reptile")
-tree.children = [mammalNode, reptileNode]
-print(tree) // animal{mammal, reptile}
 ```
 
-**Full Tree Implemenation including Search**   
+**Full Tree Implemenation**   
 ```swift 
-class TreeNode<T: Equatable>: CustomStringConvertible {
+class TreeNode<T: Equatable> {
   var value: T
-  var parent: TreeNode?
   var children = [TreeNode]()
-  
-  var description: String {
-    guard !children.isEmpty else {
-      return "\(value)"
-    }
-    return "\(value)" + "{" + "\(children.map{ $0.description }.joined(separator: ", ") )" + "}"
-  }
-  
-  init(value: T) {
+  var parent: TreeNode?
+  init(_ value: T) {
     self.value = value
   }
   
-  public func addChild(node: TreeNode) {
-    children.append(node)
-    node.parent = self
+  // adding a child node
+  public func addChild(_ child: TreeNode) {
+    children.append(child)
+    child.parent = self
   }
   
-  public func search(value: T) -> TreeNode? {
-    if self.value == value {
-      return self
+  // traversal - the way in which we visit each node in the tree
+  
+  // level-order traversal - walking the tree in order of tree level
+  // A Queue is used to keep track of the child nodes to be visited in order of level
+  // We use a closure to capture the value of the visited node
+  public func levelOrderTraversal(visit: (TreeNode) -> Void) {
+    // We first visit the parent node
+    visit(self)
+    // We create an empty Queue to hold the children nodes of the parent
+    var queue = Queue<TreeNode>()
+    // We visit each child node of the parent and store it in the Queue
+    children.forEach { queue.enqueue($0) }
+    // Each child is dequeueed and visited in the order in which they were enqueued using a while loop
+    while let node = queue.dequeue() {
+      // node is visited first
+      visit(node)
+      // child nodes are enqueued to be visited in order
+      node.children.forEach { queue.enqueue($0) }
     }
-    for child in children {
-      if let foundNode = child.search(value: value) {
-        return foundNode
+  }
+  
+  // depth-order traversal - here we visit the parent node then it's children, then the child's children recursively
+  // we use a closure to capture the visited node
+  public func depthOrderTraversal(visit: (TreeNode) -> Void) {
+    visit(self)
+    children.forEach { $0.depthOrderTraversal(visit: visit) }
+  }
+  
+  // search
+  // here we are using levelOrderTraversal() to search for a given value
+  public func search(_ value: T) -> Bool {
+    var isFound = false
+    levelOrderTraversal { (node) in
+      if node.value == value {
+        isFound = true
       }
     }
-    return nil
+    return isFound
   }
 }
 
-let tree = TreeNode<String>(value: "animal")
+// testing the tree using a hierarchical representation of beverages
+let beverages = TreeNode<String>("beverages")
+let hot = TreeNode<String>("hot")
+let cold = TreeNode<String>("cold")
+beverages.addChild(hot)
+beverages.addChild(cold)
 
-let mammalNode = TreeNode<String>(value: "mammal")
-let reptileNode = TreeNode<String>(value: "reptile")
+let tea = TreeNode<String>("tea")
+let coffee = TreeNode<String>("coffee")
+let chocolate = TreeNode<String>("chocolate")
+hot.addChild(tea)
+hot.addChild(coffee)
+hot.addChild(chocolate)
 
-let giraffeNode = TreeNode<String>(value: "giraffe")
-let tigerNode = TreeNode<String>(value: "tiger")
+let black = TreeNode<String>("black")
+let green = TreeNode<String>("green")
+let chai = TreeNode<String>("chai")
+tea.addChild(black)
+tea.addChild(green)
+tea.addChild(chai)
 
-let snakeNode = TreeNode<String>(value: "snake")
-let turtleNode = TreeNode<String>(value: "turtle")
+let soda = TreeNode<String>("soda")
+let milk = TreeNode<String>("milk")
+cold.addChild(soda)
+cold.addChild(milk)
 
-tree.children = [mammalNode, reptileNode]
-mammalNode.children = [giraffeNode, tigerNode]
-reptileNode.children = [snakeNode, turtleNode]
+let gingerAle = TreeNode<String>("gingerAle")
+let coke = TreeNode<String>("coke")
+soda.addChild(gingerAle)
+soda.addChild(coke)
 
-print(tree) // animal{mammal{giraffe, tiger}, reptile{snake, turtle}}
+
+// level order traversal
+print("level-order traversal: ")
+beverages.levelOrderTraversal { (node) in
+  print(node.value, terminator: " ")
+}
+// beverages hot cold tea coffee chocolate soda milk black green chai gingerAle coke
+
+print("\n")
+
+// depth order traversal
+print("depth-order traversal: ")
+beverages.depthOrderTraversal { (node) in
+  print(node.value, terminator: " ")
+}
+// beverages hot tea black green chai coffee chocolate cold soda gingerAle coke milk
 ```
 
-The **height** of the Animal tree above is 2.     
-The **depth** of the reptile node is 1.   
+The **height** of the Beverages tree is 3.     
+The **depth** of the tea node is 2.   
 
 
 ## Readings 
