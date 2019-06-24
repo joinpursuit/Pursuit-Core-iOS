@@ -167,6 +167,16 @@ beverages.depthOrderTraversal { (node) in
   print(node.value, terminator: " ")
 }
 // beverages hot tea black green chai coffee chocolate cold soda gingerAle coke milk
+
+print("\n\nsearching....")
+
+// search
+if beverages.search("coke") {
+  print("your beverage is coming right up")
+} else {
+  print("sorry your beverage is not on the menu")
+}
+
 ```
 
 ## Readings 
