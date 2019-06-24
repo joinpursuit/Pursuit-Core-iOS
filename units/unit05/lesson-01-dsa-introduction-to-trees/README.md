@@ -9,7 +9,7 @@ A tree data structure can be defined recursively as a collection of nodes (start
 
 Let's implement the following hierarchical tree structure in Swift 
 
-![Animal Hierarchy](https://www.codeproject.com/KB/cs/42863/ContraCo_thumb_17_.gif)   
+![Beverages Hierarchy](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit05/lesson-01-dsa-introduction-to-trees/Images/beverages-tree.png)
 
 Basic TreeNode class, doen't have the ability to add children nodes yet, let's implement this next. 
 ```swift 
