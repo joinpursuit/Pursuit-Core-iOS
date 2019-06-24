@@ -11,6 +11,9 @@ Let's implement the following hierarchical tree structure in Swift
 
 ![Beverages Hierarchy](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit05/lesson-01-dsa-introduction-to-trees/Images/beverages-tree.png)
 
+the **height** of the tree above is 3. 
+The **depth** of coffee node is 2. 
+
 Basic TreeNode class, doen't have the ability to add children nodes yet, let's implement this next. 
 ```swift 
 class TreeNode<T: Equatable> {
