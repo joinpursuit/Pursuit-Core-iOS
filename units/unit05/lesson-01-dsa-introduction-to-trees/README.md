@@ -169,10 +169,6 @@ beverages.depthOrderTraversal { (node) in
 // beverages hot tea black green chai coffee chocolate cold soda gingerAle coke milk
 ```
 
-The **height** of the Beverages tree is 3.     
-The **depth** of the tea node is 2.   
-
-
 ## Readings 
 [Tree - Data Structure - Wikipedia](https://en.wikipedia.org/wiki/Tree_(data_structure))   
 [Trees - Ray Wenderlich](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Tree)    
