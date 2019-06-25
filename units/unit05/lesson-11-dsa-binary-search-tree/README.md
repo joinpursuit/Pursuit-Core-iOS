@@ -38,79 +38,164 @@ There are three ways to traverse a binary tree:
 ## Implementation 
 
 ```swift 
-// Binary Search Tree
-
 /*
- - left child's value is less than parent's (root) value
- - right child's value is more than parent's (root) value
- - holds the principles of a binary tree where any child at most has 2 children
+ Binary Search Tree:
+ - node to the left is less than root
+ - node to the right is more than root
+ - searching O(log n)
+ 
+ Objectives:
+ - implement a binary search tree
+ - implement insert
+ - implement search
+ - implement remove
+ 
+ 
+                  10
+                /    \
+              2      12
+            /       /  \
+           0       11  15
 */
 
-
-// Our Binary Search Tree example
-/*
- 
-          8
-        /  \
-      3     10
-    /  \      \
-   1    6      14
-      /   \    /
-    4      7  13
- 
-*/
-
-// Implementation
-
-// Generic Binary Search Tree
-class TreeNode<T: Comparable> {
+class BinaryNode<T: Equatable>: Equatable {
   var value: T
-  var leftChild: TreeNode<T>?
-  var rightChild: TreeNode<T>?
-  
-  init(value: T, leftChild: TreeNode<T>?, rightChild: TreeNode<T>?) {
+  var leftChild: BinaryNode?
+  var rightChild: BinaryNode?
+  init(_ value: T) {
     self.value = value
-    self.leftChild = leftChild
-    self.rightChild = rightChild
   }
+  public static func ==(lhs: BinaryNode, rhs: BinaryNode) -> Bool {
+    return lhs.value == rhs.value &&
+      lhs.leftChild == rhs.leftChild &&
+      lhs.rightChild == rhs.rightChild
+  }
+  // in-order
+  public func inOrderTraversal(visit:(BinaryNode) -> Void) {
+    leftChild?.inOrderTraversal(visit: visit)
+    visit(self)
+    rightChild?.inOrderTraversal(visit: visit)
+  }
+  
+  // pre-order
+  
+  // post-order
 }
 
-// Construct the tree illustrated above, (bottom up)
-
-// left side
-let fourNode = TreeNode(value: 4, leftChild: nil, rightChild: nil)
-let sevenNode = TreeNode(value: 7, leftChild: nil, rightChild: nil)
-let sixNode = TreeNode(value: 6, leftChild: fourNode, rightChild: sevenNode)
-let oneNoce = TreeNode(value: 1, leftChild: nil, rightChild: nil)
-let threeNode = TreeNode(value: 3, leftChild: oneNoce, rightChild: sixNode)
-
-
-// right side
-let thirteenNode = TreeNode(value: 13, leftChild: nil, rightChild: nil)
-let fourteenNode = TreeNode(value: 14, leftChild: thirteenNode, rightChild: nil)
-let tenNode = TreeNode(value: 10, leftChild: nil, rightChild: fourteenNode)
-
-// parent (root) node
-let parentNode = TreeNode(value: 8, leftChild: threeNode, rightChild: tenNode)
-
-// searching the tree
-func searchBinaryTree<T: Comparable>(searchValue: T, treeNode: TreeNode<T>?) -> Bool {
-  if treeNode?.value == searchValue {
-    return true
+public struct BinarySearchTree<T: Comparable> {
+  private var root: BinaryNode<T>?
+  
+  public func printInOrderTraversal() {
+    root?.inOrderTraversal(visit: { (node) in
+      print(node.value)
+    })
   }
-  if treeNode == nil {
+  
+  // insert
+  public mutating func insert(_ value: T) {
+    root = insert(from: root, value: value)
+  }
+  private func insert(from node: BinaryNode<T>?, value: T) -> BinaryNode<T> {
+    // first check if the tree is empty
+    guard let node = node else {
+      return BinaryNode(value) // if not create a new node and return it
+    }
+    // tree exist
+    if value < node.value {
+      // recursively call insert() as long as value is less than current node's value
+      node.leftChild = insert(from: node.leftChild, value: value)
+    } else {
+      // recursively call insert() as long as value is more than current node's value
+      node.rightChild = insert(from: node.rightChild, value: value)
+    }
+    return node
+  }
+  
+  // search
+  public func search(_ value: T) -> Bool {
+    var current = root
+    while let node = current {
+      if value == node.value {
+        return true
+      }
+      else if value < node.value {
+        current = node.leftChild
+      } else {
+        current = node.rightChild
+      }
+    }
     return false
   }
-  else {
-    if searchValue < treeNode!.value { // look at the left child
-      return searchBinaryTree(searchValue: searchValue, treeNode: treeNode?.leftChild)
-    } else { // look at the right child
-      return searchBinaryTree(searchValue: searchValue, treeNode: treeNode?.rightChild)
+  
+  // remove
+  public mutating func remove(_ value: T) {
+    root = remove(from: root, value: value)
+  }
+  private func remove(from node: BinaryNode<T>?, value: T) -> BinaryNode<T>? {
+    // is tree empty
+    guard let node = node else { return nil }
+    
+    // did we find the node to be removed
+    if value == node.value {
+      if node.leftChild == nil && node.rightChild == nil { // node has no children, just simply remove, return nil
+        return nil
+      }
+      if node.leftChild == nil { // only has right child
+        return node.rightChild
+      }
+      if node.rightChild == nil { // only has left child
+        return node.leftChild
+      }
+      /*
+       e.g below if we're removing 12,
+       1. 14 will be swapped in 12's place
+       2. we need recursively search and remove 14
+                            10
+                          /   \
+                         2    12
+                        /    /  \
+                       0    11   15
+                                /
+                              14
+      */
+      // here the node has a left and right child
+      // we first replace the node's value with the min value from the right subtree
+      node.value = node.rightChild!.min.value
+      // then we recurvisely find and remove the swapped value from above
+      node.rightChild = remove(from: node.rightChild, value: node.value)
+    } else if value < node.value {
+      node.leftChild = remove(from: node.leftChild, value: value)
+    } else {
+      node.rightChild = remove(from: node.rightChild, value: value)
     }
+    return node
   }
 }
 
-// test
-searchBinaryTree(searchValue: 14, treeNode: parentNode) // true
-searchBinaryTree(searchValue: 9, treeNode: parentNode) // false
+// extensive on BinaryNode recursivley finds the min value of a subtree
+extension BinaryNode {
+  var min: BinaryNode {
+    return leftChild?.min ?? self
+  }
+}
+
+var tree = BinarySearchTree<Int>()
+tree.insert(10)
+tree.insert(2)
+tree.insert(12)
+tree.insert(0)
+tree.insert(11)
+tree.insert(15)
+
+tree.printInOrderTraversal() // 0, 2, 10, 11, 12, 15
+tree.search(11) // true
+tree.search(1) // false
+tree.insert(14)
+
+print()
+tree.printInOrderTraversal() // 0, 2, 10, 11, 12, 14, 15
+tree.remove(12)
+
+print()
+tree.printInOrderTraversal() // 0, 2, 10, 11, 14, 15
 ```
