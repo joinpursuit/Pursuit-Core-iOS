@@ -26,3 +26,8 @@
 1. [DSA: Functions, Closures, and Enums](https://github.com/joinpursuit/DSA-Curriculum/blob/master/functions_closures_enums/ios/README.md)
 1. [Properties](./properties/README.md)
 1. [Initialization](./initialization/README.md)
+
+## Lecture Playgrounds
+
+1. [Types Lesson 2](./lecture-playgrounds/LecturePlayground626.playground)
+1. [Control Flow](./lecture-playgrounds/LecturePlayground627.playground)

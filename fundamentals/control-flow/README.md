@@ -13,8 +13,8 @@
 
 ### Reading
 
-1. [Control Flow - Swift Language Reference](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#//apple_ref/doc/uid/TP40014097-CH9-ID120)
-1. [Tuples - Swift Language Reference](https://docs.swift.org/swift-book/ReferenceManual/Types.html#//apple_ref/doc/uid/TP40014097-CH31-ID448]) (Scroll down to "Tuples" section).
+1. [Control Flow - Swift Language Reference](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html)
+1. [Tuples - Swift Language Reference](https://docs.swift.org/swift-book/ReferenceManual/Types.html) (Seek for "Tuples" section).
 1. [Tuples and Enums - We ❤ Swift](https://www.weheartswift.com/tuples-enums/)
 
 
@@ -370,7 +370,7 @@ if temperatureInFahrenheit <= 32 {
 
 ### 12. Tuples
 
-The ```switch``` statement also allows for matching on tuples. A tuple is a grouping of a set of related variables into one. Let's look at Tuples on their own before we use them within a `switch`.
+The `switch` statement also allows for matching on tuples. A tuple is a grouping of a set of related variables into one. Let's look at Tuples on their own before we use them within a `switch`.
 
 Tuples get their name from the sequence of multiples we're familiar with, starting with single, double, triple, quadruple, quintuple, etc. From this mathematicians coined the term n-tuple, and it's shortened to tuple. Because many common examples of tuples happen to have two elements, and how the term sounds like "duplicate", and "two", it's easy to think tuples denotes two parts. But this is not the case. There can be many items in a tuple.
 
