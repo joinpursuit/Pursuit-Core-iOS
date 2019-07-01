@@ -30,4 +30,6 @@
 ## Lecture Playgrounds
 
 1. [Types Lesson 2](./lecture-playgrounds/LecturePlayground626.playground)
-1. [Control Flow](./lecture-playgrounds/LecturePlayground627.playground)
+1. [Control Flow Lesson](./lecture-playgrounds/LecturePlayground627.playground)
+1. [Loops Lesson](./lecture-playgrounds/LecturePlayground628.playground)
+1. [Strings Lesson 1](./lecture-playgrounds/LecturePlayground71.playground)
