@@ -33,6 +33,6 @@
 1. [Control Flow Lesson](./lecture-playgrounds/LecturePlayground627.playground)
 1. [Loops Lesson](./lecture-playgrounds/LecturePlayground628.playground)
 1. [Strings Lesson 1](./lecture-playgrounds/LecturePlayground71.playground)
-  1. [Video](https://youtu.be/a_3LjODW3t8)
+  * [Video](https://youtu.be/a_3LjODW3t8)
 1. [Strings Lesson 2](./lecture-playgrounds/LecturePlayground72am.playground)
 1. [Arrays Lesson 1](./lecture-playgrounds/LecturePlayground72pm.playground)
