@@ -33,6 +33,8 @@
 1. [Control Flow Lesson - June 27](./lecture-playgrounds/LecturePlayground627.playground)
 1. [Loops Lesson - June 28](./lecture-playgrounds/LecturePlayground628.playground)
 1. [Strings Lesson 1 - July 1](./lecture-playgrounds/LecturePlayground71.playground)
-  - [Strings 1 Lecture Video](https://youtu.be/a_3LjODW3t8)
 1. [Strings Lesson 2 - July 2 AM](./lecture-playgrounds/LecturePlayground72am.playground)
 1. [Arrays Lesson 1 - July 2 PM](./lecture-playgrounds/LecturePlayground72pm.playground)
+
+## Lecture Videos
+1. [Strings 1 Lecture Video - July 1](https://youtu.be/a_3LjODW3t8)
