@@ -1,4 +1,4 @@
-# Controls and View Controller Lifecyle
+# Controls and View Controller Lifecycle
 
 ### Readings/References
 
