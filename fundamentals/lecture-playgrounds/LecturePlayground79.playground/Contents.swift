@@ -82,3 +82,48 @@ var bb = aa.truncatingRemainder(dividingBy: 1.0)
 print(bb)
 
 
+
+//getting a decimal from a Double? what!!!
+var deposits: [String: [Double]] = [
+    "Williams" : [300.65, 270.45, 24.70, 52.00, 99.99],
+    "Cooper" : [200.56, 55.00, 600.78, 305.15, 410.76, 35.00],
+    "Davies" : [400.98, 56.98, 300.00],
+    "Clark" : [555.23, 45.67, 99.95, 80.76, 56.99, 46.50, 265.70],
+    "Johnson" : [12.56, 300.00, 640.50, 255.60, 26.88]
+]
+
+var aa = 300.65
+var bb = aa.truncatingRemainder(dividingBy: 1.0)
+print(bb)
+
+//what is the data structure below?
+var people: [[String:String]] = [
+    [
+        "firstName": "Calvin",
+        "lastName": "Newton"
+    ],
+    [
+        "firstName": "Garry",
+        "lastName": "Mckenzie"
+    ],
+    [
+        "firstName": "Leah",
+        "lastName": "Rivera"
+    ],
+    [
+        "firstName": "Sonja",
+        "lastName": "Moreno"
+    ],
+    [
+        "firstName": "Noel",
+        "lastName": "Bowen"
+    ]
+]
+
+print(people[1]["lastName"])
+
+for person in people {
+    for (k,v) in person {
+//        ???? do something??? what's it doing???
+    }
+}

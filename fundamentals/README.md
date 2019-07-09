@@ -36,8 +36,8 @@
 1. [Strings Lesson 2 (July 2 AM)](./lecture-playgrounds/LecturePlayground72am.playground)
 1. [Arrays Lesson 1 (July 2 PM)](./lecture-playgrounds/LecturePlayground72pm.playground)
 1. [Arrays Lesson 2 (July 3)](./lecture-playgrounds/LecturePlayground73.playground)
-1. [Optionals (July 8 - Guest Lecture!)](./lecture-playgrounds/LecturePlayground72pm.playground)
-1. [Dictionaries Lesson (July 9)](./lecture-playgrounds/LectureNotes78.swift)
+1. [Optionals (July 8 - Guest Lecture!)](./lecture-playgrounds/LectureNotes78.swift)
+1. [Dictionaries Lesson (July 9)](./lecture-playgrounds/LecturePlayground79.playground)
 
 ## Lecture Videos
 1. [Strings 1 Lecture Video (July 1)](https://youtu.be/a_3LjODW3t8)
