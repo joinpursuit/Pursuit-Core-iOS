@@ -195,9 +195,6 @@ let words = ["One", "two", "Buckle", "my", "shoe"]
 1. Sort `words` by the length of each element.
 1. Sort `numbers` ascending, even numbers first, odd numbers second. Output will be [2, 32, 66, 88, 902, 21, 27, 33, 43, 73, 905].
 
--
--
-
 ### Map, Filter and Reduce
 
 #### Map
