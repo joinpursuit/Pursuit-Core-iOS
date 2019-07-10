@@ -123,7 +123,7 @@ The intersection of 2 sets contains all the elements shared between them.
 
 `let intersectingNumbers = evenNumbers.intersection(numbersFrom1to10)  // returns unsorted list`
 
-Disjoint is a method used on 2 sets that returns a bool determining if the 2 sets share any elements.
+Disjoint is a method used on 2 sets that returns a bool determining if the 2 sets share any elements. Note: it returns true if the sets ARE disjointed.
 
 ```swift
 let staff: Set<String> = ["Istishna", "Olimpia", "David", "Alex", "Alan"]
