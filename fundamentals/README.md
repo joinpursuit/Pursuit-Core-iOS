@@ -14,16 +14,13 @@
 1. [Arrays Two](./arrays-two/README.md)
 1. [Optionals](./optionals/README.md)
 1. [Dictionaries](./dictionaries/README.md)
-1. [DSA: Simple Loops, Arrays, and Strings](https://github.com/joinpursuit/DSA-Curriculum/tree/master/simple_loops_arrays_and_strings/ios/README.md)
 1. [Sets](./sets/README.md)
 1. [Functions One](./functions-one/README.md)
 1. [Functions Two](./functions-two/README.md)
 1. [Closures One](./closures-one/README.md)
 1. [Closures Two](./closures-two/README.md)
 1. [Enumerations](./enumerations/README.md)
-1. [DSA: Functions and Collection Types](https://github.com/joinpursuit/DSA-Curriculum/blob/master/functions_collection_types/ios/README.md)
 1. [Structs and Classes](./structs-and-classes/README.md)
-1. [DSA: Functions, Closures, and Enums](https://github.com/joinpursuit/DSA-Curriculum/blob/master/functions_closures_enums/ios/README.md)
 1. [Properties](./properties/README.md)
 1. [Initialization](./initialization/README.md)
 
@@ -41,3 +38,11 @@
 
 ## Lecture Videos
 1. [Strings 1 Lecture Video (July 1)](https://youtu.be/a_3LjODW3t8)
+
+## (Unused Lectures)
+1. [DSA: Simple Loops, Arrays, and Strings](https://github.com/joinpursuit/DSA-Curriculum/tree/master/simple_loops_arrays_and_strings/ios/README.md)
+1. [DSA: Functions and Collection Types](https://github.com/joinpursuit/DSA-Curriculum/blob/master/functions_collection_types/ios/README.md)
+1. [DSA: Functions, Closures, and Enums](https://github.com/joinpursuit/DSA-Curriculum/blob/master/functions_closures_enums/ios/README.md)
+
+
+
