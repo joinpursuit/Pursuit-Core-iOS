@@ -18,6 +18,7 @@
 ### Readings
 
 1. [Apple Swift Language Reference - Closures](https://docs.swift.org/swift-book/LanguageGuide/Closures.html)
+2. [Gosh Darn Closure Syntax](http://goshdarnclosuresyntax.com/)
 
 ### Closures
 
@@ -242,6 +243,8 @@ let numberSum = numbers.reduce(0, { x, y in
 
 ### Capture lists
 
+(Adapted from [Bob the Developer](https://www.bobthedeveloper.io/blog/swift-capture-list-in-closures))
+
 Just like functions closures are able to refer to global variables.  This can occasionally create some challenges:
 
 ```swift
@@ -312,8 +315,7 @@ let text = "What the heck we s'posed to do you darn fool. Drat that cat. Oh fudg
 
 > `filter` produced unnatural results. Let's start over.
 > Again, split text on the space using `componentsSeparatedByString(_:)`
-> but this time use map to replace the words with red blooded American cuss-words
-> (or whatever words you like) and print.
+> but this time use map to replace the words with the appropriate number of `*`s.
 
 
 ### Use `reduce(_:)`
