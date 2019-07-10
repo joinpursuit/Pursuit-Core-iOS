@@ -92,22 +92,22 @@ For some enumerations, it’s useful to have a collection of all of that enumera
 
 ```swift
 enum CompassPoint: CaseIterable {
-  case North
-  case South
-  case East
-  case West
+  case north
+  case south
+  case east
+  case west
 }
 
-let move = CompassPoint.East
+let move = CompassPoint.east
 
 switch move {
-case .North:
+case .north:
   print("moving north")
-case .South:
+case .south:
   print("moving south")
-case .East:
+case .east:
   print("moving east")
-case .West:
+case .west:
   print("moving west")
 }
 
