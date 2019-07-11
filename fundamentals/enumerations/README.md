@@ -92,22 +92,22 @@ For some enumerations, it’s useful to have a collection of all of that enumera
 
 ```swift
 enum CompassPoint: CaseIterable {
-  case North
-  case South
-  case East
-  case West
+  case north
+  case south
+  case east
+  case west
 }
 
-let move = CompassPoint.East
+let move = CompassPoint.east
 
 switch move {
-case .North:
+case .north:
   print("moving north")
-case .South:
+case .south:
   print("moving south")
-case .East:
+case .east:
   print("moving east")
-case .West:
+case .west:
   print("moving west")
 }
 
@@ -253,6 +253,40 @@ case let .qrCode(productCode):
 **Exercise**
 
 Rewrite the blood type enum to have an associated value of if the type is positive or negative
+
+### 7. Enum Methods
+
+We can add additional functionality to enums by adding functions inside of them.  These functions are called *methods*.  Just like .sorted(by:) is a method for arrays, we can define our own methods for any enums that we define.  In an instance method, we use the keyword `self` to refer to the specific instance of an enum that we made.
+
+```swift
+enum BrightnessLevel {
+  case off
+  case low
+  case medium
+  case high
+  func printDescription() {
+    switch self {
+      case .off:
+        print("The light is off")
+      default:
+        print("The brightness level is set to \(self)")
+    }    
+  }
+}
+
+let levelOne = BrightnessLevel.low
+levelOne.printDescription()
+
+//The brightness level is set to low
+
+let levelTwo = BrightnessLevel.off
+levelTwo.printDescription()
+
+//The light is off
+```
+
+
+We'll see more about `self` and instance methods when we cover structs and classes.
 
 ---
 

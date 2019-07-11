@@ -18,41 +18,25 @@
 ### Readings
 
 1. [Apple Swift Language Reference - Closures](https://docs.swift.org/swift-book/LanguageGuide/Closures.html)
+2. [Gosh Darn Closure Syntax](http://goshdarnclosuresyntax.com/)
 
 ### Closures
 
-Closures are self-contained blocks of functionality that can be passed around and used in your code. Closures can capture and store references to any constants and variables from the context in which they are defined. This is known as closing over those constants and variables.
-
-Functions are actually special cases of closures.
-
-Functions and closures are first class citizens. They are "things" that can be passed as functions and returned from functions like any other type.
-
-Closures take one of three forms:
-
-- Global functions are closures that have a name and do not capture any values.
-- Nested functions are closures that have a name and can capture values from their enclosing function.
-- Closure expressions are unnamed closures written in a lightweight syntax that can capture values from their surrounding context.
-
-Swift’s closure expressions have a clean, clear style, with optimizations that encourage brief, clutter-free syntax in common scenarios. These optimizations include:
-
-- Inferring parameter and return value types from context
-- Implicit returns from single-expression closures
-- Shorthand argument names
-- Trailing closure syntax
+Closures are self-contained blocks of functionality that can be passed around and used in your code.  If this definition seems familiar, it's because it sounds very similar to functions.  So what's the difference between closures and functions?  Turns out we've been using closures all along.  A function is actually a special type of closure.  A closure is like a function that is treated exactly the same as any other type.  Closures can be stored in variables, passed as arguments into functions exactly like you could with a String or Array.
 
 
 ### Why closures?
 
-Closures allow us to write anonymous blocks of functionality that may only be used once or in a limited context. This is the advantage of their anonymity. A closure is not named as a function is because, being used in just one place, it don't need to be referred to. In this sense it's like a literal.
+We can use closures to give functions more information about how to do something.  For example, arrays have a method `sorted(by:)`.  We can use closures to give instructions to the `sorted(by:)` method, telling it to sort ascending or descending.  We'll look more into how to tell it that this lesson.
 
-The benefit of using higher order functions, that is functions that take or return closures as arguments or return types is separate from the anonymity of closures. Higher order functions allow the programmer to inject a piece of original functionality into an existing function, in the case of functions that take closures as parameters. We'll explore this in depth with `sorted(by:)`. Less common are functions that return closures. We'll look at some more contrived examples of these.
+Another advantage of closures is that they are *anonymous*.  This means that we can create one without a name.  Functions need names, but closures are created without one.  We can save a closure to a variable if we want to use it later.  This is useful, because we may only need to define a specific set of functionality once.  It will end up saving us some time, and is easier for other people to read.
 
 ### Closure syntax
 
 This is the general form of a closure:
 
 ```swift
-{ (parameters) -> ReturnType in
+{ (parameterOne: Type, parameterTwo: Type) -> ReturnType in
   //Closure body goes here...
 }
 ```
@@ -107,7 +91,7 @@ let multiply = {(a: Int, b: Int) -> Int in
 </details>
 
 
-Closures are just like any other type
+Closures are "First-class citizens" which means that they behave just like any other type.
 
 let operations: [(Int, Int) -> Int] = [add, subtract, multiply, divide]
 
@@ -132,59 +116,69 @@ combine(8, and: 3, with: {(a: Int, b: Int) -> Int in
 
 ### Closures as function parameters
 
-Both the Big Nerd Ranch book and Apple's documentation use Array's `sorted(by:)` method to introduce closures passed to a function, and to illustrate various shorthand syntaxes used when working with closures. All the calls to `sorted(by:)` in the code below do the same exact thing, except for the first call that uses `backward(_:_:)` which is still functionally equivalent.
+As we saw in the example above, we can use closures as parameters in a function.  Closures also have a special shorthand syntax that we can use to reduce the amount of code we need to write.  The following examples go through several different ways to achieve the same result.
+
+Let's look deeper at the `sorted(by:)` method.  The full function for sorted an array of Strings looks something like this:
 
 ```swift
-// 1. The unsorted array
-let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+func sorted(by areInIncreasingOrder: (String, String) -> Bool) -> [String]
+```
 
-// 2. A function that takes two String arguments, returning a Bool
+We need to give it closure that "returns true if its first argument should be ordered before its second argument; otherwise, false".  Put another way, the closure takes in two Strings and returns whether or not they are already sorted.
+
+If we wanted to be very verbose, we could declare a function.
+
+```swift
 func backward(_ s1: String, _ s2: String) -> Bool {
-    return s1 > s2
+  return s1 > s2
 }
 
-// 3. Call `sorted(by:)` passing the `backward(_:_:)` function we defined
-var reversedNames = names.sorted(by: backward)
+Then, we can use the function as the argument that `sorted(by:)` is expecting:
 
-// 4. Function converted to closure
+```swift
+var reversedNames = unsortedNames.sorted(by: backward)
+```
+
+What this means is that when it looks at two name (e.g "Chris" and "Alex") our closure returns true, which means that "Chris" should come before "Alex".  The method will run to ensure that every element is ordered according to our closure.
+
+The above would work fine, but it's a little annoying to have to write out a whole function that we only used one.  Anonymous closure syntax allows us to get around that issue:
+
+```swift
 reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in
     return s1 > s2
 })
-
-// 5. function on one line
-reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1 > s2 } )
-
-// 6. Argument types are implied by sorted(by:)'s definition
-reversedNames = names.sorted(by: { s1, s2 in return s1 > s2 } )
-
-// 7. if  one line, "return" is inferred
-reversedNames = names.sorted(by: { s1, s2 in s1 > s2 } )
-
-// 8. shorthand argument names
-reversedNames = names.sorted(by: { $0 > $1 } )
-
-// 9. operator method, >
-reversedNames = names.sorted(by: >)
-
-// 10. trailing closure syntax
-reversedNames = names.sorted() { $0 > $1 }
-
-// 11. trailing closure syntax omitting the parentheses (function operator)
-reversedNames = names.sorted { $0 > $1 }
 ```
 
-1. An array of String, `[String]`.
-2. A function signifying whether s1 should be sorted before s2.
-3. Call `sorted(by:)`, passing our function.
-4. Convert `backward` to closure form. We don't need it anymore.
-5. Just move the same exact closure onto one line.
-6. The `by` parameter of `sorted(by:)` knows its type `(String, String) -> Bool` so a call to the function that defines a closure can infer the type of its arguments.
-7. If the body of your closure is one line and evaluates to the return type the `return` itself can be omitted. The one line is `s1 > s2`.
-8. We can refer to arguments by numbered shorthand names so they don't need to be declared. This function takes two parameters. They can be found in $0 and $1.
-9. Operator methods. Since `String` overloads the `>` operator which works just like any function, Swift sees that its type, `>(_:String, _:String) -> Bool` matches what sort expects, just as our `backward(_:_:)` had.
-10. Trailing closure syntax. When the last argument in a function is a closure, you have the option to define it outside the parentheses. This is more apparently useful when the closure has more than one line.
-11. Building on the previous syntax, when a closure is the only argument to a function (which is a special case of being the last argument), the parentheses can be omitted.
+Now we don't need to write a whole function to do something one time.  This works too, but we can actually use some shorthand syntax to make this easier to read.  The following examples all do exactly the same thing as the example above:
 
+```
+
+// function on one line
+reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1 > s2 } )
+
+// The by parameter of sorted(by:) knows its type (String, String) -> Bool
+// A call to the function that defines a closure can infer the type of its arguments.
+reversedNames = names.sorted(by: { s1, s2 in return s1 > s2 } )
+
+// If  one line, "return" is inferred
+reversedNames = names.sorted(by: { s1, s2 in s1 > s2 } )
+
+// We can refer to arguments by numbered shorthand names so they don't need to be declared.
+// This function takes two parameters. They can be found in $0 and $1
+reversedNames = names.sorted(by: { $0 > $1 } )
+
+// String overloads the > operator which works just like any function,
+// Swift sees that its type, `>(_:String, _:String) -> Bool` matches what sort expects.
+reversedNames = names.sorted(by: >)
+
+// Trailing closure syntax
+// When the last argument in a function is a closure, you have the option to define it outside the parentheses
+reversedNames = names.sorted() { $0 > $1 }
+
+// Trailing closure syntax omitting the parentheses
+// When a closure is the only argument to a function, the parentheses can be omitted as well
+reversedNames = names.sorted { $0 > $1 }
+```
 
 ### Exercise
 
@@ -201,9 +195,6 @@ let words = ["One", "two", "Buckle", "my", "shoe"]
 1. Sort `words`, descending case-insensitive.
 1. Sort `words` by the length of each element.
 1. Sort `numbers` ascending, even numbers first, odd numbers second. Output will be [2, 32, 66, 88, 902, 21, 27, 33, 43, 73, 905].
-
--
--
 
 ### Map, Filter and Reduce
 
@@ -249,6 +240,63 @@ let numberSum = numbers.reduce(0, { x, y in
 // numberSum == 10
 ```
 
+
+### Capture lists
+
+(Adapted from [Bob the Developer](https://www.bobthedeveloper.io/blog/swift-capture-list-in-closures))
+
+Just like functions closures are able to refer to global variables.  This can occasionally create some challenges:
+
+```swift
+var printingClosures: [() -> Void] = []
+
+var i = 0
+
+for _ in 0..<3 {
+    let newClosure = { print("I know how to print \(i)") }
+    printingClosures.append(newClosure)
+    i += 1
+}
+
+for printingClosure in printingClosures {
+    printingClosure()
+}
+```
+
+We would like the code block above to print:
+
+```
+I know how to print 1
+I know how to print 2
+I know how to print 3
+```
+
+But instead it prints:
+
+```
+I know how to print 4
+I know how to print 4
+I know how to print 4
+```
+
+What's going on?  Each of the different closures we make has "closed over" the variable `i`.  Each closure is referring to the same variable, so the closure doesn't print the value of `i` when it was made, but whenever it happens to be called.  What we want to do is **capture** the value of `i` as soon as we make our closure and save a snapshot of that value.  We can do this using the syntax below:
+
+```swift
+var printingClosures: [() -> Void] = []
+
+var i = 0
+
+for _ in 0..<3 {
+    let newClosure = {[i] in print("I know how to print \(i)") }
+    printingClosures.append(newClosure)
+    i += 1
+}
+
+for printingClosure in printingClosures {
+    printingClosure()
+}
+```
+
 ### Exercises
 
 ### Use `filter(_:)`
@@ -267,8 +315,7 @@ let text = "What the heck we s'posed to do you darn fool. Drat that cat. Oh fudg
 
 > `filter` produced unnatural results. Let's start over.
 > Again, split text on the space using `componentsSeparatedByString(_:)`
-> but this time use map to replace the words with red blooded American cuss-words
-> (or whatever words you like) and print.
+> but this time use map to replace the words with the appropriate number of `*`s.
 
 
 ### Use `reduce(_:)`
