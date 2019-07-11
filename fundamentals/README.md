@@ -34,6 +34,7 @@
 1. [Arrays Lesson 2 (July 3)](./lecture-playgrounds/LecturePlayground73.playground)
 1. [Optionals (July 8 - Guest Lecture!)](./lecture-playgrounds/LectureNotes78.swift)
 1. [Dictionaries Lesson (July 9)](./lecture-playgrounds/LecturePlayground79.playground)
+1. [Sets Lesson (July 10)](./lecture-playgrounds/LecturePlayground710.playground)
 
 ## Lecture Videos
 1. [Strings 1 Lecture Video (July 1)](https://youtu.be/a_3LjODW3t8)
@@ -43,5 +44,3 @@
 1. [DSA: Functions and Collection Types](https://github.com/joinpursuit/DSA-Curriculum/blob/master/functions_collection_types/ios/README.md)
 1. [DSA: Functions, Closures, and Enums](https://github.com/joinpursuit/DSA-Curriculum/blob/master/functions_closures_enums/ios/README.md)
 1. [Logic Problems](https://github.com/joinpursuit/DSA-Curriculum/tree/master/logic_problems)
-
-
