@@ -149,7 +149,7 @@ print(farmAnimals.isDisjoint(with: cityAnimals)) // true
 
 ### Practice Problems
 
-#### 1. Does the following complile?
+#### 1. Does the following compile?
 
 ```swift
 struct Person {
