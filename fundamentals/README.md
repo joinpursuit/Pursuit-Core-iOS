@@ -37,6 +37,7 @@
 1. [Sets Lesson (July 10)](./lecture-playgrounds/LecturePlayground710.playground)
 1. [Functions Lesson 1 (July 11)](./lecture-playgrounds/LecturePlayground711.playground)
 1. [Functions Lesson 2 (July 12)](./lecture-playgrounds/LecturePlayground712.playground)
+1. [Intro to Command Line Apps (July 12)](./lecture-playgrounds/CommandLineGameIntro.playground)
 
 ## Lecture Videos
 1. [Strings 1 Lecture Video (July 1)](https://youtu.be/a_3LjODW3t8)
