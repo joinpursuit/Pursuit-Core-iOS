@@ -15,7 +15,7 @@ func getInput() -> String? {
 }
 
 // this would save the value of the input
-//var thisWasInput  = getInput()
+// var thisWasInput  = getInput()
 
 // when we call this function, it creates a loop that will run all of our game logic. What kind of loop could we use inside of it? Be careful not to create an infinite loop!
 func gameLoop() {
