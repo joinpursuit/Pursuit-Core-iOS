@@ -139,7 +139,7 @@ Here is a common algorithm called "FizzBuzz"
 5. Otherwise, write the current number.
 ```
 
-###Practice:  Write FizzBuzz in Swift
+### Practice:  Write FizzBuzz in Swift
 
 <details>
 	<summary>One solution</summary>
