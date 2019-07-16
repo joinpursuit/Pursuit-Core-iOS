@@ -17,7 +17,6 @@
 1. [Functions One](./functions-one/README.md)
 1. [Functions Two](./functions-two/README.md)
 1. [Closures One](./closures-one/README.md)
-1. [Closures Two](./closures-two/README.md)
 1. [Enumerations](./enumerations/README.md)
 1. [Structs and Classes](./structs-and-classes/README.md)
 1. [Properties](./properties/README.md)
@@ -48,3 +47,4 @@
 1. [DSA: Functions and Collection Types](https://github.com/joinpursuit/DSA-Curriculum/blob/master/functions_collection_types/ios/README.md)
 1. [DSA: Functions, Closures, and Enums](https://github.com/joinpursuit/DSA-Curriculum/blob/master/functions_closures_enums/ios/README.md)
 1. [Logic Problems](https://github.com/joinpursuit/DSA-Curriculum/tree/master/logic_problems)
+1. [Closures Two](./closures-two/README.md)
