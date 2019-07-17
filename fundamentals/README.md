@@ -23,6 +23,7 @@
 1. [Enumerations](./enumerations/README.md)
 1. [DSA: Functions and Collection Types](https://github.com/joinpursuit/DSA-Curriculum/blob/master/functions_collection_types/ios/README.md)
 1. [Structs and Classes](./structs-and-classes/README.md)
+1. [Structs and Classes Two](./structs-and-classes-two/README.md)
 1. [DSA: Functions, Closures, and Enums](https://github.com/joinpursuit/DSA-Curriculum/blob/master/functions_closures_enums/ios/README.md)
 1. [Properties](./properties/README.md)
 1. [Initialization](./initialization/README.md)
