@@ -22,7 +22,7 @@
 1. [Properties](./properties/README.md)
 1. [Initialization](./initialization/README.md)
 
-## Lecture Playgrounds
+## Lecture Playgrounds and Code Samples
 
 1. [Types Lesson 2 (June 26)](./lecture-playgrounds/LecturePlayground626.playground)
 1. [Control Flow Lesson (June 27)](./lecture-playgrounds/LecturePlayground627.playground)
@@ -39,7 +39,7 @@
 1. [Intro to Command Line Apps (July 12)](./lecture-playgrounds/CommandLineGameIntro.swift)
 1. [Closures Torture Session (July 15)](./lecture-playgrounds/LecturePlayground715.playground)
 1. [Enums Lesson (July 16)](./lecture-playgrounds/LecturePlayground716.playground)
-
+1. [Random Pairings Generator (July 17)](./lecture-playgrounds/random-pairings.swift)
 
 ## Lecture Videos
 1. [Strings 1 Lecture Video (July 1)](https://youtu.be/a_3LjODW3t8)
