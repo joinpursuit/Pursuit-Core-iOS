@@ -19,6 +19,7 @@
 1. [Closures One](./closures-one/README.md)
 1. [Enumerations](./enumerations/README.md)
 1. [Structs and Classes](./structs-and-classes/README.md)
+1. [Structs and Classes Two](./structs-and-classes-two/README.md)
 1. [Properties](./properties/README.md)
 1. [Initialization](./initialization/README.md)
 
