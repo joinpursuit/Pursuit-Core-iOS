@@ -40,6 +40,7 @@
 1. [Closures Torture Session (July 15)](./lecture-playgrounds/LecturePlayground715.playground)
 1. [Enums Lesson (July 16)](./lecture-playgrounds/LecturePlayground716.playground)
 1. [Random Pairings Generator (July 17)](./lecture-playgrounds/random-pairings.swift)
+1. [Structs and Classes Lesson (July 18)](./lecture-playgrounds/LecturePlayground718.playground)
 
 ## Lecture Videos
 1. [Strings 1 Lecture Video (July 1)](https://youtu.be/a_3LjODW3t8)
