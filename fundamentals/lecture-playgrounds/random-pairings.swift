@@ -9,7 +9,42 @@
 import Foundation
 
 
-var students = ["Hildy", "Alyson", "Ayoola", "Jocelyn", "Bianca", "Phil", "Krystal", "Ian", "Michelle", "Levi", "Angela", "Anthony", "Mariel", "Adam", "Alex", "Tia", "Kary", "Phoenix", "Eric M", "Kevin", "Liana", "Albert", "Aaron", "Neema", "Fredlyne", "Sam", "Jason", "Wally", "Sunni", "Malcolm", "Jack", "Eric W", "Kimball"]
+var students = ["Hildy", "Alyson", "Ayoola", "Jocelyn", "Bianca", "Krystal", "Ian", "Michelle", "Levi", "Angela", "Anthony", "Mariel", "Adam", "Alex", "Tia", "Kary", "Phoenix", "Eric M", "Kevin", "Liana", "Albert", "Aaron", "Neema", "Fredlyne", "Sam", "Jason", "Wally", "Sunni", "Malcolm", "Jack", "Eric W", "Kimball"]
+
+var previousPairs: [String:String] = [
+    "Hildy" : "Wally",
+    "Alyson" : "Jocelyn",
+    "Ayoola" : "Adam",
+    "Jocelyn" : "Alyson",
+    "Bianca" : "Malcolm",
+    "Krystal" : "Sunni",
+    "Ian" : "Kary",
+    "Michelle" : "Alex",
+    "Levi" : "Fredlyne",
+    "Angela" : "Liana",
+    "Anthony" : "Eric W",
+    "Mariel" : "Tia",
+    "Adam" : "Ayoola",
+    "Alex" : "Michelle",
+    "Tia" : "Mariel",
+    "Kary" : "Ian",
+    "Phoenix" : "Eric M",
+    "Eric M" : "Phoenix",
+    "Kevin" : "Neema",
+    "Liana" : "Angela",
+    "Albert" : "Kimball",
+    "Aaron" : "Jason",
+    "Neema" : "Kevin",
+    "Fredlyne" : "Levi",
+    "Sam" : "",
+    "Jason" : "Aaron",
+    "Wally" : "Hildy",
+    "Sunni" : "Krystal",
+    "Malcolm" : "Bianca",
+    "Jack" : "",
+    "Eric W" : "Anthony",
+    "Kimball" : "Albert"]
+
 
 var studentPairs = [(String,String)]()
 
@@ -23,16 +58,27 @@ func getRandomStudent() -> String? {
     return nil
 }
 
-func addStudentPair(_ s1: String,_ s2: String) {
-    studentPairs.append((s1,s2))
+func getNewPair(_ student1: String) -> (String,String) {
+    var pairFound = false
+    while !pairFound {
+        let potentialPair = students.randomElement()
+        if let p = potentialPair, p != student1 && p != previousPairs[student1] {
+            return (student1,p)
+        }
+    }
+}
+
+func addStudentPair(_ pair: (String, String)) {
+    studentPairs.append(pair)
 }
 
 func createPair() {
     if let student1 = getRandomStudent() {
-        if let student2 = getRandomStudent() {
-            addStudentPair(student1,student2)
+        if students.count > 0 {
+            let pair = getNewPair(student1)
+            addStudentPair(pair)
         } else {
-            addStudentPair(student1,"oooooops we have an odd number of people in our class today :( let's figure out how to pair you up!")
+            addStudentPair((student1,"let's triple you with the pair above"))
         }
     }
 }
@@ -56,3 +102,6 @@ func setupPairings(){
 }
 
 setupPairings()
+
+    
+    
