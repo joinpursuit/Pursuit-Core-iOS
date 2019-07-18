@@ -195,6 +195,40 @@ print(myString.startIndex)
 </details>
 
 
+#### let vs var
+
+We can define structs with properties that are either constant or variable.
+
+```swift
+struct User {
+    let name: String
+    var isLoggedIn: Bool
+}
+
+var userOne = User(name: "Adam", isLoggedIn: false)
+userOne.isLoggedIn = true // Changes isLoggedIn to true
+userOne.name = "Beth" //Compile error because name is a let constant
+```
+
+We can also assign structs and classes to constants.  Because structs are value types, we can't change properties of a struct assigned to a let constant.  Because classes are reference types, we can change properties of a class assigned to a let constant.
+
+```swift
+struct User {
+    let name: String
+    var isLoggedIn: Bool
+}
+
+class Dog {
+    let numberOfLegs: Int = 4
+    var isSleepy: Bool = false
+}
+
+let userOne = User(name: "Adam", isLoggedIn: false)
+userOne.isLoggedIn = true // Compile-time error: userOne is a let constant
+
+let doggo = Dog()
+doggo.isSleepy = true //No errors, doggo.isSleepy is now true
+```
 
 ### 5. Instance methods
 
