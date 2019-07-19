@@ -9,14 +9,14 @@
 import Foundation
 
 
-var students = ["Hildy", "Alyson", "Ayoola", "Jocelyn", "Bianca", "Krystal", "Ian", "Michelle", "Levi", "Angela", "Anthony", "Mariel", "Adam", "Alex", "Tia", "Kary", "Phoenix", "Eric M", "Kevin", "Liana", "Albert", "Aaron", "Neema", "Fredlyne", "Sam", "Jason", "Wally", "Sunni", "Malcolm", "Jack", "Eric W", "Kimball"]
-
+var students = ["Hildy", "Alyson", "Ayoola",  "Bee", "Krystal", "Ian", "Michelle", "Levi", "Angela", "Anthony", "Mariel", "Adam", "Alex", "Tia", "Kary", "Phoenix", "Eric M", "Kevin", "Liana", "Albert", "Aaron", "Neema", "Fredlyne", "Sam", "Jason", "Wally", "Sunni", "Jack", "Eric W", "Kimball", "Rad"]
+//absent: "Malcolm", "Josh", "Jocelyn"
 var previousPairs: [String:String] = [
     "Hildy" : "Wally",
     "Alyson" : "Jocelyn",
     "Ayoola" : "Adam",
-    "Jocelyn" : "Alyson",
-    "Bianca" : "Malcolm",
+//    "Jocelyn" : "Alyson",
+    "Bee" : "Malcolm",
     "Krystal" : "Sunni",
     "Ian" : "Kary",
     "Michelle" : "Alex",
@@ -40,10 +40,11 @@ var previousPairs: [String:String] = [
     "Jason" : "Aaron",
     "Wally" : "Hildy",
     "Sunni" : "Krystal",
-    "Malcolm" : "Bianca",
+//    "Malcolm" : "Bianca",
     "Jack" : "",
     "Eric W" : "Anthony",
-    "Kimball" : "Albert"]
+    "Kimball" : "Albert",
+    "Rad": ""]
 
 
 var studentPairs = [(String,String)]()
@@ -63,6 +64,9 @@ func getNewPair(_ student1: String) -> (String,String) {
     while !pairFound {
         let potentialPair = students.randomElement()
         if let p = potentialPair, p != student1 && p != previousPairs[student1] {
+            students.removeAll(where: {a in
+                a == p
+            })
             return (student1,p)
         }
     }
@@ -102,6 +106,3 @@ func setupPairings(){
 }
 
 setupPairings()
-
-    
-    
