@@ -419,14 +419,15 @@ func compoundRuntimes(arr: [Int]) {
 	 }
 	 for num in arr {
 	     print(num)
+	 }
+	 for (indexOne,numOne) in arr.enumerated() {
+	     for (indexTwo, numTwo) in arr.enumerated() {
+	         if indexOne != indexTwo && numOne == numTwo {
+		     print("It's a match! \(numOne) and \(numTwo) are equal")
+		 }
 	     }
-	     for (indexOne,numOne) in arr.enumerated() {
-	     	 for (indexTwo, numTwo) in arr.enumerated() {
-		     		if indexOne != indexTwo && numOne == numTwo {
-				   	       print("It's a match! \(numOne) and \(numTwo) are equal")
-					       		     }
-								}
-								}
+	  }
+    }
 }
 ```
 <details>
