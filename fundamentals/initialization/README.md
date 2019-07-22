@@ -1,4 +1,4 @@
-### Initialization
+# Initialization
 
 ---
 
@@ -261,10 +261,10 @@ A simple way to remember this is:
 Designated initializers must always delegate up.
 Convenience initializers must always delegate across.
 
-The following image helps illustrate this:
+The following images helps illustrat this:
 
-![image](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Art/initializerDelegation01_2x.png)
-
+![image](https://docs.swift.org/swift-book/_images/initializerDelegation01_2x.png)
+![image](https://docs.swift.org/swift-book/_images/initializerDelegation02_2x.png)
 
 
 ### Failable Initalizers
