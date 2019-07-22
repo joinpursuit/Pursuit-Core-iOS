@@ -16,34 +16,6 @@
 
 ---
 
-
-### 1. Type Methods
-
-Sometimes, we want to use methods on a class itself instead of on an instance of the class. Take pi for an example.
-
-let radius = 5.0 let pi = ? let circleArea = pi * radius * radius
-
-We could write in the value of pi ourselves, but
-
-Type methods are methods that are called on the type itself. You indicate type methods by including the static keyword immediately before the method's func keyword. Type methods can be used in classes, structs, and enumerations. Classes may also use the class keyword to allow subclasses to override the superclass’s implementation of that method.
-
-Type methods are called with dot syntax, like instance methods. However, you call type methods on the type, not on an instance of that type. Here’s how you call a type method on a class called SomeClass:
-
-class SomeClass {
-
-    class func someTypeMethod() {
-        // type method implementation goes here
-    }
-
-}
-
-SomeClass.someTypeMethod()
-Within the body of a type method, the implicit self property refers to the type itself, rather than an instance of that type. This means that you can use self to disambiguate between type properties and type method parameters, just as you do for instance properties and instance method parameters.
-
-
-
-
-
 ### 1. Initialization
 
 The process of initialization involves setting an initial value for each stored property on that instance and performing any other setup or initialization that is required before the new instance is ready for use.
@@ -176,13 +148,6 @@ class Musician: Person {
 
 We notice a new keyword above: ```super```.  This refers to the superclass that we are inheriting from.  Whenever we initialize a subclass, we always need to call ```super.init``` to make sure that we are initializing all the properties that our class has.  The compiler will give an error if you do not call ```super.init``` because it needs to make sure that all of the properties have a value of the appropriate type.
 
-
-__Exercise__
-Complete [Part 1 of AC-iOS-Initialization](https://github.com/C4Q/AC-iOS-Initialization)
-
-
-
-
 #### Convenience Initializers
 Convenience initializers let you have simpler initializers that just call through to a designated initializer. They are secondary, supporting initializers for a class.
 
@@ -278,14 +243,6 @@ Taken from the documentation:
 >superclass convenience initializers.
 
 
-
-
-
-__Exercise__
-Complete [Part 2 of AC-iOS-Initialization](https://github.com/C4Q/AC-iOS-Initialization)
-
-
-
 #### Summary of intializers
 
 The Swift documentation provides three rules for keeping track of initializers.
@@ -339,14 +296,10 @@ Because an animal can't have a negative number of legs, we return nil if that's 
 
 We have actually seen a failable initializer already.  Where has it come up?
 
-
 <details>
 <summary> Solution </summary>
 Creating an enum from a raw value
 </details>
-
-__Exercise__
-Complete [Part 3 of AC-iOS-Initialization](https://github.com/C4Q/AC-iOS-Initialization)
 
 #### Deinitialization
 
@@ -368,7 +321,7 @@ Much less frequently, we can define initializers for our structs and enums that 
 
 We can initialize a struct most commonly by the memberwise initializer we get by default.
 
-```
+```swift
 enum GameState {
     case inProgress, victory, defeat
 }
@@ -390,12 +343,11 @@ struct GameBrain {
 }
 
 var game = GameBrain(maxNumberOfGuesses: 10, correctNum: 5, currentNumberOfGuesses: 0)
-
 ```
 
 Because it's a little awkward to have to give the currentNumberOfGuesses and maxNumberOfGuesses ourselves, we can definite an initializer:
 
-```
+```swift
 struct GameBrain {
     var maxNumberOfGuesses: Int = 3
     var correctNum: Int
@@ -423,7 +375,7 @@ These are simpler than for classes, because structs and enums do not support inh
 For enums, we don't have anything saved except what self is, so we set that in our initializer.
 
 
-```
+```swift
 enum Color {
     case blue, green, red, error
     init(c: Character) {
