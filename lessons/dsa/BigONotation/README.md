@@ -76,9 +76,9 @@ In this example, increasing the size of our array does increase how long it take
 func quadraticTime(arr: [String]) {
      for stringOne in arr {
      	 for stringTwo in arr {
-	     	       	  print("Player One: \(stringOne), Player Two: \(stringTwo)")
-			  		}
-					}
+	     print("Player One: \(stringOne), Player Two: \(stringTwo)")
+	 }
+    }
 }
 ```
 This one's a little more complicated.  Let's break it down.
@@ -217,10 +217,10 @@ We just saw an example of how to derive the runtime of a function.  Let's try it
 func exampleOne(string str: String, withCharacter c: Character) -> Bool {
      for char in str.characters {
      	 if char == c {
-	    	 return true
-		 	}
-			}
-			return false
+	     return true
+	 }
+     }
+     return false
 }			
 ```
 
@@ -239,7 +239,7 @@ func exampleOne(string str: String, withCharacter c: Character) -> Bool {
 func exampleTwo(arr: [String]) {
      for _ in 0..<1_000_000 {
      	 print("Many printings!)
-	 }
+     }
 }
 ```
 	
@@ -329,9 +329,9 @@ func exampleOne(string str: String, withCharacter c: Character) -> Bool {
      for char in str.characters {
      	 if char == c {
 	    	 return true
-		 	}
-			}
-			return false
+	 }
+     }
+     return false
 }			
 ```
 
@@ -359,7 +359,7 @@ func exampleOne(string str: String, withCharacter c: Character) -> Bool {
 func exampleTwo(arr: [String]) {
      for _ in 0..<1_000_000 {
      	 print("Many printings!)
-	 }
+     }
 }
 ```
 
@@ -459,38 +459,36 @@ func doStuff(arr: [Int]) {
      	 for num in arr {
 	     	 for num in arr {
 		     	    print(num)
-					}
-						}
-						}
+		}
+	}
+     }
 }						
 ```
 
-<details>
-	<summary>What is the runtime of doStuff(arr:)?</summary>
-	O(n<sup>3</sup>)
+<details><summary>What is the runtime of doStuff(arr:)?</summary>
+O(n<sup>3</sup>)
 </details>	
 
 ### Example Two:
 ```swift
 func doOtherStuff(arr: [Int]) {
-     for num in arr {
-     	 print(num)
-	 }
-	 for num in arr {
-	     for num in arr {
-	     	     print(num)
-			}
-			}
-			print(num)
-			for num in arr {
-			    print(num)
-			    }
+    for num in arr {
+        print(num)
+    }
+    for num in arr {
+        for num in arr {
+	    print(num)
+	}
+    }
+    print(num)
+    for num in arr {
+        print(num)
+    }
 }			    
 ```
 
-<details>
-	<summary>What is the runtime of doOtherStuff(arr:)?</summary>
-	O(n<sup>2</sup>)
+<details><summary>What is the runtime of doOtherStuff(arr:)?</summary>
+O(n<sup>2</sup>)
 </details>
 
 ### Example Three:
@@ -498,26 +496,25 @@ func doOtherStuff(arr: [Int]) {
 func foo(myArr: [Int]) {
      for num in myArr {
      	 print(num)
-	 }
+     }
 }
 
 func bar(myArr: [Int]) {
-     foo(myArr: myArr)
-     for _ in myArr {
-     	 foo(myArr: myArr)
-	 }
+    foo(myArr: myArr)
+    for _ in myArr {
+        foo(myArr: myArr)
+    }
 }	 
 ```
 
-<details>
-	<summary>What is the runtime of foo(myArr:)?</summary>
-	O(n)
+<details><summary>What is the runtime of foo(myArr:)?</summary>
+O(n)
 </details>
 
 
 <details>
-	<summary> What is the runtime of bar(myArr:)? </summary>
-	O(n<sup>2</sup>)
+<summary> What is the runtime of bar(myArr:)? </summary>
+O(n<sup>2</sup>)
 </details>
 
 
@@ -525,18 +522,18 @@ func bar(myArr: [Int]) {
 ### Example Four:
 ```swift
 func secondSmallestWithSort(myArr: [Int]) -> Int? {
-     guard myArr.count > 1 else {
-     	   return nil
-	   }
-	   return myArr.sorted(by: <)[1]
+    guard myArr.count > 1 else {
+        return nil
+    }
+    return myArr.sorted(by: <)[1]
 }
 ```
 
 <details>
-	<summary> What is the runtime of secondSmallestWithSort(myArr:)? </summary>
-	O(n * log(n) )
+<summary> What is the runtime of secondSmallestWithSort(myArr:)? </summary>
+O(n * log(n) )
 	
-	Sorting things takes n * log(n) time.  We'll review why later.
+Sorting things takes n * log(n) time.  We'll review why later.
 	
 </details>
 
@@ -544,33 +541,32 @@ func secondSmallestWithSort(myArr: [Int]) -> Int? {
 ### Example Five:
 ```swift
 func secondSmallest(myArr: [Int]) -> Int? {
-     guard myArr.count > 1 else {
-     	   return nil
-	   }
-	   var min = myArr[0]
-	   var minIndex = 0
-	   for (index, num) in myArr.enumerated() {
-	       if num < min {
-	       	      min = num
-		      	    minIndex = index
-			    	     }
-				     }
-				     var secondMin = (myArr[0] != min ? myArr[0] : myArr[1])
-				     for (index, num) in myArr.enumerated() {
-				     	 if num < secondMin && index != minIndex {
-					    	secondMin = num
-							  }
-							  }
-							  print(min, minIndex, secondMin)
-							  return secondMin
+    guard myArr.count > 1 else {
+         return nil
+    }
+    var min = myArr[0]
+    var minIndex = 0
+    for (index, num) in myArr.enumerated() {
+        if num < min {
+            min = num
+            minIndex = index
+        }
+    }
+    var secondMin = (myArr[0] != min ? myArr[0] : myArr[1])
+    for (index, num) in myArr.enumerated() {
+        if num < secondMin && index != minIndex {
+            secondMin = num
+        }
+     }
+     print(min, minIndex, secondMin)
+     return secondMin
 }
 ```
 
-<details>
-	<summary> What is the runtime of secondSmallest(myArr:)? </summary>
-	O(n)
+<details><summary> What is the runtime of secondSmallest(myArr:)? </summary>
+O(n)
 	
-	We have O(n) + O(n), but as n gets bigger and bigger, we only care about the highest order.
+We have O(n) + O(n), but as n gets bigger and bigger, we only care about the highest order.
 
 </details>
 
