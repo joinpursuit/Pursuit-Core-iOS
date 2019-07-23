@@ -43,6 +43,7 @@
 1. [Random Pairings Generator (July 17)](./lecture-playgrounds/random-pairings.swift)
 1. [Structs and Classes Lesson 1 (July 18)](./lecture-playgrounds/LecturePlayground718.playground)
 1. [Structs and Classes Lesson 2 (July 19)](./lecture-playgrounds/LecturePlayground719.playground)
+1. [Structs and Classes Lesson 3 - Initializers (July 23)](./lecture-playgrounds/LecturePlayground723.playground)
 
 ## Lecture Videos
 1. [Strings 1 Lecture Video (July 1)](https://youtu.be/a_3LjODW3t8)
