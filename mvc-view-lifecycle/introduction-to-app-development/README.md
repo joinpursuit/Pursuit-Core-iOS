@@ -10,9 +10,9 @@ You should now see a screen that looks like this:
 
 ![Xcode map](https://codewithchris.com/img/xcodetutorial/xcode_7_workspace_diagram.jpg)
 
-In the Navigator area, select the **AppDelegate.swift** and **LaunchScreen.storyboard** using command click.  Right click, then select "New Group from Selection" and name that file "Supporting Files".  This is just to clean up what you are looking at.
+In the Navigator area, select the **AppDelegate.swift** and **LaunchScreen.storyboard** using command + click.  Right click, then select "New Group from Selection" and name that folder "Supporting Files".  This is just to clean up what you are looking at.
 
-Go to the Toolbar, and select **iPhone XS**. Then hit the play button.
+Go to the Toolbar, and select **iPhone Xr**. Then hit the play button.
 
 Congrats!  You made your first app!  It's a blank white screen, but it's a totally functioning app.
 
@@ -22,9 +22,9 @@ Let's see how we can make it a little more interesting.
 
 Click on the Main.storyboard file.  You now are in **Interface Builder** and can edit the UI of your app.  Interface Builder is incredibly powerful and you can make many components of your app there.
 
-Click on the main scene.  This is the screen (view) that the user sees, called the **ViewController**.  It's called a view controller because it controls the view that is displayed to the user.
+Click on the main scene (in storyboard).  This is the screen (view) that the user sees, called the **ViewController**.  It's called a view controller because it controls the view that is displayed to the user.
 
-Look over to the right in the **Utility Area**  If it is not selected already, select the **Attributes Inspector**. Make sure to select the main scene in order to get the attributes showing up for the view. There are a variety of different options here. Select the attribute "Background Color" and change it to your favorite color. Then click the play button again in the Toolbar and rerun your app.
+Look over to the right in the **Utility Area**  If it is not selected already, select the **Attributes Inspector**. Make sure to select the main scene in order to get the attributes showing up for the view. There are a variety of different options here. Select the attribute "Background" and change it to your favorite color. Then click the play button again in the Toolbar and rerun your app.
 
 Now our app can be any color we like!  But it is just a background color.  Let's add some more features.
 
@@ -49,11 +49,11 @@ Remembering back to when we learned about classes, [UIView](https://developer.ap
 
 Now we want to add some more information to our app.  Let's say we want to have some text displayed to the user. For that we will use a [UILabel](https://developer.apple.com/documentation/uikit/uilabel).
 
-In the **Toolbar Area** select the **Object Library** which is next to the **Standard Editor** tab.  We want to create a label, so type *label* into the search bar.  Then, drag and drop the label into the center of your app.  You can use the blue gridlines to know if it is being placed in the center.  We'll learn much more robust ways of organizing our UI when we get to **Auto Layout** next week.
+In the **Toolbar Area** select the **Object Library** which is next to the **Standard Editor** tab.  We want to create a label, so type *label* into the search bar.  Then, drag and drop the label into the center of your app.  You can use the blue gridlines to know if it is being placed in the center, horizontally or vertically.  We'll learn much more robust ways of organizing our UI when we get to **Auto Layout** next week.
 
-Click on the label and change the text to a different message e.g This is my favorite color, then click play and run your app or use the shortcut, `cmd + r`.  Now you can display text as well!
+Click on the label and change the text to a different message, e.g "This is my favorite color", then click play and run your app (you can also use the shortcut, `cmd + r`).  Now you can display text as well!
 
-Let's look a little more in depth into our label.  Clicking back to the Attributes Inspector, we can see all the ways we can manipulate our label. Reminder select the control you're interested in inspecting, in this case make sure to click on the UILabel in the main scene.  Some key properties are:
+Let's look a little more in-depth at our label.  Clicking back to the Attributes Inspector, we can see all the ways we can manipulate our label. Remember to select the element that you're interested in inspecting, in this case make sure to click on the UILabel in the main scene.  Some key properties are:
 
 1. text: String
 2. textAlignment: NSTextAlignment
@@ -80,7 +80,7 @@ There are two more key properties of UIView that we will discuss today:
 
 To better understand them, let's look at another tool in Xcode.
 
-Right above the Debug area, to the left of the message "View as: iPhone 8", select the **Document Outline**
+Right above the Debug area, to the left of the message "View as: iPhone Xr", select the **Document Outline**
 
 We have our View and underneath the view we can see our textLabel marked with an "L".
 
@@ -89,10 +89,10 @@ view.subviews is an array with our label
 view.superView is nil
 
 **Let's use some debugging to print out the values of those properties:**  
-1. Navigate to ViewController.swift and click on a line number (gutter) in the viewDidLoad() function after ```super.viewDidLoad```, this will activate a [breakpoint](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/debugging_tools.html).
+1. Navigate to ViewController.swift and click on a line number (gutter) in the viewDidLoad() function after `super.viewDidLoad`, this will activate a [breakpoint](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/debugging_tools.html).
 1. A breakpoint enables us to investigate a part of our code for bugs, logic failures or pure investigation.
 1. Run the application using the play button or cmd + r. The application will now stop at the breakpoint you activated.
-1. At this point you can enter ```po view.subviews``` into the console area and press enter. The value of that command will now be shown.
+1. At this point you can enter `po view.subviews` into the console area and press enter. The value of that command will now be shown.
 
 **For our Label:**
 label.subviews is an empty array
@@ -102,7 +102,7 @@ The way that the views are nested is known as the **view hierarchy**
 
 Let's add some more views and work them into the view hierarchy.
 
-Go to the Object Library or use the keyboard shortcut, shift + cmd + l,  and type UIView in the search bar.  Drag in a new UIView to the middle of the screen.  What happens and why?
+Go to the Object Library or use the keyboard shortcut, `shift + cmd + l`,  and type UIView in the search bar.  Drag in a new UIView to the middle of the screen.  What happens and why?
 
 <details>
 <summary>Solution</summary>
@@ -128,9 +128,9 @@ Let's take a look at our Button in the Attributes Inspector.  We have some butto
 - currentImage: UIImage?
 - currentBackgroundImage: UIImage?
 
-The text for a button works just the same as it does in a label.
+The `text` for a button works just the same as it does in a label.
 
-The buttonType is a way of setting certain defaults of a button.  Change the type to `Custom` so it will work with images later on.
+The `buttonType` is a way of setting certain defaults of a button.  Change the type to `Custom` so it will work with images later on.
 
 ### UIButton inherits from UIControl
 
@@ -142,9 +142,9 @@ Disabling a button means that the user can't click on it anymore.
 
 ### UIControl inherits from UIView
 
-Finally, under "Control" we see the familiar View options.  We can set a buttons background color, tag and isHidden just like we could with any other view.
+Finally, under "Control" we see the familiar View options.  We can set a button's `background color`, `tag` and `isHidden` just like we could with any other view.
 
-Let's set the text of the button to "Red" and the textColor to .red with the intention of changing the background color to red when the user clicks on the button.  Now let's rerun the app.
+Let's set the `text` of the button to "Red" and the `textColor` to `.red` with the intention of changing the background color to red when the user clicks on the button.  Now let's rerun the app.
 
 # 6. ViewController and Target Action
 
@@ -178,9 +178,9 @@ The Action is the user pressing the Button, and the Target is the code we are ab
 
 ### IBAction
 
-Control click on your button, then drag your cursor over inside your ViewController.
+Control + click on your button, then drag your cursor over inside your ViewController.
 
-A context menu will appear and give you a few options.  Change the *Connection* to *Action* as this is part of our Target-Action pattern.  Then change the *Type* to UIButton, because a button is sending this action over.  Finally, set the *Name* to "colorChangeButtonPressed".
+A context menu will appear and give you a few options.  Change the *Connection* to *Action* as this is part of our Target-Action pattern.  Then change the *Type* to UIButton, because a button is sending this action over.  Finally, set the *Name* to `colorChangeButtonPressed`.
 
 We now have our Action function defined.  We see a new keyword in the definition:
 
@@ -208,7 +208,7 @@ Great!  We've now changed our background color to .red.  We've still got a bug t
 
 What we need to do first is to find a way to talk to our Label inside of our ViewController.  We want to add an *outlet* to our ViewController so that we can refer to other views directly.
 
-We add an Outlet the same way we added an @IBAction.  Control click on the label, then drag into your ViewController.  Keep all properties as they are, and enter the name "displayLabel".   The declaration looks fairly similar to our Action before:
+We add an Outlet the same way we added an @IBAction.  Control + click on the label, then drag into your ViewController.  Keep all properties as they are, and enter the name "displayLabel".  The declaration looks fairly similar to our Action before:
 
 ```swift
 @IBOutlet weak var displayLabel: UILabel!
@@ -216,7 +216,7 @@ We add an Outlet the same way we added an @IBAction.  Control click on the label
 
 @IBOutlet means Interface Builder Outlet.
 
-This is a `weak` variable that is an Optional UILabel.  It's `weak` and Optional due to memory reasons, because our ViewController doesn't exist immediately, the app needs to set it up for us.  We don't need to worry about that right now.  Treat it as a regular variable for now.
+This is a `weak` variable that is an Optional `UILabel`.  It's `weak` and Optional for memory reasons; because our ViewController doesn't exist immediately, the app needs to set it up for us.  We don't need to worry about that right now.  Treat it as a regular variable for now.
 
 Now that we have a way of talking about our label, we want to update it.
 
