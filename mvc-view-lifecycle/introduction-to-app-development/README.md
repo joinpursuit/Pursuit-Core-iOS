@@ -2,7 +2,7 @@
 
 It's now time to get into the world of iOS development.  We have built apps for command line and for experimented with different types in Playground.  Now we will enter the iOS section of the environment and see how we can be creating apps of our own.  Let's start by making a new Project in Xcode.
 
-- Select a Single View Application
+- Select a **Single View Application**
 - For the Product Name, enter "My First App"
 - Save the project in your Projects folder
 
@@ -10,9 +10,9 @@ You should now see a screen that looks like this:
 
 ![Xcode map](https://codewithchris.com/img/xcodetutorial/xcode_7_workspace_diagram.jpg)
 
-In the Navigator area, select the AppDelegate.swift and LaunchScreen.storyboard using command click.  Right click, then select "New Group from Selection" and name that file "Supporting Files".  This is just to clean up what you are looking at.
+In the Navigator area, select the **AppDelegate.swift** and **LaunchScreen.storyboard** using command click.  Right click, then select "New Group from Selection" and name that file "Supporting Files".  This is just to clean up what you are looking at.
 
-Go to the Toolbar, and select iPhone XS. Then hit the play button.
+Go to the Toolbar, and select **iPhone XS**. Then hit the play button.
 
 Congrats!  You made your first app!  It's a blank white screen, but it's a totally functioning app.
 
@@ -49,19 +49,19 @@ Remembering back to when we learned about classes, [UIView](https://developer.ap
 
 Now we want to add some more information to our app.  Let's say we want to have some text displayed to the user. For that we will use a [UILabel](https://developer.apple.com/documentation/uikit/uilabel).
 
-In the **Toolbar Area** select the **Object Library** which is next to the **Standard Editor** tab.  We want to create a label, so type *label* into the search bar.  Then, drag and drop the label into the center of your app.  You can use the blue gridlines to know if it is being placed in the center.  We'll learn much more robust ways of organizing our UI when we get to Autolayout next week.
+In the **Toolbar Area** select the **Object Library** which is next to the **Standard Editor** tab.  We want to create a label, so type *label* into the search bar.  Then, drag and drop the label into the center of your app.  You can use the blue gridlines to know if it is being placed in the center.  We'll learn much more robust ways of organizing our UI when we get to **Auto Layout** next week.
 
-Click on the label and change the text to a different message e.g This is my favorite color, then click play and run your app or use the shortcut, cmd + r.  Now you can display text as well!
+Click on the label and change the text to a different message e.g This is my favorite color, then click play and run your app or use the shortcut, `cmd + r`.  Now you can display text as well!
 
 Let's look a little more in depth into our label.  Clicking back to the Attributes Inspector, we can see all the ways we can manipulate our label. Reminder select the control you're interested in inspecting, in this case make sure to click on the UILabel in the main scene.  Some key properties are:
 
 1. text: String
-2. textAllignment: NSTextAlignment
+2. textAlignment: NSTextAlignment
 3. textColor: UIColor!
 
-We can set the text property by double clicking the label or by editing it in the attributes inspector.  We can also set the textColor just like we set the background color of our main view.
+We can set the text property by double-clicking the label or by editing it in the attributes inspector.  We can also set the textColor just like we set the background color of our main view.
 
-[textAllignment](https://developer.apple.com/documentation/uikit/nstextalignment) is an enum, prefix with NS.  "NS" refers to [NeXTSTEP](https://en.wikipedia.org/wiki/NeXTSTEP).
+[textAlignment](https://developer.apple.com/documentation/uikit/nstextalignment) is an enum, prefix with NS.  "NS" refers to [NeXTSTEP](https://en.wikipedia.org/wiki/NeXTSTEP).
 
 We also see that there is a section marked `View` below that has all of the same properties we just saw in UIView.  Why do we see those same properties in our UILabel?
 
@@ -73,26 +73,26 @@ UILabel inherits from UIView, which means it inherits all of its properties.
 
 
 # 4. Subviews and Superviews
-There are two more key propeties of UIView that we will discuss today:
+There are two more key properties of UIView that we will discuss today:
 
 1. subviews: [UIView]
 2. superView: UIView?
 
-To better understand them, lets look at another tool in Xcode.
+To better understand them, let's look at another tool in Xcode.
 
 Right above the Debug area, to the left of the message "View as: iPhone 8", select the **Document Outline**
 
-We have our View and underneath the view we can see our textLabel makred with an "L".
+We have our View and underneath the view we can see our textLabel marked with an "L".
 
 **For our View:**
 view.subviews is an array with our label
 view.superView is nil
 
 **Let's use some debugging to print out the values of those properties:**  
-1. Navigate to ViewController.swift and click on a line number (gutter) in the viewDidLoad() function after ```super.viewDidLoad```, this will activate a [breakpoint](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/debugging_tools.html). 
-1. A breakpoint enables us to investigate a part of our code for bugs, logic failures or pure investigation. 
+1. Navigate to ViewController.swift and click on a line number (gutter) in the viewDidLoad() function after ```super.viewDidLoad```, this will activate a [breakpoint](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/debugging_tools.html).
+1. A breakpoint enables us to investigate a part of our code for bugs, logic failures or pure investigation.
 1. Run the application using the play button or cmd + r. The application will now stop at the breakpoint you activated.
-1. At this point you can enter ```po view.subviews``` into the console area and press enter. The value of that command will now be shown. 
+1. At this point you can enter ```po view.subviews``` into the console area and press enter. The value of that command will now be shown.
 
 **For our Label:**
 label.subviews is an empty array
@@ -180,19 +180,19 @@ The Action is the user pressing the Button, and the Target is the code we are ab
 
 Control click on your button, then drag your cursor over inside your ViewController.
 
-A context menu will appear and give you a few options.  Change the *Connction* to *Action* as this is part of our Target-Action pattern.  Then change the *Type* to UIButton, because a button is sending this action over.  Finally, set the *Name* to "colorChangeButtonPressed".
+A context menu will appear and give you a few options.  Change the *Connection* to *Action* as this is part of our Target-Action pattern.  Then change the *Type* to UIButton, because a button is sending this action over.  Finally, set the *Name* to "colorChangeButtonPressed".
 
 We now have our Action function defined.  We see a new keyword in the definition:
 
 ```swift
 @IBAction func colorChangeButtonPressed(_ sender: UIButton) {
-        
+
 }
 ```
 
-@IBAction stands for Interface Builder Action.  Interface Builder is the name of the program where we've been working with our Main.storyboard file. 
+@IBAction stands for Interface Builder Action.  Interface Builder is the name of the program where we've been working with our Main.storyboard file.
 
-Now we can define our function.  We want to change the background color of the View that our ViewController controllers to red
+Now we can define our function.  We want to change the background color of the View that our ViewController controls to red
 
 ```swift
 @IBAction func colorChangeButtonPressed(_ sender: UIButton) {
@@ -206,7 +206,7 @@ Great!  We've now changed our background color to .red.  We've still got a bug t
 
 # 7. Outlets
 
-What we need to do first is to find a way to talk to our Label inside of our ViewController.  We want to add an *outlet* to our ViewController so that we can refer to other views directly. =
+What we need to do first is to find a way to talk to our Label inside of our ViewController.  We want to add an *outlet* to our ViewController so that we can refer to other views directly.
 
 We add an Outlet the same way we added an @IBAction.  Control click on the label, then drag into your ViewController.  Keep all properties as they are, and enter the name "displayLabel".   The declaration looks fairly similar to our Action before:
 

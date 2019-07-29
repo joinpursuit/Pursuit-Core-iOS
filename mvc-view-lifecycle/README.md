@@ -18,6 +18,10 @@
 14. [DSA: Stacks](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Stacks/ios/README.md)
 15. [Review](./unit-review/README.md)
 
+## Lecture Code Samples
+
+1. [Our First iOS App!!! (July 29)](./lecture-files/First-App!/My-First-App)
+
 
 | Project | Summary |
 |:------:|:------:|
