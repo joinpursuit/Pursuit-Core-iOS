@@ -23,8 +23,8 @@ We usally talk much more about time complexity.
 func constantTime(arr: [String]) {
      guard arr.count > 0 else {
      	   return
-	   }
-	   print(arr[0])
+     }
+     print(arr[0])
 }
 ```
 Let's assume it takes 10 ms to print a string.  
@@ -43,7 +43,7 @@ We can see that the time it takes to run constantTime(arr:) does not vary.  No m
 func linearTime(arr: [String]) {
      for string in arr {
         print(string)
-	}
+     }
 }
 ```
 |arr.count (n) | Runtime |
@@ -416,18 +416,17 @@ So far, we've been working with functions with either a nested loop, or a single
 func compoundRuntimes(arr: [Int]) {
      for _ in 0..<1000 {
      	 print("Hi!")
-	 }
-	 for num in arr {
-	     print(num)
-	 }
-	 for (indexOne,numOne) in arr.enumerated() {
-	     for (indexTwo, numTwo) in arr.enumerated() {
-	         if indexOne != indexTwo && numOne == numTwo {
-		     print("It's a match! \(numOne) and \(numTwo) are equal")
-		 }
+     }
+     for num in arr {
+	 print(num)
+     }
+     for (indexOne,numOne) in arr.enumerated() {
+	 for (indexTwo, numTwo) in arr.enumerated() {
+	     if indexOne != indexTwo && numOne == numTwo {
+	         print("It's a match! \(numOne) and \(numTwo) are equal")
 	     }
-	  }
-    }
+	 }
+     }
 }
 ```
 <details>
@@ -456,13 +455,13 @@ For the examples below, give the average case runtime
 ### Example One:
 ```swift
 func doStuff(arr: [Int]) {
-     for num in arr {
-     	 for num in arr {
-	     	 for num in arr {
-		     	    print(num)
-		}
-	}
-     }
+    for num in arr {
+        for num in arr {
+            for num in arr {
+                print(num)
+            }
+        }
+    }
 }						
 ```
 
