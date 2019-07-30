@@ -51,7 +51,7 @@ Let's go through an example of creating an app in accordance with MVC design pat
 
 ### Create the view
 
-- Drag in an ImageView from the Object Library the will hold the image of the recipe
+- Drag in an ImageView from the Object Library that will hold the image of the recipe
 - Drag in a Label that will state the name of the recipe
 - Drag in a UITextView, we haven't seen this control. It will have the description and ingredients of the recipe
 - Drag in a few UIButtons to help us navigate through recipes.
