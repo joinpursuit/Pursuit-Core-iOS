@@ -21,6 +21,8 @@
 ## Lecture Code Samples
 
 1. [Our First iOS App!!! (July 29)](./lecture-files/First-App!/My-First-App)
+1. [Flashlight App (July 30)](./lecture-files/flashlight-app/flashlight-app)
+1. [Recipe App (July 30)](./lecture-files/mvc-intro/mvc-intro)
 
 
 | Project | Summary |

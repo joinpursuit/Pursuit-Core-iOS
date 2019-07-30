@@ -175,7 +175,7 @@ struct Recipe {
 We now need an array of recipes in the controller. We will be able to access a particular recipe based on the button that the user presses, by looking through the recipes array.
 
 ```swift
-let recipes = Recipe.getRecipes
+let recipes = Recipe.getRecipes()
 ```
 
 **Excercise**: Complete the implementation of the recipes app by connecting the recipe buttons to the @IBAction function `recipeChanged(_ recipeButton: UIButton)`
