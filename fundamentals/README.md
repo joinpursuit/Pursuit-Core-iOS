@@ -23,7 +23,7 @@
 1. [Properties](./properties/README.md)
 1. [Initialization](./initialization/README.md)
 
-## Lecture Playgrounds and Code Samples
+## 6.1 Lecture Playgrounds and Code
 
 1. [Types Lesson 2 (June 26)](./lecture-playgrounds/LecturePlayground626.playground)
 1. [Control Flow Lesson (June 27)](./lecture-playgrounds/LecturePlayground627.playground)
