@@ -15,8 +15,8 @@ A **protocol** defines a blueprint of methods, properties, and other requirement
 ### 1. Objectives
 
 1. To create and use delegates.
-2. To understand the protocol and delegate design patterns in programming.
-3. To handle delegation in preparation for future lessons.
+1. To understand the protocol and delegate design patterns in programming.
+1. To handle delegation in preparation for future lessons.
 
 ---
 
