@@ -4,26 +4,26 @@
 ---
 ### Readings
 
-1. [The Swift Programming Language (Swift 4): Protocols](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html)
+1. [The Swift Programming Language (Swift 5): Protocols](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html)
 
 ---
 ### Protocols
 
-A **protocol** defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality. The protocol can then be adopted by a class, structure, or enumeration to provide an actual implementation of those requirements. Any type that satisfies the requirements of a protocol is said to conform to that protocol.
+A **protocol** defines a blueprint of methods, properties, and other requirements that suit a **particular task or piece of functionality**. The protocol can then be adopted by a class, structure, or enumeration to provide an actual implementation of those requirements. Any type that satisfies the requirements of a protocol is said to **conform** to that protocol.
 
 ---
 ### 1. Objectives
 
-1. Create and use delegates
-2. Begin to understand the protocols and the delegate design pattern in programming
-3. Handle delegation in preparation for tomorrow
+1. To create and use delegates.
+2. To understand the protocol and delegate design patterns in programming.
+3. To handle delegation in preparation for future lessons.
 
 ---
 
 
-### 2. Why protocols?
+### 2. Why Protocols?
 
-When working with classes, we occasionally might want to try to inherit from two seperate classes.
+When working with classes, we occasionally might want to try to inherit from two separate classes.
 
 ```swift
 class Seed {
@@ -41,37 +41,39 @@ class Food {
 }
 
 ```
-Now let's say that we want to define a class ```SunflowerSeed``` that is both a Seed and a Food.  How could you model this class?
+Now let's say that we want to define a class `SunflowerSeed` that is both a `Seed` and a `Food`.  How could you model this class?
 
 <details>
 <summary>Solution</summary>
 
-It can't inherit from both classes, so you would have to pick one to from inherit from, and then reimplement the properties and methods of the other class yourself.
+It can't inherit from both classes, so you would have to pick one to  inherit from, and then re-implement the properties and methods of the other class yourself.
 
 </details>
 
 
-Situations like this do arise, so we need a better way of connecting objects to each other.  
+Situations like this one arise often, so we need a better way of connecting objects to each other.  
 
 
 ### 3. What is a protocol?
 
-A protocol is a collection of properties and methods.  Protocols can be *adopted* by classes, structs and enums.  In order for another class to adopt/conform to a protocol, it must provide its own implementation for **all** of the properties and methods defined inside of the protocol.  
+A protocol is a collection of properties and methods. Now you know!
+
+Protocols can be *adopted* by classes, structs and enums.  In order for a class to adopt/conform to a protocol, it must provide its own implementation for **all** of the properties and methods that are defined inside the protocol.  
 
 
-When you define a protocol, you define **only** the properties and methods you want the implementing types to have, and not their values. If using properties, their read-write or read-only permissions have to be specified.
+When you define a protocol, you define **only** the properties and methods that you want the implementing types to have. You do not give values to these. When creating properties, you must specify their read-write (get/set) or read-only permissions.
 
 ```swift
 protocol SomeProtocol {
   var someString: String { get set }
   var someInt: Int { get }
-  
+
   func someMethod()
   mutating func someMutatingMethod()
 }
 ```
 
-Whenever we want a type to conform to SomeProtocol, it must have its own implementation of someString, someInt, someMethod() and someMutatingMethod().
+Whenever we want a type to conform to `SomeProtocol`, it must have its own implementation of `someString`, `someInt`, `someMethod()` and `someMutatingMethod()`.
 
 
 Because types can conform to more than one protocol, they can be decorated with default behaviors from multiple protocols. Unlike multiple inheritance of classes which some programming languages support, protocol extensions do not introduce any additional state.
@@ -79,18 +81,16 @@ Because types can conform to more than one protocol, they can be decorated with 
 
 ### 4. Defining types that conform to Protocols (with Properties)
 
-How can we make use of a protocol?  Let's define a protocol that says a struct or class that adopts it must have a fullName.
+How can we make use of a protocol?  Let's define a protocol that says a struct or class that adopts it must have a `fullName`.
 
->From the Apple documentation
->
 
-```swift 
+```swift
 protocol FullyNamed {
   var fullName: String { get }
 }
 ```
 
-**Exercise**: Redefine `Seed` and `Food` as protocols, then create a SunflowerSeed class that adopts both of them.  (Use the names "Plantable" and "Edible")
+**Exercise**: Redefine `Seed` and `Food` as protocols, then create a `SunflowerSeed` class that adopts both of them.  (Use the names "Plantable" and "Edible")
 
 <details>
 <summary>Solution</summary>
@@ -135,7 +135,7 @@ struct Person: FullyNamed {
 Why do we get a compile-time error here?
 <details>
 <summary>Answer</summary>
-We don't have a fullName property defined.
+We don't have a `fullName` property defined.
 </details>
 
 **Exercise**: Fix the implementation above to remove the error
@@ -143,7 +143,7 @@ We don't have a fullName property defined.
 <details>
 <summary>Answer</summary>
 
-```swift 
+```swift
 struct Person: FullyNamed {
   var age: Int
   var occupation: String
@@ -152,9 +152,9 @@ struct Person: FullyNamed {
 ```
 </details>
 
-**Exercise**: Make the Student class below conform to FullyNamed.
+**Exercise**: Make the `Student` class below conform to `FullyNamed`.
 
-```swift 
+```swift
 class Student {
   var gpa: Double
   init(gpa: Double) {
@@ -166,7 +166,7 @@ class Student {
 <details>
 <summary>Answer</summary>
 
-```swift 
+```swift
 class Student: FullyNamed {
   var gpa: Double
   var fullName: String
@@ -178,7 +178,7 @@ class Student: FullyNamed {
 ```
 </details>
 
-**Exercise** Make the TextColor enum below conform to FullyNamed
+**Exercise** Make the `TextColor` enum below conform to `FullyNamed`
 
 ```swift
 enum TextColor: String {
@@ -190,7 +190,7 @@ enum TextColor: String {
 <details>
 <summary>Answer</summary>
 
-```swift 
+```swift
 class TextColor: String, FullyNamed {
   case red = "Red"
   case green = "Green"
@@ -219,7 +219,7 @@ protocol Movable {
   mutating func moveStraightForTenSeconds() -> Point
 }
 ```
-For something to be Movable, it must have a currentPosition, an ability to move to a Point, and an ability to move straight for ten seconds.  
+For something to be `Movable`, it must have a `currentPosition`, an ability to move to a `Point`, and an ability to move straight for ten seconds.  
 
 
 **Exercise:** Make a car class that implements Movable.
@@ -245,7 +245,7 @@ class Car: Movable {
 ```
 </details>
 
-**Exercise:** Make a Plane class that implements Movable.  You'll need to mark the methods in the original protocol as *mutating*.
+**Exercise:** Make a `Plane` class that implements `Movable`.  You'll need to mark the methods in the original protocol as *mutating*.
 
 
 <details>
@@ -300,7 +300,7 @@ class Student: Person, FullyNamed {
 }
 ```
 
-Put the name of any inherited classes first, then any protocols that it is conforming to.
+Code style note: Define the inheriting class(es) first, then define any protocols that it is conforming to.
 
 A class can inherit from only one class, but it can conform to any number of protocols.
 
@@ -324,16 +324,16 @@ class Student: Person, FullyNamed, Movable {
 }
 ```
 
-### 8. Protocol-oriented programming in Swift 
+### 8. Protocol-oriented programming in Swift
 
 We have been using "Object Oriented Programming" so far in the course.  Swift is also a Protocol-oriented language.  Here are some main protocols in iOS:
 
-- Equatable
-- Comparable
-- Hashable
-- Collection
-- Sequence
-- CustomStringConvertible
+- `Equatable`
+- `Comparable`
+- `Hashable`
+- `Collection`
+- `Sequence`
+- `CustomStringConvertible`
 
 We'll talk about these in more detail later in the course, below we are making use `CustomStringConvertible`.  Conforming to this protocol means that you can control what the print() function does.
 
@@ -341,11 +341,11 @@ We'll talk about these in more detail later in the course, below we are making u
 class Person: CustomStringConvertible {
   var age: Int
   var occupation: String
-  
+
   var description: String {
     return "Person\'s age is \(age) and their occupation is \(occupation)"
   }
-  
+
   init(age: Int, occupation: String) {
     self.age = age
     self.occupation = occupation
@@ -368,7 +368,7 @@ let sortedPeople = [john, kim].sorted { $0 < $1 } // Binary operator '<' cannot 
 ### 9. Optional protocol methods
 
 
-In Swift, when you want to conform to a protocol, you must implement **all** its properties and methods.  However, in Objective-C, you could mark certain methods as optional.  You will see this in iOS programming, you can choose whether or not to implement certain methods from a protocol.
+In Swift, when you want to conform to a protocol, you must implement **all** its properties and methods.  However, in Objective-C, you could mark certain methods as `optional`.  You will see this in iOS programming, you can choose whether or not to implement certain methods from a protocol.
 
 ```swift
 @objc protocol FullyNamed {
