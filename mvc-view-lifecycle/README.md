@@ -23,6 +23,8 @@
 1. [Our First iOS App!!! (July 29)](./lecture-files/First-App!/My-First-App)
 1. [Flashlight App (July 30)](./lecture-files/flashlight-app/flashlight-app)
 1. [Recipe App (July 30)](./lecture-files/mvc-intro/mvc-intro)
+1. [Color Changer MVC Warmup (August 1)](./lecture-files/single-view-color-changer-app/single-view-color-changer-app)
+1. [Protocols Lesson (August 1)](./lecture-files/LecturePlayground81.playground/Contents.swift)
 
 ## TBD
 | Project | Summary |
