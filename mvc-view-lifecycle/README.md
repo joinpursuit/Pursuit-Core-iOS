@@ -4,8 +4,8 @@
 
 1. [Introduction to App Development](./introduction-to-app-development/README.md)
 1. [App Architecture: MVC Pattern](./app-architecture-mvc/README.md)
-1. [Protocols](./protocols/README.md)
 1. [DSA: Big O Notation](https://github.com/joinpursuit/DSA-Curriculum/blob/master/big_o_notation/ios/README.md)
+1. [Protocols](./protocols/README.md)
 1. [Lifecycle and Controls](./lifecycle-and-controls/README.md)
 1. [Delegation Through UITextField](./delegations-through-uitextfield/README.md)
 1. [Autolayout](./autolayout/README.md)
