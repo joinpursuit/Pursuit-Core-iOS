@@ -3,9 +3,9 @@
 ## Contents
 
 1. [Introduction to App Development](./introduction-to-app-development/README.md)
-1. [App Architecture: MVC](./app-architecture-mvc/README.md)
+1. [App Architecture: MVC Pattern](./app-architecture-mvc/README.md)
 1. [Protocols](./protocols/README.md)
-1. [Big O Notation](https://github.com/joinpursuit/DSA-Curriculum/blob/master/big_o_notation/ios/README.md)
+1. [DSA: Big O Notation](https://github.com/joinpursuit/DSA-Curriculum/blob/master/big_o_notation/ios/README.md)
 1. [Lifecycle and Controls](./lifecycle-and-controls/README.md)
 1. [Delegation Through UITextField](./delegations-through-uitextfield/README.md)
 1. [Autolayout](./autolayout/README.md)
@@ -24,7 +24,7 @@
 1. [Flashlight App (July 30)](./lecture-files/flashlight-app/flashlight-app)
 1. [Recipe App (July 30)](./lecture-files/mvc-intro/mvc-intro)
 
-
+## TBD
 | Project | Summary |
 |:------:|:------:|
 | [Card Game](https://github.com/joinpursuit/Pursuit-Core-iOS-CardGame) | MVC architecture (model-view-controller), Protocols, Enums, Multiple View Controllers |
