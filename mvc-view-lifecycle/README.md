@@ -26,6 +26,7 @@
 1. [Color Changer MVC Warmup (August 1)](./lecture-files/single-view-color-changer-app/single-view-color-changer-app)
 1. [Protocols Lesson (August 1)](./lecture-files/LecturePlayground81.playground/Contents.swift)
 1. [Protocols Review with Extensions Playground (August 2)](./lecture-files/protocol-review.playground/Contents.swift)
+1. [Lifecycle and Controls (August 2)](./lecture-files/lifecycle-and-control/lifecycle-and-control)
 
 ## TBD
 | Project | Summary |
