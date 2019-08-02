@@ -50,7 +50,7 @@ However, this is not the only method that we have available to us.  The diagram 
 
 ![lifecycle](./images/view_lifecycle.png)
 
-Source: - https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/WWVC_vclife_2x.png
+[image source](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/WWVC_vclife_2x.png)
 
 The four circles represent the various states that your View Controller's view can be in.
 
