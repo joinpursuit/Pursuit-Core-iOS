@@ -26,6 +26,7 @@
 ## Source Code and Lectures
 
 [6.1 Unit 1 Lecture Playgrounds and Code](./lecture-playgrounds)
+
 [6.1 Lecture Videos](https://www.youtube.com/channel/UCDN46W3L67JMtrRb-u_cgCA)
 
 ## (Unused Lectures)

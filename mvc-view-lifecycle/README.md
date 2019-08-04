@@ -21,7 +21,9 @@
 ## Source Code and Lectures
 
 [6.1 Unit 1 Lecture Code](./lecture-files)
+
 [6.1 Pairing App](https://github.com/davidlawrencer/6.1-pairing-generator)
+
 [Lecture Videos](https://www.youtube.com/channel/UCDN46W3L67JMtrRb-u_cgCA)
 
 ## TBD
