@@ -20,7 +20,7 @@
 
 ## Source Code and Lectures
 
-[6.1 Unit 1 Lecture Code](./lecture-files)
+[6.1 Unit 2 Lecture Code](./lecture-files)
 
 [6.1 Pairing App](https://github.com/davidlawrencer/6.1-pairing-generator)
 
