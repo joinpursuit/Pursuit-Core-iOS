@@ -7,3 +7,6 @@
 1. [Protocols Lesson (August 1)](../lecture-files/LecturePlayground81.playground/Contents.swift)
 1. [Protocols Review with Extensions Playground (August 2)](../lecture-files/protocol-review.playground/Contents.swift)
 1. [Lifecycle and Controls (August 2)](../lecture-files/lifecycle-and-control/lifecycle-and-control)
+1. [UIControl Warmup (August 5)](../lecture-files/idk/idk)
+1. [Delegate Pattern Playground (August 5)](../lecture-files/Lecture85.playground/Contents.swift)
+1. [UITextField and Delegate (August 5)](../lecture-files/uitextfields-delegates/uitextfields-delegates)
