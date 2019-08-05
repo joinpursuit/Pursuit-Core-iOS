@@ -7,7 +7,7 @@
 1. [DSA: Big O Notation](https://github.com/joinpursuit/DSA-Curriculum/blob/master/big_o_notation/ios/README.md)
 1. [Protocols](./protocols/README.md)
 1. [Lifecycle and Controls](./lifecycle-and-controls/README.md)
-1. [Delegation Through UITextField](./delegations-through-uitextfield/README.md)
+1. [Delegation Through UITextField](./delegation-through-uitextfield/README.md)
 1. [Autolayout](./autolayout/README.md)
 1. [UITableView](./uitableview/README.md)
 1. [Custom UITableView Cells](./custom-uitableviewcells/README.md)
