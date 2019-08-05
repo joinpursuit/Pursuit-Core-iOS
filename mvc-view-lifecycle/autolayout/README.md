@@ -35,7 +35,7 @@ Run your app and rotate it.  Is the view still in the center?
 
 The guidelines can only take us so far.  If we control the type of phone that we are running on, we can make the UI look good, but users of our apps will be using iPhones of all different sizes.  
 
-# 2. Allignment Constraints
+# 2. Alignment Constraints
 
 Let's make it so that our rectangle is always in the middle of the screen.  How can we do that?  There are 3 different ways we can configure autolayout in Interface Builder:
 
