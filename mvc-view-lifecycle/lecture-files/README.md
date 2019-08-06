@@ -10,3 +10,4 @@
 1. [UIControl Warmup (August 5)](../lecture-files/idk/idk)
 1. [Delegate Pattern Playground (August 5)](../lecture-files/Lecture85.playground/Contents.swift)
 1. [UITextField and Delegate (August 5)](../lecture-files/uitextfields-delegates/uitextfields-delegates)
+1. [Text Twist Runthrough (August 6)](https://github.com/davidlawrencer/textfield-delegate-runthrough)
