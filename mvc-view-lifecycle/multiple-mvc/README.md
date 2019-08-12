@@ -65,13 +65,13 @@ Build and run the app and observe how you can move from one View Controller to a
 
 One common thing we want to do when using an application is to click on something for more information.
 
-[exOne](https://i.stack.imgur.com/1kb6d.png)
-[exTwo](https://www.wikihow.com/images/thumb/c/c9/Use-the-Augmented-Reality-Monocle-on-the-Yelp-for-iPhone-App-Step-8.jpg/aid2295937-v4-900px-Use-the-Augmented-Reality-Monocle-on-the-Yelp-for-iPhone-App-Step-8.jpg)
-[exThree](https://img.gadgethacks.com/img/original/93/41/63555444654612/0/635554446546129341.jpg)
+![exOne](https://i.stack.imgur.com/1kb6d.png)
+![exTwo](https://www.wikihow.com/images/thumb/c/c9/Use-the-Augmented-Reality-Monocle-on-the-Yelp-for-iPhone-App-Step-8.jpg/aid2295937-v4-900px-Use-the-Augmented-Reality-Monocle-on-the-Yelp-for-iPhone-App-Step-8.jpg)
+![exThree](https://img.gadgethacks.com/img/original/93/41/63555444654612/0/635554446546129341.jpg)
 
 Once we've tapped on a cell for more information, we see a new screen, and can tap a back button to return where we were before.
 
-[backButton](https://public.steelkiwi.com/media/filer_public/a2/5f/a25f1feb-4d01-4723-a530-a6ee7d0fec28/key_differences_in_design_of_native_applications_image_12.png)
+![backButton](https://public.steelkiwi.com/media/filer_public/a2/5f/a25f1feb-4d01-4723-a530-a6ee7d0fec28/key_differences_in_design_of_native_applications_image_12.png)
 
 We can use a NavigationController to achieve this in applications that we write.  Below, we'll make an app that displays a list of movies, and allows the user to tap on a movie for more information.  
 
@@ -81,27 +81,27 @@ Download the starter project [here](https://github.com/joinpursuit/Pursuit-Core-
 
 To embed our VC in a NavigationController, click on "embed in Navigation Controller" in the toolbar at the bottom.
 
-[image](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/EmbedinNavVC.png)
+![image](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/EmbedinNavVC.png)
 
 When we build and run our application, we see that there is now a grey bar at the top.  This is reserved for things like the back button that we'll need.
 
-[image](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/greyBarOnTop.png)
+![image](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/greyBarOnTop.png)
 
 Let's set up our ViewController to have a table view inside of it
 
-[tableViewSetupImage](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/tableViewcontraint.png)
+![tableViewSetupImage](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/tableViewcontraint.png)
 
 Then, let's give our tableView 1 prototype cell and set it up as a Subtitle cell with an ID of "movieCell"
 
-[idOfCell](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/idOfCell.png)
+![idOfCell](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/idOfCell.png)
 
 Now, let's build another View Controller that will show more information about the movie when a user taps on a cell:
 
-[detailVC](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/detailVC.png)
+![detailVC](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/detailVC.png)
 
 Finally, we need a way to connect them.  Hold down control, then drag from the tableViewCell to the View controller, then select "Show" for the segue option.  Then, click on your segue and name is "movieSegue"
 
-[movieSegue](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/movieSegue.png)
+![movieSegue](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/movieSegue.png)
 
 That's our Storyboard!  Now we can build in the View Controllers
 
@@ -109,11 +109,11 @@ That's our Storyboard!  Now we can build in the View Controllers
 
 Let's start by renaming our View controller.  Right click on the class "ViewController", then click "Refactor" and "Rename..." and change its name to "MoviesViewController"
 
-[rename image](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/RefactorRename.png)
+![rename image](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/RefactorRename.png)
 
 Create an outlet from the tableView to your viewController.
 
-[outlet image](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/tableViewoutlet.png)
+![outlet image](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/tableViewoutlet.png)
 
 Now, let's add our implementation to show all of the data in the movies array:
 
@@ -175,7 +175,7 @@ extension MoviesViewController: UITableViewDelegate {}
 
 Now, let's build and run our app.  We should see the following:
 
-[stepOneGif](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/NoSegueHookupGif.gif)
+![stepOneGif](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/NoSegueHookupGif.gif)
 
 What's happening?  Our NavigationController and segues are working great!  We are moving to the new ViewController whenever we tap a cell.  But we haven't set up that ViewController yet to prepare it for a Movie.
 
@@ -195,7 +195,7 @@ class MovieDetailViewController: UIViewController {
 
 Back in your Storyboard file, change the class of your detail View controller to "MovieDetailViewController"
 
-[movieVCChangeName](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/movieVCchangeName.png)
+![movieVCChangeName](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/movieVCchangeName.png)
 
 Then drag in all of your outlets
 
@@ -259,4 +259,4 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 }
 ```
 
-[finalGif](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/finalGif.gif)
+![finalGif](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/finalGif.gif)
