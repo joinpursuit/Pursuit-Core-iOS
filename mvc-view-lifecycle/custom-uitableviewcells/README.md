@@ -4,31 +4,31 @@
 
 ### Readings (in Recommended Order)
 1. [A Beginner's Guide to AutoLayout w/ Xcode 8 - Appcoda](http://www.appcoda.com/auto-layout-guide/)
-2. [Understanding AutoLayout - Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html#//apple_ref/doc/uid/TP40010853-CH7-SW1)
-  1. [Anatomy of a Constraint](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/AnatomyofaConstraint.html#//apple_ref/doc/uid/TP40010853-CH9-SW1)
-  2. [Working With Constraints in IB](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithConstraintsinInterfaceBuidler.html#//apple_ref/doc/uid/TP40010853-CH10-SW1)
-  3. [Simple Constraints](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSimpleConstraints.html#//apple_ref/doc/uid/TP40010853-CH12-SW1)
-  4. [Working with Self-Sizing Table View Cells](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSelf-SizingTableViewCells.html#//apple_ref/doc/uid/TP40010853-CH25-SW1)
-3. [Array.sorted() - Apple Docs](https://developer.apple.com/documentation/swift/array/2905744-sorted)
+1. [Understanding AutoLayout - Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html#//apple_ref/doc/uid/TP40010853-CH7-SW1)
+1. [Anatomy of a Constraint](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/AnatomyofaConstraint.html#//apple_ref/doc/uid/TP40010853-CH9-SW1)
+1. [Working With Constraints in IB](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithConstraintsinInterfaceBuidler.html#//apple_ref/doc/uid/TP40010853-CH10-SW1)
+1. [Simple Constraints](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSimpleConstraints.html#//apple_ref/doc/uid/TP40010853-CH12-SW1)
+1. [Working with Self-Sizing Table View Cells](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSelf-SizingTableViewCells.html#//apple_ref/doc/uid/TP40010853-CH25-SW1)
+1. [Array.sorted() - Apple Docs](https://developer.apple.com/documentation/swift/array/2905744-sorted)
 
 ### Further Readings (Optional)
-3. [Designing for iOS - Design+Code](https://designcode.io/iosdesign-guidelines)
-4. [Extensions - Apple](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html)
-5. [Custom Fonts in Swift - GrokSwift](https://grokswift.com/custom-fonts/)
+1. [Designing for iOS - Design+Code](https://designcode.io/iosdesign-guidelines)
+1. [Extensions - Apple](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html)
+1. [Custom Fonts in Swift - GrokSwift](https://grokswift.com/custom-fonts/)
 
 ---
 ### Vocabulary
 
 1. **Autolayout** - Auto Layout dynamically calculates the size and position of all the views in your view hierarchy, based on constraints placed on those views. Because elements are laid out relative to other elements, resizing is dynamic and a UI looks consistant regardless of screen size. ([Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html))
-2. **Content Hugging**: How much content does not want to grow. ([Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithConstraintsinInterfaceBuidler.html#//apple_ref/doc/uid/TP40010853-CH10-SW2))
-3. **Compression Resistance**: How much content does not want to shrink. ([Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithConstraintsinInterfaceBuidler.html#//apple_ref/doc/uid/TP40010853-CH10-SW2))
+1. **Content Hugging**: How much content does not want to grow. ([Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithConstraintsinInterfaceBuidler.html#//apple_ref/doc/uid/TP40010853-CH10-SW2))
+1. **Compression Resistance**: How much content does not want to shrink. ([Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithConstraintsinInterfaceBuidler.html#//apple_ref/doc/uid/TP40010853-CH10-SW2))
 
 ---
 # 0. Objectives
 1. Create customized, self-sizing `UITableViewCell` using IB **(Interface Builder)**
-2. Understanding *"minimally satisfying constraints"* in AutoLayout
-3. Learning basics of iOS Design
-5. (Extra) Modifying a projects `.plist` to use custom fonts
+1. Understanding *"minimally satisfying constraints"* in AutoLayout
+1. Learning basics of iOS Design
+1. (Extra) Modifying a projects `.plist` to use custom fonts
 
 
 # 1. Review:
@@ -144,16 +144,16 @@ struct MovieData {
 1. Create a new `UITableViewCell` subclass by going to File > New > File... and selecting `Cocoa Touch Class`
   - Have this subclass from `UITableViewCell` and name the new class `MovieTableViewCell`
   - *If you'd like to be thorough: before saving, create a new Folder called "Views" to create the file in. Then right-click the `MovieTableViewCell.swift` file and select "New Group from Selection" and name the new group "Views"*
-2. Go into storyboard, select the protoype cell, switch "Style" to "Custom" (note that the prototype cell in the storyboard changes) and switch its class type to `MovieTableViewCell` in the "Identity Inspector" in the Utilities pane.
+1. Go into storyboard, select the prototype cell, switch "Style" to "Custom" (note that the prototype cell in the storyboard changes) and switch its class type to `MovieTableViewCell` in the "Identity Inspector" in the Utilities pane.
   - ![Subclassing the New Prototype cell](./Images/subclassing_movie_cell.png)
-3. Open the *Utilities Area* and select the *Attributes Inspector*
-4. Switch to the *Size Inspector* in the *Utilities Area* and give the `MovieTableViewCell` a custom row height of 200pt to give us a little room to work with (note: this will only be 200pts in the storyboard, and at runtime, our autolayout guides will expand/shrink as needed)
+1. Open the *Utilities Area* and select the *Attributes Inspector*
+1. Switch to the *Size Inspector* in the *Utilities Area* and give the `MovieTableViewCell` a custom row height of 200pt to give us a little room to work with (note: this will only be 200pts in the storyboard, and at runtime, our autolayout guides will expand/shrink as needed)
   - ![Adjusting the cell height](./Images/custom_cell_height.png)
-5. From the *Object Library*, drag over a `UIImageView` into the `contentView` of the cell
+1. From the *Object Library*, drag over a `UIImageView` into the `contentView` of the cell
   - ![Locating an Imageview](./Images/filtering_for_image_view.png)
-6. Align the `UIImageView` to the left side of the cell, such that the alignment lines show up on the top, left, and bottom sides of the imageview.
+1. Align the `UIImageView` to the left side of the cell, such that the alignment lines show up on the top, left, and bottom sides of the imageview.
   - ![Aligning using guides](./Images/aligning_imageview_in_storyboard.png)
-7. Select the imageView, click on the *Align* button, and select "Vertically in Container" and switch "Update Frames" to "All Frames in Container"
+1. Select the imageView, click on the *Align* button, and select "Vertically in Container" and switch "Update Frames" to "All Frames in Container"
   - This will ensure that the imageView will be aligned vertically in the content view (sets imageView.centerY `NSLayoutAttribute` to contentView.centerY)
   - Changing the "Update Frames" option makes sure that the storyboard updates the UI to match these changes. If you don't do this, you could have the proper constraints in place, but Xcode will warn you that the constraints you've applied don't match what's being seen in storyboard.
   - ![Alignment in Y-axis](./Images/aligning_vertical_in_container.png)
@@ -163,11 +163,11 @@ struct MovieData {
   - ![Image View Constraints (Pin)](./Images/pinning_image_edges.png)
 9. Its possible that the storyboard hasn't updated its views to match the constraints you've set, so you may need to click on *Resolve Autolayout Issues* and select "Update Frames".
   - When selecting this, Xcode will look at the constraints you've set and try to update the storyboard elements to match their constraints. If you've done everything right up until this point, you should no longer see any warnings or errors in storyboard
-  - *Some Advice: Using the storyboard can be quite frustrationg at times. I would highly recommend that if you make an error somewhere along the line, to just select the problematic view, click on "Clear Constraints" and just start over. It's very difficult, especially when starting out, to resolve layout issues when you have many existing (and potentially) conflicting constraints in place. Once you've become a little experienced with it, you can try to resolve them on your own. But for now, you may find that just clearing the constraints is ultimately faster.*
+  - *Some Advice: Using the storyboard can be quite frustrating at times. I would highly recommend that if you make an error somewhere along the line, to just select the problematic view, click on "Clear Constraints" and just start over. It's very difficult, especially when starting out, to resolve layout issues when you have many existing (and potentially) conflicting constraints in place. Once you've become a little experienced with it, you can try to resolve them on your own. But for now, you may find that just clearing the constraints is ultimately faster.*
   - ![ImageView aligned in IB](./Images/image_all_constraints_shown.png)
 10. Now, add a `UILabel` to the right of the `UIImageView` with the following constraints:
   - ![Movie Title Label Constraints](./Images/movie_title_constraints.png)
-  - 8pts from top, left, right
+  - 8pt from top, left, right
   - 17pt font
   - Left aligned
   - Name it: Movie Title Label
@@ -217,7 +217,7 @@ Make the <code>vertical content hugging</code> priority of the <code>movieSummar
 
 ---
 # 3. Linking Storyboard Elements to a custom `UITableViewCell`
-With our prototype cell's constraints completed, now its necessary to link it up so our project uses the new prototype.
+With our prototype cell's constraints completed, now it's necessary to link it so our project uses the new prototype.
 
 However is most comfortable (typing and/or ctrl+dragging), add three `IBOutlet`s to `MovieTableViewCell` and make sure they are linked to your prototype cell. Name the elements `movieTitleLabel`, `movieSummaryLabel`, and `moviePosterImageView`
 
@@ -252,13 +252,13 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 3. Because we've defined and set up the UI elements of the `MovieTableViewCell`, we know which values of the `Movie` should be given to each element.
 4. At this point, we've set up the `cell` and just have to return it.
 
-Great! Now let's run and see our new cell in action (note: this may work  on your machine.  It can be tempermental).
+Great! Now let's run and see our new cell in action (note: this may work on your machine.  It can be temperamental).
 
-<img src="./Images/movie_cells_squished.png" width="400" alt="Not enough space for the cells!">
+![Not enough space for the cells!](./Images/movie_cells_squished.png)
 <br>
-<img src="./Images/broken_cell_constraints.png" width="500" alt="Broken constraints in console">
+![Broken constraints in console](./Images/broken_cell_constraints.png)
 
-Oh, something's wrong... remember before I mentioned that there are a few critial things you need to do in order to get self-sizing cells with autolayout? Well, constraining everything relative the the `contentView` is one, but there are two more:
+Oh, something's wrong... remember before I mentioned that there are a few critical things you need to do in order to get self-sizing cells with autolayout? Well, constraining everything relative the the `contentView` is one, but there are two more:
 
 1. You need to set the `tableView.rowHeight` property to `UITableViewAutomaticDimension`
 2. You need to set the `tableView.estimatedRowHeight` property to any value (but as close to actual size as possible)
@@ -271,7 +271,7 @@ So add the following to `viewDidLoad`, just before we parse our `Movie` data obj
 ```
 And now re-run the project. Much better right?
 
-<img src="./Images/auto_sized_movie_cells.png" width="400" alt="Correctly sized... mostly">
+![Correctly sized... mostly](./Images/auto_sized_movie_cells.png)
 
 ---
 
@@ -279,7 +279,7 @@ And now re-run the project. Much better right?
 
 Depending on the iPhone model your simulation is running on, you probably notice a problem with the summary text: it's being cut off! While it's true that our summary text label will expand as needed for text, there are two constraints that are holding the cell at a specific height. See if you can figure out which two those are.
 
-<img src="./Images/auto_sized_movie_cells_trailing_summary.png" width="400" alt="Truncated text">
+![Truncated text](./Images/auto_sized_movie_cells_trailing_summary.png)
 
 <br>
 <details><summary>Hint 1</summary>
@@ -303,7 +303,7 @@ Anything with a pre-set height or width, can prevent autoresizing like this.
 </details>
 <br>
 
-<img src="./Images/auto_sized_movie_cells_no_truncate.png" width="400" alt="No more truncation on summary labels">
+![No more truncation on summary labels](./Images/auto_sized_movie_cells_no_truncate.png)
 
 
 #### Styling of Cells
@@ -343,5 +343,3 @@ You should see `Roboto` among the fonts listed in the console log. Then if you w
 You will see `["Roboto-Light", "Roboto-Black", "Roboto-Bold", "Roboto-Regular"]` if all has been done properly.
 
 Once you've validated your fonts, change your `NSFontAttribute` value from before, and update your storyboard's prototype `MovieTableViewCell` (use Roboto-Regular, 17pt for the title text and Roboto-Light, 12pt for the summary text)
-
-

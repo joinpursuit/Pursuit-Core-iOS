@@ -4,10 +4,10 @@
 
 ### Readings
 
-1. [Swith TableView Basics - Tutsplus](https://code.tutsplus.com/tutorials/ios-from-scratch-with-swift-table-view-basics--cms-25160)
-1.  ["A Closer Look at Table View Cells" - Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/TableView_iPhone/TableViewCells/TableViewCells.html#//apple_ref/doc/uid/TP40007451-CH7)
-2. [Protocols - Swift Library Reference](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html)
-3. [Storyboards Tutorial Part 1 - RW](https://www.raywenderlich.com/113388/storyboards-tutorial-in-ios-9-part-1)
+1. [Swift TableView Basics - Tutsplus](https://code.tutsplus.com/tutorials/ios-from-scratch-with-swift-table-view-basics--cms-25160)
+1.  ["A Closer Look at Table View Cells" - Apple](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/TableView_iPhone/TableViewCells/TableViewCells.html#//apple_ref/doc/uid/TP40007451-CH7)
+2. [Protocols - Swift Library Reference](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html)
+3. [Storyboards Tutorial Part 1 - Ray Wenderlich](https://www.raywenderlich.com/464-storyboards-tutorial-for-ios-part-1)
 
 ### References
 
@@ -30,7 +30,7 @@
 
 ---
 ### 0. Objectives
-1. Understand how [`UITableView`s](https://developer.apple.com/reference/uikit/uitableview) efficiently display and manage data in `UITableViewCell`s (["A Closer Look at Table View Cells"](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/TableView_iPhone/TableViewCells/TableViewCells.html#//apple_ref/doc/uid/TP40007451-CH7))
+1. Understand how [`UITableViews](https://developer.apple.com/reference/uikit/uitableview) efficiently display and manage data in `UITableViewCell`s (["A Closer Look at Table View Cells"](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/TableView_iPhone/TableViewCells/TableViewCells.html#//apple_ref/doc/uid/TP40007451-CH7))
 2. Learn how to populate and display data in `UITableView` by way of its delegate protocols (`UITableViewDataSource`,  `UITableViewDelegate`)
 3. Further your understanding of protocols ([Swift 4- Protocols](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html))
 
@@ -61,9 +61,9 @@ How can we display a list of all of the movies that we have?  We could make a la
 
 </details>
 
-In order to resolve these issues, we will need to look at a new structure, a **UITableView**.  
+In order to resolve these issues, we will need to look at a new structure. **UITableView** to the rescue 🦸‍!
 
-Go to your Main.storyboard file and go to the *Object Library*.  Drag a TableViewinto your ViewController.  Use Auto Layout to pin your ViewController to the edges of the screen. Change the background color of your View Controller to .blue. Build and run your app.
+Go to your Main.storyboard file and go to the *Object Library*.  Drag a TableView into your ViewController.  Use Auto Layout to pin your ViewController to the edges of the screen. Change the background color of your View Controller to .blue. Build and run your app.
 
 We now see a blue area with a lines drawn through it.  A good start, but we don't see any data in between the lines.  Let's find out how to hook up our TableView to our Movie data.
 
@@ -197,7 +197,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 }
 ```
 
-When we rebuild our app, we notice no change.  Why is this?  The cell we used was a default UITableViewCell().  It has only a textLabel that is visible.  If we want other elements to appear, we must make our own TablViewCell through Interface Builder.
+When we rebuild our app, we notice no change.  Why is this?  The cell we used was a default UITableViewCell().  It has only a textLabel that is visible.  If we want other elements to appear, we must make our own TableViewCell through Interface Builder.
 
 ### 5. Prototype Cells
 
@@ -207,10 +207,10 @@ Go to Main.storyboard, and select the tableView inside your ViewController.
 - Change the `Style` from "Custom" to "Subtitle"
 - Give the cell a "Reuse Identifier" of "Day Cell"
 
-Return to your ViewController and your tableView(_: cellForRowAt:) method.  Instead of making a generic UITableViewCell, we want to create the cell that we just defined inside our Interface Builder.
+Return to your ViewController and your tableView(cellForRowAt:) method.  Instead of making a generic UITableViewCell, we want to create the cell that we just defined inside our Interface Builder.
 
 ```swift
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+func tableView( tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let rowToSetUp = indexPath.row
     let dayAtRow = daysOfWeek[rowToSetUp]
     let cell = tableView.dequeueReusableCell(withIdentifier: "Day Cell")! //NEW

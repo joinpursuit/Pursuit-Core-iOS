@@ -105,7 +105,7 @@ I want to add two to `initialNumber`, and then triple it.  How can I use the fun
 
 `addTwoAndTriple(x: initialNumber)`
 
-Great start!  When we put this into out Playground, we see the correct value of 36 appear on the right hand side.  But that number doesn't show up anywhere else.  We could print it, but then we've lost it in our code.  How can we retain the value that we want?  This question brings us a key understanding about functions:
+Great start!  When we put this into our Playground, we see the correct value of 36 appear on the right hand side.  But that number doesn't show up anywhere else.  We could print it, but then we've lost it in our code.  How can we retain the value that we want?  This question brings us a key understanding about functions:
 
 
 ### A call to a function IS its return type

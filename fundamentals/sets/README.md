@@ -147,6 +147,56 @@ print(farmAnimals.isSuperset(of: houseAnimals)) // true
 print(farmAnimals.isDisjoint(with: cityAnimals)) // true
 ```
 
+### Practice Problems
+
+#### 1. Does the following compile?
+
+```swift
+struct Person {
+  let name: String
+  let age: String
+}
+let alex = Person(name: "Tom", age: "29")
+let sally = Person(name: "Sally", age: "26")
+
+let names: Set<Person> = [alex, sally]
+```
+<details>
+    <summary>Solution</summary>
+
+    No. The reason is that Person does not conform to the Hashable protocol. The elements in a Set needs to conform to Hashable in order to keep a Set's elements unique.
+
+</details>
+
+Fix the code above so it compiles.
+
+<details>
+    <summary>Solution</summary>
+
+```swift
+struct Person: Hashable {
+  let name: String
+  let age: String
+}
+let alex = Person(name: "Tom", age: "29")
+let sally = Person(name: "Sally", age: "26")
+```
+
+</details>
+
+
+#### 2. Perform fundamental set operations on the following lists:
+
+1. Find the intersection and print the result
+2. Find the symmetric difference and print the result
+3. Find the union and print the result
+4. What is the outcome of subtracting list 2 from list1? Print the result
+
+```swift
+let list1: Set = [1, 3, 4, 6, 2, 7, 9]
+let list2: Set = [3, 7, 13, 10, 4]
+```
+
 ### Standards
 
 IOS: IOS.1

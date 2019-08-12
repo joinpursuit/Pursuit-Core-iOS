@@ -1,0 +1,15 @@
+## 6.1 Lecture Code
+
+1. [Our First iOS App!!! (July 29)](../lecture-files/First-App!/My-First-App)
+1. [Flashlight App (July 30)](../lecture-files/flashlight-app/flashlight-app)
+1. [Recipe App (July 30)](../lecture-files/mvc-intro/mvc-intro)
+1. [Color Changer MVC Warmup (August 1)](/./lecture-files/single-view-color-changer-app/single-view-color-changer-app)
+1. [Protocols Lesson (August 1)](../lecture-files/LecturePlayground81.playground/Contents.swift)
+1. [Protocols Review with Extensions Playground (August 2)](../lecture-files/protocol-review.playground/Contents.swift)
+1. [Lifecycle and Controls (August 2)](../lecture-files/lifecycle-and-control/lifecycle-and-control)
+1. [UIControl Warmup (August 5)](../lecture-files/idk/idk)
+1. [Delegate Pattern Playground (August 5)](../lecture-files/Lecture85.playground/Contents.swift)
+1. [UITextField and Delegate (August 5)](../lecture-files/uitextfields-delegates/uitextfields-delegates)
+1. [Text Twist Runthrough (August 6)](https://github.com/davidlawrencer/textfield-delegate-runthrough)
+1. [Our First TableView](https://github.com/davidlawrencer/our-first-tableview)
+1. [Animals Using TableViewCells](https://github.com/davidlawrencer/animals-with-custom-table-view-cells)
