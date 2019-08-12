@@ -25,7 +25,7 @@
 
 1. Understand how to connect multiple MVCs
 2. Understand segues in storyboard to transition between view controllers
-3. Futher our understanding of `UITableViewController` delegate functions
+3. Further our understanding of `UITableViewController` delegate functions
 4. Create a new custom `UIViewController` to display a single `Movie` object's data
 
 
@@ -75,33 +75,33 @@ Once we've tapped on a cell for more information, we see a new screen, and can t
 
 We can use a NavigationController to achieve this in applications that we write.  Below, we'll make an app that displays a list of movies, and allows the user to tap on a movie for more information.  
 
-Download the starter project [here]() to get the repository with the images.
+Download the starter project [here](https://github.com/joinpursuit/Pursuit-Core-Multiple-MVC-Starter-Project) to get the repository with the images.
 
 # 4. Building the Views
 
 To embed our VC in a NavigationController, click on "embed in Navigation Controller" in the toolbar at the bottom.
 
-[image]
+[image](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/EmbedinNavVC.png)
 
 When we build and run our application, we see that there is now a grey bar at the top.  This is reserved for things like the back button that we'll need.
 
-[image]
+[image](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/greyBarOnTop.png)
 
 Let's set up our ViewController to have a table view inside of it
 
-[tableViewSetupImage]
+[tableViewSetupImage](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/tableViewcontraint.png)
 
 Then, let's give our tableView 1 prototype cell and set it up as a Subtitle cell with an ID of "movieCell"
 
-[idOfCell]
+[idOfCell](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/idOfCell.png)
 
 Now, let's build another View Controller that will show more information about the movie when a user taps on a cell:
 
-[detailVC]
+[detailVC](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/detailVC.png)
 
 Finally, we need a way to connect them.  Hold down control, then drag from the tableViewCell to the View controller, then select "Show" for the segue option.  Then, click on your segue and name is "movieSegue"
 
-[movieSegue]
+[movieSegue](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/movieSegue.png)
 
 That's our Storyboard!  Now we can build in the View Controllers
 
@@ -109,11 +109,11 @@ That's our Storyboard!  Now we can build in the View Controllers
 
 Let's start by renaming our View controller.  Right click on the class "ViewController", then click "Refactor" and "Rename..." and change its name to "MoviesViewController"
 
-[rename image]
+[rename image](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/RefactorRename.png)
 
 Create an outlet from the tableView to your viewController.
 
-[outlet image]
+[outlet image](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/tableViewoutlet.png)
 
 Now, let's add our implementation to show all of the data in the movies array:
 
@@ -122,52 +122,52 @@ import UIKit
 
 class MoviesViewController: UIViewController {
 
-// MARK: - IBOutlets
+  // MARK: - IBOutlets
 
-@IBOutlet var moviesTableView: UITableView!
+  @IBOutlet var moviesTableView: UITableView!
 
-// MARK: - Private Properties
+  // MARK: - Private Properties
 
-private var movies = [Movie]() {
-didSet {
-moviesTableView.reloadData()
-}
-}
+  private var movies = [Movie]() {
+    didSet {
+      moviesTableView.reloadData()
+    }
+  }
 
-// MARK: - Lifecycle Methods
+  // MARK: - Lifecycle Methods
 
-override func viewDidLoad() {
-super.viewDidLoad()
-configureTableView()
-loadData()
-}
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    configureTableView()
+    loadData()
+  }
 
-// MARK: - Private Methods
+  // MARK: - Private Methods
 
-private func configureTableView() {
-moviesTableView.dataSource = self
-moviesTableView.delegate = self
-}
+  private func configureTableView() {
+    moviesTableView.dataSource = self
+    moviesTableView.delegate = self
+  }
 
-private func loadData() {
-movies = Movie.allMovies
-}
+  private func loadData() {
+    movies = Movie.allMovies
+  }
 }
 
 extension MoviesViewController: UITableViewDataSource {
-func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-return movies.count
-}
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return movies.count
+  }
 
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-guard let cell = moviesTableView.dequeueReusableCell(withIdentifier: "movieCell") else {
-fatalError("Unknown Cell Identifier")
-}
-let movie = movies[indexPath.row]
-cell.textLabel?.text = movie.name
-cell.detailTextLabel?.text = "\(movie.year)"
-return cell
-}
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    guard let cell = moviesTableView.dequeueReusableCell(withIdentifier: "movieCell") else {
+      fatalError("Unknown Cell Identifier")
+    }
+    let movie = movies[indexPath.row]
+    cell.textLabel?.text = movie.name
+    cell.detailTextLabel?.text = "\(movie.year)"
+    return cell
+  }
 }
 
 extension MoviesViewController: UITableViewDelegate {}
@@ -175,7 +175,7 @@ extension MoviesViewController: UITableViewDelegate {}
 
 Now, let's build and run our app.  We should see the following:
 
-[stepOneGif]
+[stepOneGif](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/NoSegueHookupGif.gif)
 
 What's happening?  Our NavigationController and segues are working great!  We are moving to the new ViewController whenever we tap a cell.  But we haven't set up that ViewController yet to prepare it for a Movie.
 
@@ -187,15 +187,15 @@ Make a new Swift class that inherits from UIViewController named "MovieDetailVie
 import UIKit
 
 class MovieDetailViewController: UIViewController {
-override func viewDidLoad() {
-super.viewDidLoad()
-}
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    }
 }
 ```
 
 Back in your Storyboard file, change the class of your detail View controller to "MovieDetailViewController"
 
-[movieVCChangeName]
+[movieVCChangeName](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/movieVCchangeName.png)
 
 Then drag in all of your outlets
 
@@ -208,30 +208,30 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
 
-// MARK: - Internal Properties
+  // MARK: - Internal Properties
 
-var movie: Movie!
+  var movie: Movie!
 
-// MARK: - IBOutlets
+  // MARK: - IBOutlets
 
-@IBOutlet var movieImageView: UIImageView!
-@IBOutlet var movieTitleLabel: UILabel!
-@IBOutlet var movieDescriptionTextView: UITextView!
+  @IBOutlet var movieImageView: UIImageView!
+  @IBOutlet var movieTitleLabel: UILabel!
+  @IBOutlet var movieDescriptionTextView: UITextView!
 
-// MARK: - Lifecycle Methods
+  // MARK: - Lifecycle Methods
 
-override func viewDidLoad() {
-super.viewDidLoad()
-populateOutlets()
-}
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    populateOutlets()
+  }
 
-// MARK: Private methods
+  // MARK: Private methods
 
-func populateOutlets() {
-movieImageView.image = UIImage(named: movie.posterImageName)
-movieTitleLabel.text = movie.name
-movieDescriptionTextView.text = movie.description
-}
+  func populateOutlets() {
+    movieImageView.image = UIImage(named: movie.posterImageName)
+    movieTitleLabel.text = movie.name
+    movieDescriptionTextView.text = movie.description
+  }
 }
 ```
 
@@ -243,21 +243,20 @@ prepareForSegue is a UIViewController method that by default does nothing.  We'l
 
 ```swift
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {  
-guard let segueIdentifier = segue.identifier else { fatalError("No identifier on segue") }
-switch segueIdentifier {
-case "movieSegue":
-guard let movieDetailVC = segue.destination as? MovieDetailViewController else {
-fatalError("Unexpected segue VC")
-}
-guard let selectedIndexPath = moviesTableView.indexPathForSelectedRow else {
-fatalError("No row was selected")
-}
-movieDetailVC.movie = movies[selectedIndexPath.row]
-default:
-fatalError("Unexpected segue identifier")
-}
+  guard let segueIdentifier = segue.identifier else { fatalError("No identifier on segue") }
+  switch segueIdentifier {
+  case "movieSegue":
+    guard let movieDetailVC = segue.destination as? MovieDetailViewController else {
+      fatalError("Unexpected segue VC")
+    }
+    guard let selectedIndexPath = moviesTableView.indexPathForSelectedRow else {
+      fatalError("No row was selected")
+    }
+    movieDetailVC.movie = movies[selectedIndexPath.row]
+  default:
+    fatalError("Unexpected segue identifier")
+  }
 }
 ```
 
-[finalGif]
-
+[finalGif](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc/Images/finalGif.gif)
