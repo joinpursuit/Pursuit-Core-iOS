@@ -113,19 +113,19 @@ extension MoviesViewController: UITableViewDelegate {}
 
 Now we need to build the detail View Controller.  Create a new file
 
-![new file](/images/newFile)
+![new file](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc-day-two/images/newFile.png)
 
 and make it a subclass of UIViewController.
 
-![cocoatouchclass](/images/cocoatouchclass)
+![cocoatouchclass](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc-day-two/images/cocoatouchclass.png)
 
 We're going to make a separate Storyboard file for our new MovieDetailViewController.  This Storyboard isn't for creating segues, but just for helping us keep our different ViewControllers separated.
 
-![createNewStoryboard](/createNewStoryboard)
+![createNewStoryboard](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc-day-two/images/createNewStoryboard.png)
 
 Set the classname and Storyboard ID.  This will let us find the ViewController later to create an instance of it through code.
 
-![storyboardID](/images/classNameAndStoryboardID)
+![storyboardID](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/multiple-mvc-day-two/images/classNameAndStoryboardID.png)
 
 With our new Storyboard file built, we can now add outlets just like we did from the main.storyboard file.
 
