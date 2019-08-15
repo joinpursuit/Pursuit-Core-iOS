@@ -2,7 +2,10 @@
 
 # Objectives
 
-# Readings
+- Review populating TableViews
+- Review unwind segues
+- Delete rows in a tableview
+- Add new rows into a tableview
 
 # 1. Introduction
 
