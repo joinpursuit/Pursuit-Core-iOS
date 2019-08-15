@@ -77,7 +77,7 @@ extension ShoppingItemsViewController: UITableViewDataSource {
 extension ShoppingItemsViewController: UITableViewDelegate { }
 ```
 
-![loadedShoppingItems](/images/loadedShoppingItems.png)
+![loadedShoppingItems](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/editing-table-views/mvc-view-lifecycle/editing-table-views/images/loadedShoppingItems.png)
 
 # 3. Removing items
 
@@ -102,7 +102,7 @@ TableViews have a `.setEditing(:animated)` method where we can enable edit mode.
 }
 ```
 
-![stopEditing](/images/stopEditing.png)
+![stopEditing](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/editing-table-views/mvc-view-lifecycle/editing-table-views/images/stopEditing.png)
 
 Let's try tapping delete.  Nothing happens!  The UI is there, but we haven't actually told the application how to delete something.  This has to happen in two steps:
 
@@ -127,7 +127,7 @@ extension ShoppingItemsViewController: UITableViewDelegate {
 }
 ```
 
-![deletingCells](/images/deletingCells.gif)
+![deletingCells](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/editing-table-views/mvc-view-lifecycle/editing-table-views/images/deletingCells.gif)
 
 Note that swipe to delete works even if don't turn editing mode on.
 
@@ -147,7 +147,7 @@ Go back to Storyboard, and make a new button in the top right, and set its type 
 
 Then, create a new ViewController called CreateShoppingItemViewController that looks like the UI below:
 
-![newVCUI](/images/newVCUI.png)
+![newVCUI](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/editing-table-views/mvc-view-lifecycle/editing-table-views/images/newVCUI.png)
 
 Click and drag from the Submit button to the red "exit" icon on the top of the CreateShoppingItemViewController.
 
@@ -194,4 +194,4 @@ Return to the ShoppingItemsViewController and complete the unwind segue implemen
 }
 ```
 
-![addItem](/images/addItem.gif)
+![addItem](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/editing-table-views/mvc-view-lifecycle/editing-table-views/images/addItem.gif)
