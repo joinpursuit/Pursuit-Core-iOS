@@ -3,7 +3,7 @@
 
 ### Readings
 
-1. [Swith TableView Basics - Tutsplus](https://code.tutsplus.com/tutorials/ios-from-scratch-with-swift-table-view-basics--cms-25160)
+1. [Swift TableView Basics - Tutsplus](https://code.tutsplus.com/tutorials/ios-from-scratch-with-swift-table-view-basics--cms-25160)
 2.  ["A Closer Look at Table View Cells" - Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/TableView_iPhone/TableViewCells/TableViewCells.html#//apple_ref/doc/uid/TP40007451-CH7)
 3. [Protocols - Swift Library Reference](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html)
 4. [Ray Wenderlich - Search Bar](https://www.raywenderlich.com/157864/uisearchcontroller-tutorial-getting-started)
@@ -35,7 +35,7 @@
 1. Review configuring and populating a TableView
 2. Review Auto Layout and customizing TableViewCells
 3. Create a Search Bar
-4. Filter the content of a Table View based on the a user's querry
+4. Filter the content of a Table View based on the a user's query
 5. Filter content based on multiple conditions
 6. Create static table views
 
@@ -58,7 +58,7 @@ There are 2 ways we can create a table view
 - Implement the 2 required data source methods: numberOfRows and cellForRowAt
 
 
-#### TableVIewController
+#### TableViewController
 
 - Create a TableViewController in Interface Builder
 - Create a new Cocoa Touch Class that subclasses from UITableViewController
@@ -297,22 +297,22 @@ Create an array of [Person] in your View Controller (or Table View Controller). 
 
 Complete the 2 required UITableViewDataSource methods.
 
-Build and run the app.  Data should now be inside your Table View.  We've got a lot of it!  Let's allow the user to filter this data to only see a subsection relevent to them.  For this, we'll need a `Search Bar`
+Build and run the app.  Data should now be inside your Table View.  We've got a lot of it!  Let's allow the user to filter this data to only see a subsection relevant to them.  For this, we'll need a `Search Bar`
 
 ### 3. UISearchBar
 
-We want to add a Search Bar to our VIew Controller.  First, let's put one into our View Controller through Interface Builder.
+We want to add a Search Bar to our View Controller.  First, let's put one into our View Controller through Interface Builder.
 
-Remove the Auto Layout constraints from your TTable View.  Drag down your Table View to allow space on top of it for your search bar.  Reconfigure your constraints to ensure the Search Bar is pinned to the top and sides and the Table View is pinned to the Search Bar the sides and the bottom.  Make sure that your Search Bar is a subview of the main view, not the Table View.
+Remove the Auto Layout constraints from your Table View.  Drag down your Table View to allow space on top of it for your search bar.  Reconfigure your constraints to ensure the Search Bar is pinned to the top and sides and the Table View is pinned to the Search Bar the sides and the bottom.  Make sure that your Search Bar is a subview of the main view, not the Table View.
 
-Create an outlet from your Search Bar to your View Controller.  A Sarch Bar behaves very similarly to a Text Field.  Because we will need to observe how our Search Bar changes, we'll need to set its delegate to the appropriate instance of the View Controller declare that our class conforms to UISearchBarDelegate.
+Create an outlet from your Search Bar to your View Controller.  A Search Bar behaves very similarly to a Text Field.  Because we will need to observe how our Search Bar changes, we'll need to set its delegate to the appropriate instance of the View Controller declare that our class conforms to UISearchBarDelegate.
 
 
-We know want to be informed when the user searches in the search bar.
+We want to be informed when the user searches in the search bar.
 
-Similar to textFieldShouldReturn, we will use the delegate method searchBarSearchButtonClicked.  For now, let's just print a message to the console when the user searches:
+Similar to `textFieldShouldReturn`, we will use the delegate method `searchBarSearchButtonClicked`.  For now, let's just print a message to the console when the user searches:
 
-```swift 
+```swift
 func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     print("Search button clicked!")
 }
@@ -331,7 +331,7 @@ class ViewController {
 
 When the user presses search, we'll update our search term.
 
-```swift 
+```swift
 func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     self.userSearchTerm = searchBar.text
 }
@@ -351,7 +351,7 @@ When we build and run our app, nothing different has happened.  Why not?
 
 <details>
 <summary>Solution</summary>
-We haven't changed any of the data souce methods
+We haven't changed any of the data source methods
 </details>
 
 We need to add handling to filter now.  Let's add another property that represents the array of filtered information.
@@ -360,7 +360,7 @@ We need to add handling to filter now.  Let's add another property that represen
 var filteredPersonArr: [Person] = []
 ```
 
-What should we set this array to be?  If the searchTerm is still nill, then we return the original array.
+What should we set this array to be?  If the searchTerm is still nil, then we return the original array.
 
 ```swift
 var filteredPersonArr: [Person] = {
@@ -386,11 +386,11 @@ Now we have a filtered array we can refer to.  If the user has entered a search 
 
 ### 4. Live time filtering
 
-It might feel more natural to filter based on every input ther user makes instead of waiting for them to press the search button.  In order to implement this feature, we'll need to pick a different delegate method and update our userSearchTerm there:
+It might feel more natural to filter based on every input the user makes instead of waiting for them to press the search button.  In order to implement this feature, we'll need to pick a different delegate method and update our userSearchTerm there:
 
 ```swift
 func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-	self.userSearchTem = searchText
+	self.userSearchTerm = searchText
 }
 ```
 
