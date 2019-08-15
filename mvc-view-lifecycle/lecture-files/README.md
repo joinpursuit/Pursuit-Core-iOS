@@ -11,5 +11,6 @@
 1. [Delegate Pattern Playground (August 5)](../lecture-files/Lecture85.playground/Contents.swift)
 1. [UITextField and Delegate (August 5)](../lecture-files/uitextfields-delegates/uitextfields-delegates)
 1. [Text Twist Runthrough (August 6)](https://github.com/davidlawrencer/textfield-delegate-runthrough)
-1. [Our First TableView](https://github.com/davidlawrencer/our-first-tableview)
-1. [Animals Using TableViewCells](https://github.com/davidlawrencer/animals-with-custom-table-view-cells)
+1. [Our First TableView (August 8)](https://github.com/davidlawrencer/our-first-tableview)
+1. [Animals Using TableViewCells (August 12)](https://github.com/davidlawrencer/animals-with-custom-table-view-cells)
+1. [Multiple MVC Using TableViewController (August 13 and 14)](https://github.com/joinpursuit/Pursuit-Core-Multiple-MVC-Starter-Project/tree/davids-branch)
