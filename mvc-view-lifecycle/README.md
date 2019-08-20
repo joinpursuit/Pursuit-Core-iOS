@@ -15,7 +15,7 @@
 1. [DSA: Recursion](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Recursion/ios/README.md)
 1. [Multiple MVC Day Two](./multiple-mvc-day-two/README.md)
 1. [UITableView and UISearchBar](./uitableview-and-uisearchbar/README.md)
-1. [Generics](./generics/README.md)
+1. [Editing Table Views](./editing-table-views/README.md)
 1. [Review](./unit-review/README.md)
 
 ## Source Code and Lectures
