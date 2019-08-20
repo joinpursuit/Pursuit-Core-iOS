@@ -16,3 +16,6 @@
 1. [Multiple MVC Using TableViewController (August 13 and 14)](https://github.com/joinpursuit/Pursuit-Core-Multiple-MVC-Starter-Project/tree/davids-branch)
 1. [Searchbar in TableViewController (August 15)](https://github.com/davidlawrencer/people-search-tableview)
 1. [Editing TableViewController (August 16)](https://github.com/joinpursuit/Pursuit-Core-iOS-Editing-TableViews/tree/davids-branch)
+1. [Identity and Delegates (August 20)](https://github.com/davidlawrencer/identity-and-delegates/blob/master/Contents.swift)
+1. [TableView Setup with Matrix (August 20)](https://github.com/davidlawrencer/got-project-starter)
+
