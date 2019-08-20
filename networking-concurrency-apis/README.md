@@ -4,21 +4,22 @@
 ## Contents
 
 1. [Intro to the Internet and Networking](./intro-to-the-internet-and-networking/README.md)
-2. [Into to Unit Testing](./introduction-to-unit-testing/README.md)
-3. [Parsing JSON](./parsing-json/README.md)
-4. [DSA: Queues](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Queues/ios/README.md)
-5. [URLSession](./urlsession/README.md)
-6. [Concurrency](./concurrency/README.md)
-7. [API Keys and Basic Auth](./api-keys-basic-authentication/README.md)
-8. [DSA: Recursion](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Recursion/ios/README.md)
-9. [Post Requests](./post-requests/README.md)
-10. [Singleton Pattern](./singleton-pattern/README.md)
-11. [Working with Dates](./working-with-dates/README.md)
-12. [UIPageViewController](./uipageviewcontroller/README.md)
-13. [DSA: Review](https://github.com/joinpursuit/DSA-Curriculum)
-14. [DSA: Hash Tables](https://github.com/joinpursuit/DSA-Curriculum/blob/master/hash_tables/ios/README.md)
-15. [App Transport Security](./app-transport-security/README.md)
-16. [Uploading JSON Data](./uploading-json-data/README.md)
+1. [Intro to Unit Testing](./introduction-to-unit-testing/README.md)
+1. [Parsing JSON](./parsing-json/README.md)
+1. [DSA: Queues](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Queues/ios/README.md)
+1. [URLSession](./urlsession/README.md)
+1. [Concurrency](./concurrency/README.md)
+1. [API Keys and Basic Auth](./api-keys-basic-authentication/README.md)
+1. 1. [DSA: Linked Lists](https://github.com/joinpursuit/DSA-Curriculum/blob/master/linked_lists/ios/README.md)
+1. [DSA: Stacks](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Stacks/ios/README.md)
+1. [Post Requests](./post-requests/README.md)
+1. [Singleton Pattern](./singleton-pattern/README.md)
+1. [Working with Dates](./working-with-dates/README.md)
+1. [UIPageViewController](./uipageviewcontroller/README.md)
+1. [DSA: Review](https://github.com/joinpursuit/DSA-Curriculum)
+1. [DSA: Hash Tables](https://github.com/joinpursuit/DSA-Curriculum/blob/master/hash_tables/ios/README.md)
+1. [App Transport Security](./app-transport-security/README.md)
+1. [Uploading JSON Data](./uploading-json-data/README.md)
 
 ## Helper Classes written in Unit 3 to handle Networking
 
@@ -179,5 +180,3 @@ public final class ImageHelper {
 ```
 
 </details>
-
-</br>
