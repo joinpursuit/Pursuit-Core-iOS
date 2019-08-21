@@ -4,7 +4,7 @@
 
 - Understand how concurrency works in Swift
 - Understand what Grand Central Dispatch is
-- Use DispatchQueue.main and DispatchQueue.global(qos:) to run tasks in appropriate places
+- Use `DispatchQueue.main` and `DispatchQueue.global(qos:)` to run tasks in appropriate places
 
 # Resources/Readings
 
@@ -13,36 +13,36 @@
 - [Asynchronous](https://en.wikipedia.org/wiki/Asynchronous_I%2FO)
 - [Thread](https://en.wikipedia.org/wiki/Thread_(computing))
 - [Grand Central Dispatch](https://medium.com/modernnerd-code/grand-central-dispatch-crash-course-for-swift-3-8bf2652c1cb8)
-- [Apple/Documentation/Dispatch](https://developer.apple.com/documentation/dispatch) 
+- [Apple/Documentation/Dispatch](https://developer.apple.com/documentation/dispatch)
 - [Medium Article](https://medium.com/modernnerd-code/grand-central-dispatch-crash-course-for-swift-3-8bf2652c1cb8)
 
 
 # 1. What is concurrency?
 
-Concurrency is when two things happen at the same time.  In a multi-core device, it can actually run two things at the same time.  Each processor will execute code in parallel.  In a single-core device, code can be executed in parallel by switching between two different tasks.
+Concurrency is when two things happen at the same time.  A multi-core device, for example, any iPhone above 4S, can actually run two things at the same time.  Each processor will execute code in parallel.  In a single-core device, code can be executed in parallel by switching between two different tasks.
 
 ![From Ray Wenderlich](https://koenig-media.raywenderlich.com/uploads/2014/01/Concurrency_vs_Parallelism.png)
 
 
 # 2. Why is concurrency important?
 
-Sometime tasks are computationally expensive and could take a while.  For example, you might make an app that performs some complicated analysis on a data set the user enters (e.g a graphing calculator app).  Most commonly, you will encounter these tasks with getting data from online.
+Sometime tasks are computationally expensive and could take a while.  For example, you might make an app that performs some complicated analysis on a data set the user enters (e.g a graphing calculator app).  Most commonly, you will encounter these expensive tasks when getting data from a remote source.
 
-It takes time to create a network connection and to get data back from the internet.  Without concurrency, your entire app would freeze while you were getting data.  Scrolling through a table view counts as a task, and without concurrency, your table view would freeze while you were waiting for images to load.
+It takes time to create a network connection and to get data back from the internet.  Without concurrency, your entire app would freeze while getting data.  Scrolling through a table view counts as a task, and without concurrency, your table view would freeze while you were waiting for images to load.
 
 # 3. Grand Central Dispatch
 
 Grand Central Dispatch (GCD) is the process by which iOS processes instructions.
 
 
-In iOS, there are several *Queues* that manange each processing instructions.  Queues are FIFO, which means that the first task you put into a queue will be the first one that gets processed.  There are two main types of queues that GCD provides:
+In iOS, there are several *Queues* that manage each processing instructions.  Queues are FIFO, which means that the first task you put into a queue will be the first one that gets processed.  There are two main types of queues that GCD provides:
 
 1. The Main queue
 2. Global queues
 
 ## Main queues
 
-The **Main queue** is responsible for all the UI componenets of your application.  For example, the following tasks all occur on the Main queue:
+The **Main queue** is responsible for all the UI components of your application.  For example, the following tasks all occur on the Main queue:
 
 - Setting the text of a label or the image of a UIImage
 - Disabling a button
@@ -50,30 +50,28 @@ The **Main queue** is responsible for all the UI componenets of your application
 
 Everything that the user interacts with directly must happen on the Main queue.  As such, the Main queue has the highest priority level.  iOS will always make sure that it is processing tasks from the Main queue first and gives them precedence.
 
-**Global queues** are responsible for everything else.  
-
 
 ## Global queues
 
 **Global queues** are responsible for anything computationally intensive that don't interact with the UI.  You can access a global queue by specifying the Quality of Service (QoS) that you want.  Swift has 4 separate global queues, but the following two are the most frequent you will use:
 
-[From Ray Wenderlich](https://www.raywenderlich.com/148513/grand-central-dispatch-tutorial-swift-3-part-1)
+[From Ray Wenderlich](https://www.raywenderlich.com/5370-grand-central-dispatch-tutorial-for-swift-4-part-1-2)
 
-- **User-initiated**: The represents tasks that are initiated from the UI and can be performed asynchronously. It should be used when the user is waiting for immediate results, and for tasks required to continue user interaction. This will get mapped into the high priority global queue.
+- **User-initiated**: This queue is used for tasks that are initiated from the UI and can be performed asynchronously. It should be used when the user is waiting for immediate results, and for tasks required to continue user interaction. This will get mapped into the high priority global queue.
 
-- **Utility**: This represents long-running tasks, typically with a user-visible progress indicator. Use it for computations, I/O, networking, continous data feeds and similar tasks. This class is designed to be energy efficient. This will get mapped into the low priority global queue.
+- **Utility**: This queue represents long-running tasks, typically with a user-visible progress indicator. Use it for computations, I/O, networking, continuous data feeds and similar tasks. This class is designed to be energy efficient. This will get mapped into the low priority global queue.
 
 
 ## Synchronous vs Asynchronous Code
 
 Using GCD, we can create set tasks either *synchronously* or *asynchronously*.  
 
-- Synchronous code will run immediately and will block everything else until it finishes
-- Asynchronous code will return immediately and will enqueue the task onto the appropriate thread
+- Synchronous code will run immediately and will "block" everything else until it finishes.
+- Asynchronous code will return immediately without waiting for the task to finish. It will enqueue the task onto the appropriate thread.
 
 # 4. Using GCD in Swift
 
-We can use Playgrounds to observe the performace of these queues.
+We can use Playgrounds to observe the performance of these queues.
 
 ```swift
 //Enables async calls in Playground
@@ -118,11 +116,11 @@ When we make requests to the internet, we need to ensure that our app still func
 <details>
 <summary>BAD - Blocking the main thread</summary>
 
-```swift 
+```swift
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    
+
     func loadImage() {
         let urlStr = "https://apod.nasa.gov/apod/image/1711/OrionDust_Battistella_1824.jpg"
         guard let url = URL(string: urlStr) else { return }
@@ -132,7 +130,7 @@ class ViewController: UIViewController {
         self.imageView.image = onlineImage
         print("just dispatched back to main queue")
     }
-    
+
     @IBAction func loadImageButtonPressed(_ sender: UIButton) {
         loadImage()
         print("just called load image")
@@ -150,7 +148,7 @@ class ViewController: UIViewController {
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-        
+
     func loadImage() {
         let urlStr = "https://apod.nasa.gov/apod/image/1711/OrionDust_Battistella_1824.jpg"
         guard let url = URL(string: urlStr) else { return }
@@ -164,7 +162,7 @@ class ViewController: UIViewController {
             print("just dispatched back to main queue")
         }
     }
-    
+
     @IBAction func loadImageButtonPressed(_ sender: UIButton) {
         loadImage()
         print("just called load image")
@@ -177,4 +175,4 @@ class ViewController: UIViewController {
 
 # 6. Activity Indicator View
 
-When we are loading data into our app, we often want to give the user an indication that they are waiting for something to load.  If the screen is just blank, they might not know that there is data coming in.  The native way of presenting this to a user is using a UIActivityIndicatorView.  
+When we are loading data into our app, we often want to give the user an indication that they are waiting for something to load.  If the screen is just blank, they might not know that there is data coming in.  The native way of presenting this to a user is using a `UIActivityIndicatorView`.  

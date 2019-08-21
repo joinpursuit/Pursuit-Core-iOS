@@ -12,7 +12,7 @@
 
 ## 1. API Keys
 
-So far, all of the APIs that we have accessed have been open, and have not required an API Key.  This means that we have been able to use GET requests to access information without any additional information.  The advantage of this is that we can access the API without any additional information.  
+So far, all of the APIs that we have accessed have been open, and have not required an API Key.  This means that we have been able to use `GET` requests to access information without any additional information.  The advantage of this is that we can access the API without any additional information.  
 
 However, some APIs require an API Key in order to get information.  An API Key is a *parameter* that you add to your URL in order to tell the API client who you are.
 
@@ -37,15 +37,15 @@ Signup for an account and then select "Get an API key now!"  On the Recipe Searc
 1. Application ID
 2. Application Keys
 
-The application ID is an identifier for the recipe API.
+The Application ID is an identifier for the recipe API.
 
-The Applicaiton Key is a unique identifier for your account.
+The Application Key is a unique identifier for your account.
 
-This API requires a GET request to have the following parameters:
+This API requires a `GET` request to have the following parameters:
 
 https://api.edamam.com/search?q=SEARCH_TERM&app_id=YOUR_APP_ID&app_key=YOUR_APP_KEY
 
-Let's use this to create an application where we can search for recipes related to a search querry.
+Let's use this to create an application where we can search for recipes related to a search query.
 
 
 ## 3. Authentication
@@ -59,7 +59,7 @@ Let's use this to create an application where we can search for recipes related 
 
 ### 1. API Keys
 
-An API Key is useful for ensuring that a single user doesn't make too many querries.  This is userful, but does not provide for a strong level of security.  
+An API Key is useful for ensuring that a single user doesn't make too many queries.  This is useful, but does not provide for a strong level of security.  
 
 <details>
 <summary>When would you want to restrict access to an API?</summary>
@@ -86,4 +86,3 @@ Basic Authentication provides another way to handle information.  Instead of jus
 ### 3. OAuth
 
 OAuth is a common security standard for authentication.  It is a somewhat complex process that involves a series of communications with the API to ensure that the credentials are valid.
-

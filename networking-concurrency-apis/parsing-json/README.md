@@ -8,7 +8,7 @@
 ### Resources
 
 1. [Postman](https://www.getpostman.com/)
-2. [What is JSON? - Squarespace](https://developers.squarespace.com/what-is-json/)
+2. [What is JSON? - SquareSpace](https://developers.squarespace.com/what-is-json/)
 3. [Apple Docs - JSON](https://developer.apple.com/swift/blog/?id=37)
 4. [Apple Docs - Bundle](https://developer.apple.com/documentation/foundation/bundle)
 5. [Apple Docs - JSONSerialization](https://developer.apple.com/documentation/foundation/jsonserialization)
@@ -17,9 +17,9 @@
 ### Objectives
 
 1. Create a custom class to model the JSON object
-2. Create additional wrapper classes to model the nesting in JSON
-3. Convert a .json file to Data using Bundle.main
-4. Use JSONDecoder to create an array of your custom objects
+1. Create additional wrapper classes to model the nesting in JSON
+1. Convert a .json file to `Data` using `Bundle.main`
+1. Use `JSONDecoder` to create an array of your custom objects
 
 
 ## 1. JSON
@@ -60,14 +60,14 @@ class HalloweenImage {
 
 </details>
 
-Information on the internet is rarely formatted as Swift objects.  One of the most common ways that information can be transmitting it in the form of a Javascript Object (JSON).  A Javascript Object is what we would call a *Dictionary* in Swift.  It has a series of key/value pairs where the keys are of type String and the values are of type Any.
+Information on the internet is rarely formatted as Swift objects.  One of the most common ways that information can be transmitting it in the form of Javascript Object Notation, which we commonly refer to as JSON.  A Javascript Object is similar to a *Dictionary* in Swift.  It has a series of key/value pairs where the keys are of type `String` and the values are of type `Any`.
 
 <details>
 <summary>JSON Example</summary>
 
-```javascript
-[game of thrones json](http://api.tvmaze.com/shows/82/episodes)
-```
+
+[game of thrones JSON](http://api.tvmaze.com/shows/82/episodes)
+
 </details>
 
 We will soon see how to get JSON directly from an online URL.  For now, we will have a JSON file stored locally in our Xcode project.
@@ -75,7 +75,7 @@ We will soon see how to get JSON directly from an online URL.  For now, we will 
 
 ## Codable 1. Create a model that represents your JSON.
 
-Swift 4 introduced a new protocol called Codable.  It has many uses that we will see in class, but for now we will use it for parsing JSON.  For a class or struct to conform to Codable, it needs to be made up of classes/structs that conform to Codable.
+Swift 4 introduced a new protocol called `Codable`.  We can use it for many things, but for now we will use it for parsing JSON.  For a class or struct to conform to `Codable`, it needs to be made up of classes/structs that conform to `Codable`.
 
 Built-in Codable Types include:
 
@@ -86,7 +86,7 @@ Built-in Codable Types include:
 - URL
 - Any collection made up of the above
 
-Swift 4 also introduces a class JSONDecoder that converst JSON into a Swift type that implements Codable.  It will do this automatically if the names of your class match the names of the keys of the JSON.
+Swift 4 also introduces a class `JSONDecoder` that converts JSON into a Swift type that implements `Codable`.  It will do this automatically if the names of your class match the names of the keys of the JSON.
 
 ```swift
 struct GOTEpisode: Codable {
@@ -102,7 +102,7 @@ struct ImageWrapper: Codable {
 }
 ```
 
-## Codable 2. Parse the data using JSONDecoder().decode(_:from:)
+## Codable 2. Parse the data using JSONDecoder().decode(from:)
 
 ```swift
 if let path = Bundle.main.path(forResource: "gameofthrones", ofType: "json") {

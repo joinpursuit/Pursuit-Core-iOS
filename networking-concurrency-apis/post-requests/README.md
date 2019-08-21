@@ -20,24 +20,24 @@
 2. Basic Auth
 3. OAuth (Now OAuth 2.0)
 
-### Meetup API 
+### Meetup API
 
 Get an API key from [Meetup](https://secure.meetup.com/meetup_api/key/)  
 
-**Enpoints used in demo**  
+**Endpoints used in demo**  
 
-- Find upcoming events: ```https://api.meetup.com/find/upcoming_events?key=(API KEY GOES HERE)&fields=group_photo&text=ios``` 
-- Your scheduled meetup events: ```https://api.meetup.com/self/events?key=(API KEY GOES HERE)&page=10&status=upcoming&desc=false&rsvp=yes```   
-- Update/Create RSVP to an event: ```https://api.meetup.com/2/rsvp?key=(API KEY GOES HERE)&event_id=(EVENT ID GOES HERE)&rsvp=(RSVP "yes" or "no")```  
+- Find upcoming events: `https://api.meetup.com/find/upcoming_events?key=(API KEY GOES HERE)&fields=group_photo&text=ios`
+- Your scheduled meetup events: `https://api.meetup.com/self/events?key=(API KEY GOES HERE)&page=10&status=upcoming&desc=false&rsvp=yes`   
+- Update/Create RSVP to an event: `https://api.meetup.com/2/rsvp?key=(API KEY GOES HERE)&event_id=(EVENT ID GOES HERE)&rsvp=(RSVP "yes" or "no")`  
 
 **Meetup API Key**   
 This is the easiest way to get started using the API. Simply access your API Key and append it to any request. The request's authorization will be based on your key. Remember that an API key is your personal secret key to access the Meetup API. Do not share or publish this private token. Do not access the Meetup API using an API key that does not belong to your account. To make requests on behalf of another user, use OAuth instead.
 
-Please Note: When using the Meetup AP Key, you're making requests on behalf of your account. So you will need meetup events in your calendar to get relevant information.
+Please Note: When using the Meetup API Key, you're making requests on behalf of your account. So you will need meetup events in your calendar to get relevant information.
 
 ### 1. API Keys
 
-An API Key is useful for ensuring that a single user doesn't make too many querries.  This is userful, but does not provide for a strong level of security.  
+An API Key is useful for ensuring that a single user doesn't make too many queries.  This is useful, but does not provide for a strong level of security.  
 
 <details>
 <summary>When would you want to restrict access to an API?</summary>
@@ -66,8 +66,6 @@ Basic Authentication provides another way to handle information.  Instead of jus
 OAuth is a common security standard for authentication.  It is a somewhat complex process that involves a series of communications with the API to ensure that the credentials are valid.
 
 
-
-
 # 2. POST Requests
 
 Every request that we have made in previous classes has been a GET request.  A GET request is used to access information that is available at a particular API.  With some APIs, we might want to do more than just access information, we might want to POST or write information.
@@ -81,7 +79,7 @@ Every request that we have made in previous classes has been a GET request.  A G
 
 </details>
 
-POST requests allow us to add inofrmation to an existing profile.  Just as every API has different specifications for how to GET information, each API has a different URL path for a POST request and different expectations for what the data should look like.  
+POST requests allow us to add information to an existing profile.  Just as every API has different specifications for how to GET information, each API has a different URL path for a POST request and different expectations for what the data should look like.  
 
 All APIs that have POST requests need some form of authentication.
 
@@ -108,11 +106,11 @@ request.addValue(authStr, forHTTPHeaderField: "Authorization")
 ```
 
 
-# 4. POST Request example 
+# 4. POST Request example
 
-Now that we are making multiple types of requests in our app (GET, POST), let's start to encapsulate some of our network boilerplate code into a class called **NetworkHelper** 
+Now that we are making multiple types of requests in our app (GET, POST), let's start to encapsulate some of our network boilerplate code into a class called **NetworkHelper**
 
-```swift 
+```swift
 class NetworkHelper {
   static func performDataTask(urlString: String, httpMethod: String, completionHandler: @escaping (APIError?, Data?) -> ()) {
     guard let url = URL(string: urlString) else {
@@ -145,8 +143,9 @@ class NetworkHelper {
 }
 ```
 
-Making a POST request to update the RSVP status on a Meetup event. 
-```swift 
+Making a POST request to update the RSVP status on a Meetup event.
+
+```swift
 static func createUpdateRsvp(eventId: String, rsvp: String, completionHandler: @escaping (APIError?, RSVP?) -> Void) {
   let urlString = "https://api.meetup.com/2/rsvp?key=\(SecretKeys.APIKey)&event_id=\(eventId)&rsvp=\(rsvp)"
   NetworkHelper.performDataTask(urlString: urlString, httpMethod: "POST") { (error, data) in
@@ -163,6 +162,3 @@ static func createUpdateRsvp(eventId: String, rsvp: String, completionHandler: @
   }
 }
 ```
-
-
-
