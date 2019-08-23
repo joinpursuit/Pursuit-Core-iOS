@@ -7,8 +7,10 @@
 - Read data in JSON format
 - Use Postman to get data
 
-**Reading**  
+**Readings**  
 1. [Mozilla Developer Network - How does the internet work?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
+2. [Programmable Web - APIs](https://www.programmableweb.com/api-university/what-are-apis-and-how-do-they-work)
+3. [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
 
 # 1. Introduction
