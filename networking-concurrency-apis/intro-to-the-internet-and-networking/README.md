@@ -1,4 +1,4 @@
-## Introduction to the Internet and Networking
+## Introduction to the Internet, Networking, and APIs
 
 **Objectives**
 - Understand how clients and servers interact
