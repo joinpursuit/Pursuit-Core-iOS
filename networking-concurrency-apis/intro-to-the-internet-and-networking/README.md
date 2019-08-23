@@ -180,7 +180,7 @@ Looking at the responses in the browser is a good start, but we're going to want
 Why would we need to give information to an endpoint?
 
 <details>
-<summary>Some solution</summary>
+<summary>Some solutions</summary>
 
 - Add a new user
 - Edit the profile picture of a user
