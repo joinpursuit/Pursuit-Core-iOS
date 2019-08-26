@@ -141,11 +141,11 @@ This unit, we will see how to call this api directly and get data from it.  For 
 
 Open a new XCode project.  Visit the link above, and save the page
 
-![jsonSaveAs](/images/jsonSaveAs.png)
+![jsonSaveAs](./images/jsonSaveAs.png)
 
 Then, drag the json file into your project:
 
-![copyJsonIntoProject](/images/copyJsonIntoProject.png)
+![copyJsonIntoProject](./images/copyJsonIntoProject.png)
 
 Alternatively, you could make an empty `.json` file and paste the JSON in yourself.
 
