@@ -22,6 +22,8 @@ Here, we'll build a simple application that will load some weather objects into 
 
 Create a new Xcode project.  Check the box marked "Include Unit Tests".
 
+![addUnitTests](./images/addUnitTests.png)
+
 Go to the URL [here](https://samples.openweathermap.org/data/2.5/find?lat=40&lon=-100&cnt=10&appid=b6907d289e10d714a6e88b30761fae22) and save the JSON to your computer.  Then drag it into your Xcode project named `testWeather.json`.  We will use this JSON to test our model.
 
 
@@ -408,3 +410,6 @@ extension WeatherViewController: UITableViewDataSource {
     }
 }
 ```
+
+
+Completed Project: https://github.com/joinpursuit/Pursuit-Core-iOS-Introduction-to-Unit-Testing
