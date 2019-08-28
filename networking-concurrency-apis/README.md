@@ -21,6 +21,13 @@
 1. [App Transport Security](./app-transport-security/README.md)
 1. [Uploading JSON Data](./uploading-json-data/README.md)
 
+## Source Code and Lectures
+
+[6.1 Unit 3 Lecture Code](./lecture-files)
+
+[Lecture Videos](https://www.youtube.com/channel/UCDN46W3L67JMtrRb-u_cgCA)
+
+
 ## Helper Classes written in Unit 3 to handle Networking
 
 <details>
