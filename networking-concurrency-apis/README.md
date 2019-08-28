@@ -4,13 +4,13 @@
 ## Contents
 
 1. [Intro to the Internet and Networking](./intro-to-the-internet-and-networking/README.md)
-1. [Intro to Unit Testing](./introduction-to-unit-testing/README.md)
 1. [Parsing JSON](./parsing-json/README.md)
-1. [DSA: Queues](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Queues/ios/README.md)
+1. [DSA: Linked Lists](https://github.com/joinpursuit/DSA-Curriculum/blob/master/linked_lists/ios/README.md)
+1. [Intro to Unit Testing](./introduction-to-unit-testing/README.md)
 1. [URLSession](./urlsession/README.md)
 1. [Concurrency](./concurrency/README.md)
 1. [API Keys and Basic Auth](./api-keys-basic-authentication/README.md)
-1. 1. [DSA: Linked Lists](https://github.com/joinpursuit/DSA-Curriculum/blob/master/linked_lists/ios/README.md)
+1. [DSA: Queues](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Queues/ios/README.md)
 1. [DSA: Stacks](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Stacks/ios/README.md)
 1. [Post Requests](./post-requests/README.md)
 1. [Singleton Pattern](./singleton-pattern/README.md)
