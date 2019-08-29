@@ -7,7 +7,6 @@
 - [Singleton](https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/AdoptingCocoaDesignPatterns.html#//apple_ref/doc/uid/TP40014216-CH7-ID177)
 - [Pros and cons of Singletons](https://cocoacasts.com/are-singletons-bad/)
 - [Closures](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html)
-- [Project Link from Jack](https://github.com/C4Q/AC-iOS-NewsAndWeather)
 
 ## Objectives
 
