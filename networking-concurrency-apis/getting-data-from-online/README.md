@@ -1,6 +1,6 @@
 # Getting Data from Online
 
-# [Project Link](update)
+[Project Link](https://github.com/joinpursuit/Pursuit-Core-iOS-Getting-Data-From-Online-Lesson-Project)
 
 # Resources
 
