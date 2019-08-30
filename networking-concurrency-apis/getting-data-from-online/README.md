@@ -110,7 +110,7 @@ class NetworkHelper {
 <details>
 <summary>NetworkError</summary>
 
-```
+```swift
 enum NetworkError: Error, CustomStringConvertible {
     case badURL
     case responseError(Error)
