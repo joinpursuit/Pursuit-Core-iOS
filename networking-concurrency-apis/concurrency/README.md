@@ -109,6 +109,8 @@ DispatchQueue.main.sync {
 //Crashes
 ```
 
+Why does the last block of code crash?  We are telling Swift to dispatch to the main queue synchronously.  This means that it stops executing any commands in the main queue.  But in order to continue execution, we need to run the code that we've dispatched.  The compiler sees that we'll be stuck forever, so it aborts the program.  This is called *deadlock*.
+
 # 5. Using GCD in an app
 
 When we make requests to the internet, we need to ensure that our app still functions while we are waiting for data to come back.  Let's make a simple app that loads an image from online and see how managing queues works in practice.
