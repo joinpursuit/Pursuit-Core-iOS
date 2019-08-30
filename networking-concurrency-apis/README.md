@@ -7,6 +7,7 @@
 1. [Parsing JSON](./parsing-json/README.md)
 1. [DSA: Linked Lists](https://github.com/joinpursuit/DSA-Curriculum/blob/master/linked_lists/ios/README.md)
 1. [Intro to Unit Testing](./introduction-to-unit-testing/README.md)
+1. [Getting Data From Online](./getting-data-from-online/README.md)
 1. [URLSession](./urlsession/README.md)
 1. [Concurrency](./concurrency/README.md)
 1. [API Keys and Basic Auth](./api-keys-basic-authentication/README.md)
