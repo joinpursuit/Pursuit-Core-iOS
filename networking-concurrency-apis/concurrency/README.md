@@ -178,3 +178,48 @@ class ViewController: UIViewController {
 # 6. Activity Indicator View
 
 When we are loading data into our app, we often want to give the user an indication that they are waiting for something to load.  If the screen is just blank, they might not know that there is data coming in.  The native way of presenting this to a user is using a `UIActivityIndicatorView`.  
+
+```swift
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var spinner: UIActivityIndicatorView!
+    
+    func loadImage() {
+        let urlStr = "https://apod.nasa.gov/apod/image/1711/OrionDust_Battistella_1824.jpg"
+        guard let url = URL(string: urlStr) else { return }
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            guard let self = self else { return }
+            let data = try! Data(contentsOf: url)
+            let onlineImage = UIImage(data: data)
+            DispatchQueue.main.async {
+                self.set(self.spinner, to: .off)
+                self.imageView.image = onlineImage
+            }
+            print("just dispatched back to main queue")
+        }
+    }
+    
+    @IBAction func loadImageButtonPressed(_ sender: UIButton) {
+        loadImage()
+        set(spinner, to: .on)
+        sender.isEnabled = false
+    }
+    
+    private enum SpinnerMode {
+        case on
+        case off
+    }
+    
+    private func set(_ spinner: UIActivityIndicatorView, to mode: SpinnerMode) {
+        switch mode {
+        case .on:
+            spinner.startAnimating()
+            spinner.isHidden = false
+        case .off:
+            spinner.stopAnimating()
+            spinner.isHidden = true
+        }
+    }
+}
+```
