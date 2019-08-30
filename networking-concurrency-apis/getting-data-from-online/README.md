@@ -109,6 +109,8 @@ class NetworkHelper {
 
 <details>
 <summary>NetworkError</summary>
+
+```
 enum NetworkError: Error, CustomStringConvertible {
     case badURL
     case responseError(Error)
@@ -125,6 +127,8 @@ enum NetworkError: Error, CustomStringConvertible {
         }
     }
 }
+```
+
 </details>
 
 
