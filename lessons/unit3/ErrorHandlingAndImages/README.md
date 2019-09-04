@@ -71,18 +71,31 @@ enum AppError: Error {
 
 ```swift
 class ImageAPIClient {
-    private init() {}
     static let manager = ImageAPIClient()
-    func loadImage(from urlStr: String, completionHandler: @escaping (UIImage) -> Void, errorHandler: @escaping (Error) -> Void) {
-        guard let url = URL(string: urlStr) else {return}
-        let completion = {(data: Data) in
-            guard let onlineImage = UIImage(data: data) else {return}
-            completionHandler(onlineImage)
+    
+    func getImage(from urlStr: String,
+                  completionHanlder: @escaping (Result<UIImage, AppError>) -> Void) {
+        
+        guard let url = URL(string: urlStr) else {
+            completionHanlder(.failure(.badURL))
+            return
         }
-        NetworkHelper.manager.performDataTask(with: url,
-                                              completionHandler: completion,
-                                              errorHandler: errorHandler)
+        
+        NetworkHelper.manager.getData(from: url) { (result) in
+            switch result {
+            case let .failure(error):
+                completionHanlder(.failure(error))
+            case let .success(data):
+                guard let onlineImage = UIImage(data: data) else {
+                    completionHanlder(.failure(.notAnImage))
+                    return
+                }
+                completionHanlder(.success(onlineImage))                
+            }
+        }
     }
+    
+    private init() {}
 }
 ```
 
