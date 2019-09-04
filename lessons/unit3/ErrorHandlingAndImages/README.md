@@ -1,4 +1,4 @@
-# Errors + Loading Images
+# Errors + Loading Images + Wrappers
 
 ## [Project Link](https://github.com/C4Q/AC-iOS-BooksFromOnlineWithImages)
 
