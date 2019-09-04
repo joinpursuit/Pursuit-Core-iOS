@@ -1,11 +1,10 @@
 # Errors + Loading Images + Wrappers
 
-## [Project Link](https://github.com/C4Q/AC-iOS-BooksFromOnlineWithImages)
+## [Project Link](https://github.com/joinpursuit/Pursuit-Core-iOS-BooksFromOnlineWithImages)
 
 ## Resources
-https://blog.bobthedeveloper.io/intro-to-error-handling-in-swift-3-edb2ce6a6668
 
-https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/ErrorHandling.html
+- https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html
 
 # 1. Error Handling
 
