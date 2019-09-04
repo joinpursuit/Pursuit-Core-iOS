@@ -13,7 +13,7 @@ Some functions are more error-prone than others.  These functions are written wi
 <details>
 <summary>Example</summary>
 
-```
+```swift
 var itemsDict = ["Chips": 4, "Soda": 2, "Pretzels": 9, "Gum": 14]
 var money: Double = 3
 
