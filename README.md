@@ -1,4 +1,4 @@
-# Pursuit Core 6.1: Mobile Development with iOS
+# Pursuit Core 6.0: Mobile Development with iOS
 
 ## Welcome!
 
