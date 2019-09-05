@@ -193,263 +193,91 @@ When we set unit4A to nil, all strong references to the Apartment instance are r
 ![image](https://docs.swift.org/swift-book/_images/weakReference03_2x.png)
 
 
-# 4. Delegation and retain cycles
-
-Delegation is one way that we can create retain cycles, if we are not careful.  If we give our cells a strong reference to our view controller and give our view controller a strong reference to our cells, this will create a retain cycle, and the view controller will never leave memory.
-
-We can create a simple application that demonstrates this problem.  Our app will load a list of quotes.  Each quote will have a like button.  Our cells will set a strong reference to the View Controller as its delegate, and the View Controller keeps a strong reference to each cell it is displaying.
-
-Our application will launch on a View Controller in a Navigation Controller that just contains a button.  Selecting the button will segue to our TableViewController.  Selecting back should get rid of that TableViewController, allowing us to press the button again for a new set of quotes.
-
-
-## Build the Model
-
-We will get data from "https://talaikis.com/api/quotes/" and display it to the user.
-
-**Quote + QuotesAPIClient**
-
-```swift
-struct Quote: Codable {
-    let quote: String
-    let author: String
-    let cat: String
-}
-
-class QuotesAPIClient {
-    private init() {}
-    static let manager = QuotesAPIClient()
-    private let endpoint = "https://talaikis.com/api/quotes/"
-    func getQuotes(completionHandler: @escaping ([Quote]?, Error?) -> Void) {
-        let completion: (Data) -> Void = {data in
-            do {
-                let quotes = try JSONDecoder().decode([Quote].self, from: data)
-                completionHandler(quotes, nil)
-            }
-            catch {
-                completionHandler(nil, error)
-            }
-        }
-        let request = URLRequest(url: URL(string: endpoint)!)
-        NetworkHelper.manager.performDataTask(with: request, completionHandler: completion, errorHandler: {print($0)})
-    }
-}
-```
-
-**Network Helper + AppError**
-
-```swift
-enum AppError: Error {
-    case noData
-}
-
-class NetworkHelper {
-    private init() {}
-    static let manager = NetworkHelper()
-    private let urlSession = URLSession(configuration: URLSessionConfiguration.default)
-    func performDataTask(with request: URLRequest, completionHandler: @escaping (Data) -> Void, errorHandler: @escaping (Error) -> Void) {
-        self.urlSession.dataTask(with: request){(data: Data?, response: URLResponse?, error: Error?) in
-            DispatchQueue.main.async {
-                guard let data = data else {errorHandler(AppError.noData); return}
-
-                if let error = error {
-                    errorHandler(error)
-                }
-                completionHandler(data)
-
-            }
-            }.resume()
-    }
-}
-```
-
-
-## Build the UI
-
-We'll make a Storyboard based application.  Embed the starting ViewController in a Navigation Controller.  Add a button to the ViewController and pin it to the middle.
-
-Create a TableViewController with one prototype cell named "quoteCell".  Inside the prototype cell, add a UILabel and UIButton.  Create a class for the custom cell named QuoteTableViewCell and add an outlet to the label and an action to the button.
-
-**QuoteTableViewCell + QuoteTableViewCellDelegate**
-
-```swift
-protocol QuoteTableViewCellDelegate {
-    func userLiked(quote: Quote)
-}
-
-class QuoteTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var quoteLabel: UILabel!
-    var delegate: QuoteTableViewCellDelegate?
-
-    public func configureCell(with quote: Quote) {
-        self.quote = quote
-    }
-
-    private var quote: Quote! {
-        didSet {
-            quoteLabel.text = quote.quote
-        }
-    }
-
-    @IBAction func likeButtonPressed(_ sender: Any) {
-        self.delegate?.userLiked(quote: quote)
-    }
-}
-```
-
-## Build our ViewControllers
-
-Our QuotesTableViewController will be powered by an array of Quote objects.
-
-**QuotesTableViewController**
+# 4. Visualizing Retain Cycles
 
 ```swift
 import UIKit
 
-class QuotesTableViewController: UITableViewController {
-
-    var quotes = [Quote]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        loadQuotes()
-    }
-
-    func loadQuotes() {
-        QuotesAPIClient.manager.getQuotes{quotes, error in
-            if let error = error {
-                print(error)
-            }
-            guard let quotes = quotes else { return }
-            self.quotes = quotes
-        }
-    }
-
-    // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return quotes.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath) as! QuoteTableViewCell
-        cell.delegate = self
-        cell.configureCell(with: quotes[indexPath.row])
-        return cell
-    }
+class Tenant {
+  var name: String
+  var apartment: Apartment?
+  init(name: String) {
+    self.name = name
+    print("\(name) is being initialized")
+  }
+  deinit {
+    print("\(name) is being deinitialized")
+  }
 }
 
-extension QuotesTableViewController: QuoteTableViewCellDelegate {
-    func userLiked(quote: Quote) {
-        print("I Like It!")
-    }
-}
-```
-
-Now that our application is built we can test it out!
-
-## Visualizing the retain cycle
-
-### Debug Memory Graph
-
-Select the button to get to your quotes list, then click back.  Repeat this process a dozen times or so.  Then click on the "Debug Memory Graph" button at the buttom of XCode right next to the "Debug View Hierarchy" button.
-
-On the left in the Navigator section, you can see all of the objects that are held in memory.  Despite only needing to have one QuoteTableViewController available, they are all visible here in memory!  This means that there is a retain cycle and they will never be deallocated.  The more a user goes back and forth enough, the more memory your app consumes.  This is called a memory leak.
-
-### Instruments
-
-We can also use iOS Instruments to visualize the memory leak.
-
-- Launch Instruments.
-- In the profiling template selection dialog that appears, click Allocations.
-- Choose your device and app from the target device and process lists.
-- Click Choose to create a trace document.
-- Click the Record button in the toolbar (or press Command-R) to begin recording.
-
-Use your app normally.
-
-By typing in cell at the search bar on the bottom left, you can see the count of your custom cells increasing as you move push and pop instances of the TableViewController
-
-## Resolving the retain cycle
-
-The fix is fortunately pretty straightforward.  If our cell had only a weak reference to its delegate, that would mean that our ViewController will be deallocated after it's pushed off the stack.
-
-```swift
-weak var delegate: QuoteTableViewCellDelegate?
-```
-
-We also need to mark our protocol as being a "class" protocol, because you can't have a weak reference to a struct.
-
-```swift
-protocol QuoteTableViewCellDelegate: class {
-    func userLiked(quote: Quote)
-}
-```
-
-Run through the visualization steps again to ensure that there is no longer a memory leak.
-
-# 5. Closures and Retain Cycles
-
-Closures can introduce the same problems as our delegation example above.  Let's say that we are tired of writing our closure in our method, and want to have a method that builds that closure for us.  THe following isn't good practice, but is a simple example of when these issues might occur:
-
-```swift
-var quotesCompletionHandler: (([Quote]?, Error?) -> Void)?
-
-var quotes = [Quote]() {
-    didSet {
-        tableView.reloadData()
-    }
+class Apartment {
+  var unit: String
+  var tenant: Tenant?
+  init(unit: String) {
+    self.unit = unit
+    print("\(unit) is being initialized")
+  }
+  deinit {
+    print("\(unit) is being deinitialized")
+  }
 }
 
-override func viewDidLoad() {
+class ViewController: UIViewController {
+  override func viewDidLoad() {
     super.viewDidLoad()
-    configureCompletionHandler()
-    loadQuotes()
-}
 
-func configureCompletionHandler() {
-    quotesCompletionHandler = {onlineQuotes, error in
-        if let error = error {
-            print(error)
-        }
-        guard let onlineQuotes = onlineQuotes else { return }
-        self.quotes = onlineQuotes
-    }
-}
+    var apartment: Apartment? = Apartment(unit: "Apt 6B")
+    var alex: Tenant? = Tenant(name: "Alex")
 
-func loadQuotes() {
-    guard let completion = quotesCompletionHandler else { return }
-    QuotesAPIClient.manager.getQuotes(completionHandler: completion)
+    apartment?.tenant = alex
+    alex?.apartment = apartment
+
+    alex = nil
+
+    apartment = nil
+  }
 }
 ```
 
-Note that if you delete the word "self" in the configureCompletionHandler function, you get an error that reads "Reference to property 'quotes' in closure requires explicit 'self.' to make capture semantics explicit"
+## Using the Debug Memory Graph
 
-Closures are able to store values.  We saw this in unit one, by building a counter object.  When we are assigning quotes to onlineQuotes, we want to store the whole view controller, and assign one of its properties to a new value.  We need to grab the entire view controller, because this closure can be passed to other locations.  This is what we do inside loadQuotes: the closure is passed into another class.
+To investigate memory issues in your app you can use the **Memory Graph Debugger** It can be found next to the **Visual Debugger** button in Xcode.
 
-If we did not capture the ViewController, we wouldn't have a way of referring to it.  But we have created the same problem as before!  Run the visualization tools to see that we have reitroduced a retain cycle.
+<p align="center">
+  <img src="https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit05/lesson-13-memory-management/Images/memory-graph-debugger.png" width="273" height="129" />
+</p>
 
-Our View Controller has a strong reference to the closure, and the closure has a strong reference to the View Controller.
 
-## Resolving the Retain Cycle
+Visual Debugger shows a strong reference cycle between Apartment and Tenant classes.
+<p align="center">
+  <img src="https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit05/lesson-13-memory-management/Images/strong-reference-cycle.png" width="429" height="427" />
+</p>
 
-We can resolve this issue by introducing a *retain list*.  This is a special section at the beginning of the closure where you can list the values that you want to retain.  We can tell Swift that instead of keeping a strong reference to the View Controller, we should instead keep a weak reference.
+**Let's resolve this memory cycle. **
 
+<p align="center">
+  <img src="https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/units/unit05/lesson-13-memory-management/Images/weak-reference.jpg" width="700" height="525" />
+</p>
+
+We will mark one of the classes **weak** to break the reference cycle
 ```swift
-func configureCompletionHandler() {
-    quotesCompletionHandler = {[weak self] onlineQuotes, error in
-        if let error = error {
-            print(error)
-        }
-        guard let onlineQuotes = onlineQuotes else { return }
-        self?.quotes = onlineQuotes
-    }
-}
+weak var apartment: Apartment?
+```
+
+
+## Resolving Strong Reference Cycles for Closures
+
+> Swift requires you to write self.someProperty or self.someMethod() (rather than just someProperty or someMethod()) whenever > you refer to a member of self within a closure. This helps you remember that it’s possible to capture self by accident.
+
+Use a capture list to break the strong reference cycle with closures.
+
+1. If you know the object e.g self will be on the heap after the closure is done you can use
+```swift
+[unowned self]
+```
+NB: If you use unowned and the object is no longer on the heap the app will crash, by default use weak unless you are absolutely sure self will be around.
+
+2. If there is a possibility that the object calling the closure will leave the heap making it nil then use
+```swift
+[weak self]
 ```
