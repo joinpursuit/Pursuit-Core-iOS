@@ -10,6 +10,7 @@
 1. [Getting Data From Online](./getting-data-from-online/README.md)
 1. [URLSession](./urlsession/README.md)
 1. [Concurrency](./concurrency/README.md)
+1. [Retain Cycles](./memory-management-and-arc/README.md)
 1. [API Keys and Basic Auth](./api-keys-basic-authentication/README.md)
 1. [DSA: Queues](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Queues/ios/README.md)
 1. [DSA: Stacks](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Stacks/ios/README.md)
