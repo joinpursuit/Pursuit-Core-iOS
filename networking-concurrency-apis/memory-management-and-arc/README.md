@@ -161,7 +161,9 @@ unit4A = nil
 
 ![image](https://docs.swift.org/swift-book/_images/referenceCycle03_2x.png)
 
-Because both objects have a strong reference to each other, they will stay in memory and not be deallocated.  There is no way for them to leave memory because we no longer have references to them, but they stay in memory because they have strong reference to each other.  This creates wasted space in memory, and is commonly referred to as a [memory leak](https://en.wikipedia.org/wiki/Memory_leak). How can we resolve this?
+Because both objects have a strong reference to each other, they will stay in memory and not be deallocated.  There is no way for them to leave memory because we no longer have references to them, but they stay in memory because they have strong reference to each other.  
+
+Retain cycles waste space in memory, which is commonly referred to as a [memory leak](https://en.wikipedia.org/wiki/Memory_leak). Memory leaks can eat up available memory in your app, affect performance, and cause crashes.  How can we resolve this?
 
 ```swift
 class Apartment {
