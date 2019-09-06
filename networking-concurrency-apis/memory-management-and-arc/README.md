@@ -1,4 +1,4 @@
-# Memory Management / Retail Cycles
+# Memory Management / Retain Cycles
 
 ## References
 
