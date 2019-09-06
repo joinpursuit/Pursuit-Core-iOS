@@ -26,6 +26,8 @@ They can control how many requests each key is able to make
 Registering for an API Key is usually a simple process.  Typically, all that is required is registering an account with the website using an email address.
 
 
+Your API Key should be kept <em>secret</em>.  If someone gets access to your API key, they'll be able to make requests as if they were you, causing extra costs and security vulnerabilities.  The easiest way to do this is to make a file called `Secrets.swift` where your api key is stored.  Then, add `Secrets.swift` to your .gitignore file so that it can't be found by reading through your code on Github.
+
 ## 2. API Key example - Recipes
 
 Let's take a look at how to use an API that requires an API Key.
