@@ -52,7 +52,9 @@ Let's use this to create an application where we can search for recipes related 
 
 ## 3. Authentication
 
-*Authentication* is the process of ensuring that someone is who they say they are.  There are 3 main types of authentication:
+*Authentication* is the process of ensuring that someone is who they say they are.  *Authorization* is the process of ensuring that someone has access to what they are trying to gain access to.
+
+There are 3 main types of authentication:
 
 1. API Key
 2. Basic Auth
