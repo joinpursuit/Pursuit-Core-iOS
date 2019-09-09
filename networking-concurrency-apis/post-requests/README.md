@@ -37,7 +37,7 @@ All APIs that have POST requests need some form of authentication.
 Without authorization, anyone would be able to write information to your account.  For example, anyone could post a status to your Facebook account.
 </details>
 
-Most popular APIs use OAuth 2.0 as their form of authentication.  Some APIs use Basic Auth.  Today, we will look at a Basic Auth API.
+Many popular APIs use OAuth 2.0 as their form of authentication.  Some APIs use Basic Auth.  Today, we will look at an API that uses an API Key.
 
 # 2. URLRequest
 
