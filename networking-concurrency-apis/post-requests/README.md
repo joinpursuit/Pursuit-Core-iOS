@@ -46,7 +46,7 @@ So far we have worked with URLs.  This is sufficient for a GET request with addi
 
 ```swift
 var request = URLRequest(url: url)
-request.httpMethod = httpMethod.rawValue
+request.httpMethod = "POST"
 request.httpBody = body
 request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 ```
