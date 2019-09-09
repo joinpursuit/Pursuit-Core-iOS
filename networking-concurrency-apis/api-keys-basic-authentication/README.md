@@ -39,9 +39,9 @@ Signup for an account and then select "Get an API key now!"  On the Recipe Searc
 1. Application ID
 2. Application Keys
 
-The application ID is an identifier for the recipe API.
+The Application ID is an identifier for the recipe API.
 
-The Applicaiton Key is a unique identifier for your account.
+The Application Key is a unique identifier for your account.
 
 This API requires a GET request to have the following parameters:
 
