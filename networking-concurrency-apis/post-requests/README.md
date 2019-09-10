@@ -74,7 +74,8 @@ Here's the JSON we get back from a GET request via Postman using our API key:
 
 <details>
 <summary>JSON</summary>
-```js
+    
+```json
 {
     "records": [
         {
@@ -952,6 +953,7 @@ Here's the JSON we get back from a GET request via Postman using our API key:
     ]
 }
 ```
+
 </details>
 
 Save that JSON into your bundle.  Then, we'll add the test we want to developer towards:
