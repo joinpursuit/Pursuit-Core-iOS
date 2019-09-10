@@ -1232,11 +1232,13 @@ Great!  We should see the data loaded into a Table View.  Try editing some of th
 
 Now, we can add in the functionality to add new Projects to Airtable.
 
+
 # 8. Build the Create new Project UI
 
 Create a Segue from the button to a new VC that has the following layout:
 
 ![createNewProjectUI](./images/createNewProjectUI.png)
+
 
 # 9. Build the Networking Layer for Creating new Projects
 
@@ -1365,7 +1367,7 @@ struct ProjectAPIClient {
 }
 ```
 
-#10. Build the Create new Project VC
+## 10. Build the Create new Project VC
 
 Complete your VC implementation:
 
