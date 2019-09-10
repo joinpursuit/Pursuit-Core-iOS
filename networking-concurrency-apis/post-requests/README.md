@@ -956,7 +956,7 @@ Here's the JSON we get back from a GET request via Postman using our API key:
 
 </details>
 
-Save that JSON into your bundle.  Then, we'll add the test we want to developer towards:
+Save that JSON into your bundle.  Then, we'll add the test we want to develop towards:
 
 ```swift
 import XCTest
@@ -1002,7 +1002,6 @@ struct AirtableResponse: Codable {
     }
 }
 
-```swift
 struct ProjectWrapper: Codable {
     let project: Project
 
