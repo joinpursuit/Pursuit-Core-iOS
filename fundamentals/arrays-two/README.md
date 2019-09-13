@@ -85,3 +85,10 @@ let squareMatrix = [[6, 4, 4],
 IOS: IOS.1
 
 Language Fundamentals: LF.3, LF.3.a
+Standards.
+
+LF.3 Understand that data structures are ways of storing multiple elements of associated data. Access individual elements within sets of information, either directly, by iteration, or using methods.
+LF.3.a Arrays: Understand the Array data structure. Know that Arrays stores values of the same type in an ordered list. Understand the following:
+* Access and modify arrays
+* Iterate through arrays
+* Use common array methods
