@@ -1,5 +1,16 @@
+
 ### Sets
 ---
+
+### Standards
+
+IOS: IOS.1
+
+Language Fundamentals: LF.3, LF.3.b
+
+LF.3 Understand that data structures are ways of storing multiple elements of associated data. Access individual elements within sets of information, either directly, by iteration, or using methods.
+
+LF.3.b Sets: Understand the difference between and Array and Set. Sets stores distinct values of the same type in a collection with no defined ordering. A Set also ensures that an item is unique in the Set.
 
 ### Objectives
 * Declare and use Sets
@@ -147,8 +158,3 @@ print(farmAnimals.isSuperset(of: houseAnimals)) // true
 print(farmAnimals.isDisjoint(with: cityAnimals)) // true
 ```
 
-### Standards
-
-IOS: IOS.1
-
-Language Fundamentals: LF.3, LF.3.b
