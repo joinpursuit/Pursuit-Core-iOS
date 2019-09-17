@@ -1,3 +1,13 @@
+#### Standards
+
+IOS: IOS.1
+
+Language Fundamentals: LF.3, LF.3.c
+
+LF.3 Understand that data structures are ways of storing multiple elements of associated data. Access individual elements within sets of information, either directly, by iteration, or using methods.
+
+LF.3.c Dictionaries/Maps: Able to declare and use Dictionaries. Understand common uses of Dictionaries. Contrast and compare Dictionaries with Arrays. Understand that a dictionary stores associations between keys of the same type and values of the same type in a collections with no defining ordering.
+
 ### Dictionaries
 ---
 
@@ -204,9 +214,3 @@ for c in codes {
     print(baseballTeamsByCode[c])
 }
 ```
-
-#### Standards
-
-IOS: IOS.1
-
-Language Fundamentals: LF.3, LF.3.c
