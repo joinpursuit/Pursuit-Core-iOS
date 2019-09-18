@@ -2,21 +2,33 @@
 
 ## Contents
 
-1. [Introduction to App Development](./introduction-to-app-development/README.md)
-1. [App Architecture: MVC Pattern](./app-architecture-mvc/README.md)
-1. [DSA: Big O Notation](https://github.com/joinpursuit/DSA-Curriculum/blob/master/big_o_notation/ios/README.md)
-1. [Protocols](./protocols/README.md)
-1. [Lifecycle and Controls](./lifecycle-and-controls/README.md)
-1. [Delegation Through UITextField](./delegation-through-uitextfield/README.md)
-1. [Autolayout](./autolayout/README.md)
-1. [UITableView](./uitableview/README.md)
-1. [Custom UITableView Cells](./custom-uitableviewcells/README.md)
-1. [Multiple MVC](./multiple-mvc/README.md)
-1. [DSA: Recursion](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Recursion/ios/README.md)
-1. [Multiple MVC Day Two](./multiple-mvc-day-two/README.md)
-1. [UITableView and UISearchBar](./uitableview-and-uisearchbar/README.md)
-1. [Editing Table Views](./editing-table-views/README.md)
-1. [Review](./unit-review/README.md)
+| Lesson | Exit Ticket | Lab |
+| --- | --- | --- |
+| 1. [Introduction to App Development](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/6_1/mvc-view-lifecycle/introduction-to-app-development/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11854061) | [Three Card Monty](https://github.com/joinpursuit/Pursuit-Core-iOS-Three-Card-Monte) |
+| 2. [Building Apps with MVC](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/6_1/mvc-view-lifecycle/app-architecture-mvc/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11893013) | [Color Guessing Game](https://github.com/joinpursuit/Pursuit-Core-iOS-ColorGuessingGameExercise) |
+| 3. [Protocols and Delegation](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/6_1/mvc-view-lifecycle/protocols/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11852913) | [link](https://github.com/joinpursuit/Swift-Protocols-Lab/blob/master/README.md) |
+| 4. [Lifecycle and Controls](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/6_1/mvc-view-lifecycle/lifecycle-and-controls/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11852847) | n/a |
+| 5. [TextFields and Delegation](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/delegation-through-uitextfield/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11853976) | [Text Twist](https://github.com/joinpursuit/AC-iOS-TextTwist/tree/master) |
+| 6. [Auto Layout](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/6_1/mvc-view-lifecycle/autolayout/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11853986) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Auto-Layout-Lab) |
+| 7. [Table Views](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/6_1/mvc-view-lifecycle/uitableview/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11854000) | [Task List](https://github.com/joinpursuit/Pursuit-Core-iOS-TableView-Introduction-Lab) |
+| 8. [Custom Table View Cells](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/6_1/mvc-view-lifecycle/custom-uitableviewcells/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11854037) | n/a |
+| 9. [Multiple MVC - Tab Bar Controller + Segues](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/6_1/mvc-view-lifecycle/multiple-mvc/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11852686) | [Animals List](https://github.com/joinpursuit/Pursuit-Core-iOS-Multiple-MVC-Lab) |
+| 10. [Multiple Storyboards](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/mvc-view-lifecycle/multiple-mvc-day-two) | n/a | n/a |
+| 11. [Table Views and Search Bars](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/6_1/mvc-view-lifecycle/uitableview-and-uisearchbar/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12056272) | [Song Search](https://github.com/joinpursuit/SongsSearchBar) |
+| 12. [Editing Table Views](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/mvc-view-lifecycle/editing-table-views) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12176498) | [Grocery List](https://github.com/joinpursuit/Pursuit-Core-Editing-TableViews-Lab) |
+
+
+## Assignments
+
+- [Tic-Tac-Toe](https://github.com/joinpursuit/Pursuit-Core-iOS-Unit2-Assignment1)
+- [Game of Thrones](https://github.com/joinpursuit/AC-iOS-GOT)
+
+## Extra Content
+
+- [Unit Two Review List](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/6_1/mvc-view-lifecycle/unit-review/README.md)
+- [Delegation Review Lab](https://github.com/joinpursuit/Pursuit-Core-MVC-Delegation-Review-Lab)
+- [Card Games](https://github.com/joinpursuit/Pursuit-Core-iOS-CardGame)
+- [Recipes App](https://github.com/joinpursuit/Pursuit-Core-iOS-Recipes)
 
 ## Source Code and Lectures
 
@@ -25,9 +37,3 @@
 [6.1 Pairing App](https://github.com/davidlawrencer/6.1-pairing-generator)
 
 [Lecture Videos](https://www.youtube.com/channel/UCDN46W3L67JMtrRb-u_cgCA)
-
-## TBD
-| Project | Summary |
-|:------:|:------:|
-| [Card Game](https://github.com/joinpursuit/Pursuit-Core-iOS-CardGame) | MVC architecture (model-view-controller), Protocols, Enums, Multiple View Controllers |
-| [Recipes App](https://github.com/joinpursuit/Pursuit-Core-iOS-Recipes) | UITableView, Custom Table View Cell using Storyboard, UITableViewDataSource, UITableViewDelegate, UISearchBar, UISearchBarDelegate |
