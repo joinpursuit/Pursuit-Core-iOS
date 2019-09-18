@@ -10,8 +10,8 @@
 | 3. [FileManager Persistence One](./filemanager-persistence/README.md) | tbd | tbd |
 | 4. [FileManager Persistence Two](./filemanager-persistence-continued/README.md) | tbd | tbd |
 | 5. [UIImagePickerController](./uiimagepickercontroller/README.md) | tbd | tbd |
-| 6. [Custom Delegation](./custom-delegation/README.md) | tbd | tbd |
-| 7. [Subclassing UIViews](./subclassing-uiviews/README.md) | tbd | tbd |
+| 6. [Subclassing UIViews](./subclassing-uiviews/README.md) | tbd | tbd |
+| 7. [Custom Delegation](./custom-delegation/README.md) | tbd | tbd |
 | 8. [Introduction to Programmatic UI](./introduction-to-programmatic-ui/README.md) | tbd | tbd |
 | 9. [Programmatic View Management](./programmatic-view-management/README.md) | tbd | tbd |
 | 10. [Animations One](./animations/README.md) | tbd | tbd |
