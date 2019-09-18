@@ -1,26 +1,34 @@
 
-# Unit 4: Persistence, Animation, and Autolayout
+# Unit 4: Persistence, Animation, and Programmatic Auto Layout
 
 ## Contents
 
-1. [Into to Persistence with User Defaults](./intro-to-persistence-with-userdefaults/README.md)
-2. [UICollectionView](./uicollectionview/README.md)
-3. [FileManager Persistence](./filemanager-persistence/README.md)
-4. [FileManager Persistence Cont](./filemanager-persistence-continued/README.md)
-5. [UIImagePickerController](./uiimagepickercontroller/README.md)
-6. [DSA: Intro to Sorting Algorithms](https://github.com/joinpursuit/DSA-Curriculum/blob/master/bubble_sort/ios/README.md)
-7. [Custom Delegation](./custom-delegation/README.md)
-8. [Debugging](./debugging/README.md)
-9. [Subclassing UIViews](./subclassing-uiviews/README.md)
-10. [Introduction to Programmatic UI](./introduction-to-programmatic-ui/README.md)
-11. [Programmatic View Management](./programmatic-view-management/README.md)
-12. [DSA: Quick Sort and Merge Sort](https://github.com/joinpursuit/DSA-Curriculum/blob/master/merge_sort/ios/README.md)
-13. [Animations](./animations/README.md)
-14. [Animations Cont](./animations-continued/README.md)
-15. [DSA: Binary Search](https://github.com/joinpursuit/DSA-Curriculum/blob/master/binary_search/ios/README.md)
-16. [Keyboard Handling](./keyboard-handling/README.md)
-17. [NY Times Bestsellers Project](https://github.com/joinpursuit/Pursuit-Core-iOS-New-York-Times-Bestsellers)
+| Lesson | Midday Checkin | Lab |
+| --- | --- | --- |
+| 1. [Into to Persistence with User Defaults](./intro-to-persistence-with-userdefaults/README.md) | tbd | tbd |
+| 2. [UICollectionView](./uicollectionview/README.md) | tbd | tbd |
+| 3. [FileManager Persistence One](./filemanager-persistence/README.md) | tbd | tbd |
+| 4. [FileManager Persistence Two](./filemanager-persistence-continued/README.md) | tbd | tbd |
+| 5. [UIImagePickerController](./uiimagepickercontroller/README.md) | tbd | tbd |
+| 6. [Custom Delegation](./custom-delegation/README.md) | tbd | tbd |
+| 7. [Subclassing UIViews](./subclassing-uiviews/README.md) | tbd | tbd |
+| 8. [Introduction to Programmatic UI](./introduction-to-programmatic-ui/README.md) | tbd | tbd |
+| 9. [Programmatic View Management](./programmatic-view-management/README.md) | tbd | tbd |
+| 10. [Animations One](./animations/README.md) | tbd | tbd |
+| 11. [Animations Two](./animations-continued/README.md) | tbd | tbd |
+| 12. [Keyboard Handling](./keyboard-handling/README.md) | tbd | tbd |
 
+## Assignments
+
+| Project | Summary |
+|:-------:|:------:|
+| [PhotoJournal](https://github.com/joinpursuit/Pursuit-Core-iOS-PhotoJournal-Assignment) | UIImagePickerController, Persistence, FileManager |
+| [WeatherApp](https://github.com/joinpursuit/Pursuit-Core-iOS-WeatherApp) | UserDefaults, Persistence, FileManager |
+| [NYTBestsellers](https://github.com/joinpursuit/Pursuit-Core-iOS-New-York-Times-Bestsellers) | UserDefaults, FileManager, Persistence, NetowrkHelper, ImageHelper, AppError |
+
+## Extra Content
+
+- [Debugging](./debugging/README.md)
 
 ## In class demos
 
@@ -33,12 +41,3 @@
 | [UIView.animation](https://github.com/joinpursuit/Pursuit-Core-iOS-UIView-Animations-Intro) | Introduction to UIView.animation(), CGAffineTransform, .repeat, .autoreverse, .curveEaseIn, transform, .pi |
 | [UIView.transition, UIViewProperyAnimator](https://github.com/joinpursuit/Pursuit-Core-iOS-UIView-Animations-Continued) | Dynamic animations with UIViewPropertyAnimator |
 | [KeyboardHandling](https://github.com/joinpursuit/Pursuit-Core-iOS-Keyboard-Handling) | Keyboard Handling, NotificationCenter, UIResponder, CGAffineTransform |
-
-
-## Assignments
-
-| Project | Summary |
-|:-------:|:------:|
-| [PhotoJournal](https://github.com/joinpursuit/Pursuit-Core-iOS-PhotoJournal-Assignment) | UIImagePickerController, Persistence, FileManager |
-| [WeatherApp](https://github.com/joinpursuit/Pursuit-Core-iOS-WeatherApp) | UserDefaults, Persistence, FileManager |
-| [NYTBestsellers](https://github.com/joinpursuit/Pursuit-Core-iOS-New-York-Times-Bestsellers) | UserDefaults, FileManager, Persistence, NetowrkHelper, ImageHelper, AppError |
