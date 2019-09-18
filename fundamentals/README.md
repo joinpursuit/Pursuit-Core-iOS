@@ -5,7 +5,7 @@
 | Lesson | Exit Ticket | Lab |
 | --- | --- | --- |
 | 1. [Environment and Tools](./env-and-tools/README.md) | n/a  | n/a |
-| 2. [Types, Variables, Logic, and Operations](./types-variables-logic-operations/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11666585) | [part one](https://github.com/joinpursuit/ios-types-variables-logic-operations-lab-1) / [part two](https://github.com/joinpursuit/ios-types-variables-logic-operations-lab-2/) |
+| 2. [Types, Variables, Logic, and Operations](./types-variables-logic-operations/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11666585) / [6.3](https://canvas.instructure.com/courses/1705726/assignments/12512248) | [part one](https://github.com/joinpursuit/ios-types-variables-logic-operations-lab-1) / [part two](https://github.com/joinpursuit/ios-types-variables-logic-operations-lab-2/) |
 | 3. [Control Flow](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/fundamentals/control-flow/README.md) | [6.1](https://github.com/joinpursuit/ios-control-flow-exit-ticket) | [link](https://github.com/joinpursuit/ios-control-flow-lab) |
 | 4. [Loops](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/fundamentals/loops/README.md) | [6.1](https://github.com/joinpursuit/ios-loops-exit-ticket) | [link](https://github.com/joinpursuit/ios-loops-lab) |
 | 5. [Terminal and Github](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/fundamentals/terminal-github/README.md) | n/a | n/a |
