@@ -1,27 +1,19 @@
-
 # Unit 3:  Networking, Concurrency, APIs
 
 ## Contents
 
-1. [Intro to the Internet and Networking](./intro-to-the-internet-and-networking/README.md)
-1. [Parsing JSON](./parsing-json/README.md)
-1. [DSA: Linked Lists](https://github.com/joinpursuit/DSA-Curriculum/blob/master/linked_lists/ios/README.md)
-1. [Intro to Unit Testing](./introduction-to-unit-testing/README.md)
-1. [Getting Data From Online](./getting-data-from-online/README.md)
-1. [URLSession](./urlsession/README.md)
-1. [Concurrency](./concurrency/README.md)
-1. [Retain Cycles](./memory-management-and-arc/README.md)
-1. [API Keys and Basic Auth](./api-keys-basic-authentication/README.md)
-1. [DSA: Queues](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Queues/ios/README.md)
-1. [DSA: Stacks](https://github.com/joinpursuit/DSA-Curriculum/blob/master/Stacks/ios/README.md)
-1. [Post Requests](./post-requests/README.md)
-1. [Singleton Pattern](./singleton-pattern/README.md)
-1. [Working with Dates](./working-with-dates/README.md)
-1. [UIPageViewController](./uipageviewcontroller/README.md)
-1. [DSA: Review](https://github.com/joinpursuit/DSA-Curriculum)
-1. [DSA: Hash Tables](https://github.com/joinpursuit/DSA-Curriculum/blob/master/hash_tables/ios/README.md)
-1. [App Transport Security](./app-transport-security/README.md)
-1. [Uploading JSON Data](./uploading-json-data/README.md)
+| Lesson | Exit Ticket | Lab |
+| --- | --- | --- |
+| 1. [Introduction to the Internet and Networking](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/networking-concurrency-apis/intro-to-the-internet-and-networking/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12289325) | [link](https://github.com/joinpursuit/Pursuit-Core-Introduction-To-Networking-and-APIs-Lab) |
+| 1. [Parsing JSON](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/networking-concurrency-apis/parsing-json/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12323266) | [Weather / Color / Random User](https://github.com/joinpursuit/Pursuit-Core-iOS-Parsing-JSON-Lab) |
+| 1. [Unit Testing](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/networking-concurrency-apis/introduction-to-unit-testing/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12344585) | [Jokes / Star Wars / Trivia](https://github.com/joinpursuit/Pursuit-Core-iOS-Introduction-to-Unit-Testing-Lab) |
+| 1. [Getting Data from Online](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/networking-concurrency-apis/getting-data-from-online/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12382891) | n/a |
+| 1. [Concurrency and Grand Central Dispatch](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/networking-concurrency-apis/concurrency) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12394340) | [Country List](https://github.com/joinpursuit/Pursuit-Core-iOS-Concurrency-Lab/blob/master/README.md) |
+| 1. [Images and Error Handling](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/4_3/lessons/unit3/ErrorHandlingAndImages) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12453542) | [XCKD / Pokemon / Random User](https://github.com/joinpursuit/Pursuit-Core-iOS-Images-Lab/blob/master/README.md) |
+| 1. [Retain Cycles](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/networking-concurrency-apis/memory-management-and-arc/README.md) | n/a | n/a |
+| 1. [API Keys and Auth](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/networking-concurrency-apis/api-keys-basic-authentication/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12480829) | [Musixmatch](https://github.com/joinpursuit/Pursuit-Core-iOS-API-Keys-Lab/blob/master/README.md) |
+| 1. [Post Requests](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/networking-concurrency-apis/post-requests/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12503024) | [Airtable Clients List](https://github.com/joinpursuit/Pursuit-Core-iOS-Post-Requests-with-Airtable) |
+
 
 ## Source Code and Lectures
 
@@ -29,14 +21,20 @@
 
 [Lecture Videos](https://www.youtube.com/channel/UCDN46W3L67JMtrRb-u_cgCA)
 
+## Extra Content
+
+1. [Singleton Pattern](./singleton-pattern/README.md)
+1. [Working with Dates](./working-with-dates/README.md)
+1. [App Transport Security](./app-transport-security/README.md)
+
 
 ## Helper Classes written in Unit 3 to handle Networking
 
 
-<details> 
+<details>
 	<summary>Network Helper - wrapper for URLSession</summary>
-	
-```swift 
+
+```swift
 import Foundation
 
 enum HTTPMethod: String {
@@ -96,13 +94,13 @@ class NetworkHelper {
 }
 ```
 
-</details> 
+</details>
 
 
-<details> 
+<details>
 	<summary>AppError - handles error throughout the app</summary>
-	
-```swift 
+
+```swift
 import Foundation
 
 enum AppError: Error {
@@ -118,4 +116,4 @@ enum AppError: Error {
 }
 ```
 
-</details> 
+</details>
