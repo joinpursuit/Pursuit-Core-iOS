@@ -1,7 +1,34 @@
 ### Types, Variables, Logic and Operations
 ---
 
+### Standards
 
+IOS: IOS.1
+
+Language Fundamentals: 
+The Command Line. 
+
+EF.2 Know all important terms and concepts related to the basic implementation and usage of the bash terminal.
+
+EF.2.a Explain the difference between a CLI and a GUI.
+
+EF.2.b Know and use basic file system navigation and manipulation (at least: 'ls', 'cd', 'touch', 'mkdir', 'rm'). Able to navigate to any folder/file in the terminal when asked. Create a file/folder anywhere they have permission to in their filesystem.
+
+EF.2.c Know and use basic bash commands (e.g. 'sudo', 'which') and shorthand (at least: '-v', '-u', '-a', '--help'). Install any software with command line support and be able to utilize it with documentation. Discern what software they have installed globally, what version it is, and how to update/uninstall/reinstall as necessary.
+
+EF.2.d Understand system-level environment variables - what they are and how to manipulate them (more on this in the Node section).
+
+ 
+
+Local Development. 
+
+EF.3 Know how to set up and maintain their local development environments and independently set up and operate a development environment on a new computer.
+
+ 
+
+Version Control.
+
+EF.4 Know all foundational Git commands, best practices, and terminology.
 
 ### Objectives
 - To understand and differentiate among types of data, define constants and variables, print variables to the console using string interpolation, and to solve basic logic questions.
@@ -518,8 +545,4 @@ Floating-point values are always truncated when used to initialize a new integer
 * Remember, (almost) always use `Int`.
 * What are the rare cases where using an integer type other than `Int` is recommended?
 
-### Standards
 
-IOS: IOS.1
-
-Language Fundamentals: LF.1, LF.1.a, LF.2
