@@ -1,6 +1,22 @@
 ### Types, Variables, Logic and Operations
 ---
 
+### Standards
+
+IOS: IOS.1
+
+Language Fundamentals: 
+Standards
+
+IOS.1 Understand all core Swift language concepts and syntax.
+
+Language Fundamentals. 
+
+LF.1 -  Understand and differentiate among types of data, including selecting the correct type for the task, typecasting where necessary, and applying the correct methods and operators for the type. Apply methods and other operations based on appropriate data type to produce desired outcomes.          
+
+LF.1.a - Understand that data types are the foundation of all code, different ways of storing information drastically changes the way you approach code, example: Int 1 compared to String "1", and native data types are in every language
+
+LF.2 Variables: Understand that a variable/constant is a reference to a value stored in memory. Know how to declare and assign variables and constants. Understand the differences and appropriate use cases for variables vs constant.
 
 
 ### Objectives
@@ -518,8 +534,3 @@ Floating-point values are always truncated when used to initialize a new integer
 * Remember, (almost) always use `Int`.
 * What are the rare cases where using an integer type other than `Int` is recommended?
 
-### Standards
-
-IOS: IOS.1
-
-Language Fundamentals: LF.1, LF.1.a, LF.2
