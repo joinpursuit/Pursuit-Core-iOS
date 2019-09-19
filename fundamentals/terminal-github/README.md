@@ -1,3 +1,13 @@
+## Standards
+
+Engineering Foundations:
+
+EF.2 Know all important terms and concepts related to the basic implementation and usage of the bash terminal.
+
+EF.2.a Explain the difference between a CLI and a GUI.
+
+EF.2.b Know and use basic file system navigation and manipulation (at least: 'ls', 'cd', 'touch', 'mkdir', 'rm'). Able to navigate to any folder/file in the terminal when asked. Create a file/folder anywhere they have permission to in their filesystem.
+
 ## Brief Introduction to Github and Terminal
 
 ## Objective
@@ -68,6 +78,3 @@ Terminal comes shipped with the macOS operating system. It provides text-based o
 | [Fork a repo](https://help.github.com/articles/fork-a-repo/) | Fork a repo |
 | [Pushing your Xcode Project to Github](https://gist.github.com/alexpaul/71888780c41228b5f3370b8cbd079dad) | Steps to push your Xcode project to Github |
 
-## Standards
-
-Engineering Foundations: EF.2, EF.2.a, EF.2.b, EF.2.c, EF.2.d, EF.3, EF.4
