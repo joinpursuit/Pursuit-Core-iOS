@@ -56,6 +56,11 @@ Terminal comes shipped with the macOS operating system. It provides text-based o
 1. Navigate to [Github](https://github.com)
 1. Click on New repository
 
+#### Storing Github Credentials in Terminal 
+
+> git config --global user.name "your username"   
+> git config --global user.password "your password"
+
 ## Other Resources
 
 | Resource | Summary |
