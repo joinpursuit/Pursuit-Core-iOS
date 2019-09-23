@@ -43,7 +43,7 @@ So how do we actually use `UserDefaults` to store and retrieve data?  Let's buil
 
 Put together the UI for the following View Controller:
 
-![defaultsVCUI]()
+![defaultsVCUI](./defaultsVCUI.png)
 
 Let's build an app where the text size, uppercase preference and username are all persisted to User Defaults and will load again even if the app is closed and re-opened.
 
