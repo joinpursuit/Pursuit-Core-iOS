@@ -36,6 +36,7 @@ There are restrictions on the kind of things that we can have as the values insi
 
 The `NS` prefix before the familiar types means that the system was originally built for Objective-C.  By default, there is bridging built in between `String` and `NSString` and the compiler is able to convert one into the other.  Sometimes this may cause errors, so it's something to watch out for.
 
+UserDefaults is a good way to store small amounts of information.  It is NOT to store large complicated objects that take up a lot of memory.  This is because the app will load all the stored information on launch, and having too much information stored there will make it take longer to launch your app.
 
 # 3. Using UserDefaults to persist information
 
