@@ -30,11 +30,11 @@ Additionally, many apps allow you to save settings like dark mode, layout or sor
 
 # 2. UserDefaults Introduction
 
-UserDefaults is one way for us to save this information.  When you download an app onto your phone, it comes with a set of files.  For example, any images that you put inside your `Assets` directory will be downloaded.  One of the files that is downloaded is a special file called `{appbundlename}.plist` (where appbundlename) is your app bundle.  A `.plist` file is a property list that is a way to store keys and values, sometimes called a key-value store.  It's essentially a dictionary.  Just like a dictionary, we can store values at a given key, then look them up later.
+UserDefaults is one way for us to save this information.  When you download an app onto your phone, it comes with a set of files.  For example, any images that you put inside your `Assets` directory will be downloaded.  One of the files that is downloaded is a special file called `{appbundlename}.plist` (where `appbundlename` is your app bundle).  A `.plist` file is a property list that is a way to store keys and values, sometimes called a key-value store.  It's essentially a dictionary.  Just like a dictionary, we can store values at a given key, then look them up later.
 
 There are restrictions on the kind of things that we can have as the values inside our property list. The values we store must be an instance of (or for collections, a combination of instances of) `NSData`, `NSString`, `NSNumber`, `NSDate`, `NSArray`, or `NSDictionary`. If you want to store any other type of object, you should typically archive it to create an instance of `NSData`.
 
-The `NS` prefix before the familiar types means that the system was originally built for Objective-C.  By default, there is bridging built in between `String` and `NSString` and the compiler is able to convert one into the other.  Sometimes this may cause errors, so it's something to watch out for.
+The `NS` prefix before these otherwise familiar types means that the system was originally built for Objective-C.  By default, there is bridging built in between `String` and `NSString` and the compiler is able to convert one into the other.  Sometimes this may cause errors, so it's something to watch out for.
 
 UserDefaults is a good way to store small amounts of information.  It is NOT to store large complicated objects that take up a lot of memory.  This is because the app will load all the stored information on launch, and having too much information stored there will make it take longer to launch your app.
 
