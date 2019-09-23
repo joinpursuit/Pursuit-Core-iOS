@@ -5,7 +5,7 @@
 
 | Lesson | Midday Checkin | Lab |
 | --- | --- | --- |
-| 1. [Into to Persistence with User Defaults](./intro-to-persistence-with-userdefaults/README.md) | tbd | tbd |
+| 1. [Intro to Persistence with User Defaults](./intro-to-persistence-with-userdefaults/README.md) | tbd | tbd |
 | 2. [UICollectionView](./uicollectionview/README.md) | tbd | tbd |
 | 3. [FileManager Persistence One](./filemanager-persistence/README.md) | tbd | tbd |
 | 4. [FileManager Persistence Two](./filemanager-persistence-continued/README.md) | tbd | tbd |
