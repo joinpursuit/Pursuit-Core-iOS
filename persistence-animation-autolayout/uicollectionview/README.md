@@ -14,6 +14,7 @@
 * [Collection View (Apple Docs)](https://developer.apple.com/reference/uikit/uicollectionview)
 * [Collection View Layout(Apple Docs)](https://developer.apple.com/reference/uikit/uicollectionviewlayout)
 * [UICollectionViewDelegateFlowLayout (Apple Docs)](https://developer.apple.com/reference/uikit/uicollectionviewdelegateflowlayout)
+* [Alex Paul - Colleciton View Demo](https://github.com/joinpursuit/AC-iOS-CollectionView-In-Code)
 
 ## [Project Link](https://github.com/joinpursuit/Pursuit-Core-iOS-Collection-Views-Introduction)
 
