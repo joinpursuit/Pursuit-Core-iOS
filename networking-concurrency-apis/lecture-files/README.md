@@ -5,7 +5,5 @@
 1. [Intro to Unit Testing (August 29)](https://github.com/davidlawrencer/intro-to-unit-testing)
 1. [URL Session Requests (August 30)](./URLSessionPlayground.playground/Contents.swift)
 1. [Network Helpers (September 5)](https://github.com/davidlawrencer/network-helper-with-brews)
-
-
-
-
+1. [Debugging Exercise: Stocks and Contacts Project (September 10)](https://github.com/davidlawrencer/people-and-stocks-debugging)
+1. [Post Requests (September 12)](https://github.com/davidlawrencer/project-tracker-post-requests)
