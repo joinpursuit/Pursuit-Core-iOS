@@ -33,6 +33,8 @@
 
 [Lecture Videos](https://www.youtube.com/channel/UCDN46W3L67JMtrRb-u_cgCA)
 
+[Whiteboarding Wednesdays](https://github.com/davidlawrencer/whiteboarding-wednesdays)
+
 [Github Cheat Sheet](https://github.com/davidlawrencer/github-cheat-sheet)
 
 [Debugging](./debugging/README.md)
