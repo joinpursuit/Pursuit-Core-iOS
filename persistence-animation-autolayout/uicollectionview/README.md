@@ -441,7 +441,7 @@ extension ViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "magicCardCell", for: indexPath) as? MagicCardCollectionViewCell else {
-            fatalError("Unknown resuse ID")
+            fatalError("Unknown reuse ID")
         }
         let magicCard = cards[indexPath.row]
         cell.cardImageView.image = nil
