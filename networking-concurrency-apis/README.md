@@ -28,6 +28,9 @@
 
 [Lecture Videos](https://www.youtube.com/channel/UCDN46W3L67JMtrRb-u_cgCA)
 
+[Github Cheat Sheet](https://github.com/davidlawrencer/github-cheat-sheet)
+
+
 ## Extra Content
 
 1. [Singleton Pattern](./singleton-pattern/README.md)
