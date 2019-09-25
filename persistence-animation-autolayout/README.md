@@ -24,11 +24,18 @@
 |:-------:|:------:|
 | [PhotoJournal](https://github.com/joinpursuit/Pursuit-Core-iOS-PhotoJournal-Assignment) | UIImagePickerController, Persistence, FileManager |
 | [WeatherApp](https://github.com/joinpursuit/Pursuit-Core-iOS-WeatherApp) | UserDefaults, Persistence, FileManager |
-| [NYTBestsellers](https://github.com/joinpursuit/Pursuit-Core-iOS-New-York-Times-Bestsellers) | UserDefaults, FileManager, Persistence, NetowrkHelper, ImageHelper, AppError |
+| [NYTBestsellers](https://github.com/joinpursuit/Pursuit-Core-iOS-New-York-Times-Bestsellers) | UserDefaults, FileManager, Persistence, NetworkHelper, ImageHelper, AppError |
 
-## Extra Content
 
-- [Debugging](./debugging/README.md)
+## Source Code and Lectures
+
+[6.1 Unit 4 Lecture Code](./lecture-files)
+
+[Lecture Videos](https://www.youtube.com/channel/UCDN46W3L67JMtrRb-u_cgCA)
+
+[Github Cheat Sheet](https://github.com/davidlawrencer/github-cheat-sheet)
+
+[Debugging](./debugging/README.md)
 
 ## In class demos
 
