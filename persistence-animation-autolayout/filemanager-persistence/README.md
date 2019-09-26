@@ -2,7 +2,11 @@
 
 ## Objectives
 
-- a
+- Understand how data is persisted to the documents directory
+- Serialize data for storage
+- Store data to the documents directory
+- Read data from the documents directory
+
 
 ## Readings  
 
@@ -35,13 +39,13 @@ Just like you can access and save files on your laptop, you can access and save 
 We can access the documents directory to load and save data.  The `FileManager` class provides an interface for getting the URL to the documents directory.  The URL here is an offline one and refers to a location on the user's phone.
 
 ```swift
-static func documentsDirectory() -> URL {
+func documentsDirectory() -> URL {
   return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 }
 ```
 
 ```swift
-static func filePathFromDocumentsDirectory(filename: String) -> URL {
+func filePathFromDocumentsDirectory(filename: String) -> URL {
   return documentsDirectory().appendingPathComponent(filename)
 }
 ```
@@ -77,7 +81,7 @@ struct Person: Codable {
 }
 
 func getDate(from str: String) -> Date {
-    var dateFormatter = DateFormatter()
+    let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd"
     return dateFormatter.date(from: str) ?? Date.distantPast
 }
@@ -102,11 +106,11 @@ Now that we have serialized data, we can save it to the documents directory:
 ```swift
 import Foundation
 
-static func documentsDirectory() -> URL {
+func documentsDirectory() -> URL {
   return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 }
 
-static func filePathFromDocumentsDirectory(filename: String) -> URL {
+func filePathFromDocumentsDirectory(filename: String) -> URL {
   return documentsDirectory().appendingPathComponent(filename)
 }
 
@@ -116,7 +120,7 @@ struct Person: Codable {
 }
 
 func getDate(from str: String) -> Date {
-    var dateFormatter = DateFormatter()
+    let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd"
     return dateFormatter.date(from: str) ?? Date.distantPast
 }
@@ -144,11 +148,11 @@ To access stored data, we'll need to read the data from the saved URL, then deco
 ```swift
 import Foundation
 
-static func documentsDirectory() -> URL {
+func documentsDirectory() -> URL {
   return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 }
 
-static func filePathFromDocumentsDirectory(filename: String) -> URL {
+func filePathFromDocumentsDirectory(filename: String) -> URL {
   return documentsDirectory().appendingPathComponent(filename)
 }
 
@@ -158,7 +162,7 @@ struct Person: Codable {
 }
 
 func getDate(from str: String) -> Date {
-    var dateFormatter = DateFormatter()
+    let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd"
     return dateFormatter.date(from: str) ?? Date.distantPast
 }
@@ -178,9 +182,10 @@ do {
 }
 
 let url = filePathFromDocumentsDirectory(filename: "applePeople.plist")
-if FileManager.default.fileExists(atPath: url) {
+
+if FileManager.default.fileExists(atPath: url.path) {
   do {
-    if let data = FileManager.default.contents(atPath: url) {
+    if let data = FileManager.default.contents(atPath: url.path) {
       let people = try PropertyListDecoder().decode([Person].self, from: data)
       print(people)
     } else {
