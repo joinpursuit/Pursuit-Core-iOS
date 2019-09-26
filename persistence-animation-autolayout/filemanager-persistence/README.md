@@ -65,7 +65,7 @@ Now that we can access the URL for the documents directory, we want to store dat
 
 *Serializing data* means putting it into a format that can be saved.  There are many different formats that can be used to serialize data including:
 
-- NSKeyedArchiver
+- Keyed Archive
 - XML
 - JSON
 - plist
