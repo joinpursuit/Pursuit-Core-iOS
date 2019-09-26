@@ -24,8 +24,7 @@
 
 Collection views are very much like table views. The main difference is that collection views are far more flexible in how they can lay out their content.
 
-While it's highly customizable via an overrideable class ```UICollectionViewLayout```, the default ```Flow``` layout is very powerful without any subclassing. The
-protocol ```UICollectionViewDelegateFlowLayout``` allows us to tap into this layout.  It inherits from UICollectionViewDelegate as shown below:
+While it's highly customizable via an overrideable class ```UICollectionViewLayout```, the default ```Flow``` layout is very powerful without any subclassing. The protocol ```UICollectionViewDelegateFlowLayout``` allows us to tap into this layout.  It inherits from UICollectionViewDelegate as shown below:
 
 ```swift
 public protocol UICollectionViewDelegateFlowLayout : UICollectionViewDelegate
@@ -33,8 +32,7 @@ public protocol UICollectionViewDelegateFlowLayout : UICollectionViewDelegate
 
 ### DataSource
 
-UICollectionView's data source is very much like UITableView's. The key methods
-are exactly the same, but for some rewording.
+UICollectionView's data source is very much like UITableView's. The key methods work in the same way, but for some rewording.
 
 
 ```swift
@@ -58,9 +56,9 @@ override func collectionView(_ collectionView: UICollectionView, cellForItemAt i
 }
 ```
 
-## No default cells
+## No Default Cells
 
-Collection Views require customization for their cells.  There is no "basic" or "subtitle" collection view cell. We must always create a subclass and set its properties like we do for table views.
+Collection Views require customization for their cells.  There is no "basic" or "subtitle" collection view cell, like you might find with a table view. We must always create a subclass and set its properties like we do for custom table view cells.
 
 ## Horizontal / Vertical scrolling
 
@@ -70,7 +68,7 @@ Collection Views can be configured to scroll both vertically and horizontally by
 
 We can set the size of a collection view cell by conforming to a special protocol named "UICollectionViewDelegateFlowLayout".  Then you are able to calll the appropriate method.
 
-```
+```swift
 extension BestSellersViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(YOURWIDTH, YOURHEIGHT)
