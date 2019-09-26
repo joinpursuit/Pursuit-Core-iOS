@@ -5,7 +5,7 @@
 
 | Lesson | Midday Checkin | Lab |
 | --- | --- | --- |
-| 1. [Intro to Persistence with User Defaults](./intro-to-persistence-with-userdefaults/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4315434) | [tbd](https://github.com/joinpursuit/Pursuit-Core-iOS-UserDefaults-Lab/blob/master/README.md) |
+| 1. [Intro to Persistence with User Defaults](./intro-to-persistence-with-userdefaults/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4315434) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-UserDefaults-Lab/blob/master/README.md) |
 | 2. [UICollectionView](./uicollectionview/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4325338) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Collection-View-Lab/blob/master/README.md) |
 | 3. [FileManager Persistence One](./filemanager-persistence/README.md) | tbd | tbd |
 | 4. [FileManager Persistence Two](./filemanager-persistence-continued/README.md) | tbd | tbd |
