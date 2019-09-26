@@ -1,110 +1,194 @@
-## Persisting Custom Objects to Documents Directory
+# Persisting Custom Objects to Documents Directory
 
-[UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults) is a persistence mechanism for saving app data. However Apple strongly recommends that we only use it to store simple data e.g a background theme for an app, position on a slider, media playback speed, units of measurement. UserDefaults also works with primarily property list objects such as String, Data, Date, URL. Custom objects e.g a Person object are best persisted to disk using the FileManager or Core Data along with some other utility classes. 
+## Objectives
 
-## Vocabulary 
+- a
+
+## Readings  
 
 - [FileManager](https://developer.apple.com/documentation/foundation/filemanager)  
 - [PropertyListEncoder](https://developer.apple.com/documentation/foundation/propertylistencoder)  
 - [PropertyListDecoder](https://developer.apple.com/documentation/foundation/propertylistdecoder)  
 - [PropertyList](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/PropertyList.html)  
+- [File System Basics](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html)  
 
-## Readings 
+# 1. Why UserDefaults isn't good enough
 
-[File System Basics](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html)  
+[UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults) is a persistence mechanism for saving app data. However Apple strongly recommends that we only use it to store simple data e.g a background theme for an app, position on a slider, media playback speed, units of measurement. UserDefaults also works with primarily property list objects such as String, Data, Date, URL.
 
-- Documents/ Use this directory to store user-generated content
-- Library/ Your app should not use these directories for user data files
-- tmp/ Use this directory to write temporary files that do not need to persist between launches of your app
+Storing too much data in UserDefaults can cause slowdown when launching your application and it can be more challenging to store custom objects and collections.
 
-## Helper class that encapsulates FileManager access to the app sandbox 
+To solve these problems, we will instead persist these custom objects to disk using the `FileManager`.
 
-```swift 
-final class DataPersistenceManager {
-  static func documentsDirectory() -> URL {
-    return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-  }
-  
-  static func cachesDirectory() -> URL {
-    return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
-  }
-  
-  static func filePathFromDocumentsDirectory(filename: String) -> URL {
-    return documentsDirectory().appendingPathComponent(filename)
-  }
-  
-  static func filePathFromCachesDirectory(filename: String) -> URL {
-    return cachesDirectory().appendingPathComponent(filename)
-  }
-}
-```
+# 2. The App Sandbox
 
-## Helper method to get the path of the Documents directory 
+When a user downloads your app onto their phone, it allocates extra storage space for you to save information.  Users can choose to set the amount of space that your phone can save data to.  This `sandbox` means that you have unrestricted access to a set aside block of memory on the phone, and cannot access other areas without special permissions.  This makes it much safer for the user, because they know that your app won't be able to access other apps (e.g contacts, mail) without permission.
 
-```swift 
+![Apple Sandbox](https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/Art/about_sandboxing.png)
+
+Just like you can access and save files on your laptop, you can access and save files onto the phone of users who have downloaded your app.
+
+![Fire storage](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/art/ios_app_layout_2x.png)
+
+# 3. Accessing the Documents Directory
+
+We can access the documents directory to load and save data.  The `FileManager` class provides an interface for getting the URL to the documents directory.  The URL here is an offline one and refers to a location on the user's phone.
+
+```swift
 static func documentsDirectory() -> URL {
   return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 }
 ```
 
-## Helper method to get the path of a file in the Documents directory
-
-```swift 
+```swift
 static func filePathFromDocumentsDirectory(filename: String) -> URL {
   return documentsDirectory().appendingPathComponent(filename)
 }
 ```
 
-## Custom Object 
+Sample usage:
 
-- custom object needs to conform to Codable to work with PropertyListEncoder and PropertyListDecoder respectively
-
-```swift 
-struct User: Codable {
-  let name: String
-  let theme: String
-  let githubImageURL: String
-}
+```swift
+let usersURL = filePathFromDocumentsDirectory(filename: "users.json")
 ```
 
-## Save to the Documents directory
+# 4. Serializing Data
 
-**Filename**   
+Now that we can access the URL for the documents directory, we want to store data to it.  There are two aspects that we need to save data:
 
-```let propertyListFilename = "File.plist"```
+- Serialize the data
+- Persist the data
 
-- Using FileManager to write to a path in the documents directory 
-- Using PropertyListEncode to convert our custom object to data for saving in the documents directory
+*Serializing data* means putting it into a format that can be saved.  There are many different formats that can be used to serialize data including:
 
-```swift 
-let user = User.init(name: "Alex Paul",
-                     theme: "darkMode",
-                     githubImageURL: "https://avatars2.githubusercontent.com/u/1819208?s=460&v=4")
+- NSKeyedArchiver
+- XML
+- JSON
+- plist
+
+There are differences between each in terms of speed and performance, but it is most important that you can find one way to persist information.  We'll start by storing data in plist format using `PropertyListEncoder`
+
+```swift
+import Foundation
+
+struct Person: Codable {
+    let name: String
+    let birthday: Date
+}
+
+func getDate(from str: String) -> Date {
+    var dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    return dateFormatter.date(from: str) ?? Date.distantPast
+}
+
+let applePeople = [
+    Person(name: "Steve Jobs", birthday: getDate(from: "1955-02-24")),
+    Person(name: "Steve Wozniak", birthday: getDate(from: "1950-08-11")),
+    Person(name: "Tim Cook", birthday: getDate(from: "1960-11-01"))
+]
+
 do {
-  let data = try PropertyListEncoder().encode(user)
-  let url = DataPersistenceManager.filePathFromDocumentsDirectory(filename: propertyListFilename)
-  try data.write(to: url, options: Data.WritingOptions.atomic)
+    let serializedApplePeople = try PropertyListEncoder().encode(applePeople)
 } catch {
-  print("writing error: \(error)")
+    print("Error serializing to property list: \(error)")
 }
 ```
 
-## Read file from the Documents Directory 
+# 5. Storing Data
 
-- Using FileManager to access the file path
-- Using PropertyListDecoder to decode the data from the file to our custom object 
+Now that we have serialized data, we can save it to the documents directory:
 
-```swift 
-if FileManager.default.fileExists(atPath: path) {
+```swift
+import Foundation
+
+static func documentsDirectory() -> URL {
+  return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+}
+
+static func filePathFromDocumentsDirectory(filename: String) -> URL {
+  return documentsDirectory().appendingPathComponent(filename)
+}
+
+struct Person: Codable {
+    let name: String
+    let birthday: Date
+}
+
+func getDate(from str: String) -> Date {
+    var dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    return dateFormatter.date(from: str) ?? Date.distantPast
+}
+
+let applePeople = [
+    Person(name: "Steve Jobs", birthday: getDate(from: "1955-02-24")),
+    Person(name: "Steve Wozniak", birthday: getDate(from: "1950-08-11")),
+    Person(name: "Tim Cook", birthday: getDate(from: "1960-11-01"))
+]
+
+do {
+    let serializedApplePeople = try PropertyListEncoder().encode(applePeople)
+    let url = filePathFromDocumentsDirectory(filename: "applePeople.plist")
+    try serializedApplePeople.write(to: url, options: Data.WritingOptions.atomic)
+} catch {
+    print("Error serializing to property list: \(error)")
+}
+
+```
+
+# 6. Accessing stored stored data
+
+To access stored data, we'll need to read the data from the saved URL, then decode it back into a Swift object:
+
+```swift
+import Foundation
+
+static func documentsDirectory() -> URL {
+  return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+}
+
+static func filePathFromDocumentsDirectory(filename: String) -> URL {
+  return documentsDirectory().appendingPathComponent(filename)
+}
+
+struct Person: Codable {
+    let name: String
+    let birthday: Date
+}
+
+func getDate(from str: String) -> Date {
+    var dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    return dateFormatter.date(from: str) ?? Date.distantPast
+}
+
+let applePeople = [
+    Person(name: "Steve Jobs", birthday: getDate(from: "1955-02-24")),
+    Person(name: "Steve Wozniak", birthday: getDate(from: "1950-08-11")),
+    Person(name: "Tim Cook", birthday: getDate(from: "1960-11-01"))
+]
+
+do {
+    let serializedApplePeople = try PropertyListEncoder().encode(applePeople)
+    let url = filePathFromDocumentsDirectory(filename: "applePeople.plist")
+    try serializedApplePeople.write(to: url, options: Data.WritingOptions.atomic)
+} catch {
+    print("Error serializing to property list: \(error)")
+}
+
+let url = filePathFromDocumentsDirectory(filename: "applePeople.plist")
+if FileManager.default.fileExists(atPath: url) {
   do {
-    if let data = FileManager.default.contents(atPath: path) {
-      let user = try PropertyListDecoder().decode(User.self, from: data)
-      print("user github is \(user.githubImageURL)")
+    if let data = FileManager.default.contents(atPath: url) {
+      let people = try PropertyListDecoder().decode([Person].self, from: data)
+      print(people)
     } else {
-      // data is nil
+      print("No data saved")
     }
-  } catch {
-    print("reading error: \(error)")
+  }
+  catch {
+    print("Decoding error: \(error)")
   }
 }
 ```
