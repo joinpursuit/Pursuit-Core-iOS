@@ -33,7 +33,7 @@
 
 [Lecture Videos](https://www.youtube.com/channel/UCDN46W3L67JMtrRb-u_cgCA)
 
-[🤙Tightboarding🤙Tuesdays🤙 (formerly Whiteboarding Wednesdays)](https://github.com/davidlawrencer/whiteboarding-wednesdays)
+[🤙Tightboarding 🤙Tuesdays 🤙 (formerly Whiteboarding Wednesdays)](https://github.com/davidlawrencer/whiteboarding-wednesdays)
 
 [Github Cheat Sheet](https://github.com/davidlawrencer/github-cheat-sheet)
 
