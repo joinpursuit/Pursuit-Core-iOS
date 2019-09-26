@@ -197,3 +197,88 @@ if FileManager.default.fileExists(atPath: url.path) {
   }
 }
 ```
+
+# 7. Building a wrapper:
+
+Like with all of our services so far, it will save time to build a custom wrapper around FileManager.  This can help us avoid hardcoding the path name and make it easier for us to debug problems when they arise.
+
+```swift
+import Foundation
+
+struct PersistenceHelper<T: Codable> {
+    func getObjects() throws -> [T] {
+        guard let data = FileManager.default.contents(atPath: url.path) else {
+            return []
+        }
+        return try PropertyListDecoder().decode([T].self, from: data)
+    }
+
+    func save(newElement: T) throws {
+        var elements = try getObjects()
+        elements.append(newElement)
+        let serializedData = try PropertyListEncoder().encode(elements)
+        try serializedData.write(to: url, options: Data.WritingOptions.atomic)
+    }
+
+    init(fileName: String) {
+        self.fileName = fileName
+    }
+
+    private let fileName: String
+
+    private var url: URL {
+        return filePathFromDocumentsDirectory(filename: fileName)
+    }
+
+    private func documentsDirectory() -> URL {
+       return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+     }
+
+     private func filePathFromDocumentsDirectory(filename: String) -> URL {
+       return documentsDirectory().appendingPathComponent(filename)
+     }
+}
+
+struct PersonPersistenceHelper {
+    static let manager = PersonPersistenceHelper()
+
+    func save(newPerson: Person) throws {
+        try persistenceHelper.save(newElement: newPerson)
+    }
+
+    func getPeople() throws -> [Person] {
+        return try persistenceHelper.getObjects()
+    }
+
+    private let persistenceHelper = PersistenceHelper<Person>(fileName: "people.plist")
+
+    private init() {}
+}
+
+
+struct Person: Codable {
+    let name: String
+    let birthday: Date
+}
+
+func getDate(from str: String) -> Date {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    return dateFormatter.date(from: str) ?? Date.distantPast
+}
+
+let applePeople = [
+    Person(name: "Steve Jobs", birthday: getDate(from: "1955-02-24")),
+    Person(name: "Steve Wozniak", birthday: getDate(from: "1950-08-11")),
+    Person(name: "Tim Cook", birthday: getDate(from: "1960-11-01"))
+]
+
+do {
+    for person in applePeople {
+        try PersonPersistenceHelper.manager.save(newPerson: person)
+    }
+    print(try PersonPersistenceHelper.manager.getPeople() )
+} catch {
+    print(error)
+}
+```
