@@ -151,8 +151,7 @@ reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in
 
 Now we don't need to write a whole function to do something one time.  This works too, but we can actually use some shorthand syntax to make this easier to read.  The following examples all do exactly the same thing as the example above:
 
-```
-
+```swift
 // function on one line
 reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1 > s2 } )
 
