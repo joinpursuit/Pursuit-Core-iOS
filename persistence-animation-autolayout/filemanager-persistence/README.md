@@ -26,7 +26,7 @@ To solve these problems, we will instead persist these custom objects to disk us
 
 # 2. The App Sandbox
 
-When a user downloads your app onto their phone, it allocates extra storage space for you to save information.  Users can choose to set the amount of space that your phone can save data to.  This `sandbox` means that you have unrestricted access to a set aside block of memory on the phone, and cannot access other areas without special permissions.  This makes it much safer for the user, because they know that your app won't be able to access other apps (e.g contacts, mail) without permission.
+When a user downloads your app onto their phone, it allocates extra storage space for you to save information.  Users can choose to set the amount of space that your phone can save data to.  This `sandbox` means that you have unrestricted access to a set-aside block of memory on the phone, and cannot access other areas without special permissions.  This makes it much safer for the user, because they know that your app won't be able to access other apps (e.g contacts, mail) without permission.
 
 ![Apple Sandbox](https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/Art/about_sandboxing.png)
 
@@ -141,7 +141,7 @@ do {
 
 ```
 
-# 6. Accessing stored stored data
+# 6. Accessing stored data
 
 To access stored data, we'll need to read the data from the saved URL, then decode it back into a Swift object:
 
