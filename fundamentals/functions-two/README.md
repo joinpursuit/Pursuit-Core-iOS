@@ -1,5 +1,23 @@
 # Standards
-* Master the use of functions
+Language Fundamentals.
+
+Functions.-
+
+LF.5 Understand how functions enable us to call a block of reusable code. Utilize functions effectively to recycle functionalities across modules and keep code DRY.
+
+LF.5.a Define and call functions. Understand the components of a function signature including definition vs. invocation, terminology - e.g. 'argument'.
+
+LF.5.b Understand that functions retain the scope at which they are declared.
+
+ 
+
+Engineering Foundation. 
+
+Critical Thinking and Problem Solving.-
+
+EF.1 Identify a problem or challenge, conceptualize a way (or multiple ways) to approach it, consider potential effects of additional factors, and test different solutions until they find one that works. Break down complex problems into their component parts, form hypotheses to test them, consider the effects of additional factors, and eliminate potential problems one by one.
+
+
 
 # Objectives
 Students will be able to:
@@ -139,7 +157,7 @@ Here is a common algorithm called "FizzBuzz"
 5. Otherwise, write the current number.
 ```
 
-### Practice:  Write FizzBuzz in Swift
+###Practice:  Write FizzBuzz in Swift
 
 <details>
 	<summary>One solution</summary>
@@ -691,11 +709,3 @@ func reportOnMovies(movies:[[String:Any]]) -> String? {
 * What's the benefit of the limited scope inside a function?
 * Compare and contrast a function's signature with its type.
 
-
-## Standards
-
-IOS: IOS.1
-
-Language Fundamentals: LF.5, LF.5.a
-
-Engineering Foundations: EF.1
