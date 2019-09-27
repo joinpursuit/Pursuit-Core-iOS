@@ -24,6 +24,8 @@
 - UIImagePickerController.InfoKey
 
 
+## [Project Link](https://github.com/joinpursuit/Pursuit-Core-UIImagePickerController-Introduction)
+
 # 1. Selecting Images
 
 When building an app, you often want to be able to access photos from users.  When you use Instagram or Pinterest, you are asked to take photos or select photos from your library and upload them through the app.  Today, we'll look at one tool that allows us to access these photos called `UIImagePickerController`.  We will build an app that lets you take pictures from the camera or photo library and put them in a Collection View.
