@@ -7,16 +7,15 @@
 | --- | --- | --- |
 | 1. [Intro to Persistence with User Defaults](./intro-to-persistence-with-userdefaults/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4315434) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-UserDefaults-Lab/blob/master/README.md) |
 | 2. [UICollectionView](./uicollectionview/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4325338) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Collection-View-Lab/blob/master/README.md) |
-| 3. [FileManager Persistence One](./filemanager-persistence/README.md) | tbd | tbd |
-| 4. [FileManager Persistence Two](./filemanager-persistence-continued/README.md) | tbd | tbd |
-| 5. [UIImagePickerController](./uiimagepickercontroller/README.md) | tbd | tbd |
-| 6. [Subclassing UIViews](./subclassing-uiviews/README.md) | tbd | tbd |
-| 7. [Custom Delegation](./custom-delegation/README.md) | tbd | tbd |
-| 8. [Introduction to Programmatic UI](./introduction-to-programmatic-ui/README.md) | tbd | tbd |
-| 9. [Programmatic View Management](./programmatic-view-management/README.md) | tbd | tbd |
-| 10. [Animations One](./animations/README.md) | tbd | tbd |
-| 11. [Animations Two](./animations-continued/README.md) | tbd | tbd |
-| 12. [Keyboard Handling](./keyboard-handling/README.md) | tbd | tbd |
+| 3. [FileManager Persistence](./filemanager-persistence/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12700503) | [link](https://github.com/joinpursuit/Pursuit-Core-Persistence-Lab/blob/master/README.md) |
+| 4. [UIImagePickerController](./uiimagepickercontroller/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12707719) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-ImagePicker-Lab/blob/master/README.md) |
+| 5. [Subclassing UIViews](./subclassing-uiviews/README.md) | tbd | tbd |
+| 6. [Custom Delegation](./custom-delegation/README.md) | tbd | tbd |
+| 7. [Introduction to Programmatic UI](./introduction-to-programmatic-ui/README.md) | tbd | tbd |
+| 8. [Programmatic View Management](./programmatic-view-management/README.md) | tbd | tbd |
+| 9. [Animations One](./animations/README.md) | tbd | tbd |
+| 10. [Animations Two](./animations-continued/README.md) | tbd | tbd |
+| 11. [Keyboard Handling](./keyboard-handling/README.md) | tbd | tbd |
 
 ## Assignments
 
