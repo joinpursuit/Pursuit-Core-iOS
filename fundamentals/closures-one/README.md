@@ -1,15 +1,14 @@
 ### IOS: IOS.1
-### Language Fundamentals.
+## Language Fundamentals.
 
 ### Closures.-
+## LF.6 Understand the purpose of using closures. Solve problems by using functions that take a closure as an argument. Recognize that a function is a type of closure. Understand closure syntax.
 
-### LF.6 Understand the purpose of using closures. Solve problems by using functions that take a closure as an argument. Recognize that a function is a type of closure. Understand closure syntax.
+## Critical Thinking and Problem Solving.-
 
-### Critical Thinking and Problem Solving.-
+## EF.1 Identify a problem or challenge, conceptualize a way (or multiple ways) to approach it, consider potential effects of additional factors, and test different solutions until they find one that works. Break down complex problems into their component parts, form hypotheses to test them, consider the effects of additional factors, and eliminate potential problems one by one.
 
-### EF.1 Identify a problem or challenge, conceptualize a way (or multiple ways) to approach it, consider potential effects of additional factors, and test different solutions until they find one that works. Break down complex problems into their component parts, form hypotheses to test them, consider the effects of additional factors, and eliminate potential problems one by one.
-
-### Objective
+## Objective
 
 * To understand the purpose of using closures
 * To recognize the how a function is a type of closure
