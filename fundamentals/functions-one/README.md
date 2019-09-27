@@ -2,6 +2,26 @@
 * Define and call functions
 * Understand the components of a function signature
 
+## Standards
+
+IOS: IOS.1
+
+Language Fundamentals: LF.5, LF.5.a
+
+Functions.-
+
+LF.5 Understand how functions enable us to call a block of reusable code. Utilize functions effectively to recycle functionalities across modules and keep code DRY.
+
+LF.5.a Define and call functions. Understand the components of a function signature including definition vs. invocation, terminology - e.g. 'argument'.
+
+ 
+
+Engineering Foundations.
+
+Critical Thinking and Problem Solving.- 
+
+EF.1 Identify a problem or challenge, conceptualize a way (or multiple ways) to approach it, consider potential effects of additional factors, and test different solutions until they find one that works. Break down complex problems into their component parts, form hypotheses to test them, consider the effects of additional factors, and eliminate potential problems one by one.
+
 ### Vocabulary:
 1. function
 1. argument
@@ -105,7 +125,7 @@ I want to add two to `initialNumber`, and then triple it.  How can I use the fun
 
 `addTwoAndTriple(x: initialNumber)`
 
-Great start!  When we put this into our Playground, we see the correct value of 36 appear on the right hand side.  But that number doesn't show up anywhere else.  We could print it, but then we've lost it in our code.  How can we retain the value that we want?  This question brings us a key understanding about functions:
+Great start!  When we put this into out Playground, we see the correct value of 36 appear on the right hand side.  But that number doesn't show up anywhere else.  We could print it, but then we've lost it in our code.  How can we retain the value that we want?  This question brings us a key understanding about functions:
 
 
 ### A call to a function IS its return type
@@ -325,10 +345,3 @@ Write a function that finds the average of an Array of Ints.
 * What's the difference between a parameter and an argument?
 * What's the purpose of a function's internal parameter names? Its external parameter names?
 
-## Standards
-
-IOS: IOS.1
-
-Language Fundamentals: LF.5, LF.5.a
-
-Engineering Foundations: EF.1
