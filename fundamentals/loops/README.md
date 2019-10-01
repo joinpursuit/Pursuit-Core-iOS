@@ -150,7 +150,7 @@ for i in 1...100 where i % 10 == 5 {
 `while` loops put the initialization and increment stages of the loop in the hands of the programmer. It is possible to re-write a for-in style loop with `while`:
 
 ```swift
-i = 0 // initialize
+var i = 0 // initialize
 
 while i < 10 { // condition
     print (i)  // body code
