@@ -9,7 +9,7 @@
 | 2. [UICollectionView](./uicollectionview/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4325338) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Collection-View-Lab/blob/master/README.md) |
 | 3. [FileManager Persistence](./filemanager-persistence/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12700503) | [link](https://github.com/joinpursuit/Pursuit-Core-Persistence-Lab/blob/master/README.md) |
 | 4. [UIImagePickerController](./uiimagepickercontroller/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12707719) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-ImagePicker-Lab/blob/master/README.md) |
-| 5. [Custom Delegation](./custom-delegation/README.md) | tbd | tbd |
+| 5. [Custom Delegation](./custom-delegation/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12749905) | [link](https://github.com/joinpursuit/Pursuit-Core-MVC-Delegation-Review-Lab) |
 | 6. [Introduction to Programmatic UI](./introduction-to-programmatic-ui/README.md) | tbd | tbd |
 | 7. [Programmatic View Management](./programmatic-view-management/README.md) | tbd | tbd |
 | 8. [Animations One](./animations/README.md) | tbd | tbd |
