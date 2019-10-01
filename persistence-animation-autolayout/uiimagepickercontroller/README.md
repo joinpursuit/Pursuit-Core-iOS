@@ -184,7 +184,7 @@ extension ImagesViewController: UICollectionViewDataSource {
 
 Let's now add functionality to have the user take a picture themselves.  First, let's add a new button:
 
-![addCameraUI](./images/addCamerUI.png)
+![addCameraUI](./images/addCameraUI.png)
 
 Then, hook it up to an IBOutlet that will present a `UIImagePickerController` with a camera interface:
 
