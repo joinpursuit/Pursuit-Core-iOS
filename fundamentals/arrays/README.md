@@ -298,7 +298,7 @@ Because Arrays are now our favorite type, we can even turn a String into an Arra
 
 ```swift
 let myStr = "This could be anything, really."
-let myStrAsArray = Array(myStr.characters)
+let myStrAsArray = Array(myStr)
 ```
 
 Now we don't need to worry about String indexing!
