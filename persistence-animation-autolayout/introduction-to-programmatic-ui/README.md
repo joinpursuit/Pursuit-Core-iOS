@@ -11,7 +11,7 @@
 
 ### Resources
 
--[Apple docs - Programmatic Autolayout](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html)
+- [Apple docs - Programmatic Autolayout](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html)
 - [Dan Stepanov walkthrough](https://medium.com/@danstepanov/your-first-ios-app-100-programmatically-xcode-7-2-swift-2-1-9946d09610c4)
 - [Borish Ohayon walkthrough](https://medium.com/ios-os-x-development/ios-start-an-app-without-storyboard-5f57e3251a25)
 - [Lazy variables with Abhimuralidharan](https://medium.com/@abhimuralidharan/lazy-var-in-ios-swift-96c75cb8a13a)
