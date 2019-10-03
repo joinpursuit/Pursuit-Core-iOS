@@ -89,7 +89,9 @@ The AppDelegate.swift file is the delegate for your entire application.  Just li
 <details>
 <summary> Which one do we want to use?</summary>
 
+```swift
 application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
+```
 
 </details>
 
@@ -506,7 +508,7 @@ extension SettingsViewController: UIPickerViewDelegate {
 }
 ``` 
 
-Then let's return to our view controller and add a button that segues ot our new view controller.
+Then let's return to our view controller and add a button that segues to our new view controller.
 
 ```swift
 struct AppColor {
