@@ -105,9 +105,9 @@ The backdrop for your app’s user interface and the object that dispatches even
 
 **Properties and methods**
 
-var rootViewController: UIViewController?
-var screen: UIScreen
-func makeKeyAndVisible()
+- `var rootViewController: UIViewController?`
+- `var screen: UIScreen`
+- `func makeKeyAndVisible()`
 
 The rootViewController of a UIWindow is the view controller that is points to first.  This rootViewController can also be a Tab Bar Controller or Navigation Controller.
 
