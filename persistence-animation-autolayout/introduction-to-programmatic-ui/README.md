@@ -89,7 +89,9 @@ The AppDelegate.swift file is the delegate for your entire application.  Just li
 <details>
 <summary> Which one do we want to use?</summary>
 
+```swift
 application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
+```
 
 </details>
 
