@@ -12,9 +12,10 @@
 | 5. [Custom Delegation](./custom-delegation/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12749905) | [link](https://github.com/joinpursuit/Pursuit-Core-MVC-Delegation-Review-Lab) |
 | 6. [Introduction to Programmatic UI](./introduction-to-programmatic-ui/README.md) | tbd | tbd |
 | 7. [Programmatic View Management](./programmatic-view-management/README.md) | tbd | tbd |
-| 8. [Animations One](./animations/README.md) | tbd | tbd |
-| 9. [Animations Two](./animations-continued/README.md) | tbd | tbd |
-| 10. [Keyboard Handling](./keyboard-handling/README.md) | tbd | tbd |
+| 8. [Custom Cells, Xibs, and Programmatic View Management]() | tbd | tbd |
+| 9. [Animations One](./animations/README.md) | tbd | tbd |
+| 10. [Animations Two](./animations-continued/README.md) | tbd | tbd |
+| 11. [Keyboard Handling](./keyboard-handling/README.md) | tbd | tbd |
 
 ## Assignments
 
