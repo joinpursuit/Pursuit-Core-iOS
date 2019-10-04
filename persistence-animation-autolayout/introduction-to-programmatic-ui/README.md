@@ -57,7 +57,7 @@ Let's build and run our app again.  Now, we can see that there are no crashes, a
 
 ### Configuring AppDelegate.swift / SceneDelegate.swift
 
-#### Xcode 10
+### Xcode 10
 
 The AppDelegate.swift file is the delegate for your entire application.  Just like a textField has a delegate that gets notified at key events, so too does your application.  The following methods all are called as part of your *Application Lifecyle*
 
