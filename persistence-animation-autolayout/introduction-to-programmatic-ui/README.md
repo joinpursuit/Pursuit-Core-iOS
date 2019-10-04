@@ -51,6 +51,8 @@ This is because our application is still trying to find a Storyboard.  There's a
 
 Go to the *info.plist* and look for the property titled "Main storyboard file base name".  Click on the minus button to delete the row.
 
+![mainStoryboardPlistLocation.png](./mainStoryboardPlistLocation.png)
+
 Let's build and run our app again.  Now, we can see that there are no crashes, and just a black screen.  We haven't configured our View Controller at all, so that's not too surprising.  Let's set the background color to green.  When we build and run our app, we still don't see anything!  This is because we didn't tell our app to present an instance of this view controller.  If we had 4 or 5 different view controllers, it wouldn't know what to display.  We'll need to tell our app what to display.
 
 ### Configuring AppDelegate.swift
