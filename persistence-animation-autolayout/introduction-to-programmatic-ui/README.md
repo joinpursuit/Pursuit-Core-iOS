@@ -55,7 +55,9 @@ Go to the *info.plist* and look for the property titled "Main storyboard file ba
 
 Let's build and run our app again.  Now, we can see that there are no crashes, and just a black screen.  We haven't configured our View Controller at all, so that's not too surprising.  Let's set the background color to green.  When we build and run our app, we still don't see anything!  This is because we didn't tell our app to present an instance of this view controller.  If we had 4 or 5 different view controllers, it wouldn't know what to display.  We'll need to tell our app what to display.
 
-### Configuring AppDelegate.swift
+### Configuring AppDelegate.swift / SceneDelegate.swift
+
+#### Xcode 10
 
 The AppDelegate.swift file is the delegate for your entire application.  Just like a textField has a delegate that gets notified at key events, so too does your application.  The following methods all are called as part of your *Application Lifecyle*
 
@@ -99,6 +101,19 @@ application(_ application: UIApplication, didFinishLaunchingWithOptions launchOp
 
 
 Inside that method, we need to create an instance of our view controller and display it.  We create an instance of our ViewController like we would any other class.  To display it, we need to use a property of our AppDelegate, the *window*.
+
+
+### Xcode 11
+
+In Xcode 11, that functionality has been moved to the `SceneDelegate.swift` file:
+
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.windowScene = windowScene
+        window?.rootViewController = ColorsViewController()
+        window?.makeKeyAndVisible()
+    }
 
 
 #### UIWindow
