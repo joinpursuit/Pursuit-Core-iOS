@@ -1,5 +1,12 @@
 # Animations Continued
 
+## Objectives
+
+- Use UIView.transition
+- Use UIView.animateKeyframes
+- Use UIViewPropertyAnimator
+- Use CGAffineTransform
+
 # 1. UIView.transition()
 
 [UIView.transition()](https://developer.apple.com/documentation/uikit/uiview/1622574-transition). Creates a transition animation for the specified container view.
