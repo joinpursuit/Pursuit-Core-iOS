@@ -52,7 +52,7 @@ UIView.animate(withDuration: 1.0, delay: 0.3, options: [.repeat, .autoreverse], 
 - **completion**: A block object to be executed when the animation sequence ends. This block has no return value and takes a single Boolean argument that indicates whether or not the animations actually finished before the completion handler was called. If the duration of the animation is 0, this block is performed at the beginning of the next run loop cycle. This parameter may be NULL.
 
 
-#3. Animating Constraints
+# 3. Animating Constraints
 
 Animation can also be used to manipulate constraints set programmatically.  This can be a useful tactic for moving views without needing to worry about how frame sizes will differ on differently sized devices.
 
