@@ -46,6 +46,25 @@ UIView.animate(withDuration: 1.0, delay: 0.3, options: [.repeat, .autoreverse], 
 })
 ```
 
+This animation is animating the frame to the view and moving it down vertically from its y origin. The alpha on the view is also being animated from 1.0 to 0.0 which is slowly fading the view.
+
+```swift 
+@IBAction func ballDrop(_ sender: UIButton) {
+  // value before animation starts
+  self.ball.alpha = 1.0
+
+  UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
+    // values here get animated
+    self.ball.frame.origin.y += self.view.bounds.height
+    self.ball.alpha = 0.0
+  }) { done in
+
+    // reset values in completion block
+    self.ball.frame.origin.y -= self.view.bounds.height
+  }
+}
+```
+
 - **withDuration**: The total duration of the animations, measured in seconds. If you specify a negative value or 0, the changes are made without animating them.
 - **delay**: The amount of time (measured in seconds) to wait before beginning the animations. Specify a value of 0 to begin the animations immediately.
 - **options**: A mask of options indicating how you want to perform the animations. For a list of valid constants, see [UIViewAnimationOptions](https://developer.apple.com/documentation/uikit/uiviewanimationoptions?language=swift).
