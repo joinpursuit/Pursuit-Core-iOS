@@ -87,6 +87,28 @@ An affine transformation matrix is used to rotate, scale, translate, or skew the
 ![radians degrees chart conversion](https://www.1728.org/degrees.png)   
 
 
+
+**Here the logo is being moved using a transform translation animation**   
+```swift
+UIView.animate(withDuration: 1.0, delay: 0.3, options: [], animations: {
+  self.loginView.pursuitLogo.transform = CGAffineTransform(translationX: 0, y: 600)
+})
+```
+
+**Here the logo is being pulsated through the use of transform scale animation**   
+```swift
+UIView.animate(withDuration: 1.0, delay: 0.3, options: [.repeat, .curveEaseInOut], animations: {
+  self.loginView.pursuitLogo.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+})
+```
+
+**Using transform rotation**  
+```swift
+UIView.animate(withDuration: 1.0, delay: 0.3, options: [.repeat, .autoreverse], animations: {
+  self.loginView.sledgeHammer.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2.0)
+})
+```
+
 ## Resources
 
 | Resource | Summary |
