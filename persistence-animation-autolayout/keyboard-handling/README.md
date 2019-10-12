@@ -1,4 +1,3 @@
-
 # NotificationCenter / Scroll View / Gestures / Keyboard Handling 
 
 
@@ -18,7 +17,7 @@
 - [EKEventStoreChanged](https://developer.apple.com/documentation/foundation/nsnotification.name/1507525-ekeventstorechanged)
 - [NSCalendarDayChanged](https://developer.apple.com/documentation/foundation/nsnotification.name/1408062-nscalendardaychanged)
 - [selectionDidChangeNotification](https://developer.apple.com/documentation/appkit/nstableview/1529580-selectiondidchangenotification)
-- [UIKeyboardDidShow](https://developer.apple.com/documentation/foundation/nsnotification.name/1621602-uikeyboarddidshow)
+- [UIKeyboardWillShow](https://developer.apple.com/documentation/uikit/uiresponder/1621602-keyboarddidshownotification)
 
 Many of these Notifications are things that we have learned about through other methods, such as delegation.  These notifications are constantly being broadcast to anyone who might be paying attention.  So how do we pay attention?
 
@@ -49,7 +48,7 @@ Here, we want to pay attention when the keyboard is about to display.
 ```swift
 NotificationCenter.default.addObserver(self, 
 					selector: #selector(handleKeyboardAppearing(sender:)), 
-					name: NSNotification.Name.UIKeyboardWillShow, 
+					name: UIResponder.keyboardWillShowNotification, 
 					object: nil)
 ```
 
