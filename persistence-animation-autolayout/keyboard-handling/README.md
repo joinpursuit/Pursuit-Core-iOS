@@ -1,132 +1,433 @@
 
-# Keyboard Handling 
+# NotificationCenter / Scroll View / Gestures / Keyboard Handling 
 
 
-## [In class demo](https://github.com/joinpursuit/Pursuit-Core-iOS-Keyboard-Handling)     
+## [Repo Link](https://github.com/joinpursuit/Pursuit-Core-iOS-Keyboard-Handling)     
 
-When users touch a text field, a text view, or a field in a web view, the system displays a keyboard. You can configure the type of keyboard that is displayed along with several attributes of the keyboard. You also have to manage the keyboard when the editing session begins and ends. Because the keyboard could hide the portion of your view that is the focus of editing, this management might include adjusting the user interface to raise the area of focus so that is visible above the keyboard.
+# Objectives
+
+1. Use NotificationCenter to respond to system events
+2. Embed views inside ScrollViews to allow the user to scroll through content too large for its frame
+3. Use UIGestureRecognizer subclasses to respond to taps and swipes
 
 
-## Notification Center 
+# 1. NotificationCenter
 
-A notification dispatch mechanism that enables the broadcast of information to registered observers.
+[**NotificationCenter**](https://developer.apple.com/documentation/foundation/notificationcenter) is the process by which iOS broadcasts system information.  As your application runs, it constantly is sending out information about changes that occur.  [Here](https://developer.apple.com/documentation/foundation/nsnotification.name) are some examples:
 
-**Overview**   
-Objects register with a notification center to receive notifications (NSNotification objects) using the addObserver(_:selector:name:object:) or addObserver(forName:object:queue:using:) methods. When an object adds itself as an observer, it specifies which notifications it should receive. An object may therefore call this method several times in order to register itself as an observer for several different notifications.
+- [EKEventStoreChanged](https://developer.apple.com/documentation/foundation/nsnotification.name/1507525-ekeventstorechanged)
+- [NSCalendarDayChanged](https://developer.apple.com/documentation/foundation/nsnotification.name/1408062-nscalendardaychanged)
+- [selectionDidChangeNotification](https://developer.apple.com/documentation/appkit/nstableview/1529580-selectiondidchangenotification)
+- [UIKeyboardDidShow](https://developer.apple.com/documentation/foundation/nsnotification.name/1621602-uikeyboarddidshow)
 
-Each running app has a default notification center, and you can create new notification centers to organize communications in particular contexts.
+Many of these Notifications are things that we have learned about through other methods, such as delegation.  These notifications are constantly being broadcast to anyone who might be paying attention.  So how do we pay attention?
 
-A notification center can deliver notifications only within a single program; if you want to post a notification to other processes or receive notifications from other processes, use DistributedNotificationCenter instead.
+### Adding an observer
 
-## UIResponder 
+You can sign up to "tune in" from broadcasts from the default NotificationCenter using the following [method](https://developer.apple.com/documentation/foundation/notificationcenter/1415360-addobserver):
 
-An abstract interface for responding to and handling events.
+```swift
+func addObserver(_ observer: Any, 
+					selector aSelector: Selector, 
+					name aName: NSNotification.Name?, 
+					object anObject: Any?)
+```
 
-**Type Properties**  (we register for the following two notifications using UIResponder())   
-- keyboardWillShowNotification
-- keyboardWillHideNotification
+- The *observer* is who we want to pay attention, usually a View Controller.
+- The *selector* is the method that we want to handle the notification
+- The *name* is the name of the notification we want to tune into
+- The *object* is the sender of the notification.  Typically, we leave this as nil, meaning that we want to pay attention to the notification regardless of who sent it.
 
-## Receiving Keyboard Notifications
+This code shows *all* the Notifications that are posted inside your program.
 
-- UIKeyboardWillShowNotification
-- UIKeyboardDidShowNotification
-- UIKeyboardWillHideNotification
-- UIKeyboardDidHideNotification
+```
+NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(sender:)), name: nil, object: nil)
+```
 
-## Full View Controller Implementation   
+Here, we want to pay attention when the keyboard is about to display.
 
-This code snippet moves the view upwards equal to the keyboard's height when the keyboard is presented. The height of the keyboard's frame is found from the userInfo notification dictionary. 
-```swift 
-@objc private func willShowKeyboard(notification: Notification) {
-  guard let info = notification.userInfo,
-    let keyboardFrame = info["UIKeyboardFrameEndUserInfoKey"] as? CGRect else {
-    print("userinfo is nil")
-    return
-  }
-  containerView.transform = CGAffineTransform(translationX: 0, y: -keyboardFrame.height)
+```swift
+NotificationCenter.default.addObserver(self, 
+									selector: #selector(handleKeyboardAppearing(sender:)), 
+									name: NSNotification.Name.UIKeyboardWillShow, 
+									object: nil)
+```
+
+
+### Building the selector for an observer
+
+When we build the method to handle notifications, we add the sender into the signature.
+
+```swift
+@objc func handleKeyboardAppearing(sender: Notification) {
+
 }
 ```
 
-This code snippet returns the container view to it's original frame using the view's CGAffineTransform.Idenity. 
-```swift 
-@objc private func willHideKeyboard(notification: Notification) {
-  containerView.transform = CGAffineTransform.identity
+The sender has a property called `userInfo` which is a dictionary containing information that might be helpful.  You can print out this dictionary to see all possible keys.  In this case, we want to pay attention to the keyboard's final size.
+
+```swift
+@objc func handleKeyboardAppearing(sender: Notification) {
+    guard let infoDict = sender.userInfo else { return }
+    guard let rectValue = infoDict["UIKeyboardFrameEndUserInfoKey"] as? CGRect else { return }
+    print("The keyboard is \(rectValue.height) by \(rectValue.width)")
 }
 ```
 
-We make sure to register for Notifications from the keyboard and unregister when the view controller is out of the view hierarchy. 
+# Keyboard handling
 
-<details> 
-  <summary>Implementation</summary> 
-  
+We now know that we can "tune in" and get information about the keyboard coming out.  What might we want to do with this information?  Let's consider a common use case.  Imagine an app where we want to add a caption to an image.  
+
+### Creating the app
+
+Let's add a custom view that our view controller will manager. We'll need the following subviews:
+
+```swift
+lazy var captionLabel: UILabel = {
+    let lab = UILabel()
+    lab.text = "Caption" 
+    return lab
+}()
+    
+lazy var textField: UITextField = {
+    let tf = UITextField()
+    tf.placeholder = "Enter a caption for the image"
+    return tf
+}()
+    
+lazy var submitButton: UIButton = {
+    let but = UIButton()
+    but.setTitle("Submit", for: .normal)
+    but.addTarget(self, action: #selector(handleButtonPressed), for: .touchUpInside)
+    return but
+}()
+    
+lazy var imageView: UIImageView = {
+    let iv = UIImageView()
+    iv.backgroundColor = .yellow
+    return iv
+}()
+```
+
+And the following constraints:
+
+```swift
+private func configureConstraints() {
+    configureCaptionLabel()
+    configureTextField()
+    configureSubmitButton()
+    configureImageView()
+}
+    
+    
+private func configureCaptionLabel() {
+    captionLabel.translatesAutoresizingMaskIntoConstraints = false
+    captionLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+    captionLabel.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
+}
+
+private func configureTextField() {
+    textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.bottomAnchor.constraint(equalTo: submitButton.topAnchor, constant: -20).isActive = true
+    textField.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+}
+
+private func configureSubmitButton() {
+    submitButton.translatesAutoresizingMaskIntoConstraints = false
+    submitButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+    submitButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+}
+
+private func configureImageView() {
+    imageView.translatesAutoresizingMaskIntoConstraints = false
+    imageView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+    imageView.bottomAnchor.constraint(equalTo: textField.topAnchor, constant: -100).isActive = true
+    imageView.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.3).isActive = true
+    imageView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.3).isActive = true
+}
+```
+
+Let's try to go through the user experience of adding a caption.  When we select the text field, the keyboard comes up and obstructs our view.  The user can't see the text that they are typing!  Let's try to clean it up.
+
+### Reconstraining views
+
+One method to fix this problem is to move up all of the views to accomodate for the keyboard.  In looking at the constraints we have defined, the only thing setting the bottom of the frames is ultimately the submit button.  By shifting the button up, we will shift all other views up as well.
+
+But how do we know how much to move up the submit button?  We can register for the keyboard appearing notification and tell our view to move up by the appropriate amount.
+
+ 
+The first thing we need to do is refactor the constraint for the button.  Instead of defining the constraint inside our method, we will create a constraint as an instance property of our custom view.
+
 ```swift 
-class ViewController: UIViewController {
-  
-  @IBOutlet weak var usernameTextField: UITextField!
-  @IBOutlet weak var passwordTextField: UITextField!
-  @IBOutlet weak var loginButton: UIButton!
-  @IBOutlet weak var containerView: UIView!
+var buttonBottomConstraint = NSLayoutConstraint()
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    usernameTextField.delegate = self
-    passwordTextField.delegate = self
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(true)
-    registerKeyboardNotifications()
-  }
-  
-  private func registerKeyboardNotifications() {
-    NotificationCenter.default.addObserver(self, selector: #selector(willShowKeyboard), name: UIResponder.keyboardWillShowNotification, object: nil)
-    NotificationCenter.default.addObserver(self, selector: #selector(willHideKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
-  }
-  
-  private func unregisterKeyboardNofications() {
-    NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-    NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-  }
-  
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(true)
-    unregisterKeyboardNofications()
-  }
-  
-  deinit {
-    // clean up views
-    // clean up memory
-    // can also unregister for notification here
-  }
-  
-  @objc private func willShowKeyboard(notification: Notification) {
-    guard let info = notification.userInfo,
-      let keyboardFrame = info["UIKeyboardFrameEndUserInfoKey"] as? CGRect else {
-      print("userinfo is nil")
-      return
+private func configureSubmitButton() {
+    submitButton.translatesAutoresizingMaskIntoConstraints = false
+    buttonBottomConstraint = submitButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
+    buttonBottomConstraint.isActive = true
+    submitButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+}
+```
+
+Then, we will create a function that can reset the constraint.
+
+```swift
+public func moveViewsToAccomadateKeyboard(with rect: CGRect, and duration: Double) {
+    let size = rect.size
+    buttonBottomConstraint.constant = -(size.height + 20)
+    UIView.animate(withDuration: duration){
+        self.layoutIfNeeded()
     }
-    containerView.transform = CGAffineTransform(translationX: 0, y: -keyboardFrame.height)
-  }
-  
-  @objc private func willHideKeyboard(notification: Notification) {
-    containerView.transform = CGAffineTransform.identity
-  }
-  
-  @IBAction func loginButtonPressed(_ sender: UIButton) {
-    usernameTextField.resignFirstResponder()
-    passwordTextField.resignFirstResponder()
-  }
-}
-
-extension ViewController: UITextFieldDelegate {
-  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    textField.resignFirstResponder()
-    return true
-  }
 }
 ```
-  
-</details> 
+
+Now, all of our views will shift upwards!
+
+This works well, but what if the content would be cliped and go off the screen to the top?  We can use a second strategy by embedding our whole view into a *scroll view*.
+
+# 2. Scroll Views
+
+A [scroll view](https://developer.apple.com/documentation/uikit/uiscrollview) is a view that allows for scrolling through its contained views.  We have already been making heavy use of scroll views through table views, collection views, and text views.   Rather than using these built in classes, we can create our own scroll views.
+
+Scroll views can be a little tricky.  A scroll view should have one view as its subview that we call its `contentView`.  This view can have any number of subviews.  We pin the contentView to the scroll view and put the scroll view wherever we want to.  The trick behind a scroll view is that the views contained in the contentView can be larger than the contentView.  The scroll view will allow us to view the elements that would usualy be clipped by swiping up and down.
+
+### Scrolling through an image view
+
+One common use case is panning through images that are too large for the device.
+
+```swift
+class ImageScrollViewController: UIViewController {
+
+    lazy var imageView: UIImageView = {
+       let iv = UIImageView()
+        iv.image = UIImage(named: "shire")
+        iv.contentMode = .scaleAspectFill
+        return iv
+    }()
+    
+    var scrollView = UIScrollView()
+    var contentView = UIView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        contentView.addGestureRecognizer(pinchRecognizer)
+        
+        view.backgroundColor = .white
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(imageView)
+        
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        let _ = scrollView.constraintsToPinToEdges(of: view).map{ $0.isActive = true }
+        
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        let _ = contentView.constraintsToPinToEdges(of: scrollView).map{ $0.isActive = true }
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        let _ = imageView.constraintsToPinToEdges(of: contentView).map{ $0.isActive = true }
+    }
+}
+
+
+extension UIView {
+    func constraintsToPinToEdges(of view: UIView) -> [NSLayoutConstraint] {
+        return [leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                topAnchor.constraint(equalTo: view.topAnchor),
+                bottomAnchor.constraint(equalTo: view.bottomAnchor)]
+    }
+}
+```
+
+### Refactoring our caption view into a scroll view
+
+Below, we can implement the same view as before, but inside of a scroll view.
+
+```swift
+private func addSubviews() {
+    addSubview(scrollView)
+    scrollView.addSubview(contentView)
+    contentView.addSubview(captionLabel)
+    contentView.addSubview(textField)
+    contentView.addSubview(submitButton)
+    contentView.addSubview(imageView)
+}
+```
+
+```swift
+private func configureConstraints() {
+    configureScrollView()
+    configureContentView()
+    configureCaptionLabel()
+    configureTextField()
+    configureSubmitButton()
+    configureImageView()
+}
+```
+
+```swift
+private func configureScrollView() {
+    scrollView.translatesAutoresizingMaskIntoConstraints = false
+    scrollView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
+    scrollView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
+    scrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
+    scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
+}
+    
+private func configureContentView() {
+    contentView.translatesAutoresizingMaskIntoConstraints = false
+    contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
+    contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+    contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+    contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+    
+    //Needed because the constraints of the views inside our content view don't define its size.  If they did, we could remove these two lines
+    contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
+    contentView.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor).isActive = true
+}
+
+    
+private func configureCaptionLabel() {
+    captionLabel.translatesAutoresizingMaskIntoConstraints = false
+    captionLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+    captionLabel.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
+}
+private func configureTextField() {
+    textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.bottomAnchor.constraint(equalTo: submitButton.topAnchor, constant: -20).isActive = true
+    textField.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+}
+private func configureSubmitButton() {
+    submitButton.translatesAutoresizingMaskIntoConstraints = false
+    buttonBottomConstraint = submitButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
+    buttonBottomConstraint.isActive = true
+    submitButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+}
+private func configureImageView() {
+    imageView.translatesAutoresizingMaskIntoConstraints = false
+    imageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+    imageView.bottomAnchor.constraint(equalTo: textField.topAnchor, constant: -100).isActive = true
+    imageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.3).isActive = true
+    imageView.widthAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.3).isActive = true
+}
+```
+
+### Scrolling to the right place
+
+```swift
+public func moveViewsToAccomadateKeyboard(with keyboardRect: CGRect, and duration: Double) {
+    guard keyboardRect != CGRect.zero else {
+        scrollView.contentInset = UIEdgeInsets.zero
+        scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
+        return
+    }
+    
+    let hiddenAreaRect = keyboardRect.intersection(scrollView.bounds)
+    let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: hiddenAreaRect.height, right: 0.0)
+    scrollView.contentInset = contentInsets
+    scrollView.scrollIndicatorInsets = contentInsets
+
+    var buttonRect = submitButton.frame
+    buttonRect = scrollView.convert(buttonRect, from: submitButton.superview)
+    buttonRect = buttonRect.insetBy(dx: 0.0, dy: -20)
+    scrollView.scrollRectToVisible(buttonRect, animated: true)
+}
+```
+
+# 3. Gestures
+
+Adding gestures is a powerful way to give more input options to the user.  The types of [gestures](https://developer.apple.com/documentation/uikit/uigesturerecognizer) available on iOS are:
+
+- Tap
+- Pinch
+- Rotation
+- Swipe
+- Pan
+- Long Press
+
+To add gesture functionality to an app, we will need to create a subclass of UIGestureRecognizer.  
+
+
+### Tap
+
+```swift
+lazy var tapRecognizer: UITapGestureRecognizer = {
+    let tr = UITapGestureRecognizer(target: self, action: #selector(respondToTap))
+    tr.numberOfTapsRequired = 1
+    tr.numberOfTouchesRequired = 1
+    return tr
+}()
+```
+
+Then, we will need to create something to handle a tap
+
+```swift
+@objc func respondToTap() {
+    print("tapping")
+}
+```
+
+And finally, add this tapRecognizer to our View Controller
+
+```swift
+override func viewDidLoad() {
+	super.viewDidLoad()
+	view.addGestureRecognizer(tapRecognizer)
+}
+```
+
+### Swipe
+
+Swipe gesture recognizers can only recognize swiping in one direction.  To handle other directions, create other swipe gesture recognizers.
+
+```swift
+lazy var downSwipeRecognizer: UISwipeGestureRecognizer = {
+    let sr = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipe))
+    sr.direction = UISwipeGestureRecognizerDirection.down
+    return sr
+}()
+```
+
+### Pinch
+
+```swift
+lazy var pinchRecognizer: UIPinchGestureRecognizer = {
+    let pr = UIPinchGestureRecognizer(target: self, action: #selector(respondToPinch))
+    return pr
+}()
+```
+
+
+### Rotation
+
+```swift
+lazy var rotationRecognizer: UIRotationGestureRecognizer = {
+    let rr = UIRotationGestureRecognizer(target: self, action: #selector(respondToRotation))
+    return rr
+}()
+```
+
+### Pan
+
+```swift
+lazy var panRecognizer: UIPanGestureRecognizer = {
+    let pr = UIPanGestureRecognizer(target: self, action: #selector(respondToPan))
+    return pr
+}()
+```
+
+### Long Press
+
+```swift
+lazy var longPressRecognizer: UILongPressGestureRecognizer = {
+   let lpr = UILongPressGestureRecognizer()
+    lpr.minimumPressDuration = 1.0
+    lpr.numberOfTouchesRequired = 1
+    lpr.numberOfTapsRequired = 1
+    return lpr
+}()
+```
 
 ## Reading
 
