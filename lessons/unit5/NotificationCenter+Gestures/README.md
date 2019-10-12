@@ -145,10 +145,6 @@ private func configureImageView() {
     imageView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.3).isActive = true
 }
 ```
-Configure your custom view and view controller so that it creates something like the image below:
-
-
-![image](image)
 
 Let's try to go through the user experience of adding a caption.  When we select the text field, the keyboard comes up and obstructs our view.  The user can't see the text that they are typing!  Let's try to clean it up.
 
