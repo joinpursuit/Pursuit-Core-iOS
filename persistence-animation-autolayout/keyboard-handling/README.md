@@ -28,9 +28,9 @@ You can sign up to "tune in" from broadcasts from the default NotificationCenter
 
 ```swift
 func addObserver(_ observer: Any, 
-					selector aSelector: Selector, 
-					name aName: NSNotification.Name?, 
-					object anObject: Any?)
+		selector aSelector: Selector, 
+		name aName: NSNotification.Name?, 
+		object anObject: Any?)
 ```
 
 - The *observer* is who we want to pay attention, usually a View Controller.
@@ -48,9 +48,9 @@ Here, we want to pay attention when the keyboard is about to display.
 
 ```swift
 NotificationCenter.default.addObserver(self, 
-									selector: #selector(handleKeyboardAppearing(sender:)), 
-									name: NSNotification.Name.UIKeyboardWillShow, 
-									object: nil)
+					selector: #selector(handleKeyboardAppearing(sender:)), 
+					name: NSNotification.Name.UIKeyboardWillShow, 
+					object: nil)
 ```
 
 
