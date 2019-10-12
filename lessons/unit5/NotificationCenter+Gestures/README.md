@@ -110,7 +110,7 @@ lazy var imageView: UIImageView = {
 
 And the following constraints:
 
-```
+```swift
 private func configureConstraints() {
     configureCaptionLabel()
     configureTextField()
