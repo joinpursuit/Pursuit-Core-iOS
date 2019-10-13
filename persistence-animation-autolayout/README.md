@@ -14,7 +14,7 @@
 | 7. [Programmatic View Management and xibs](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/persistence-animation-autolayout/custom-cells-programmatic-ui) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12783776) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-CustomCells-Lab) |
 | 8. [Animations One](./animations/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4378507) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Animations-Lab) |
 | 9. [Animations Two](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/persistence-animation-autolayout/animation-continued/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12820405) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Animations-Lab-Two/blob/master/README.md) |
-| 10. [Keyboard Handling](./keyboard-handling/README.md) | tbd | tbd |
+| 10. [Keyboard Handling](./keyboard-handling/README.md) | tbd | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Keyboard-Handling-Lab/blob/master/README.md) |
 
 ## Assignments
 
