@@ -413,13 +413,6 @@ Write a function that "safely" accesses a value in an array of Ints at a given i
 
 Given a Dictionary as input that maps Strings to Ints, return a Dictionary that gets rid of entries that map to a negative value.
 
-### **Practice Problem Nine**
-
-Given a String as input, rotate all a-z characters by one.
-
-a -> b, b -> c ... z -> a
-
-
 
 
 # Extra Material Grabbag
