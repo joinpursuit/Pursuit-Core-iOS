@@ -11,3 +11,6 @@
 1. [Breakout: Persistence and IDs (October 3 - David)](https://github.com/davidlawrencer/collection-view-modeling-persistence)
 1. [Custom Delegation (October 4)](https://github.com/Ifattah94/FilmsLesson)
 1. [Intro to Programmatic UI (October 7)](https://github.com/davidlawrencer/intro-to-programmatic-ui)
+1. [Programmatic UI and XIBs (October 8)](https://github.com/davidlawrencer/xibs-and-programmatic-cells)
+1. [Animations Intro (October 11)](https://github.com/davidlawrencer/animations-intro)
+1. [Animations Continued (October 14)](https://github.com/davidlawrencer/animations-continued)
