@@ -29,7 +29,7 @@
 
 [6.1 Unit 4 Lecture Code](./lecture-files)
 
-[Lecture Videos](https://www.youtube.com/channel/UCDN46W3L67JMtrRb-u_cgCA)
+[6.1 Lecture Videos](https://www.youtube.com/playlist?list=PLlWXR75xZG_et4YYy0b_ClM7Ma-F0xiIF)
 
 [🤙Tightboarding 🤙Tuesdays 🤙 (formerly Whiteboarding Wednesdays)](https://github.com/davidlawrencer/whiteboarding-wednesdays)
 
