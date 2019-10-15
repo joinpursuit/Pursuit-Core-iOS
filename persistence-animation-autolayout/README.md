@@ -46,7 +46,7 @@
 | [Tickets](https://github.com/joinpursuit/Pursuit-Core-iOS-Tickets) | UserDefaults, FileManager, Documents Directory, Persistence, UIAlertController, Programmatic UI, subclassing UIView, Date Extensions |
 | [ImagePickerDemo](https://github.com/joinpursuit/Pursuit-Core-iOS-ImagePickerDemo) | Using the camera, accessing the Photo Library, UIImagePickerController, FileManager, Documents Directory, Persistence |
 | [UIView.animation](https://github.com/joinpursuit/Pursuit-Core-iOS-UIView-Animations-Intro) | Introduction to UIView.animation(), CGAffineTransform, .repeat, .autoreverse, .curveEaseIn, transform, .pi |
-| [UIView.transition, UIViewProperyAnimator](https://github.com/joinpursuit/Pursuit-Core-iOS-UIView-Animations-Continued) | Dynamic animations with UIViewPropertyAnimator |
+| [UIView.transition, UIViewPropertyAnimator](https://github.com/joinpursuit/Pursuit-Core-iOS-UIView-Animations-Continued) | Dynamic animations with UIViewPropertyAnimator |
 | [KeyboardHandling](https://github.com/joinpursuit/Pursuit-Core-iOS-Keyboard-Handling) | Keyboard Handling, NotificationCenter, UIResponder, CGAffineTransform |
 
 ## Extra content
