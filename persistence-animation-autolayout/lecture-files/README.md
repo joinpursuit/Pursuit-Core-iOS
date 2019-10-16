@@ -14,3 +14,4 @@
 1. [Programmatic UI and XIBs (October 8)](https://github.com/davidlawrencer/xibs-and-programmatic-cells)
 1. [Animations Intro (October 11)](https://github.com/davidlawrencer/animations-intro)
 1. [Animations Continued (October 14)](https://github.com/davidlawrencer/animations-continued)
+1. [Review: Unit Tests (October 16)](https://github.com/davidlawrencer/unit-tests-demo)
