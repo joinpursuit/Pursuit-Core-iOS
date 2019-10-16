@@ -2,7 +2,7 @@
 ---
 
 ### Lesson Breakdown
-[Structs Lesson](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/fundamentals/structs-and-classes-two/README1.md)
+[Classes Lesson](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/fundamentals/structs-and-classes/README1.md)
 
 ### Objectives
 * Understand the differences between structs and classes
