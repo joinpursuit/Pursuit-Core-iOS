@@ -1,6 +1,9 @@
 ### Structs & Classes 2
 ---
 
+### Lesson Breakdown
+[Structs Lesson](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/fundamentals/structs-and-classes-two/README1.md)
+
 ### Objectives
 * Understand the differences between structs and classes
 * Understand when to use a struct vs a class
