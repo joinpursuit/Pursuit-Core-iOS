@@ -503,7 +503,7 @@ func reportOnMovies(movies:[[String:Any]]) -> String? {
             }
 
             var castString = ""
-            for (i, actor) in cast.enumerate() {
+            for (i, actor) in cast.enumerated() {
                 if i == cast.count - 1 {
                     castString += "and \(actor)"
                 }
