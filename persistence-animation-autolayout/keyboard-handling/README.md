@@ -23,7 +23,7 @@ Many of these Notifications are things that we have learned about through other 
 
 ### Adding an observer
 
-You can sign up to "tune in" from broadcasts from the default NotificationCenter using the following [method](https://developer.apple.com/documentation/foundation/notificationcenter/1415360-addobserver):
+You can "tune in" to broadcasts from the default NotificationCenter using the following [method](https://developer.apple.com/documentation/foundation/notificationcenter/1415360-addobserver):
 
 ```swift
 func addObserver(_ observer: Any, 
@@ -63,7 +63,7 @@ When we build the method to handle notifications, we add the sender into the sig
 }
 ```
 
-The sender has a property called `userInfo` which is a dictionary containing information that might be helpful.  You can print out this dictionary to see all possible keys.  In this case, we want to pay attention to the keyboard's final size.
+The `Notification` sender has a property called `userInfo`, which is a dictionary containing information that might be helpful.  You can print out this dictionary to see all possible keys.  In this particular case, we want to pay attention to the keyboard's final size.
 
 ```swift
 @objc func handleKeyboardAppearing(sender: Notification) {
@@ -79,7 +79,7 @@ We now know that we can "tune in" and get information about the keyboard coming 
 
 ### Creating the app
 
-Let's add a custom view that our view controller will manager. We'll need the following subviews:
+Let's add a custom view that our view controller will manage. We'll need the following subviews:
 
 ```swift
 lazy var captionLabel: UILabel = {
@@ -171,7 +171,7 @@ private func configureSubmitButton() {
 Then, we will create a function that can reset the constraint.
 
 ```swift
-public func moveViewsToAccomadateKeyboard(with rect: CGRect, and duration: Double) {
+public func moveViewsToAccommodateKeyboard(with rect: CGRect, and duration: Double) {
     let size = rect.size
     buttonBottomConstraint.constant = -(size.height + 20)
     UIView.animate(withDuration: duration){
@@ -182,7 +182,7 @@ public func moveViewsToAccomadateKeyboard(with rect: CGRect, and duration: Doubl
 
 Now, all of our views will shift upwards!
 
-This works well, but what if the content would be cliped and go off the screen to the top?  We can use a second strategy by embedding our whole view into a *scroll view*.
+This works well, but what if the content would be clipped and go off the screen to the top?  We can use a second strategy by embedding our entire UI into a *scroll view*.
 
 # 2. Scroll Views
 
