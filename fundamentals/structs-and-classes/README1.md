@@ -19,7 +19,7 @@
 1. **Instantiation** - "Humans are born. Objects are instantiated. A baby is an instance of a Human, an object is an instance of some Class." [-More on Initialization vs Instantiation](https://stackoverflow.com/questions/2330767/what-is-the-difference-between-instantiated-and-initialized)
 1. **Method** - a function that is associated with a class. _All methods are functions, but not all functions are methods._
 1. **Object-Oriented Programming** - programming paradigm that represents the concept of “objects” that have properties (attributes that describe the object), and associated procedures/functions known as methods. [-WeHeartSwift](https://www.weheartswift.com/object-oriented-programming-swift/)
-1. **Property** - a variable or constant value that is associated with a class.
+
 
 ---
 
