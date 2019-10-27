@@ -8,7 +8,7 @@ It's now time to get into the world of iOS development.  We have built apps for 
 
 You should now see a screen that looks like this:
 
-![Xcode map](https://codewithchris.com/img/xcodetutorial/xcode_7_workspace_diagram.jpg)
+![Xcode map](https://docs-assets.developer.apple.com/published/573c4fd751/5cefe27a-4b66-4b40-9253-5b6f9a31c176.png)
 
 In the Navigator area, select the AppDelegate.swift and LaunchScreen.storyboard using command click.  Right click, then select "New Group from Selection" and name that file "Supporting Files".  This is just to clean up what you are looking at.
 
