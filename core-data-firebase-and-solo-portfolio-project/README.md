@@ -6,14 +6,15 @@
 | --- | --- | --- |
 | 1. [Local Notifications](./local-notifications/README.md) | tbd | tbd |
 | 2. [Core Location and Mapkit](./core-location-and-mapkit/README.md) | tbd | tbd |
-| 3. [Cocoapods](./cocoapods/README.md) | tbd | tbd |
-| 4. [Intro to Firebase BAAS](./intro-to-firebase-baas/README.md) | tbd | tbd |
-| 5. Firebase Auth and Firestore | tbd | tbd |
-| 6. Firestore Read/Write and Cloud Functions | tbd | tbd |
-| 7. [Intro to Core Data](./core-data/README.md) | tbd | tbd |
-| 8. Core Data and Databases | tbd | tbd |
-| 9. [Key-Value Observation](./key-value-observing/README.md) | tbd | tbd |
-| 10. Deeplinking, and Home Screen Quick Actions | tbd | tbd |
+| 3. [Mapkit, continued](./mapkit-continued/README.md)  |tbd|tbd|
+| 4. [Cocoapods](./cocoapods/README.md) | tbd | tbd |
+| 5. [Intro to Firebase BAAS](./intro-to-firebase-baas/README.md) | tbd | tbd |
+| 6. Firebase Auth and Firestore | tbd | tbd |
+| 7. Firestore Read/Write and Cloud Functions | tbd | tbd |
+| 8. [Intro to Core Data](./core-data/README.md) | tbd | tbd |
+| 9. Core Data and Databases | tbd | tbd |
+| 10. [Key-Value Observation](./key-value-observing/README.md) | tbd | tbd |
+| 11. Deeplinking, and Home Screen Quick Actions | tbd | tbd |
 
 
 ## Projects
