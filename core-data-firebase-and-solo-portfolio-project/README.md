@@ -10,9 +10,9 @@
 | 4. [Intro to Firebase BAAS](./intro-to-firebase-baas/README.md) | tbd | tbd |
 | 5. Firebase Auth and Firestore | tbd | tbd |
 | 6. Firestore Read/Write and Cloud Functions | tbd | tbd |
-| 7. Intro to Core Data(./core-data/README.md) | tbd | tbd |
+| 7. [Intro to Core Data](./core-data/README.md) | tbd | tbd |
 | 8. Core Data and Databases | tbd | tbd |
-| 9. Key-Value Observation(./key-value-observing/README.md) | tbd | tbd |
+| 9. [Key-Value Observation](./key-value-observing/README.md) | tbd | tbd |
 | 10. Deeplinking, and Home Screen Quick Actions | tbd | tbd |
 
 
