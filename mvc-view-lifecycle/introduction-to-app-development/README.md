@@ -299,9 +299,9 @@ Let's make our buttons a little more exciting by adding image assets.
 
 Download the following images to your desktop with the following names
 
-- [redImage](https://www.organicfacts.net/wp-content/uploads/2013/05/Pomegranate11.jpg)
+- [redImage](https://pngriver.com/wp-content/uploads/2018/04/Download-Pomegranate-Transparent.png)
 - [greenImage](http://www.pngmart.com/files/3/Lime-Transparent-Background.png)
-- [blueImage](https://cdn.shopify.com/s/files/1/0542/2249/products/Blue-Raspberry_1200x_3a05b07c-4ed6-4ff8-85a7-969ca56c7693_600x.jpg?v=1501516300)
+- [blueImage](http://pngimg.com/uploads/blueberries/blueberries_PNG48.png)
 
 Return to Xcode and select on the folder *Assets.xcassets*
 
