@@ -56,7 +56,7 @@ center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
 * Calendar - [UNCalendarNotificationTrigger()](https://developer.apple.com/documentation/usernotifications/uncalendarnotificationtrigger)
 * Location - [UNLocationNotificationTrigger()](https://developer.apple.com/documentation/usernotifications/unlocationnotificationtrigger)
 
-# 5. Configuring Local Notifications:
+# 4. Configuring Local Notifications:
 
 * Create and configure a UNMutableNotificationContent object with the notification details.
 * Create a UNCalendarNotificationTrigger, UNTimeIntervalNotificationTrigger, or UNLocationNotificationTrigger object to describe the conditions under which the notification is delivered.
