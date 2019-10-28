@@ -5,7 +5,7 @@
 | Lesson | Midday Checkin | Lab |
 | --- | --- | --- |
 | 1. [Local Notifications](./local-notifications/README.md) | tbd | tbd |
-| 2. [Core Location and Mapkit](./core-location-and-mapkit/README.md) | tbd | tbd |
+| 2. [Core Location and Mapkit](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/core-data-firebase-and-solo-portfolio-project/core-location-and-mapkit) | tbd | tbd |
 | 3. [Mapkit, continued](./mapkit-continued/README.md)  |tbd|tbd|
 | 4. [Cocoapods](./cocoapods/README.md) | tbd | tbd |
 | 5. [Intro to Firebase BAAS](./intro-to-firebase-baas/README.md) | tbd | tbd |
