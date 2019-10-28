@@ -58,20 +58,20 @@ center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
 
 # 5. Configuring Local Notifications:
 
-`import UserNotifications`
-
 * Create and configure a UNMutableNotificationContent object with the notification details.
 * Create a UNCalendarNotificationTrigger, UNTimeIntervalNotificationTrigger, or UNLocationNotificationTrigger object to describe the conditions under which the notification is delivered.
 * Create a UNNotificationRequest object with the content and trigger information.
 * Call the addNotificationRequest:withCompletionHandler: method to schedule the notification; see Scheduling Local Notifications for Delivery
 
 ```swift
+import UserNotifications
+
 let content = UNMutableNotificationContent()
-content.title = NSString.localizedUserNotificationString(forKey: item.title, arguments: nil)
-content.body = NSString.localizedUserNotificationString(forKey: item.description, arguments: nil)
+content.title = NSString.localizedUserNotificationString(forKey: "Sample Title", arguments: nil)
+content.body = NSString.localizedUserNotificationString(forKey: "Sample Body", arguments: nil)
 content.sound = UNNotificationSound.default
 
-let date = datePicker.date
+let date = Date().advanced(by: 24 * 60 * 60) // Same time tomorrow
 
 let calendar = Calendar.current
 let hour = calendar.component(.hour, from: date)
