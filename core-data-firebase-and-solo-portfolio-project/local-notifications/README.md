@@ -1,20 +1,37 @@
-## Notifications
+# Notifications
 
-## [In class demo](https://github.com/joinpursuit/Pursuit-Core-iOS-ToDoList-Local-Notifications)   
+## Objectives
 
-Local notifications and remote notifications are ways to inform users when new data becomes available for your app, even when your app is not running in the foreground. For example, a messaging app might let the user know when a new message has arrived, and a calendar app might inform the user of an upcoming appointment. Both local and remote notifications require you to add code to support the scheduling and handling of notifications in your app. For remote notifications, you must also provide a server environment that is capable of receiving data from user devices and sending notification-related data to the Apple Push Notification service (APNs), which is an Apple-provided service that handles the delivery of remote notifications to user devices.
+- Understand why notifications are used in an application
+- Build an application that creates and presents local notifications
 
+## Resources
+|Resource|Summary|
+|:------|:------|
+|[Notifications Guide](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/#//apple_ref/doc/uid/TP40008194-CH3-SW1)|Local and Remote Notification Programming Guide|
 
-## Local Notification 
+## [In class demo](https://github.com/joinpursuit/Pursuit-Core-iOS-ToDoList-Local-Notifications)
+
+# 1. Introduction to Notifications
+
+Local notifications and remote notifications are ways to inform users when new data becomes available for your app, even when your app is not running in the foreground. For example, a messaging app might let the user know when a new message has arrived, and a calendar app might inform the user of an upcoming appointment. Both local and remote notifications require you to add code to support the scheduling and handling of notifications in your app.
+
+Remote notifications (or push notifications) allows you to send notifications from a backend to your app.  For example, sending a notification to a user when someone else comments on a post that they've made.
+
+Local notifications are created by the application itself.  For example, a calendar app can remind you 10 minutes before you have an event scheduled.  In this lesson, we'll be looking at local notifications, which don't require an Apple account and doesn't use the Apple Push Notification service (APNs).
+
+## Local Notification
+
 With local notifications, your app configures the notification details locally and passes those details to the system, which then handles the delivery of the notification when your app is not in the foreground. Local notifications are supported on iOS, tvOS, and watchOS.
 
+# 2. The User Notifications and User Notifications UI Frameworks
 
-## The User Notifications and User Notifications UI Frameworks
 The User Notifications framework also supports the creation of notification service app extensions, which let you modify the content of remote notifications before they are delivered. If you include a notification service app extension with your app, the system passes incoming notifications to your extension before delivering them to the user. You might use this type of extension to implement end-to-end encryption for your app’s notifications, to modify the notification content before delivery, or to download additional images or media related to the notification.
 
 The User Notifications UI framework is a companion to the User Notifications framework that lets you customize the appearance of the system’s notification interface. You use the User Notifications UI framework to define a notification content app extension, whose job is to provide a view controller with custom content to display in the notification interface. The system displays your custom view controller instead of the default system interface. You might use this type of extension to incorporate media or dynamic content into your notification interfaces.
 
-## Managing Your App’s Notification Support
+# 3. Managing Your App’s Notification Support
+
 Apps must be configured at launch time to support local and remote notifications. Specifically, you must configure your app in advance if it does any of the following:
 
 * Displays alerts, play sounds, or badges its icon in response to an arriving notification.
@@ -32,15 +49,16 @@ center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
 }
 ```
 
-## Types of Trigger Notifications 
-* Push (exclusively with Remote Notifications) - [UNPushNotificationTrigger()](https://developer.apple.com/documentation/usernotifications/unpushnotificationtrigger) 
-* Time Interval - [UNTimeIntervalNotificationTrigger()](https://developer.apple.com/documentation/usernotifications/untimeintervalnotificationtrigger)  
-* Calendar - [UNCalendarNotificationTrigger()](https://developer.apple.com/documentation/usernotifications/uncalendarnotificationtrigger)  
-* Location - [UNLocationNotificationTrigger()](https://developer.apple.com/documentation/usernotifications/unlocationnotificationtrigger)  
+## Types of Trigger Notifications
 
-## Configuring Local Notifications:
+* Push (exclusively with Remote Notifications) - [UNPushNotificationTrigger()](https://developer.apple.com/documentation/usernotifications/unpushnotificationtrigger)
+* Time Interval - [UNTimeIntervalNotificationTrigger()](https://developer.apple.com/documentation/usernotifications/untimeintervalnotificationtrigger)
+* Calendar - [UNCalendarNotificationTrigger()](https://developer.apple.com/documentation/usernotifications/uncalendarnotificationtrigger)
+* Location - [UNLocationNotificationTrigger()](https://developer.apple.com/documentation/usernotifications/unlocationnotificationtrigger)
 
-```import UserNotifications``` 
+# 5. Configuring Local Notifications:
+
+`import UserNotifications`
 
 * Create and configure a UNMutableNotificationContent object with the notification details.
 * Create a UNCalendarNotificationTrigger, UNTimeIntervalNotificationTrigger, or UNLocationNotificationTrigger object to describe the conditions under which the notification is delivered.
@@ -79,20 +97,15 @@ UNUserNotificationCenter.current().add(request) { (error) in
 
 **In app notifications**
 Make user the set the UNUserNotificationCenter delegate
-```swift 
+```swift
 UNUserNotificationCenter.current().delegate = self
 ```
 
-```swift 
-// in app notifications 
+```swift
+// in app notifications
 extension ItemDetailViewController: UNUserNotificationCenterDelegate {
   func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
     completionHandler([.alert, .sound])
   }
 }
 ```
-
-## Resources 
-|Resource|Summary|
-|:------|:------|
-|[Notifications Guide](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/#//apple_ref/doc/uid/TP40008194-CH3-SW1)|Local and Remote Notification Programming Guide|
