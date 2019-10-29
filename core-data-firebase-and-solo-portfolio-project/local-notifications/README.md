@@ -9,7 +9,7 @@
 |Resource|Summary|
 |:------|:------|
 |[Notifications Guide](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/#//apple_ref/doc/uid/TP40008194-CH3-SW1)|Local and Remote Notification Programming Guide|
-|[UserNotifications](https://developer.apple.com/documentation/usernotifications)|Local and Remote Notification Programming Guide|
+|[UserNotifications](https://developer.apple.com/documentation/usernotifications)|Apple's User Notifications Framework Documentation|
 
 
 
