@@ -13,6 +13,9 @@
 - [`Build a run-tracker app using CoreLocation Ray Wenderlich`](https://www.raywenderlich.com/73984/make-app-like-runkeeper-part-1)
 - [`Simulating Location`](https://blackpixel.com/writing/2016/05/simulating-locations-with-xcode-revisited.html)
 
+## Completed Project
+
+- [Completed Project Link](https://github.com/joinpursuit/Pursuit-Core-iOS-MapKit-Introduction)
 
 
 # 1. Introduction
