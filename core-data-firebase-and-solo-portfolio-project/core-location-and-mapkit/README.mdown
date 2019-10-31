@@ -269,7 +269,7 @@ override func viewDidLoad() {
 
 When you build and run your app, you should now see a blue dot representing where the user is.  It still shows the whole US though, which is pretty zoomed out.  
 
-![zoomedOutLocation](./images/zoomedOutLocation)
+![zoomedOutLocation](./images/zoomedOutLocation.png)
 
 The easiest way to zoom into the user's location is done by setting the `userTrackingMode` to `.follow`.
 
@@ -296,7 +296,7 @@ Add the framework if you get the following error:
 test 2019-10-31 17:11:49.972054-0400 MapKitIntroduction[91144:11728659] *** Terminating app due to uncaught exception 'NSInvalidUnarchiveOperationException', reason: 'Could not instantiate class named MKMapView because no class named MKMapView was found; the class needs to be defined in source code or linked in from a library (ensure the class is part of the correct target)'
 ```
 
-![AddMapKitFramework](./images/addMapKitFramework.png)
+![AddMapKitFramework](./images/AddMapKitFramework.png)
 
 # 5. Displaying data on a map
 
