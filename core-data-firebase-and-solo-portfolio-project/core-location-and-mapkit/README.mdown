@@ -112,7 +112,7 @@ extension LibrariesViewController: CLLocationManagerDelegate {
 }
 ```
 
-Then add the View Controller as the delegate for the `CLLocationManager` in your `VvewDidLoad`
+Then add the View Controller as the delegate for the `CLLocationManager` in your `ViewDidLoad`
 
 ```swift
 override func viewDidLoad() {
