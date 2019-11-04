@@ -324,10 +324,11 @@ class Student: Person, FullyNamed, Movable {
 }
 ```
 
-### 8. Protocol-oriented programming in Swift 
+### 8. Some common Protocols in Swift 
 
-We have been using "Object Oriented Programming" so far in the course.  Swift is also a Protocol-oriented language.  Here are some main protocols in iOS:
+Here are some common protocols in iOS:
 
+- CaseIterable
 - Equatable
 - Comparable
 - Hashable
@@ -335,10 +336,18 @@ We have been using "Object Oriented Programming" so far in the course.  Swift is
 - Sequence
 - CustomStringConvertible
 
-We'll talk about these in more detail later in the course, below we are making use `CustomStringConvertible`.  Conforming to this protocol means that you can control what the print() function does.
+We have seen CaseIterable when we introduced Enumerations. When we conformed to CaseIterable we were able to get all the cases on our enum, with that .allCases property we were able to use a for-in loop to iterate over the enum. We'll talk about the other Protocols in more detail later in the course, below we are making use `CustomStringConvertible` `Equatable` and `Comparable`.  Conforming to this protocol means that you can control what the print() function does.
 
 ```swift
-class Person: CustomStringConvertible {
+class Person: CustomStringConvertible, Equatable, Comparable {
+  static func < (lhs: Person, rhs: Person) -> Bool {
+    return lhs.age < rhs.age
+  }
+  
+  static func == (lhs: Person, rhs: Person) -> Bool {
+    return lhs.age == rhs.age && lhs.occupation == rhs.occupation
+  }
+  
   var age: Int
   var occupation: String
   
@@ -354,7 +363,11 @@ class Person: CustomStringConvertible {
 let john = Person(age: 39, occupation: "Apple Developer")
 let kim = Person(age: 35, occupation: "Data Scientist")
 print(john)
+// Person's age is 39 and their occupation is Apple Developer
+
 print(kim)
+// Person's age is 35 and their occupation is Data Scientist
+
 
 if john == kim { // Binary operator '==' cannot be applied to two 'Person' operands
   print("They're the same person")
@@ -363,6 +376,8 @@ if john == kim { // Binary operator '==' cannot be applied to two 'Person' opera
 }
 
 let sortedPeople = [john, kim].sorted { $0 < $1 } // Binary operator '<' cannot be applied to two 'Person' operands
+print(sortedPeople)
+// [Person's age is 35 and their occupation is Data Scientist, Person's age is 39 and their occupation is Apple Developer]
 ```
 
 ### 9. Optional protocol methods
