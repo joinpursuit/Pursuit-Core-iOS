@@ -380,7 +380,50 @@ print(sortedPeople)
 // [Person's age is 35 and their occupation is Data Scientist, Person's age is 39 and their occupation is Apple Developer]
 ```
 
-### 9. Optional protocol methods
+### 9. Delegation 
+
+Delegation is a design pattern that enables a class or structure to hand off (or delegate) some of its responsibilities to an instance of another type. This design pattern is implemented by defining a protocol that encapsulates the delegated responsibilities, such that a conforming type (known as a delegate) is guaranteed to provide the functionality that has been delegated. Delegation can be used to respond to a particular action, or to retrieve data from an external source without needing to know the underlying type of that source.
+
+The GameDelegate below defines two required methods (startGame() and endGame() )  a conforming type needs to implement. The GameDelegate also restricts the conforming type to be a class by using AnyObject. This is required to break the memory cycle on the delegate as we will describe below.
+
+In the BlackJackGame class `weak` is used to break the memory retain cycle on the delegate. More about memory management in a later unit. In the gameStatus() method the delegate is set on the endGame method (we will see that data objects can also be passed here e.g a final score), at this point any conforming class will get the data or updates passed to it from gameStatus(). 
+
+The BlackJackViewController class conforms to BlackJackDelegate and is required to implement startGame() and endGame(). An instance of the BlackJackGame is created. When the BlackJackGame instance invokes the gameStatus() method the blackJackViewController instance recieves updates and the print statement "Looks like we have a winner" gets printed.
+
+```swift 
+protocol GameDelegate: AnyObject {
+  func startGame()
+  func endGame()
+}
+
+class BlackJackGame {
+  weak var delegate: GameDelegate?
+  
+  func gameStatus() {
+    delegate?.endGame()
+  }
+}
+
+class BlackJackViewContorller: UIViewController, GameDelegate {
+  func startGame() {
+    print("BlackJack Started")
+  }
+  
+  func endGame() {
+    print("Looks like we have a winner!")
+  }
+}
+
+var blackJackGame = BlackJackGame()
+var viewcontroller = BlackJackViewContorller()
+
+blackJackGame.delegate = viewcontroller
+blackJackGame.gameStatus() // as this method is invoked the print statement in endGame is printed since this method is set on the delegate in the BlackJackGame
+
+// Looks like we have a winner!
+```
+
+### 10. Optional protocol methods
 
 
 In Swift, when you want to conform to a protocol, you must implement **all** its properties and methods.  However, in Objective-C, you could mark certain methods as optional.  You will see this in iOS programming, you can choose whether or not to implement certain methods from a protocol.
