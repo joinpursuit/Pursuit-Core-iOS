@@ -235,7 +235,7 @@ class Car: Movable {
     self.currentPosition = newPoint
   }
   func moveStraightForTenSeconds() -> Point {
-    self.currentPosition = Point(x: self.currentPosition.x + 10, y: self.currentPosition.y)
+    currentPosition = Point(x: currentPosition.x + 10, y: currentPosition.y)
     return currentPosition
   }
   func useHorn() {
@@ -260,7 +260,7 @@ struct Plane: Movable {
     currentPosition = newPoint
   }
   mutating func moveStraightForTenSeconds() -> Point {
-    self.currentPosition = Point(x: self.currentPosition.x + 100, y: self.currentPosition.y)
+    currentPosition = Point(x: currentPosition.x + 100, y: currentPosition.y)
     return currentPosition
   }
 }
@@ -310,11 +310,11 @@ class Student: Person, FullyNamed, Movable {
   var gpa: Double
   var currentPosition = Point(x: 0, y: 0)
   func move(to newPoint: Point) {
-    print("\(self.fullName) is moving!")
-    self.currentPosition = newPoint
+    print("\(fullName) is moving!")
+    currentPosition = newPoint
   }
   func moveStraightForTenSeconds() {
-    return Point(x: self.currentPosition.x + 10, y: self.currentPosition.y)
+    return Point(x: currentPosition.x + 10, y: currentPosition.y)
   }
   init(age: Int, occupation: String, fullName: String, gpa: Double){
     self.gpa = gpa
