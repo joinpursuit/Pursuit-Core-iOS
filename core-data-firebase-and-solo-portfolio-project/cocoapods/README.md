@@ -166,5 +166,7 @@ Needed in our app are the following fundamentals:
 |[Cocoapods Github](https://github.com/CocoaPods/CocoaPods)|Cocoapods Github Page|
 |[Cocoapods Guides](https://guides.cocoapods.org/)|Cocoapods Guides in Depth|
 |[Workspace](https://fileinfo.com/extension/xcworkspace)|Xcode Workspace|
+|[Top 20 iOS libraries written in Swift](https://theswiftdev.com/2019/02/25/top-20-ios-libraries-of-2019/)|Top 20 iOS libraries written in Swift(2019)|
+|[Top 10 Open Source Swift Libraries](https://www.iosapptemplates.com/blog/swift-libraries/top-swift-libraries-bootstrap-ios)|Top 10 Open Source Swift Libraries to Bootstrap Your Next iOS Project (2019)|
 |[30 Amazing iOS Libraries](https://medium.mybridge.co/30-amazing-ios-swift-libraries-for-the-past-year-v-2018-7cf15027eee9)|30 Amazing iOS Swift Libraries for the Past Year (v.2018)|
-|[33 iOS Top Libraries](https://medium.com/app-coder-io/33-ios-open-source-libraries-that-will-dominate-2017-4762cf3ce449)|33 iOS open source libraries|
+|[33 iOS Top Libraries](https://medium.com/app-coder-io/33-ios-open-source-libraries-that-will-dominate-2017-4762cf3ce449)|33 iOS open source libraries (2017)|
