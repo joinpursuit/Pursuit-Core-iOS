@@ -4,32 +4,32 @@
 * What is Cocoapods
 * Why we need Dependency Managers
 * Getting started with Cocoapods
-* Building an app and integrating some third party Cocoapods 
+* Building an app and integrating some third-party Cocoapods 
 
 ## What is Cocoapods? 
-Cocoapods is a dependency manager. There are other dependency managers out there, example Carthage, and up and coming Swift Package manager. However Cocoapods by far is the most popular and community driven dependecy manager.
+[Cocoapods](https://cocoapods.org/) is a dependency manager. There are other dependency managers out there, example [Carthage](https://github.com/Carthage/Carthage), and the up-and-coming [Swift Package Manager](https://swift.org/package-manager/). However Cocoapods is by far the most popular and community-driven dependency manager.
 
 ## Why we need Dependency Managers? 
-Working with third party libraries and choosing the right library to work with saves vital development time. As iOS developers and consurmers of third party libraries importing manually such framewords are harder to support and keep updated. Dependency managers solve this problem by making the manual process more streamlined. That ease of use comes very handy when updating or downgrading the a library's version. 
+Working with third-party libraries and choosing the right library to work with saves vital development time. As iOS developers and consumers of third-party libraries, it is hard to support and keep such frameworks updated by manually importing them. Dependency managers solve this problem by making the process more streamlined. The ease of use comes in very handy when updating or downgrading a library's version. 
 
 ## Getting started with Cocoapods 
 Verify whether you have cocoapods installed:   
 Run the terminal command: 
-```pod```
+`pod`
 
 Check the current version: 
-```pod --version```
+`pod --version`
 
 [Cocoapods Changelog - Description of version releases](https://github.com/CocoaPods/CocoaPods/blob/master/CHANGELOG.md)    
 
 Shows where CocoaPods is installed
-```gem which cocoapods```
+`gem which cocoapods`
 
-To Install or update cocoapods run the following command: 
-```gem install cocoapods```
+To install or update cocoapods run the following command: 
+`gem install cocoapods`
 
 Create a Podfile. This can be done by running:    
-```pod init```
+`pod init`
 
 Edit your Podfile with the dependencies you need e.g.:  
 ```
@@ -38,9 +38,9 @@ Edit your Podfile with the dependencies you need e.g.:
 ```
 
 To install the pods run the following command in terminal:   
-```pod install```
+`pod install`
 
-Now a new ```YourAppName.xcworkspace``` will be created. At that point you need to exit your Xcode project and open this ```YourAppName.xcworkspace```. From now on this is the file you need opened when working on your project. 
+Now a new `YourAppName.xcworkspace` will be created. At that point you need to exit your Xcode project and open this `YourAppName.xcworkspace`. From now on, this is the file you will need to open when working on your project. 
 
 ## Podfile 
 The Podfile is a specification that describes the dependencies of the targets of one or more Xcode projects.
@@ -63,7 +63,7 @@ target 'CocoapodsApp' do
 end
 ```
 
-## Installing Cocoapod Dependecies 
+## Installing Cocoapod Dependencies 
 
 Include the following pods in your Podfile: 
 
@@ -72,7 +72,7 @@ pod 'SnapKit'
 pod 'Alamofire' 
 ```
 
-After you run ```pod install``` the following will be printed to terminal:   
+After you run `pod install` the following will be printed to terminal:   
 ```terminal 
 Analyzing dependencies
 Downloading dependencies
@@ -86,10 +86,10 @@ Sending stats
 Pod installation complete! There are 2 dependencies from the Podfile and 2 total pods installed.
 ```
 
-So as stated above, now you have to open ```CocoapodsApp.xcworkspace``` to work on your project. 
+So as stated above, now you have to open `CocoapodsApp.xcworkspace` to work on your project. 
 
 **Reminder:** at this point you should include a .gitignore file to your project at the root level  
-Use this .gitignore [template](https://github.com/github/gitignore/blob/master/Swift.gitignore)  
+Use this [.gitignore template](https://github.com/github/gitignore/blob/master/Swift.gitignore)  
 
 [Should I check the pods directory into source control](https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control)   
 
@@ -109,21 +109,21 @@ To open your project in terminal run: ```open CocoapodsApp.xcworkspace/```
 At this point your will have a "MyApp" Project workspace and a "Pods" Project workspace. The Podfile is located in the "Pods" Project workspace.     
  
 ## Reading Documentation 
-May seem obvious but make sure to read through the third party Github page that you're intended to use. Look for examples and necessary setup code. Look from the project for demo code. 
+May seem obvious but make sure to read through the third-party library's Github page that you intend to use. Look for examples and necessary setup code. Look from the project for demo code. 
 
-Some Popular Third Party Libraries for iOS Development
+Some Popular Third-Party Libraries for iOS Development:
 
-|Third Party Library|Solution|  
-|:----------|:----------| 
+|Third Party Library|Solution|
+|:----------|:----------|
 |[Alamofire](https://github.com/Alamofire/Alamofire)|Alamofire is an HTTP networking library written in Swift.|
 |[SnapKit](https://github.com/SnapKit/SnapKit)|SnapKit is a DSL to make Auto Layout easy on both iOS and OS X.|
 |[Kingfisher](https://github.com/onevcat/Kingfisher)|A lightweight, pure-Swift library for downloading and caching images from the web.|
 
 
-## Best Practices when using Dependecies 
-* look at the most recent commit and history - recently commited repos signal commitment from the developer(s) of the library
-* look at the github star rating especially when trying to decide between competitors of a solution 
-* look at issues outstanding, are there quite a bit of open issues? 
+## Best Practices when using dependecies 
+* look at the most recent commit and history - recently commited repos signal commitment from the developer(s) of the library.
+* look at the github star rating especially when trying to decide between competitors of a solution. 
+* look at issues outstanding; are there quite a bit of open issues? 
 * avoid including too many depencies into your project - look to native code for solutions 
 * avoid commiting your pods to your Github repo as the repo will become quite large especially when cloning
 * look to see if it includes tests, that's a great indication of code coverage and stability especially with your production code
