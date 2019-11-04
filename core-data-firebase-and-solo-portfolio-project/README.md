@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | 1. [Local Notifications](./local-notifications/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12938246) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Local-Notification-Lab/blob/master/README.md) |
 | 2. [Core Location and Mapkit](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/core-data-firebase-and-solo-portfolio-project/core-location-and-mapkit) | [6.1](https://canvas.instructure.com/courses/1705726/quizzes/4427495) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-MapKit-Introduction-Lab/blob/master/README.md) |
-| 3. [Cocoapods](./cocoapods/README.md) | tbd | tbd |
+| 3. [Cocoapods](./cocoapods/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12989497) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-CocoaPods-Lab/blob/master/README.md) |
 | 4. [Intro to Firebase BAAS](./intro-to-firebase-baas/README.md) | tbd | tbd |
 | 5. Firebase Auth and Firestore | tbd | tbd |
 | 6. Firestore Read/Write and Cloud Functions | tbd | tbd |
