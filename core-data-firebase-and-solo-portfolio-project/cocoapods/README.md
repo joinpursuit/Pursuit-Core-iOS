@@ -1,61 +1,125 @@
-## Cocoapods
+## CocoaPods
 
 ## Objectives
-* What is Cocoapods
-* Why we need Dependency Managers
-* Getting started with Cocoapods
-* Building an app and integrating some third-party Cocoapods 
+* Explain what purpose dependency managers serve
+* Understand what role CocoaPods serves in an application
+* Build an app that integrates third-party pods
 
-## What is Cocoapods? 
-[Cocoapods](https://cocoapods.org/) is a dependency manager. There are other dependency managers out there, example [Carthage](https://github.com/Carthage/Carthage), and the up-and-coming [Swift Package Manager](https://swift.org/package-manager/). However Cocoapods is by far the most popular and community-driven dependency manager.
+## Resources
 
-## Why we need Dependency Managers? 
-Working with third-party libraries and choosing the right library to work with saves vital development time. As iOS developers and consumers of third-party libraries, it is hard to support and keep such frameworks updated by manually importing them. Dependency managers solve this problem by making the process more streamlined. The ease of use comes in very handy when updating or downgrading a library's version. 
+|Resource|Summary|
+|:--------------|:---------------|
+|[Installing CocoaPods](https://guides.cocoapods.org/using/getting-started.html)|Getting Started Guide|
+|[Change-log](https://github.com/CocoaPods/CocoaPods/blob/master/CHANGELOG.md)|Change-log showing Release Notes|
+|[CocoaPods Github](https://github.com/CocoaPods/CocoaPods)|CocoaPods Github Page|
+|[CocoaPods Guides](https://guides.cocoapods.org/)|CocoaPods Guides in Depth|
+|[Workspace](https://fileinfo.com/extension/xcworkspace)|Xcode Workspace|
+|[20 top libraries in 2019](https://theswiftdev.com/2019/02/25/top-20-ios-libraries-of-2019/)|Top Libraries|
 
-## Getting started with Cocoapods 
-Verify whether you have cocoapods installed:   
-Run the terminal command: 
+## Project Link
+
+- [SnapKit Project with two rectangles](https://github.com/joinpursuit/Pursuit-Core-iOS-CocoaPods-Introduction/tree/master)
+
+# 1. Dependency Management Introduction
+
+When building an application, you make use of various Frameworks and Libraries that add functionality.  At the top of every iOS project file you've written is the following line:
+
+```swift
+import UIKit
+```
+
+Your project has a `dependency` on UIKit.  You need it build your UI elements.  UIKit is a native dependency, and is included as something that you can import for free.  Other examples of native dependencies include `Core Location`, `MapKit`, and `SwiftUI` (for anyone experimenting with new technologies).
+
+While first-party dependencies are key to building applications, we sometimes want to include functionality that was written by a third-party.  This could be an individual person who made a `View` that [displays confetti](https://cocoapods.org/pods/SAConfettiView), or if you want to use [Google Maps](https://cocoapods.org/pods/GoogleMaps) instead of Apple Maps.
+
+If you try to write the following at the top of your file, it won't compile, because it doesn't know where to look for `GoogleMaps`
+
+```swift
+import GoogleMaps
+```
+
+In order to use libraries from other people or companies, we need to use a tool that can download those libraries into our project.  The three main dependency managers people use in Xcode are:
+
+1. [Cocoapods](https://cocoapods.org/)
+2. [Swift Package Manager](https://swift.org/package-manager/)
+3. [Carthage](https://github.com/Carthage/Carthage)
+
+While Swift Package Manager is getting more popular with more tools built-in to Xcode, CocoaPods is still the go-to dependency manager.  Let's take a look at how to use CocoaPods to add an external library into a project.
+
+# 2. Getting started with CocoaPods
+
+## Verify you have CocoaPods on your machine
+
+Verify whether you have CocoaPods installed:   
+Run the terminal command:
 `pod`
 
-Check the current version: 
+Check the current version:
 `pod --version`
 
-[Cocoapods Changelog - Description of version releases](https://github.com/CocoaPods/CocoaPods/blob/master/CHANGELOG.md)    
+[CocoaPods Change-log - Description of version releases](https://github.com/CocoaPods/CocoaPods/blob/master/CHANGELOG.md)    
 
 Shows where CocoaPods is installed
 `gem which cocoapods`
 
-To install or update cocoapods run the following command: 
+To install or update CocoaPods run the following command:
 `gem install cocoapods`
 
-Create a Podfile. This can be done by running:    
-`pod init`
+If you get an error about permissions, run the following command instead:
 
-Edit your Podfile with the dependencies you need e.g.:  
+`sudo gem install cocoapods`
+
+## Finding CocoaPods
+
+Once you have CocoaPods on your machine, it's time to find some dependencies that we might want to add.  Here are a few pods that are commonly used:
+
+- [SwiftyJSON](https://libraries.io/cocoapods/SwiftyJSON) (Codable alternative for parsing JSON)
+- [AlamoFire](https://libraries.io/cocoapods/Alamofire) (Networking library)
+- [Charts](https://libraries.io/cocoapods/Charts) (Graphing information)
+- [SnapKit](https://libraries.io/cocoapods/SnapKit) (Library to simplify auto layout with Programmatic UI)
+
+While many dependencies will make your life easier, poorly maintained and buggy dependencies will make development difficult.  In general, it's better to err on the side of not adding a dependency if you can do without it.   
+
+When considering whether or not to add a dependency, consider the following:
+
+* Look at the most recent commit and history in GitHub - recently committed repos signal commitment from the developer(s) of the library.
+* Look at the GitHub star rating especially when trying to decide between competitors of a solution.
+* Look at issues outstanding; are there quite a bit of open issues?  Are the devs responsive?
+* Avoid including too many dependencies into your project - look to native code for solutions
+* Check to see if it includes tests, that's a great indication of code coverage and stability
+
+
+# 3. Adding pods to a Project
+
+Once you've found a dependency that you want to add, you can add it to an existing project.  Let's build a small application that uses `SnapKit` to draw the UI programmatically.
+
+Get started by creating a project just as you do normally.  Create a .gitignore with the following path:
+
+```bash
+./Pods
 ```
-  pod Alamofire
-  pod SnapKit
+
+Then, run `git init` and add and commit your project creation.  For more on checking in the `./Pods` file to source control, check out the link [here](https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control)
+
+In terminal, navigate to the project file and enter the following command:
+
+```bash
+pod init
 ```
 
-To install the pods run the following command in terminal:   
-`pod install`
-
-Now a new `YourAppName.xcworkspace` will be created. At that point you need to exit your Xcode project and open this `YourAppName.xcworkspace`. From now on, this is the file you will need to open when working on your project. 
-
-## Podfile 
-The Podfile is a specification that describes the dependencies of the targets of one or more Xcode projects.
+This will create a `Podfile` that looks like the file below:
 
 ```ruby
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'CocoapodsApp' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+target 'PodsIntroduction' do
+  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for CocoapodsApp
+  # Pods for PodsIntroduction
 
-  target 'CocoapodsAppTests' do
+  target 'PodsIntroductionTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -63,107 +127,135 @@ target 'CocoapodsApp' do
 end
 ```
 
-## Installing Cocoapod Dependencies 
+This file is in `Ruby` which is the language that CocoaPods was built in.  Commends in ruby use the `#` symbol.
 
-Include the following pods in your Podfile: 
+Right after the `# Pods for PodsIntroduction` comment, we can add the dependencies that we want.  Here, we want to use SnapKit, so we add that to the file:
 
+```ruby
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'PodsIntroduction' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for PodsIntroduction
+  pod 'SnapKit'
+
+  target 'PodsIntroductionTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
 ```
-pod 'SnapKit'
-pod 'Alamofire' 
-```
 
-After you run `pod install` the following will be printed to terminal:   
-```terminal 
+Save your `Podfile`, then enter the following command to install the pod into your project:
+
+`pod install`
+
+You should see the following output:
+
+```bash
 Analyzing dependencies
 Downloading dependencies
-Installing Alamofire (4.5.1)
-Installing SnapKit (4.0.0)
+Installing SnapKit (5.0.1)
 Generating Pods project
 Integrating client project
 
-[!] Please close any current Xcode sessions and use `CocoapodsApp.xcworkspace` for this project from now on.
-Sending stats
-Pod installation complete! There are 2 dependencies from the Podfile and 2 total pods installed.
+[!] Please close any current Xcode sessions and use `PodsIntroduction.xcworkspace` for this project from now on.
+Pod installation complete! There is 1 dependency from the Podfile and 1 total pod installed.
 ```
 
-So as stated above, now you have to open `CocoapodsApp.xcworkspace` to work on your project. 
+If it hangs at the `Analyzing dependencies` step, try running `pod setup` first.
 
-**Reminder:** at this point you should include a .gitignore file to your project at the root level  
-Use this [.gitignore template](https://github.com/github/gitignore/blob/master/Swift.gitignore)  
+We know have successfully installed our pod.  Add and commit your changes.  You now have the following files/directories in your repo:
 
-[Should I check the pods directory into source control](https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control)   
+- Podfile
+- Podfile.lock
+- Pods
+- PodsIntroduction.xcworkspace
 
-Whether or not you check in the Pods directory, the Podfile and Podfile.lock should always be kept under version control.
+The `Pods` directory contains the actual source code of the libraries that we downloaded.  We add that to our `gitignore` file so that our project doesn't have all that code checked in.  Instead, when someone wants to run our project, they will also need to run `pod install`.
 
-Files generated as a result of installing pods into the project:  
+The `Podfile.lock` is a special file that locks in the versions of each of the frameworks that we used when we built the project.  The file should look something like this:
 
-|File|Purpose|  
-|:----------|:----------|  
-|Podfile|Generated from ```pod install``` this is the file used to edit the pod dependencies|  
-|Podfile.lock|This file has a history of the versions of pods installed|  
-|Pods|This folder houses the pod frameworks and source code needed to access their specific libraries|  
-|CocoapodsApp.xcworkspace|Xcode Workspace that will now house your project and the pods directory|  
+```bash
+PODS:
+  - SnapKit (5.0.1)
 
-To open your project in terminal run: ```open CocoapodsApp.xcworkspace/```  
+DEPENDENCIES:
+  - SnapKit
 
-At this point your will have a "MyApp" Project workspace and a "Pods" Project workspace. The Podfile is located in the "Pods" Project workspace.     
- 
-## Reading Documentation 
-May seem obvious but make sure to read through the third-party library's Github page that you intend to use. Look for examples and necessary setup code. Look from the project for demo code. 
+SPEC REPOS:
+  trunk:
+    - SnapKit
 
-Some Popular Third-Party Libraries for iOS Development:
+SPEC CHECKSUMS:
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-|Third Party Library|Solution|
-|:----------|:----------|
-|[Alamofire](https://github.com/Alamofire/Alamofire)|Alamofire is an HTTP networking library written in Swift.|
-|[SnapKit](https://github.com/SnapKit/SnapKit)|SnapKit is a DSL to make Auto Layout easy on both iOS and OS X.|
-|[Kingfisher](https://github.com/onevcat/Kingfisher)|A lightweight, pure-Swift library for downloading and caching images from the web.|
+PODFILE CHECKSUM: c6e8a9673b38a1cf7a92f314e1bd5c8bdbd4fbe5
 
+COCOAPODS: 1.8.4
+```
 
-## Best Practices when using dependecies 
-* look at the most recent commit and history - recently commited repos signal commitment from the developer(s) of the library.
-* look at the github star rating especially when trying to decide between competitors of a solution. 
-* look at issues outstanding; are there quite a bit of open issues? 
-* avoid including too many depencies into your project - look to native code for solutions 
-* avoid commiting your pods to your Github repo as the repo will become quite large especially when cloning
-* look to see if it includes tests, that's a great indication of code coverage and stability especially with your production code
+Note that the version of SnapKit is included here.  This means that we know the exact dependency we have.  If SnapKit changes later and breaks something, we have a record of which version we used.
 
-## Podfile.lock (Commit your Podfile.lock)
-This file is generated after the first run of pod install, and tracks the version of each Pod that was installed. For example, imagine the following dependency specified in the Podfile:
+In order to work with our new library, we'll need to quit the Xcode project, and instead open the `PodsIntroduction.xcworkspace`.  You should see the following:
 
-As a reminder, even if your policy is not to commit the Pods folder into your shared repository, you should always commit & push your Podfile.lock file.
-_Otherwise, it would break the whole logic explained above about pod install being able to lock the installed versions of your pods._
+![frameworkPods](./images/frameworkPods.png)
 
-## pod install vs pod update
-**pod install**  
-This is to be used the first time you want to retrieve the pods for the project, but also every time you edit your Podfile to add, update or remove a pod. Use pod install to install new pods in your project. Even if you already have a Podfile and ran pod install before; so even if you are just adding/removing pods to a project already using CocoaPods.
+You don't need to ever edit anything under `Pods`, but you can look at the source code that `SnapKit` is using here.
 
-**pod update**  
-When you run pod update PODNAME, CocoaPods will try to find an updated version of the pod PODNAME, without taking into account the version listed in Podfile.lock. It will update the pod to the latest version possible (as long as it matches the version restrictions in your Podfile).
-If you run pod update with no pod name, CocoaPods will update every pod listed in your Podfile to the latest version possible. Use pod update [PODNAME] only when you want to update pods to a newer version.
+Navigating to your `ViewController`, you can now `import SnapKit` just like you can import a first-party dependency.  We can then use special SnapKit properties to build custom UI:
 
-**pod outdated**  
-When you run pod outdated, CocoaPods will list all pods which have newer versions than the ones listed in the Podfile.lock (the versions currently installed for each pod). This means that if you run pod update PODNAME on those pods, they will be updated — as long as the new version still matches the restrictions like pod 'MyPod', '~>x.y' set in your Podfile.
+```swift
+import UIKit
+import SnapKit
 
-## Workspace 
-File created by Xcode, a development application for creating iOS and Mac OS X (Cocoa) applications; saves workspace settings including and the View (Navigator, Debug, and Utilities panes) and Editor states; created by selecting File → Save As Workspace... with an open project.
+class ViewController: UIViewController {
 
-When you open an XCWORKSPACE file, it opens the associated project and restores the perspective. Therefore, Xcode workspace files can be used as a wrapper or container for an Xcode .XCODEPROJ project.
+    // MARK: -Internal Properties
 
-## Using some Cocoapods solutions in buidling an app
-Needed in our app are the following fundamentals: 
-* Networking
-* Autolayout
-* ImageCaching
+    lazy var blueSquare: UIView = {
+       let squareView = UIView()
+        squareView.backgroundColor = .blue
+        return squareView
+    }()
 
-## Resources 
+    lazy var redRectangle: UIView = {
+        let rectView = UIView()
+        rectView.backgroundColor = .red
+        return rectView
+    }()
 
-|Resource|Summary|
-|:--------------|:---------------|
-|[Installing Cocoapods](https://guides.cocoapods.org/using/getting-started.html)|Getting Started Guide|
-|[Changelog](https://github.com/CocoaPods/CocoaPods/blob/master/CHANGELOG.md)|Changelog showing Release Notes|
-|[Cocoapods Github](https://github.com/CocoaPods/CocoaPods)|Cocoapods Github Page|
-|[Cocoapods Guides](https://guides.cocoapods.org/)|Cocoapods Guides in Depth|
-|[Workspace](https://fileinfo.com/extension/xcworkspace)|Xcode Workspace|
-|[30 Amazing iOS Libraries](https://medium.mybridge.co/30-amazing-ios-swift-libraries-for-the-past-year-v-2018-7cf15027eee9)|30 Amazing iOS Swift Libraries for the Past Year (v.2018)|
-|[33 iOS Top Libraries](https://medium.com/app-coder-io/33-ios-open-source-libraries-that-will-dominate-2017-4762cf3ce449)|33 iOS open source libraries|
+    // MARK: -Lifecycle Overrides
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addSubviews()
+        configureConstraints()
+    }
+
+    // MARK: - Private methods
+
+    private func addSubviews() {
+        view.addSubview(blueSquare)
+        view.addSubview(redRectangle)
+    }
+
+    private func configureConstraints() {
+        blueSquare.snp.makeConstraints { (make) in
+            make.width.equalTo(100)
+            make.height.equalTo(100)
+            make.center.equalTo(self.view)
+        }
+        redRectangle.snp.makeConstraints { (make) in
+            make.width.equalTo(50)
+            make.height.equalTo(200)
+            make.leading.equalTo(blueSquare.snp.trailing).offset(20)
+            make.centerY.equalTo(blueSquare)
+        }
+    }
+}
+```
