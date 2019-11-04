@@ -88,23 +88,24 @@ Pod installation complete! There are 2 dependencies from the Podfile and 2 total
 
 So as stated above, now you have to open `CocoapodsApp.xcworkspace` to work on your project. 
 
-**Reminder:** at this point you should include a .gitignore file to your project at the root level  
+**Reminder:** at this point you should include a .gitignore file to your project at the root level.
+
 Use this [.gitignore template](https://github.com/github/gitignore/blob/master/Swift.gitignore)  
 
-[Should I check the pods directory into source control](https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control)   
+[Cocoapods Guide: should I check the pods directory into source control?](https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control)   
 
-Whether or not you check in the Pods directory, the Podfile and Podfile.lock should always be kept under version control.
+Whether or not you check the Pods directory in, the Podfile and Podfile.lock should always be kept under version control.
 
 Files generated as a result of installing pods into the project:  
 
 |File|Purpose|  
 |:----------|:----------|  
-|Podfile|Generated from ```pod install``` this is the file used to edit the pod dependencies|  
+|Podfile|Generated from `pod install` this is the file used to edit the pod dependencies|  
 |Podfile.lock|This file has a history of the versions of pods installed|  
 |Pods|This folder houses the pod frameworks and source code needed to access their specific libraries|  
-|CocoapodsApp.xcworkspace|Xcode Workspace that will now house your project and the pods directory|  
+|CocoapodsApp.xcworkspace|Xcode Workspace that will now house both your project AND the pods directory|  
 
-To open your project in terminal run: ```open CocoapodsApp.xcworkspace/```  
+To open your project in terminal run: `open CocoapodsApp.xcworkspace/`
 
 At this point your will have a "MyApp" Project workspace and a "Pods" Project workspace. The Podfile is located in the "Pods" Project workspace.     
  
@@ -121,12 +122,12 @@ Some Popular Third-Party Libraries for iOS Development:
 
 
 ## Best Practices when using dependecies 
-* look at the most recent commit and history - recently commited repos signal commitment from the developer(s) of the library.
-* look at the github star rating especially when trying to decide between competitors of a solution. 
-* look at issues outstanding; are there quite a bit of open issues? 
-* avoid including too many depencies into your project - look to native code for solutions 
-* avoid commiting your pods to your Github repo as the repo will become quite large especially when cloning
-* look to see if it includes tests, that's a great indication of code coverage and stability especially with your production code
+* look at the most recent commit and history - recently commited repos signal commitment from the library's developer(s).
+* look at the github star count, especially when trying to decide between competitors of a solution. 
+* look at outstanding issues; are there a large number of open issues? 
+* avoid including too many dependencies into your project - look to native code for solutions. 
+* avoid commiting your pods to your Github repo as the repo will become quite large especially when cloning.
+* look to see if the pod includes tests; that's a great indication of code coverage and stability especially with your production code.
 
 ## Podfile.lock (Commit your Podfile.lock)
 This file is generated after the first run of pod install, and tracks the version of each Pod that was installed. For example, imagine the following dependency specified in the Podfile:
@@ -136,21 +137,21 @@ _Otherwise, it would break the whole logic explained above about pod install bei
 
 ## pod install vs pod update
 **pod install**  
-This is to be used the first time you want to retrieve the pods for the project, but also every time you edit your Podfile to add, update or remove a pod. Use pod install to install new pods in your project. Even if you already have a Podfile and ran pod install before; so even if you are just adding/removing pods to a project already using CocoaPods.
+This is to be used the first time you want to retrieve the pods for the project, but also every time you edit your Podfile to add, update or remove a pod. Use `pod install` to install all *new* pods in your project. Even if you already have a Podfile and ran `pod install` before; so even if you are just adding/removing pods to a project already using CocoaPods.
 
 **pod update**  
-When you run pod update PODNAME, CocoaPods will try to find an updated version of the pod PODNAME, without taking into account the version listed in Podfile.lock. It will update the pod to the latest version possible (as long as it matches the version restrictions in your Podfile).
-If you run pod update with no pod name, CocoaPods will update every pod listed in your Podfile to the latest version possible. Use pod update [PODNAME] only when you want to update pods to a newer version.
+When you run `pod update PODNAME`, CocoaPods will try to find an updated version of the pod `PODNAME`, without taking into account the version listed in Podfile.lock. It will update the pod to the latest version possible (as long as it matches the version restrictions in your Podfile).
+If you run `pod update` with no pod name, CocoaPods will update every pod listed in your Podfile to the latest version possible. Use `pod update PODNAME` only when you want to update pods to a newer version.
 
 **pod outdated**  
-When you run pod outdated, CocoaPods will list all pods which have newer versions than the ones listed in the Podfile.lock (the versions currently installed for each pod). This means that if you run pod update PODNAME on those pods, they will be updated — as long as the new version still matches the restrictions like pod 'MyPod', '~>x.y' set in your Podfile.
+When you run `pod outdated`, CocoaPods will list all pods which have newer versions than the ones listed in the Podfile.lock (the versions currently installed for each pod). This means that if you run `pod update PODNAME` on those pods, they will be updated — as long as the new version still matches the restrictions like `pod 'MyPod', '~>x.y'` set in your Podfile.
 
 ## Workspace 
 File created by Xcode, a development application for creating iOS and Mac OS X (Cocoa) applications; saves workspace settings including and the View (Navigator, Debug, and Utilities panes) and Editor states; created by selecting File → Save As Workspace... with an open project.
 
 When you open an XCWORKSPACE file, it opens the associated project and restores the perspective. Therefore, Xcode workspace files can be used as a wrapper or container for an Xcode .XCODEPROJ project.
 
-## Using some Cocoapods solutions in buidling an app
+## Using some Cocoapods solutions in building an app
 Needed in our app are the following fundamentals: 
 * Networking
 * Autolayout
