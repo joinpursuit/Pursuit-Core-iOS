@@ -203,7 +203,7 @@ Note that the version of SnapKit is included here.  This means that we know the 
 
 In order to work with our new library, we'll need to quit the Xcode project, and instead open the `PodsIntroduction.xcworkspace`.  You should see the following:
 
-![frameworkPods](./images/frameworkPods.png)
+![frameworkPods](./frameworkPods.png)
 
 You don't need to ever edit anything under `Pods`, but you can look at the source code that `SnapKit` is using here.
 
