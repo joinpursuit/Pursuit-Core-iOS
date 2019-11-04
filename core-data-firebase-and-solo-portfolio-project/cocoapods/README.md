@@ -1,4 +1,4 @@
-## CocoaPods
+# CocoaPods
 
 ## Objectives
 * Explain what purpose dependency managers serve
