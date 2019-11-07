@@ -42,11 +42,11 @@ To begin, create a new Xcode project.
 
 Then, go to [https://firebase.google.com/](https://firebase.google.com/) and login.  You can login with any gmail account.  Once you are logged in, click on the button at the top labeled "Go To Console".  Click on the plus icon to create a new project.
 
-![createNewFirebaseProject](./images/createNewFirebaseProject.png)
+![createNewFirebaseProject](./Images/createNewFirebaseProject.png)
 
 Select your project, and click on the iOS logo to configure Firebase for iOS
 
-![addiOSProject](./images/addiOSProject.png)
+![addiOSProject](./Images/addiOSProject.png)
 
 Then, follow the steps to connect your project to Firebase:
 
@@ -58,27 +58,27 @@ Then, follow the steps to connect your project to Firebase:
 
 Make to select `"Copy Items if needed"` when you drag the `.plist` file to Xcode. The GoogleService-Info.plist file contains settings that Firebase uses to set up your app.
 
-![downloadConfigFile](./images/downloadConfigFile.png)
+![downloadConfigFile](./Images/downloadConfigFile.png)
 
 
 ### Add the Firebase SDK
 
 Include `Firebase/Auth` in your `Podfile`
 
-![addFirebaseSDK](./images/addFirebaseSDK.png)
+![addFirebaseSDK](./Images/addFirebaseSDK.png)
 
 ### Configure Firebase to start in your app
 
 Close your Xcode project, and open the `.xcworkspace` file.  Then add the following code to your `AppDelegate`:
 
-![configureFirebaseInApp](./images/configureFirebaseInApp.png)
+![configureFirebaseInApp](./Images/configureFirebaseInApp.png)
 
 
 ### Run your app to verify installation
 
 ![runAppToVerifyInstallation](./runAppToVerifyInstallation.png)
 
-![successfullyAddFirebase](./images/successfullyAddFirebase.png)
+![successfullyAddFirebase](./Images/successfullyAddFirebase.png)
 
 You are now set up to use Firebase!  
 
@@ -90,13 +90,13 @@ Our app is now setup to talk to Firebase.  Our first step will be to enable user
 
 Go to your console online and select "Authentication" in the side bar menu.  Then select **Set up sign-in Method**.  
 
-![authMenu](./images/authMenu.png)
+![authMenu](./Images/authMenu.png)
 
 You can choose from any of the given options.  For this app, select "Email/Password".
 
 You are then presented with a page showing all of the users in your app:
 
-![addUserWebsite](./images/addUserWebsite)
+![addUserWebsite](./Images/addUserWebsite)
 
 You can add users directly through the website.  Now, let's add the ability to add users and log in users through our app.
 
@@ -114,7 +114,7 @@ In your Storyboard file, add the following:
 
 It should look like the image below:
 
-![logInVC](./images/logInVC.png)
+![logInVC](./Images/logInVC.png)
 
 # 6. Building the `FirebaseAuthService`
 
