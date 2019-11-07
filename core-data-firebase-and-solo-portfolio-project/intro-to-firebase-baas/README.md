@@ -96,7 +96,7 @@ You can choose from any of the given options.  For this app, select "Email/Passw
 
 You are then presented with a page showing all of the users in your app:
 
-![addUserWebsite](./Images/addUserWebsite)
+![addUserWebsite](./Images/addUserWebsite.png)
 
 You can add users directly through the website.  Now, let's add the ability to add users and log in users through our app.
 
