@@ -52,7 +52,7 @@ Then, follow the steps to connect your project to Firebase:
 
 ### Add your BundleID
 
-![addBundleID](./addBundleID.png)
+![addBundleID](./Images/addBundleID.png)
 
 ### Download Google's plist
 
