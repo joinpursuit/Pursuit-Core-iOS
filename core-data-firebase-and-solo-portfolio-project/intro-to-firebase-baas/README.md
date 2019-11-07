@@ -6,12 +6,15 @@
 2. Integrate Firebase Auth into a project
 
 ## Readings
-[Firebase Docs](https://firebase.google.com/docs/ios/setup?authuser=0)  
-[Authentication](https://firebase.google.com/docs/auth/?authuser=1)     
-[Cloud Firestore](https://firebase.google.com/docs/firestore/?authuser=1)   
-[Cloud Storage](https://firebase.google.com/docs/storage/?authuser=1)
 
-## [Demo App](https://github.com/joinpursuit/Pursuit-Core-iOS-Firebase-Auth-Demo)   
+- [Firebase Docs](https://firebase.google.com/docs/ios/setup?authuser=0)  
+- [Authentication](https://firebase.google.com/docs/auth/?authuser=1)     
+- [Cloud Firestore](https://firebase.google.com/docs/firestore/?authuser=1)   
+- [Cloud Storage](https://firebase.google.com/docs/storage/?authuser=1)
+
+## Demo App
+
+- [Link](https://github.com/joinpursuit/Pursuit-Core-iOS-Firebase-Auth-Demo)   
 
 # 1. What is Firebase and why would we want to use it?
 
@@ -76,7 +79,7 @@ Close your Xcode project, and open the `.xcworkspace` file.  Then add the follow
 
 ### Run your app to verify installation
 
-![runAppToVerifyInstallation](./runAppToVerifyInstallation.png)
+![runAppToVerifyInstallation](./Images/runAppToVerifyInstallation.png)
 
 ![successfullyAddFirebase](./Images/successfullyAddFirebase.png)
 
