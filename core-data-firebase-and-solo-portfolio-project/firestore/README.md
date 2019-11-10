@@ -27,6 +27,8 @@ Each document is identified by a name.  It is important to make sure to give the
 >> Realtime Database with a new, more intuitive data model. Cloud Firestore also features richer, faster queries and scales
 >> better than the Realtime Database.
 
+It is a `NoSQL` database, which means that the database doesn't have tables that relate data.  Instead, it acts as a big key-value store.
+
 In this lesson, we will build a simple app where users can log in, create posts, and see posts from other users.  We will use Firestore to persist our posts and users to the cloud.
 
 Create a new project, and [connect it up to Firebase](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/core-data-firebase-and-solo-portfolio-project/intro-to-firebase-baas/README.md).  Configure auth with email/password enabled.  Then, select "Database" and click on "Create Database"
