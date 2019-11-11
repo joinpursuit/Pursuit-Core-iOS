@@ -436,7 +436,7 @@ Good to know these exist. Don't use this. But here's an example:
 var name1 = "Mr. Potato"
 var name2 = "Mr. Roboto"
 
-func nameSwap(inout name1: String, inout _ name2: String) {
+func nameSwap(_ name1: inout String, _ name2:  inout String) {
     let oldName1 = name1
     name1 = name2
     name2 = oldName1
