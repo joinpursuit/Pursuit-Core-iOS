@@ -497,13 +497,13 @@ Let's look at a more realistic and familiar example.
 func reportOnMovies(movies:[[String:Any]]) -> String? {
     var output: String?
     for movie in movies {
-        if let name = movie["name"] as? String, year = movie["year"] as? Int, cast = movie["cast"] as? [String] {
+        if let name = movie["name"] as? String, let year = movie["year"] as? Int, let cast = movie["cast"] as? [String] {
             if output == nil {
                 output = ""
             }
 
             var castString = ""
-            for (i, actor) in cast.enumerate() {
+            for (i, actor) in cast.enumerated() {
                 if i == cast.count - 1 {
                     castString += "and \(actor)"
                 }
@@ -511,11 +511,11 @@ func reportOnMovies(movies:[[String:Any]]) -> String? {
                     castString += "\(actor), "
                 }
             }
-            output?.appendContentsOf("\(name) came out in \(year) starring \(castString).")
+            output?.append(contentsOf: "\(name) came out in \(year) starring \(castString).")
             if let president = presidentsByYear[year] {
-                output?.appendContentsOf("\(president) was president.")
+                output?.append(contentsOf: "\(president) was president.")
             }
-            output?.appendContentsOf("\n")
+            output?.append(contentsOf: "\n")
         }
     }
     return output
