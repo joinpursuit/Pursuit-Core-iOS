@@ -82,7 +82,7 @@ To better understand them, lets look at another tool in Xcode.
 
 Right above the Debug area, to the left of the message "View as: iPhone 8", select the **Document Outline**
 
-We have our View and underneath the view we can see our textLabel makred with an "L".
+We have our View and underneath the view we can see our textLabel marked with an "L".
 
 **For our View:**
 view.subviews is an array with our label
