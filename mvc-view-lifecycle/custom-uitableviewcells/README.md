@@ -1,184 +1,211 @@
-# Table Views Day 2: Custom TableViewCells
+# Custom Table View Cells
 
-### [Project Repo](https://github.com/C4Q/AC-iOS-TableViewCustomCells)
+## Readings
 
-### Readings (in Recommended Order)
-1. [A Beginner's Guide to AutoLayout w/ Xcode 8 - Appcoda](http://www.appcoda.com/auto-layout-guide/)
-1. [Understanding AutoLayout - Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html#//apple_ref/doc/uid/TP40010853-CH7-SW1)
-1. [Anatomy of a Constraint](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/AnatomyofaConstraint.html#//apple_ref/doc/uid/TP40010853-CH9-SW1)
-1. [Working With Constraints in IB](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithConstraintsinInterfaceBuidler.html#//apple_ref/doc/uid/TP40010853-CH10-SW1)
-1. [Simple Constraints](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSimpleConstraints.html#//apple_ref/doc/uid/TP40010853-CH12-SW1)
-1. [Working with Self-Sizing Table View Cells](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSelf-SizingTableViewCells.html#//apple_ref/doc/uid/TP40010853-CH25-SW1)
-1. [Array.sorted() - Apple Docs](https://developer.apple.com/documentation/swift/array/2905744-sorted)
+- [Apple docs](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/CreateATableView.html#//apple_ref/doc/uid/TP40015214-CH8-SW2)
+- [Ralf Ebert](https://www.ralfebert.de/ios-examples/uikit/uitableviewcontroller/custom-cells/)
+- [Stack Overflow](https://stackoverflow.com/questions/24170922/creating-custom-tableview-cells-in-swift)
 
-### Further Readings (Optional)
-1. [Designing for iOS - Design+Code](https://designcode.io/iosdesign-guidelines)
-1. [Extensions - Apple](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html)
-1. [Custom Fonts in Swift - GrokSwift](https://grokswift.com/custom-fonts/)
+## Objectives
 
----
-### Vocabulary
+1. Create a `UITableViewCell` subclass
+1. Create custom cell UI in Storyboard
+1. Dequeue cells as instances of a `UITableViewCell` subclass
 
-1. **Autolayout** - Auto Layout dynamically calculates the size and position of all the views in your view hierarchy, based on constraints placed on those views. Because elements are laid out relative to other elements, resizing is dynamic and a UI looks consistant regardless of screen size. ([Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html))
-1. **Content Hugging**: How much content does not want to grow. ([Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithConstraintsinInterfaceBuidler.html#//apple_ref/doc/uid/TP40010853-CH10-SW2))
-1. **Compression Resistance**: How much content does not want to shrink. ([Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithConstraintsinInterfaceBuidler.html#//apple_ref/doc/uid/TP40010853-CH10-SW2))
+## Sample App
 
----
-# 0. Objectives
-1. Create customized, self-sizing `UITableViewCell` using IB **(Interface Builder)**
-1. Understanding *"minimally satisfying constraints"* in AutoLayout
-1. Learning basics of iOS Design
-1. (Extra) Modifying a projects `.plist` to use custom fonts
+- [Link](https://github.com/joinpursuit/Pursuit-Core-iOS-Custom-Table-View-Cell)
 
+# 1. Custom Table View Cells Introduction
 
-# 1. Review:
+In previous lessons, we've reviewed how to present a list of information to a user using a Table View.  So far, we've relied on the default styling of a Table View Cell, with the image to the left and two `UITextLabels`.  But what if we wanted to change the UI?  In order to build our own custom cells, we'll need to create a subclass of a `UITableViewCell` that has our desired layout.
 
-Create an app to display the data below:
+In this lesson, we'll build an application that shows a list of countries, where we use Auto Layout to position the UI elements in the cell.
+
+Get started by making a new application.  Add to it the following Swift class:
 
 <details>
-<summary>Movie class</summary>
+<summary>Country.swift</summary>
 
 ```swift
-class Movie {
-    var name: String
-    var year: Int
-    var genre: String
-    var cast: [String]
-    var locations: [String]
-    var posterImageName: String
-    public var description: String
-    init(name: String, year: Int, genre: String, cast: [String], locations: [String], posterImageName: String, description: String) {
-        self.name = name
-        self.year = year
-        self.genre = genre
-        self.cast = cast
-        self.locations = locations
-        self.posterImageName = posterImageName
-        self.description = description
+import Foundation
+
+struct Country {
+    let name: String
+    let description: String
+    let continent: String
+
+    var imageName: String {
+        return name
+            .components(separatedBy: " ")
+            .joined()
+            .dropLast()
+            .description
+            .lowercased()
     }
-}
-```
-</details>
 
-<details>
-<summary>Movie Data</summary>
-
-```swift
-struct MovieData {
-    static let movies: [Movie] = [
-        Movie(name: "Minions",
-              year: 2015,
-              genre: "animation",
-              cast: ["Sandra Bullock", "Jon Hamm", "Michael Keaton"],
-              locations: ["New York", "Los Angeles"],
-              posterImageName: "minions_small",
-              description: "Evolving from single-celled yellow organisms at the dawn of time, Minions live to serve, but find themselves working for a continual series of unsuccessful masters, from T. Rex to Napoleon. Without a master to grovel for, the Minions fall into a deep depression. But one minion, Kevin, has a plan."),
-        Movie(name: "Shrek",
-              year: 2001,
-              genre: "animation",
-              cast: ["Mike Myers", "Eddie Murphy", "Cameron Diaz"],
-              locations: ["Fairyland", "Los Angeles"],
-              posterImageName: "shrek_small",
-              description: "Once upon a time, in a far away swamp, there lived an ogre named Shrek whose precious solitude is suddenly shattered by an invasion of annoying fairy tale characters. They were all banished from their kingdom by the evil Lord Farquaad. Determined to save their home -- not to mention his -- Shrek cuts a deal with Farquaad and sets out to rescue Princess Fiona to be Farquaad\"s bride. Rescuing the Princess may be small compared to her deep, dark secret."),
-        Movie(name: "Zootopia",
-              year: 2016,
-              genre: "animation",
-              cast: ["Ginnifer Goodwin", "Jason Bateman", "Idris Elba"],
-              locations: ["New York", "Toronto"],
-              posterImageName: "zootopia_small",
-              description: "From the largest elephant to the smallest shrew, the city of Zootopia is a mammal metropolis where various animals live and thrive. When Judy Hopps becomes the first rabbit to join the police force, she quickly learns how tough it is to enforce the law."),
-        Movie(name: "Avatar",
-              year: 2009,
-              genre: "action",
-              cast: ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver"],
-              locations: ["Space", "Los Angeles"],
-              posterImageName: "avatar_small",
-              description: "On the lush alien world of Pandora live the Na\"vi, beings who appear primitive but are highly evolved. Because the planet\"s environment is poisonous, human/Na\"vi hybrids, called Avatars, must link to human minds to allow for free movement on Pandora. Jake Sully, a paralyzed former Marine, becomes mobile again through one such Avatar and falls in love with a Na\"vi woman. As a bond with her grows, he is drawn into a battle for the survival of her world."),
-        Movie(name: "The Dark Knight",
-              year: 2008,
-              genre: "action",
-              cast: ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
-              locations: ["Gotham", "Justice League of America"],
-              posterImageName: "dark_knight_small",
-              description: "With the help of allies Lt. Jim Gordon and DA Harvey Dent, Batman has been able to keep a tight lid on crime in Gotham City. But when a vile young criminal calling himself the Joker suddenly throws the town into chaos, the caped Crusader begins to tread a fine line between heroism and vigilantism."),
-        Movie(name: "Transformers",
-              year: 2007,
-              genre: "action",
-              cast: ["Shia LaBeouf", "Megan Fox", "Josh Duhamel"],
-              locations: ["Tokyo", "Sapporo"],
-              posterImageName: "transformers_small",
-              description: "The fate of humanity is at stake when two races of robots, the good Autobots and the villainous Decepticons, bring their war to Earth. The robots have the ability to change into different mechanical objects as they seek the key to ultimate power. Only a human youth, Sam Witwicky can save the world from total destruction."),
-        Movie(name: "Titanic",
-              year: 1997,
-              genre: "drama",
-              cast: ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane"],
-              locations: ["Liverpool", "Belfast", "New York", "Arctic"],
-              posterImageName: "titanic_small",
-              description: "The ill-fated maiden voyage of the R.M.S. Titanic; the pride and joy of the White Star Line and, at the time, the largest moving object ever built. She was the most luxurious liner of her era -- the \"ship of dreams\" -- which ultimately carried over 1,500 people to their death in the ice cold waters of the North Atlantic in the early hours of April 15, 1912."),
-        Movie(name: "The Hunger Games",
-              year: 2012,
-              genre: "drama",
-              cast: ["Jennifer Lawrence", "Josh Hutcherson", "Liam Hemsworth"],
-              locations: ["New York", "Wisconsin"],
-              posterImageName: "hunger_games_small",
-              description: "Katniss Everdeen voluntarily takes her younger sister\"s place in the Hunger Games, a televised competition in which two teenagers from each of the twelve Districts of Panem are chosen at random to fight to the death."),
-        Movie(name: "American Sniper",
-              year: 2014,
-              genre: "drama",
-              cast: ["Bradley Cooper", "Sienna Miller", "Kyle Gallner"],
-              locations: ["Los Angeles", "Detroit", "Morocco"],
-              posterImageName: "american_sniper_small",
-              description: "Navy S.E.A.L. sniper Chris Kyle\"s pinpoint accuracy saves countless lives on the battlefield and turns him into a legend. Back home to his wife and kids after four tours of duty, however, Chris finds that it is the war he can\"t leave behind.")
+    static let countries = [
+        Country(name: "Saint Lucia 🇱🇨",
+                description: "Tropical 🏝 paradise. Known as Helen of the West. Only drive-in volcano. National dish is green banana and salt fish. ",
+                continent: "North America"),
+        Country(name: "Colombia 🇨🇴",
+                description: "Historically troubled with natural beauty. Known for coffee (you’re welcome), ",
+                continent: "South America"),
+        Country(name: "Jamaica 🇯🇲",
+                description: "West Indian/Caribbean utopia. Origin of Reggae/Dancehall.  Birthplace of Bob Marley & Vybz Kartel. Know for cuisine choices such as ackee & salt fish, jerk everything, and mango’s",
+                continent: "North America"),
+        Country(name: "Bangladesh 🇧🇩",
+                description: "it’s hot.  Evidently the national dish is Hilsa Curry (hilsa is a fish).  But she likes tilapia. Muslin originally came from Bangladesh too. ",
+                continent: "Asia"),
+        Country(name: "America 🇺🇸",
+                description: "Known as Land of the free! The American dream. Our national dish are hamburgers ( originally made from a Hamburg steak) ",
+                continent: "North America"),
+        Country(name: "India 🇮🇳",
+                description: "Tropical country, very culturally diverse and curry is very popular there",
+                continent: "Asia"),
+        Country(name: "Ukraine 🇺🇦",
+                description: "Country in Eastern Europe with wonderful climate (full four seasons). Known for its tasty food (national dish is Borsch with pampushki (garlic bread)) and cozy stylish cafes.",
+                continent: "Europe"),
+        Country(name: "Dominican Republic 🇩🇴",
+                description: "Invented Mangu. Hot.",
+                continent: "North America"),
+        Country(name: "Nepal 🇳🇵",
+                description: "Landlocked country, Hinduism and Buddhism are the two main religion. Cows are sacred and cant be kill. Known for Mt. Everest.",
+                continent: "Asia"),
+        Country(name: "Ecuador 🇪🇨",
+                description: "City in Southern Ecuador. Known for hand crafted Panama hats (and other things I can't remember...)",
+                continent: "South America"),
+        Country(name: "Nigeria 🇳🇬",
+                description: "The home of Afro-beat. A true motherland.  The National dish is Jollof Rice which is known for being very spicy and can be filled with meat , chicken , or shrimp (just to name a few).",
+                continent: "Africa"),
+        Country(name: "Dominica 🇩🇲",
+                description: "Dominica is a small island in the West Indies with a population of just under 75,000 people. One of its national dances is the the Bele, a dance that displays its national wear.",
+                continent: "North America"),
+        Country(name: "Mexico 🇲🇽",
+                description: "One of North America's biggest countries, known for its great tasting spices and food and hard working people",
+                continent: "North America"),
+        Country(name: "Russia 🇷🇺",
+                description: "Largest country in the world. It shares borders with 14 countries and has 9 time zones. Russia won World War 2. National dish is Vodka.",
+                continent: "Europe"),
     ]
 }
 ```
 </details>
 
 
-- Each row should have a main text of the title, and the detail text should be the genre of the movie.
-- Next, we want the movies to be listed alphabetically by genre
+For the images, replace the `Assets.xcassets` folder in your project with the one from [here](./Assets).
+
+# 2. Configuring our Table View:
+
+Drag in a Table View into your View Controller, and pin it to the edges.  Then, give it one prototype cell:
+
+![CreatePrototypeCell](./Images/CreatePrototypeCell.png)
+
+Return to your `ViewController.swift` class
+
+Rename your View Controller to "CountriesViewController", by right clicking on "View Controller" and selecting `refactor -> rename`.
+
+Create an outlet from your Table View in Storyboard to your View Controller.  Then build your View Controller to load the `Country` object array into a variable:
+
+```swift
+import UIKit
+
+class CountriesViewController: UIViewController {
+
+    // MARK:- IBOutlets
+
+    @IBOutlet var countriesTableView: UITableView!
+
+    // MARK:- Internal Variables
+
+    var countries = [Country]() {
+        didSet {
+            countriesTableView.reloadData()
+        }
+    }
+
+    // MARK:- Lifecycle Methods
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadData()
+    }
+
+    private func loadData() {
+        countries = Country.countries
+    }
+}
+```
+
+Now we can configure the data source and delegate of the Table View to display information about the countries:
+
+```swift
+import UIKit
+
+class CountriesViewController: UIViewController {
+
+    // MARK:- IBOutlets
+
+    @IBOutlet var countriesTableView: UITableView!
+
+    // MARK:- Internal Variables
+
+    var countries = [Country]() {
+        didSet {
+            countriesTableView.reloadData()
+        }
+    }
+
+    // MARK:- Lifecycle Methods
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureTableView()
+        loadData()
+    }
+
+    // MARK:- Private Methods
+
+    private func configureTableView() {
+        countriesTableView.dataSource = self
+        countriesTableView.delegate = self
+    }
+
+    private func loadData() {
+        countries = Country.countries
+    }
+}
+
+// MARK:- UITableViewDelegate Conformance
+
+extension CountriesViewController: UITableViewDelegate {}
+
+// MARK:- UITableViewDataSource Conformance
+
+extension CountriesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return countries.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath)
+        let country = countries[indexPath.row]
+        cell.textLabel?.text = country.name
+        return cell
+    }
+}
+```
+
+Now that we are presenting information from our model, let's change the UI to make our cells display information differently.
 
 
-# 2. Customizing `UITableviewCell` in Storyboard
+# 3. Customizing `UITableviewCell` in Storyboard
 
-1. Create a new `UITableViewCell` subclass by going to File > New > File... and selecting `Cocoa Touch Class`
-  - Have this subclass from `UITableViewCell` and name the new class `MovieTableViewCell`
-  - *If you'd like to be thorough: before saving, create a new Folder called "Views" to create the file in. Then right-click the `MovieTableViewCell.swift` file and select "New Group from Selection" and name the new group "Views"*
-1. Go into storyboard, select the prototype cell, switch "Style" to "Custom" (note that the prototype cell in the storyboard changes) and switch its class type to `MovieTableViewCell` in the "Identity Inspector" in the Utilities pane.
-  - ![Subclassing the New Prototype cell](./Images/subclassing_movie_cell.png)
-1. Open the *Utilities Area* and select the *Attributes Inspector*
-1. Switch to the *Size Inspector* in the *Utilities Area* and give the `MovieTableViewCell` a custom row height of 200pt to give us a little room to work with (note: this will only be 200pts in the storyboard, and at runtime, our autolayout guides will expand/shrink as needed)
-  - ![Adjusting the cell height](./Images/custom_cell_height.png)
-1. From the *Object Library*, drag over a `UIImageView` into the `contentView` of the cell
-  - ![Locating an Imageview](./Images/filtering_for_image_view.png)
-1. Align the `UIImageView` to the left side of the cell, such that the alignment lines show up on the top, left, and bottom sides of the imageview.
-  - ![Aligning using guides](./Images/aligning_imageview_in_storyboard.png)
-1. Select the imageView, click on the *Align* button, and select "Vertically in Container" and switch "Update Frames" to "All Frames in Container"
-  - This will ensure that the imageView will be aligned vertically in the content view (sets imageView.centerY `NSLayoutAttribute` to contentView.centerY)
-  - Changing the "Update Frames" option makes sure that the storyboard updates the UI to match these changes. If you don't do this, you could have the proper constraints in place, but Xcode will warn you that the constraints you've applied don't match what's being seen in storyboard.
-  - ![Alignment in Y-axis](./Images/aligning_vertical_in_container.png)
-8. Next, with the imageView still selected, click on the *Pin* button and add the following:
-  - 8pt margin to top, left and bottom
-  - Width of 120, Height of 180
-  - ![Image View Constraints (Pin)](./Images/pinning_image_edges.png)
-9. Its possible that the storyboard hasn't updated its views to match the constraints you've set, so you may need to click on *Resolve Autolayout Issues* and select "Update Frames".
-  - When selecting this, Xcode will look at the constraints you've set and try to update the storyboard elements to match their constraints. If you've done everything right up until this point, you should no longer see any warnings or errors in storyboard
-  - *Some Advice: Using the storyboard can be quite frustrating at times. I would highly recommend that if you make an error somewhere along the line, to just select the problematic view, click on "Clear Constraints" and just start over. It's very difficult, especially when starting out, to resolve layout issues when you have many existing (and potentially) conflicting constraints in place. Once you've become a little experienced with it, you can try to resolve them on your own. But for now, you may find that just clearing the constraints is ultimately faster.*
-  - ![ImageView aligned in IB](./Images/image_all_constraints_shown.png)
-10. Now, add a `UILabel` to the right of the `UIImageView` with the following constraints:
-  - ![Movie Title Label Constraints](./Images/movie_title_constraints.png)
-  - 8pt from top, left, right
-  - 17pt font
-  - Left aligned
-  - Name it: Movie Title Label
-11. Add a second UILabel below the first:
-  - ![Movie Summary Label Constraints](./Images/movie_summary_constraints.png)
-  - 8pts from the top, left, right and bottom
-  - Number of lines = 0
-  - Justified alignment
-  - Named: Movie Summary Label
-  - 12pt font, Gray color (any)
-12. You may now notice an error about `verticalHuggingPriority` and `verticalCompressionResistence`... let's take a look at these two properties for a moment
+In your Storyboard file, build your custom cell UI as depicted below:
+
+![buildCustomCellUI](./Images/buildCustomCellUI.png)
+
+Note that the "Vertical Content Hugging Priority" has been set to 252 for the country description label.  If this is not set, you may encounter the following error:
 
 ![CHCR Warnings](./Images/hugging_errors.png)
 
@@ -194,152 +221,79 @@ Meaning:
 
 *Note:* These values are set *relative* to the views that surround it. Meaning, these properties will only matter in cases where constraints do not define an exact width/height for a view, and rather, expect a view to expand/contract based on the sizes of the views around it.
 
-#### Exercise: Fixing the CHCR Errors
 
-In our case, we want the movie title `UILabel` to keep a consistent size, both in width and height. The movie summary `UILabel`, however, should expand **vertically** as much as needed to accomodate all of the movie's text, but stay pinned to the left, top and right. So conceptually, the *content hugging* of the movie title label's width and height should be high, but the *content compression resistance* of the movie summary label should be low (to let it grow) vertically. With this in mind, let's update our views...
+# 4. Linking Storyboard Elements to a custom `UITableViewCell`
 
-<br>
-<details><summary>Hint 1</summary>
-<br><br>
-You really only need to change one of the labels's content hugging for the errors to resolve
-<br><br>
-</details>
-<br>
+With our UI built, we want to be able to set the values of the labels and images through code.  We'll need a place to hold outlets to these UI elements, just like our `CountriesViewController` class holds an outlet to our Table View.
 
-<details><summary>Answer</summary>
-<br><br>
-Make the <code>vertical content hugging</code> priority of the <code>movieSummaryLabel</code> any value less than the
-<code>movieTitleLabel</code>'s  <code>vertical content hugging</code>
-<img src="./Images/smaller_hugging_vertical.png" width="200" alt="Smaller hugging priority on the element allowed to shrink">
-<br><br>
-</details>
-<br>
+To do this, we'll create a new Swift class.  Like `CountriesViewController` subclasses from `UIViewController`, our custom cell will subclass from `UITableViewCell`.  Click on `File -> New -> File` and select "Cocoa Touch Class".  Select `UITableViewCell` and name your subclass "CountryTableViewCell".  
 
----
-# 3. Linking Storyboard Elements to a custom `UITableViewCell`
-With our prototype cell's constraints completed, now it's necessary to link it so our project uses the new prototype.
+Return to your Storyboard file, and change the class name of your custom cell to be `CountryTableViewCell`
 
-However is most comfortable (typing and/or ctrl+dragging), add three `IBOutlet`s to `MovieTableViewCell` and make sure they are linked to your prototype cell. Name the elements `movieTitleLabel`, `movieSummaryLabel`, and `moviePosterImageView`
+![changeClassName](./Images/changeClassName.png)
+
+We now have a file where we can create outlets from our custom cell in Storyboard.
 
 ```swift
-    @IBOutlet weak var movieTitleLabel: UILabel!
-    @IBOutlet weak var movieSummaryLabel: UILabel!
-    @IBOutlet weak var moviePosterImageView: UIImageView!
-```
-![Linking code to storyboard](./Images/linking_ui_to_code_for_cell.png)
+import UIKit
 
-With the addition of this `UIImageView`, it's a good time to add in the images that we plan on using for our app.  Drag the images from the folder in this repo named `assetsForProject` into your project.  Make sure to keep the names the same, because each movie in `Data.swift` has a property, `posterImageName` corresponding to the name of the image bundled with the project. Go ahead and take a look at both `Data.swift` and `Assets.xcassets` to verify you have set up your project correctly.
+class CountryTableViewCell: UITableViewCell {
 
+    // MARK:- IBOutlets
 
-Next, we'll need to update our code in our `MovieTableViewController`'s `cellForRow` function:
+    @IBOutlet var countryNameLabel: UILabel!
+    @IBOutlet var countryImageView: UIImageView!
+    @IBOutlet var countryDescriptionLabel: UILabel!
 
-```swift
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-	//1
-   let cell = tableView.dequeueReusableCell(withIdentifier: "Movie Cell", for: indexPath)
-    let movie = movies[indexPath.row]
-    if let movieCell = cell as? MovieTableViewCell {
-        movieCell.movieTitleLabel.text = movie.name
-        movieCell.movieSummaryLabel.text = movie.description
-        movieCell.imageView?.image = UIImage(named: movie.posterImageName)
-    }
-    return cell
 }
 ```
 
-1. This part is the same: we still want to `dequeue` a cell based on a `cellIdentifier`, and we still want to get the movie at a particular index to display
-2. We need to do a conditional bind to check if the `cell` that's dequeued with our given identifier is of a specific type, `MovieTableViewCell`. By default, `dequeueReusableCell(withIdentifier:for:)` returns `UITableViewCell`. So we must ensure that the `cell` can in fact be cast into `MovieTableViewCell`.
-3. Because we've defined and set up the UI elements of the `MovieTableViewCell`, we know which values of the `Movie` should be given to each element.
-4. At this point, we've set up the `cell` and just have to return it.
-
-Great! Now let's run and see our new cell in action (note: this may work on your machine.  It can be temperamental).
-
-![Not enough space for the cells!](./Images/movie_cells_squished.png)
-<br>
-![Broken constraints in console](./Images/broken_cell_constraints.png)
-
-Oh, something's wrong... remember before I mentioned that there are a few critical things you need to do in order to get self-sizing cells with autolayout? Well, constraining everything relative the the `contentView` is one, but there are two more:
-
-1. You need to set the `tableView.rowHeight` property to `UITableViewAutomaticDimension`
-2. You need to set the `tableView.estimatedRowHeight` property to any value (but as close to actual size as possible)
-
-So add the following to `viewDidLoad`, just before we parse our `Movie` data objects
+We also want our cell to be able to set its own properties when given a `Country`.  Adding this code here helps to separate the different parts of our application.
 
 ```swift
-  self.tableView.rowHeight = UITableViewAutomaticDimension
-  self.tableView.estimatedRowHeight = 200.0
+import UIKit
+
+class CountryTableViewCell: UITableViewCell {
+
+    // MARK:- IBOutlets
+
+    @IBOutlet var countryNameLabel: UILabel!
+    @IBOutlet var countryImageView: UIImageView!
+    @IBOutlet var countryDescriptionLabel: UILabel!
+
+    // MARK:- Internal Methods
+
+    func setup(with country: Country) {
+        countryNameLabel.text = country.name
+        countryImageView.image = UIImage(named: country.imageName)
+        countryDescriptionLabel.text = country.description
+    }
+}
 ```
-And now re-run the project. Much better right?
 
-![Correctly sized... mostly](./Images/auto_sized_movie_cells.png)
+# 5. Dequeuing Custom Cells
 
----
+Now our UI is built in Storyboard, and connected to a file that can display a Country.  Our last step is to have our `CountriesViewController` dequeue our custom cell instead of the default `UITableViewCell`.
 
-# 4. Exercises
+### CountriesViewController.swift
 
-Depending on the iPhone model your simulation is running on, you probably notice a problem with the summary text: it's being cut off! While it's true that our summary text label will expand as needed for text, there are two constraints that are holding the cell at a specific height. See if you can figure out which two those are.
+```swift
+extension CountriesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return countries.count
+    }
 
-![Truncated text](./Images/auto_sized_movie_cells_trailing_summary.png)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as? CountryTableViewCell else {
+            fatalError("Developer Error: Unexpected class for cell with reuseID countryCell")
+        }
+        let country = countries[indexPath.row]
+        cell.setup(with: country)
+        return cell
+    }
+}
+```
 
-<br>
-<details><summary>Hint 1</summary>
-<br><br>
-The height of the cell is determined by a single, unbroken chain of constraints that describe the vertical relationships of the views.
-<br><br>
-</details>
+We **downcast** the `UITableViewCell` to a `CountryTableViewCell` so that we can access its `countryNameLabel`, `countryImageView` and `countryDescriptionLabel` properties.
 
-<br>
-<details><summary>Hint 2</summary>
-<br><br>
-Think about what is giving our cell it's height (it's not those two tableview properties we just set, FYI)*
-<br><br>
-</details>
-<br>
-
-<details><summary>Hint 3</summary>
-<br><br>
-Anything with a pre-set height or width, can prevent autoresizing like this.
-<br><br>
-</details>
-<br>
-
-![No more truncation on summary labels](./Images/auto_sized_movie_cells_no_truncate.png)
-
-
-#### Styling of Cells
-
-We're going to practice creating new custom cells, but we'll start simple. Your task is to
-
-1. Create a new prototype cell in storyboard
-2. Create a new `UITableViewCell` subclass called `MovieRightAlignedTableViewCell`
-3. Make the new cell exactly like `MovieTableViewCell`, except that the image is now right-aligned
-4. You table should display movies in alternating cell types (meaning, left-aligned, right-aligned, left-aligned,.. etc.)
-
-Your finished product should look something like this:
-
-<img src="./Images/alternating_cells.png" width="400">
-
----
-
-### 5. (Extra) Adding Custom Fonts
-
-To add your own set of fonts for an app, you'll need:
-
-1. The actual font files (can be different file types, such as `.otf` and `.ttf`)
-2. To add the font files to your *application bundle*
-2. To add the `Fonts provided by application` key to your `.plist`
-  3. To add the names of the fonts (manually) to this plist as well
-
-![Font keys to Plist](http://i.imgur.com/IFnJPA4.png)
-
-Following the above steps, you can test to make sure your app sees the font by add the following line to your `AppDelegate` didFinishLaunching function:
-
-`print(UIFont.familyNames)`
-
-You should see `Roboto` among the fonts listed in the console log. Then if you wanted to see the styles you can use, use this line (after making sure `Roboto` exists):
-
-`print(UIFont.fontNames(forFamilyName: "Roboto"))`
-
-You will see `["Roboto-Light", "Roboto-Black", "Roboto-Bold", "Roboto-Regular"]` if all has been done properly.
-
-Once you've validated your fonts, change your `NSFontAttribute` value from before, and update your storyboard's prototype `MovieTableViewCell` (use Roboto-Regular, 17pt for the title text and Roboto-Light, 12pt for the summary text)
+Now, our counties load using the UI that we've specified.
