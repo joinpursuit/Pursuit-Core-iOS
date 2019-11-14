@@ -93,7 +93,7 @@ struct Country {
 </details>
 
 
-For the images, drag them into your assets folder from the link [here].
+For the images, replace the `Assets.xcassets` folder in your project with the one from [here](./Assets).
 
 # 2. Configuring our Table View:
 
