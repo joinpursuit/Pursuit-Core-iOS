@@ -99,7 +99,7 @@ In this lesson, we will build a simple app that is backed by Core Data.  Our app
 
 Open a new Xcode project.  This time, we'll need to check the box that says "include Core Data".  This will make some changes to our AppDelegate, and will give us a Data Model to use.
 
-![createCoreDataProject](./Images/createCoreDataProject)
+![createCoreDataProject](./Images/createCoreDataProject.png)
 
 Let's call our app "NumberFacts".  Users will make posts about various facts about numbers.  All of the posts and users will be persisted to your phone.
 
