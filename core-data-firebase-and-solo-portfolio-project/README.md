@@ -9,7 +9,7 @@
 | 3. [Cocoapods](./cocoapods/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12989497) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-CocoaPods-Lab/blob/master/README.md) |
 | 4. [Intro to Firebase and Firebase Auth](./intro-to-firebase-baas/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/13011902) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Firebase-Auth-Lab/blob/master/README.md) |
 | 5. [Firestore](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/core-data-firebase-and-solo-portfolio-project/firestore) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4444899) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Firestore-Lab/blob/master/README.md) |
-| 6. Firestore Read/Write and Cloud Functions | tbd | tbd |
+| 6. Firestore Read/Write and Cloud Functions | n/a | n/a |
 | 7. [Intro to Core Data](./core-data/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4458868) | tbd |
 | 8. Core Data and Databases | tbd | tbd |
 | 9. [Key-Value Observation](./key-value-observing/README.md) | tbd | tbd |
