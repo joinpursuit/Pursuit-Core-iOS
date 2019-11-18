@@ -45,7 +45,7 @@ let postFive = Post(text; "Text E", user: userTwo)
 users = [userOne, userTwo]
 posts = [postOne, postTwo, postThree, postFour, postFive]
 
-FileManagerHelper.save(users)
+FileManagerHelper.manager.save(users)
 FileManagerHelper.manager.save(posts)
 ```
 
@@ -97,7 +97,7 @@ In this lesson, we will build a simple app that is backed by Core Data.  Our app
 
 ### Configure Xcode
 
-Open a new Xcode project.  This time, we'll need to check the box that says "include Core Data".  This will make some changes to our AppDelegate, and will give us a Data Model to use.
+Open a new Xcode project.  This time, we'll need to check the box that says "include Core Data".  This will make some changes to our AppDelegate, and will give us a Data Model to use. You can also add a Data Model to an existing project, but will need to make changes to the AppDelegate manually.
 
 ![createCoreDataProject](./Images/createCoreDataProject.png)
 
