@@ -58,7 +58,7 @@ In order to find an element, we have to look at each   node in the linked list.
 
 ### Delete an element
 
-![Linked List Delete](https://modernpathshala.com/Images/singly-linked-list/Article/276195620161604035916Delete-Node-In-Linked-List.JPG)
+![Linked List Delete](http://www.tech-faq.com/wp-content/uploads/2009/05/deleting-an-element-from-a-linear-linked-list.jpeg)
 
 
 <details>
