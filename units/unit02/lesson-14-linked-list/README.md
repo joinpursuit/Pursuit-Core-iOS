@@ -120,6 +120,8 @@ class Node<T: Equatable> {
 }
 ```
 
+More on generics can be found [here](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/generics/README.md)
+
 **Exercise**:  Create a series of nodes that matches the diagram below:
 
 ```
