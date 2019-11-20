@@ -79,12 +79,12 @@ We can make a functional linked list of Ints with only a Node class.
 
 ```swift
 class Node {
-var value: Int
-var next: Node?
+    var value: Int
+    var next: Node?
 
-init(value: Int, next: Node? = nil) {
-self.value = value
-}
+    init(value: Int, next: Node? = nil) {
+        self.value = value
+    }
 }
 ```
 
@@ -98,12 +98,12 @@ Generics are a powerful tool in Swift that lets us extend code to multiple diffe
 
 ```swift
 class Node<T> {
-var value: T
-var next: Node?
+    var value: T
+    var next: Node?
 
-init(value: T, next: Node? = nil) {
-self.value = value
-}
+    init(value: T, next: Node? = nil) {
+        self.value = value
+    }
 }
 ```
 
@@ -111,12 +111,12 @@ The 'T' in angle brackets indicates that the class will use generics.  We can ma
 
 ```swift
 class Node<T: Equatable> {
-var value: T
-var next: Node?
+    var value: T
+    var next: Node?
 
-init(value: T, next: Node? = nil) {
-self.value = value
-}
+    init(value: T, next: Node? = nil) {
+        self.value = value
+    }
 }
 ```
 
