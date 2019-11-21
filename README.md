@@ -20,3 +20,7 @@ This is where you'll find some common resources as well as full lessons.
 
 ## Style Guide
 [RayWenderlich Swift Style Guide](https://github.com/raywenderlich/swift-style-guide#spacing)
+
+## 6.3 Class Notes
+
+- [Alex Paul](https://github.com/alexpaul/lecture-resources)
