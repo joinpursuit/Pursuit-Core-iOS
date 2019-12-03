@@ -198,3 +198,4 @@ To actually store the image, we must first convert it to a `Data` type using the
 }
 ```
 
+If we successfully upload an image, we should be able to extract its location in Storage in the success block of our call. `imageLocation.downloadURL` will give us the URL that we can use to reference the image, which we can even add to an object in Firestore, in order to use later.
