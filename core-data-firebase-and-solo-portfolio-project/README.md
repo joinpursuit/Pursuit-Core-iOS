@@ -9,8 +9,9 @@
 | 3. [Cocoapods](./cocoapods/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12989497) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-CocoaPods-Lab/blob/master/README.md) |
 | 4. [Intro to Firebase and Firebase Auth](./intro-to-firebase-baas/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/13011902) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Firebase-Auth-Lab/blob/master/README.md) |
 | 5. [Firestore](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/core-data-firebase-and-solo-portfolio-project/firestore) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4444899) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Firestore-Lab/blob/master/README.md) |
-| 6. [Intro to Core Data](./core-data/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4458868) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Core-Data-Lab/blob/master/README.md) |
-| 7. [Key-Value Observation](./key-value-observing/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4475413) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-KVO-Lab) |
+| 6. [Firestore (continued) and Firebase Storage](./firestore-filtering-and-firebase-storage) | N/A | N/A|
+| 7. [Intro to Core Data](./core-data/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4458868) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Core-Data-Lab/blob/master/README.md) |
+| 8. [Key-Value Observation](./key-value-observing/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4475413) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-KVO-Lab) |
 
 
 ## Projects
