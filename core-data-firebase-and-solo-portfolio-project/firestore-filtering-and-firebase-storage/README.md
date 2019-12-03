@@ -5,8 +5,6 @@
 - Understand how to manipulate and customize persisted Firestore documents.
 - Understand how to store media files using Firebase Storage
 
-## Resources
-
 # 1. Refresher on Firestore and  Document Stores
 
 A **Document Store** is a way of organizing information for storage.  It is a kind of *key-value store*.  To use a document store, you create different *collections* for each of your model objects. Each document is essentially a dictionary, and should have keys named for the object's properties, which map to their values.
