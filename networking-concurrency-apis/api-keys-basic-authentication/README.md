@@ -84,7 +84,10 @@ The APIKey is stored in the URL.  If anyone is able to view the URL, they will h
 
 Basic Authentication provides another way to handle information.  Instead of just a single API Key, a user name and a password are combined together into a single string and passed onwards.  Instead of the information being passed into the URL directly, this information is included inside the HTTP header.  It provides no additional security by itself, but an HTTPS connection can create security.
 
+### 3. Bearer Token
 
-### 3. OAuth
+Yelp API
+
+### 4. OAuth
 
 OAuth is a common security standard for authentication.  It is a somewhat complex process that involves a series of communications with the API to ensure that the credentials are valid.
