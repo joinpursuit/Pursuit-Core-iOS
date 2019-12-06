@@ -5,16 +5,16 @@
 
 | Lesson | Midday Checkin | Lab |
 | --- | --- | --- |
-| 1. [Intro to Persistence with User Defaults](./intro-to-persistence-with-userdefaults/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4315434) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-UserDefaults-Lab/blob/master/README.md) |
-| 2. [UICollectionView](./uicollectionview/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4325338) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Collection-View-Lab/blob/master/README.md) |
-| 3. [FileManager Persistence](./filemanager-persistence/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12700503) | [link](https://github.com/joinpursuit/Pursuit-Core-Persistence-Lab/blob/master/README.md) |
-| 4. [UIImagePickerController](./uiimagepickercontroller/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12707719) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-ImagePicker-Lab/blob/master/README.md) |
-| 5. [Custom Delegation](./custom-delegation/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12749905) | [link](https://github.com/joinpursuit/Pursuit-Core-MVC-Delegation-Review-Lab) |
-| 6. [Introduction to Programmatic UI](./introduction-to-programmatic-ui/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12772300) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Programmatic-UI-Lab/blob/master/README.md) |
-| 7. [Programmatic View Management and xibs](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/persistence-animation-autolayout/custom-cells-programmatic-ui) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12783776) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-CustomCells-Lab) |
-| 8. [Animations One](./animations/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4378507) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Animations-Lab) |
-| 9. [Animations Two](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/persistence-animation-autolayout/animation-continued/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12820405) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Animations-Lab-Two/blob/master/README.md) |
-| 10. [Keyboard Handling](./keyboard-handling/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12832903) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Keyboard-Handling-Lab/blob/master/README.md) |
+| 1. [Intro to Persistence with User Defaults](./intro-to-persistence-with-userdefaults/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4315434) | [Horoscope](https://github.com/joinpursuit/Pursuit-Core-iOS-UserDefaults-Lab/blob/master/README.md) |
+| 2. [UICollectionView](./uicollectionview/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4325338) | [Countries Collection View](https://github.com/joinpursuit/Pursuit-Core-iOS-Collection-View-Lab/blob/master/README.md) |
+| 3. [FileManager Persistence](./filemanager-persistence/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12700503) | [Pixabay Photos](https://github.com/joinpursuit/Pursuit-Core-Persistence-Lab/blob/master/README.md) |
+| 4. [UIImagePickerController](./uiimagepickercontroller/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12707719) | [Profile Page](https://github.com/joinpursuit/Pursuit-Core-iOS-ImagePicker-Lab/blob/master/README.md) |
+| 5. [Custom Delegation](./custom-delegation/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12749905) | [Movies and Font Size](https://github.com/joinpursuit/Pursuit-Core-MVC-Delegation-Review-Lab) |
+| 6. [Introduction to Programmatic UI](./introduction-to-programmatic-ui/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12772300) | [Programmatic Color Guessing Game](https://github.com/joinpursuit/Pursuit-Core-iOS-Programmatic-UI-Lab/blob/master/README.md) |
+| 7. [Programmatic View Management and xibs](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/persistence-animation-autolayout/custom-cells-programmatic-ui) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12783776) | [Random User](https://github.com/joinpursuit/Pursuit-Core-iOS-CustomCells-Lab) |
+| 8. [Animations One](./animations/README.md) | [Move Square Up and Down](https://canvas.instructure.com/courses/1605734/quizzes/4378507) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Animations-Lab) |
+| 9. [Animations Two](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/persistence-animation-autolayout/animation-continued/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12820405) | [Animation Pacing with Beach Balls](https://github.com/joinpursuit/Pursuit-Core-iOS-Animations-Lab-Two/blob/master/README.md) |
+| 10. [Keyboard Handling](./keyboard-handling/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12832903) | [Login Screen](https://github.com/joinpursuit/Pursuit-Core-iOS-Keyboard-Handling-Lab/blob/master/README.md) |
 
 ## Assignments
 
