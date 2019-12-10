@@ -49,7 +49,7 @@
 ## In class demos
 
 | Project | Summary |
-|:-------:|:------:|
+|---|---|
 | [UserDefaultsDemo app](https://github.com/joinpursuit/Pursuit-Core-iOS-UserDefaults-Demo) | UserDefaults, Persistence |
 | [To Do List App](https://github.com/joinpursuit/Pursuit-Core-iOS-To-Do-List) | FileManager, Documents Directory, Persistence |
 | [Tickets](https://github.com/joinpursuit/Pursuit-Core-iOS-Tickets) | UserDefaults, FileManager, Documents Directory, Persistence, UIAlertController, Programmatic UI, subclassing UIView, Date Extensions |
