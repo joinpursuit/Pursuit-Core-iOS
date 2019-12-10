@@ -1,8 +1,8 @@
 # Unit 2: MVC View Lifecycle
 
-## Contents
+## Lessons, Quizzes, and Labs
 
-| Lesson | Exit Ticket | Lab |
+| Lesson | Quiz | Lab |
 | --- | --- | --- |
 | 1. [Introduction to App Development](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/introduction-to-app-development/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11854061) / [6.3](https://canvas.instructure.com/courses/1705726/assignments/12465041) | [Three Card Monty](https://github.com/joinpursuit/Pursuit-Core-iOS-Three-Card-Monte) |
 | 2. [Building Apps with MVC](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/mvc-view-lifecycle/app-architecture-mvc/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11893013) / [6.3](https://canvas.instructure.com/courses/1705726/assignments/12951656) | [Color Guessing Game](https://github.com/joinpursuit/Pursuit-Core-iOS-ColorGuessingGameExercise) |
@@ -18,10 +18,17 @@
 
 
 ## Assignments
+
 | Assignment | Standards |
 | --- | --- |
 | [Tic-Tac-Toe](https://github.com/joinpursuit/Pursuit-Core-iOS-Unit2-Assignment1) | <ul><li>EF.1: Identify and solve problems</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.8.a: Create an App using MVC design</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.3.a: Use UIView subclasses to display information</li><li>IOS.3.b: Handle user interactions using the target-action pattern</li><li>LF.5: Use functions to keep code DRY</li></ul> |
-- [Game of Thrones](https://github.com/joinpursuit/AC-iOS-GOT)
+| [Game of Thrones](https://github.com/joinpursuit/AC-iOS-GOT) | <ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.8.a: Create an App using MVC design</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.2.g: Auto_Layout</li><li>IOS.3.d: Load Data into a TableView</li><li>LF.5: Use functions to keep code DRY</li><li>iOS.3.p: Create Custom TableView Cells</li><li>iOS.3.q: Segue to a DetailViewController</li><li>iOS.3.r: Create a TableView with Sections</li></ul> |
+
+## Assessments
+
+| Assessment | Standards |
+| --- | --- |
+
 
 ## Extra Content
 - [Multiple Storyboards](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/mvc-view-lifecycle/multiple-mvc-day-two)
