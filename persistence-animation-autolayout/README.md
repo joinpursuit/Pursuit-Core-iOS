@@ -16,6 +16,14 @@
 | 9. [Animations Two](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/persistence-animation-autolayout/animation-continued/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12820405) / [6.3](https://canvas.instructure.com/courses/1705726/quizzes/4493740) | [Animation Pacing with Beach Balls](https://github.com/joinpursuit/Pursuit-Core-iOS-Animations-Lab-Two/blob/master/README.md) |
 | 10. [Keyboard Handling](./keyboard-handling/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12832903) / [6.3](https://canvas.instructure.com/courses/1705726/quizzes/4493741) | [Login Screen](https://github.com/joinpursuit/Pursuit-Core-iOS-Keyboard-Handling-Lab/blob/master/README.md) |
 
+## New Standards
+
+<ul><li>IOS.2.r: Use Animations to improve UI/UX</li><li>IOS.1.e: Use stored and computed properties to organize code</li><li>IOS.4.f: Use FileManager to persist and load information</li><li>IOS.2.h: Build UI without a Storyboard</li><li>EF.10.j: Manage API keys and keep them safe</li><li>IOS.3.m: Load data into a Collection View</li><li>IOS.3.n: Navigation</li><li>IOS.3.i: Use UIImagePickerController to take and retrieve images</li><li>IOS.4.a; Use UserDefaults to persist and load information</li></ul>
+
+## Reassessed Standards
+
+<ul><li>LF.5: Use functions to keep code DRY</li><li>iOS.3.q: Segue to a DetailViewController</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>IOS.2.g: Auto_Layout</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>IOS.1: Write clean, readable Swift code</li></ul>
+
 ## Assignments
 
 | Assignment | Standards |
