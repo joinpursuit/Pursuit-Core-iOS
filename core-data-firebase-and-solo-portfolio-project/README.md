@@ -13,8 +13,15 @@
 | 7. [Intro to Core Data](./core-data/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4458868) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Core-Data-Lab/blob/master/README.md) |
 | 8. [Key-Value Observation](./key-value-observing/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4475413) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-KVO-Lab) |
 
+## Assignments
 
-## Projects
+| Assignment | Standards |
+| --- | --- |
+| [Foursquare](https://github.com/joinpursuit/Pursuit-Core-iOS-Foursquare-Map-Project/blob/master/README.md) | <ul><li>EF.10.j: Manage API keys and keep them safe</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>IOS.2.g: Auto_Layout</li><li>IOS.2.o: Use Core Location to get user location data, managing privacy appropriately</li><li>IOS.2.p: Use MapKit to display information on a map</li><li>LF.5: Use functions to keep code DRY</li></ul> |
+| [Instagram with Firebase](https://github.com/joinpursuit/Pursuit-Core-iOS-Firebase-Project/blob/master/README.md) | <ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.2.g: Auto_Layout</li><li>IOS.4.d: Use Firestore to create a backend for an application</li><li>IOS.6: Integrated libraries into an application using CocoaPods</li><li>LF.5: Use functions to keep code DRY</li><li>iOS.4.g: Use Firebase Auth to create and authenticate users</li><li>iOS.4.h: Use Firebase Storage to Persist and Access Images</li></ul> |
+
+
+## Other Projects
 
 |Project name| Topics|
 |---|---|
