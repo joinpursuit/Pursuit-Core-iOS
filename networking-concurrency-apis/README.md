@@ -15,6 +15,13 @@
 | 8. [API Keys and Auth](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/networking-concurrency-apis/api-keys-basic-authentication/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12480829) / [6.3](https://canvas.instructure.com/courses/1705726/quizzes/4493743) | [Musixmatch](https://github.com/joinpursuit/Pursuit-Core-iOS-API-Keys-Lab/blob/master/README.md) |
 | 9. [Post Requests](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/networking-concurrency-apis/post-requests/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12503024) / [6.3](https://canvas.instructure.com/courses/1705726/quizzes/4493737) | [Airtable Clients List](https://github.com/joinpursuit/Pursuit-Core-iOS-Post-Requests-with-Airtable) |
 
+## New Standards
+
+<ul><li>iOS.3.s: Load images smoothly, without flickering , and displaying a spinner when needed</li><li>EF.10.f: Use Codable and JSONDecoder to parse JSON data</li><li>IOS.3.e: Use a search bar to filter data in a Table View.</li><li>EF.10.g: Use GCD to appropriately dispatch tasks</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>EF.10.h: Use URLSession to get data from online</li></ul>
+
+## Reassessed Standards
+
+<ul><li>EF.8.a: Create an App using MVC design</li><li>LF.5: Use functions to keep code DRY</li><li>iOS.3.p: Create Custom TableView Cells</li><li>IOS.3.d: Load Data into a TableView</li><li>IOS.2.g: Auto_Layout</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>iOS.3.r: Create a TableView with Sections</li><li>iOS.3.q: Segue to a DetailViewController</li><li>IOS.1: Write clean, readable Swift code</li></ul>
 
 ## Assignments
 
