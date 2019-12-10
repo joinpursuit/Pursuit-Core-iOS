@@ -1,9 +1,9 @@
 
 # Unit 3:  Networking, Concurrency, APIs
 
-## Contents
+## Lessons, Quizzes, and Labs
 
-| Lesson | Exit Ticket | Lab |
+| Lesson | Quiz | Lab |
 | --- | --- | --- |
 | 1. [Introduction to the Internet and Networking](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/networking-concurrency-apis/intro-to-the-internet-and-networking/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12289325) / [6.3](https://canvas.instructure.com/courses/1705726/assignments/12465058) | [API and Status Code Scavenger Hunt](https://github.com/joinpursuit/Pursuit-Core-Introduction-To-Networking-and-APIs-Lab) |
 | 2. [Parsing JSON](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/networking-concurrency-apis/parsing-json/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12323266) / [6.3](https://canvas.instructure.com/courses/1705726/assignments/12465031) | [Weather / Color / Random User](https://github.com/joinpursuit/Pursuit-Core-iOS-Parsing-JSON-Lab) |
