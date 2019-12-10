@@ -28,7 +28,7 @@
 
 | Assessment | Standards |
 | --- | --- |
-
+| [6.1 Crayons](https://canvas.instructure.com/courses/1605734/assignments/11600948) / [6.3 Crayons](https://canvas.instructure.com/courses/1705726/assignments/12465176) | <ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.8.a: Create an App using MVC design</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.2.g: Auto_Layout</li><li>IOS.3.d: Load Data into a TableView</li><li>IOS.3.g: Use common UIControls to allow user input</li><li>iOS.3.q: Segue to a DetailViewController</li></ul> |
 
 ## Extra Content
 - [Multiple Storyboards](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/mvc-view-lifecycle/multiple-mvc-day-two)
