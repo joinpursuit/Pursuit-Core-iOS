@@ -1,8 +1,8 @@
 # Unit 1: Fundamentals
 
-## Contents
+## Lessons, Quizzes and Labs
 
-| Lesson | Exit Ticket | Lab |
+| Lesson | Quiz | Lab |
 | --- | --- | --- |
 | 1. [Environment and Tools](./env-and-tools/README.md) | n/a  | n/a |
 | 2. [Types, Variables, Logic, and Operations](./types-variables-logic-operations/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11666585) / [6.3](https://canvas.instructure.com/courses/1705726/assignments/12512248) | [part one](https://github.com/joinpursuit/ios-types-variables-logic-operations-lab-1) / [part two](https://github.com/joinpursuit/ios-types-variables-logic-operations-lab-2/) |
