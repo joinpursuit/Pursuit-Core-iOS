@@ -13,6 +13,14 @@
 | 7. [Intro to Core Data](./core-data/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4458868) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Core-Data-Lab/blob/master/README.md) |
 | 8. [Key-Value Observation](./key-value-observing/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4475413) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-KVO-Lab) |
 
+## New Standards
+
+<ul><li>iOS.4.g: Use Firebase Auth to create and authenticate users</li><li>IOS.2.o: Use Core Location to get user location data, managing privacy appropriately</li><li>iOS.4.h: Use Firebase Storage to Persist and Access Images</li><li>IOS.6: Integrated libraries into an application using CocoaPods</li><li>IOS.4.d: Use Firestore to create a backend for an application</li><li>IOS.2.p: Use MapKit to display information on a map</li></ul>
+
+## Reassessed Standards
+
+<ul><li>LF.5: Use functions to keep code DRY</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.2.g: Auto_Layout</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>EF.10.j: Manage API keys and keep them safe</li></ul>
+
 ## Assignments
 
 | Assignment | Standards |
