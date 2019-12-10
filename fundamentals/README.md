@@ -26,8 +26,7 @@
 ## Assignments
 | Project | Standards |
 | --- | --- |
-| [Text based adventure](https://github.com/joinpursuit/Pursuit-Core-iOS-Unit1-Assignment1/blob/master/README.md) | <ul><li>LF.4: Use control flow in a clear, concise way to determine which code executes</li><li>LF.2: Use variables and constants to store information</li><li>LF.1.a: Use different types of data</li><li>EF.2.e: Build a command line application</li><li>EF.1: Identify and solve problems</li><li>IOS.1: Write clean, readable Swift code</li></ul>
- |
+| [Text based adventure](https://github.com/joinpursuit/Pursuit-Core-iOS-Unit1-Assignment1/blob/master/README.md) | <ul><li>LF.4: Use control flow in a clear, concise way to determine which code executes</li><li>LF.2: Use variables and constants to store information</li><li>LF.1.a: Use different types of data</li><li>EF.2.e: Build a command line application</li><li>EF.1: Identify and solve problems</li><li>IOS.1: Write clean, readable Swift code</li></ul> |
 | [Hangman](https://github.com/joinpursuit/Pursuit-Core-iOS-Unit1-Assignment2/blob/master/README.md) | list |
 | [Calculator](https://github.com/joinpursuit/Pursuit-Core-iOS-Unit1-Assignment3/blob/master/README.md) | list |
 
