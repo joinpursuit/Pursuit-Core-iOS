@@ -1,7 +1,7 @@
 
 # Unit 4: Persistence, Animation, and Programmatic Auto Layout
 
-## Contents
+## Lessons, Quizzes, and Labs
 
 | Lesson | Midday Checkin | Lab |
 | --- | --- | --- |
@@ -18,10 +18,19 @@
 
 ## Assignments
 
-| Project | Summary |
+| Assignment | Standards |
 |:-------:|:------:|
-| [PhotoJournal](https://github.com/joinpursuit/Pursuit-Core-iOS-PhotoJournal-Assignment) | UIImagePickerController, Persistence, FileManager |
-| [WeatherApp](https://github.com/joinpursuit/Pursuit-Core-iOS-WeatherApp) | UserDefaults, Persistence, FileManager |
+| [PhotoJournal](https://github.com/joinpursuit/Pursuit-Core-iOS-PhotoJournal-Assignment) | <ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>IOS.1.e: Use stored and computed properties to organize code</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.2.g: Auto_Layout</li><li>IOS.3.i: Use UIImagePickerController to take and retrieve images</li><li>IOS.3.m: Load data into a Collection View</li><li>IOS.4.a; Use UserDefaults to persist and load information</li><li>IOS.4.f: Use FileManager to persist and load information</li></ul> |
+| [WeatherApp](https://github.com/joinpursuit/Pursuit-Core-iOS-WeatherApp) | <ul><li>EF.10.j: Manage API keys and keep them safe</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>IOS.2.g: Auto_Layout</li><li>IOS.2.h: Build UI without a Storyboard</li><li>IOS.3.m: Load data into a Collection View</li><li>IOS.4.a; Use UserDefaults to persist and load information</li><li>IOS.4.f: Use FileManager to persist and load information</li><li>LF.5: Use functions to keep code DRY</li><li>iOS.3.q: Segue to a DetailViewController</li></ul> |
+
+## Assessment
+
+| Assessment | Standards |
+| --- | --- |
+| [6.1 Flashcards](https://canvas.instructure.com/courses/1605734/assignments/12856040) / [6.3 Flashcards (ADD LINK)]() | <ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>IOS.2.g: Auto_Layout</li><li>IOS.2.h: Build UI without a Storyboard</li><li>IOS.2.r: Use Animations to improve UI/UX</li><li>IOS.3.m: Load data into a Collection View</li><li>IOS.3.n: Navigation</li><li>IOS.4.f: Use FileManager to persist and load information</li></ul> |
+
+## Group Projects
+
 | [NYTBestsellers](https://github.com/joinpursuit/Pursuit-Core-iOS-New-York-Times-Bestsellers) | UserDefaults, FileManager, Persistence, NetworkHelper, ImageHelper, AppError |
 
 
