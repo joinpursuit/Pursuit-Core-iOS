@@ -19,7 +19,7 @@
 ## Assignments
 
 | Assignment | Standards |
-|:-------:|:------:|
+|---|---|
 | [PhotoJournal](https://github.com/joinpursuit/Pursuit-Core-iOS-PhotoJournal-Assignment) | <ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>IOS.1.e: Use stored and computed properties to organize code</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.2.g: Auto_Layout</li><li>IOS.3.i: Use UIImagePickerController to take and retrieve images</li><li>IOS.3.m: Load data into a Collection View</li><li>IOS.4.a; Use UserDefaults to persist and load information</li><li>IOS.4.f: Use FileManager to persist and load information</li></ul> |
 | [WeatherApp](https://github.com/joinpursuit/Pursuit-Core-iOS-WeatherApp) | <ul><li>EF.10.j: Manage API keys and keep them safe</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>IOS.2.g: Auto_Layout</li><li>IOS.2.h: Build UI without a Storyboard</li><li>IOS.3.m: Load data into a Collection View</li><li>IOS.4.a; Use UserDefaults to persist and load information</li><li>IOS.4.f: Use FileManager to persist and load information</li><li>LF.5: Use functions to keep code DRY</li><li>iOS.3.q: Segue to a DetailViewController</li></ul> |
 
