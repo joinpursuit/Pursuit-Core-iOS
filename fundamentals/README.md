@@ -34,6 +34,7 @@
 ## Assessments
 
 | Assessment | Standards |
+| --- | --- |
 | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11877964) / [6.3](https://canvas.instructure.com/courses/1705726/assignments/12912101) | <ul><li>EF.1: Identify and solve problems</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>IOS.1.b: Use enums to make code more clear</li><li>IOS.1.c: Understand the difference between structs and classes</li><li>LF.2: Use variables and constants to store information</li><li>LF.3.a: Use arrays to solve problems</li><li>LF.4: Use control flow in a clear, concise way to determine which code executes</li><li>LF.5: Use functions to keep code DRY</li></ul>
  |
 
