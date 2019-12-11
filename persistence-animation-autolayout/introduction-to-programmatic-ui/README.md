@@ -107,6 +107,7 @@ Inside that method, we need to create an instance of our view controller and dis
 
 In Xcode 11, that functionality has been moved to the `SceneDelegate.swift` file:
 
+```swift
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -114,7 +115,7 @@ In Xcode 11, that functionality has been moved to the `SceneDelegate.swift` file
         window?.rootViewController = ColorsViewController()
         window?.makeKeyAndVisible()
     }
-
+```
 
 #### UIWindow
 
