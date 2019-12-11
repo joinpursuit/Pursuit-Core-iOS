@@ -35,7 +35,7 @@
 
 | Assessment | Standards |
 | --- | --- |
-| [6.1 Flashcards](https://canvas.instructure.com/courses/1605734/assignments/12856040) / [6.3 Flashcards (Missing Link)]() | <ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>IOS.2.g: Auto_Layout</li><li>IOS.2.h: Build UI without a Storyboard</li><li>IOS.2.r: Use Animations to improve UI/UX</li><li>IOS.3.m: Load data into a Collection View</li><li>IOS.3.n: Navigation</li><li>IOS.4.f: Use FileManager to persist and load information</li></ul> |
+| [6.1 Flashcards](https://canvas.instructure.com/courses/1605734/assignments/12856040) / [6.3 Flashcards](https://canvas.instructure.com/courses/1705726/assignments/13245301) | <ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>IOS.2.g: Auto_Layout</li><li>IOS.2.h: Build UI without a Storyboard</li><li>IOS.2.r: Use Animations to improve UI/UX</li><li>IOS.3.m: Load data into a Collection View</li><li>IOS.3.n: Navigation</li><li>IOS.4.f: Use FileManager to persist and load information</li></ul> |
 
 ## Group Projects
 
