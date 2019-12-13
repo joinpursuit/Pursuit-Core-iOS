@@ -1055,11 +1055,11 @@ struct Secrets {
 
 To find the Project Id, select your project, then click on "Help" -> "API Documentation".
 
-![apiDocumentationMenu](./assets/apiDocumentationMenu.png)
+![apiDocumentationMenu](./images/apiDocumentationMenu.png)
 
 Then click on "Authentication".  On the right hand side you will see the endpoint that you need to hit.
 
-![projectIDLocation](./assets/projectIDLocation.png)
+![projectIDLocation](./images/projectIDLocation.png)
 
 For now, let's use our familiar NetworkHelper.  We'll need to go back and change it later to make `POST` requests:
 
