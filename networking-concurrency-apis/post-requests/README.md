@@ -1049,8 +1049,17 @@ Then, add your API key inside your `Secrets.swift` struct:
 ```swift
 struct Secrets {
     static let AirtableAPIKey = "YOUR KEY HERE"
+    static let AirtableProject = "YOUR PROJECT ID HERE"
 }
 ```
+
+To find the Project Id, select your project, then click on "Help" -> "API Documentation".
+
+![apiDocumentationMenu](./assets/apiDocumentationMenu.png)
+
+Then click on "Authentication".  On the right hand side you will see the endpoint that you need to hit.
+
+![projectIDLocation](./assets/projectIDLocation.png)
 
 For now, let's use our familiar NetworkHelper.  We'll need to go back and change it later to make `POST` requests:
 
