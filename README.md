@@ -12,7 +12,7 @@ This is where you'll find some common resources as well as full lessons.
 * [Unit 4 - Persistence, Animation, Autolayout](./persistence-animation-autolayout/README.md)
 * [Unit 5 - Core Data, Firebase & Solo Portfolio Project](./core-data-firebase-and-solo-portfolio-project/README.md)
 * [Unit 6 - Comprehensive Technical Assessment]()
-* [Unit 7 - Capstone Project, Objective-C, SwiftUI, and Advanced Topics]()
+* [Unit 7 - Capstone Project, Objective-C, SwiftUI, and Advanced Topics](./obj-c-and-advanced-topics)
 
 [Pursuit Core Standards](https://joinpursuit.github.io/Pursuit-Core-Standards/)
 
