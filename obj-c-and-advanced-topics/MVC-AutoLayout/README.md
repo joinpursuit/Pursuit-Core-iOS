@@ -436,13 +436,13 @@ As developers we should always aim to have tests in our programs. Below is a sim
 ```
 
 <p align="center">
-<img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit9/MVC-AutoLayout/Images/tip-app-1.png" width="321" height="560"/>
+<img src="./Images/tip-app-1.png" width="321" height="560"/>
 </p>
 
 
 Below an inputAccessoryView is used as a property on the UITextField to dismiss the keyboard.
 <p align="center">
-<img src="https://github.com/C4Q/AC-iOS/blob/master/lessons/unit9/MVC-AutoLayout/Images/tip-app-2.png" width="321" height="560"/>
+<img src="./Images/tip-app-2.png" width="321" height="560"/>
 </p>
 
 [Completed Demo Link](https://github.com/C4Q/AC-iOS-ObjC-Autolayout-MVC/tree/master)
