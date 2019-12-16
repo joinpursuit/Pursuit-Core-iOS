@@ -1,4 +1,4 @@
-# Unit 7 - Capstone, Objective-C, SwiftUI, and Advanced Topics
+## Unit 7 - Capstone, Objective-C, SwiftUI, and Advanced Topics
 
 ## Lessons, Quizzes, and Labs 
 
