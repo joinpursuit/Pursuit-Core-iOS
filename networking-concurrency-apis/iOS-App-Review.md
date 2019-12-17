@@ -80,9 +80,6 @@
 **Search for Podcasts**  
 ```GET https://itunes.apple.com/search?media=podcast&limit=200&term=swift```
 
-**Search Podcast by trackId**  
-```GET https://itunes.apple.com/search?media=podcast&limit=200&term=1435076502```   
-
 **Favorite a Podcast**  
 ```POST https://5c2e2a592fffe80014bd6904.mockapi.io/api/v1/favorites```  
 
