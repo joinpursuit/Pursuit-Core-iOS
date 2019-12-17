@@ -83,7 +83,7 @@
 **Favorite a Podcast**  
 ```POST https://5c2e2a592fffe80014bd6904.mockapi.io/api/v1/favorites```  
 
-**Search Podcast by trackId (for searching individual podcast)**
+**Search Podcast by trackId (for searching individual podcast)**    
 ```GET https://itunes.apple.com/search?media=podcast&limit=200&term=1435076502```
 
 **Get favorites**   
