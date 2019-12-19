@@ -27,3 +27,16 @@
 | [Autolayout and MVC](./objc/MVC-AutoLayout) | tbd | tbd |
 | [Table Views](./objc/TableViewIntro) | tbd | tbd |
 | [Protocols, Categories, Class-Extensions](./objc/Protocols_Categories_Class-Extensions.md) | tbd | tbd |
+
+### Swift Fundamentals
+
+| Lesson | Quiz | Lab |
+|:------|:------|:------|
+| Arrays | tbd | tbd |
+| Strings | tbd | tbd |
+| Dictionaries | tbd | tbd |
+| Optionals | tbd | tbd |
+| Closures | tbd | tbd |
+| Enums | tbd | tbd |
+| Generics | tbd | tbd |
+| Protocols | tbd | tbd |
