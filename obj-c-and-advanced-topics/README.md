@@ -1,5 +1,19 @@
 ## Unit 7 - Capstone, Objective-C, SwiftUI, and Advanced Topics
 
+### In-depth iOS Lessons, Quizzes, and Labs
+
+| Lesson | Quiz | Lab |
+|:------|:------|:------|
+| Git and Version Control | tbd | tbd |
+| Views and Bezier Paths | tbd | tbd |
+| MVC and Lifecycle | tbd | tbd |
+| Auto Layout | tbd | tbd |
+| Table Views | tbd | tbd |
+| Parsing JSON | tbd | tbd |
+| Unit Testing | tbd | tbd |
+| ARC and Memory Management | tbd | tbd |
+| Threading and Dispatching | tbd | tbd |
+
 ### Objective-C Lessons, Quizzes, and Labs 
 
 | Lesson | Quiz | Lab |
