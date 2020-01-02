@@ -5,7 +5,7 @@
 | Lesson | Lab |
 |:------|:------|
 | [Git and Version Control](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/obj-c-and-advanced-topics/inDepthiOS/gitAndVersionControl/README.md)| [Learn Git Branching](https://learngitbranching.js.org/) |
-| [Views and Bezier Paths](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/obj-c-and-advanced-topics/inDepthiOS/viewsAndBezierPaths) | tbd |
+| [Views and Bezier Paths](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/obj-c-and-advanced-topics/inDepthiOS/viewsAndBezierPaths) | [Create a Quad Curve](https://github.com/joinpursuit/Pursuit-Core-iOS-Bezier-Path-Lab/blob/master/README.md) |
 | MVC and Lifecycle | tbd |
 | Auto Layout | tbd |
 | Table Views | tbd |
