@@ -75,7 +75,7 @@ Git is the most widely used version control system.  Competitors include [Mercur
 
 # 3. Git Flow
 
-![git flow diagram](https://nvie.com/img/git-model@2x.png)
+![git flow diagram](https://img.devrant.com/devrant/rant/c_990814_ujdK4.jpg)
 
 In Git Flow, there are two main branches:
 
