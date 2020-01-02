@@ -4,7 +4,7 @@
 
 | Lesson | Lab |
 |:------|:------|
-| Git and Version Control | tbd |
+| [Git and Version Control](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/obj-c-and-advanced-topics/inDepthiOS/gitAndVersionControl/README.md)| tbd |
 | Views and Bezier Paths | tbd |
 | MVC and Lifecycle | tbd |
 | Auto Layout | tbd |
