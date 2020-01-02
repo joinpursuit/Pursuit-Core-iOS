@@ -93,3 +93,54 @@ When you want to add something to the codebase, branch off of develop.  Make the
 To release something, branch off of develop into a release branch, then merge the release branch into master. Only branch off of master in emergency cases like creating hotfixes for serious bugs.
 
 # 4. Resolving merge conflicts
+
+## Causing Merge Conflicts
+
+Some conflicts are unavoidable in the process of development.  When you encounter a merge conflict, there are several tools you can use to resolve the conflict and move forwards.
+
+Ultimately, a conflict arises because the code you are trying to merge in differs from the code that is already present.  Typically this isn't a problem, you're trying to add new things after all!  This is only a problem if git can't find a single way to combine the different versions.  In the code snippets below, there is no conflict when merging feature-branch into develop.
+
+#### develop
+
+```swift
+struct Foo {
+  let bar: Int
+}
+```
+
+#### feature-branch
+
+```swift
+struct Foo {
+  let bar: Int
+  var barDescription: String { "\(bar) is a great number!" }
+}
+```
+
+However, in the snippets below, there would be a merge conflict:
+
+#### develop
+
+```swift
+struct Foo {
+  let bar: Int
+  var barDescription: String { "\(bar) is an okay number, I guess" }
+}
+```
+
+#### feature-branch
+
+```swift
+struct Foo {
+  let bar: Int
+  var barDescription: String { "\(bar) is a great number!" }
+}
+```
+
+This is because it doesn't know which of the `barDescription` implementations it should pick.  It then gives up and tells you to deal with the conflict and decide what the final version should like like.
+
+## Using `mergetool` to resolve conflicts
+
+The link below goes through an example of using `git mergetool` to resolve merge conflicts.  The core idea is that during a merge, the tool presents both versions and allows you to select which version you want.
+
+https://gist.github.com/karenyyng/f19ff75c60f18b4b8149#concepts-for-resolving-git-conflicts
