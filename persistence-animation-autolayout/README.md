@@ -18,7 +18,7 @@
 
 ## New Standards
 
-<ul><li>IOS.2.r: Use Animations to improve UI/UX</li><li>IOS.1.e: Use stored and computed properties to organize code</li><li>IOS.4.f: Use FileManager to persist and load information</li><li>IOS.2.h: Build UI without a Storyboard</li><li>EF.10.j: Manage API keys and keep them safe</li><li>IOS.3.m: Load data into a Collection View</li><li>IOS.3.n: Navigation</li><li>IOS.3.i: Use UIImagePickerController to take and retrieve images</li><li>IOS.4.a; Use UserDefaults to persist and load information</li></ul>
+<ul><li>EF.10.j: Manage API keys and keep them safe</li><li>IOS.1.e: Use stored and computed properties to organize code</li><li>IOS.2.h: Build UI without a Storyboard</li><li>IOS.2.r: Use Animations to improve UI/UX</li><li>IOS.3.i: Use UIImagePickerController to take and retrieve images</li><li>IOS.3.m: Load data into a Collection View</li><li>IOS.3.n: Navigation</li><li>IOS.4.a: Use UserDefaults to persist and load information</li><li>IOS.4.f: Use FileManager to persist and load information</li></ul>
 
 ## Reassessed Standards
 
