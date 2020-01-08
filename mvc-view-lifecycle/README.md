@@ -18,7 +18,7 @@
 
 ## New Standards
 
-<ul><li>iOS.3.r: Create a TableView with Sections</li><li>EF.8.a: Create an App using MVC design</li><li>iOS.3.q: Segue to a DetailViewController</li><li>IOS.3.d: Load Data into a TableView</li><li>IOS.3.b: Handle user interactions using the target-action pattern</li><li>iOS.3.p: Create Custom TableView Cells</li><li>IOS.3.g: Use common UIControls to allow user input</li><li>IOS.2.g: Auto_Layout</li><li>IOS.3.a: Use UIView subclasses to display information</li></ul>
+<ul><li>EF.8.a: Create an App using MVC design</li><li>IOS.2.g: Auto_Layout</li><li>IOS.3.a: Use UIView subclasses to display information</li><li>IOS.3.b: Handle user interactions using the target-action pattern</li><li>IOS.3.d: Load Data into a TableView</li><li>IOS.3.g: Use common UIControls to allow user input</li><li>iOS.3.p: Create Custom TableView Cells</li><li>iOS.3.q: Segue to a DetailViewController</li><li>iOS.3.r: Create a TableView with Sections</li></ul>
 
 ## Reassessed Standards
 
