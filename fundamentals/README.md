@@ -25,7 +25,7 @@
 
 ## New Standards
 
-<ul><li>IOS.1.b: Use enums to make code more clear</li><li>EF.1: Identify and solve problems</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>LF.5.a: Define and call functions</li><li>LF.5: Use functions to keep code DRY</li><li>EF.2.e: Build a command line application</li><li>IOS.1.c: Understand the difference between structs and classes</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>LF.2: Use variables and constants to store information</li><li>IOS.1: Write clean, readable Swift code</li><li>LF.3.a: Use arrays to solve problems</li><li>LF.6.a: Use closures to solve problems</li><li>LF.1.a: Use different types of data</li><li>LF.4: Use control flow in a clear, concise way to determine which code executes</li></ul>
+<ul><li>EF.1: Identify and solve problems</li><li>EF.2.e: Build a command line application</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>IOS.1.b: Use enums to make code more clear</li><li>IOS.1.c: Understand the difference between structs and classes</li><li>IOS.1: Write clean, readable Swift code</li><li>LF.1.a: Use different types of data</li><li>LF.2: Use variables and constants to store information</li><li>LF.3.a: Use arrays to solve problems</li><li>LF.4: Use control flow in a clear, concise way to determine which code executes</li><li>LF.5.a: Define and call functions</li><li>LF.5: Use functions to keep code DRY</li><li>LF.6.a: Use closures to solve problems</li></ul>
 
 ## Assignments
 
