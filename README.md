@@ -6,13 +6,15 @@ This is where you'll find some common resources as well as full lessons.
 
 ## Curriculum
 
-* [Unit 1 - Swift Fundamentals](./fundamentals/README.md)
-* [Unit 2 - MVC, View Life Cycle](./mvc-view-lifecycle/README.md)
-* [Unit 3 - Networking, Concurrency, APIs](./networking-concurrency-apis/README.md)
-* [Unit 4 - Persistence, Animation, Autolayout](./persistence-animation-autolayout/README.md)
-* [Unit 5 - Core Data, Firebase & Solo Portfolio Project](./core-data-firebase-and-solo-portfolio-project/README.md)
-* [Unit 6 - Comprehensive Technical Assessment](./comprehensive-technical-assessment)
-* [Unit 7 - Capstone Project, Objective-C, SwiftUI, and Advanced Topics](./obj-c-and-advanced-topics)
+| Unit | Standards |
+| --- | --- |
+| [Unit 1 - Swift Fundamentals](./fundamentals/README.md) | - |
+| [Unit 2 - MVC, View Life Cycle](./mvc-view-lifecycle/README.md)| - |
+| [Unit 3 - Networking, Concurrency, APIs](./networking-concurrency-apis/README.md) | - |
+| [Unit 4 - Persistence, Animation, Autolayout](./persistence-animation-autolayout/README.md) | - |
+| [Unit 5 - Core Data, Firebase & Solo Portfolio Project](./core-data-firebase-and-solo-portfolio-project/README.md) | - |
+| [Unit 6 - Comprehensive Technical Assessment](./comprehensive-technical-assessment) | - |
+| [Unit 7 - Capstone Project, Objective-C, SwiftUI, and Advanced Topics](./obj-c-and-advanced-topics) | tbd |
 
 [Pursuit Core Standards](https://joinpursuit.github.io/Pursuit-Core-Standards/)
 
