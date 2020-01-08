@@ -15,17 +15,17 @@
 
 ## New Standards
 
-<ul><li>iOS.4.g: Use Firebase Auth to create and authenticate users</li><li>IOS.2.o: Use Core Location to get user location data, managing privacy appropriately</li><li>iOS.4.h: Use Firebase Storage to Persist and Access Images</li><li>IOS.6: Integrated libraries into an application using CocoaPods</li><li>IOS.4.d: Use Firestore to create a backend for an application</li><li>IOS.2.p: Use MapKit to display information on a map</li></ul>
+<ul><li>IOS.2.o: Use Core Location to get user location data, managing privacy appropriately</li><li>IOS.2.p: Use MapKit to display information on a map</li><li>IOS.4.d: Use Firestore to create a backend for an application</li><li>IOS.6: Integrated libraries into an application using CocoaPods</li><li>iOS.4.g: Use Firebase Auth to create and authenticate users</li><li>iOS.4.h: Use Firebase Storage to Persist and Access Images</li></ul>
 
 ## Reassessed Standards
 
-<ul><li>LF.5: Use functions to keep code DRY</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.2.g: Auto_Layout</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>EF.10.j: Manage API keys and keep them safe</li></ul>
+<ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>EF.10.j: Manage API keys and keep them safe</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>IOS.2.g: Auto_Layout</li><li>LF.5: Use functions to keep code DRY</li></ul>
 
 ## Assignments
 
 | Assignment | Standards |
 | --- | --- |
-| [Foursquare](https://github.com/joinpursuit/Pursuit-Core-iOS-Foursquare-Map-Project/blob/master/README.md) | <ul><li>EF.10.j: Manage API keys and keep them safe</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>IOS.2.g: Auto_Layout</li><li>IOS.2.o: Use Core Location to get user location data, managing privacy appropriately</li><li>IOS.2.p: Use MapKit to display information on a map</li><li>LF.5: Use functions to keep code DRY</li></ul> |
+| [Foursquare](https://github.com/joinpursuit/Pursuit-Core-iOS-Foursquare-Map-Project/blob/master/README.md) | <ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>EF.10.j: Manage API keys and keep them safe</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>IOS.2.g: Auto_Layout</li><li>IOS.2.o: Use Core Location to get user location data, managing privacy appropriately</li><li>IOS.2.p: Use MapKit to display information on a map</li><li>LF.5: Use functions to keep code DRY</li></ul> |
 | [Instagram with Firebase](https://github.com/joinpursuit/Pursuit-Core-iOS-Firebase-Project/blob/master/README.md) | <ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.2.g: Auto_Layout</li><li>IOS.4.d: Use Firestore to create a backend for an application</li><li>IOS.6: Integrated libraries into an application using CocoaPods</li><li>LF.5: Use functions to keep code DRY</li><li>iOS.4.g: Use Firebase Auth to create and authenticate users</li><li>iOS.4.h: Use Firebase Storage to Persist and Access Images</li></ul> |
 
 
