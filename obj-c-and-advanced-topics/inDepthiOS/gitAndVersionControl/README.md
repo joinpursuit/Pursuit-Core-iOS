@@ -15,6 +15,7 @@
 - Use common git commands to navigate through a file
 - Use Git Flow to manage a project
 - Use different strategies to resolve merge conflicts
+- Understand how git flow relates to the software release cycle
 
 # 1. Version Control
 
@@ -82,7 +83,7 @@ In Git Flow, there are two main branches:
 - master
 - developer
 
- And  three additional supporting kinds of branches:
+ And three additional supporting kinds of branches:
 
 - Feature branches
 - Release branches
@@ -98,7 +99,9 @@ To release something, branch off of develop into a release branch, then merge th
 
 Some conflicts are unavoidable in the process of development.  When you encounter a merge conflict, there are several tools you can use to resolve the conflict and move forwards.
 
-Ultimately, a conflict arises because the code you are trying to merge in differs from the code that is already present.  Typically this isn't a problem, you're trying to add new things after all!  This is only a problem if git can't find a single way to combine the different versions.  In the code snippets below, there is no conflict when merging feature-branch into develop.
+At the simplest level, git reads the current text of a file line-by-line to look for changes from the previously-committed text. Thus, merge conflicts most often occur when git cannot figure out how lines of code (which are generally just text in a file) from one branch should interact with and be arranged relative to the lines of code in another branch.
+
+Ultimately, a conflict arises because the code you are trying to merge in differs from the code that is already present.  Typically this isn't a problem -- you're trying to add new things after all!  This is only a problem if git can't find a single way to combine the different versions.  In the code snippets below, there is no conflict when merging feature-branch into develop.
 
 #### develop
 
@@ -144,3 +147,68 @@ This is because it doesn't know which of the `barDescription` implementations it
 The link below goes through an example of using `git mergetool` to resolve merge conflicts.  The core idea is that during a merge, the tool presents both versions and allows you to select which version you want.
 
 https://gist.github.com/karenyyng/f19ff75c60f18b4b8149#concepts-for-resolving-git-conflicts
+
+
+## Anatomy of a merge conflict
+
+When you do inevitably run into a merge conflict, git tells you where the issue occurred. In the files with conflicts, you will see **git conflict markers**. Look at the code below:
+
+```
+<<<<<<< HEAD (1)
+Hello (2)
+======= (3)
+Goodbye (4)
+>>>>>>> 77542cq35a11db4580b80ae27e8d65caf5211111 (5)
+
+```
+
+
+1. `<<<<<<<` is the conflict marker that notes that the code in your local branch begins to divert from and conflict with the other branch at this point.
+2. After the first line line, and before the line `=======`, is the code on your branch that cannot be merged given its difference from the second branch.
+3. `=======` is the conflict marker that notes that the code from your conflicting local branch is complete, and that the conflicting code from the second branch will be listed below
+4. Code from the second branches
+5. `>>>>>>>` is the conflict marker that notes the end of the code in the second branch, and thus the end of that particular merge conflict.
+
+Resolving merge conflicts can be tricky; sometimes the code in your branch is meant to replace the code from the prior branch, but at other times some content from both branches will need to remain in the code base. Testing your code is important; you should make sure the code works before declaring the change resolved!
+
+To fully resolve a conflict, all lines with conflict markers must be removed, and then a new commit created.
+
+
+# 5. Git Releases and Tagging
+
+## Releases
+
+As discussed in the git flow section above, the only time the `master` branch is updated is when there's a releases. But what is a release?
+
+In software development terms, a release is when the program has "shipped." That means the program or an update of the program was provided to the intended users in either a public or private setting. The changes are no longer available only to the developers.
+
+Releases can occur multiple times, which means that each should have a **version**. The most commonly-used convention for versioning is [Semantic Versioning](https://semver.org/), which is the *Major.Minor.Patch* format familiar to most app users. In SemVer, changes in version are noted by incrementing either the Major, Minor, or Patch value according to the following rules:
+
+- Change Major when you make API changes that render previous versions incompatible.
+- Change Minor when you add functionality in a backwards-compatible manner.
+- Change Patch when you make backwards-compatible bug fixes.
+
+## Using Git Tag to track releases
+
+Git allows you to specify which commits mark the completion of a specific version using the [`git tag`](https://git-scm.com/docs/git-tag) command. After a commit, typing
+
+`git tag 1.1.4`
+
+will create a tag that lines up with the previous commit as the point at which version 1.1.4. Using the command
+
+`git tag 1.1.4 -a "this release rocks"`
+
+will create a tag for the previous commit that includes a brief message.
+
+
+Github has a section "Releases" specifically for listing git tags and their contents.
+
+![release section](./images/github-repo-header.png)
+
+
+This section allows other developers to understand the current working status of a repo, and to see the history of changes. Think of git tags and releases as a higher-level version of commits -- they tell you what a program did and how it functioned at a certain point in time, rather than what a specific change to some code like in a commit.
+
+![release details](./images/github-releases-details.png)
+
+
+Note: Git tags must be explicitly pushed to Github (they won't be included when you push a branch).
