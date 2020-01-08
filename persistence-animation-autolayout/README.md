@@ -22,7 +22,7 @@
 
 ## Reassessed Standards
 
-<ul><li>LF.5: Use functions to keep code DRY</li><li>iOS.3.q: Segue to a DetailViewController</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>IOS.2.g: Auto_Layout</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>IOS.1: Write clean, readable Swift code</li></ul>
+<ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.1.a: Use Optionals to appropriately represent objects that might be nil</li><li>IOS.2.g: Auto_Layout</li><li>LF.5: Use functions to keep code DRY</li><li>iOS.3.q: Segue to a DetailViewController</li></ul>
 
 ## Assignments
 
