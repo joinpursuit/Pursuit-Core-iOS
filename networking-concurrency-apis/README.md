@@ -21,7 +21,7 @@
 
 ## Reassessed Standards
 
-<ul><li>EF.8.a: Create an App using MVC design</li><li>LF.5: Use functions to keep code DRY</li><li>iOS.3.p: Create Custom TableView Cells</li><li>IOS.3.d: Load Data into a TableView</li><li>IOS.2.g: Auto_Layout</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>iOS.3.r: Create a TableView with Sections</li><li>iOS.3.q: Segue to a DetailViewController</li><li>IOS.1: Write clean, readable Swift code</li></ul>
+<ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.8.a: Create an App using MVC design</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.2.g: Auto_Layout</li><li>IOS.3.d: Load Data into a TableView</li><li>LF.5: Use functions to keep code DRY</li><li>iOS.3.p: Create Custom TableView Cells</li><li>iOS.3.q: Segue to a DetailViewController</li><li>iOS.3.r: Create a TableView with Sections</li></ul>
 
 ## Assignments
 
