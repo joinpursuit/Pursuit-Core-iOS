@@ -34,7 +34,7 @@
 
 | Assessment | Standards |
 | --- | --- |
-| [6.1 Elements](https://canvas.instructure.com/courses/1605734/assignments/11622100) / [6.3 Elements](https://canvas.instructure.com/courses/1705726/assignments/12465182) | <ul><li>EF.10.f: Use Codable and JSONDecoder to parse JSON data</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>EF.8.a: Create an App using MVC design</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.2.g: Auto_Layout</li><li>IOS.3.d: Load Data into a TableView</li><li>iOS.3.p: Create Custom TableView Cells</li><li>iOS.3.q: Segue to a DetailViewController</li><li>iOS.3.s: Load images smoothly, without flickering , and displaying a spinner when needed</li></ul> |
+| [6.1 Elements](https://canvas.instructure.com/courses/1605734/assignments/11622100) / [6.3 Elements](https://canvas.instructure.com/courses/1705726/assignments/12465182) | <ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>EF.8.a: Create an App using MVC design</li><li>EF.10.f: Use Codable and JSONDecoder to parse JSON data</li><li>IOS.1: Write clean, readable Swift code</li><li>IOS.2.g: Auto_Layout</li><li>IOS.3.d: Load Data into a TableView</li><li>iOS.3.p: Create Custom TableView Cells</li><li>iOS.3.q: Segue to a DetailViewController</li><li>iOS.3.s: Load images smoothly, without flickering , and displaying a spinner when needed</li></ul> |
 
 ## Source Code and Lectures
 
