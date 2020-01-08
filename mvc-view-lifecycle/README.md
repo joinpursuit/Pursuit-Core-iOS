@@ -22,7 +22,7 @@
 
 ## Reassessed Standards
 
-<ul><li>EF.4.e: Use frequent, descriptive, small commits</li><li>EF.1: Identify and solve problems</li><li>IOS.1: Write clean, readable Swift code</li><li>LF.5: Use functions to keep code DRY</li></ul>
+<ul><li>EF.1: Identify and solve problems</li><li>EF.4.e: Use frequent, descriptive, small commits</li><li>IOS.1: Write clean, readable Swift code</li><li>LF.5: Use functions to keep code DRY</li></ul>
 
 ## Assignments
 
