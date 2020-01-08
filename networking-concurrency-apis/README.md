@@ -17,7 +17,7 @@
 
 ## New Standards
 
-<ul><li>iOS.3.s: Load images smoothly, without flickering , and displaying a spinner when needed</li><li>EF.10.f: Use Codable and JSONDecoder to parse JSON data</li><li>IOS.3.e: Use a search bar to filter data in a Table View.</li><li>EF.10.g: Use GCD to appropriately dispatch tasks</li><li>EF.6: Write unit tests to ensure that software works as intended</li><li>EF.10.h: Use URLSession to get data from online</li></ul>
+<ul><li>EF.6: Write unit tests to ensure that software works as intended</li><li>EF.10.f: Use Codable and JSONDecoder to parse JSON data</li><li>EF.10.g: Use GCD to appropriately dispatch tasks</li><li>EF.10.h: Use URLSession to get data from online</li><li>IOS.3.e: Use a search bar to filter data in a Table View.</li><li>iOS.3.s: Load images smoothly, without flickering , and displaying a spinner when needed</li></ul>
 
 ## Reassessed Standards
 
