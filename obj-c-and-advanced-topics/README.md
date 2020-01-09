@@ -30,9 +30,9 @@
 
 ### Swift Fundamentals
 
-| Lesson | Quiz |
+| Topic | Quiz |
 |:------|:------|
-| Arrays | tbd |
+| Arrays | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4572514) |
 | Strings | tbd |
 | Dictionaries | tbd |
 | Optionals | tbd |
