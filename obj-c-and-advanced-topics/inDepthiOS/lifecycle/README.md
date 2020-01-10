@@ -5,13 +5,114 @@
 - Understand ViewController Lifecycle Methods
 - Understand AppDelegate Lifecycle Methods
 - Understand SceneDelegate Lifecycle Methods
-- Use deeplinking in a iOS application
 
 ## Resources
 
--
+- [Apple docs: VC Lifecycle](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html#//apple_ref/doc/uid/TP40015214-CH6-SW3)
+- [Apple docs: UIApplicationDelegate](https://developer.apple.com/documentation/uikit/uiapplicationdelegate)
+- [Apple docs: UISceneDelegate](https://developer.apple.com/documentation/uikit/uiscenedelegate)
+
+
 
 ## 1. View Controller Lifecycle
+
+![Lifecycle image](https://raw.githubusercontent.com/joinpursuit/Pursuit-Core-iOS/master/mvc-view-lifecycle/lifecycle-and-controls/images/view_lifecycle.png)
+
+- **viewDidLoad()**
+
+Called when the view controller’s content view (the top of its view hierarchy) is created and loaded from a storyboard. The view controller’s outlets are guaranteed to have valid values by the time this method is called. Use this method to perform any additional setup required by your view controller.
+
+Typically, iOS calls `viewDidLoad()` only once, when its content view is first created; however, the content view is not necessarily created when the controller is first instantiated. Instead, it is lazily created the first time the system or any code accesses the controller’s view property.
+
+- **viewWillAppear()**
+
+Called just before the view controller’s content view is added to the app’s view hierarchy. Use this method to trigger any operations that need to occur before the content view is presented onscreen. Despite the name, just because the system calls this method, it does not guarantee that the content view will become visible. The view may be obscured by other views or hidden. This method simply indicates that the content view is about to be added to the app’s view hierarchy.
+
+- **viewDidAppear()**
+
+Called just after the view controller’s content view has been added to the app’s view hierarchy. Use this method to trigger any operations that need to occur as soon as the view is presented onscreen, such as fetching data or showing an animation. Despite the name, just because the system calls this method, it does not guarantee that the content view is visible. The view may be obscured by other views or hidden. This method simply indicates that the content view has been added to the app’s view hierarchy.
+
+- **viewWillDisappear()**
+
+Called just before the view controller’s content view is removed from the app’s view hierarchy. Use this method to perform cleanup tasks like committing changes or resigning the first responder status. Despite the name, the system does not call this method just because the content view will be hidden or obscured. This method is only called when the content view is about to be removed from the app’s view hierarchy.
+
+**viewDidDisappear()**
+
+Called just after the view controller’s content view has been removed from the app’s view hierarchy. Use this method to perform additional teardown activities. Despite the name, the system does not call this method just because the content view has become hidden or obscured. This method is only called when the content view has been removed from the app’s view hierarchy.
+
+
+#### UIViewController.swift
+
+```swift
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("viewDidLoad")
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        print("viewWillLayoutSubviews")
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear", "isAnimated: \(animated)")
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("viewDidAppear", "isAnimated: \(animated)")
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("viewWillDisappear", "isAnimated: \(animated)")
+
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("viewDidDisappear", "isAnimated: \(animated)")
+    }
+}
+```
+This includes a simple printout that informs you when each step is being called.
+
+Create a label in the middle with the text "View Controller One"
+
+Build and run your app.  You should see the following messages appear in the console:
+
+```
+viewDidLoad
+viewWillAppear isAnimated: false
+viewWillLayoutSubviews
+viewWillLayoutSubviews
+viewDidAppear isAnimated: false
+```
+
+Notice that `viewWillLayoutSubviews` may be called multiple times.  Don't expect code in there to only run a single time.  We see that all the Lifecycle methods involves bringing a screen to view are present.  In order to get the remaining Lifecycles, we'll need a way to make our View Controller leave the screen.  This is a good opportunity for a (brief) introduction to Segues.
+
+Embed your View Controller in a Navigation Controller by selecting your View Controller and selecting `Editor -> Embed In -> Navigation Controller`
+
+- Add a button to your View Controller.  
+- Create a new View Controller by dragging one out from the Object Library.  
+- Create a Segue from the button to the new View Controller by control dragging.
+
+Build and rerun your app.  When you segue to the new controller, you should observe the remaining lifecycle methods being called:
+
+```
+viewWillDisappear isAnimated: true
+viewDidDisappear isAnimated: true
+```
+
+Select the back button and you will see the following readout in your console:
+
+```
+viewWillAppear isAnimated: true
+viewDidAppear isAnimated: true
+```
 
 ## 2. Application Lifecycle
 
@@ -128,7 +229,3 @@ When run through the following workstreams, we can see the following calls to li
 ### Bring your app back from background:
 - sceneWillEnterForeground
 - sceneDidBecomeActive
-
-
-
-# 3. Deeplinking
