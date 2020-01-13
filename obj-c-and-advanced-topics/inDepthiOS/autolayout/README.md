@@ -2,6 +2,11 @@
 
 ## Objectives
 
+- Understand what problem Auto Layout solves 
+- Explain what translatesAutoresizingMaskIntoConstraints does
+- Use size classes to built custom UI
+- Understand the VFL is used to debug runtime Auto Layout issues
+
 ## Resources
 
 - [The Algebra of UI Layout Constraints](http://croisant.net/blog/2016-02-24-ui-layout-constraints-part-1/)
