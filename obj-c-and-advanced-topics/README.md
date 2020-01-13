@@ -7,7 +7,7 @@
 | [Git and Version Control](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/obj-c-and-advanced-topics/inDepthiOS/gitAndVersionControl/README.md)| [Learn Git Branching](https://learngitbranching.js.org/) |
 | [Views and Bezier Paths](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/obj-c-and-advanced-topics/inDepthiOS/viewsAndBezierPaths) | [Create a Quad Curve](https://github.com/joinpursuit/Pursuit-Core-iOS-Bezier-Path-Lab/blob/master/README.md) |
 | [Lifecycle](./inDepthiOS/lifecycle/README.md) | [Interview Questions](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/obj-c-and-advanced-topics/inDepthiOS/lifecycle/lab/README.md) |
-| Auto Layout | tbd |
+| [Advanced Auto Layout](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/obj-c-and-advanced-topics/inDepthiOS/autolayout/README.md) | tbd |
 | Table Views | tbd |
 | Parsing JSON | tbd |
 | Unit Testing | tbd |
