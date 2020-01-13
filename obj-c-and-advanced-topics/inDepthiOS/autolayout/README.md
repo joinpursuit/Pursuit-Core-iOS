@@ -6,7 +6,7 @@
 
 - [The Algebra of UI Layout Constraints](http://croisant.net/blog/2016-02-24-ui-layout-constraints-part-1/)
 - [AutoResizingMask](http://www.thecodedself.com/autoresizing-masks/)
-
+- [Size Classes](https://uxplanet.org/what-should-designers-know-about-universal-app-8f6a544ea588)
 
 # 1. Auto Layout Introduction
 
@@ -84,10 +84,139 @@ You can see the effect these have in Storyboard, by selecting the Size Inspector
 
 With the introduction of Auto Layout, Apple added a bridge where you could take an old application using autoresizing masks, and convert them to new constraints.  This is the `translatesAutoresizingMaskIntoConstraints` property.  You should almost always set this to false and use Auto Layout, but there are [occasional use cases](http://www.thomashanning.com/xcode-8-mixing-auto-autoresizing-masks/) for autoresizing masks.
 
-# 3. Compression Resistance and Content Hugging
+# 3. Content Hugging and Compression Resistance
 
-# 4. Animating Constraints
+In the example given with the button above, we used a simple constraint:
 
-# 5. Size Classes
+1. Both elements should be as wide as possible, but it is most important for B to be as wide as possible.
 
-# 6. Visual Format Language
+Using Auto Layout, we can specify which view should grow or shrink if there are multiple possibilities.  The key terms for this are *content hugging* and *compression resistance*
+
+From [stackoverflow](https://stackoverflow.com/questions/15850417/cocoa-autolayout-content-hugging-vs-content-compression-resistance-priority):
+
+![compressionresistance+contenthugging](https://i.stack.imgur.com/bTZMz.jpg)
+
+- Hugging => content does not want to grow
+- Compression Resistance => content does not want to shrink
+
+Example:
+
+Say you've got a button like this:
+
+```
+[       Click Me      ]
+```
+
+and you've pinned the edges to a larger superview with priority 500.
+
+Then, if Hugging priority > 500 it'll look like this:
+
+```
+[Click Me]
+```
+
+If Hugging priority < 500 it'll look like this:
+
+```
+[       Click Me      ]
+```
+
+If the superview now shrinks then, if the Compression Resistance priority > 500, it'll look like this
+
+```
+[Click Me]
+```
+
+Else if Compression Resistance priority < 500, it could look like this:
+
+```
+[Cli..]
+```
+
+# 4. Size Classes
+
+When designing apps, it is important to ensure that the UI works on all supported devices.  It's easy to make an app that works on both the iPhone 7, and iPhone 8, but can require more intentionality to ensure that the layout works just as well on the new iPad Pro.  Recognizing this, Apple allows you to create special constraints that only work for devices of a particular **size class**.
+
+All devices have a height and width.  Apple divides each those into two categories: *regular* and *compact*.  An iPhone X has a compact width and regular height.  An iPad has a regular width and regular height:
+
+![https://miro.medium.com/max/2000/1*zrNyg9RIksAMy1z4guibEA.png](https://miro.medium.com/max/2000/1*zrNyg9RIksAMy1z4guibEA.png)
+
+We can use size classes to build our UI differently for different kinds of devices.
+
+Create a button and pin it to the center of a View Controller.  Change its background color to yellow so you can see its entire frame.  Then, constrain its width to 100.  
+
+![width100](./assets/width100.png)
+
+When we look at our app using a rotated iPad, we might decide that we want the button to be wider.  Let's change the constant to 300.  Then click on the "+" button, and select `Regular` for width and `Any` for height in the menu titled "Introduce Variation Based On".
+
+![introduceVariation](./assets/introduceVariation.png)
+
+Then, uncheck the "installed" checkbox that doesn't have the size class next to it:
+
+![checkboxes](./assets/checkboxes.png)
+
+This constraint will then only apply to regular width devices.  We can now add a constraint for compact width devices.  We can use another tool Xcode gives us: the "Vary for Traits" button.  
+
+Select an iPhone again in portrait mode, then click the "Vary for Traits" button at the bottom of the screen:
+
+![regWidthVaryForTraits](./assets/regWidthVaryForTraits.png)
+
+Add a width constraint of 100, then click "Done Varying"
+
+![doneVarying](./assets/doneVarying.png)
+
+Now, build and run your app.  In iPhone portrait orientation, the button has a width of 100.  In landscape it has a width of 300.  This is a powerful tool that can allow you to dramatically alter the layout of you application based on what devices are loaded.
+
+# 5. Visual Format Language
+
+When you get errors at runtime using Auto Layout, the format comes in an odd syntax:
+
+```
+<NSAutoresizingMaskLayoutConstraint:0x600001988b40 h=--& v=--& UITableView:0x7ff5b6819200.minY == 0   (active, names: '|':UIView:0x7ff5b5702ad0 )>
+```
+
+This is called [Visual Format Language](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html).  It is possible to write constraints programmatically using VFL.  From [Ray Wenderlich](https://www.raywenderlich.com/277-auto-layout-visual-format-language-tutorial):
+
+```swift
+// 1
+let views: [String: Any] = [
+  "iconImageView": iconImageView,
+  "appNameLabel": appNameLabel,
+  "skipButton": skipButton]
+
+// 2
+var allConstraints: [NSLayoutConstraint] = []
+
+// 3
+let iconVerticalConstraints = NSLayoutConstraint.constraints(
+  withVisualFormat: "V:|-20-[iconImageView(30)]",
+  metrics: nil,
+  views: views)
+allConstraints += iconVerticalConstraints
+
+// 4
+let nameLabelVerticalConstraints = NSLayoutConstraint.constraints(
+  withVisualFormat: "V:|-23-[appNameLabel]",
+  metrics: nil,
+  views: views)
+allConstraints += nameLabelVerticalConstraints
+
+// 5
+let skipButtonVerticalConstraints = NSLayoutConstraint.constraints(
+  withVisualFormat: "V:|-20-[skipButton]",
+  metrics: nil,
+  views: views)
+allConstraints += skipButtonVerticalConstraints
+
+// 6
+let topRowHorizontalConstraints = NSLayoutConstraint.constraints(
+  withVisualFormat: "H:|-15-[iconImageView(30)]-[appNameLabel]-[skipButton]-15-|",
+  metrics: nil,
+  views: views)
+allConstraints += topRowHorizontalConstraints
+
+// 7
+NSLayoutConstraint.activate(allConstraints)
+```
+
+You may see this in the wild, but it is not used by most developers.
