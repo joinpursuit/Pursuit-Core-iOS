@@ -1,8 +1,8 @@
 # Unit 5: Core Data, Firebase, and Solo Portfolio Projects
 
-## Contents
+## Lessons, Quizzes, and Labs
 
-| Lesson | Midday Checkin | Lab |
+| Lesson | Quiz | Lab |
 | --- | --- | --- |
 | 1. [Local Notifications](./local-notifications/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/assignments/12938246) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Local-Notification-Lab/blob/master/README.md) |
 | 2. [Core Location and Mapkit](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/core-data-firebase-and-solo-portfolio-project/core-location-and-mapkit) | [6.1](https://canvas.instructure.com/courses/1705726/quizzes/4427495) | [link](https://github.com/joinpursuit/Pursuit-Core-iOS-MapKit-Introduction-Lab/blob/master/README.md) |
