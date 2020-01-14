@@ -3,7 +3,7 @@
 
 ## Lessons, Quizzes, and Labs
 
-| Lesson | Midday Checkin | Lab |
+| Lesson | Quiz | Lab |
 | --- | --- | --- |
 | 1. [Intro to Persistence with User Defaults](./intro-to-persistence-with-userdefaults/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4315434) / [6.3](https://canvas.instructure.com/courses/1705726/quizzes/4505374) | [Horoscope](https://github.com/joinpursuit/Pursuit-Core-iOS-UserDefaults-Lab/blob/master/README.md) |
 | 2. [UICollectionView](./uicollectionview/README.md) | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4325338) / [6.3](https://canvas.instructure.com/courses/1705726/quizzes/4493738) | [Countries Collection View](https://github.com/joinpursuit/Pursuit-Core-iOS-Collection-View-Lab/blob/master/README.md) |
