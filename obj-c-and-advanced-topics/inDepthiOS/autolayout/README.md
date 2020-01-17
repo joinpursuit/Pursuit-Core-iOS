@@ -41,7 +41,7 @@ We can then graph each of the inequalities:
 
 ![https://croisant.net/assets/2016/02/linear_prog.jpg](https://croisant.net/assets/2016/02/linear_prog.jpg)
 
-The yellow area represents all values of `b` and `t` that satisfy the inequalities.  Our task is then to *maximize* the width.  We can see here that either of the top two corners is the highest possible value.
+The yellow area represents all values of `b` and `t` that satisfy the inequalities.  Our task is then to *maximize* the width.  We can see here rightmost corner is the highest possible value.
 
 It's easy to visualize with only three constraints, but if we had dozens or hundreds of constraints, we'd be unable to see what the solution was from graphing it.  The Simplex Algorithm does this work for us, and is what Auto Layout is based on.
 
