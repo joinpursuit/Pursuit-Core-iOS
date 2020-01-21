@@ -16,30 +16,54 @@
 
 ## 1. View Controller Lifecycle
 
+Any view controller that subclasses `UIViewController` has a specific lifecycle for the creation and destruction of its content view, `self.view` (sometimes referred to as the "main" view or the "default" view). The content view sits at the top of the controller's view hierarchy, so all other elements of the user interface will exist within this content view.
+
+The content view itself is created when the view controller first tries to access the `self.view` property. The [`loadView`](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621454-loadview) method is called, which automatically creates the content view from Interface Builder or from a plain UIView object. Once `loadView` is called, the methods below are called in response to the status of the content view.
+
 ![Lifecycle image](https://raw.githubusercontent.com/joinpursuit/Pursuit-Core-iOS/master/mvc-view-lifecycle/lifecycle-and-controls/images/view_lifecycle.png)
 
 - **viewDidLoad()**
 
 Called when the view controller’s content view (the top of its view hierarchy) is created and loaded from a storyboard. The view controller’s outlets are guaranteed to have valid values by the time this method is called. Use this method to perform any additional setup required by your view controller.
 
-Typically, iOS calls `viewDidLoad()` only once, when its content view is first created; however, the content view is not necessarily created when the controller is first instantiated. Instead, it is lazily created the first time the system or any code accesses the controller’s view property.
+Typically, iOS calls `viewDidLoad()` only once, when its content view is first created; however, the content view is not necessarily created when the controller is first instantiated. Instead, it is "lazily" created the first time the system or any code accesses the controller’s view property. This is why `self.view` is an unwrapped optional `UIView!` in UIViewController -- the view controller instance will be created before the content view is.
+
+Common uses:
+1) Background activities (ex: make network call or load persisted data).
+2) Set up objects in view controller (ex: set delegates).
 
 - **viewWillAppear()**
 
 Called just before the view controller’s content view is added to the app’s view hierarchy. Use this method to trigger any operations that need to occur before the content view is presented onscreen. Despite the name, just because the system calls this method, it does not guarantee that the content view will become visible. The view may be obscured by other views or hidden. This method simply indicates that the content view is about to be added to the app’s view hierarchy.
 
+Common uses:
+1) Prepare UI (ex: set first responder, disable buttons).
+2) Refresh UI (ex: reload table view, set title in nav bar).
+
 - **viewDidAppear()**
 
 Called just after the view controller’s content view has been added to the app’s view hierarchy. Use this method to trigger any operations that need to occur as soon as the view is presented onscreen, such as fetching data or showing an animation. Despite the name, just because the system calls this method, it does not guarantee that the content view is visible. The view may be obscured by other views or hidden. This method simply indicates that the content view has been added to the app’s view hierarchy.
+
+Common uses:
+1) Inform user of app status (ex: activity indicators).
+2) Perform expensive operations (ex: animations).
 
 - **viewWillDisappear()**
 
 Called just before the view controller’s content view is removed from the app’s view hierarchy. Use this method to perform cleanup tasks like committing changes or resigning the first responder status. Despite the name, the system does not call this method just because the content view will be hidden or obscured. This method is only called when the content view is about to be removed from the app’s view hierarchy.
 
+Common uses:
+1) Capture unsaved user data (ex: update a User Default value).
+2) Detach UI (ex: resign first responder).
+3) Cancel network requests.
+
+
 **viewDidDisappear()**
 
 Called just after the view controller’s content view has been removed from the app’s view hierarchy. Use this method to perform additional teardown activities. Despite the name, the system does not call this method just because the content view has become hidden or obscured. This method is only called when the content view has been removed from the app’s view hierarchy.
 
+Common uses:
+1) Teardown.
 
 #### UIViewController.swift
 
