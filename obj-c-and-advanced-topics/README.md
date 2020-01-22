@@ -7,7 +7,7 @@
 | [Git and Version Control](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/obj-c-and-advanced-topics/inDepthiOS/gitAndVersionControl/README.md)| [Learn Git Branching](https://learngitbranching.js.org/) |
 | [Views and Bezier Paths](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/obj-c-and-advanced-topics/inDepthiOS/viewsAndBezierPaths) | [Create a Quad Curve](https://github.com/joinpursuit/Pursuit-Core-iOS-Bezier-Path-Lab/blob/master/README.md) |
 | [Lifecycle](./inDepthiOS/lifecycle/README.md) | [Lifecycle Interview Questions](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/obj-c-and-advanced-topics/inDepthiOS/lifecycle/lab/README.md) |
-| [Parsing JSON](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/obj-c-and-advanced-topics/inDepthiOS/parsing-json) | tbd |
+| [Parsing JSON](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/obj-c-and-advanced-topics/inDepthiOS/parsing-json) | [Random User Postcode](https://github.com/joinpursuit/Pursuit-Core-iOS-Parsing-JSON-Lab-Heterogenous-Types/blob/master/README.md) |
 | Clean Code and Dependency Injection | tbd |
 | Table Views | tbd |
 | Unit Testing | tbd |
