@@ -56,7 +56,7 @@ Instead of only having one person able to edit a file at a time, any number of p
 
 Git is the most widely used version control system.  Competitors include [Mercurial](https://www.mercurial-scm.org/) and [Subversion (SVN)](https://subversion.apache.org/).
 
-![Git operations](./assets/gitOperations.png)
+![Git operations](./images/gitOperations.png)
 
 Source: https://en.wikipedia.org/wiki/Git#/media/File:Git_operations.svg
 
