@@ -36,7 +36,7 @@
 |:------|:------|
 | Arrays | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4572514) |
 | Strings | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4594373) |
-| Dictionaries | tbd |
+| Dictionaries | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4616150) |
 | Optionals | tbd |
 | Closures | tbd |
 | Enums | tbd |
