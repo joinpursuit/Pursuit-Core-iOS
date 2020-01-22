@@ -127,7 +127,7 @@ struct Episode {
     let name: String
     let runtime: Int
     let summary: String
-    let imageLink: String
+    let imageURL: String
 }
 ```
 
