@@ -2,7 +2,8 @@
 
 ## Objectives
 
-## Resources
+- Use downcasting to parse JSON
+- Parse JSON with heterogenous data types
 
 # 1. Introduction
 
@@ -119,4 +120,166 @@ Before Swift 4, `Codable` was not part of the Swift language.  So how did people
 
 The type of this object is `[Any]`.  The type of an element of the array is `[String: Any]`.  By judiciously using `Any`, we can work with the given JSON and identify what the type of each object should be.  Let's see how this would work:
 
-# 3. Heterogenous Data Types
+First, we'll use a version of our class that's not `Codable`
+
+```swift
+struct Episode {
+    let name: String
+    let runtime: Int
+    let summary: String
+    let imageLink: String
+}
+```
+
+Then we'll all a method that takes in a dictionary of type `[String: Any]` and returns an `Episode`
+
+
+```swift
+struct Episode {
+    let name: String
+    let runtime: Int
+    let summary: String
+    let imageURL: String?
+    init?(from episodeDict: [String: Any]) {
+        guard let name = episodeDict["name"] as? String else { return nil }
+        let runtime = episodeDict["runtime"] as? Int ?? 0
+        let summary = episodeDict["summary"] as? String ?? "No summary available"
+        var imageURL: String?
+        if let imageDict = episodeDict["image"] as? [String: String] {
+            imageURL = imageDict["original"]
+        }
+        self.name = name
+        self.runtime = runtime
+        self.summary = summary
+        self.imageURL = imageURL
+    }
+}
+```
+
+Because the dictionary is of type `[String: Any]` accessing a key, gives us a value of type `Any`.  In order to convert it to the type we expect, we use downcasting.  With our initializer built, we can then add a method that takes in `Data` and returns an array of `Episode`s:
+
+```swift
+static func getEpisodes(from data: Data) -> [Episode] {
+    guard let json = try? JSONSerialization.jsonObject(with: data, options: []),
+          let jsonArr = json as? [[String: Any]] else {
+        print("Error serializating data")
+        return []
+    }
+    return jsonArr.compactMap { Episode(from: $0) }
+}
+```
+
+All together:
+
+```swift
+struct Episode {
+    let name: String
+    let runtime: Int
+    let summary: String
+    let imageURL: String?
+    init?(from episodeDict: [String: Any]) {
+        guard let name = episodeDict["name"] as? String else { return nil }
+        let runtime = episodeDict["runtime"] as? Int ?? 0
+        let summary = episodeDict["summary"] as? String ?? "No summary available"
+        var imageURL: String?
+        if let imageDict = episodeDict["image"] as? [String: String] {
+            imageURL = imageDict["original"]
+        }
+        self.name = name
+        self.runtime = runtime
+        self.summary = summary
+        self.imageURL = imageURL
+    }
+    static func getEpisodes(from data: Data) -> [Episode] {
+        guard let json = try? JSONSerialization.jsonObject(with: data, options: []),
+              let jsonArr = json as? [[String: Any]] else {
+            print("Error serializing data")
+            return []
+        }
+        return jsonArr.compactMap { Episode(from: $0) }
+    }
+}
+```
+
+# 3. Heterogenous Data Types with Downcasting
+
+Using the downcasting approach, we can handle heterogenous data types.  Let's return to the example introduced earlier:
+
+```js
+[
+  {
+    name: "Abe",
+    age: 19
+  },
+  {
+    name: "Beth",
+    age: "35"
+  }
+]
+```
+
+In our initializer, we can check if the `age` is an `Int` or a `String` and handle each case:
+
+```swift
+struct User {
+    let name: String
+    let age: Int
+    init?(from userDict: [String: Any]) {
+        guard let name = userDict["name"] as? String else { return nil }
+        let age: Int
+        if let ageInt = userDict["age"] as? Int {
+            age = ageInt
+        } else if let ageStr = userDict["age"] as? String, let ageInt = Int(ageStr) {
+            age = ageInt
+        } else {
+            return nil
+        }
+        self.name = name
+        self.age = age
+    }
+    static func getUsers(from data: Data) -> [User] {
+        guard let json = try? JSONSerialization.jsonObject(with: data, options: []),
+              let jsonArr = json as? [[String: Any]] else {
+            print("Error serializing data")
+            return []
+        }
+        return jsonArr.compactMap { User(from: $0) }
+    }
+}
+```
+
+
+# 4. Heterogenous Data Types with Codable
+
+```swift
+struct User: Codable {
+    let name: String
+    var age: Int {
+        return _age.value
+    }
+
+    private let _age: Age
+    private enum CodingKeys: String, CodingKey {
+      case name
+      case _age = "age"
+    }
+}
+
+struct Age: Codable {
+    enum AgeError: Error {
+        case decodingError
+    }
+    let value: Int
+    init(from decoder: Decoder) throws {
+        let age: Int
+        if let ageInt = try? decoder.singleValueContainer().decode(Int.self) {
+            age = ageInt
+        } else if let ageStr = try? decoder.singleValueContainer().decode(String.self), let ageInt = Int(ageStr) {
+            age = ageInt
+        } else {
+            throw AgeError.decodingError
+        }
+        self.value = age
+    }
+}
+```
