@@ -1,12 +1,12 @@
 # DSA 1.f: Queues
 
-# 1. Implement a stack using Queues
+# 1. Implement a Stack using Queues
 
-Implement the following operations of a queue using stacks.
+Implement the following operations of a stack using queues.
 
-push(x) -- Push element x to the back of queue.
-pop() -- Removes the element from in front of queue.
-peek() -- Get the front element.
-empty() -- Return whether the queue is empty.
+push(x) -- Push element x onto stack.
+pop() -- Removes the element on top of the stack.
+top() -- Get the top element.
+empty() -- Return whether the stack is empty.
 
-Source: [https://leetcode.com/problems/implement-queue-using-stacks/](https://leetcode.com/problems/implement-queue-using-stacks/)
+Source: [https://leetcode.com/problems/implement-stack-using-queues/](https://leetcode.com/problems/implement-stack-using-queues/)
