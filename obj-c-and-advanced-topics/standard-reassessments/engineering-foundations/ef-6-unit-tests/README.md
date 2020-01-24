@@ -6,6 +6,7 @@ Given the JSON below, build the model and unit tests for a `PowerPlant` object. 
 - `type`
 - `coordinate`
 
+```json
 { 
    "nhits":10089,
    "parameters":{ 
@@ -3269,3 +3270,4 @@ Given the JSON below, build the model and unit tests for a `PowerPlant` object. 
       }
    ]
 }
+```
