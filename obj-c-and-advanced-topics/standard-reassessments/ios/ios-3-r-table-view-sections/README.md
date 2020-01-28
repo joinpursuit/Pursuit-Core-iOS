@@ -7,7 +7,7 @@ Use the [Random User API](https://randomuser.me/api/?results=5000) to load a lis
 ![contacts](https://docs-assets.developer.apple.com/published/722508d93c/1eb44f8d-1907-4949-9208-f2fb7f3ffd1b.png)
 
 
-Use the `User` struct and JSON data below for your app.
+Use the `User` struct and JSON data attached below for your app.
 
 ```swift
 struct ResultsWrapper: Codable {
