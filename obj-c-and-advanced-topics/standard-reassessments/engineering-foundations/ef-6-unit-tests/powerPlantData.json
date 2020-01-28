@@ -1,0 +1,3263 @@
+{
+   "nhits":10089,
+   "parameters":{
+      "dataset":[
+         "world-power-plants-list@kapsarc"
+      ],
+      "timezone":"UTC",
+      "rows":14,
+      "sort":[
+         "type"
+      ],
+      "format":"json",
+      "facet":[
+         "plant_country",
+         "plant_state",
+         "plant_status",
+         "plant_type_of_ownership",
+         "plant_operating_company",
+         "type"
+      ]
+   },
+   "records":[
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"f9f55c8b346dff551f074ecccc514e0e346c59e7",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "plant_source_of_cooling_water":"Adjacent Bayswater Reservoir",
+            "plant_operating_company":"Macquarie Generation",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":0,
+            "plant_name":"Bayswater Coal Power Plant Australia",
+            "plant_status":"Operating Fully",
+            "plant_particulates_pm_control_device_type":0,
+            "plant_references_01":"http://www.macgen.com.au/Generation-Portfolio/Bayswater-Power-Station.aspx",
+            "plant_references_02":"http://www.macgen.com.au/About-Us/Annual-Reports.aspx",
+            "plant_geo_assigned_id_number":43163,
+            "plant_location":"New South Wales, Australia",
+            "plant_nox_control_device_type":0,
+            "plant_type_of_ownership":"Government",
+            "type":"COAL",
+            "plant_electric_power_grid_connected_to":"Regional Grid",
+            "plant_source_of_coal":"Coal is delivered by overland conveyor from Hunter Valley mines, and by rail from Western NSW mines",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_used_for":"Base Load",
+            "plant_country":"Australia",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_longitude":150.9492,
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/43163",
+            "plant_design_capacity_mwe":2640.0,
+            "geopoint":[
+               -32.395,
+               150.9492
+            ],
+            "plant_latitude":-32.395,
+            "plant_currency":9,
+            "plant_fuel_type_primary":"Coal bituminous",
+            "plant_state":"New South Wales"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               150.9492,
+               -32.395
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      },
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"70f919f996c8f021917e5e7d94dc3f3d3862070b",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "plant_capital_cost":230000000,
+            "plant_source_of_cooling_water":"Hunter River",
+            "plant_operating_company":"Redbank Energy",
+            "plant_name_of_major_mines":"Mount Thorley Warkworth mine",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":0,
+            "plant_name":"Redbank Coal Power Plant Australia",
+            "plant_status":"Operating Fully",
+            "plant_particulates_pm_control_device_type":0,
+            "plant_references_01":"http://www.redbankenergy.com/assets/redbank.aspx",
+            "plant_references_02":"http://www.industcards.com/st-coal-australia-nsw.htm",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_geo_assigned_id_number":43166,
+            "plant_location":"Hunter Valley, approx 145kms north of Sydney, New South Wales, Australia",
+            "plant_nox_control_device_type":0,
+            "type":"COAL",
+            "plant_electric_power_grid_connected_to":"Regional Grid",
+            "plant_source_of_coal":"By conveyor",
+            "plant_epgc_ppa_years":30,
+            "plant_epgc_operator_name":"Energy Australia",
+            "plant_used_for":"Base Load",
+            "plant_country":"Australia",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_longitude":151.0718,
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/43166",
+            "plant_design_capacity_mwe":151.0,
+            "geopoint":[
+               -32.5804,
+               151.0718
+            ],
+            "plant_latitude":-32.5804,
+            "plant_currency":9,
+            "plant_fuel_type_primary":"Coal Waste Tailings",
+            "plant_state":"New South Wales",
+            "plant_capital_cost_reported_year":"2001"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               151.0718,
+               -32.5804
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      },
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"556231d1a82285228ea3d8abbea4779ae262b202",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "plant_operating_company":"International Power Australia",
+            "plant_name_of_major_mines":"Loy Yang",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":0,
+            "plant_name":"Loy Yang B Coal Power Plant Australia",
+            "plant_status":"Operating Fully",
+            "plant_longitude":146.5864,
+            "plant_avg_kilometers_to_coal_mines":1.0,
+            "plant_references_01":"http://www.ipplc.com.au/the-company/assets/loy-yang-b-power-station/",
+            "plant_references_02":"http://www.industcards.com/st-coal-australia-vic.htm",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_geo_assigned_id_number":43142,
+            "plant_location":"Traralgon, Victoria, Australia",
+            "plant_nox_control_device_type":0,
+            "plant_type_of_ownership":"Private",
+            "type":"COAL",
+            "plant_electric_power_grid_connected_to":"Regional Grid",
+            "plant_source_of_coal":"Adjacent Loy Yang open cut mine",
+            "plant_used_for":"Base Load",
+            "plant_country":"Australia",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_particulates_pm_control_device_type":0,
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/43142",
+            "plant_design_capacity_mwe":955.0,
+            "geopoint":[
+               -38.2561,
+               146.5864
+            ],
+            "plant_latitude":-38.2561,
+            "plant_currency":9,
+            "plant_fuel_type_primary":"Coal Brown",
+            "plant_state":"Victoria"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               146.5864,
+               -38.2561
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      },
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"414c6e190cd1bda2f44c7f690aac53c7f682da50",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "plant_source_of_cooling_water":"Seawater",
+            "plant_operating_company":"Verve Energy",
+            "plant_references_01":"http://www.verveenergy.com.au/mainContent/powerStations/Kwinana.html",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":0,
+            "plant_name":"Kwinana ABC Coal Power Plant Australia",
+            "plant_status":"Operating Fully",
+            "plant_name_of_substation_connected_to":"66, 132, 330kV lines to SWIS",
+            "plant_particulates_pm_control_device_type":1,
+            "plant_water_withdrawal_rate_at_full_power_cum_per_hour":102960,
+            "plant_references_02":"http://www.ga.gov.au/fossil_fuel/gmaps/operating.html",
+            "plant_geo_assigned_id_number":40753,
+            "plant_location":"32 km S of Perth, Western Australia",
+            "plant_nox_control_device_type":0,
+            "plant_type_of_ownership":"Government Province",
+            "type":"COAL",
+            "plant_electric_power_grid_connected_to":"Regional Grid",
+            "plant_source_of_coal":"Coal is delivered by train from Collie Coal Mines",
+            "plant_epgc_operator_name":"South West Interconnected System (SWIS)",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_used_for":"Base Load",
+            "plant_country":"Australia",
+            "plant_fuel_type_secondary":"Natural Gas",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_longitude":115.775,
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/40753",
+            "plant_design_capacity_mwe":420.0,
+            "geopoint":[
+               -32.1982,
+               115.775
+            ],
+            "plant_latitude":-32.1982,
+            "plant_currency":9,
+            "plant_fuel_type_primary":"Bituminous Coal",
+            "plant_state":"Western Australia"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               115.775,
+               -32.1982
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      },
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"0412f5f88340d0e1cbf4cead3291e1ba759638db",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":0,
+            "plant_name":"Worsley Coal Cogen Power Plant Australia",
+            "plant_status":"Operating Fully",
+            "plant_longitude":116.0687,
+            "plant_references_01":"http://www.ga.gov.au/fossil_fuel/gmaps/operating.html",
+            "plant_references_02":"http://www.mining-technology.com/projects/worsley/",
+            "plant_geo_assigned_id_number":41172,
+            "plant_location":"Worsley alumina refinery, SW Western Australia",
+            "plant_nox_control_device_type":0,
+            "plant_type_of_ownership":"CPP",
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/41172",
+            "plant_electric_power_grid_connected_to":"Regional Grid",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_country":"Australia",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_steam_supplied_description":"Worsley alumina refinery",
+            "plant_particulates_pm_control_device_type":0,
+            "plant_cogen_mode_steam_supplied_to":"Industry",
+            "type":"COAL",
+            "plant_design_capacity_mwe":130.0,
+            "geopoint":[
+               -33.2357,
+               116.0687
+            ],
+            "plant_latitude":-33.2357,
+            "plant_currency":9,
+            "plant_fuel_type_primary":"Bituminous Coal",
+            "plant_state":"Western Australia"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               116.0687,
+               -33.2357
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      },
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"98850789b94b5aae1c5026001e0a0028877174b0",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "plant_source_of_cooling_water":"Danube River",
+            "plant_operating_company":"VERBUND Thermal Power GmbH",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":0,
+            "plant_name":"Duernrohr CHP Power Plant Austria",
+            "plant_status":"Operating Fully",
+            "plant_particulates_pm_control_device_type":1,
+            "plant_references_01":"http://www.verbund.com/pp/de/waermekraftwerk/duernrohr",
+            "plant_references_02":"http://www.industcards.com/st-coal-austria.htm",
+            "plant_geo_assigned_id_number":45151,
+            "plant_location":"Duernrohr, Lower Austria, Austria",
+            "plant_nox_control_device_type":19,
+            "type":"COAL",
+            "plant_electric_power_grid_connected_to":"National Grid",
+            "plant_source_of_coal":"Mostly from Poland and Czech",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_source_of_makeup_water":"Danube River",
+            "plant_country":"Austria",
+            "plant_fuel_type_secondary":"Natural Gas",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_longitude":15.9246,
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/45151",
+            "plant_design_capacity_mwe":757.0,
+            "geopoint":[
+               48.3264,
+               15.9246
+            ],
+            "plant_latitude":48.3264,
+            "plant_currency":45,
+            "plant_fuel_type_primary":"Coal",
+            "plant_state":"Lower Austria"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               15.9246,
+               48.3264
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      },
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"2623a102ff96189221cf62dbe3f56f740fae80df",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "plant_source_of_cooling_water":"River Scheldt",
+            "plant_operating_company":"Electrabel",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":0,
+            "plant_name":"Rodenhuize Thermal Power Plant Belgium",
+            "plant_status":"Operating Partially",
+            "plant_particulates_pm_control_device_type":0,
+            "plant_references_01":"http://www.elia.be/upload/ProductionParkOverview.html",
+            "plant_references_02":"http://www.energydelta.org/en/mainmenu/edi-intelligence/latest-energy-news/electrabel-to-convert-rodenhuize-power-plant-to-180mw-biomass-fac",
+            "plant_geo_assigned_id_number":41956,
+            "plant_location":"Rodenhuize, Ghent, East Flanders, Belgium",
+            "plant_nox_control_device_type":0,
+            "plant_type_of_ownership":"Private",
+            "type":"COAL",
+            "plant_electric_power_grid_connected_to":"National Grid",
+            "plant_source_of_coal":"Adjacent Ghent Coal Terminal",
+            "plant_epgc_operator_name":"Elia (Belgian Transmission System Operator (TSO))",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_used_for":"Base Load",
+            "plant_country":"Belgium",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_longitude":3.7759,
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/41956",
+            "plant_design_capacity_mwe":438.0,
+            "geopoint":[
+               51.1337,
+               3.7759
+            ],
+            "plant_latitude":51.1337,
+            "plant_currency":45,
+            "plant_fuel_type_primary":"Mixed Fuel (Coal NG, Blast Furnance Gas, Wood Pellets)",
+            "plant_state":"East Flanders"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.7759,
+               51.1337
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      },
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"a9f951b668d71eba44bee161c892c69877680e33",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "plant_operating_company":"Energia Pecem",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":6,
+            "plant_name":"Porto do Pecem Coal Power Plant Brazil",
+            "plant_status":"Operating Fully",
+            "plant_longitude":-38.875,
+            "plant_references_01":"http://www.energiapecem.com.br/ver_secao.php?session_id=130",
+            "plant_references_02":"http://www.enerconsult.com.br/en/services/ProjectPage.asp?s=0000%0233%CURM_BOX&p=Infraestrutura/Energia/&i=421&tsc=14",
+            "plant_geo_assigned_id_number":43300,
+            "plant_location":"Porto do Pecem, Ceara, Brazil",
+            "plant_nox_control_device_type":0,
+            "plant_project_financed_by":"Inter-American Development Bank",
+            "type":"COAL",
+            "plant_electric_power_grid_connected_to":"National Grid",
+            "plant_source_of_coal":"Imported (Colombia) Coal. By conveyor from Pecem Port",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_used_for":"Base Load",
+            "plant_country":"Brazil",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_particulates_pm_control_device_type":0,
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/43300",
+            "plant_design_capacity_mwe":1080.0,
+            "geopoint":[
+               -3.5827,
+               -38.875
+            ],
+            "plant_capital_cost_in_us_dollars":2600000000,
+            "plant_latitude":-3.5827,
+            "plant_currency":21,
+            "plant_fuel_type_primary":"Coal",
+            "plant_state":"Ceara",
+            "plant_capital_cost_reported_year":"2011"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.875,
+               -3.5827
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      },
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"071db53fd43644864f0f55d70506e7fac62df1c3",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "plant_operating_company":"Cia Paranaense de Energia (COPEL)",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":0,
+            "plant_name":"Figueira Coal Power Plant Brazil",
+            "plant_status":"Operating Fully",
+            "plant_name_of_substation_connected_to":"Adjacent substation",
+            "plant_longitude":-50.3907,
+            "plant_references_01":"http://www.copel.com/hpcopel/root/nivel2.jsp?endereco=%2Fhpcopel%2Froot%2Fpagcopel2.nsf%2Fdocs%2F49AF98E12E67716B032574A20048B955",
+            "plant_references_02":"http://www.copel.com/hpcopel/root/nivel2.jsp?endereco=%2Fhpcopel%2Froot%2Fpagcopel2.nsf%2Fdocs%2FA93BECD1BAF3210F03257412006227BB",
+            "plant_geo_assigned_id_number":43306,
+            "plant_location":"Figueira, Rio do Peixe valley, Parana, Brazil",
+            "plant_nox_control_device_type":0,
+            "type":"COAL",
+            "plant_source_of_coal":"Local coal mines",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_used_for":"Base Load",
+            "plant_country":"Brazil",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_particulates_pm_control_device_type":0,
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/43306",
+            "plant_design_capacity_mwe":20.0,
+            "geopoint":[
+               -23.8523,
+               -50.3907
+            ],
+            "plant_latitude":-23.8523,
+            "plant_currency":21,
+            "plant_fuel_type_primary":"Coal",
+            "plant_state":"Parana"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -50.3907,
+               -23.8523
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      },
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"56af56dbbb08b23f7c05db314ad49c39c61aad96",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "plant_operating_company":"Companhia de Geracao Termica de Energia Eletrica",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":0,
+            "plant_name":"President Medici (Candiota) Coal Power Plant Brazil",
+            "plant_status":"Operating Fully",
+            "plant_longitude":-53.6828,
+            "plant_avg_kilometers_to_coal_mines":5.0,
+            "plant_references_01":"http://www.cgtee.gov.br/sitenovo/index.php?secao=37",
+            "plant_references_02":"http://www.aneel.gov.br/aplicacoes/capacidadebrasil/OperacaoGeracaoTipo.asp?tipo=4&ger=Combustivel&principal=Carv%C3%A3o%20Mineral%20%28Coal%29",
+            "plant_geo_assigned_id_number":43299,
+            "plant_location":"Candiota, Rio Grande do Sul, Brazil",
+            "plant_nox_control_device_type":0,
+            "plant_type_of_ownership":"Government",
+            "type":"COAL",
+            "plant_electric_power_grid_connected_to":"National Grid",
+            "plant_source_of_coal":"Candiota Mine operated by Cia Riograndense Mining and transported by conveyor belts with Calorific value 2600-3200 Kcal / Kg",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_used_for":"Base Load",
+            "plant_country":"Brazil",
+            "plant_state":"Rio Grande do Sul",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_project_financed_by":"Chinese Development Bank (Unit 5)",
+            "plant_particulates_pm_control_device_type":0,
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/43299",
+            "plant_design_capacity_mwe":796.0,
+            "geopoint":[
+               -31.5514,
+               -53.6828
+            ],
+            "plant_latitude":-31.5514,
+            "plant_currency":21,
+            "plant_fuel_type_primary":"Coal",
+            "plant_epc_contractor":"Unit 5 (SEPCO China)"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -53.6828,
+               -31.5514
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      },
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"78c9933fb08dfdb11d2574ea6243fefc7ce0519e",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "plant_operating_company":"Electrobras CGTEE",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":0,
+            "plant_name":"St. Jerome (UTSJ) Thermal Power Plant Brazil",
+            "plant_status":"Operating Partially",
+            "plant_longitude":-51.73516,
+            "plant_references_01":"http://www.cgtee.gov.br/sitenovo/index.php?secao=38",
+            "plant_geo_assigned_id_number":43388,
+            "plant_location":"St. Jerome, Rio Grande do Sul, Brazil",
+            "plant_nox_control_device_type":0,
+            "type":"COAL",
+            "plant_electric_power_grid_connected_to":"Regional Grid",
+            "plant_source_of_coal":"Sao Vicente Mine near Minas do Leao operated by Cia. Riograndense de Mineracao. 3800-4200 Kcal/Kg",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_used_for":"Peaking Load and Backup",
+            "plant_country":"Brazil",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_particulates_pm_control_device_type":0,
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/43388",
+            "plant_design_capacity_mwe":20.0,
+            "geopoint":[
+               -29.96826,
+               -51.73516
+            ],
+            "plant_latitude":-29.96826,
+            "plant_configuration_of_boiler_turbine_gen":"three B/T/G",
+            "plant_currency":21,
+            "plant_fuel_type_primary":"Coal",
+            "plant_state":"Rio Grande do Sul"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -51.73516,
+               -29.96826
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      },
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"18b6f13c3b810221d8dcf5b4d748d8e6fd4e56c3",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "plant_source_of_cooling_water":"Maritsa River",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":0,
+            "plant_name":"Maritsa 3 Coal Power Plant Bulgaria",
+            "plant_status":"Operating Fully",
+            "plant_particulates_pm_control_device_type":1,
+            "plant_references_01":"http://tec-marica3.com/?act=show_page&category_id=4",
+            "plant_references_02":"http://tec-marica3.com/?act=show_page&category_id=1   and   http://tec-marica3.com/?act=show_page&category_id=2",
+            "plant_geo_assigned_id_number":42181,
+            "plant_location":"Dimitrovgrad, Haskovo, Bulgaria",
+            "plant_nox_control_device_type":0,
+            "type":"COAL",
+            "plant_electric_power_grid_connected_to":"National Grid",
+            "plant_source_of_coal":"Maritza East Mines",
+            "plant_epgc_operator_name":"Natsionalna Elektricheska Kompania (NEK)",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_used_for":"Base Load",
+            "plant_country":"Bulgaria",
+            "plant_fuel_type_secondary":"Fuel Oil",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_longitude":25.62377,
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/42181",
+            "plant_design_capacity_mwe":120.0,
+            "geopoint":[
+               42.0524,
+               25.62377
+            ],
+            "plant_latitude":42.0524,
+            "plant_currency":15,
+            "plant_fuel_type_primary":"Coal",
+            "plant_state":"Khaskovo"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               25.62377,
+               42.0524
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      },
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"66572e5495e3bac93b73796aa0b645565a8c2b9a",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "plant_source_of_cooling_water":"reservoir created in 1954 by a 12 metre high dam located on the Battle River",
+            "plant_operating_company":"Alberta Power Ltd. (ATCO)",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":0,
+            "plant_name":"Battle River Coal Generating Station Canada",
+            "plant_status":"Operating Fully",
+            "plant_country_assigned_identification_number":"NPRI-ID 1033",
+            "plant_particulates_pm_control_device_type":0,
+            "plant_references_01":"http://www.atcopower.com/Our-Facilities/Our-Power-Technologies/Coal-Fired-Thermal/Battle-River",
+            "plant_references_02":"http://www.ec.gc.ca/pdb/npri/npri_prev_dat_e.cfm   and    http://www.ec.gc.ca/pdb/ghg/onlineData/dataSearch_e.cfm",
+            "plant_geo_assigned_id_number":2266,
+            "plant_location":"Near Forestburg, Alberta, Canada",
+            "plant_nox_control_device_type":0,
+            "plant_environmental_issues":"99.35% efficient  electrostatic precipitator",
+            "type":"COAL",
+            "plant_electric_power_grid_connected_to":"Regional Grid",
+            "plant_source_of_coal":"Prairie Mines & Royalty Ltd. supplies surface-mined coal from Paintearth and Vesta coal mines located directly south of the station",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_country":"Canada",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_longitude":-112.1344,
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/2266",
+            "plant_design_capacity_mwe":670.0,
+            "geopoint":[
+               52.4683,
+               -112.1344
+            ],
+            "plant_latitude":52.4683,
+            "plant_currency":27,
+            "plant_fuel_type_primary":"Sub -bituminous Coal",
+            "plant_state":"Alberta",
+            "plant_type_of_ownership":"IPP"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -112.1344,
+               52.4683
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      },
+      {
+         "datasetid":"world-power-plants-list@kapsarc",
+         "recordid":"156d4f395cdf43d2e339437da44275ce24ac22a3",
+         "fields":{
+            "plant_overall_rating0":"Environmentally Responsible",
+            "plant_overall_rating1":"Environmentally Responsible",
+            "plant_source_of_cooling_water":"Lake Wabamun",
+            "plant_operating_company":"TransAlta",
+            "topic":"POWERPLANTS",
+            "plant_sox_control_device_type":0,
+            "plant_name":"Sundance Coal Generating Station Canada",
+            "plant_status":"Operating Fully",
+            "plant_country_assigned_identification_number":"NPRI-ID 2284",
+            "plant_particulates_pm_control_device_type":0,
+            "plant_references_01":"http://www.transalta.com/facilities/plants-operation/sundance",
+            "plant_references_02":"http://www.industcards.com/st-coal-canada.htm",
+            "plant_geo_assigned_id_number":5964,
+            "plant_location":"Wabamun Lake, 70 kilometres west of Edmonton, Alberta, Canada",
+            "plant_nox_control_device_type":0,
+            "plant_type_of_ownership":"PPA-Merchant",
+            "type":"COAL",
+            "plant_source_of_coal":"Highvale mine adjacent to Plant",
+            "plant_epgc_operator_name":"Alberta Grid",
+            "plant_type_of_plant":"Sub-critical Thermal",
+            "plant_country":"Canada",
+            "plant_state":"Alberta",
+            "type_url":"http://www.globalenergyobservatory.org/list.php?db=PowerPlants&type=Coal",
+            "plant_overall_rating":"Environmentally Responsible",
+            "plant_longitude":-114.5567,
+            "plant_url":"http://www.globalenergyobservatory.org/geoid/5964",
+            "plant_design_capacity_mwe":2126.0,
+            "geopoint":[
+               53.5072,
+               -114.5567
+            ],
+            "plant_latitude":53.5072,
+            "plant_currency":27,
+            "plant_fuel_type_primary":"coal",
+            "plant_epc_contractor":"TransAlta"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -114.5567,
+               53.5072
+            ]
+         },
+         "record_timestamp":"2019-12-15T16:39:21.421000+00:00"
+      }
+   ],
+   "facet_groups":[
+      {
+         "facets":[
+            {
+               "count":4384,
+               "path":"Operating Fully",
+               "state":"displayed",
+               "name":"Operating Fully"
+            },
+            {
+               "count":156,
+               "path":"Operating Partially",
+               "state":"displayed",
+               "name":"Operating Partially"
+            },
+            {
+               "count":59,
+               "path":"Decommissioned",
+               "state":"displayed",
+               "name":"Decommissioned"
+            },
+            {
+               "count":27,
+               "path":"Under Construction",
+               "state":"displayed",
+               "name":"Under Construction"
+            },
+            {
+               "count":11,
+               "path":"Mothballed Full",
+               "state":"displayed",
+               "name":"Mothballed Full"
+            },
+            {
+               "count":8,
+               "path":"Built and In Test Stage",
+               "state":"displayed",
+               "name":"Built and In Test Stage"
+            },
+            {
+               "count":3,
+               "path":"Final Bid and Approval Stage",
+               "state":"displayed",
+               "name":"Final Bid and Approval Stage"
+            },
+            {
+               "count":2,
+               "path":"Demolished",
+               "state":"displayed",
+               "name":"Demolished"
+            },
+            {
+               "count":1,
+               "path":"Design and Planning Stage",
+               "state":"displayed",
+               "name":"Design and Planning Stage"
+            },
+            {
+               "count":1,
+               "path":"Mothballed Partial",
+               "state":"displayed",
+               "name":"Mothballed Partial"
+            },
+            {
+               "count":1,
+               "path":"Shutdown",
+               "state":"displayed",
+               "name":"Shutdown"
+            }
+         ],
+         "name":"plant_status"
+      },
+      {
+         "facets":[
+            {
+               "count":106,
+               "path":"Electricit de France (EDF)",
+               "state":"displayed",
+               "name":"Electricit de France (EDF)"
+            },
+            {
+               "count":38,
+               "path":"Hydro Quebec",
+               "state":"displayed",
+               "name":"Hydro Quebec"
+            },
+            {
+               "count":38,
+               "path":"VERBUND Hydro Power GmbH",
+               "state":"displayed",
+               "name":"VERBUND Hydro Power GmbH"
+            },
+            {
+               "count":37,
+               "path":"Elektrik Uretim AS (EUAS)",
+               "state":"displayed",
+               "name":"Elektrik Uretim AS (EUAS)"
+            },
+            {
+               "count":33,
+               "path":"Ontario Power Generation",
+               "state":"displayed",
+               "name":"Ontario Power Generation"
+            },
+            {
+               "count":29,
+               "path":"Hydro Tasmania",
+               "state":"displayed",
+               "name":"Hydro Tasmania"
+            },
+            {
+               "count":28,
+               "path":"Office National de l\\'Electricite (ONE)",
+               "state":"displayed",
+               "name":"Office National de l\\'Electricite (ONE)"
+            },
+            {
+               "count":28,
+               "path":"Public Power Corp (DEH)",
+               "state":"displayed",
+               "name":"Public Power Corp (DEH)"
+            },
+            {
+               "count":28,
+               "path":"US Bureau Of Reclamation",
+               "state":"displayed",
+               "name":"US Bureau Of Reclamation"
+            },
+            {
+               "count":27,
+               "path":"Electricity Generating Authority of Thailand (EGAT)",
+               "state":"displayed",
+               "name":"Electricity Generating Authority of Thailand (EGAT)"
+            },
+            {
+               "count":26,
+               "path":"SJSC Uzbekenergo",
+               "state":"displayed",
+               "name":"SJSC Uzbekenergo"
+            },
+            {
+               "count":25,
+               "path":"Vattenfall",
+               "state":"displayed",
+               "name":"Vattenfall"
+            },
+            {
+               "count":24,
+               "path":"BC Hydro",
+               "state":"displayed",
+               "name":"BC Hydro"
+            },
+            {
+               "count":24,
+               "path":"Electrabel",
+               "state":"displayed",
+               "name":"Electrabel"
+            },
+            {
+               "count":24,
+               "path":"Tamil Nadu Generation and Distribution Corporation Limited (TANGEDCO)",
+               "state":"displayed",
+               "name":"Tamil Nadu Generation and Distribution Corporation Limited (TANGEDCO)"
+            },
+            {
+               "count":22,
+               "path":"Hrvatska elektroprivreda (HEP) d.d.",
+               "state":"displayed",
+               "name":"Hrvatska elektroprivreda (HEP) d.d."
+            },
+            {
+               "count":22,
+               "path":"Slovenske Elektrarne AS",
+               "state":"displayed",
+               "name":"Slovenske Elektrarne AS"
+            },
+            {
+               "count":21,
+               "path":"Compagnie Nationale du Rhne (CNR)",
+               "state":"displayed",
+               "name":"Compagnie Nationale du Rhne (CNR)"
+            },
+            {
+               "count":21,
+               "path":"FPL Energy",
+               "state":"displayed",
+               "name":"FPL Energy"
+            },
+            {
+               "count":20,
+               "path":"CEZ a. s.",
+               "state":"displayed",
+               "name":"CEZ a. s."
+            },
+            {
+               "count":20,
+               "path":"Chubu Electric Power Company",
+               "state":"displayed",
+               "name":"Chubu Electric Power Company"
+            },
+            {
+               "count":20,
+               "path":"Electricite de France (EdF)",
+               "state":"displayed",
+               "name":"Electricite de France (EdF)"
+            },
+            {
+               "count":20,
+               "path":"Tokyo Electric Power Co. (TEPCO)",
+               "state":"displayed",
+               "name":"Tokyo Electric Power Co. (TEPCO)"
+            },
+            {
+               "count":19,
+               "path":"JSC TGK-1",
+               "state":"displayed",
+               "name":"JSC TGK-1"
+            },
+            {
+               "count":18,
+               "path":"Elektroprivreda Srbije (EPS)",
+               "state":"displayed",
+               "name":"Elektroprivreda Srbije (EPS)"
+            },
+            {
+               "count":18,
+               "path":"TransAlta",
+               "state":"displayed",
+               "name":"TransAlta"
+            },
+            {
+               "count":17,
+               "path":"Ceylon Electricity Board (CEB)",
+               "state":"displayed",
+               "name":"Ceylon Electricity Board (CEB)"
+            },
+            {
+               "count":17,
+               "path":"J-Power",
+               "state":"displayed",
+               "name":"J-Power"
+            },
+            {
+               "count":17,
+               "path":"NTPC",
+               "state":"displayed",
+               "name":"NTPC"
+            },
+            {
+               "count":16,
+               "path":"EDP Renovveis",
+               "state":"displayed",
+               "name":"EDP Renovveis"
+            },
+            {
+               "count":16,
+               "path":"Endesa Chile",
+               "state":"displayed",
+               "name":"Endesa Chile"
+            },
+            {
+               "count":16,
+               "path":"Energias de Portugal EDP (under License)",
+               "state":"displayed",
+               "name":"Energias de Portugal EDP (under License)"
+            },
+            {
+               "count":15,
+               "path":"Natsionalna Elektricheska Kompania EAD (NEK)",
+               "state":"displayed",
+               "name":"Natsionalna Elektricheska Kompania EAD (NEK)"
+            },
+            {
+               "count":15,
+               "path":"Tohoku Electric Power Company",
+               "state":"displayed",
+               "name":"Tohoku Electric Power Company"
+            },
+            {
+               "count":14,
+               "path":"Bangladesh Power Development Board (BPDB",
+               "state":"displayed",
+               "name":"Bangladesh Power Development Board (BPDB"
+            },
+            {
+               "count":14,
+               "path":"DONG Energy",
+               "state":"displayed",
+               "name":"DONG Energy"
+            },
+            {
+               "count":14,
+               "path":"MAA EOLIS",
+               "state":"displayed",
+               "name":"MAA EOLIS"
+            },
+            {
+               "count":14,
+               "path":"SPE-Luminus",
+               "state":"displayed",
+               "name":"SPE-Luminus"
+            },
+            {
+               "count":14,
+               "path":"Societe Tunisienne dElectricite et du Gaz (STEG)",
+               "state":"displayed",
+               "name":"Societe Tunisienne dElectricite et du Gaz (STEG)"
+            },
+            {
+               "count":13,
+               "path":"EDF Energies Nouvelles",
+               "state":"displayed",
+               "name":"EDF Energies Nouvelles"
+            },
+            {
+               "count":13,
+               "path":"EOLE-RES",
+               "state":"displayed",
+               "name":"EOLE-RES"
+            },
+            {
+               "count":13,
+               "path":"Electrobras Furnas",
+               "state":"displayed",
+               "name":"Electrobras Furnas"
+            },
+            {
+               "count":13,
+               "path":"Enel Power SpA",
+               "state":"displayed",
+               "name":"Enel Power SpA"
+            },
+            {
+               "count":13,
+               "path":"Energias de Portugal EDP",
+               "state":"displayed",
+               "name":"Energias de Portugal EDP"
+            },
+            {
+               "count":13,
+               "path":"Iberdrola Operation S.A.U. (IOMSA)",
+               "state":"displayed",
+               "name":"Iberdrola Operation S.A.U. (IOMSA)"
+            },
+            {
+               "count":13,
+               "path":"Landsvirkjun",
+               "state":"displayed",
+               "name":"Landsvirkjun"
+            },
+            {
+               "count":13,
+               "path":"Manitoba Hydro",
+               "state":"displayed",
+               "name":"Manitoba Hydro"
+            },
+            {
+               "count":13,
+               "path":"OAO Mosenergo TGK-3",
+               "state":"displayed",
+               "name":"OAO Mosenergo TGK-3"
+            },
+            {
+               "count":13,
+               "path":"RusHydro",
+               "state":"displayed",
+               "name":"RusHydro"
+            },
+            {
+               "count":13,
+               "path":"Statkraft",
+               "state":"displayed",
+               "name":"Statkraft"
+            },
+            {
+               "count":12,
+               "path":"E.ON Espana",
+               "state":"displayed",
+               "name":"E.ON Espana"
+            },
+            {
+               "count":12,
+               "path":"Kansai Electric Power Company",
+               "state":"displayed",
+               "name":"Kansai Electric Power Company"
+            },
+            {
+               "count":12,
+               "path":"NUON",
+               "state":"displayed",
+               "name":"NUON"
+            },
+            {
+               "count":12,
+               "path":"S.C. Hidroelectrica S.A.",
+               "state":"displayed",
+               "name":"S.C. Hidroelectrica S.A."
+            },
+            {
+               "count":12,
+               "path":"Verve Energy",
+               "state":"displayed",
+               "name":"Verve Energy"
+            },
+            {
+               "count":11,
+               "path":"Edison SpA",
+               "state":"displayed",
+               "name":"Edison SpA"
+            },
+            {
+               "count":11,
+               "path":"Empresa Provincial de Energa de Cordoba EPEC",
+               "state":"displayed",
+               "name":"Empresa Provincial de Energa de Cordoba EPEC"
+            },
+            {
+               "count":11,
+               "path":"Eskom",
+               "state":"displayed",
+               "name":"Eskom"
+            },
+            {
+               "count":11,
+               "path":"FPL Group Inc",
+               "state":"displayed",
+               "name":"FPL Group Inc"
+            },
+            {
+               "count":11,
+               "path":"General Electricity Company of Libya (GECOL)",
+               "state":"displayed",
+               "name":"General Electricity Company of Libya (GECOL)"
+            },
+            {
+               "count":11,
+               "path":"Kerala State Electricity Board",
+               "state":"displayed",
+               "name":"Kerala State Electricity Board"
+            },
+            {
+               "count":11,
+               "path":"Kyushu Electric Power Company",
+               "state":"displayed",
+               "name":"Kyushu Electric Power Company"
+            },
+            {
+               "count":11,
+               "path":"Meridian Energy",
+               "state":"displayed",
+               "name":"Meridian Energy"
+            },
+            {
+               "count":10,
+               "path":"AES Tiete SA",
+               "state":"displayed",
+               "name":"AES Tiete SA"
+            },
+            {
+               "count":10,
+               "path":"Azerenerji Joint Stock Company",
+               "state":"displayed",
+               "name":"Azerenerji Joint Stock Company"
+            },
+            {
+               "count":10,
+               "path":"Barki Tojik",
+               "state":"displayed",
+               "name":"Barki Tojik"
+            },
+            {
+               "count":10,
+               "path":"Cairo Electricity Production Company",
+               "state":"displayed",
+               "name":"Cairo Electricity Production Company"
+            },
+            {
+               "count":10,
+               "path":"Compagnie Bolivienne dEnergie Electrique S.A. (COBEE)",
+               "state":"displayed",
+               "name":"Compagnie Bolivienne dEnergie Electrique S.A. (COBEE)"
+            },
+            {
+               "count":10,
+               "path":"Dravske Elektrarne Maribor (DEM) d.o.o.",
+               "state":"displayed",
+               "name":"Dravske Elektrarne Maribor (DEM) d.o.o."
+            },
+            {
+               "count":10,
+               "path":"Energoatom (previously ROSENERGOATOM) www.rosenergoatom.ru",
+               "state":"displayed",
+               "name":"Energoatom (previously ROSENERGOATOM) www.rosenergoatom.ru"
+            },
+            {
+               "count":10,
+               "path":"Genesis Energy",
+               "state":"displayed",
+               "name":"Genesis Energy"
+            },
+            {
+               "count":10,
+               "path":"Irkutsk Power Generation and Distribution Company (Irkutskenergo) OAO",
+               "state":"displayed",
+               "name":"Irkutsk Power Generation and Distribution Company (Irkutskenergo) OAO"
+            },
+            {
+               "count":10,
+               "path":"La Compagnie du Vent / GDF SUEZ",
+               "state":"displayed",
+               "name":"La Compagnie du Vent / GDF SUEZ"
+            },
+            {
+               "count":10,
+               "path":"Mighty River Power",
+               "state":"displayed",
+               "name":"Mighty River Power"
+            },
+            {
+               "count":10,
+               "path":"Tenaga Nasional Berhad (TNB)",
+               "state":"displayed",
+               "name":"Tenaga Nasional Berhad (TNB)"
+            },
+            {
+               "count":9,
+               "path":"AES Corp",
+               "state":"displayed",
+               "name":"AES Corp"
+            },
+            {
+               "count":9,
+               "path":"Bashkir Generation Company",
+               "state":"displayed",
+               "name":"Bashkir Generation Company"
+            },
+            {
+               "count":9,
+               "path":"Brookfield Renewable Power",
+               "state":"displayed",
+               "name":"Brookfield Renewable Power"
+            },
+            {
+               "count":9,
+               "path":"Compahia Energetica de Minas Gerais (CEMIG)",
+               "state":"displayed",
+               "name":"Compahia Energetica de Minas Gerais (CEMIG)"
+            },
+            {
+               "count":9,
+               "path":"Contact Energy",
+               "state":"displayed",
+               "name":"Contact Energy"
+            },
+            {
+               "count":9,
+               "path":"Electricity Supply Board (ESB)",
+               "state":"displayed",
+               "name":"Electricity Supply Board (ESB)"
+            },
+            {
+               "count":9,
+               "path":"Energo-Pro Georgia JSC",
+               "state":"displayed",
+               "name":"Energo-Pro Georgia JSC"
+            },
+            {
+               "count":9,
+               "path":"Korporata Elektroenergjitike Shqiptare (KESH)",
+               "state":"displayed",
+               "name":"Korporata Elektroenergjitike Shqiptare (KESH)"
+            },
+            {
+               "count":9,
+               "path":"Kraftwerke Oberhasli AG (KWO)",
+               "state":"displayed",
+               "name":"Kraftwerke Oberhasli AG (KWO)"
+            },
+            {
+               "count":9,
+               "path":"Nepal Electricity Authority (NEA)",
+               "state":"displayed",
+               "name":"Nepal Electricity Authority (NEA)"
+            },
+            {
+               "count":9,
+               "path":"OJSC Volga TGK-7",
+               "state":"displayed",
+               "name":"OJSC Volga TGK-7"
+            },
+            {
+               "count":9,
+               "path":"SaskPower",
+               "state":"displayed",
+               "name":"SaskPower"
+            },
+            {
+               "count":9,
+               "path":"Saudi Electricity Company (SEC)",
+               "state":"displayed",
+               "name":"Saudi Electricity Company (SEC)"
+            },
+            {
+               "count":8,
+               "path":"Colbun S.A.",
+               "state":"displayed",
+               "name":"Colbun S.A."
+            },
+            {
+               "count":8,
+               "path":"Companhia Hidro-Eletrica do Sao Francisco (CHESF)",
+               "state":"displayed",
+               "name":"Companhia Hidro-Eletrica do Sao Francisco (CHESF)"
+            },
+            {
+               "count":8,
+               "path":"Duke Energy Generation International Paranapanema SA",
+               "state":"displayed",
+               "name":"Duke Energy Generation International Paranapanema SA"
+            },
+            {
+               "count":8,
+               "path":"EOLFI",
+               "state":"displayed",
+               "name":"EOLFI"
+            },
+            {
+               "count":8,
+               "path":"East Delta Electricity Production Company (EDEPC)",
+               "state":"displayed",
+               "name":"East Delta Electricity Production Company (EDEPC)"
+            },
+            {
+               "count":8,
+               "path":"Electricite de Vietnam (EVN)",
+               "state":"displayed",
+               "name":"Electricite de Vietnam (EVN)"
+            },
+            {
+               "count":8,
+               "path":"InnoVent",
+               "state":"displayed",
+               "name":"InnoVent"
+            },
+            {
+               "count":8,
+               "path":"Instituto Costarricense de Electricidad (ICE)",
+               "state":"displayed",
+               "name":"Instituto Costarricense de Electricidad (ICE)"
+            },
+            {
+               "count":8,
+               "path":"Iran Water and Power Resources Development Company (IWPCo)",
+               "state":"displayed",
+               "name":"Iran Water and Power Resources Development Company (IWPCo)"
+            },
+            {
+               "count":8,
+               "path":"National Electricity Corporation of Sudan (NEC)",
+               "state":"displayed",
+               "name":"National Electricity Corporation of Sudan (NEC)"
+            },
+            {
+               "count":8,
+               "path":"National Thermal Power Corporation (NTPC)",
+               "state":"displayed",
+               "name":"National Thermal Power Corporation (NTPC)"
+            },
+            {
+               "count":8,
+               "path":"Origin Energy",
+               "state":"displayed",
+               "name":"Origin Energy"
+            }
+         ],
+         "name":"plant_operating_company"
+      },
+      {
+         "facets":[
+            {
+               "count":4855,
+               "path":"United States of America",
+               "state":"displayed",
+               "name":"United States of America"
+            },
+            {
+               "count":481,
+               "path":"France",
+               "state":"displayed",
+               "name":"France"
+            },
+            {
+               "count":459,
+               "path":"India",
+               "state":"displayed",
+               "name":"India"
+            },
+            {
+               "count":335,
+               "path":"Canada",
+               "state":"displayed",
+               "name":"Canada"
+            },
+            {
+               "count":209,
+               "path":"Russian Federation",
+               "state":"displayed",
+               "name":"Russian Federation"
+            },
+            {
+               "count":201,
+               "path":"Australia",
+               "state":"displayed",
+               "name":"Australia"
+            },
+            {
+               "count":200,
+               "path":"Japan",
+               "state":"displayed",
+               "name":"Japan"
+            },
+            {
+               "count":144,
+               "path":"China",
+               "state":"displayed",
+               "name":"China"
+            },
+            {
+               "count":129,
+               "path":"Mexico",
+               "state":"displayed",
+               "name":"Mexico"
+            },
+            {
+               "count":120,
+               "path":"Brazil",
+               "state":"displayed",
+               "name":"Brazil"
+            },
+            {
+               "count":116,
+               "path":"Spain",
+               "state":"displayed",
+               "name":"Spain"
+            },
+            {
+               "count":98,
+               "path":"Germany",
+               "state":"displayed",
+               "name":"Germany"
+            },
+            {
+               "count":94,
+               "path":"United Kingdom",
+               "state":"displayed",
+               "name":"United Kingdom"
+            },
+            {
+               "count":91,
+               "path":"Italy",
+               "state":"displayed",
+               "name":"Italy"
+            },
+            {
+               "count":83,
+               "path":"Turkey",
+               "state":"displayed",
+               "name":"Turkey"
+            },
+            {
+               "count":80,
+               "path":"Argentina",
+               "state":"displayed",
+               "name":"Argentina"
+            },
+            {
+               "count":74,
+               "path":"Austria",
+               "state":"displayed",
+               "name":"Austria"
+            },
+            {
+               "count":69,
+               "path":"Chile",
+               "state":"displayed",
+               "name":"Chile"
+            },
+            {
+               "count":68,
+               "path":"Republic of Korea",
+               "state":"displayed",
+               "name":"Republic of Korea"
+            },
+            {
+               "count":61,
+               "path":"Poland",
+               "state":"displayed",
+               "name":"Poland"
+            },
+            {
+               "count":60,
+               "path":"Egypt",
+               "state":"displayed",
+               "name":"Egypt"
+            },
+            {
+               "count":60,
+               "path":"Islamic Republic of Iran",
+               "state":"displayed",
+               "name":"Islamic Republic of Iran"
+            },
+            {
+               "count":59,
+               "path":"Belgium",
+               "state":"displayed",
+               "name":"Belgium"
+            },
+            {
+               "count":53,
+               "path":"New Zealand",
+               "state":"displayed",
+               "name":"New Zealand"
+            },
+            {
+               "count":52,
+               "path":"Thailand",
+               "state":"displayed",
+               "name":"Thailand"
+            },
+            {
+               "count":50,
+               "path":"Malaysia",
+               "state":"displayed",
+               "name":"Malaysia"
+            },
+            {
+               "count":47,
+               "path":"Netherlands",
+               "state":"displayed",
+               "name":"Netherlands"
+            },
+            {
+               "count":46,
+               "path":"Costa Rica",
+               "state":"displayed",
+               "name":"Costa Rica"
+            },
+            {
+               "count":46,
+               "path":"Saudi Arabia",
+               "state":"displayed",
+               "name":"Saudi Arabia"
+            },
+            {
+               "count":46,
+               "path":"South Africa",
+               "state":"displayed",
+               "name":"South Africa"
+            },
+            {
+               "count":46,
+               "path":"Sweden",
+               "state":"displayed",
+               "name":"Sweden"
+            },
+            {
+               "count":44,
+               "path":"Greece",
+               "state":"displayed",
+               "name":"Greece"
+            },
+            {
+               "count":43,
+               "path":"Pakistan",
+               "state":"displayed",
+               "name":"Pakistan"
+            },
+            {
+               "count":41,
+               "path":"Switzerland",
+               "state":"displayed",
+               "name":"Switzerland"
+            },
+            {
+               "count":39,
+               "path":"Portugal",
+               "state":"displayed",
+               "name":"Portugal"
+            },
+            {
+               "count":38,
+               "path":"Philippines",
+               "state":"displayed",
+               "name":"Philippines"
+            },
+            {
+               "count":34,
+               "path":"Indonesia",
+               "state":"displayed",
+               "name":"Indonesia"
+            },
+            {
+               "count":34,
+               "path":"Morocco",
+               "state":"displayed",
+               "name":"Morocco"
+            },
+            {
+               "count":34,
+               "path":"Romania",
+               "state":"displayed",
+               "name":"Romania"
+            },
+            {
+               "count":32,
+               "path":"Algeria",
+               "state":"displayed",
+               "name":"Algeria"
+            },
+            {
+               "count":32,
+               "path":"Ukraine",
+               "state":"displayed",
+               "name":"Ukraine"
+            },
+            {
+               "count":31,
+               "path":"Sri Lanka",
+               "state":"displayed",
+               "name":"Sri Lanka"
+            },
+            {
+               "count":30,
+               "path":"Bangladesh",
+               "state":"displayed",
+               "name":"Bangladesh"
+            },
+            {
+               "count":30,
+               "path":"Czech Republic",
+               "state":"displayed",
+               "name":"Czech Republic"
+            },
+            {
+               "count":29,
+               "path":"Slovakia",
+               "state":"displayed",
+               "name":"Slovakia"
+            },
+            {
+               "count":28,
+               "path":"Slovenia",
+               "state":"displayed",
+               "name":"Slovenia"
+            },
+            {
+               "count":28,
+               "path":"Uzbekistan",
+               "state":"displayed",
+               "name":"Uzbekistan"
+            },
+            {
+               "count":26,
+               "path":"Colombia",
+               "state":"displayed",
+               "name":"Colombia"
+            },
+            {
+               "count":26,
+               "path":"Republic of China Taiwan",
+               "state":"displayed",
+               "name":"Republic of China Taiwan"
+            },
+            {
+               "count":24,
+               "path":"Croatia",
+               "state":"displayed",
+               "name":"Croatia"
+            },
+            {
+               "count":24,
+               "path":"Viet Nam",
+               "state":"displayed",
+               "name":"Viet Nam"
+            },
+            {
+               "count":23,
+               "path":"Bolivia",
+               "state":"displayed",
+               "name":"Bolivia"
+            },
+            {
+               "count":23,
+               "path":"Israel",
+               "state":"displayed",
+               "name":"Israel"
+            },
+            {
+               "count":22,
+               "path":"Bulgaria",
+               "state":"displayed",
+               "name":"Bulgaria"
+            },
+            {
+               "count":22,
+               "path":"Georgia",
+               "state":"displayed",
+               "name":"Georgia"
+            },
+            {
+               "count":22,
+               "path":"Ireland",
+               "state":"displayed",
+               "name":"Ireland"
+            },
+            {
+               "count":22,
+               "path":"Nigeria",
+               "state":"displayed",
+               "name":"Nigeria"
+            },
+            {
+               "count":21,
+               "path":"Denmark",
+               "state":"displayed",
+               "name":"Denmark"
+            },
+            {
+               "count":21,
+               "path":"Hungary",
+               "state":"displayed",
+               "name":"Hungary"
+            },
+            {
+               "count":21,
+               "path":"Serbia",
+               "state":"displayed",
+               "name":"Serbia"
+            },
+            {
+               "count":20,
+               "path":"Bosnia and Herzegovina",
+               "state":"displayed",
+               "name":"Bosnia and Herzegovina"
+            },
+            {
+               "count":20,
+               "path":"Kazakhstan",
+               "state":"displayed",
+               "name":"Kazakhstan"
+            },
+            {
+               "count":20,
+               "path":"Venezuela",
+               "state":"displayed",
+               "name":"Venezuela"
+            },
+            {
+               "count":18,
+               "path":"Iceland",
+               "state":"displayed",
+               "name":"Iceland"
+            },
+            {
+               "count":18,
+               "path":"Nicaragua",
+               "state":"displayed",
+               "name":"Nicaragua"
+            },
+            {
+               "count":18,
+               "path":"Syrian Arab Republic",
+               "state":"displayed",
+               "name":"Syrian Arab Republic"
+            },
+            {
+               "count":17,
+               "path":"Belarus",
+               "state":"displayed",
+               "name":"Belarus"
+            },
+            {
+               "count":17,
+               "path":"Guatemala",
+               "state":"displayed",
+               "name":"Guatemala"
+            },
+            {
+               "count":17,
+               "path":"Peru",
+               "state":"displayed",
+               "name":"Peru"
+            },
+            {
+               "count":17,
+               "path":"Tunisia",
+               "state":"displayed",
+               "name":"Tunisia"
+            },
+            {
+               "count":16,
+               "path":"Finland",
+               "state":"displayed",
+               "name":"Finland"
+            },
+            {
+               "count":16,
+               "path":"Singapore",
+               "state":"displayed",
+               "name":"Singapore"
+            },
+            {
+               "count":16,
+               "path":"United Arab Emirates",
+               "state":"displayed",
+               "name":"United Arab Emirates"
+            },
+            {
+               "count":15,
+               "path":"Kenya",
+               "state":"displayed",
+               "name":"Kenya"
+            },
+            {
+               "count":15,
+               "path":"Kuwait",
+               "state":"displayed",
+               "name":"Kuwait"
+            },
+            {
+               "count":14,
+               "path":"Armenia",
+               "state":"displayed",
+               "name":"Armenia"
+            },
+            {
+               "count":14,
+               "path":"Libyan Arab Jamahiriya",
+               "state":"displayed",
+               "name":"Libyan Arab Jamahiriya"
+            },
+            {
+               "count":14,
+               "path":"Panama",
+               "state":"displayed",
+               "name":"Panama"
+            },
+            {
+               "count":14,
+               "path":"Republic of Macedonia",
+               "state":"displayed",
+               "name":"Republic of Macedonia"
+            },
+            {
+               "count":13,
+               "path":"Azerbaijan",
+               "state":"displayed",
+               "name":"Azerbaijan"
+            },
+            {
+               "count":13,
+               "path":"Norway",
+               "state":"displayed",
+               "name":"Norway"
+            },
+            {
+               "count":12,
+               "path":"Nepal",
+               "state":"displayed",
+               "name":"Nepal"
+            },
+            {
+               "count":12,
+               "path":"Qatar",
+               "state":"displayed",
+               "name":"Qatar"
+            },
+            {
+               "count":12,
+               "path":"Tajikistan",
+               "state":"displayed",
+               "name":"Tajikistan"
+            },
+            {
+               "count":12,
+               "path":"Uruguay",
+               "state":"displayed",
+               "name":"Uruguay"
+            },
+            {
+               "count":11,
+               "path":"Albania",
+               "state":"displayed",
+               "name":"Albania"
+            },
+            {
+               "count":11,
+               "path":"Angola",
+               "state":"displayed",
+               "name":"Angola"
+            },
+            {
+               "count":11,
+               "path":"Estonia",
+               "state":"displayed",
+               "name":"Estonia"
+            },
+            {
+               "count":11,
+               "path":"Ethiopia",
+               "state":"displayed",
+               "name":"Ethiopia"
+            },
+            {
+               "count":11,
+               "path":"Honduras",
+               "state":"displayed",
+               "name":"Honduras"
+            },
+            {
+               "count":11,
+               "path":"Lithuania",
+               "state":"displayed",
+               "name":"Lithuania"
+            },
+            {
+               "count":10,
+               "path":"Myanmar",
+               "state":"displayed",
+               "name":"Myanmar"
+            },
+            {
+               "count":10,
+               "path":"Oman",
+               "state":"displayed",
+               "name":"Oman"
+            },
+            {
+               "count":10,
+               "path":"United Republic of Tanzania",
+               "state":"displayed",
+               "name":"United Republic of Tanzania"
+            },
+            {
+               "count":9,
+               "path":"Bahrain",
+               "state":"displayed",
+               "name":"Bahrain"
+            },
+            {
+               "count":9,
+               "path":"Democratic Republic of the Congo",
+               "state":"displayed",
+               "name":"Democratic Republic of the Congo"
+            },
+            {
+               "count":9,
+               "path":"Peoples Democratic Republic of Lao",
+               "state":"displayed",
+               "name":"Peoples Democratic Republic of Lao"
+            },
+            {
+               "count":9,
+               "path":"Sudan",
+               "state":"displayed",
+               "name":"Sudan"
+            },
+            {
+               "count":9,
+               "path":"Zambia",
+               "state":"displayed",
+               "name":"Zambia"
+            },
+            {
+               "count":8,
+               "path":"Cote DIvoire",
+               "state":"displayed",
+               "name":"Cote DIvoire"
+            }
+         ],
+         "name":"plant_country"
+      },
+      {
+         "facets":[
+            {
+               "count":674,
+               "path":"California",
+               "state":"displayed",
+               "name":"California"
+            },
+            {
+               "count":297,
+               "path":"New York",
+               "state":"displayed",
+               "name":"New York"
+            },
+            {
+               "count":250,
+               "path":"Texas",
+               "state":"displayed",
+               "name":"Texas"
+            },
+            {
+               "count":191,
+               "path":"Michigan",
+               "state":"displayed",
+               "name":"Michigan"
+            },
+            {
+               "count":176,
+               "path":"Illinois",
+               "state":"displayed",
+               "name":"Illinois"
+            },
+            {
+               "count":159,
+               "path":"Iowa",
+               "state":"displayed",
+               "name":"Iowa"
+            },
+            {
+               "count":159,
+               "path":"Minnesota",
+               "state":"displayed",
+               "name":"Minnesota"
+            },
+            {
+               "count":156,
+               "path":"Wisconsin",
+               "state":"displayed",
+               "name":"Wisconsin"
+            },
+            {
+               "count":149,
+               "path":"Pennsylvania",
+               "state":"displayed",
+               "name":"Pennsylvania"
+            },
+            {
+               "count":137,
+               "path":"Florida",
+               "state":"displayed",
+               "name":"Florida"
+            },
+            {
+               "count":103,
+               "path":"Alaska",
+               "state":"displayed",
+               "name":"Alaska"
+            },
+            {
+               "count":101,
+               "path":"Massachusetts",
+               "state":"displayed",
+               "name":"Massachusetts"
+            },
+            {
+               "count":100,
+               "path":"Ohio",
+               "state":"displayed",
+               "name":"Ohio"
+            },
+            {
+               "count":100,
+               "path":"Washington",
+               "state":"displayed",
+               "name":"Washington"
+            },
+            {
+               "count":99,
+               "path":"Georgia",
+               "state":"displayed",
+               "name":"Georgia"
+            },
+            {
+               "count":99,
+               "path":"Ontario",
+               "state":"displayed",
+               "name":"Ontario"
+            },
+            {
+               "count":98,
+               "path":"Kansas",
+               "state":"displayed",
+               "name":"Kansas"
+            },
+            {
+               "count":97,
+               "path":"North Carolina",
+               "state":"displayed",
+               "name":"North Carolina"
+            },
+            {
+               "count":96,
+               "path":"Colorado",
+               "state":"displayed",
+               "name":"Colorado"
+            },
+            {
+               "count":93,
+               "path":"Missouri",
+               "state":"displayed",
+               "name":"Missouri"
+            },
+            {
+               "count":91,
+               "path":"Virginia",
+               "state":"displayed",
+               "name":"Virginia"
+            },
+            {
+               "count":88,
+               "path":"Oregon",
+               "state":"displayed",
+               "name":"Oregon"
+            },
+            {
+               "count":84,
+               "path":"Nebraska",
+               "state":"displayed",
+               "name":"Nebraska"
+            },
+            {
+               "count":81,
+               "path":"New Jersey",
+               "state":"displayed",
+               "name":"New Jersey"
+            },
+            {
+               "count":80,
+               "path":"Quebec",
+               "state":"displayed",
+               "name":"Quebec"
+            },
+            {
+               "count":78,
+               "path":"Maine",
+               "state":"displayed",
+               "name":"Maine"
+            },
+            {
+               "count":76,
+               "path":"Alabama",
+               "state":"displayed",
+               "name":"Alabama"
+            },
+            {
+               "count":75,
+               "path":"Idaho",
+               "state":"displayed",
+               "name":"Idaho"
+            },
+            {
+               "count":73,
+               "path":"South Carolina",
+               "state":"displayed",
+               "name":"South Carolina"
+            },
+            {
+               "count":72,
+               "path":"Indiana",
+               "state":"displayed",
+               "name":"Indiana"
+            },
+            {
+               "count":69,
+               "path":"Louisiana",
+               "state":"displayed",
+               "name":"Louisiana"
+            },
+            {
+               "count":62,
+               "path":"New Hampshire",
+               "state":"displayed",
+               "name":"New Hampshire"
+            },
+            {
+               "count":58,
+               "path":"Oklahoma",
+               "state":"displayed",
+               "name":"Oklahoma"
+            },
+            {
+               "count":58,
+               "path":"Tamil Nadu",
+               "state":"displayed",
+               "name":"Tamil Nadu"
+            },
+            {
+               "count":58,
+               "path":"Tennessee",
+               "state":"displayed",
+               "name":"Tennessee"
+            },
+            {
+               "count":57,
+               "path":"Utah",
+               "state":"displayed",
+               "name":"Utah"
+            },
+            {
+               "count":56,
+               "path":"Vermont",
+               "state":"displayed",
+               "name":"Vermont"
+            },
+            {
+               "count":54,
+               "path":"Arizona",
+               "state":"displayed",
+               "name":"Arizona"
+            },
+            {
+               "count":48,
+               "path":"Alberta",
+               "state":"displayed",
+               "name":"Alberta"
+            },
+            {
+               "count":47,
+               "path":"Arkansas",
+               "state":"displayed",
+               "name":"Arkansas"
+            },
+            {
+               "count":46,
+               "path":"Connecticut",
+               "state":"displayed",
+               "name":"Connecticut"
+            },
+            {
+               "count":42,
+               "path":"Gujarat",
+               "state":"displayed",
+               "name":"Gujarat"
+            },
+            {
+               "count":42,
+               "path":"Nevada",
+               "state":"displayed",
+               "name":"Nevada"
+            },
+            {
+               "count":41,
+               "path":"Kentucky",
+               "state":"displayed",
+               "name":"Kentucky"
+            },
+            {
+               "count":40,
+               "path":"Andhra Pradesh",
+               "state":"displayed",
+               "name":"Andhra Pradesh"
+            },
+            {
+               "count":40,
+               "path":"British Columbia",
+               "state":"displayed",
+               "name":"British Columbia"
+            },
+            {
+               "count":40,
+               "path":"Queensland",
+               "state":"displayed",
+               "name":"Queensland"
+            },
+            {
+               "count":39,
+               "path":"Mississippi",
+               "state":"displayed",
+               "name":"Mississippi"
+            },
+            {
+               "count":39,
+               "path":"North Rhine-Westphalia",
+               "state":"displayed",
+               "name":"North Rhine-Westphalia"
+            },
+            {
+               "count":39,
+               "path":"Wyoming",
+               "state":"displayed",
+               "name":"Wyoming"
+            },
+            {
+               "count":37,
+               "path":"Maryland",
+               "state":"displayed",
+               "name":"Maryland"
+            },
+            {
+               "count":35,
+               "path":"Hawaii",
+               "state":"displayed",
+               "name":"Hawaii"
+            },
+            {
+               "count":35,
+               "path":"Maharashtra",
+               "state":"displayed",
+               "name":"Maharashtra"
+            },
+            {
+               "count":34,
+               "path":"West Virginia",
+               "state":"displayed",
+               "name":"West Virginia"
+            },
+            {
+               "count":34,
+               "path":"Western Australia",
+               "state":"displayed",
+               "name":"Western Australia"
+            },
+            {
+               "count":33,
+               "path":"Tasmania",
+               "state":"displayed",
+               "name":"Tasmania"
+            },
+            {
+               "count":31,
+               "path":"New Mexico",
+               "state":"displayed",
+               "name":"New Mexico"
+            },
+            {
+               "count":31,
+               "path":"New South Wales",
+               "state":"displayed",
+               "name":"New South Wales"
+            },
+            {
+               "count":31,
+               "path":"Punjab",
+               "state":"displayed",
+               "name":"Punjab"
+            },
+            {
+               "count":28,
+               "path":"Montana",
+               "state":"displayed",
+               "name":"Montana"
+            },
+            {
+               "count":27,
+               "path":"Sao Paulo",
+               "state":"displayed",
+               "name":"Sao Paulo"
+            },
+            {
+               "count":27,
+               "path":"West Bengal",
+               "state":"displayed",
+               "name":"West Bengal"
+            },
+            {
+               "count":26,
+               "path":"Andalusia",
+               "state":"displayed",
+               "name":"Andalusia"
+            },
+            {
+               "count":26,
+               "path":"Karnataka",
+               "state":"displayed",
+               "name":"Karnataka"
+            },
+            {
+               "count":25,
+               "path":"Victoria",
+               "state":"displayed",
+               "name":"Victoria"
+            },
+            {
+               "count":23,
+               "path":"Aveyron",
+               "state":"displayed",
+               "name":"Aveyron"
+            },
+            {
+               "count":23,
+               "path":"Himachal Pradesh",
+               "state":"displayed",
+               "name":"Himachal Pradesh"
+            },
+            {
+               "count":23,
+               "path":"South Australia",
+               "state":"displayed",
+               "name":"South Australia"
+            },
+            {
+               "count":23,
+               "path":"Taiwan",
+               "state":"displayed",
+               "name":"Taiwan"
+            },
+            {
+               "count":21,
+               "path":"Finistere",
+               "state":"displayed",
+               "name":"Finistere"
+            },
+            {
+               "count":21,
+               "path":"Saskatchewan",
+               "state":"displayed",
+               "name":"Saskatchewan"
+            },
+            {
+               "count":21,
+               "path":"Uttar Pradesh",
+               "state":"displayed",
+               "name":"Uttar Pradesh"
+            },
+            {
+               "count":20,
+               "path":"Madhya Pradesh",
+               "state":"displayed",
+               "name":"Madhya Pradesh"
+            },
+            {
+               "count":20,
+               "path":"North Dakota",
+               "state":"displayed",
+               "name":"North Dakota"
+            },
+            {
+               "count":20,
+               "path":"South Dakota",
+               "state":"displayed",
+               "name":"South Dakota"
+            },
+            {
+               "count":19,
+               "path":"Anhui",
+               "state":"displayed",
+               "name":"Anhui"
+            },
+            {
+               "count":19,
+               "path":"Aube",
+               "state":"displayed",
+               "name":"Aube"
+            },
+            {
+               "count":19,
+               "path":"Meuse",
+               "state":"displayed",
+               "name":"Meuse"
+            },
+            {
+               "count":19,
+               "path":"Waikato",
+               "state":"displayed",
+               "name":"Waikato"
+            },
+            {
+               "count":18,
+               "path":"Carinthia",
+               "state":"displayed",
+               "name":"Carinthia"
+            },
+            {
+               "count":18,
+               "path":"Kerala",
+               "state":"displayed",
+               "name":"Kerala"
+            },
+            {
+               "count":18,
+               "path":"Tashkent",
+               "state":"displayed",
+               "name":"Tashkent"
+            },
+            {
+               "count":17,
+               "path":"Cordoba",
+               "state":"displayed",
+               "name":"Cordoba"
+            },
+            {
+               "count":17,
+               "path":"Manitoba",
+               "state":"displayed",
+               "name":"Manitoba"
+            },
+            {
+               "count":17,
+               "path":"Minas Gerais",
+               "state":"displayed",
+               "name":"Minas Gerais"
+            },
+            {
+               "count":17,
+               "path":"Uttarakhand",
+               "state":"displayed",
+               "name":"Uttarakhand"
+            },
+            {
+               "count":16,
+               "path":"Cotes-d'Armor",
+               "state":"displayed",
+               "name":"Cotes-d'Armor"
+            },
+            {
+               "count":16,
+               "path":"Guangdong",
+               "state":"displayed",
+               "name":"Guangdong"
+            },
+            {
+               "count":16,
+               "path":"Moselle",
+               "state":"displayed",
+               "name":"Moselle"
+            },
+            {
+               "count":16,
+               "path":"Rajasthan",
+               "state":"displayed",
+               "name":"Rajasthan"
+            },
+            {
+               "count":16,
+               "path":"Somme",
+               "state":"displayed",
+               "name":"Somme"
+            },
+            {
+               "count":16,
+               "path":"slaskie",
+               "state":"displayed",
+               "name":"slaskie"
+            },
+            {
+               "count":15,
+               "path":"Delaware",
+               "state":"displayed",
+               "name":"Delaware"
+            },
+            {
+               "count":15,
+               "path":"Liege",
+               "state":"displayed",
+               "name":"Liege"
+            },
+            {
+               "count":15,
+               "path":"Moscow City",
+               "state":"displayed",
+               "name":"Moscow City"
+            },
+            {
+               "count":15,
+               "path":"New Brunswick",
+               "state":"displayed",
+               "name":"New Brunswick"
+            },
+            {
+               "count":15,
+               "path":"Northern Territory",
+               "state":"displayed",
+               "name":"Northern Territory"
+            },
+            {
+               "count":15,
+               "path":"Salzburg",
+               "state":"displayed",
+               "name":"Salzburg"
+            },
+            {
+               "count":15,
+               "path":"Sindh",
+               "state":"displayed",
+               "name":"Sindh"
+            },
+            {
+               "count":15,
+               "path":"VIII Region del Bio - Bio",
+               "state":"displayed",
+               "name":"VIII Region del Bio - Bio"
+            }
+         ],
+         "name":"plant_state"
+      },
+      {
+         "facets":[
+            {
+               "count":904,
+               "path":"Government",
+               "state":"displayed",
+               "name":"Government"
+            },
+            {
+               "count":225,
+               "path":"Private",
+               "state":"displayed",
+               "name":"Private"
+            },
+            {
+               "count":224,
+               "path":"IPP",
+               "state":"displayed",
+               "name":"IPP"
+            },
+            {
+               "count":184,
+               "path":"Government State",
+               "state":"displayed",
+               "name":"Government State"
+            },
+            {
+               "count":87,
+               "path":"Government Provincial",
+               "state":"displayed",
+               "name":"Government Provincial"
+            },
+            {
+               "count":79,
+               "path":"Joint Stock Company",
+               "state":"displayed",
+               "name":"Joint Stock Company"
+            },
+            {
+               "count":50,
+               "path":"Government Central",
+               "state":"displayed",
+               "name":"Government Central"
+            },
+            {
+               "count":46,
+               "path":"Open Joint Stock Company",
+               "state":"displayed",
+               "name":"Open Joint Stock Company"
+            },
+            {
+               "count":37,
+               "path":"Joint Venture",
+               "state":"displayed",
+               "name":"Joint Venture"
+            },
+            {
+               "count":21,
+               "path":"Joint",
+               "state":"displayed",
+               "name":"Joint"
+            },
+            {
+               "count":15,
+               "path":"CPP",
+               "state":"displayed",
+               "name":"CPP"
+            },
+            {
+               "count":15,
+               "path":"Government Crown Corporation",
+               "state":"displayed",
+               "name":"Government Crown Corporation"
+            },
+            {
+               "count":15,
+               "path":"Government of Tasmania",
+               "state":"displayed",
+               "name":"Government of Tasmania"
+            },
+            {
+               "count":11,
+               "path":"Government SOE",
+               "state":"displayed",
+               "name":"Government SOE"
+            },
+            {
+               "count":11,
+               "path":"Government of Quebec",
+               "state":"displayed",
+               "name":"Government of Quebec"
+            },
+            {
+               "count":9,
+               "path":"Government of South Africa",
+               "state":"displayed",
+               "name":"Government of South Africa"
+            },
+            {
+               "count":9,
+               "path":"Municipal",
+               "state":"displayed",
+               "name":"Municipal"
+            },
+            {
+               "count":8,
+               "path":"Public Company",
+               "state":"displayed",
+               "name":"Public Company"
+            },
+            {
+               "count":7,
+               "path":"Closed Joint Stock Company",
+               "state":"displayed",
+               "name":"Closed Joint Stock Company"
+            },
+            {
+               "count":7,
+               "path":"State Government",
+               "state":"displayed",
+               "name":"State Government"
+            },
+            {
+               "count":6,
+               "path":"Central Government",
+               "state":"displayed",
+               "name":"Central Government"
+            },
+            {
+               "count":5,
+               "path":"Government Province",
+               "state":"displayed",
+               "name":"Government Province"
+            },
+            {
+               "count":4,
+               "path":"CPP and IPP",
+               "state":"displayed",
+               "name":"CPP and IPP"
+            },
+            {
+               "count":4,
+               "path":"Government Joint Venture",
+               "state":"displayed",
+               "name":"Government Joint Venture"
+            },
+            {
+               "count":4,
+               "path":"Government Municipal",
+               "state":"displayed",
+               "name":"Government Municipal"
+            },
+            {
+               "count":4,
+               "path":"JV",
+               "state":"displayed",
+               "name":"JV"
+            },
+            {
+               "count":4,
+               "path":"Joint Public Private",
+               "state":"displayed",
+               "name":"Joint Public Private"
+            },
+            {
+               "count":4,
+               "path":"Merchant",
+               "state":"displayed",
+               "name":"Merchant"
+            },
+            {
+               "count":4,
+               "path":"Privatized in 1994-06-01",
+               "state":"displayed",
+               "name":"Privatized in 1994-06-01"
+            },
+            {
+               "count":3,
+               "path":"BOT",
+               "state":"displayed",
+               "name":"BOT"
+            },
+            {
+               "count":3,
+               "path":"Governmant of Ontario",
+               "state":"displayed",
+               "name":"Governmant of Ontario"
+            },
+            {
+               "count":3,
+               "path":"Government Provincial Crown Corporation",
+               "state":"displayed",
+               "name":"Government Provincial Crown Corporation"
+            },
+            {
+               "count":3,
+               "path":"IPP (BOO)",
+               "state":"displayed",
+               "name":"IPP (BOO)"
+            },
+            {
+               "count":3,
+               "path":"Privatized in 1994-10-19",
+               "state":"displayed",
+               "name":"Privatized in 1994-10-19"
+            },
+            {
+               "count":3,
+               "path":"Public joint-stock company",
+               "state":"displayed",
+               "name":"Public joint-stock company"
+            },
+            {
+               "count":2,
+               "path":"BOOT",
+               "state":"displayed",
+               "name":"BOOT"
+            },
+            {
+               "count":2,
+               "path":"Captive",
+               "state":"displayed",
+               "name":"Captive"
+            },
+            {
+               "count":2,
+               "path":"Government (Ministry of Economy and Commerce)",
+               "state":"displayed",
+               "name":"Government (Ministry of Economy and Commerce)"
+            },
+            {
+               "count":2,
+               "path":"Government Captive Power Plant",
+               "state":"displayed",
+               "name":"Government Captive Power Plant"
+            },
+            {
+               "count":2,
+               "path":"Government Utility",
+               "state":"displayed",
+               "name":"Government Utility"
+            },
+            {
+               "count":2,
+               "path":"Government of Costa Rica",
+               "state":"displayed",
+               "name":"Government of Costa Rica"
+            },
+            {
+               "count":2,
+               "path":"Government of Russia",
+               "state":"displayed",
+               "name":"Government of Russia"
+            },
+            {
+               "count":2,
+               "path":"Government of Zambia",
+               "state":"displayed",
+               "name":"Government of Zambia"
+            },
+            {
+               "count":2,
+               "path":"IPP  (BOOT)",
+               "state":"displayed",
+               "name":"IPP  (BOOT)"
+            },
+            {
+               "count":2,
+               "path":"IPP (IESO)",
+               "state":"displayed",
+               "name":"IPP (IESO)"
+            },
+            {
+               "count":2,
+               "path":"IWPP",
+               "state":"displayed",
+               "name":"IWPP"
+            },
+            {
+               "count":2,
+               "path":"Open joint Stock Company",
+               "state":"displayed",
+               "name":"Open joint Stock Company"
+            },
+            {
+               "count":2,
+               "path":"Private (BOO)",
+               "state":"displayed",
+               "name":"Private (BOO)"
+            },
+            {
+               "count":2,
+               "path":"Privatized in 1996-03-07",
+               "state":"displayed",
+               "name":"Privatized in 1996-03-07"
+            },
+            {
+               "count":2,
+               "path":"Public Sector Company, Government of India",
+               "state":"displayed",
+               "name":"Public Sector Company, Government of India"
+            },
+            {
+               "count":2,
+               "path":"Utility",
+               "state":"displayed",
+               "name":"Utility"
+            },
+            {
+               "count":1,
+               "path":"100",
+               "state":"displayed",
+               "name":"100"
+            },
+            {
+               "count":1,
+               "path":"Bangladesh Rural Electrification Board & Palli Biddyut Samitie",
+               "state":"displayed",
+               "name":"Bangladesh Rural Electrification Board & Palli Biddyut Samitie"
+            },
+            {
+               "count":1,
+               "path":"CPP (Group captive Power Plant)",
+               "state":"displayed",
+               "name":"CPP (Group captive Power Plant)"
+            },
+            {
+               "count":1,
+               "path":"CPP and Merchant",
+               "state":"displayed",
+               "name":"CPP and Merchant"
+            },
+            {
+               "count":1,
+               "path":"Captive and Merchant",
+               "state":"displayed",
+               "name":"Captive and Merchant"
+            },
+            {
+               "count":1,
+               "path":"City",
+               "state":"displayed",
+               "name":"City"
+            },
+            {
+               "count":1,
+               "path":"Federal Government",
+               "state":"displayed",
+               "name":"Federal Government"
+            },
+            {
+               "count":1,
+               "path":"Fully owned asset",
+               "state":"displayed",
+               "name":"Fully owned asset"
+            },
+            {
+               "count":1,
+               "path":"Goveernment",
+               "state":"displayed",
+               "name":"Goveernment"
+            },
+            {
+               "count":1,
+               "path":"Govenment",
+               "state":"displayed",
+               "name":"Govenment"
+            },
+            {
+               "count":1,
+               "path":"Goverenment",
+               "state":"displayed",
+               "name":"Goverenment"
+            },
+            {
+               "count":1,
+               "path":"Governmant of Pakistan",
+               "state":"displayed",
+               "name":"Governmant of Pakistan"
+            },
+            {
+               "count":1,
+               "path":"Government  Provincial",
+               "state":"displayed",
+               "name":"Government  Provincial"
+            },
+            {
+               "count":1,
+               "path":"Government (Swedish and Polish)",
+               "state":"displayed",
+               "name":"Government (Swedish and Polish)"
+            },
+            {
+               "count":1,
+               "path":"Government - Commonwealth",
+               "state":"displayed",
+               "name":"Government - Commonwealth"
+            },
+            {
+               "count":1,
+               "path":"Government City",
+               "state":"displayed",
+               "name":"Government City"
+            },
+            {
+               "count":1,
+               "path":"Government JV",
+               "state":"displayed",
+               "name":"Government JV"
+            },
+            {
+               "count":1,
+               "path":"Government Joint State and Central",
+               "state":"displayed",
+               "name":"Government Joint State and Central"
+            },
+            {
+               "count":1,
+               "path":"Government Owned",
+               "state":"displayed",
+               "name":"Government Owned"
+            },
+            {
+               "count":1,
+               "path":"Government Ownership",
+               "state":"displayed",
+               "name":"Government Ownership"
+            },
+            {
+               "count":1,
+               "path":"Government Provincal",
+               "state":"displayed",
+               "name":"Government Provincal"
+            },
+            {
+               "count":1,
+               "path":"Government Provincial (100%) Contractual",
+               "state":"displayed",
+               "name":"Government Provincial (100%) Contractual"
+            },
+            {
+               "count":1,
+               "path":"Government of Botswana",
+               "state":"displayed",
+               "name":"Government of Botswana"
+            },
+            {
+               "count":1,
+               "path":"Government of China",
+               "state":"displayed",
+               "name":"Government of China"
+            },
+            {
+               "count":1,
+               "path":"Government of Egypt",
+               "state":"displayed",
+               "name":"Government of Egypt"
+            },
+            {
+               "count":1,
+               "path":"Government of Gujarat",
+               "state":"displayed",
+               "name":"Government of Gujarat"
+            },
+            {
+               "count":1,
+               "path":"Government of India",
+               "state":"displayed",
+               "name":"Government of India"
+            },
+            {
+               "count":1,
+               "path":"Government of Ireland 95%",
+               "state":"displayed",
+               "name":"Government of Ireland 95%"
+            },
+            {
+               "count":1,
+               "path":"Government of Mali",
+               "state":"displayed",
+               "name":"Government of Mali"
+            },
+            {
+               "count":1,
+               "path":"Government of New South Wales",
+               "state":"displayed",
+               "name":"Government of New South Wales"
+            },
+            {
+               "count":1,
+               "path":"Government of Nigeria",
+               "state":"displayed",
+               "name":"Government of Nigeria"
+            },
+            {
+               "count":1,
+               "path":"Government of Ontario",
+               "state":"displayed",
+               "name":"Government of Ontario"
+            },
+            {
+               "count":1,
+               "path":"Government of Western Australia",
+               "state":"displayed",
+               "name":"Government of Western Australia"
+            },
+            {
+               "count":1,
+               "path":"Governmnet",
+               "state":"displayed",
+               "name":"Governmnet"
+            },
+            {
+               "count":1,
+               "path":"Govvernment",
+               "state":"displayed",
+               "name":"Govvernment"
+            },
+            {
+               "count":1,
+               "path":"IPP  (BOO)",
+               "state":"displayed",
+               "name":"IPP  (BOO)"
+            },
+            {
+               "count":1,
+               "path":"IPP  (PPA with GUVNL)",
+               "state":"displayed",
+               "name":"IPP  (PPA with GUVNL)"
+            },
+            {
+               "count":1,
+               "path":"IPP  (Small Power Producer and Cogen)",
+               "state":"displayed",
+               "name":"IPP  (Small Power Producer and Cogen)"
+            },
+            {
+               "count":1,
+               "path":"IPP  (Small Power Producer)",
+               "state":"displayed",
+               "name":"IPP  (Small Power Producer)"
+            },
+            {
+               "count":1,
+               "path":"IPP (BOO - Build Own Operate)",
+               "state":"displayed",
+               "name":"IPP (BOO - Build Own Operate)"
+            },
+            {
+               "count":1,
+               "path":"IPP (BOOT)",
+               "state":"displayed",
+               "name":"IPP (BOOT)"
+            },
+            {
+               "count":1,
+               "path":"IPP (Government company)",
+               "state":"displayed",
+               "name":"IPP (Government company)"
+            },
+            {
+               "count":1,
+               "path":"IPP (Joint Stock Company)",
+               "state":"displayed",
+               "name":"IPP (Joint Stock Company)"
+            },
+            {
+               "count":1,
+               "path":"IPP BOT (Build, Operate, Transfer)",
+               "state":"displayed",
+               "name":"IPP BOT (Build, Operate, Transfer)"
+            },
+            {
+               "count":1,
+               "path":"IPP and Merchant PP",
+               "state":"displayed",
+               "name":"IPP and Merchant PP"
+            },
+            {
+               "count":1,
+               "path":"Independent Power Producer",
+               "state":"displayed",
+               "name":"Independent Power Producer"
+            },
+            {
+               "count":1,
+               "path":"Independent Water & Power Project (IWPP)",
+               "state":"displayed",
+               "name":"Independent Water & Power Project (IWPP)"
+            },
+            {
+               "count":1,
+               "path":"Indirect via Auburndale Power Partners, LP",
+               "state":"displayed",
+               "name":"Indirect via Auburndale Power Partners, LP"
+            },
+            {
+               "count":1,
+               "path":"Joint Venture IWPP",
+               "state":"displayed",
+               "name":"Joint Venture IWPP"
+            }
+         ],
+         "name":"plant_type_of_ownership"
+      },
+      {
+         "facets":[
+            {
+               "count":3215,
+               "path":"HYDRO",
+               "state":"displayed",
+               "name":"HYDRO"
+            },
+            {
+               "count":2798,
+               "path":"GAS",
+               "state":"displayed",
+               "name":"GAS"
+            },
+            {
+               "count":1451,
+               "path":"COAL",
+               "state":"displayed",
+               "name":"COAL"
+            },
+            {
+               "count":1075,
+               "path":"OIL",
+               "state":"displayed",
+               "name":"OIL"
+            },
+            {
+               "count":658,
+               "path":"WIND",
+               "state":"displayed",
+               "name":"WIND"
+            },
+            {
+               "count":489,
+               "path":"WASTE",
+               "state":"displayed",
+               "name":"WASTE"
+            },
+            {
+               "count":214,
+               "path":"NUCLEAR",
+               "state":"displayed",
+               "name":"NUCLEAR"
+            },
+            {
+               "count":97,
+               "path":"GEOTHERMAL",
+               "state":"displayed",
+               "name":"GEOTHERMAL"
+            },
+            {
+               "count":52,
+               "path":"SOLAR_THERMAL",
+               "state":"displayed",
+               "name":"SOLAR_THERMAL"
+            },
+            {
+               "count":40,
+               "path":"SOLAR_PV",
+               "state":"displayed",
+               "name":"SOLAR_PV"
+            }
+         ],
+         "name":"type"
+      }
+   ]
+}
