@@ -7,7 +7,7 @@ Find standards that you want to review, then use the projects in the directories
 
 | Standard | Description |
 | --- | --- |
-| EF.10.f	Know how to handle, parse, and represent data received in JSON format. iOS iOS Use JSONDecoder / JSONEncoder along with Codable to parse JSON data |
+| EF.10.f | Know how to handle, parse, and represent data received in JSON format. iOS iOS Use JSONDecoder / JSONEncoder along with Codable to parse JSON data |
 | EF.10.g |	Use GCD to appropriately dispatch tasks |
 | EF.10.h | Use URLSession to get data from online |
 | EF.4.e |	Add files and commit with descriptive messages to a remote repository. Use present tense verbs in commit messages. Use frequent, small commits. |
