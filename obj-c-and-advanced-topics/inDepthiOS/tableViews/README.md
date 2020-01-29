@@ -10,6 +10,10 @@
 - [Cell Duplication](https://fluffy.es/solve-duplicated-cells/)
 - [Jayesh Kawli diffable data source](https://jayeshkawli.ghost.io/ios-13-diffable-data-source-for-uitableview-and-uicollectionview/)
 
+# Project Link
+
+- [link](https://github.com/joinpursuit/Pursuit-Core-iOS-Diffable-Table-View)
+
 # 1. Reusable Cells Motivation
 
 A common iOS interview question might be "Explain what the line below does":
