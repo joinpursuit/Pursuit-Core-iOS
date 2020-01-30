@@ -9,7 +9,6 @@
 | [Lifecycle](./inDepthiOS/lifecycle/README.md) | [Lifecycle Interview Questions](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/obj-c-and-advanced-topics/inDepthiOS/lifecycle/lab/README.md) |
 | [Parsing JSON](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/obj-c-and-advanced-topics/inDepthiOS/parsing-json) | [Random User Postcode](https://github.com/joinpursuit/Pursuit-Core-iOS-Parsing-JSON-Lab-Heterogenous-Types/blob/master/README.md) |
 | [Table Views](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/obj-c-and-advanced-topics/inDepthiOS/tableViews) | [Random User API with Sections](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/obj-c-and-advanced-topics/standard-reassessments/ios/ios-3-r-table-view-sections) |
-| Clean Code and Dependency Injection | tbd |
 | Unit Testing | tbd |
 | ARC and Memory Management | tbd |
 | Threading and Dispatching | tbd |
