@@ -37,7 +37,7 @@
 | Strings | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4594373) |
 | Dictionaries | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4616150) |
 | Optionals | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4634144) |
-| Closures | tbd |
+| Closures | [6.1](https://canvas.instructure.com/courses/1605734/assignments/11721559) |
 | Enums | tbd |
 | Generics | tbd |
 | Protocols | tbd |
