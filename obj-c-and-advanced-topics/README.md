@@ -47,6 +47,7 @@
 | Resource | Link |
 |:------|:------|
 | 6.1 2020 Intro | [Slides](https://docs.google.com/presentation/d/1U0f_afCkGmzCzIyHHvgnDfc0syXUDpgCPQnIEAgaY88/edit?usp=sharing) |
+| Job Readiness Guide | [Slides](https://docs.google.com/presentation/d/1TXSdsdw4owuAJgllmy3lw3_5c8Bdo4mNe6XmEfs5QpM/edit#slide=id.g57317447a4_0_0) |
 | Git as a Team: Branching, Merging, Versioning | [Lesson](./inDepthiOS/gitAndVersionControl/README.md) |
 | Team Norms | [Sample](https://docs.google.com/document/d/1yf-0FVofS7L3Y8AdQQGqh0vYCNs0YIRHqLhzCfuU5uA/edit?usp=sharing) |
 | 6.1 Accountability Groups | [Slides](https://docs.google.com/presentation/d/1X-9eNAOgJCJDio4TyDQ6kwUKAKbQZlM5524lZ5aIYso/edit?usp=sharing) |
