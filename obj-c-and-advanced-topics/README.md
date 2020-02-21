@@ -51,3 +51,4 @@
 | Git as a Team: Branching, Merging, Versioning | [Lesson](./inDepthiOS/gitAndVersionControl/README.md) |
 | Team Norms | [Sample](https://docs.google.com/document/d/1yf-0FVofS7L3Y8AdQQGqh0vYCNs0YIRHqLhzCfuU5uA/edit?usp=sharing) |
 | 6.1 Accountability Groups | [Slides](https://docs.google.com/presentation/d/1X-9eNAOgJCJDio4TyDQ6kwUKAKbQZlM5524lZ5aIYso/edit?usp=sharing) |
+| Capstone Requirements | [doc]() |
