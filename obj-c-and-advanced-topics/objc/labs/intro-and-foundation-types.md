@@ -22,7 +22,7 @@ Compare the `int`s 1 and 2, and print out which is larger.
 ***
 ## Question 2
 
-Below are two boolean values, `t` and `f`. When compared, they are equal. Change `f` so that it is equal to the `int` 2
+Below are two boolean values, `t` and `f`. When compared after the last line, they are equal. Change `f` so that it is equal to the `int` 2
 
 ```
 BOOL t = true;
