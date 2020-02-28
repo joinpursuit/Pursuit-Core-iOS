@@ -8,7 +8,7 @@ Use your Swift knowledge, introduction to the Objective-C and Foundation types, 
 
 1. Create your own Github repository and clone to your device
 1. Add a new Command Line App to the repository
-1. Complete the lab: Create answers to these questions in the `main` function of `main.m`. Add a comment on the line before the answer to each question.
+1. Complete the lab: Create answers to these questions in the `main` function of `main.m`. On the line before the answer to each question, add a comment to indicate which question you are answering.
 1. Make commits as you answer each question
 1. Push your changes to your repo
 1. Paste a link of your repo on Canvas and submit
@@ -33,7 +33,7 @@ f++;
 ***
 ## Question 3
 
-Below is a pointer to the value saved from the `int` 1. Create a while loop that increases the value at that pointer until its value is `0x33`
+Below is a pointer to the value saved from the `int` 1. Create a while loop that incremements the int until the pointer's value is `0x33`
 
 `int *pointer = 1`
 
