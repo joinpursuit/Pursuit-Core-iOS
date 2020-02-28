@@ -2,7 +2,7 @@
 
 ## General Instructions
 
-Use your Swift knowledge, introduction to the Objective-C and Foundation types, and problem-solving skills to find answers to the below. Some questions will require that you dig into the Objective-C library, so think about how you would solve in Swift first.
+Use your Swift knowledge, introduction to the Objective-C and Foundation types, and problem-solving skills to find answers to the below. Some questions will require that you dig into the Objective-C libraries, so think about how you would solve in Swift first.
 
 ## Instructions for lab submission
 
