@@ -17,7 +17,7 @@ Use your Swift knowledge, introduction to the Objective-C and Foundation types, 
 ***
 ## Question 1
 
-Compare the `int`s 1 & 2, and print out which is larger.
+Compare the `int`s 1 and 2, and print out which is larger.
 
 ***
 ## Question 2
