@@ -21,7 +21,7 @@
 |:------|:------|
 | [Syntax](./objc/syntax) | tbd |
 | [Objective-C Introduction](./objc/Objective-C_Introduction.md) | tbd |
-| [Pointers, NSString, NSArray, and NSDictionary](./objc/Pointers-NSStrings-NSArray-NSDictionary.md) | ./objc/labs/intro-and-foundation-types.md |
+| [Pointers, NSString, NSArray, and NSDictionary](./objc/Pointers-NSStrings-NSArray-NSDictionary.md) | [lab](./objc/labs/intro-and-foundation-types.md) |
 | [Blocks and Methods](./objc/Functions-And-Blocks-In-ObjC.md) | tbd |
 | [Classes, Inheritance, and Protocols](./objc/Classes.md) | tbd |
 | [iOS Development in Objective-C](./objc/Introduction%20to%20iOS%20Development%20in%20Objective-C.md) | tbd |
