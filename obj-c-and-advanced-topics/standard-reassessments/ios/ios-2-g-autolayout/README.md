@@ -4,4 +4,4 @@
 
 Rebuild the UI of the Apple weather app:
 
-![weatherLayout](./weatherLayout.gif)
+![weatherLayout](./iOSWeatherLayout.gif)
