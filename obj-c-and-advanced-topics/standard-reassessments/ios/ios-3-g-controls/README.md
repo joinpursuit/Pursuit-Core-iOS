@@ -5,3 +5,5 @@
 Its functionality should match the gif below:
 
 ![BinaryConverter](./binaryConverter.gif)
+
+A solution is available [here](https://github.com/joinpursuit/Pursuit-Core-iOS-Controls-Practice-Solution)
