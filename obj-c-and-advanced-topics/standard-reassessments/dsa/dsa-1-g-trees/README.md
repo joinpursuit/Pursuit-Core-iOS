@@ -1,11 +1,21 @@
 # DSA.1: Trees
 
-## 1. Write a function that takes a binary tree and finds the sum of each node in the tree. (Implement Tree)
+## 1. Univalued Binary Tree
 
-                          3
-                     2         5
+https://leetcode.com/problems/univalued-binary-tree/
 
-                  2    4    1     7
+## 2. Invert Binary Tree
 
+https://leetcode.com/problems/invert-binary-tree/
 
-3 + 2 + 5 + 2 + 4 + 1 + 7 = 24
+## 3. Maximum Depth of Binary Tree
+
+https://leetcode.com/problems/maximum-depth-of-binary-tree/
+
+## 4. Leaf Similar Trees
+
+https://leetcode.com/problems/leaf-similar-trees/
+
+## 5. Same Tree
+
+https://leetcode.com/problems/same-tree/
