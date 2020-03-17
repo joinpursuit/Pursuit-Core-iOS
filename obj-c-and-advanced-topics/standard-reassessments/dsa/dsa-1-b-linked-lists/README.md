@@ -2,16 +2,20 @@
 
 # 1. Palindrome Linked List
 
-Given a singly linked list, determine if it is a palindrome.
+https://leetcode.com/problems/palindrome-linked-list/
 
-```
-Input: 1->2
-Output: false
-```
+# 2. Binary Linked List to Int
 
-```
-Input: 1->2->2->1
-Output: true
-```
+https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
 
-Source: [https://leetcode.com/problems/palindrome-linked-list/](https://leetcode.com/problems/palindrome-linked-list/])
+# 3. Revserse a Linked List
+
+https://leetcode.com/problems/reverse-linked-list/
+
+# 4. Merge Two Sorted Linked Lists
+
+https://leetcode.com/problems/merge-two-sorted-lists/
+
+# 5. Detect Cycle in a Linked List
+
+https://leetcode.com/problems/linked-list-cycle/
