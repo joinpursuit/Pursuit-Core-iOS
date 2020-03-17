@@ -8,7 +8,7 @@ https://www.hackerrank.com/challenges/ctci-bubble-sort/problem
 
 Part One: https://www.hackerrank.com/challenges/insertionsort1/problem
 
-And part two: https://www.hackerrank.com/challenges/insertionsort2/problem
+Part Two: https://www.hackerrank.com/challenges/insertionsort2/problem
 
 ## 3. Quicksort
 
