@@ -1,18 +1,21 @@
 # dsa-1-d: Hash Tables
 
-# 1. Two Sum
+## 1. Two Sum
 
-Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+https://leetcode.com/problems/two-sum/
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
+## 2. Find Common Characters
 
-Your solution must work in O(n) time.
+https://leetcode.com/problems/find-common-characters/
 
-```
-Given nums = [2, 7, 11, 15], target = 9,
+## 3. Keyboard Words
 
-Because nums[0] + nums[1] = 2 + 7 = 9,
-return [0, 1].
-```
+https://leetcode.com/problems/keyboard-row/
 
-Source: [https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/two-sum/)
+## 4. Unique Number of Occurrences
+
+https://leetcode.com/problems/unique-number-of-occurrences/
+
+## 5. Find Words That Can Be Formed By Characters
+
+https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/
