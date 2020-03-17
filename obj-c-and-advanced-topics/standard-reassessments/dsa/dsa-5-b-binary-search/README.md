@@ -1,13 +1,21 @@
 # DSA.5.b: Binary Search
 
-# 1. Search Index Position
+## 1. Binary Search
 
-Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+https://leetcode.com/problems/binary-search/
 
-You may assume no duplicates in the array.
+## 2. Peak Index in Mountain Array
 
-Input: [1,3,5,6], 5
-Output: 2
+https://leetcode.com/problems/peak-index-in-a-mountain-array/
 
+## 3. Search Index Position
 
-Source: [https://leetcode.com/problems/search-insert-position/](https://leetcode.com/problems/search-insert-position/)
+https://leetcode.com/problems/search-insert-position/
+
+## 4. Count Negative Numbers in a Sorted Matrix
+
+https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/
+
+## 5. Valid Perfect Square
+
+https://leetcode.com/problems/valid-perfect-square/
