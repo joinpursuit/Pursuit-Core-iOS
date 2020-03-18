@@ -6,4 +6,4 @@
 - Submit your app to TestFlight
 - Demonstrate git best practices (Branches, frequent commits w/meaningful messages)
 - Follow clean Swift code best practices (DRY, naming conventions, file structures)
-- Create a README.md file in well-formatted (markdown) and explains project thoroughly (with images or Gif’s as needed) 
+- Create a README.md file in well-formatted (markdown) and explains project thoroughly (with images and gifs as needed) 
