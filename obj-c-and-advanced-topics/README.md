@@ -11,20 +11,6 @@
 | [Table Views](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/obj-c-and-advanced-topics/inDepthiOS/tableViews) | [Random User API with Sections](https://github.com/joinpursuit/Pursuit-Core-iOS/tree/master/obj-c-and-advanced-topics/standard-reassessments/ios/ios-3-r-table-view-sections) |
 | [Advanced Auto Layout](https://github.com/joinpursuit/Pursuit-Core-iOS/blob/master/obj-c-and-advanced-topics/inDepthiOS/autolayout/README.md) | [Calculator Size Classes](https://github.com/joinpursuit/Pursuit-Core-iOS-Advanced-Auto-Layout-Lab) |
 
-### Objective-C Lessons and Labs
-
-| Lesson | Lab |
-|:------|:------|
-| [Syntax](./objc/syntax) | tbd |
-| [Objective-C Introduction](./objc/Objective-C_Introduction.md) | tbd |
-| [Pointers, NSString, NSArray, and NSDictionary](./objc/Pointers-NSStrings-NSArray-NSDictionary.md) | [lab](./objc/labs/intro-and-foundation-types.md) |
-| [Blocks and Methods](./objc/Functions-And-Blocks-In-ObjC.md) | tbd |
-| [Classes, Inheritance, and Protocols](./objc/Classes.md) | tbd |
-| [iOS Development in Objective-C](./objc/Introduction%20to%20iOS%20Development%20in%20Objective-C.md) | tbd |
-| [Autolayout and MVC](./objc/MVC-AutoLayout) | tbd |
-| [Table Views](./objc/TableViewIntro) | tbd |
-| [Protocols, Categories, Class-Extensions](./objc/Protocols_Categories_Class-Extensions.md) | tbd |
-
 ### Swift Fundamentals
 
 | Topic | Quiz |
@@ -36,6 +22,18 @@
 | Closures | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4673948), [6.1 mini](https://canvas.instructure.com/courses/1605734/assignments/11721559) |
 | Enums | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4798934) |
 | Keywords | [6.1](https://canvas.instructure.com/courses/1605734/quizzes/4736676) |
+
+### Objective-C Lessons
+
+1. [Syntax](./objc/syntax)
+1. [Objective-C Introduction](./objc/Objective-C_Introduction.md)
+1. [Pointers, NSString, NSArray, and NSDictionary](./objc/Pointers-NSStrings-NSArray-NSDictionary.md) / [lab](./objc/labs/intro-and-foundation-types.md)
+1. [Blocks and Methods](./objc/Functions-And-Blocks-In-ObjC.md)
+1. [Classes, Inheritance, and Protocols](./objc/Classes.md)
+1. [iOS Development in Objective-C](./objc/Introduction%20to%20iOS%20Development%20in%20Objective-C.md)
+1. [Autolayout and MVC](./objc/MVC-AutoLayout)
+1. [Table Views](./objc/TableViewIntro)
+1. [Protocols, Categories, Class-Extensions](./objc/Protocols_Categories_Class-Extensions.md)
 
 ### Capstone Resources
 
