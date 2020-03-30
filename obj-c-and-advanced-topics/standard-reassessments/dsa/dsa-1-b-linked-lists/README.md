@@ -8,7 +8,7 @@ https://leetcode.com/problems/palindrome-linked-list/
 
 https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
 
-## 3. Revserse a Linked List
+## 3. Reverse a Linked List
 
 https://leetcode.com/problems/reverse-linked-list/
 
