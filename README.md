@@ -28,4 +28,4 @@ This is where you'll find some common resources as well as full lessons.
 ## 6.3 Class Notes
 
 - [Alex Paul](https://github.com/alexpaul/lecture-resources)
-- [In memory to Antonio's editing access. His legacy will live on]
+- [In memory to Antonio's editing access. His legacy will live on](https://media.giphy.com/media/10tIjpzIu8fe0/giphy.gif)
